@@ -4,7 +4,10 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\FileManagerController;
 use App\Http\Controllers\Backend\SettingsController;
 use App\Http\Controllers\Backend\ModuleExplorerController;
+use App\Http\Controllers\Backend\ProjectsController;
 use App\Http\Controllers\Frontend\TestController;
+
+
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -39,4 +42,10 @@ Route::post('terms_and_conditions_update/update', [SettingsController::class, 't
 Route::get('contactus_thanks', [SettingsController::class, 'contactus_thanks'])->name('contactus_thanks');
 Route::post('contactus_thanks_update/update', [SettingsController::class, 'contactus_thanks_update'])->name('contactus_thanks_update');
 
-
+Route::get('projects', [ProjectsController::class, 'index'])->name('projects.index');
+Route::get('projects/create', [ProjectsController::class, 'create'])->name('projects.create');
+Route::post('projects/store', [ProjectsController::class, 'store'])->name('projects.store');
+Route::get('projects/getdetails', [ProjectsController::class, 'getdetails'])->name('projects.getdetails');
+Route::get('projects/edit/{id}', [ProjectsController::class, 'edit'])->name('projects.edit');
+Route::post('projects/update', [ProjectsController::class, 'update'])->name('projects.update');
+Route::get('projects/delete/{id}', [ProjectsController::class, 'destroy'])->name('projects.destroy');

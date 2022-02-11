@@ -13,6 +13,12 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{active_class(Route::is('admin/projects'))}}" href="{{ route('admin.projects.index') }}">
+                <i class="nav-icon fas fa-list"></i>
+                    Projects
+                </a>
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link {{ active_class(Route::is('admin/module-explorer'))}}" href="{{ route('admin.module.index') }}">
@@ -27,6 +33,8 @@
                     File Manager
                 </a>
             </li>
+
+            
 
 
             @if(Module::has('WidgetManager'))
