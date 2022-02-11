@@ -28,6 +28,19 @@
                 </a>
             </li>
 
+
+            @if(Module::has('WidgetManager'))
+                @if(Module::find('WidgetManager')->isStatus(1))
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/file_manager'))}}" href="">
+                            <i class="nav-icon fas fa-chart-bar"></i>
+                            Widget Manager
+                        </a>
+                    </li>
+                @endif
+            @endif
+
+
             @if(Module::has('Blog'))
                 @if(Module::find('Blog')->isStatus(1))
 

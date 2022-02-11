@@ -4,10 +4,12 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\FileManagerController;
 use App\Http\Controllers\Backend\SettingsController;
 use App\Http\Controllers\Backend\ModuleExplorerController;
-
+use App\Http\Controllers\Frontend\TestController;
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+
 
 
 Route::get('file_manager', [FileManagerController::class, 'index'])->name('file_manager.index');
