@@ -32,7 +32,7 @@
                                             {{$explorer_module['meta_details']->description}}
                                         </div>
                                         <div class="card-header">
-                                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#install">Install</button>                                       
+                                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#install{{$explorer_module['module_name']}}">Install</button>                                       
                                         </div>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                                             {{$moule['meta_details']->description}}
                                         </div>
                                         <div class="card-header">                                            
-                                            <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#uninstall">Uninstall</button>
+                                            <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#uninstall{{$moule['module_name']}}">Uninstall</button>
                                         </div>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@
 
 @foreach($explorer_modules as $explorer_module)
 
-    <div class="modal fade" id="install" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="install{{$explorer_module['module_name']}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 
@@ -98,7 +98,7 @@
 
 @foreach($installed_modules as $moule)
 
-    <div class="modal fade" id="uninstall" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="uninstall{{$moule['module_name']}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 
