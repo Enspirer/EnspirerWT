@@ -1,0 +1,13 @@
+{
+    "name": "WidgetManager",
+    "alias": "widgetmanager",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\WidgetManager\\Providers\\WidgetManagerServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

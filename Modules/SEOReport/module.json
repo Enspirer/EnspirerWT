@@ -1,0 +1,13 @@
+{
+    "name": "SEOReport",
+    "alias": "seoreport",
+    "description": "An SEO report is an overview of important SEO metrics reflecting business growth, performance in search engines, backlink portfolio strength, and website health.It’s the main resource for your clients, managers, or bosses that tracks the progress of your work and its impact. After all,",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SEOReport\\Providers\\SEOReportServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

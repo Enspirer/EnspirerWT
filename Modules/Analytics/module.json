@@ -1,0 +1,13 @@
+{
+    "name": "Analytics",
+    "alias": "analytics",
+    "description": "Web analytics is the measurement, collection, analysis, and reporting of web data to understand and optimize web usage. Web analytics is not just a process for measuring web traffic but can be used as a tool for business and market research and assess and improve website effectiveness.",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Analytics\\Providers\\AnalyticsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

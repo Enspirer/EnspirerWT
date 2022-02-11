@@ -1,3 +1,6 @@
 {
-    "Blog": false
+    "Blog": true,
+    "SEOReport": true,
+    "Analytics": true,
+    "WidgetManager": true
 }
