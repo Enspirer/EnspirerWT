@@ -95,7 +95,31 @@
                 @endif
             @endif
 
+            <li class="nav-item nav-dropdown ">
+                <a class="nav-link nav-dropdown-toggle " href="#">
+                    <i class="nav-icon fas fa-question-circle"></i>
+                    Help & Supports
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/help_category'))}}" href="{{ route('admin.help_category.index') }}">
+                            Category
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/help_supports'))}}" href="{{ route('admin.help_supports.index') }}">
+                            Help & Supports
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{active_class(Route::is('admin/contact_us'))}}" href="{{ route('admin.contact_us.index') }}">
+                    <i class="nav-icon fas fa-comments"></i>
+                    Contact Us
+                </a>
+            </li>
 
             @if ($logged_in_user->isAdmin())
                 <li class="nav-title">
