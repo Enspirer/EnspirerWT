@@ -41,6 +41,9 @@ Breadcrumbs::for('admin.projects.index', function ($trail) {
 Breadcrumbs::for('admin.projects.create', function ($trail) {
     $trail->push('Create Project', route('admin.projects.create'));
 });
+Breadcrumbs::for('admin.projects.show', function ($trail) {
+    $trail->push('Show Project', route('admin.projects.show',1));
+});
 Breadcrumbs::for('admin.projects.edit', function ($trail) {
     $trail->push('Edit Project', route('admin.projects.edit',1));
 });

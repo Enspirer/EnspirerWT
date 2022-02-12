@@ -45,6 +45,7 @@ Route::post('contactus_thanks_update/update', [SettingsController::class, 'conta
 
 Route::get('projects', [ProjectsController::class, 'index'])->name('projects.index');
 Route::get('projects/create', [ProjectsController::class, 'create'])->name('projects.create');
+Route::get('projects/show/{id}', [ProjectsController::class, 'show'])->name('projects.show');
 Route::post('projects/store', [ProjectsController::class, 'store'])->name('projects.store');
 Route::get('projects/getdetails', [ProjectsController::class, 'getdetails'])->name('projects.getdetails');
 Route::get('projects/edit/{id}', [ProjectsController::class, 'edit'])->name('projects.edit');

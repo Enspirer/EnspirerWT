@@ -24,6 +24,15 @@ class ProjectsController extends Controller
         ]);
     }
 
+    public function show($id)
+    {        
+        $projects = Projects::where('id',$id)->first(); 
+
+        return view('backend.projects.show',[
+            'projects' => $projects
+        ]);
+    }
+
     public function getdetails(Request $request)
     {       
         $data = Projects::get();
@@ -46,8 +55,9 @@ class ProjectsController extends Controller
             })
             ->addColumn('action', function($data){
                 $button1 = '<a href="'.route('admin.projects.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
-                $button2 = '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
-                return $button1.$button2;
+                $button2 = '<a href="'.route('admin.projects.show',$data->id).'" name="show" id="'.$data->id.'" class="edit btn btn-info btn-sm" style="margin-right: 10px"><i class="fas fa-info-circle"></i> Show </a>';
+                $button3 = '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
+                return $button1.$button2.$button3;
                 })
             ->rawColumns(['action','project_type'])
             ->make(true);
