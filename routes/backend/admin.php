@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\FileManagerController;
 use App\Http\Controllers\Backend\SettingsController;
 use App\Http\Controllers\Backend\ModuleExplorerController;
 use App\Http\Controllers\Backend\ProjectsController;
+use App\Http\Controllers\Backend\ProjectTypeController;
 use App\Http\Controllers\Frontend\TestController;
 
 
@@ -49,3 +50,11 @@ Route::get('projects/getdetails', [ProjectsController::class, 'getdetails'])->na
 Route::get('projects/edit/{id}', [ProjectsController::class, 'edit'])->name('projects.edit');
 Route::post('projects/update', [ProjectsController::class, 'update'])->name('projects.update');
 Route::get('projects/delete/{id}', [ProjectsController::class, 'destroy'])->name('projects.destroy');
+
+Route::get('project_type', [ProjectTypeController::class, 'index'])->name('project_type.index');
+Route::get('project_type/create', [ProjectTypeController::class, 'create'])->name('project_type.create');
+Route::post('project_type/store', [ProjectTypeController::class, 'store'])->name('project_type.store');
+Route::get('project_type/getdetails', [ProjectTypeController::class, 'getdetails'])->name('project_type.getdetails');
+Route::get('project_type/edit/{id}', [ProjectTypeController::class, 'edit'])->name('project_type.edit');
+Route::post('project_type/update', [ProjectTypeController::class, 'update'])->name('project_type.update');
+Route::get('project_type/delete/{id}', [ProjectTypeController::class, 'destroy'])->name('project_type.destroy');

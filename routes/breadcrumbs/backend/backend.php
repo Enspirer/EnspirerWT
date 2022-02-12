@@ -44,3 +44,13 @@ Breadcrumbs::for('admin.projects.create', function ($trail) {
 Breadcrumbs::for('admin.projects.edit', function ($trail) {
     $trail->push('Edit Project', route('admin.projects.edit',1));
 });
+
+Breadcrumbs::for('admin.project_type.index', function ($trail) {
+    $trail->push('Propject Type', route('admin.project_type.index'));
+});
+Breadcrumbs::for('admin.project_type.create', function ($trail) {
+    $trail->push('Create Propject Type', route('admin.project_type.create'));
+});
+Breadcrumbs::for('admin.project_type.edit', function ($trail) {
+    $trail->push('Edit Propject Type', route('admin.project_type.edit',1));
+});

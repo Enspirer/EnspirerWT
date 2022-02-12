@@ -12,12 +12,25 @@
                     @lang('menus.backend.sidebar.dashboard')
                 </a>
             </li>
+        
 
-            <li class="nav-item">
-                <a class="nav-link {{active_class(Route::is('admin/projects'))}}" href="{{ route('admin.projects.index') }}">
-                <i class="nav-icon fas fa-list"></i>
-                    Projects
+            <li class="nav-item nav-dropdown ">
+                <a class="nav-link nav-dropdown-toggle " href="#">
+                    <i class="nav-icon fas fa-list"></i>
+                        Projects
                 </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/project_type'))}}" href="{{ route('admin.project_type.index') }}">
+                            Projects Type
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/projects'))}}" href="{{ route('admin.projects.index') }}">
+                            Projects
+                        </a>
+                    </li> 
+                </ul>
             </li>
 
             <li class="nav-item">
@@ -40,7 +53,7 @@
             @if(Module::has('WidgetManager'))
                 @if(Module::find('WidgetManager')->isStatus(1))
                     <li class="nav-item">
-                        <a class="nav-link {{active_class(Route::is('admin/file_manager'))}}" href="">
+                        <a class="nav-link {{active_class(Route::is('admin/file_manager'))}}" href="{{ route('admin.file_manager.index') }}">
                             <i class="nav-icon fas fa-chart-bar"></i>
                             Widget Manager
                         </a>

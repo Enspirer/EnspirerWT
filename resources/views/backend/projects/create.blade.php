@@ -17,15 +17,20 @@
                         </div>
                         <div class="form-group">
                             <label>Project Type <span class="text-danger">*</span></label>
-                            <input type="text" id="project_type" class="form-control" name="project_type" required>
+                            <select class="form-control" id="project_type" name="project_type" required>
+                                <option value="" selected disabled>Select...</option>
+                                @foreach($project_type as $type)
+                                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>URL <span class="text-danger">*</span></label>
                             <input type="text" id="url" class="form-control" name="url" required>
                         </div>
                         <div class="form-group">
-                            <label>SEO Result <span class="text-danger">*</span></label>
-                            <input type="text" id="seo_result" class="form-control" name="seo_result" required>
+                            <label>SEO Result</label>
+                            <input type="text" id="seo_result" class="form-control" name="seo_result">
                         </div>
                     </div>
                 </div>

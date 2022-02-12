@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DataTables;
 use App\Models\Projects;
+use App\Models\ProjectType;
 
 class ProjectsController extends Controller
 {
@@ -16,20 +17,39 @@ class ProjectsController extends Controller
 
     public function create()
     {
-        return view('backend.projects.create');
+        $project_type = ProjectType::where('status','Enabled')->get();
+
+        return view('backend.projects.create',[
+            'project_type' => $project_type
+        ]);
     }
 
     public function getdetails(Request $request)
     {       
         $data = Projects::get();
         return DataTables::of($data)
-            
+
+            ->addColumn('project_type', function($data){
+                $project_type = ProjectType::where('id',$data->project_type)->first();
+                if($project_type == null){
+                    $type_name = '<span class="badge badge-danger">Not Set</span>';
+                    return $type_name;
+                }
+                elseif($project_type->status == 'Disabled'){
+                    $type_name = '<span class="badge badge-warning">Project Type is Disabled</span>';
+                    return $type_name;
+                }
+                else{
+                    $type_name = $project_type->name;
+                    return $type_name;
+                }                    
+            })
             ->addColumn('action', function($data){
                 $button1 = '<a href="'.route('admin.projects.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
                 $button2 = '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
                 return $button1.$button2;
                 })
-            ->rawColumns(['action'])
+            ->rawColumns(['action','project_type'])
             ->make(true);
         
         return back();
@@ -56,9 +76,11 @@ class ProjectsController extends Controller
     public function edit($id)
     {
         $projects = Projects::where('id',$id)->first(); 
+        $project_type = ProjectType::where('status','Enabled')->get();
 
         return view('backend.projects.edit',[
-            'projects' => $projects
+            'projects' => $projects,
+            'project_type' => $project_type
         ]);
     }
 
