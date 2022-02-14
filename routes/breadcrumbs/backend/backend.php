@@ -82,3 +82,12 @@ Breadcrumbs::for('admin.help_supports.edit', function ($trail) {
     $trail->push('Edit Help & Support', route('admin.help_supports.edit',1));
 });
 
+Breadcrumbs::for('admin.projects.widget_manager', function ($trail) {
+    $trail->push('Widgets Manager', route('admin.projects.widget_manager',1));
+});
+Breadcrumbs::for('admin.projects.widget_manager.create', function ($trail) {
+    $trail->push('Create Widget Manager', route('admin.projects.widget_manager.create',1));
+});
+Breadcrumbs::for('admin.projects.widget_manager.edit', function ($trail) {
+    $trail->push('Edit Widget Manager', route('admin.projects.widget_manager.edit',1));
+});

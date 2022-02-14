@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\ProjectTypeController;
 use App\Http\Controllers\Backend\ContactUsController;
 use App\Http\Controllers\Backend\HelpCategoryController;
 use App\Http\Controllers\Backend\HelpSupportsController;
+use App\Http\Controllers\Backend\WidgetController;
 use App\Http\Controllers\Frontend\TestController;
 
 
@@ -56,6 +57,13 @@ Route::post('projects/update', [ProjectsController::class, 'update'])->name('pro
 Route::get('projects/delete/{id}', [ProjectsController::class, 'destroy'])->name('projects.destroy');
 Route::get('projects/seo_report/{id}', [ProjectsController::class, 'seo_report'])->name('projects.seo_report');
 
+Route::get('projects/widget_manager/{id}', [WidgetController::class, 'index'])->name('projects.widget_manager');
+Route::get('projects/widget_manager/create/{id}', [WidgetController::class, 'create'])->name('projects.widget_manager.create');
+Route::post('projects/widget_manager/store', [WidgetController::class, 'store'])->name('projects.widget_manager.store');
+Route::get('projects/widget_manager/getdetails/{id}', [WidgetController::class, 'getdetails'])->name('projects.widget_manager.getdetails');
+Route::get('projects/widget_manager/edit/{id}', [WidgetController::class, 'edit'])->name('projects.widget_manager.edit');
+Route::post('projects/widget_manager/update', [WidgetController::class, 'update'])->name('projects.widget_manager.update');
+Route::get('projects/widget_manager/delete/{id}', [WidgetController::class, 'destroy'])->name('projects.widget_manager.destroy');
 
 Route::get('project_type', [ProjectTypeController::class, 'index'])->name('project_type.index');
 Route::get('project_type/create', [ProjectTypeController::class, 'create'])->name('project_type.create');
