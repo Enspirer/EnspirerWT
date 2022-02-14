@@ -4,13 +4,32 @@
 
 @section('content')
     
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class = "row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-9">
+                            <h4>{{App\Models\Projects::where('id',$project->id)->first()->name}} - Created at {{App\Models\Projects::where('id',$project->id)->first()->created_at}}</h4>
+                            <p>{{App\Models\Projects::where('id',$project->id)->first()->url}}</p>
+                        </div>
+                    </div>
+                </div>                
+
+            </div>
+        </div><br>
+
+    </div>
 
 <div class="row">
         <div class="col">
 
             <div class="card">
                 <div class="card-header">
-                    <strong>Widgets Manager&nbsp;&nbsp;( {{App\Models\Projects::where('id',$project->id)->first()->name}} )</strong>
+                    <strong>Widgets Manager&nbsp;</strong>
 
                     <a href="{{route('admin.projects.widget_manager.create',$project->id)}}" class="btn btn-primary pull-right ml-4">Create New</a>
                    

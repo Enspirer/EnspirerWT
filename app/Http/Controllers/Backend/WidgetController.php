@@ -46,9 +46,13 @@ class WidgetController extends Controller
                 return $status;
             })
             ->addColumn('action', function($data){
-                $button1 = '<a href="'.route('admin.projects.widget_manager.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
-                $button2 = '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
-                return $button1.$button2;
+                $button = '<a href="'.route('admin.projects.widget_manager.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
+                
+                if($data->widget_type == 'Whatsapp Chat'){
+                    $button .= '<a href="'.route('admin.projects.widget_manager.settings',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-warning btn-sm" style="margin-right: 10px"><i class="fas fa-cog"></i> Settings </a>';
+                }
+                $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
+                return $button;
                 })
             ->rawColumns(['action','status'])
             ->make(true);
@@ -82,6 +86,18 @@ class WidgetController extends Controller
         // dd($project);        
 
         return view('backend.projects.sections.widget_manager_edit',[
+            'project' => $project,
+            'widget' => $widget
+        ]);
+    }
+
+    public function settings($id)
+    {
+        $widget = Widgets::where('id',$id)->first();
+        $project = Projects::where('id',$widget->project_id)->first(); 
+        // dd($project);  
+
+        return view('backend.projects.sections.widget_manager_settings',[
             'project' => $project,
             'widget' => $widget
         ]);

@@ -62,6 +62,7 @@ Route::get('projects/widget_manager/create/{id}', [WidgetController::class, 'cre
 Route::post('projects/widget_manager/store', [WidgetController::class, 'store'])->name('projects.widget_manager.store');
 Route::get('projects/widget_manager/getdetails/{id}', [WidgetController::class, 'getdetails'])->name('projects.widget_manager.getdetails');
 Route::get('projects/widget_manager/edit/{id}', [WidgetController::class, 'edit'])->name('projects.widget_manager.edit');
+Route::get('projects/widget_manager/settings/{id}', [WidgetController::class, 'settings'])->name('projects.widget_manager.settings');
 Route::post('projects/widget_manager/update', [WidgetController::class, 'update'])->name('projects.widget_manager.update');
 Route::get('projects/widget_manager/delete/{id}', [WidgetController::class, 'destroy'])->name('projects.widget_manager.destroy');
 
