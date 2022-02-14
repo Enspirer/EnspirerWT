@@ -8,6 +8,7 @@ use DataTables;
 use App\Models\Projects;
 use App\Models\ProjectType;
 use App\Models\Widgets;
+use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
 
 class WidgetController extends Controller
 {
@@ -96,10 +97,12 @@ class WidgetController extends Controller
         $widget = Widgets::where('id',$id)->first();
         $project = Projects::where('id',$widget->project_id)->first(); 
         // dd($project);  
+        $whatsapp_chat = WhatsappChatWidgetTemplate::where('status','Enabled')->get();
 
         return view('backend.projects.sections.widget_manager_settings',[
             'project' => $project,
-            'widget' => $widget
+            'widget' => $widget,
+            'whatsapp_chat' => $whatsapp_chat
         ]);
     }
 

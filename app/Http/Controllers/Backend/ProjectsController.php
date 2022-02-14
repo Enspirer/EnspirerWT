@@ -125,4 +125,13 @@ class ProjectsController extends Controller
     {
         Projects::where('id', $id)->delete(); 
     }
+
+    public function whatsapp_chat_preview()
+    {        
+        return view('backend.widget_display.whatsapp_chat.preview');
+    }
+
+
+
+
 }
