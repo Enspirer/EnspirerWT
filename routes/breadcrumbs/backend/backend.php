@@ -57,3 +57,28 @@ Breadcrumbs::for('admin.project_type.create', function ($trail) {
 Breadcrumbs::for('admin.project_type.edit', function ($trail) {
     $trail->push('Edit Propject Type', route('admin.project_type.edit',1));
 });
+
+Breadcrumbs::for('admin.contact_us.index', function ($trail) {
+    $trail->push('Contact Us', route('admin.contact_us.index'));
+});
+Breadcrumbs::for('admin.contact_us.edit', function ($trail) {
+    $trail->push('Edit', route('admin.contact_us.edit',1));
+});
+
+Breadcrumbs::for('admin.help_category.index', function ($trail) {
+    $trail->push('Category', route('admin.help_category.index'));
+});
+Breadcrumbs::for('admin.help_category.edit', function ($trail) {
+    $trail->push('Edit Category', route('admin.help_category.edit',1));
+});
+
+Breadcrumbs::for('admin.help_supports.index', function ($trail) {
+    $trail->push('Help & Supports', route('admin.help_supports.index'));
+});
+Breadcrumbs::for('admin.help_supports.create', function ($trail) {
+    $trail->push('Create Help & Support', route('admin.help_supports.create'));
+});
+Breadcrumbs::for('admin.help_supports.edit', function ($trail) {
+    $trail->push('Edit Help & Support', route('admin.help_supports.edit',1));
+});
+

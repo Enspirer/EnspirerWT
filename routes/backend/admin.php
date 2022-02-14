@@ -6,6 +6,9 @@ use App\Http\Controllers\Backend\SettingsController;
 use App\Http\Controllers\Backend\ModuleExplorerController;
 use App\Http\Controllers\Backend\ProjectsController;
 use App\Http\Controllers\Backend\ProjectTypeController;
+use App\Http\Controllers\Backend\ContactUsController;
+use App\Http\Controllers\Backend\HelpCategoryController;
+use App\Http\Controllers\Backend\HelpSupportsController;
 use App\Http\Controllers\Frontend\TestController;
 
 
@@ -59,3 +62,25 @@ Route::get('project_type/getdetails', [ProjectTypeController::class, 'getdetails
 Route::get('project_type/edit/{id}', [ProjectTypeController::class, 'edit'])->name('project_type.edit');
 Route::post('project_type/update', [ProjectTypeController::class, 'update'])->name('project_type.update');
 Route::get('project_type/delete/{id}', [ProjectTypeController::class, 'destroy'])->name('project_type.destroy');
+
+Route::get('contact_us', [ContactUsController::class, 'index'])->name('contact_us.index');
+Route::get('contact_us/getdetails', [ContactUsController::class, 'getDetails'])->name('contact_us.getDetails');
+Route::get('contact_us/edit/{id}', [ContactUsController::class, 'edit'])->name('contact_us.edit');
+Route::post('contact_us/update', [ContactUsController::class, 'update'])->name('contact_us.update');
+Route::get('contact_us/delete/{id}', [ContactUsController::class, 'destroy'])->name('contact_us.destroy');
+
+Route::get('help_category', [HelpCategoryController::class, 'index'])->name('help_category.index');
+Route::post('help_category/store', [HelpCategoryController::class, 'store'])->name('help_category.store');
+Route::get('help_category/getdetails', [HelpCategoryController::class, 'getdetails'])->name('help_category.getdetails');
+Route::get('help_category/edit/{id}', [HelpCategoryController::class, 'edit'])->name('help_category.edit');
+Route::post('help_category/update', [HelpCategoryController::class, 'update'])->name('help_category.update');
+Route::get('help_category/delete/{id}', [HelpCategoryController::class, 'destroy'])->name('help_category.destroy');
+
+Route::get('help_supports', [HelpSupportsController::class, 'index'])->name('help_supports.index');
+Route::get('help_supports/create', [HelpSupportsController::class, 'create'])->name('help_supports.create');
+Route::post('help_supports/store', [HelpSupportsController::class, 'store'])->name('help_supports.store');
+Route::get('help_supports/getdetails', [HelpSupportsController::class, 'getdetails'])->name('help_supports.getdetails');
+Route::get('help_supports/edit/{id}', [HelpSupportsController::class, 'edit'])->name('help_supports.edit');
+Route::post('help_supports/update', [HelpSupportsController::class, 'update'])->name('help_supports.update');
+Route::get('help_supports/delete/{id}', [HelpSupportsController::class, 'destroy'])->name('help_supports.destroy');
+
