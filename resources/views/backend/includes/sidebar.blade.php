@@ -53,7 +53,7 @@
             @if(Module::has('WidgetManager'))
                 @if(Module::find('WidgetManager')->isStatus(1))
                     <li class="nav-item">
-                        <a class="nav-link {{active_class(Route::is('admin/file_manager'))}}" href="{{ route('admin.file_manager.index') }}">
+                        <a class="nav-link {{active_class(Route::is('admin/whatsappchat_widget'))}}" href="{{ route('admin.whatsappchat_widget.index') }}">    
                             <i class="nav-icon fas fa-chart-bar"></i>
                             Widget Manager
                         </a>

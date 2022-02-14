@@ -18,19 +18,14 @@ Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
-
-
 Route::get('file_manager', [FileManagerController::class, 'index'])->name('file_manager.index');
 Route::get('file_manager/getdetails', [FileManagerController::class, 'getdetails'])->name('file_manager.getdetails');
 Route::get('file_manager/delete/{id}', [FileManagerController::class, 'destroy'])->name('file_manager.destroy');
-
-
 
 Route::get('module-explorer', [ModuleExplorerController::class, 'index'])->name('module.index');
 Route::get('module-explorer/show/{slug}', [ModuleExplorerController::class, 'show'])->name('module.show');
 Route::post('module-explorer/install/', [ModuleExplorerController::class, 'install'])->name('module.install');
 Route::post('module-explorer/uninstall/', [ModuleExplorerController::class, 'uninstall'])->name('module.uninstall');
-
 
 Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
 Route::post('settings/update', [SettingsController::class, 'settings_update'])->name('settings_update');
