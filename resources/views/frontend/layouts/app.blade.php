@@ -13,6 +13,11 @@
         <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
         @yield('meta')
 
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{{url('css/main.css')}} ">
+
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
 
@@ -27,9 +32,8 @@
 
         <div id="app">
             @include('includes.partials.logged-in-as')
-            @include('frontend.includes.nav')
-
-            <div class="container">
+            <!-- @include('frontend.includes.nav') -->
+            <div class="">
                 @include('includes.partials.messages')
                 @yield('content')
             </div><!-- container -->
@@ -41,6 +45,15 @@
         {!! script(mix('js/vendor.js')) !!}
         {!! script(mix('js/frontend.js')) !!}
         @stack('after-scripts')
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script src="{{url('js/script.js')}}"></script>
 
         @include('includes.partials.ga')
     </body>

@@ -3,141 +3,657 @@
 @section('title', app_name() . ' | ' . __('navs.frontend.dashboard') )
 
 @section('content')
-    <div class="row mb-4">
-        <div class="col">
-            <div class="card">
-                <div class="card-header">
-                    <strong>
-                        <i class="fas fa-tachometer-alt"></i> @lang('navs.frontend.dashboard')
-                    </strong>
-                </div><!--card-header-->
+   
 
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col col-sm-4 order-1 order-sm-2  mb-4">
-                            <div class="card mb-4 bg-light">
-                                <img class="card-img-top" src="{{ $logged_in_user->picture }}" alt="Profile Picture">
-
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        {{ $logged_in_user->name }}<br/>
-                                    </h4>
-
-                                    <p class="card-text">
-                                        <small>
-                                            <i class="fas fa-envelope"></i> {{ $logged_in_user->email }}<br/>
-                                            <i class="fas fa-calendar-check"></i> @lang('strings.frontend.general.joined') {{ timezone()->convertToLocal($logged_in_user->created_at, 'F jS, Y') }}
-                                        </small>
-                                    </p>
-
-                                    <p class="card-text">
-
-                                        <a href="{{ route('frontend.user.account')}}" class="btn btn-info btn-sm mb-1">
-                                            <i class="fas fa-user-circle"></i> @lang('navs.frontend.user.account')
+<section id="sectionMainWindow">
+        <div id="sectionSideNav" class="mobile">
+            <div id="sideNav" class="side-nav">
+                <div class="side-nav-brands">
+                    <div class="side-nav-toggle">
+                        <span class="toggle-btn bi bi-list"></span>
+                    </div>
+                    <img src="{{url('images/full-logo.png')}}" alt="full-logo" class="full-logo">
+                    <img src="{{url('images/small-logo.png')}}" alt="small-logo" class="small-logo">
+                </div>
+                <div class="side-navs">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="bi bi-columns-gap"></i>
+                                <span class="text">Dashboard</span>
+                                <span class="tool-tip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-clipboard2-data"></i>
+                                <span class="text">Reports</span>
+                                <span class="tool-tip">Reports</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-layers"></i>
+                                <span class="text">Projects</span>
+                                <span class="tool-tip">Projects</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-tools"></i>
+                                <span class="text">Tools</span>
+                                <span class="tool-tip">Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-gear"></i>
+                                <span class="text">Settings</span>
+                                <span class="tool-tip">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-nav-footer">
+                    <span class="copyright">&copy; MarketingManner.2022</span>
+                    <p class="theme">Marketing Manner - analytics platform for solution of all type of business
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="sectionBody">
+            <div class="row g-0">
+                <div class="nav-bar px-4" id="navBar">
+                    <div class="row g-0 align-items-center justify-content-lg-between flex-lg-row flex-column-reverse">
+                        <div class="col-auto ms-lg-0 ms-auto">
+                            <div class="property-block">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item border-right dropdown">
+                                        <a class="nav-link" href="#" id="propertyDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div class="property">
+                                                <div class="image">
+                                                    <img src="{{url('images/Tallentor.png')}}" alt="propery-image">
+                                                </div>
+                                                <div class="content">
+                                                    <h6 class="site-name">Website Name</h6>
+                                                    <span class="site-url">https://tallentor.com/</span>
+                                                </div>
+                                                <div class="dropdown-icon">
+                                                    <i class="bi bi-chevron-down"></i>
+                                                </div>
+                                            </div>
                                         </a>
-
-                                        @can('view backend')
-                                            &nbsp;<a href="{{ route('admin.dashboard')}}" class="btn btn-danger btn-sm mb-1">
-                                                <i class="fas fa-user-secret"></i> @lang('navs.frontend.user.administration')
-                                            </a>
-                                        @endcan
-                                    </p>
+                                        <ul class="dropdown-menu" aria-labelledby="propertyDropdown">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="property">
+                                                        <div class="image">
+                                                            <img src="{{url('images/Tallentor.png')}}" alt="propery-image">
+                                                        </div>
+                                                        <div class="content">
+                                                            <h6 class="site-name">Website Name</h6>
+                                                            <span class="site-url">https://tallentor.com/</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="property">
+                                                        <div class="image">
+                                                            <img src="{{url('images/Tallentor.png')}}" alt="propery-image">
+                                                        </div>
+                                                        <div class="content">
+                                                            <h6 class="site-name">Website Name</h6>
+                                                            <span class="site-url">https://tallentor.com/</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link add-btn bi bi-plus-square-fill" href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto ms-lg-0 ms-auto">
+                            <div class="profile-block">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link notification-bell bi bi-bell" href="#"></a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="profileDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div class="profile">
+                                                <div class="image">
+                                                    <img src="{{url('images/profile.png')}}" alt="profile-picture">
+                                                </div>
+                                                <div class="name">John</div>
+                                                <div class="dropdown-icon">
+                                                    <i class="bi bi-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                                            <li><a class="dropdown-item" href="#">Preference</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="{{ route('frontend.auth.logout') }}">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content goes here -->
+            <div class="row g-0">
+                <div class="section-content">
+                    <div class="section-container">
+                        <section id="sectionHeader">
+                            <div class="row g-0">
+                                <ul class="breadcrumb mb-5">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active">Dashboard</li>
+                                </ul>
+                                <div class="header-block mb-xxl-5 mb-4">
+                                    <div class="row g-0 align-items-center justify-content-between">
+                                        <div class="col-auto">
+                                            <h2 class="title">Good Morning, John</h2>
+                                            <span class="sub-title">Here's your websites situation for today</span>
+                                        </div>
+                                        <div class="col-auto my-xxl-0 my-4">
+                                            <div class="row gy-0 gx-3 justify-content-end flex-sm-nowrap">
+                                                <div class="col-12 col-sm-auto my-sm-0 my-2">
+                                                    <div class="input-group">
+                                                        <label for="datePicker" class="form-label">
+                                                            <i class="bi bi-calendar3"></i>
+                                                            <span>22 February 2022</span>
+                                                            <i class="bi bi-chevron-down"></i>
+                                                        </label>
+                                                        <!-- <input type="date" class="form-control" id="datePicker"> -->
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto my-sm-0 my-2">
+                                                    <button class="btn btn-optimize">Optimize</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </section>
 
-                            <div class="card mb-4">
-                                <div class="card-header">Header</div>
-                                <div class="card-body">
-                                    <h4 class="card-title">Info card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <section id="sectionProperties">
+                            <div class="property-block mb-5">
+                                <div class="row g-0 p-4 border-bottom justify-content-between">
+                                    <div class="col-12 col-xl-auto p-2">
+                                        <div class="property-name">
+                                            <span class="pro-name">Tallentor Website</span>
+                                            <span class="pro-url">https://tallentor.com/</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-auto p-2">
+                                        <div class="button-block">
+                                            <div
+                                                class="row gx-3 justify-content-xxl-end align-items-center flex-sm-row flex-column">
+                                                <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-1 order-2">
+                                                    <button type="button" class="btn"><i
+                                                            class="bi bi-x-diamond-fill"></i>Sample</button>
+                                                </div>
+                                                <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-2 order-3">
+                                                    <button type="button" class="btn"><i
+                                                            class="bi bi-x-diamond-fill"></i>Sample</button>
+                                                </div>
+                                                <div class="col-12 col-xl-auto order-xl-3 order-1 my-3">
+                                                    <div class="form-check form-switch">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDefault">Email
+                                                            Notifications</label>
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-auto col-7 my-sm-0 my-2 order-4">
+                                                    <button type="button" class="btn"><i
+                                                            class="bi bi-trash"></i>Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div><!--card-->
-                        </div><!--col-md-4-->
+                                <div class="row g-0 py-2 align-items-center">
+                                    <div class="col-xxl-4 my-3 info-blocks seo-block">
+                                        <div class="row g-0 justify-content-evenly">
+                                            <div class="col-md-auto col-8">
+                                                <span class="block-title">SEO Result</span>
+                                                <span class="seo-result">69/100</span>
+                                            </div>
+                                            <div class="col-md-6 col-8">
+                                                <span class="precentage">86.0<span class="sign">%</span></span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%"
+                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 my-3 info-blocks analytics-block">
+                                        <div class="block-content">
+                                            <div class="row g-0 justify-content-evenly align-items-end">
+                                                <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                    <span class="block-title mb-2">Analytics Result</span>
+                                                    <span class="sub-title">Visitors</span>
+                                                    <span class="precentage up"><i
+                                                            class="bi bi-graph-up-arrow up"></i>86.6%</span>
+                                                </div>
+                                                <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                    <span class="sub-title">Pageviews</span>
+                                                    <span class="precentage down"><i
+                                                            class="bi bi-graph-down-arrow down"></i>86.6%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 my-3 info-blocks statics-block">
+                                        <div class="row g-0 justify-content-evenly">
+                                            <div class="col-md-5 col-8">
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-triangle-fill red"></i>3
+                                                                    high
+                                                                    issues</span>
+                                                                <span class="info-prec">3.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-danger" role="progressbar"
+                                                                    style="width: 100%" aria-valuenow="100"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-square-fill yellow"></i>3
+                                                                    medium
+                                                                    issues</span>
+                                                                <span class="info-prec">3.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                                    style="width: 75%" aria-valuenow="75"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-8">
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-circle-fill gray"></i>2
+                                                                    low issues</span>
+                                                                <span class="info-prec">2.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-secondary"
+                                                                    role="progressbar" style="width: 25%"
+                                                                    aria-valuenow="25" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-star-fill blue"></i>22
+                                                                    test passed</span>
+                                                                <span class="info-prec">82.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    style="width: 25%" aria-valuenow="25"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-block mb-5">
+                                <div class="row g-0 p-4 border-bottom justify-content-between">
+                                    <div class="col-12 col-xl-auto p-2">
+                                        <div class="property-name">
+                                            <span class="pro-name">Tallentor Website</span>
+                                            <span class="pro-url">https://tallentor.com/</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-auto p-2">
+                                        <div class="button-block">
+                                            <div
+                                                class="row gx-3 justify-content-xxl-end align-items-center flex-sm-row flex-column">
+                                                <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-1 order-2">
+                                                    <button type="button" class="btn"><i
+                                                            class="bi bi-x-diamond-fill"></i>Sample</button>
+                                                </div>
+                                                <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-2 order-3">
+                                                    <button type="button" class="btn"><i
+                                                            class="bi bi-x-diamond-fill"></i>Sample</button>
+                                                </div>
+                                                <div class="col-12 col-xl-auto order-xl-3 order-1 my-3">
+                                                    <div class="form-check form-switch">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDefault">Email
+                                                            Notifications</label>
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-auto col-7 my-sm-0 my-2 order-4">
+                                                    <button type="button" class="btn"><i
+                                                            class="bi bi-trash"></i>Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-0 py-2 align-items-center">
+                                    <div class="col-xxl-4 my-3 info-blocks seo-block">
+                                        <div class="row g-0 justify-content-evenly">
+                                            <div class="col-md-auto col-8">
+                                                <span class="block-title">SEO Result</span>
+                                                <span class="seo-result">69/100</span>
+                                            </div>
+                                            <div class="col-md-6 col-8">
+                                                <span class="precentage">86.0<span class="sign">%</span></span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%"
+                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 my-3 info-blocks analytics-block">
+                                        <div class="block-content">
+                                            <div class="row g-0 justify-content-evenly align-items-end">
+                                                <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                    <span class="block-title mb-2">Analytics Result</span>
+                                                    <span class="sub-title">Visitors</span>
+                                                    <span class="precentage up"><i
+                                                            class="bi bi-graph-up-arrow up"></i>86.6%</span>
+                                                </div>
+                                                <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                    <span class="sub-title">Pageviews</span>
+                                                    <span class="precentage down"><i
+                                                            class="bi bi-graph-down-arrow down"></i>86.6%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 my-3 info-blocks statics-block">
+                                        <div class="row g-0 justify-content-evenly">
+                                            <div class="col-md-5 col-8">
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-triangle-fill red"></i>3
+                                                                    high
+                                                                    issues</span>
+                                                                <span class="info-prec">3.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-danger" role="progressbar"
+                                                                    style="width: 100%" aria-valuenow="100"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-square-fill yellow"></i>3
+                                                                    medium
+                                                                    issues</span>
+                                                                <span class="info-prec">3.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                                    style="width: 75%" aria-valuenow="75"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-8">
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-circle-fill gray"></i>2
+                                                                    low issues</span>
+                                                                <span class="info-prec">2.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-secondary"
+                                                                    role="progressbar" style="width: 25%"
+                                                                    aria-valuenow="25" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-star-fill blue"></i>22
+                                                                    test passed</span>
+                                                                <span class="info-prec">82.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    style="width: 25%" aria-valuenow="25"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-block mb-5">
+                                <div class="row g-0 p-4 border-bottom justify-content-between">
+                                    <div class="col-12 col-xl-auto p-2">
+                                        <div class="property-name">
+                                            <span class="pro-name">Tallentor Website</span>
+                                            <span class="pro-url">https://tallentor.com/</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-auto p-2">
+                                        <div class="button-block">
+                                            <div
+                                                class="row gx-3 justify-content-xxl-end align-items-center flex-sm-row flex-column">
+                                                <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-1 order-2">
+                                                    <button type="button" class="btn"><i
+                                                            class="bi bi-x-diamond-fill"></i>Sample</button>
+                                                </div>
+                                                <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-2 order-3">
+                                                    <button type="button" class="btn"><i
+                                                            class="bi bi-x-diamond-fill"></i>Sample</button>
+                                                </div>
+                                                <div class="col-12 col-xl-auto order-xl-3 order-1 my-3">
+                                                    <div class="form-check form-switch">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDefault">Email
+                                                            Notifications</label>
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-auto col-7 my-sm-0 my-2 order-4">
+                                                    <button type="button" class="btn"><i
+                                                            class="bi bi-trash"></i>Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-0 py-2 align-items-center">
+                                    <div class="col-xxl-4 my-3 info-blocks seo-block">
+                                        <div class="row g-0 justify-content-evenly">
+                                            <div class="col-md-auto col-8">
+                                                <span class="block-title">SEO Result</span>
+                                                <span class="seo-result">69/100</span>
+                                            </div>
+                                            <div class="col-md-6 col-8">
+                                                <span class="precentage">86.0<span class="sign">%</span></span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%"
+                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 my-3 info-blocks analytics-block">
+                                        <div class="block-content">
+                                            <div class="row g-0 justify-content-evenly align-items-end">
+                                                <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                    <span class="block-title mb-2">Analytics Result</span>
+                                                    <span class="sub-title">Visitors</span>
+                                                    <span class="precentage up"><i
+                                                            class="bi bi-graph-up-arrow up"></i>86.6%</span>
+                                                </div>
+                                                <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                    <span class="sub-title">Pageviews</span>
+                                                    <span class="precentage down"><i
+                                                            class="bi bi-graph-down-arrow down"></i>86.6%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 my-3 info-blocks statics-block">
+                                        <div class="row g-0 justify-content-evenly">
+                                            <div class="col-md-5 col-8">
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-triangle-fill red"></i>3
+                                                                    high
+                                                                    issues</span>
+                                                                <span class="info-prec">3.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-danger" role="progressbar"
+                                                                    style="width: 100%" aria-valuenow="100"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-square-fill yellow"></i>3
+                                                                    medium
+                                                                    issues</span>
+                                                                <span class="info-prec">3.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                                    style="width: 75%" aria-valuenow="75"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-8">
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-circle-fill gray"></i>2
+                                                                    low issues</span>
+                                                                <span class="info-prec">2.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-secondary"
+                                                                    role="progressbar" style="width: 25%"
+                                                                    aria-valuenow="25" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="issues-blocks">
+                                                            <div class="issue-info">
+                                                                <span class="info"><i
+                                                                        class="bi bi-star-fill blue"></i>22
+                                                                    test passed</span>
+                                                                <span class="info-prec">82.0%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    style="width: 25%" aria-valuenow="25"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="col-md-8 order-2 order-sm-1">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            Item
-                                        </div><!--card-header-->
+    
 
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                        </div><!--card-body-->
-                                    </div><!--card-->
-                                </div><!--col-md-6-->
-                            </div><!--row-->
-
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            Item
-                                        </div><!--card-header-->
-
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                        </div><!--card-body-->
-                                    </div><!--card-->
-                                </div><!--col-md-6-->
-                            </div><!--row-->
-
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            Item
-                                        </div><!--card-header-->
-
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                        </div><!--card-body-->
-                                    </div><!--card-->
-                                </div><!--col-md-6-->
-
-                                <div class="col">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            Item
-                                        </div><!--card-header-->
-
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                        </div><!--card-body-->
-                                    </div><!--card-->
-                                </div><!--col-md-6-->
-
-                                <div class="w-100"></div>
-
-                                <div class="col">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            Item
-                                        </div><!--card-header-->
-
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                        </div><!--card-body-->
-                                    </div><!--card-->
-                                </div><!--col-md-6-->
-
-                                <div class="col">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            Item
-                                        </div><!--card-header-->
-
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                        </div><!--card-body-->
-                                    </div><!--card-->
-                                </div><!--col-md-6-->
-                            </div><!--row-->
-                        </div><!--col-md-8-->
-                    </div><!-- row -->
-                </div> <!-- card-body -->
-            </div><!-- card -->
-        </div><!-- row -->
-    </div><!-- row -->
 @endsection
