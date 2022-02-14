@@ -8,7 +8,7 @@ use DataTables;
 use App\Models\Projects;
 use App\Models\ProjectType;
 use phpDocumentor\Reflection\Project;
-
+use App\Http\Requests\Backend\Auth\User\StoreReportRequest;
 class ProjectsController extends Controller
 {
     public function index()
@@ -26,7 +26,8 @@ class ProjectsController extends Controller
     }
 
     public function show($id)
-    {        
+    {
+
         $project = Projects::where('id',$id)->first();
 
         return view('backend.projects.show',[
@@ -34,8 +35,11 @@ class ProjectsController extends Controller
         ]);
     }
 
-    public function seo_report($id)
+    public function seo_report($id, Request $request)
     {
+
+
+
         $project = Projects::where('id',$id)->first();
         return view('backend.projects.sections.seo_report',[
             'project' => $project
@@ -74,19 +78,20 @@ class ProjectsController extends Controller
         return back();
     }
 
-    public function store(Request $request)
+    public function store(StoreReportRequest $request)
     {        
-        // dd($request);  
-        
-        $add = new Projects;
 
-        $add->name = $request->name;        
-        $add->project_type = $request->project_type;
-        $add->url = $request->url;
-        $add->seo_result = $request->seo_result;
-        $add->user_id = auth()->user()->id;
 
-        $add->save();
+        $project = new Projects();
+        $iresult = $project->create_seo_report($request);
+
+
+
+
+        dd($iresult);
+
+
+
 
         return redirect()->route('admin.projects.index')->withFlashSuccess('Added Successfully');    
                     
