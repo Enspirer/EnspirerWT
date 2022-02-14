@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use DataTables;
 use App\Models\Projects;
 use App\Models\ProjectType;
+use phpDocumentor\Reflection\Project;
 
 class ProjectsController extends Controller
 {
@@ -26,10 +27,18 @@ class ProjectsController extends Controller
 
     public function show($id)
     {        
-        $projects = Projects::where('id',$id)->first(); 
+        $project = Projects::where('id',$id)->first();
 
         return view('backend.projects.show',[
-            'projects' => $projects
+            'project' => $project
+        ]);
+    }
+
+    public function seo_report($id)
+    {
+        $project = Projects::where('id',$id)->first();
+        return view('backend.projects.sections.seo_report',[
+            'project' => $project
         ]);
     }
 

@@ -54,6 +54,8 @@ Route::get('projects/getdetails', [ProjectsController::class, 'getdetails'])->na
 Route::get('projects/edit/{id}', [ProjectsController::class, 'edit'])->name('projects.edit');
 Route::post('projects/update', [ProjectsController::class, 'update'])->name('projects.update');
 Route::get('projects/delete/{id}', [ProjectsController::class, 'destroy'])->name('projects.destroy');
+Route::get('projects/seo_report/{id}', [ProjectsController::class, 'seo_report'])->name('projects.seo_report');
+
 
 Route::get('project_type', [ProjectTypeController::class, 'index'])->name('project_type.index');
 Route::get('project_type/create', [ProjectTypeController::class, 'create'])->name('project_type.create');

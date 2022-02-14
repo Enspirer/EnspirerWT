@@ -36,9 +36,9 @@
                                 <li class="border-right-lg "></li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex align-items-center font-weight-medium py-3 px-3" href="#seo">
+                                    <a class="nav-link d-flex align-items-center font-weight-medium py-3 px-3" href="{{route('admin.projects.seo_report',$project->id)}}">
                                         <span class="d-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" class="fill-current width-4 height-4 mr-2" viewBox="0 0 17.49 17.49"><path d="M12.5,11h-.79l-.28-.27a6.51,6.51,0,1,0-.7.7l.27.28v.79l5,5L17.49,16Zm-6,0A4.5,4.5,0,1,1,11,6.5,4.49,4.49,0,0,1,6.5,11Z"></path></svg></span>
-                                        <span>SEO</span>
+                                        <span>SEO Report</span>
                                         <span class="badge badge-danger ml-2">3</span>
                                         <span class="badge badge-warning ml-2">1</span>
                                     </a>
@@ -49,7 +49,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link d-flex align-items-center font-weight-medium py-3 px-3" href="#performance">
                                         <span class="d-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" class="fill-current width-4 height-4 mr-2" viewBox="0 0 19.97 15.96"><path d="M18.35,4.53,17.12,6.38A8,8,0,0,1,16.9,14H3A8,8,0,0,1,13.55,2.81L15.4,1.58A10,10,0,0,0,1.32,15,2,2,0,0,0,3,16H16.89a2,2,0,0,0,1.74-1,10,10,0,0,0-.27-10.44Z"></path><path d="M8.56,11.37a2,2,0,0,0,2.83,0h0l5.66-8.49L8.56,8.54a2,2,0,0,0,0,2.83Z"></path></svg></span>
-                                        <span>Performance</span>
+                                        <span>Analytics</span>
                                         <span class="badge badge-warning ml-2">2</span>
                                         <span class="badge badge-secondary ml-2">1</span>
                                     </a>
@@ -69,7 +69,7 @@
                                 <li class="nav-item ">
                                     <a class="nav-link d-flex align-items-center font-weight-medium py-3 px-3" href="#miscellaneous">
                                         <span class="d-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" class="fill-current width-4 height-4 mr-2" viewBox="0 0 18 18"><path d="M16,2V16H2V2H16m0-2H2A2,2,0,0,0,0,2V16a2,2,0,0,0,2,2H16a2,2,0,0,0,2-2V2A2,2,0,0,0,16,0ZM9,9a3,3,0,1,1,3-3A3,3,0,0,1,9,9ZM9,5a1,1,0,1,0,1,1A1,1,0,0,0,9,5Zm6,10H3V13.47C3,11,7,9.89,9,9.89s6,1.08,6,3.58ZM5.31,13h7.38A7,7,0,0,0,9,11.88,7,7,0,0,0,5.31,13Z"></path></svg></span>
-                                        <span>Miscellaneous</span>
+                                        <span>WidgetManager</span>
                                         <span class="badge badge-warning ml-2">1</span>
                                         <span class="badge badge-secondary ml-2">4</span>
                                     </a>
