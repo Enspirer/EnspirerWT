@@ -4,25 +4,7 @@
 
 @section('content')
     
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class = "row">
-                        <div class="col-md-3">
-
-                        </div>
-                        <div class="col-md-9">
-                            <h4>{{App\Models\Projects::where('id',$project->id)->first()->name}} - Created at {{App\Models\Projects::where('id',$project->id)->first()->created_at}}</h4>
-                            <p>{{App\Models\Projects::where('id',$project->id)->first()->url}}</p>
-                        </div>
-                    </div>
-                </div>                
-
-            </div>
-        </div><br>
-
-    </div>
+@include('backend.projects.includes.project_header')
 
 <div class="row">
         <div class="col">
