@@ -251,7 +251,99 @@
                     </div>
                     
 
-                    <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">Settings</div>
+                    <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                        
+                        <div class="card px-3 custom-shadow border-0" style="-webkit-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); -moz-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); box-shadow: inset 0px 0.5px 14px -8px rgba(0,0,0,0.75);">
+                            <h6 class="card-header p-0 mt-0">Position</h6>
+                            <div class="form-group mt-1">
+                                <select class="form-control custom-select" name="position" required>
+                                    <option value="Floating Bubble">Floating Bubble</option>                                 
+                                    <option value="Embed Bubble">Embed Bubble</option>                                 
+                                    <option value="Embed Chat Window">Embed Chat Window</option>                                 
+                                </select>
+                            </div>                            
+                        </div>
+
+                        <div class="card px-3 custom-shadow border-0" style="-webkit-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); -moz-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); box-shadow: inset 0px 0.5px 14px -8px rgba(0,0,0,0.75);">
+                            <h6 class="card-header p-0 mt-0">Chat Display Settings</h6>
+                            <div class="form-group mt-1">
+                                <label>Where to display chat <span class="text-danger">*</span></label>
+                                <select class="form-control custom-select" name="where_display_chat" required>
+                                    <option value="All">All</option>                                 
+                                    <option value="Excluded Pages">Excluded Pages</option>                                 
+                                    <option value="Specific Pages">Specific Pages</option>                                 
+                                </select>
+                            </div>  
+
+                            <label class="mt-3">Device <span class="text-danger">*</span></label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="device" id="desktop" value="desktop">
+                                <label class="form-check-label" for="desktop">Desktop</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="device" id="mobile_device" value="mobile_device">
+                                <label class="form-check-label" for="mobile_device">Mobile Devices</label>
+                            </div>
+                                                         
+                                      
+                            <label class="mt-4">Visitors <span class="text-danger">*</span></label>                        
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="visitors" id="all_visitors" value="all_visitors" checked>
+                                <label class="form-check-label" for="all_visitors">All Visitors</label>
+                            </div>
+                          
+                             <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="visitors" id="new_visitors" value="new_visitors">
+                                 <label class="form-check-label" for="new_visitors">New Visitors</label>
+                            </div>
+                            
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input" type="radio" name="visitors" id="refurm_visitors" value="refurm_visitors">
+                                <label class="form-check-label" for="refurm_visitors">Refurming Visitors</label>
+                            </div>                            
+                         
+                        </div>
+
+                        <div class="card px-3 custom-shadow border-0" style="-webkit-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); -moz-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); box-shadow: inset 0px 0.5px 14px -8px rgba(0,0,0,0.75);">
+                            
+                            <h6 class="card-header p-0 mt-0">Date and Time</h6>
+
+                            <label class="mt-3">When to Display Chat <span class="text-danger">*</span></label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="date_time" id="monday" value="monday">
+                                <label class="form-check-label" for="monday">Monday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="date_time" id="tuesday" value="tuesday">
+                                <label class="form-check-label" for="tuesday">Tuesday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="date_time" id="wednesday" value="wednesday">
+                                <label class="form-check-label" for="wednesday">Wednesday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="date_time" id="thursday" value="thursday">
+                                <label class="form-check-label" for="thursday">Thursday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="date_time" id="friday" value="friday">
+                                <label class="form-check-label" for="friday">Friday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="date_time" id="saturday" value="saturday">
+                                <label class="form-check-label" for="saturday">Saturday</label>
+                            </div>
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input" type="checkbox" name="date_time" id="sunday" value="sunday">
+                                <label class="form-check-label" for="sunday">Sunday</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
                     <div class="tab-pane fade" id="appearance" role="tabpanel" aria-labelledby="appearance-tab">Appearance</div>
                 </div>
             </div>
