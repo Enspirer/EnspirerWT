@@ -4,6 +4,15 @@
 
 @section('content')
     
-    Chat
+    <section id="sectionMainWindow">
+        @include('frontend.includes.sidebar')
+
+        <div id="sectionBody">
+            @include('frontend.includes.nav')
+            
+                <h4 class="p-5">Chat</h4>               
+                
+        </div>
+    </section>
 
 @endsection

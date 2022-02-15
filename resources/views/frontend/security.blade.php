@@ -4,6 +4,15 @@
 
 @section('content')
     
-    Security
+    <section id="sectionMainWindow">
+        @include('frontend.includes.sidebar')
+
+        <div id="sectionBody">
+            @include('frontend.includes.nav')
+            
+                <h4 class="p-5">Security</h4>                
+            
+        </div>
+    </section>
 
 @endsection
