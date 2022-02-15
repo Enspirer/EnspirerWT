@@ -60,6 +60,7 @@ Route::get('projects/widget_manager/edit/{id}', [WidgetController::class, 'edit'
 Route::get('projects/widget_manager/settings/{id}', [WidgetController::class, 'settings'])->name('projects.widget_manager.settings');
 Route::post('projects/widget_manager/update', [WidgetController::class, 'update'])->name('projects.widget_manager.update');
 Route::get('projects/widget_manager/delete/{id}', [WidgetController::class, 'destroy'])->name('projects.widget_manager.destroy');
+Route::post('projects/widget_manager/settings_update', [WidgetController::class, 'settings_update'])->name('projects.widget_manager.settings_update');
 
 Route::get('whatsapp_chat_preview', [ProjectsController::class, 'whatsapp_chat_preview'])->name('whatsapp_chat_preview');
 

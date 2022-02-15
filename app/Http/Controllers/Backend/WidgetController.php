@@ -91,20 +91,7 @@ class WidgetController extends Controller
             'widget' => $widget
         ]);
     }
-
-    public function settings($id)
-    {
-        $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first(); 
-        // dd($project);  
-        $whatsapp_chat = WhatsappChatWidgetTemplate::where('status','Enabled')->get();
-
-        return view('backend.projects.sections.widget_manager_settings',[
-            'project' => $project,
-            'widget' => $widget,
-            'whatsapp_chat' => $whatsapp_chat
-        ]);
-    }
+    
 
     public function update(Request $request)
     {        
@@ -127,6 +114,135 @@ class WidgetController extends Controller
     public function destroy($id)
     {
         Widgets::where('id', $id)->delete(); 
+    }
+
+
+    public function settings($id)
+    {
+        $widget = Widgets::where('id',$id)->first();
+        $project = Projects::where('id',$widget->project_id)->first(); 
+        // dd($project);  
+        $whatsapp_chat = WhatsappChatWidgetTemplate::where('status','Enabled')->get();
+
+        return view('backend.projects.sections.widget_manager_settings',[
+            'project' => $project,
+            'widget' => $widget,
+            'whatsapp_chat' => $whatsapp_chat
+        ]);
+    }
+
+    public function settings_update(Request $request)
+    {        
+        // dd($request);
+
+        $device = $request->device;
+        $device_array = [];
+                    
+        foreach($device as $key => $dev){
+
+            $item_group = [                            
+                'device' => $dev
+            ];
+
+            array_push($device_array,$item_group);
+        } 
+        
+        $date_time = $request->date_time;
+        $date_time_array = [];
+                    
+        foreach($date_time as $key => $date){
+
+            $item_group = [                            
+                'date_time' => $date
+            ];
+
+            array_push($date_time_array,$item_group);
+        }  
+
+        $notification = $request->notification;
+        $notify_array = [];
+                    
+        foreach($notification as $key => $notify){
+
+            $item_group = [                            
+                'notification' => $notify
+            ];
+
+            array_push($notify_array,$item_group);
+        }  
+        
+        $template_layout = $request->template_layout;
+        $whatsapp_number = $request->whatsapp_number;
+        $bubble_icon = $request->bubble_icon;
+        $chat_header = $request->chat_header;
+        $caption = $request->caption;
+        $welcome_message = $request->welcome_message;
+        $start_chat = $request->start_chat;
+        $show_icon = $request->show_icon;
+        $position = $request->position;
+        $where_display_chat = $request->where_display_chat;
+        $visitors = $request->visitors;
+        $visitors = $request->visitors;
+        $start_time = $request->start_time;
+        $end_time = $request->end_time;
+        $timezone = $request->timezone;
+        $time_on_page = $request->time_on_page;
+        $time_on_site = $request->time_on_site;
+        $scroll_position = $request->scroll_position;
+        $exit_internet = $request->exit_internet;
+        $bubble_background_color = $request->bubble_background_color;
+        $bubble_icon_color = $request->bubble_icon_color;
+        $button_color = $request->button_color;
+        $header_background_color = $request->header_background_color;
+        $enabled_animation = $request->enabled_animation;
+        $scroll_position_appearance = $request->scroll_position_appearance;
+        $button_corner_radius = $request->button_corner_radius;
+        $custom_css = $request->custom_css;
+
+        $array = [
+            'template_layout' => $template_layout,
+            'whatsapp_number' => $whatsapp_number,
+            'bubble_icon' => $bubble_icon,
+            'chat_header' => $chat_header,
+            'caption' => $caption,
+            'welcome_message' => $welcome_message,
+            'start_chat' => $start_chat,
+            'show_icon' => $show_icon,
+            'position' => $position,
+            'where_display_chat' => $where_display_chat,
+            'device' => $device_array,
+            'visitors' => $visitors,
+            'date_time' => $date_time_array,
+            'start_time' => $start_time,
+            'end_time' => $end_time,
+            'timezone' => $timezone,
+            'time_on_page' => $time_on_page,
+            'time_on_site' => $time_on_site,
+            'scroll_position' => $scroll_position,
+            'exit_internet' => $exit_internet,
+            'notification' => $notify_array,
+            'bubble_background_color' => $bubble_background_color,
+            'bubble_icon_color' => $bubble_icon_color,
+            'button_color' => $button_color,
+            'header_background_color' => $header_background_color,
+            'enabled_animation' => $enabled_animation,
+            'scroll_position_appearance' => $scroll_position_appearance,
+            'button_corner_radius' => $button_corner_radius,
+            'custom_css' => $custom_css,
+        ];
+
+        $final_array = [$array];
+
+         
+     
+        $update = new Widgets;
+
+        $update->settings = json_encode($final_array);
+
+        Widgets::whereId($request->hidden_id)->update($update->toArray());
+
+        return back();            
+
     }
 
 }
