@@ -355,16 +355,18 @@
                         <section id="sectionTabs">
                             <div class="row gy-0 gx-5 mb-5">
                                 <div class="col">
-                                    <div class="tabs p-4">
-                                        <div class="tab-icon">
-                                            <i class="bi bi-search-heart"></i>
+                                    <a href="{{route('frontend.seo')}}" style="text-decoration:none">
+                                        <div class="tabs p-4">
+                                            <div class="tab-icon">
+                                                <i class="bi bi-search-heart"></i>
+                                            </div>
+                                            <div class="tab-title">Search Engine Optimization</div>
+                                            <div class="tab-info">
+                                                <span class="strong-text">82.0</span>
+                                                Pass
+                                            </div>
                                         </div>
-                                        <div class="tab-title">Search Engine Optimization</div>
-                                        <div class="tab-info">
-                                            <span class="strong-text">82.0</span>
-                                            Pass
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col">
                                     <div class="tabs p-4 active">
@@ -379,28 +381,32 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="tabs p-4">
-                                        <div class="tab-icon">
-                                            <i class="bi bi-shield-check"></i>
+                                    <a href="{{route('frontend.security')}}" style="text-decoration:none">
+                                        <div class="tabs p-4">
+                                            <div class="tab-icon">
+                                                <i class="bi bi-shield-check"></i>
+                                            </div>
+                                            <div class="tab-title">Security</div>
+                                            <div class="tab-info">
+                                                <span class="strong-text">05</span>
+                                                Alerts
+                                            </div>
                                         </div>
-                                        <div class="tab-title">Security</div>
-                                        <div class="tab-info">
-                                            <span class="strong-text">05</span>
-                                            Alerts
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col">
-                                    <div class="tabs p-4">
-                                        <div class="tab-icon">
-                                            <i class="bi bi-chat-dots"></i>
+                                    <a href="{{route('frontend.chat')}}" style="text-decoration:none">
+                                        <div class="tabs p-4">
+                                            <div class="tab-icon">
+                                                <i class="bi bi-chat-dots"></i>
+                                            </div>
+                                            <div class="tab-title">Chat</div>
+                                            <div class="tab-info">
+                                                <span class="strong-text">14</span>
+                                                Chats
+                                            </div>
                                         </div>
-                                        <div class="tab-title">Chat</div>
-                                        <div class="tab-info">
-                                            <span class="strong-text">14</span>
-                                            Chats
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </section>
