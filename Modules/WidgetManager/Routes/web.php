@@ -37,3 +37,7 @@ Breadcrumbs::for('admin.whatsappchat_widget.create', function ($trail) {
 Breadcrumbs::for('admin.whatsappchat_widget.edit', function ($trail) {
     $trail->push('Edit Whatsapp Chat Widget', route('admin.whatsappchat_widget.edit',1));
 });
+
+Breadcrumbs::for('admin.projects.seo_report', function ($trail) {
+    $trail->push('SEO Report', route('admin.projects.seo_report',1));
+});
