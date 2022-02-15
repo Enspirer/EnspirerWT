@@ -14,7 +14,7 @@
 
 
 <div class="row">
-    <div class="col-6">
+    <div class="col-6">       
         <div class="card">
             <div class="card-body">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -286,7 +286,7 @@
                                 
                                 <label class="mt-3">Device <span class="text-danger">*</span></label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="device[]" id="desktop" value="desktop">
+                                    <input class="form-check-input" type="checkbox" name="device[]" id="desktop" value="desktop" checked>
                                     <label class="form-check-label" for="desktop">Desktop</label>
                                 </div>
                                 <div class="form-check form-check-inline">

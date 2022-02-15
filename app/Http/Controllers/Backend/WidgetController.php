@@ -135,16 +135,27 @@ class WidgetController extends Controller
     {        
         // dd($request);
 
+        $request->validate(
+            [
+                'welcome_message' => 'required',
+                'device' => 'required',
+                'date_time' => 'required',
+                'notification' => 'required'
+            ],
+            [
+                'welcome_message.required' => 'Fill Welcome Message Section',
+                'device.required' => 'Fill Device Section',
+                'date_time.required' => 'Fill Date and Time Section',
+                'notification.required' => 'Fill Notification Section'
+            ]
+        );
+
         $device = $request->device;
         $device_array = [];
                     
         foreach($device as $key => $dev){
 
-            $item_group = [                            
-                'device' => $dev
-            ];
-
-            array_push($device_array,$item_group);
+            array_push($device_array,$dev);
         } 
         
         $date_time = $request->date_time;
@@ -152,11 +163,7 @@ class WidgetController extends Controller
                     
         foreach($date_time as $key => $date){
 
-            $item_group = [                            
-                'date_time' => $date
-            ];
-
-            array_push($date_time_array,$item_group);
+            array_push($date_time_array,$date);
         }  
 
         $notification = $request->notification;
@@ -164,11 +171,11 @@ class WidgetController extends Controller
                     
         foreach($notification as $key => $notify){
 
-            $item_group = [                            
-                'notification' => $notify
-            ];
+            // $item_group = [                            
+            //     $notify
+            // ];
 
-            array_push($notify_array,$item_group);
+            array_push($notify_array,$notify);
         }  
         
         $template_layout = $request->template_layout;
@@ -241,7 +248,7 @@ class WidgetController extends Controller
 
         Widgets::whereId($request->hidden_id)->update($update->toArray());
 
-        return back();            
+        return back()->withFlashSuccess('Updated Successfully');      
 
     }
 
