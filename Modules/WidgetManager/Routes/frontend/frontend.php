@@ -7,3 +7,4 @@
     */
 
 
+Route::get('whatsapp_widget/{id}/tallentorw.js', 'WidgetController@index')->name('widgetController.index');
