@@ -64,6 +64,8 @@ class WidgetController extends Controller
     public function store(Request $request)
     {        
         // dd($request);  
+
+        $default_settings = '[{"template_layout":"1","whatsapp_number":"0791111111","bubble_icon":"gem","chat_header":"Chat","caption":"chat","welcome_message":"<p>Welcome Message<\/p>","start_chat":"Enabled","show_icon":"Enabled","position":"Floating Bubble","where_display_chat":"All","device":["desktop"],"visitors":"all_visitors","date_time":["friday","saturday","sunday"],"start_time":"2022-02-01","end_time":"2022-05-31","timezone":"Asia\/Calcutta","time_on_page":"20s","time_on_site":"30s","scroll_position":"Center","exit_internet":"on","notification":["bubble_notification_bage"],"bubble_background_color":"#055147","bubble_icon_color":"#487662","button_color":"#79a37d","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right Side","button_corner_radius":"53","custom_css":"No"}]';
         
         $add = new Widgets;
 
@@ -72,6 +74,9 @@ class WidgetController extends Controller
         $add->settings = $request->settings;
         $add->load_count = $request->load_count;
         $add->project_id = $request->hidden_id;
+        if($request->widget_type == 'Whatsapp Chat'){
+            $add->settings = $default_settings;
+        }
 
         $add->save();
 
@@ -95,8 +100,8 @@ class WidgetController extends Controller
 
     public function update(Request $request)
     {        
-        // dd($request);                         
-     
+        // dd($request);    
+                    
         $update = new Widgets;
 
         $update->status = $request->status;        
@@ -120,8 +125,7 @@ class WidgetController extends Controller
     public function settings($id)
     {
         $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first(); 
-        // dd($project);  
+        $project = Projects::where('id',$widget->project_id)->first();           
         $whatsapp_chat = WhatsappChatWidgetTemplate::where('status','Enabled')->get();
 
         return view('backend.projects.sections.widget_manager_settings',[
