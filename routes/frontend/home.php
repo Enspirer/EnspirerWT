@@ -7,6 +7,9 @@ use App\Http\Controllers\Frontend\User\AccountController;
 use App\Http\Controllers\Frontend\User\DashboardController;
 use App\Http\Controllers\Frontend\User\ProfileController;
 use App\Http\Controllers\Frontend\TestController;
+use App\Http\Controllers\Frontend\SEOController;
+use App\Http\Controllers\Frontend\SecurityController;
+use App\Http\Controllers\Frontend\ChatController;
 /*
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
@@ -24,6 +27,11 @@ Route::get('uploads/all/{file_name}',[AizUploadController::class,'get_image_cont
 
 Route::get('static/{id}/mpaclic.js',[TestController::class, 'index'])->name('resource_widget');
 Route::get('test_blade',[TestController::class, 'testblade'])->name('testblade');
+
+Route::get('seo',[SEOController::class, 'index'])->name('seo');
+Route::get('security',[SecurityController::class, 'index'])->name('security');
+Route::get('chat',[ChatController::class, 'index'])->name('chat');
+
 
 
 /*
