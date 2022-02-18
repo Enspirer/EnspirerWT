@@ -51,6 +51,7 @@ class WidgetController extends Controller
                 
                 if($data->widget_type == 'Whatsapp Chat'){
                     $button .= '<a href="'.route('admin.projects.widget_manager.settings',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-warning btn-sm" style="margin-right: 10px"><i class="fas fa-cog"></i> Settings </a>';
+                    $button .= '<a href="'.route('admin.ims.index',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-info btn-sm" style="margin-right: 10px"><i class="fas fa-cog"></i> IMS </a>';
                 }
                 $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
                 return $button;
@@ -259,5 +260,6 @@ class WidgetController extends Controller
         return back()->withFlashSuccess('Updated Successfully');      
 
     }
+    
 
 }
