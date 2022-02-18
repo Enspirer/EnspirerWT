@@ -38,7 +38,7 @@
                         
                         <div class="form-group mt-3">
                                 <label>Template Layout <span class="text-danger">*</span></label>
-                                <select class="form-control" id="template_layout" name="template_layout" required>
+                                <select class="form-control" id="template_layout" name="template_layout" onchange="myFunction()" required>
                                     <option value="" selected disabled>Select...</option>
                                     @foreach($whatsapp_chat as $whatsapp)
                                         <option value="{{ $whatsapp->id }}" {{json_decode($widget->settings)[0]->template_layout == $whatsapp->id ? "selected" : ""}}>{{ $whatsapp->name }}</option>
@@ -51,7 +51,7 @@
                         <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">
                             <div class="form-group mt-3">
                                 <label>Whatsapp Number <span class="text-danger">*</span></label>
-                                <input type="text" id="whatsapp_number" class="form-control" name="whatsapp_number" value="{{ json_decode($widget->settings)[0]->whatsapp_number }}" required>
+                                <input type="text" id="whatsapp_number" class="form-control" name="whatsapp_number" value="{{ json_decode($widget->settings)[0]->whatsapp_number }}" onchange="myFunction()" required>
                             </div>
                             
                              
@@ -59,7 +59,7 @@
                                 <h6 class="card-header p-0 mt-0">Chat Bubble</h6>
                                 <div class="form-group mt-3">
                                     <label>Bubble Icon <span class="text-danger">*</span></label>
-                                    <select class="form-control custom-select" id="bubble_icon" name="bubble_icon" required>
+                                    <select class="form-control custom-select" id="bubble_icon" name="bubble_icon" onchange="myFunction()" required>
                                         <option value="address-book">&#xf2b9; address-book</option>
                                         <option value="address-card">&#xf2bb; address-card</option>
                                         <option value="angry">&#xf556; angry</option>
@@ -222,11 +222,11 @@
                                 <h6 class="card-header p-0 mt-0">Chat Header</h6>
                                 <div class="form-group mt-3">
                                     <label>Chat Header <span class="text-danger">*</span></label>
-                                    <input type="text" id="chat_header" class="form-control" name="chat_header" value="{{ json_decode($widget->settings)[0]->chat_header }}" required>
+                                    <input type="text" id="chat_header" class="form-control" name="chat_header" value="{{ json_decode($widget->settings)[0]->chat_header }}" onchange="myFunction()" required>
                                 </div>
                                 <div class="form-group mt-1">
                                     <label>Caption <span class="text-danger">*</span></label>
-                                    <input type="text" id="caption" class="form-control" name="caption" value="{{ json_decode($widget->settings)[0]->caption }}" required>
+                                    <input type="text" id="caption" class="form-control" name="caption" value="{{ json_decode($widget->settings)[0]->caption }}" onchange="myFunction()" required>
                                 </div>
                             </div>
 
@@ -235,7 +235,7 @@
                             <div class="card px-3 custom-shadow border-0" style="-webkit-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); -moz-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); box-shadow: inset 0px 0.5px 14px -8px rgba(0,0,0,0.75);">
                                 <h6 class="card-header p-0 mt-0">Welcome Message</h6>
                                 <div class="form-group mt-3">
-                                    <textarea type="text" id="editor" class="form-control" name="welcome_message">{{ json_decode($widget->settings)[0]->welcome_message }}</textarea>
+                                    <textarea id="welcome_message" class="form-control" name="welcome_message" onchange="myFunction()">{{ json_decode($widget->settings)[0]->welcome_message }}</textarea>
                                 </div>
                             </div>
 
@@ -243,14 +243,14 @@
                                 <h6 class="card-header p-0 mt-0">Start Chat Button</h6>
                                 <div class="form-group mt-3">
                                     <label>Start Chat <span class="text-danger">*</span></label>
-                                    <select class="form-control custom-select" name="start_chat" required>
+                                    <select class="form-control custom-select" id="start_chat" name="start_chat" onchange="myFunction()" required>
                                         <option value="Enabled" {{ json_decode($widget->settings)[0]->start_chat == 'Enabled' ? "selected" : "" }}>Enabled</option>                                 
                                         <option value="Disabled" {{ json_decode($widget->settings)[0]->start_chat == 'Disabled' ? "selected" : "" }}>Disabled</option>                                 
                                     </select>
                                 </div>
                                 <div class="form-group mt-1">
                                     <label>Show Icon <span class="text-danger">*</span></label>
-                                    <select class="form-control custom-select" name="show_icon" required>
+                                    <select class="form-control custom-select" id="show_icon" name="show_icon" onchange="myFunction()" required>
                                         <option value="Enabled" {{ json_decode($widget->settings)[0]->show_icon == 'Enabled' ? "selected" : "" }}>Enabled</option>                                 
                                         <option value="Disabled" {{ json_decode($widget->settings)[0]->show_icon == 'Disabled' ? "selected" : "" }}>Disabled</option>                                 
                                     </select>
@@ -265,7 +265,7 @@
                             <div class="card px-3 custom-shadow border-0" style="-webkit-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); -moz-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); box-shadow: inset 0px 0.5px 14px -8px rgba(0,0,0,0.75);">
                                 <h6 class="card-header p-0 mt-0">Position</h6>
                                 <div class="form-group mt-1">
-                                    <select class="form-control custom-select" name="position" required>
+                                    <select class="form-control custom-select" id="position" name="position" onchange="myFunction()" required>
                                         <option value="Floating Bubble" {{ json_decode($widget->settings)[0]->position == 'Floating Bubble' ? "selected" : "" }}>Floating Bubble</option>                                 
                                         <option value="Embed Bubble" {{ json_decode($widget->settings)[0]->position == 'Embed Bubble' ? "selected" : "" }}>Embed Bubble</option>                                 
                                         <option value="Embed Chat Window" {{ json_decode($widget->settings)[0]->position == 'Embed Chat Window' ? "selected" : "" }}>Embed Chat Window</option>                                 
@@ -277,7 +277,7 @@
                                 <h6 class="card-header p-0 mt-0">Chat Display Settings</h6>
                                 <div class="form-group mt-1">
                                     <label>Where to display chat <span class="text-danger">*</span></label>
-                                    <select class="form-control custom-select" name="where_display_chat" required>
+                                    <select class="form-control custom-select" id="where_display_chat" name="where_display_chat" onchange="myFunction()" required>
                                         <option value="All" {{ json_decode($widget->settings)[0]->where_display_chat == 'All' ? "selected" : "" }}>All</option>                                 
                                         <option value="Excluded Pages" {{ json_decode($widget->settings)[0]->where_display_chat == 'Excluded Pages' ? "selected" : "" }}>Excluded Pages</option>                                 
                                         <option value="Specific Pages" {{ json_decode($widget->settings)[0]->where_display_chat == 'Specific Pages' ? "selected" : "" }}>Specific Pages</option>                                 
@@ -286,28 +286,28 @@
                                 
                                 <label class="mt-3">Device <span class="text-danger">*</span></label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="device[]" id="desktop" value="desktop" @foreach (json_decode($widget->settings)[0]->device as $dev) @if($dev == 'desktop') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="device[]" id="desktop" onchange="myFunction()" value="desktop" @foreach (json_decode($widget->settings)[0]->device as $dev) @if($dev == 'desktop') checked @endif @endforeach>
                                     <label class="form-check-label" for="desktop">Desktop</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="device[]" id="mobile_device" value="mobile_device" @foreach (json_decode($widget->settings)[0]->device as $dev) @if($dev == 'mobile_device') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="device[]" id="mobile_device" onchange="myFunction()" value="mobile_device" @foreach (json_decode($widget->settings)[0]->device as $dev) @if($dev == 'mobile_device') checked @endif @endforeach>
                                     <label class="form-check-label" for="mobile_device">Mobile Devices</label>
                                 </div>
                                                  
                                         
                                 <label class="mt-4">Visitors <span class="text-danger">*</span></label>                        
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="visitors" id="all_visitors" value="all_visitors" {{ json_decode($widget->settings)[0]->visitors == 'all_visitors' ? "checked" : "" }} id="all_visitors" value="all_visitors">
+                                    <input class="form-check-input" type="radio" name="visitors" id="all_visitors" onchange="myFunction()" value="all_visitors" {{ json_decode($widget->settings)[0]->visitors == 'all_visitors' ? "checked" : "" }} id="all_visitors" value="all_visitors">
                                     <label class="form-check-label" for="all_visitors">All Visitors</label>
                                 </div>
                             
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="visitors" id="new_visitors" value="new_visitors" {{ json_decode($widget->settings)[0]->visitors == 'new_visitors' ? "checked" : "" }}>
+                                    <input class="form-check-input" type="radio" name="visitors" id="new_visitors" onchange="myFunction()" value="new_visitors" {{ json_decode($widget->settings)[0]->visitors == 'new_visitors' ? "checked" : "" }}>
                                     <label class="form-check-label" for="new_visitors">New Visitors</label>
                                 </div>
                                 
                                 <div class="form-check form-check-inline mb-3">
-                                    <input class="form-check-input" type="radio" name="visitors" id="refurm_visitors" value="refurm_visitors" {{ json_decode($widget->settings)[0]->visitors == 'refurm_visitors' ? "checked" : "" }}>
+                                    <input class="form-check-input" type="radio" name="visitors" id="refurm_visitors" onchange="myFunction()" value="refurm_visitors" {{ json_decode($widget->settings)[0]->visitors == 'refurm_visitors' ? "checked" : "" }}>
                                     <label class="form-check-label" for="refurm_visitors">Refurming Visitors</label>
                                 </div>                            
                             
@@ -320,31 +320,31 @@
                                 <label class="mt-3">When to Display Chat <span class="text-danger">*</span></label>
                                                                
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="monday" value="monday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'monday') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="monday" onchange="myFunction()" value="monday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'monday') checked @endif @endforeach>
                                     <label class="form-check-label" for="monday">Monday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="tuesday" value="tuesday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'tuesday') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="tuesday" onchange="myFunction()" value="tuesday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'tuesday') checked @endif @endforeach>
                                     <label class="form-check-label" for="tuesday">Tuesday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="wednesday" value="wednesday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'wednesday') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="wednesday" onchange="myFunction()" value="wednesday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'wednesday') checked @endif @endforeach>
                                     <label class="form-check-label" for="wednesday">Wednesday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="thursday" value="thursday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'thursday') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="thursday" onchange="myFunction()" value="thursday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'thursday') checked @endif @endforeach>
                                     <label class="form-check-label" for="thursday">Thursday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="friday" value="friday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'friday') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="friday" onchange="myFunction()" value="friday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'friday') checked @endif @endforeach>
                                     <label class="form-check-label" for="friday">Friday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="saturday" value="saturday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'saturday') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="saturday" onchange="myFunction()" value="saturday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'saturday') checked @endif @endforeach>
                                     <label class="form-check-label" for="saturday">Saturday</label>
                                 </div>
                                 <div class="form-check form-check-inline mb-3">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="sunday" value="sunday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'sunday') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="sunday" onchange="myFunction()" value="sunday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'sunday') checked @endif @endforeach>
                                     <label class="form-check-label" for="sunday">Sunday</label>
                                 </div>
                             
@@ -353,20 +353,20 @@
                                     <div class="col-6">
                                         <div class="form-group mt-1">
                                             <label>Start Time <span class="text-danger">*</span></label>
-                                            <input type="date" id="start_time" class="form-control" name="start_time" value="{{ json_decode($widget->settings)[0]->start_time }}" required>
+                                            <input type="date" id="start_time" class="form-control" name="start_time" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->start_time }}" required>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group mt-1">
                                             <label>End Time <span class="text-danger">*</span></label>
-                                            <input type="date" id="end_time" class="form-control" name="end_time" value="{{ json_decode($widget->settings)[0]->end_time }}" required>
+                                            <input type="date" id="end_time" class="form-control" name="end_time" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->end_time }}" required>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group mt-1 mb-3">
                                     <label>TimeZone <span class="text-danger">*</span></label>
-                                    <select class="form-control custom-select" id="timezone" name="timezone" required>
+                                    <select class="form-control custom-select" id="timezone" name="timezone" onchange="myFunction()" required>
                                         <option value="Etc/GMT+12">(GMT-12:00) International Date Line West</option>
                                         <option value="Pacific/Midway">(GMT-11:00) Midway Island, Samoa</option>
                                         <option value="Pacific/Honolulu">(GMT-10:00) Hawaii</option>
@@ -457,35 +457,35 @@
                                 <h6 class="card-header p-0 mt-0">Open Chat Triggers</h6>
                                 <div class="form-group mt-3">
                                     <label>Time on Page <span class="text-danger">*</span></label>
-                                    <input type="text" id="time_on_page" class="form-control" name="time_on_page" value="{{ json_decode($widget->settings)[0]->time_on_page }}" required>
+                                    <input type="text" id="time_on_page" class="form-control" name="time_on_page" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_page }}" required>
                                 </div>  
                                 
                                 <div class="form-group mt-1">
                                     <label>Time on Site <span class="text-danger">*</span></label>
-                                    <input type="text" id="time_on_site" class="form-control" name="time_on_site" value="{{ json_decode($widget->settings)[0]->time_on_site }}" required>
+                                    <input type="text" id="time_on_site" class="form-control" name="time_on_site" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_site }}" required>
                                 </div> 
 
                                 <div class="form-group mt-1">
                                     <label>Scroll Position <span class="text-danger">*</span></label>
-                                    <input type="text" id="scroll_position" class="form-control" name="scroll_position" value="{{ json_decode($widget->settings)[0]->scroll_position }}" required>
+                                    <input type="text" id="scroll_position" class="form-control" name="scroll_position" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->scroll_position }}" required>
                                 </div> 
 
                                 <div class="custom-control custom-switch mb-1">
                                     @if(json_decode($widget->settings)[0]->exit_internet == 'on')
-                                        <input type="checkbox" class="custom-control-input" name="exit_internet" id="exit_internet" checked>
+                                        <input type="checkbox" class="custom-control-input" name="exit_internet" id="exit_internet" onchange="myFunction()" checked>
                                     @else
-                                        <input type="checkbox" class="custom-control-input" name="exit_internet" id="exit_internet">
+                                        <input type="checkbox" class="custom-control-input" name="exit_internet" id="exit_internet" onchange="myFunction()">
                                     @endif
                                     <label class="custom-control-label" for="exit_internet">Exit Internet</label>
                                 </div>
 
                                 <label class="mt-3">Notification <span class="text-danger">*</span></label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="notification[]" id="bubble_notification_bage" value="bubble_notification_bage" @foreach (json_decode($widget->settings)[0]->notification as $notify) @if($notify == 'bubble_notification_bage') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="notification[]" id="bubble_notification_bage" onchange="myFunction()" value="bubble_notification_bage" @foreach (json_decode($widget->settings)[0]->notification as $notify) @if($notify == 'bubble_notification_bage') checked @endif @endforeach>
                                     <label class="form-check-label" for="bubble_notification_bage">Bubble Notification Badge</label>
                                 </div>
                                 <div class="form-check form-check-inline mb-3">
-                                    <input class="form-check-input" type="checkbox" name="notification[]" id="show_notification_in_tab_tile" value="show_notification_in_tab_tile" @foreach (json_decode($widget->settings)[0]->notification as $notify) @if($notify == 'show_notification_in_tab_tile') checked @endif @endforeach>
+                                    <input class="form-check-input" type="checkbox" name="notification[]" id="show_notification_in_tab_tile" onchange="myFunction()" value="show_notification_in_tab_tile" @foreach (json_decode($widget->settings)[0]->notification as $notify) @if($notify == 'show_notification_in_tab_tile') checked @endif @endforeach>
                                     <label class="form-check-label" for="show_notification_in_tab_tile">Show Notification in Tab Title</label>
                                 </div>
 
@@ -503,7 +503,7 @@
                                             <label class="mt-2">Bubble background Color <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="color" id="bubble_background_color" class="form-control" value="{{ json_decode($widget->settings)[0]->bubble_background_color }}" name="bubble_background_color" value="#055147" required>
+                                            <input type="color" id="bubble_background_color" class="form-control" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->bubble_background_color }}" name="bubble_background_color" value="#055147" required>
                                         </div>
                                     </div>
                                 </div> 
@@ -513,7 +513,7 @@
                                             <label class="mt-2">Bubble Icon Color <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="color" id="bubble_icon_color" class="form-control" value="{{ json_decode($widget->settings)[0]->bubble_icon_color }}" name="bubble_icon_color" value="#487662" required>
+                                            <input type="color" id="bubble_icon_color" class="form-control" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->bubble_icon_color }}" name="bubble_icon_color" value="#487662" required>
                                         </div>
                                     </div>
                                 </div> 
@@ -523,7 +523,7 @@
                                             <label class="mt-2">Button Color <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="color" id="button_color" class="form-control" value="{{ json_decode($widget->settings)[0]->button_color }}" name="button_color" value="#79a37d" required>
+                                            <input type="color" id="button_color" class="form-control" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->button_color }}" name="button_color" value="#79a37d" required>
                                         </div>
                                     </div>
                                 </div> 
@@ -533,7 +533,7 @@
                                             <label class="mt-2">Header Background Color <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="color" id="header_background_color" class="form-control" value="{{ json_decode($widget->settings)[0]->header_background_color }}" name="header_background_color" value="#92967d" required>
+                                            <input type="color" id="header_background_color" class="form-control" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->header_background_color }}" name="header_background_color" value="#92967d" required>
                                         </div>
                                     </div>
                                 </div> 
@@ -545,15 +545,15 @@
                                 
                                 <div class="custom-control custom-switch mt-2">
                                     @if(json_decode($widget->settings)[0]->enabled_animation == 'on')
-                                        <input type="checkbox" class="custom-control-input" name="enabled_animation" id="enabled_animation" checked>
+                                        <input type="checkbox" class="custom-control-input" name="enabled_animation" id="enabled_animation" onchange="myFunction()" checked>
                                     @else
-                                        <input type="checkbox" class="custom-control-input" name="enabled_animation" id="enabled_animation">
+                                        <input type="checkbox" class="custom-control-input" name="enabled_animation" id="enabled_animation" onchange="myFunction()">
                                     @endif
                                     <label class="custom-control-label" for="enabled_animation">Enabled Animation</label>
                                 </div>
                                 <div class="form-group mt-3">
                                     <label>Scroll Position <span class="text-danger">*</span></label>
-                                    <input type="text" id="scroll_position_appearance" class="form-control" name="scroll_position_appearance" value="{{ json_decode($widget->settings)[0]->scroll_position_appearance }}" required>
+                                    <input type="text" id="scroll_position_appearance" class="form-control" name="scroll_position_appearance" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->scroll_position_appearance }}" required>
                                 </div> 
 
                             </div>
@@ -563,7 +563,7 @@
                                 
                                 <div class="form-group">
                                     <label for="button_corner_radius">Button Corner Radius</label>
-                                    <input type="range" class="form-control-range" name="button_corner_radius" value="{{ json_decode($widget->settings)[0]->button_corner_radius }}" id="button_corner_radius">
+                                    <input type="range" class="form-control-range" name="button_corner_radius" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->button_corner_radius }}" id="button_corner_radius">
                                 </div>
 
                             </div>
@@ -572,7 +572,7 @@
                                 <h6 class="card-header p-0 mt-0">Custom CSS</h6>
                                                             
                                 <div class="form-group mt-1">
-                                    <textarea type="text" class="form-control" name="custom_css" rows="4" required>{{ json_decode($widget->settings)[0]->custom_css }}</textarea>
+                                    <textarea type="text" class="form-control" id="custom_css" name="custom_css" rows="4" onchange="myFunction()" required>{{ json_decode($widget->settings)[0]->custom_css }}</textarea>
                                 </div> 
 
                             </div>
@@ -583,7 +583,7 @@
                     </div>
 
                     <div class="mt-3 text-right">
-                        <input type="hidden" name="hidden_id" value="{{ $widget->id }}"/>
+                        <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
                         <button type="submit" class="btn rounded-pill text-light px-4 py-2 ms-2 btn-success">Submit</button>
                     </div>
                 </form>
@@ -602,10 +602,9 @@
     </div>
 </div>
     
-    <script>
+    <!-- <script>
         ClassicEditor
-            .create( document.querySelector( '#editor' ), {
-                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+            .create( document.querySelector( '#welcome_message' ), {
             } )
             .then( editor => {
                 window.editor = editor;
@@ -613,7 +612,7 @@
             .catch( err => {
                 console.error( err.stack );
             } );
-    </script>
+    </script> -->
 
     <script>
         $(document).ready(function() {
@@ -638,5 +637,229 @@
         });       
     </script>
    
+   <script>
+        function myFunction(){
+
+            template_layout = $('#template_layout').val();
+            whatsapp_number = $('#whatsapp_number').val();
+            bubble_icon = $('#bubble_icon').val();
+            chat_header = $('#chat_header').val();
+            caption = $('#caption').val();
+            welcome_message = $('#welcome_message').val();
+            start_chat = $('#start_chat').val();
+            show_icon = $('#show_icon').val();
+            position = $('#position').val();
+            where_display_chat = $('#where_display_chat').val();
+          
+            if($('#desktop').is(':checked')) {
+                desktop = $("#desktop").val();
+            }
+            else{
+                desktop = null;               
+            }
+            if($('#mobile_device').is(':checked')) {
+                mobile_device = $("#mobile_device").val();
+            }
+            else{
+                mobile_device = null;                
+            }
+
+           
+            if($('#all_visitors').is(':checked')) {
+                visitors = $("#all_visitors").val();
+            }
+            if($('#new_visitors').is(':checked')) {
+                visitors = $("#new_visitors").val();
+            }
+            if($('#refurm_visitors').is(':checked')) {
+                visitors = $("#refurm_visitors").val();
+            }
+
+
+
+            if($('#monday').is(':checked')) {
+                monday = $("#monday").val();
+            }
+            else{
+                monday = null;               
+            }
+            if($('#tuesday').is(':checked')) {
+                tuesday = $("#tuesday").val();
+            }
+            else{
+                tuesday = null;                
+            }
+            if($('#wednesday').is(':checked')) {
+                wednesday = $("#wednesday").val();
+            }
+            else{
+                wednesday = null;                
+            }
+            if($('#thursday').is(':checked')) {
+                thursday = $("#thursday").val();
+            }
+            else{
+                thursday = null;                
+            }
+            if($('#friday').is(':checked')) {
+                friday = $("#friday").val();
+            }
+            else{
+                friday = null;                
+            }
+            if($('#saturday').is(':checked')) {
+                saturday = $("#saturday").val();
+            }
+            else{
+                saturday = null;                
+            }
+            if($('#sunday').is(':checked')) {
+                sunday = $("#sunday").val();
+            }
+            else{
+                sunday = null;                
+            }
+
+            start_time = $('#start_time').val();
+            end_time = $('#end_time').val();
+            timezone = $('#timezone').val();
+            time_on_page = $('#time_on_page').val();
+            time_on_site = $('#time_on_site').val();
+            scroll_position = $('#scroll_position').val();
+            
+            if($('#exit_internet').is(':checked')) {
+                exit_internet = $("#exit_internet").val();
+            }
+            else{
+                exit_internet = null;
+            }
+
+            if($('#bubble_notification_bage').is(':checked')) {
+                bubble_notification_bage = $("#bubble_notification_bage").val();
+            }
+            else{
+                bubble_notification_bage = null;                
+            }
+            if($('#show_notification_in_tab_tile').is(':checked')) {
+                show_notification_in_tab_tile = $("#show_notification_in_tab_tile").val();
+            }
+            else{
+                show_notification_in_tab_tile = null;                
+            }
+            
+
+            bubble_background_color = $('#bubble_background_color').val();
+            bubble_icon_color = $('#bubble_icon_color').val();
+            button_color = $('#button_color').val();
+            header_background_color = $('#header_background_color').val();
+            
+
+            if($('#enabled_animation').is(':checked')) {
+                enabled_animation = $("#enabled_animation").val();
+            }
+            else{
+                enabled_animation = null;
+            }
+
+            scroll_position_appearance = $('#scroll_position_appearance').val();
+            button_corner_radius = $('#button_corner_radius').val();
+            custom_css = $('#custom_css').val();
+            hidden_id = $('#hidden_id').val();
+            
+
+            // console.log(template_layout);
+            // console.log(whatsapp_number);
+            // console.log(bubble_icon);
+            // console.log(chat_header);
+            // console.log(caption);
+            // console.log(welcome_message);
+            // console.log(start_chat);
+            // console.log(show_icon);
+            // console.log(position);
+            // console.log(where_display_chat);
+            // console.log(desktop);
+            // console.log(mobile_device);
+            // console.log(visitors);
+            // console.log(monday);
+            // console.log(tuesday);
+            // console.log(wednesday);
+            // console.log(thursday);
+            // console.log(friday);
+            // console.log(saturday);
+            // console.log(sunday);
+            // console.log(start_time);
+            // console.log(end_time);
+            // console.log(timezone);
+            // console.log(time_on_page);
+            // console.log(time_on_site);
+            // console.log(scroll_position);
+            // console.log(exit_internet);            
+            // console.log(bubble_notification_bage);
+            // console.log(show_notification_in_tab_tile);
+            // console.log(bubble_background_color);
+            // console.log(bubble_icon_color);
+            // console.log(button_color);
+            // console.log(header_background_color);
+            // console.log(enabled_animation);
+            // console.log(scroll_position_appearance);
+            // console.log(button_corner_radius);
+            // console.log(custom_css);
+
+
+
+            $.post("{{url('/')}}/api/api_chat",
+                {
+                    template_layout: template_layout,
+                    whatsapp_number: whatsapp_number,
+                    bubble_icon: bubble_icon,
+                    chat_header: chat_header,
+                    caption: caption,
+                    welcome_message: welcome_message,
+                    start_chat: start_chat,
+                    show_icon: show_icon,
+                    position: position,
+                    where_display_chat: where_display_chat,
+                    desktop: desktop,
+                    mobile_device: mobile_device,
+                    visitors: visitors,
+                    monday: monday,
+                    tuesday: tuesday,
+                    wednesday: wednesday,
+                    thursday: thursday,
+                    friday: friday,
+                    saturday: saturday,
+                    sunday: sunday,
+                    start_time: start_time,
+                    end_time: end_time,
+                    timezone: timezone,
+                    time_on_page: time_on_page,
+                    time_on_site: time_on_site,
+                    scroll_position: scroll_position,
+                    exit_internet: exit_internet,
+                    bubble_notification_bage: bubble_notification_bage,
+                    show_notification_in_tab_tile: show_notification_in_tab_tile,
+                    bubble_background_color: bubble_background_color,
+                    bubble_icon_color: bubble_icon_color,
+                    button_color: button_color,
+                    header_background_color: header_background_color,
+                    enabled_animation: enabled_animation,
+                    scroll_position_appearance: scroll_position_appearance,
+                    button_corner_radius: button_corner_radius,
+                    custom_css: custom_css,
+                    hidden_id: hidden_id,
+                },
+                function(output, status){                
+
+                    var obj = JSON.parse(output);
+
+                    
+
+                }
+            );
+        }
+    </script>
+
+
+    
    
 @endsection
