@@ -286,11 +286,11 @@
                                 
                                 <label class="mt-3">Device <span class="text-danger">*</span></label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="device[]" id="desktop" value="desktop">
+                                    <input class="form-check-input" type="checkbox" name="device[]" id="desktop" value="desktop" @foreach (json_decode($widget->settings)[0]->device as $dev) @if($dev == 'desktop') checked @endif @endforeach>
                                     <label class="form-check-label" for="desktop">Desktop</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="device[]" id="mobile_device" value="mobile_device">
+                                    <input class="form-check-input" type="checkbox" name="device[]" id="mobile_device" value="mobile_device" @foreach (json_decode($widget->settings)[0]->device as $dev) @if($dev == 'mobile_device') checked @endif @endforeach>
                                     <label class="form-check-label" for="mobile_device">Mobile Devices</label>
                                 </div>
                                                  
@@ -318,33 +318,33 @@
                                 <h6 class="card-header p-0 mt-0">Date and Time</h6>
 
                                 <label class="mt-3">When to Display Chat <span class="text-danger">*</span></label>
-
+                                                               
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="monday" value="monday">
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="monday" value="monday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'monday') checked @endif @endforeach>
                                     <label class="form-check-label" for="monday">Monday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="tuesday" value="tuesday">
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="tuesday" value="tuesday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'tuesday') checked @endif @endforeach>
                                     <label class="form-check-label" for="tuesday">Tuesday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="wednesday" value="wednesday">
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="wednesday" value="wednesday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'wednesday') checked @endif @endforeach>
                                     <label class="form-check-label" for="wednesday">Wednesday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="thursday" value="thursday">
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="thursday" value="thursday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'thursday') checked @endif @endforeach>
                                     <label class="form-check-label" for="thursday">Thursday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="friday" value="friday">
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="friday" value="friday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'friday') checked @endif @endforeach>
                                     <label class="form-check-label" for="friday">Friday</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="saturday" value="saturday">
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="saturday" value="saturday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'saturday') checked @endif @endforeach>
                                     <label class="form-check-label" for="saturday">Saturday</label>
                                 </div>
                                 <div class="form-check form-check-inline mb-3">
-                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="sunday" value="sunday">
+                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="sunday" value="sunday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'sunday') checked @endif @endforeach>
                                     <label class="form-check-label" for="sunday">Sunday</label>
                                 </div>
                             
@@ -481,11 +481,11 @@
 
                                 <label class="mt-3">Notification <span class="text-danger">*</span></label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="notification[]" id="bubble_notification_bage" value="bubble_notification_bage">
+                                    <input class="form-check-input" type="checkbox" name="notification[]" id="bubble_notification_bage" value="bubble_notification_bage" @foreach (json_decode($widget->settings)[0]->notification as $notify) @if($notify == 'bubble_notification_bage') checked @endif @endforeach>
                                     <label class="form-check-label" for="bubble_notification_bage">Bubble Notification Badge</label>
                                 </div>
                                 <div class="form-check form-check-inline mb-3">
-                                    <input class="form-check-input" type="checkbox" name="notification[]" id="show_notification_in_tab_tile" value="show_notification_in_tab_tile">
+                                    <input class="form-check-input" type="checkbox" name="notification[]" id="show_notification_in_tab_tile" value="show_notification_in_tab_tile" @foreach (json_decode($widget->settings)[0]->notification as $notify) @if($notify == 'show_notification_in_tab_tile') checked @endif @endforeach>
                                     <label class="form-check-label" for="show_notification_in_tab_tile">Show Notification in Tab Title</label>
                                 </div>
 
