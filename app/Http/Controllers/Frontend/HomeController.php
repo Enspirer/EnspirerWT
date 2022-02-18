@@ -27,9 +27,6 @@ class HomeController extends Controller
     {     
         // dd($request);        
 
-        // $count = 0 + $request->adults + $request->child + $request->baby;
-        // dd($count);
-
         $template_layout_details = WhatsappChatWidgetTemplate::where('id',$request->template_layout)->first();
         // dd($template_layout_details);
       
@@ -82,6 +79,7 @@ class HomeController extends Controller
         $bubble_icon = $request->bubble_icon;
         $chat_header = $request->chat_header;
         $caption = $request->caption;
+        $image = $request->image;
         $welcome_message = $request->welcome_message;
         $start_chat = $request->start_chat;
         $show_icon = $request->show_icon;
@@ -111,6 +109,7 @@ class HomeController extends Controller
             'bubble_icon' => $bubble_icon,
             'chat_header' => $chat_header,
             'caption' => $caption,
+            'image' => $image,
             'welcome_message' => $welcome_message,
             'start_chat' => $start_chat,
             'show_icon' => $show_icon,

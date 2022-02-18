@@ -65,7 +65,7 @@ class WidgetController extends Controller
     {        
         // dd($request);  
 
-        $default_settings = '[{"template_layout":"1","whatsapp_number":"0791111111","bubble_icon":"gem","chat_header":"Chat","caption":"chat","welcome_message":"<p>Welcome Message<\/p>","start_chat":"Enabled","show_icon":"Enabled","position":"Floating Bubble","where_display_chat":"All","device":["desktop"],"visitors":"all_visitors","date_time":["friday","saturday","sunday"],"start_time":"2022-02-01","end_time":"2022-05-31","timezone":"Asia\/Calcutta","time_on_page":"20s","time_on_site":"30s","scroll_position":"Center","exit_internet":"on","notification":["bubble_notification_bage"],"bubble_background_color":"#055147","bubble_icon_color":"#487662","button_color":"#79a37d","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right Side","button_corner_radius":"53","custom_css":"No"}]';
+        $default_settings = '[{"template_layout":"1","whatsapp_number":"0791111111","bubble_icon":"gem","chat_header":"Chat","caption":"chat","image":"1","welcome_message":"Welcome Message","start_chat":"Enabled","show_icon":"Enabled","position":"Floating Bubble","where_display_chat":"All","device":["desktop"],"visitors":"all_visitors","date_time":["friday","saturday","sunday"],"start_time":"2022-02-01","end_time":"2022-05-31","timezone":"Asia\/Calcutta","time_on_page":"20s","time_on_site":"30s","scroll_position":"Center","exit_internet":"on","notification":["bubble_notification_bage"],"bubble_background_color":"#055147","bubble_icon_color":"#487662","button_color":"#79a37d","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right Side","button_corner_radius":"53","custom_css":"No"}]';
         
         $add = new Widgets;
 
@@ -144,13 +144,15 @@ class WidgetController extends Controller
                 'welcome_message' => 'required',
                 'device' => 'required',
                 'date_time' => 'required',
-                'notification' => 'required'
+                'notification' => 'required',
+                'image' => 'required'
             ],
             [
                 'welcome_message.required' => 'Fill Welcome Message Section',
                 'device.required' => 'Fill Device Section',
                 'date_time.required' => 'Fill Date and Time Section',
-                'notification.required' => 'Fill Notification Section'
+                'notification.required' => 'Fill Notification Section',
+                'image.required' => 'Select an Image'
             ]
         );
 
@@ -187,6 +189,7 @@ class WidgetController extends Controller
         $bubble_icon = $request->bubble_icon;
         $chat_header = $request->chat_header;
         $caption = $request->caption;
+        $image = $request->image;
         $welcome_message = $request->welcome_message;
         $start_chat = $request->start_chat;
         $show_icon = $request->show_icon;
@@ -216,6 +219,7 @@ class WidgetController extends Controller
             'bubble_icon' => $bubble_icon,
             'chat_header' => $chat_header,
             'caption' => $caption,
+            'image' => $image,
             'welcome_message' => $welcome_message,
             'start_chat' => $start_chat,
             'show_icon' => $show_icon,

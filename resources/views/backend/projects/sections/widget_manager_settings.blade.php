@@ -228,14 +228,28 @@
                                     <label>Caption <span class="text-danger">*</span></label>
                                     <input type="text" id="caption" class="form-control" name="caption" value="{{ json_decode($widget->settings)[0]->caption }}" onchange="myFunction()" required>
                                 </div>
-                            </div>
+                                <div class="form-group mt-1">
+                                    <label>Image <span class="text-danger">*</span></label>
+                                    <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                        </div>
+                                        <div class="form-control file-amount">Choose File</div>
+                                        <input type="hidden" onchange="myFunction()" id="image" name="image" value="{{ json_decode($widget->settings)[0]->image }}" class="selected-files" >
+                                    </div>
+                                    <div class="file-preview box sm">
+                                    </div>
+                                </div> 
 
+                                <div onClick="myFunction()" class="btn rounded-pill text-light px-4 py-2 ms-2 mb-4 btn-success">Upload Image</div>
+
+                            </div>
                             
                             
                             <div class="card px-3 custom-shadow border-0" style="-webkit-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); -moz-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); box-shadow: inset 0px 0.5px 14px -8px rgba(0,0,0,0.75);">
                                 <h6 class="card-header p-0 mt-0">Welcome Message</h6>
                                 <div class="form-group mt-3">
-                                    <textarea id="welcome_message" class="form-control" name="welcome_message" onchange="myFunction()">{{ json_decode($widget->settings)[0]->welcome_message }}</textarea>
+                                    <textarea id="welcome_message" class="form-control" name="welcome_message" rows="4" onchange="myFunction()">{{ json_decode($widget->settings)[0]->welcome_message }}</textarea>
                                 </div>
                             </div>
 
@@ -604,7 +618,7 @@
     
     <!-- <script>
         ClassicEditor
-            .create( document.querySelector( '#welcome_message' ), {
+            .create( document.querySelector( '#editor' ), {
             } )
             .then( editor => {
                 window.editor = editor;
@@ -638,6 +652,7 @@
     </script>
    
    <script>
+
         function myFunction(){
 
             template_layout = $('#template_layout').val();
@@ -645,7 +660,10 @@
             bubble_icon = $('#bubble_icon').val();
             chat_header = $('#chat_header').val();
             caption = $('#caption').val();
+            image = $('#image').val();
             welcome_message = $('#welcome_message').val();
+            console.log(welcome_message);
+
             start_chat = $('#start_chat').val();
             show_icon = $('#show_icon').val();
             position = $('#position').val();
@@ -774,6 +792,7 @@
                     bubble_icon: bubble_icon,
                     chat_header: chat_header,
                     caption: caption,
+                    image: image,
                     welcome_message: welcome_message,
                     start_chat: start_chat,
                     show_icon: show_icon,
