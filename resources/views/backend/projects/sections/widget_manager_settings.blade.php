@@ -767,46 +767,6 @@
             hidden_id = $('#hidden_id').val();
             
 
-            // console.log(template_layout);
-            // console.log(whatsapp_number);
-            // console.log(bubble_icon);
-            // console.log(chat_header);
-            // console.log(caption);
-            // console.log(welcome_message);
-            // console.log(start_chat);
-            // console.log(show_icon);
-            // console.log(position);
-            // console.log(where_display_chat);
-            // console.log(desktop);
-            // console.log(mobile_device);
-            // console.log(visitors);
-            // console.log(monday);
-            // console.log(tuesday);
-            // console.log(wednesday);
-            // console.log(thursday);
-            // console.log(friday);
-            // console.log(saturday);
-            // console.log(sunday);
-            // console.log(start_time);
-            // console.log(end_time);
-            // console.log(timezone);
-            // console.log(time_on_page);
-            // console.log(time_on_site);
-            // console.log(scroll_position);
-            // console.log(exit_internet);            
-            // console.log(bubble_notification_bage);
-            // console.log(show_notification_in_tab_tile);
-            // console.log(bubble_background_color);
-            // console.log(bubble_icon_color);
-            // console.log(button_color);
-            // console.log(header_background_color);
-            // console.log(enabled_animation);
-            // console.log(scroll_position_appearance);
-            // console.log(button_corner_radius);
-            // console.log(custom_css);
-
-
-
             $.post("{{url('/')}}/api/api_chat",
                 {
                     template_layout: template_layout,
@@ -848,13 +808,6 @@
                     custom_css: custom_css,
                     hidden_id: hidden_id,
                 },
-                function(output, status){                
-
-                    var obj = JSON.parse(output);
-
-                    
-
-                }
             );
         }
     </script>
