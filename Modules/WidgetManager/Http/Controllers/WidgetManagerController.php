@@ -17,6 +17,8 @@ class WidgetManagerController extends Controller
         return view('widgetmanager::index');
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      * @return Renderable

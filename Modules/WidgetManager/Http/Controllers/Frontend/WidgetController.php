@@ -25,13 +25,19 @@ class WidgetController extends Controller
 
 
 
-
         return response()
-            ->view('widgetmanager::dynamic_js.whatsapp_chat_widget', ['widget_meta' => $widgetJsonOutput])
+            ->view('widgetmanager::dynamic_js.whatsapp_chat_widget', [
+                'widget_meta' => $widgetJsonOutput,
+                'widget_id' => $id])
             ->withHeaders([
                 'Content-Type' => 'application/javascript',
                 'X-Venue-ID' => 'function_api'
             ]);
+    }
+
+    public function save_client(Request $request)
+    {
+        dd($request);
     }
 
     /**

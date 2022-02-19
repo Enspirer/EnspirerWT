@@ -20,6 +20,11 @@ class WidgetController extends Controller
             'project' => $project
         ]);
     }
+
+    public function chat_preview($widget_id)
+    {
+        return view('backend.projects.includes.whatsapp_chat_preview.blade');
+    }
     
     public function create($id)
     {
