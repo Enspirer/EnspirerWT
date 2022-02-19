@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        
+
                         <div class="form-group">
                             <label>Name <span style="color:red">*</span></label>
                             <input type="text" id="name" class="form-control" name="name" required>
@@ -26,18 +26,18 @@
                         <div class="form-group">
                             <label>Status <span style="color:red">*<span></label>
                             <select class="form-control" name="status" required>
-                                <option value="Enabled">Enable</option>   
-                                <option value="Disabled">Disable</option>                                
+                                <option value="Enabled">Enable</option>
+                                <option value="Disabled">Disable</option>
                             </select>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="mt-3 text-right">
                     <button type="submit" class="btn rounded-pill text-light px-4 py-2 ms-2 btn-success">Create New</button>
                 </div>
-            </div><br>       
-            
+            </div><br>
+
         </div>
 
     </form>

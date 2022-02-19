@@ -3,7 +3,7 @@
 @section('title', __('Whatsapp Chat Widget'))
 
 @section('content')
-    
+
 
 <div class="row">
         <div class="col">
@@ -13,7 +13,7 @@
                     <strong>Whatsapp Chat Widget&nbsp;</strong>
 
                     <a href="{{route('admin.whatsappchat_widget.create')}}" class="btn btn-primary pull-right ml-4">Create New</a>
-                  
+
                 </div><!--card-header-->
 
                 <div class="card-body">
@@ -34,7 +34,7 @@
             </div><!--card-->
         </div><!--col-->
     </div><!--row-->
-    
+
 
      <!-- Modal delete -->
      <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="ModalDeleteLabel" aria-hidden="true">
@@ -51,20 +51,20 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <h5>Are you sure you want to remove this?</h5>
-                        </div>                        
+                        </div>
 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-danger" name="ok_button" id="ok_button">Delete</button>
-                       
+
                     </div>
                 </form>
 
             </div>
         </div>
     </div>
-    
+
 
     <script type="text/javascript">
         $(function () {
@@ -80,7 +80,7 @@
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
             });
- 
+
 
             var user_id;
 
@@ -92,7 +92,7 @@
             $('#ok_button').click(function(){
             $.ajax({
             url:"whatsappchat_widget/delete/"+user_id,
-            
+
             success:function(data)
             {
                 setTimeout(function(){
@@ -103,7 +103,7 @@
             })
             });
 
-          
+
         });
     </script>
 
