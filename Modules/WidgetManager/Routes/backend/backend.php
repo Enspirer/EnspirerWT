@@ -8,6 +8,13 @@ Route::get('whatsappchat_widget/edit/{id}', 'WhatsappChatWidgetTemplateControlle
 Route::post('whatsappchat_widget/update', 'WhatsappChatWidgetTemplateController@update')->name('whatsappchat_widget.update');
 Route::get('whatsappchat_widget/delete/{id}', 'WhatsappChatWidgetTemplateController@destroy')->name('whatsappchat_widget.destroy');
 
+Route::get('ims/{id}', 'ImsClientsController@index')->name('ims.index');
+Route::get('ims/create/{id}', 'ImsClientsController@create')->name('ims.create');
+Route::post('ims/store', 'ImsClientsController@store')->name('ims.store');
+Route::get('ims/getdetails/{id}', 'ImsClientsController@getdetails')->name('ims.getdetails');
+Route::get('ims/edit/{id}', 'ImsClientsController@edit')->name('ims.edit');
+Route::post('ims/update', 'ImsClientsController@update')->name('ims.update');
+Route::get('ims/delete/{id}', 'ImsClientsController@destroy')->name('ims.destroy');
 
 
 

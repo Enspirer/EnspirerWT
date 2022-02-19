@@ -41,3 +41,17 @@ Breadcrumbs::for('admin.whatsappchat_widget.edit', function ($trail) {
 Breadcrumbs::for('admin.projects.seo_report', function ($trail) {
     $trail->push('SEO Report', route('admin.projects.seo_report',1));
 });
+
+Breadcrumbs::for('admin.ims.index', function ($trail) {
+    $trail->push('IMS', route('admin.ims.index',1));
+});
+Breadcrumbs::for('admin.ims.create', function ($trail) {
+    $trail->push('Create IMS', route('admin.ims.create',1));
+});
+Breadcrumbs::for('admin.ims.edit', function ($trail) {
+    $trail->push('Edit IMS', route('admin.ims.edit',1));
+});
+
+
+
+
