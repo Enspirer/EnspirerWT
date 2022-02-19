@@ -610,7 +610,7 @@
             <div class="card-body">
                 <a href="" class="btn btn-primary">Preview</a>
 
-                <iframe src="{{route('admin.whatsapp_chat_preview')}}" frameborder="0" style="width: 100%;height: 610px;"></iframe>
+                <iframe id="incorme" src="{{route('admin.whatsapp_chat_preview')}}" frameborder="0" style="width: 100%;height: 610px;"></iframe>
             </div>
         </div>
     </div>
@@ -828,6 +828,9 @@
                     hidden_id: hidden_id,
                 },
             );
+
+            document.getElementById('incorme').contentWindow.location.reload();
+
         }
     </script>
 
