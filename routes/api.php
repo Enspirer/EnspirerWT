@@ -19,4 +19,5 @@ use App\Http\Controllers\Frontend\HomeController;
 });*/
 
 Route::post('api_chat', [HomeController::class, 'api_chat'])->name('api_chat');
+Route::post('theme_changers', [HomeController::class, 'theme_changers'])->name('theme_changers');
 

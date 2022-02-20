@@ -16,6 +16,7 @@ class CreateWidgetsTable extends Migration
         Schema::create('widgets', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('project_id');
+            $table->text('widget_key');
             $table->text('widget_type');
             $table->text('settings')->nullable();
             $table->text('load_count')->nullable();

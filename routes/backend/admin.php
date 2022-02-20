@@ -62,7 +62,7 @@ Route::post('projects/widget_manager/update', [WidgetController::class, 'update'
 Route::get('projects/widget_manager/delete/{id}', [WidgetController::class, 'destroy'])->name('projects.widget_manager.destroy');
 Route::post('projects/widget_manager/settings_update', [WidgetController::class, 'settings_update'])->name('projects.widget_manager.settings_update');
 
-Route::get('whatsapp_chat_preview', [ProjectsController::class, 'whatsapp_chat_preview'])->name('whatsapp_chat_preview');
+Route::get('whatsapp_chat_preview/{widget_id}', [ProjectsController::class, 'whatsapp_chat_preview'])->name('whatsapp_chat_preview');
 
 
 Route::get('project_type', [ProjectTypeController::class, 'index'])->name('project_type.index');

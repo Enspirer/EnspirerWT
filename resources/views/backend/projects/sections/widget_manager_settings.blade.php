@@ -38,7 +38,7 @@
                         
                         <div class="form-group mt-3">
                                 <label>Template Layout <span class="text-danger">*</span></label>
-                                <select class="form-control" id="template_layout" name="template_layout" onchange="myFunction()" required>
+                                <select class="form-control" id="template_layout" name="template_layout" onchange="template_layout_chage()" required>
                                     <option value="" selected disabled>Select...</option>
                                     @foreach($whatsapp_chat as $whatsapp)
                                         <option value="{{ $whatsapp->id }}" {{json_decode($widget->settings)[0]->template_layout == $whatsapp->id ? "selected" : ""}}>{{ $whatsapp->name }}</option>
@@ -609,12 +609,38 @@
         <div class="card">
             <div class="card-body">
                 <a href="" class="btn btn-primary">Preview</a>
-
-                <iframe id="incorme" src="{{route('admin.whatsapp_chat_preview')}}" frameborder="0" style="width: 100%;height: 610px;"></iframe>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Get Widget</button>
+                <iframe id="incorme" src="{{route('admin.whatsapp_chat_preview',$widget->id)}}" frameborder="0" style="width: 100%;height: 610px;"></iframe>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width: 680px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Get WidgetCode</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <code>
+                    &lt;div id="{{$widget->widget_key}}"&gt;&lt;/div&gt; <br>
+                    &lt;script src="{{url('')}}/whatsapp_widget/{{$widget->id}}/tallentorw.js"&gt;&lt;/script&gt;
+                </code>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     
     <!-- <script>
         ClassicEditor
@@ -652,6 +678,22 @@
     </script>
    
    <script>
+
+       function template_layout_chage() {
+           template_layout = $('#template_layout').val();
+           hidden_id = $('#hidden_id').val();
+           $.post("{{url('/')}}/api/theme_changers",
+               {
+                   'template_layout': template_layout,
+                   'widget_id' : hidden_id
+
+               },function(data, status){
+                   document.getElementById('incorme').contentWindow.location.reload();
+
+               }
+           );
+
+       }
 
         function myFunction(){
 

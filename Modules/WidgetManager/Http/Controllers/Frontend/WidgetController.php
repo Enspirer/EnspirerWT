@@ -20,6 +20,8 @@ class WidgetController extends Controller
 
         $widgetsPlanes = Widgets::where('id',$id)->first()->settings;
         $widpan = json_decode($widgetsPlanes);
+        $widgetKey = Widgets::where('id',$id)->first()->widget_key;
+
         $widgetJsonOutput = $widpan[0];
 
 
@@ -28,7 +30,9 @@ class WidgetController extends Controller
         return response()
             ->view('widgetmanager::dynamic_js.whatsapp_chat_widget', [
                 'widget_meta' => $widgetJsonOutput,
-                'widget_id' => $id])
+                'widget_id' => $id,
+                'widget_key' => $widgetKey,
+            ])
             ->withHeaders([
                 'Content-Type' => 'application/javascript',
                 'X-Venue-ID' => 'function_api'

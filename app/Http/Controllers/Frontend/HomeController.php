@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Widgets;
 use Illuminate\Http\Request;
 use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
+use Modules\WidgetManager\Entities\WhatsAppModel;
 
 /**
  * Class HomeController.
@@ -22,6 +23,32 @@ class HomeController extends Controller
 
 
     // ******************************  api  *****************************************************
+
+    public function theme_changers(Request $request)
+    {
+        $template_layout = $request->template_layout;
+        $widget_id = $request->widget_id;
+        $whatsapp_theme = WhatsappChatWidgetTemplate::where('id',$template_layout)->first();
+        $themeArray = json_decode( $whatsapp_theme->source);
+        $whatsappWidgetSettings = Widgets::where('id',$widget_id)->first()->settings;
+        $widgetDtails = json_decode($whatsappWidgetSettings);
+
+        $widgetDtails[0]->template_layout = $template_layout;
+        $widgetDtails[0]->bubble_background_color = $themeArray->bubble_background_color;
+        $widgetDtails[0]->bubble_icon_color = $themeArray->bubble_icon_color;
+        $widgetDtails[0]->button_color = $themeArray->button_color;
+        $widgetDtails[0]->header_background_color = $themeArray->header_background_color;
+        $widgetDtails[0]->button_corner_radius = $themeArray->button_corner_radius;
+        $widgetDtails[0]->custom_css = $themeArray->custom_css;
+        $netype = json_encode($widgetDtails);
+
+
+        Widgets::where('id',$widget_id)->update([
+            'settings' => $netype
+        ]);
+
+        return $netype;
+    }
 
     public function api_chat(Request $request)
     {     

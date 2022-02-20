@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Widgets;
 use Illuminate\Http\Request;
 use DataTables;
 use App\Models\Projects;
@@ -131,9 +132,14 @@ class ProjectsController extends Controller
         Projects::where('id', $id)->delete(); 
     }
 
-    public function whatsapp_chat_preview()
-    {        
-        return view('backend.widget_display.whatsapp_chat.preview');
+    public function whatsapp_chat_preview($widget_id)
+    {
+        $widgetDetaials = Widgets::where('id',$widget_id)->first();
+
+        return view('backend.widget_display.whatsapp_chat.preview',[
+            'widget_id' => $widget_id,
+            'widget_details' => $widgetDetaials
+        ]);
     }
 
 
