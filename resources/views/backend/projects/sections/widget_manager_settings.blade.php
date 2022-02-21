@@ -688,6 +688,18 @@
                    'widget_id' : hidden_id
 
                },function(data, status){
+                //    console.log(data);
+                   decoded_json = JSON.parse(data);
+                //    console.log(decoded_json[0]);
+
+                    $('#bubble_background_color').val(decoded_json[0].bubble_background_color);
+                    $('#bubble_icon_color').val(decoded_json[0].bubble_icon_color);
+                    $('#button_color').val(decoded_json[0].button_color);
+                    $('#header_background_color').val(decoded_json[0].header_background_color);
+                    $('#button_corner_radius').val(decoded_json[0].button_corner_radius);
+                    $('#custom_css').val(decoded_json[0].custom_css);
+                    $('#template_layout').val(decoded_json[0].template_layout);
+
                    document.getElementById('incorme').contentWindow.location.reload();
 
                }
