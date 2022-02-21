@@ -71,7 +71,7 @@ class WidgetController extends Controller
     {        
         // dd($request);  
 
-        $default_settings = '[{"template_layout":"1","whatsapp_number":"0791111111","bubble_icon":"gem","chat_header":"Chat Header","caption":"Chat Caption","image":"1","welcome_message":"Welcome Message!","start_chat":"Enabled","show_icon":"Enabled","position":"Floating Bubble","where_display_chat":"All","device":["desktop"],"visitors":"all_visitors","date_time":["friday","saturday","sunday"],"start_time":"2022-02-01","end_time":"2022-05-31","timezone":"Asia\/Calcutta","time_on_page":"20s","time_on_site":"30s","scroll_position":"Center","exit_internet":"on","notification":["bubble_notification_bage"],"bubble_background_color":"#055147","bubble_icon_color":"#487662","button_color":"#79a37d","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right","button_corner_radius":"53","custom_css":"No"}]';
+        $default_settings = '[{"template_layout":"1","whatsapp_number":"0791111111","bubble_icon":"gem","chat_header":"Chat Header","caption":"Chat Caption","image":"1","welcome_message":"Welcome Message!","start_chat":"Enabled","show_icon":"Enabled","position":"Floating Bubble","alignment":"Right","where_display_chat":"All","device":["desktop"],"visitors":"all_visitors","date_time":["friday","saturday","sunday"],"start_time":"2022-02-01","end_time":"2022-05-31","timezone":"Asia\/Calcutta","time_on_page":"20s","time_on_site":"30s","scroll_position":"Center","exit_internet":"on","notification":["bubble_notification_bage"],"bubble_background_color":"#055147","bubble_icon_color":"#487662","button_color":"#79a37d","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right","button_corner_radius":"53","custom_css":"No"}]';
         
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $pin = mt_rand(1000000, 9999999)
@@ -207,6 +207,7 @@ class WidgetController extends Controller
         $start_chat = $request->start_chat;
         $show_icon = $request->show_icon;
         $position = $request->position;
+        $alignment = $request->alignment;
         $where_display_chat = $request->where_display_chat;
         $visitors = $request->visitors;
         $visitors = $request->visitors;
@@ -226,8 +227,6 @@ class WidgetController extends Controller
         $button_corner_radius = $request->button_corner_radius;
         $custom_css = $request->custom_css;
 
-
-
         $array = [
             'template_layout' => $template_layout,
             'whatsapp_number' => $whatsapp_number,
@@ -239,6 +238,7 @@ class WidgetController extends Controller
             'start_chat' => $start_chat,
             'show_icon' => $show_icon,
             'position' => $position,
+            'alignment' => $alignment,            
             'where_display_chat' => $where_display_chat,
             'device' => $device_array,
             'visitors' => $visitors,
@@ -262,8 +262,6 @@ class WidgetController extends Controller
         ];
 
         $final_array = [$array];
-
-         
      
         $update = new Widgets;
 

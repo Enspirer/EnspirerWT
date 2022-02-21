@@ -17,7 +17,7 @@ div.innerHTML = `<style>
     #wappwidgetblock #wappwidget {
         position: fixed;
         bottom: 150px;
-        right: 90px;
+        {{$widget_meta->alignment}}: 90px;
         z-index: 99999;
         display: none;
     }
@@ -34,7 +34,7 @@ div.innerHTML = `<style>
         box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappheader {
-        background-color: #00796A;
+        background-color: {{ $widget_meta->header_background_color}};
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         padding: 25px 40px;
@@ -219,16 +219,23 @@ div.innerHTML = `<style>
     #wappwidgetblock #wappwidtoggler:hover {
         cursor: pointer;
     }
-    #wappwidgetblock #wappwidtoggler::after {
-        content: "";
-        width: 12px;
-        height: 12px;
-        background-color: #f00;
-        position: absolute;
-        border-radius: 50%;
-        top: 6px;
-        right: 3px;
-    }
+    @if(count($widget_meta->notification) != 0)
+        @foreach($widget_meta->notification as $key => $notify)
+            @if($notify == 'bubble_notification_bage')
+                #wappwidgetblock #wappwidtoggler::after {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    background-color: #f00;
+                    position: absolute;
+                    border-radius: 50%;
+                    top: 6px;
+                    right: 3px;
+                }
+            @endif
+        @endforeach
+    @endif
+
     #wappwidgetblock #wappwidtoggler i {
         font-size: 45px;
         position: relative;
@@ -241,6 +248,11 @@ div.innerHTML = `<style>
 
 </style>
 
+<style>
+    {{$widget_meta->custom_css}}
+</style>
+
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <div id="wappwidgetblock">
     @if($widget_meta->show_icon == 'Enabled')
@@ -251,7 +263,7 @@ div.innerHTML = `<style>
                         @elseif($widget_meta->scroll_position_appearance == "Left")
                             <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;left: 1px;margin-left: 30px;">
                                 @elseif($widget_meta->scroll_position_appearance == "Right")
-                                    <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;right: 1px;margin-right: 30px;">
+                                    <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 50px;margin-right: 30px;">
                                         @endif
                                         <i style="color:{{$widget_meta->bubble_icon_color}}" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
                                     </div>
@@ -278,9 +290,9 @@ div.innerHTML = `<style>
                 @if($widget_meta->start_chat == 'Enabled')
                 <div class="wappwelcomemsg">
                     <div class="wapptriangle"></div>
-                    <div class="wappsendersname">Rayan Perera</div>
-                    <div class="wappmsg">Hello, chamind... <br>How can I help you?</div>
-                    <div class="wappmsgtime">19:12</div>
+                    <!-- <div class="wappsendersname">Rayan Perera</div> -->
+                    <div class="wappmsg">{{$widget_meta->welcome_message}}</div>
+                    <!-- <div class="wappmsgtime">19:12</div> -->
                 </div>
                 @else
 
@@ -299,7 +311,7 @@ div.innerHTML = `<style>
                         </form>
                     </div>
                 </div>
-                <div id="wappbtn" onclick="startupform()" style="background-color: {{$widget_meta->button_color}}">
+                <div id="wappbtn" onclick="startupform()" style="border-radius:{{$widget_meta->button_corner_radius}}px; background-color: {{$widget_meta->button_color}}">
                     <i class="bi bi-whatsapp"></i>
                     <div class="wappbtntxt">Start Chat</div>
                 </div>
