@@ -9,7 +9,7 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <div class="property">
                                                 <div class="image">
-                                                    <img src="images/Tallentor.png" alt="propery-image">
+                                                    <img src="{{url('images/Tallentor.png')}}" alt="propery-image">
                                                 </div>
                                                 <div class="content">
                                                     <h6 class="site-name">Website Name</h6>
@@ -25,7 +25,7 @@
                                                 <a class="dropdown-item" href="#">
                                                     <div class="property">
                                                         <div class="image">
-                                                            <img src="images/Tallentor.png" alt="propery-image">
+                                                            <img src="{{url('images/Tallentor.png')}}" alt="propery-image">
                                                         </div>
                                                         <div class="content">
                                                             <h6 class="site-name">Website Name</h6>
@@ -38,7 +38,7 @@
                                                 <a class="dropdown-item" href="#">
                                                     <div class="property">
                                                         <div class="image">
-                                                            <img src="images/Tallentor.png" alt="propery-image">
+                                                            <img src="{{url('images/Tallentor.png')}}" alt="propery-image">
                                                         </div>
                                                         <div class="content">
                                                             <h6 class="site-name">Website Name</h6>
@@ -66,9 +66,9 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <div class="profile">
                                                 <div class="image">
-                                                    <img src="images/profile.png" alt="profile-picture">
+                                                    <img src="{{auth()->user()->picture}}" alt="profile-picture">
                                                 </div>
-                                                <div class="name">John</div>
+                                                <div class="name">{{auth()->user()->first_name}} {{auth()->user()->last_name}}</div>
                                                 <div class="dropdown-icon">
                                                     <i class="bi bi-chevron-down"></i>
                                                 </div>
@@ -79,7 +79,7 @@
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>
-                                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                                            <li><a class="dropdown-item" href="{{route('frontend.auth.logout')}}">Logout</a></li>
                                         </ul>
                                     </li>
                                 </ul>

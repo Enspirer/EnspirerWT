@@ -10,6 +10,9 @@ use App\Http\Controllers\Frontend\TestController;
 use App\Http\Controllers\Frontend\SEOController;
 use App\Http\Controllers\Frontend\SecurityController;
 use App\Http\Controllers\Frontend\ChatController;
+use App\Http\Controllers\Frontend\ReportsController;
+use App\Http\Controllers\Frontend\User\ProjectController;
+
 /*
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
@@ -49,5 +52,10 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+        Route::get('reports', [ReportsController::class, 'index'])->name('reports');
+
+
+        Route::get('project_details/{id}', [ProjectController::class, 'show'])->name('project.show');
     });
 });
