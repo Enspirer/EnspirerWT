@@ -286,6 +286,13 @@
                                     </select>
                                 </div>                            
                             </div>
+                            <div class="form-group mt-1">
+                                <label>Alignment <span class="text-danger">*</span></label>
+                                <select class="form-control custom-select" id="alignment" name="alignment" onchange="myFunction()" required>
+                                    <option value="left" {{ json_decode($widget->settings)[0]->alignment == 'left' ? "selected" : "" }}>Left</option>                                 
+                                    <option value="right" {{ json_decode($widget->settings)[0]->alignment == 'right' ? "selected" : "" }}>Right</option>                                 
+                                </select>
+                            </div> 
 
                             <div class="card px-3 custom-shadow border-0" style="-webkit-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); -moz-box-shadow: inset 0.5px 14px -8px rgba(0,0,0,0.75); box-shadow: inset 0px 0.5px 14px -8px rgba(0,0,0,0.75);">
                                 <h6 class="card-header p-0 mt-0">Chat Display Settings</h6>
@@ -699,7 +706,7 @@
                     $('#button_corner_radius').val(decoded_json[0].button_corner_radius);
                     $('#custom_css').val(decoded_json[0].custom_css);
                     $('#template_layout').val(decoded_json[0].template_layout);
-
+                    
                    document.getElementById('incorme').contentWindow.location.reload();
 
                }
@@ -716,11 +723,12 @@
             caption = $('#caption').val();
             image = $('#image').val();
             welcome_message = $('#welcome_message').val();
-            console.log(welcome_message);
+            // console.log(welcome_message);
 
             start_chat = $('#start_chat').val();
             show_icon = $('#show_icon').val();
             position = $('#position').val();
+            alignment = $('#alignment').val();            
             where_display_chat = $('#where_display_chat').val();
           
             if($('#desktop').is(':checked')) {
@@ -851,6 +859,7 @@
                     start_chat: start_chat,
                     show_icon: show_icon,
                     position: position,
+                    alignment: alignment,                    
                     where_display_chat: where_display_chat,
                     desktop: desktop,
                     mobile_device: mobile_device,

@@ -40,6 +40,8 @@ class HomeController extends Controller
         $widgetDtails[0]->header_background_color = $themeArray->header_background_color;
         $widgetDtails[0]->button_corner_radius = $themeArray->button_corner_radius;
         $widgetDtails[0]->custom_css = $themeArray->custom_css;
+        $widgetDtails[0]->alignment = $themeArray->alignment;
+        
         $netype = json_encode($widgetDtails);
 
 
@@ -52,7 +54,7 @@ class HomeController extends Controller
 
     public function api_chat(Request $request)
     {     
-        // dd($request);        
+        // dd($request);   
 
         $template_layout_details = WhatsappChatWidgetTemplate::where('id',$request->template_layout)->first();
         // dd($template_layout_details);
@@ -111,6 +113,7 @@ class HomeController extends Controller
         $start_chat = $request->start_chat;
         $show_icon = $request->show_icon;
         $position = $request->position;
+        $alignment = $request->alignment;
         $where_display_chat = $request->where_display_chat;
         $visitors = $request->visitors;
         $visitors = $request->visitors;
@@ -141,6 +144,7 @@ class HomeController extends Controller
             'start_chat' => $start_chat,
             'show_icon' => $show_icon,
             'position' => $position,
+            'alignment' => $alignment,
             'where_display_chat' => $where_display_chat,
             'device' => $device_array,
             'visitors' => $visitors,
