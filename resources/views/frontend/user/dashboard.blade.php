@@ -215,11 +215,11 @@
                             <div class="row gy-0 gx-5 mb-5">
                                 <div class="col">
                                     <a href="{{route('frontend.seo')}}" style="text-decoration:none">
-                                        <div class="tabs p-4">
+                                        <div class="tabs p-2">
                                             <div class="tab-icon">
                                                 <i class="bi bi-search-heart"></i>
                                             </div>
-                                            <div class="tab-title">Search Engine Optimization</div>
+                                            <div class="tab-title">SEO</div>
                                             <div class="tab-info">
                                                 <span class="strong-text">82.0</span>
                                                 Pass
@@ -228,7 +228,7 @@
                                     </a>
                                 </div>
                                 <div class="col">
-                                    <div class="tabs p-4 active">
+                                    <div class="tabs p-2 active">
                                         <div class="tab-icon">
                                             <i class="bi bi-activity"></i>
                                         </div>
@@ -241,7 +241,7 @@
                                 </div>
                                 <div class="col">
                                     <a href="{{route('frontend.security')}}" style="text-decoration:none">
-                                        <div class="tabs p-4">
+                                        <div class="tabs p-2">
                                             <div class="tab-icon">
                                                 <i class="bi bi-shield-check"></i>
                                             </div>
@@ -255,7 +255,7 @@
                                 </div>
                                 <div class="col">
                                     <a href="{{route('frontend.chat')}}" style="text-decoration:none">
-                                        <div class="tabs p-4">
+                                        <div class="tabs p-2">
                                             <div class="tab-icon">
                                                 <i class="bi bi-chat-dots"></i>
                                             </div>
@@ -274,10 +274,10 @@
                             <div class="row g-0 mb-5">
                                 <div class="col">
                                     <div class="inner-wrapper">
-                                        <ul class="navbar-nav flex-row">
+                                        <ul class="navbar-nav row g-0 flex-row">
                                             <div class="col">
                                                 <li class="nav-item">
-                                                    <a href="#" class="nav-link py-3 px-5 active">
+                                                    <a href="#" class="nav-link p-3 active">
                                                         <i class="bi bi-clipboard-data"></i>
                                                         <span class="text">Overview</span>
                                                     </a>
@@ -285,7 +285,7 @@
                                             </div>
                                             <div class="col">
                                                 <li class="nav-item">
-                                                    <a href="#" class="nav-link py-3 px-5">
+                                                    <a href="#" class="nav-link p-3">
                                                         <i class="bi bi-search-heart"></i>
                                                         <span class="text">SEO</span>
                                                     </a>
@@ -293,7 +293,7 @@
                                             </div>
                                             <div class="col">
                                                 <li class="nav-item">
-                                                    <a href="#" class="nav-link py-3 px-5">
+                                                    <a href="#" class="nav-link p-3">
                                                         <i class="bi bi-speedometer2"></i>
                                                         <span class="text">Performance</span>
                                                     </a>
@@ -301,7 +301,7 @@
                                             </div>
                                             <div class="col">
                                                 <li class="nav-item">
-                                                    <a href="#" class="nav-link py-3 px-5">
+                                                    <a href="#" class="nav-link p-3">
                                                         <i class="bi bi-shield-check"></i>
                                                         <span class="text">Security</span>
                                                     </a>
@@ -309,7 +309,7 @@
                                             </div>
                                             <div class="col">
                                                 <li class="nav-item">
-                                                    <a href="#" class="nav-link py-3 px-5">
+                                                    <a href="#" class="nav-link p-3">
                                                         <i class="bi bi-person"></i>
                                                         <span class="text">Miscellaneous</span>
                                                     </a>

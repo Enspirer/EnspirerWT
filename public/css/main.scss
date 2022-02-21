@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.border-right {
+    border-right: 1px solid #ddd;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+.red {
+    color: #dc3545 !important;
+}
+
+.gray {
+    color: #6c757d !important
+}
+
+.yellow {
+    color: #ffc107 !important;
+}
+
+.blue {
+    color: #0d6efd !important;
+}
+
+.down {
+    color: #dc3545 !important;
+}
+
+.up {
+    color: #0d6efd !important;
+}
+
+#sectionMainWindow {
+    display: flex;
+
+    #sectionSideNav {
+        flex: 0 0 auto;
+        width: 260px;
+        transition: all 0.2s ease;
+    }
+
+    #sectionBody {
+        flex: 0 0 auto;
+        width: calc(100% - 260px);
+        transition: all 0.2s ease;
+
+        .breadcrumb-block {
+            .breadcrumb {
+
+                .breadcrumb-item {
+                    color: #333;
+                    font-weight: 600;
+                    padding: 0;
+
+                    &:not(.active) {
+                        &::after {
+                            content: '>';
+                            margin: 0 10px;
+                            position: relative;
+                            top: 1px;
+                        }
+                    }
+
+                    &::before {
+                        content: none;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import "nav_bar.scss";
+@import "dashboard.scss";
+@import "reports.scss";
+@import "whatsapp.scss";
