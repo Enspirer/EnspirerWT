@@ -86,15 +86,9 @@ class ProjectsController extends Controller
         $project = new Projects();
         $iresult = $project->create_seo_report($request);
 
-
-
-
         dd($iresult);
 
-
-
-
-        return redirect()->route('admin.projects.index')->withFlashSuccess('Added Successfully');    
+        return redirect()->route('admin.projects.show')->withFlashSuccess('Added Successfully');    
                     
     }
 
