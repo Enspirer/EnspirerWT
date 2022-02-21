@@ -841,7 +841,7 @@ class Projects extends Model
         $add->save();
 
 
-        return mb_convert_encoding($data['results'], 'UTF-8', 'UTF-8');
+        return $add->id;
     }
 
 
