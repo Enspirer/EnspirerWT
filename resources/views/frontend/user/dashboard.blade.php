@@ -69,7 +69,7 @@
                                                 <div
                                                         class="row gx-3 justify-content-xxl-end align-items-center flex-sm-row flex-column">
                                                     <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-1 order-2">
-                                                        <a href="{{route('frontend.user.project.show',$project_detail->id)}}" type="button" class="btn"><i
+                                                        <a href="{{route('frontend.user.project.seo',$project_detail->id)}}" type="button" class="btn"><i
                                                                     class="bi bi-x-diamond-fill"></i>Open</a>
                                                     </div>
                                                     <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-2 order-3">

@@ -12,7 +12,7 @@ use App\Http\Controllers\Frontend\SecurityController;
 use App\Http\Controllers\Frontend\ChatController;
 use App\Http\Controllers\Frontend\ReportsController;
 use App\Http\Controllers\Frontend\User\ProjectController;
-
+use App\Http\Controllers\Frontend\AnalyticsController;
 /*
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
@@ -31,9 +31,6 @@ Route::get('uploads/all/{file_name}',[AizUploadController::class,'get_image_cont
 Route::get('static/{id}/mpaclic.js',[TestController::class, 'index'])->name('resource_widget');
 Route::get('test_blade',[TestController::class, 'testblade'])->name('testblade');
 
-Route::get('seo',[SEOController::class, 'index'])->name('seo');
-Route::get('security',[SecurityController::class, 'index'])->name('security');
-Route::get('chat',[ChatController::class, 'index'])->name('chat');
 
 
 
@@ -55,7 +52,12 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         Route::get('reports', [ReportsController::class, 'index'])->name('reports');
 
-
         Route::get('project_details/{id}', [ProjectController::class, 'show'])->name('project.show');
+
+        Route::get('project_details/{id}/seo',[SEOController::class, 'seo'])->name('project.seo');
+        Route::get('project_details/{id}/security',[SecurityController::class, 'security'])->name('project.security');
+        Route::get('project_details/{id}/widget',[ChatController::class, 'widget'])->name('project.chat');
+        Route::get('project_details/{id}/analytics',[AnalyticsController::class, 'analytics'])->name('project.analytics');
+
     });
 });

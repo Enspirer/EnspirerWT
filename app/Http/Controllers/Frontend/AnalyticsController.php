@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class SecurityController extends Controller
+class AnalyticsController extends Controller
 {
-    public function security($id)
+    public function analytics($id)
     {
-        return view('frontend.user.projects.secutiry',[
+        return view('frontend.user.projects.analytics',[
             'project_id' => $id
         ]);
     }

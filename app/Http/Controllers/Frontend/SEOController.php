@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 
 class SEOController extends Controller
 {
-    public function index()
+    public function seo($id)
     {
-        return view('frontend.seo');
+        return view('frontend.user.projects.seo',[
+            'project_id' => $id
+        ]);
     }
 }
