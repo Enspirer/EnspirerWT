@@ -95,6 +95,10 @@
   display: none;
 }
 
+#sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .text {
+  font-size: 16px;
+}
+
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .bi {
   font-size: 2rem;
   position: relative;
