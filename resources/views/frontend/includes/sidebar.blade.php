@@ -4,20 +4,20 @@
                     <div class="side-nav-toggle">
                         <span class="toggle-btn bi bi-list"></span>
                     </div>
-                    <img src="images/full-logo.png" alt="full-logo" class="full-logo">
-                    <img src="images/small-logo.png" alt="small-logo" class="small-logo">
+                    <img src="{{url('images/full-logo.png')}}" alt="full-logo" class="full-logo">
+                    <img src="{{url('images/small-logo.png')}}" alt="small-logo" class="small-logo">
                 </div>
                 <div class="side-navs">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="{{route('frontend.user.dashboard')}}">
                                 <i class="bi bi-columns-gap"></i>
                                 <span class="text">Dashboard</span>
                                 <span class="tool-tip">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('frontend.user.reports')}}">
                                 <i class="bi bi-clipboard2-data"></i>
                                 <span class="text">Reports</span>
                                 <span class="tool-tip">Reports</span>
