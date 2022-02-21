@@ -1,0 +1,213 @@
+#sectionWhatsappWidget button.btn-whatsapp {
+  background-color: #44bc8e;
+  border: none;
+  color: #fff;
+  width: 220px;
+  height: 60px;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+#sectionWhatsappWidget button.btn-whatsapp::before {
+  content: '+';
+  margin-right: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  position: relative;
+  top: 2px;
+}
+
+#sectionWhatsappWidget .block-1 .block-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper .header .title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper .header .bi {
+  color: #2cb742;
+  font-size: 2rem;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper .button-block {
+  position: relative;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper .button-block .bi {
+  font-size: 10rem;
+  position: absolute;
+  color: #ccc;
+  top: -5rem;
+  right: -3.5rem;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper .footer-text {
+  font-size: 1.3rem;
+}
+
+#sectionWhatsappWidget .block-2 .block-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+#sectionWhatsappWidget .block-2 .inner-wrapper {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#sectionWhatsappWidget .block-2 .inner-wrapper .header {
+  position: relative;
+}
+
+#sectionWhatsappWidget .block-2 .inner-wrapper .header .title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+#sectionWhatsappWidget .block-2 .inner-wrapper .header .bi {
+  color: #ccc;
+  position: absolute;
+  font-size: 6rem;
+  top: -4.5rem;
+  right: -3rem;
+}
+
+#sectionWhatsappWidget .block-2 .inner-wrapper .progress-label,
+#sectionWhatsappWidget .block-2 .inner-wrapper .progress-amount {
+  font-size: 1.3rem;
+}
+
+#sectionWhatsappWidget .block-2 .inner-wrapper .progress {
+  height: 0.5rem;
+}
+
+#sectionWhatsappWidget .block-2 .inner-wrapper .progress .progress-bar {
+  background-color: #44bc8e;
+}
+
+#sectionWhatsappWidget .block-2 .innwer-wrapper.dotted-border {
+  height: 100%;
+  border: 2px dashed #999;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog {
+  max-width: 660px;
+  margin: 6rem auto !important;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content {
+  border: none;
+  border-radius: 1rem;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .header {
+  text-align: center;
+  position: relative;
+  background-color: #44bc8e;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .header i {
+  font-size: 4rem;
+  line-height: 0;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .header .title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .header .btn-close {
+  background-image: none;
+  position: absolute;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: -1.5rem;
+  right: -1.5rem;
+  opacity: 1;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .header .btn-close:not(:only-child) {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .header .btn-close i {
+  position: absolute;
+  font-size: 2.5rem;
+  color: #fff;
+  top: 4px;
+  left: 4px;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .header:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .header::before {
+  content: none;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .body .body-text {
+  color: #999;
+  font-weight: 300;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto 1rem;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .body .script-box {
+  text-align: center;
+  height: 80px;
+  padding: 1rem;
+  -webkit-box-shadow: inset 4px 5px 8px 0px rgba(0, 0, 0, 0.2), inset -1px 0px 10px 0px #eee;
+          box-shadow: inset 4px 5px 8px 0px rgba(0, 0, 0, 0.2), inset -1px 0px 10px 0px #eee;
+  font-size: .9rem;
+  line-height: 1.7;
+}
+
+#sectionWhatsappWidget #whatsappModal .modal-dialog .modal-content .block-3 .inner-wrapper .footer .btn {
+  display: block;
+  margin: 0 auto 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: #44bc8e;
+  border-radius: 0.5rem;
+  font-size: .85rem;
+  color: #fff;
+}
+/*# sourceMappingURL=whatsapp.css.map */
