@@ -4,7 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 16px;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -181,6 +181,10 @@
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .tool-tip {
   display: none;
+}
+
+#sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .text {
+  font-size: 16px;
 }
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .bi {
@@ -526,15 +530,14 @@
 }
 
 .section-content #sectionProperties .property-block .property-name .pro-name {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 23px;
   color: #333;
   display: block;
 }
 
 .section-content #sectionProperties .property-block .property-name .pro-url {
   color: #999;
-  font-weight: 500;
+  font-size: 17px;
   display: block;
 }
 
@@ -544,7 +547,6 @@
   height: 46px;
   line-height: 46px;
   border-radius: 0.5rem;
-  font-weight: 500;
   padding: 0;
 }
 
@@ -555,10 +557,10 @@
 .section-content #sectionProperties .property-block .button-block .form-switch {
   padding-left: 0;
   padding-right: 2.5em;
+  white-space: nowrap;
 }
 
 .section-content #sectionProperties .property-block .button-block .form-switch .form-check-label {
-  font-weight: 500;
   white-space: nowrap;
 }
 
@@ -574,14 +576,13 @@
 
 .section-content #sectionProperties .property-block .info-blocks .block-title {
   display: block;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 17px;
   text-align: center;
   white-space: nowrap;
 }
 
 .section-content #sectionProperties .property-block .info-blocks .precentage {
-  font-size: 1.1rem;
+  font-size: 17px;
   font-weight: 500;
   color: #0d6efd;
   white-space: nowrap;
@@ -590,7 +591,7 @@
 .section-content #sectionProperties .property-block .seo-block .seo-result {
   text-align: center;
   display: block;
-  font-size: 1.75rem;
+  font-size: 24px;
   color: #999;
 }
 
@@ -616,7 +617,7 @@
 
 .section-content #sectionProperties .property-block .analytics-block .block-content .sub-title {
   color: #999;
-  font-size: 1.1rem;
+  font-size: 17px;
   margin-right: 1rem;
 }
 
@@ -641,13 +642,13 @@
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info,
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info-prec {
   color: #999;
-  font-size: .85rem;
+  font-size: 11px;
 }
 
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info i,
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info-prec i {
   margin-right: .5rem;
-  font-size: .85rem;
+  font-size: 11px;
 }
 
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .progress {
@@ -712,11 +713,11 @@
 }
 
 #sectionTabs .tabs .tab-icon .bi {
-  font-size: 35px;
+  font-size: 28px;
 }
 
 #sectionTabs .tabs .tab-title {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 #sectionTabs .tabs .tab-info {
@@ -725,7 +726,7 @@
 }
 
 #sectionTabs .tabs .tab-info .strong-text {
-  font-size: 40px;
+  font-size: 28px;
 }
 
 #sectionTabNavs .inner-wrapper .navbar-nav .col {
@@ -747,19 +748,17 @@
 #sectionTabNavs .inner-wrapper .navbar-nav .col .nav-item .nav-link {
   background-color: #e2e7f5;
   color: #333;
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 18px;
   position: relative;
 }
 
 #sectionTabNavs .inner-wrapper .navbar-nav .col .nav-item .nav-link .bi {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #sectionTabNavs .inner-wrapper .navbar-nav .col .nav-item .nav-link .text {
-  margin-left: 10px;
-  font-size: 20px;
-  font-weight: 300;
+  margin-left: 15px;
+  font-size: 18px;
 }
 
 #sectionTabNavs .inner-wrapper .navbar-nav .col .nav-item .nav-link:hover {
