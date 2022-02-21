@@ -19,14 +19,14 @@
                                 <option value="Wallpapers" {{ $widget->widget_type == 'Wallpapers' ? "selected" : "" }}>Wallpapers</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label>Settings</label>
                             <input type="text" id="settings" value="{{ $widget->settings }}" class="form-control" name="settings">
                         </div>
                         <div class="form-group">
                             <label>Load Count</label>
                             <input type="text" id="load_count" value="{{ $widget->load_count }}" class="form-control" name="load_count">
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label>Status <span class="text-danger">*</span></label>
                             <select class="form-control custom-select" name="status" required>

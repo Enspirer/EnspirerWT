@@ -28,10 +28,10 @@
                             <label>URL <span class="text-danger">*</span></label>
                             <input type="text" id="url" class="form-control" name="url" required>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label>SEO Result</label>
                             <input type="text" id="seo_result" class="form-control" name="seo_result">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="mt-3 text-right">

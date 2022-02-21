@@ -26,10 +26,10 @@
                             <label>URL <span class="text-danger">*</span></label>
                             <input type="text" id="url" value="{{ $projects->url }}" class="form-control" name="url" required>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label>SEO Result</label>
                             <input type="text" id="seo_result" value="{{ $projects->seo_result }}" class="form-control" name="seo_result">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
