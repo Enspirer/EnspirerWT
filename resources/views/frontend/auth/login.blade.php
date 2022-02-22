@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" href="{{url('css/sign_in.css')}}">
 
+    @include('frontend.includes.home_nav')
+
     <section class="sign-up-section">
         <div class="container">
             <div class="inner-wrapper">
@@ -76,6 +78,8 @@
             </div>
         </div>
     </section>
+
+    @include('frontend.includes.footer')
 
 
 @endsection
