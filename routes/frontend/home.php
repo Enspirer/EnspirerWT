@@ -45,6 +45,7 @@ Route::get('services',[ServicesController::class, 'index'])->name('services');
 
 
 
+
 /*
  * These frontend controllers require the user to be logged in
  * All route names are prefixed with 'frontend.'
@@ -69,6 +70,10 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('project_details/{id}/security',[SecurityController::class, 'security'])->name('project.security');
         Route::get('project_details/{id}/widget',[ChatController::class, 'widget'])->name('project.chat');
         Route::get('project_details/{id}/analytics',[AnalyticsController::class, 'analytics'])->name('project.analytics');
+
+
+        Route::post('user_projects/store', [DashboardController::class, 'user_projects_store'])->name('user_projects.store');
+
 
     });
 });

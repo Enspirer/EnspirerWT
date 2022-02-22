@@ -44,12 +44,15 @@
                                                     <a class="dropdown-item" href="{{route('frontend.user.project.seo',$project->id)}}">
                                                         <div class="property">
                                                             <div class="image">
-                                                                @if(get_seo_result($project->id)->favicon->value == null)
-                                                                    <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
 
-                                                                @else
-                                                                    <img src="{{get_seo_result($project->id)->favicon->value}}" alt="propery-image">
+                                                                @if(get_seo_result($project->id) != null)
+                                                                    @if(get_seo_result($project->id)->favicon->value == null)
+                                                                        <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
+                                                                    @else
+                                                                        <img src="{{get_seo_result($project->id)->favicon->value}}" alt="propery-image">
+                                                                    @endif
                                                                 @endif
+                                                                
                                                             </div>
                                                             <div class="content">
                                                                 <h6 class="site-name">{{$project->name}}</h6>
@@ -62,7 +65,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link add-btn bi bi-plus-square-fill" href="#"></a>
+                                        <a type="button" class="nav-link add-btn bi bi-plus-square-fill" data-bs-toggle="modal" data-bs-target="#project_modal"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -105,3 +108,42 @@
                     </div>
                 </div>
             </div>
+
+    <!-- Modal -->
+        <div class="modal fade" id="project_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-2">
+                    
+                    <form action="{{route('frontend.user.user_projects.store')}}" method="post" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="exampleModalLabel">Create Project</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label style="font-size:16px">Project Name <span class="text-danger">*</span></label>
+                                <input type="text" style="font-size:15px;" id="name" class="form-control mt-2" name="name" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label style="font-size:16px">Project Type <span class="text-danger">*</span></label>
+                                <select class="form-control mt-2" style="font-size:15px;" id="project_type" name="project_type" required>
+                                    <option value="" selected disabled>Select...</option>
+                                    @foreach(App\Models\ProjectType::get() as $type)
+                                        <option style="font-size:15px;" value="{{ $type->id }}">{{ $type->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label style="font-size:16px">URL <span class="text-danger">*</span></label>
+                                <input type="text" style="font-size:15px;" id="url" class="form-control mt-2" name="url" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer mt-3">
+                            <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
