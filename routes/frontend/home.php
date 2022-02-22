@@ -13,6 +13,12 @@ use App\Http\Controllers\Frontend\ChatController;
 use App\Http\Controllers\Frontend\ReportsController;
 use App\Http\Controllers\Frontend\User\ProjectController;
 use App\Http\Controllers\Frontend\AnalyticsController;
+use App\Http\Controllers\Frontend\EShopController;
+use App\Http\Controllers\Frontend\MarketPlaceController;
+use App\Http\Controllers\Frontend\ProductController;
+use App\Http\Controllers\Frontend\ResourcesController;
+use App\Http\Controllers\Frontend\ServicesController;
+
 /*
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
@@ -31,6 +37,11 @@ Route::get('uploads/all/{file_name}',[AizUploadController::class,'get_image_cont
 Route::get('static/{id}/mpaclic.js',[TestController::class, 'index'])->name('resource_widget');
 Route::get('test_blade',[TestController::class, 'testblade'])->name('testblade');
 
+Route::get('eshop',[EShopController::class, 'index'])->name('eshop');
+Route::get('market_place',[MarketPlaceController::class, 'index'])->name('market_place');
+Route::get('products',[ProductController::class, 'index'])->name('products');
+Route::get('resources',[ResourcesController::class, 'index'])->name('resources');
+Route::get('services',[ServicesController::class, 'index'])->name('services');
 
 
 
