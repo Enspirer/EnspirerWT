@@ -8,16 +8,34 @@
                                         <a class="nav-link" href="#" id="propertyDropdown" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <div class="property">
-                                                <div class="image">
-                                                    <img src="{{url('images/Tallentor.png')}}" alt="propery-image">
-                                                </div>
-                                                <div class="content">
-                                                    <h6 class="site-name">Website Name</h6>
-                                                    <span class="site-url">https://tallentor.com/</span>
-                                                </div>
-                                                <div class="dropdown-icon">
-                                                    <i class="bi bi-chevron-down"></i>
-                                                </div>
+                                                @if(isset($project_id))
+                                                    <div class="image">
+                                                        @if(get_seo_result($project_id)->favicon->value == null)
+                                                            <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
+
+                                                        @else
+                                                            <img src="{{get_seo_result($project_id)->favicon->value}}" alt="propery-image">
+                                                        @endif
+                                                    </div>
+                                                    <div class="content">
+                                                        <h6 class="site-name">{{\App\Models\Projects::where('id',$project_id)->first()->name}}</h6>
+                                                        <span class="site-url">{{\App\Models\Projects::where('id',$project_id)->first()->url}}</span>
+                                                    </div>
+                                                    <div class="dropdown-icon">
+                                                        <i class="bi bi-chevron-down"></i>
+                                                    </div>
+                                                @else
+                                                    <div class="image">
+
+                                                    </div>
+                                                    <div class="content">
+                                                        <h6 class="site-name">Select Your Project</h6>
+                                                    </div>
+                                                    <div class="dropdown-icon">
+                                                        <i class="bi bi-chevron-down"></i>
+                                                    </div>
+                                                @endif
+
                                             </div>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="propertyDropdown">
