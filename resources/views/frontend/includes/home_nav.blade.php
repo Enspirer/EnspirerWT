@@ -45,7 +45,7 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="{{route('frontend.auth.logout')}}">Logout</a></li>
                                 </ul>
                             </li>
                         @else
