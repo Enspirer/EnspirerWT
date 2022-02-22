@@ -21,32 +21,26 @@
                                             </div>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="propertyDropdown">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="property">
-                                                        <div class="image">
-                                                            <img src="{{url('images/Tallentor.png')}}" alt="propery-image">
+                                            @foreach(\App\Models\Projects::where('user_id',auth()->user()->id)->get() as $project)
+                                                <li>
+                                                    <a class="dropdown-item" href="{{route('frontend.user.project.seo',$project->id)}}">
+                                                        <div class="property">
+                                                            <div class="image">
+                                                                @if(get_seo_result($project->id)->favicon->value == null)
+                                                                    <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
+
+                                                                @else
+                                                                    <img src="{{get_seo_result($project->id)->favicon->value}}" alt="propery-image">
+                                                                @endif
+                                                            </div>
+                                                            <div class="content">
+                                                                <h6 class="site-name">{{$project->name}}</h6>
+                                                                <span class="site-url">{{$project->url}}</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="content">
-                                                            <h6 class="site-name">Website Name</h6>
-                                                            <span class="site-url">https://tallentor.com/</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="property">
-                                                        <div class="image">
-                                                            <img src="{{url('images/Tallentor.png')}}" alt="propery-image">
-                                                        </div>
-                                                        <div class="content">
-                                                            <h6 class="site-name">Website Name</h6>
-                                                            <span class="site-url">https://tallentor.com/</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li class="nav-item">

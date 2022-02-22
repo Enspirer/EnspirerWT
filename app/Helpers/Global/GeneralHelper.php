@@ -1,6 +1,7 @@
 <?php
 
-use App\Models\Settings; 
+use App\Models\Settings;
+use App\Models\Projects;
 
 if (! function_exists('app_name')) {
     /**
@@ -118,6 +119,25 @@ if (! function_exists('get_settings')) {
     }
 }
 
+
+if (! function_exists('get_seo_result')) {
+    /**
+     * Return the route to the "home" page depending on authentication/authorization status.
+     *
+     * @return string
+     */
+    function get_seo_result($id)
+    {
+        $projectDetails = Projects::where('id',$id)->first();
+        $seoDecode = json_decode($projectDetails->seo_result);
+        if($seoDecode == null){
+            return null;
+        }else{
+            return $seoDecode;
+        }
+
+    }
+}
 
 
 
