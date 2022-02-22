@@ -39,20 +39,26 @@
                                 <button class="btn" type="submit"><i class="bi bi-search"></i></button>
                             </form>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                        @auth
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{auth()->user()->first_name}} {{auth()->user()->last_name}}
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        @else
+                            <a href="{{url('login')}}" style="text-decoration:none;font-size: 14px;font-weight: 300;color: #000;">
                                 Log in
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -68,7 +74,7 @@
                     <h5 class="light">WhatsApp Widget with </h5>
                     <h5>Inquiry Management System (IMS)</h5>
 
-                    <a href="" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                    <a href="{{url('register')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
                     <div class="featured-icons">
                         <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
                         <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
