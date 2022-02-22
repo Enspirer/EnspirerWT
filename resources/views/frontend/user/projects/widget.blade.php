@@ -53,47 +53,51 @@
                                     </div>
                                 </div>
                                 <div class="row gx-5 justify-content-between">
-                                    <div class="col-6">
-                                        <div class="inner-wrapper px-4">
-                                            <div class="row g-0 mt-4">
-                                                <div class="header">
-                                                    <span class="title">Whatsapp Chat</span>
-                                                    <i class="bi bi-whatsapp"></i>
-                                                </div>
-                                            </div>
-                                            <div class="row g-0 my-5">
-                                                <div class="col">
-                                                    <div class="row g-0 mb-2 justify-content-between">
-                                                        <div class="col-auto">
-                                                            <div class="progress-label">www.tallentor.com</div>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <div class="progress-amount">25%</div>
-                                                        </div>
+                                    @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
+                                        <div class="col-6">
+                                            <div class="inner-wrapper px-4" >
+                                                <div class="row g-0 mt-4">
+                                                    <div class="header">
+                                                        <span class="title">{{$widgetlist->widget_type}}</span>
+                                                        <i class="bi bi-whatsapp"></i>
                                                     </div>
-                                                    <div class="row g-0">
-                                                        <div class="col">
-                                                            <div class="progress">
-                                                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                                                     aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                                <div class="row g-0 my-5">
+                                                    <div class="col">
+                                                        <div class="row g-0 mb-2 justify-content-between">
+                                                            <div class="col-auto">
+                                                                <div class="progress-label">www.tallentor.com</div>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <div class="progress-amount">25%</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-0">
+                                                            <div class="col">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                                                         aria-valuemin="0" aria-valuemax="100">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col">
-                                                    <p class="body-text">Lorem ipsum dolor sit amet consectetur
-                                                        adipisicing elit. Mollitia sit maxime nam sapiente illum,
-                                                        consequuntur aperiam quia reprehenderit deserunt delectus.
-                                                    </p>
+                                                <div class="row g-0">
+                                                    <div class="col">
+                                                        <p class="body-text">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Mollitia sit maxime nam sapiente illum,
+                                                            consequuntur aperiam quia reprehenderit deserunt delectus.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endforeach
+
+
                                     <div class="col-6">
-                                        <div class="innwer-wrapper dotted-border">
+                                        <div class="innwer-wrapper dotted-border" style="height: 200px;">
                                             <button type="button" class="btn-whatsapp"  data-bs-toggle="modal" data-bs-target="#exampleModal">Create
                                                 Widget</button>
                                         </div>
