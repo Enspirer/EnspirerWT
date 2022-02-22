@@ -8,7 +8,7 @@
     
 @include('frontend.includes.home_nav')
 
-    <section class="section-categories">
+<section class="section-categories">
         <div class="container">
             <div class="header">
                 <h2 class="title">Top Categories at Tallentor</h2>
@@ -16,7 +16,7 @@
             </div>
             <div class="row gx-0 gy-4 row-cols-4">
                 <div class="col">
-                    <div class="card Programming-development">
+                    <div class="card blue-overlay">
                         <a href="#" class="inner-wrapper">
                             <div class="overlay">
                                 <span class="big-circle"></span>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card digital-marketing">
+                    <div class="card green-overlay">
                         <a href="#" class="inner-wrapper">
                             <div class="overlay">
                                 <span class="big-circle"></span>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card graphic-design">
+                    <div class="card yellow-overlay">
                         <a href="#" class="inner-wrapper">
                             <div class="overlay">
                                 <span class="big-circle"></span>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card art-craft">
+                    <div class="card red-overlay">
                         <a href="#" class="inner-wrapper">
                             <div class="overlay">
                                 <span class="big-circle"></span>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card writing-translation">
+                    <div class="card yellow-overlay">
                         <a href="#" class="inner-wrapper">
                             <div class="overlay">
                                 <span class="big-circle"></span>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card video-photography">
+                    <div class="card red-overlay">
                         <a href="#" class="inner-wrapper">
                             <div class="overlay">
                                 <span class="big-circle"></span>
@@ -131,7 +131,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card music-audio">
+                    <div class="card green-overlay">
                         <a href="#" class="inner-wrapper">
                             <div class="overlay">
                                 <span class="big-circle"></span>
@@ -150,7 +150,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card business-sales">
+                    <div class="card blue-overlay">
                         <a href="#" class="inner-wrapper">
                             <div class="overlay">
                                 <span class="big-circle"></span>
