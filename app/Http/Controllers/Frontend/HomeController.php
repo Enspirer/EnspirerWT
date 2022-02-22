@@ -21,6 +21,11 @@ class HomeController extends Controller
         return view('frontend.index');
     }
 
+    public function save_client(Request $request)
+    {
+        dd($request);
+    }
+
 
     // ******************************  api  *****************************************************
 

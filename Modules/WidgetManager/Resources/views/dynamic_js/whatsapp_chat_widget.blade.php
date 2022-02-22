@@ -301,7 +301,7 @@ div.innerHTML = `<style>
             <div class="wappfooter">
                 <div id="wappstartupform">
                     <div class="wappformcontent">
-                        <form action="{{route('frontend.save_client')}}" method="post">
+                        <form action="{{route('save_client')}}" method="post">
                             {{csrf_field()}}
                             <input type="text" id="username" name="username" placeholder="Your name" required>
                             <input type="hidden" id="username" name="widget_id" {{$widget_id}} required>
