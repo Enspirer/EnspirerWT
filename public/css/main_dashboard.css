@@ -81,7 +81,6 @@
 #sideNav.side-nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100vh;
     background-color: #1f2851;
     z-index: 99999;
@@ -91,7 +90,7 @@
 }
 
 #sideNav.side-nav .side-nav-brands {
-    margin: 5rem auto 0;
+    margin: 5rem auto;
     position: relative;
 }
 
@@ -177,6 +176,7 @@
 #sideNav.side-nav .side-nav-footer {
     text-align: center;
     padding: 0 1rem;
+    margin-top: auto;
 }
 
 #sideNav.side-nav .side-nav-footer .copyright {
