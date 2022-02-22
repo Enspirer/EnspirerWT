@@ -9,6 +9,6 @@ class ProjectController extends Controller
 {
     public function show($id)
     {
-        return view('frontend.user.projects.show');
+        return view('frontend.user.projects.seo');
     }
 }
