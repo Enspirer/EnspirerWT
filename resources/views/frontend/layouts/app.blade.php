@@ -67,6 +67,29 @@
             splide.mount();
         </script>
 
+        <!-- Sign Up Slider -->
+        <script>
+            var splide = new Splide('.sign-up-splide', {
+                arrows: false,
+                classes: {
+                    pagination: 'splide__pagination splide__pagination--custom',
+                    page: 'splide__pagination__page indicator',
+                },
+            });
+            splide.mount();
+        </script>
+
+         <!-- Sign In Slider -->
+        <script>
+            var splide = new Splide('.sign-in-splide', {
+                arrows: false,
+                classes: {
+                    pagination: 'splide__pagination splide__pagination--custom',
+                    page: 'splide__pagination__page indicator',
+                },
+            });
+            splide.mount();
+        </script>
                 
         @include('includes.partials.ga')
     </body>
