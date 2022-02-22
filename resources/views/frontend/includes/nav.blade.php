@@ -58,12 +58,13 @@
                         <div class="col-auto ms-lg-0 ms-auto">
                             <div class="profile-block">
                                 <ul class="navbar-nav">
+                                    @auth()
                                     <li class="nav-item">
                                         <a class="nav-link notification-bell bi bi-bell" href="#"></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link" href="#" id="profileDropdown" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                           data-bs-toggle="dropdown" aria-expanded="false">
                                             <div class="profile">
                                                 <div class="image">
                                                     <img src="{{auth()->user()->picture}}" alt="profile-picture">
@@ -82,6 +83,10 @@
                                             <li><a class="dropdown-item" href="{{route('frontend.auth.logout')}}">Logout</a></li>
                                         </ul>
                                     </li>
+                                    @else
+
+                                    @endauth
+
                                 </ul>
                             </div>
                         </div>
