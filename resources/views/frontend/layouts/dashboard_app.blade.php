@@ -19,10 +19,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 
-        <link rel="stylesheet" href="{{url('css/main.css')}} ">
-        <link rel="stylesheet" href="{{url('css/navbar.css')}} ">
-        <link rel="stylesheet" href="{{url('css/home.css')}} ">
-        <link rel="stylesheet" href="{{url('css/footer.css')}} ">
+        <link rel="stylesheet" href="{{url('css/main_dashboard.css')}} ">
 
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
@@ -56,19 +53,47 @@
 
         <script src="{{url('js/script.js')}}"></script>
 
+        
         <script>
-            var splide = new Splide('.splide', {
-                type: 'loop',
-                perPage: 1,
-                focus: 'center',
-                gap: '50px',
-                fixedWidth: '415px',
-            });
+            const labels = [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec',
+            ];
 
-            splide.mount();
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [0, 10, 5, 2, 20, 30, 45, 22, 36, 18, 28],
+                }]
+            };
+
+            const config = {
+                type: 'line',
+                data: data,
+                options: {}
+            };
         </script>
 
-                
+        <script>
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+            );
+        </script>
+
+        
         @include('includes.partials.ga')
     </body>
 </html>

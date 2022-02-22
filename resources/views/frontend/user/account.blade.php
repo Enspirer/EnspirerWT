@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+@extends('frontend.layouts.dashboard_app')
 
 @section('content')
     <div class="row justify-content-center align-items-center mb-3">
