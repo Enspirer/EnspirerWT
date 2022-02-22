@@ -39,9 +39,7 @@ class HomeController extends Controller
         $widgetDtails[0]->button_color = $themeArray->button_color;
         $widgetDtails[0]->header_background_color = $themeArray->header_background_color;
         $widgetDtails[0]->button_corner_radius = $themeArray->button_corner_radius;
-        $widgetDtails[0]->custom_css = $themeArray->custom_css;
-        $widgetDtails[0]->alignment = $themeArray->alignment;
-        
+        $widgetDtails[0]->custom_css = $themeArray->custom_css;        
         $netype = json_encode($widgetDtails);
 
 
