@@ -304,7 +304,7 @@ div.innerHTML = `<style>
                         <form action="{{route('save_client')}}" method="post">
                             {{csrf_field()}}
                             <input type="text" id="username" name="username" placeholder="Your name" required>
-                            <input type="hidden" id="username" name="widget_id" {{$widget_id}} required>
+                            <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="email" id="useremail" name="useremail" placeholder="Your email" required>
                             <textarea name="usermessage" id="usermessage" placeholder="Your message"></textarea>
                             <button type="submit" name="button" >Send</button>

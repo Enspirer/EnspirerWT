@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Widgets;
 use Illuminate\Http\Request;
+use Modules\WidgetManager\Entities\ImsClients;
 use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
 use Modules\WidgetManager\Entities\WhatsAppModel;
 
@@ -23,7 +24,33 @@ class HomeController extends Controller
 
     public function save_client(Request $request)
     {
-        dd($request);
+      $phone_number =  self::getPhoneNumberByWidget($request->widget_id);
+
+
+        $widget = Widgets::where('id',$request->widget_id)->first();
+        $client =  new ImsClients;
+        $client->project_id = $widget->project_id;
+        $client->client_name = $request->username;
+        $client->client_email = $request->useremail;
+        $client->message = $request->usermessage;
+        $client->widget_id = $request->widget_id;
+        $client->ip_address = $request->ip();
+        $client->save();
+
+        $incom =  urlencode($request->usermessage);
+
+
+        return redirect()->to('https://wa.me/'.$phone_number.'/?text='.$incom);
+
+    }
+
+    public static function getPhoneNumberByWidget($id)
+    {
+        $widget = Widgets::where('id',$id)->first();
+
+        $settings = json_decode($widget->settings);
+
+        return $settings[0]->whatsapp_number;
     }
 
 
