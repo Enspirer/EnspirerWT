@@ -37,7 +37,6 @@
 
         <div id="app">
             @include('includes.partials.logged-in-as')
-            <!-- @include('frontend.includes.nav') -->
             <div class="">
                 @include('includes.partials.messages')
                 @yield('content')
