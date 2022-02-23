@@ -1226,9 +1226,27 @@
                 <div class="section-container">
                     <!-- Content goes here -->
 
+                    <div class="row">
+                        <div class="col-5">
+
+                        </div>
+                        <div class="col-7">                        
+                        
+                            <div class="mt-4">
+                                <a href="" class="btn btn-primary">Preview</a>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Get Widget</button>
+                                <iframe id="incorme" src="" frameborder="0" style="width: 100%;height: 610px;"></iframe>
+                            </div>
+      
+
+                        </div>
+                    </div>
+
+                   
+
                     <div class="button-block">
-                        <div class="btn cancel">Cancel</div>
-                        <div class="btn apply">Apply</div>
+                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$project->id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                        <!-- <div class="btn apply">Apply</div> -->
                         <div class="btn save">Save</div>
                     </div>
 

@@ -615,8 +615,7 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <a href="" class="btn btn-primary">Preview</a>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Get Widget</button>
+                
                 <iframe id="incorme" src="{{route('admin.whatsapp_chat_preview',$widget->id)}}" frameborder="0" style="width: 100%;height: 610px;"></iframe>
             </div>
         </div>
