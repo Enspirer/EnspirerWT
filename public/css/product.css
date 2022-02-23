@@ -29,6 +29,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin: 0;
 }
 
 .products-body .inner-container .hero-section .inner-wrapper .content-block {
@@ -190,6 +191,7 @@
     position: relative;
     border-left: 2px dashed #BAD1FF;
     margin-left: 5rem;
+    margin-bottom: 10rem;
 }
 
 .products-body .inner-container .more-about-widget .feature-block-section .curves .top-curve {

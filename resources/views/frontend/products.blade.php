@@ -32,7 +32,7 @@
                                 </a>
                             </div>
                             <div class="image-block">
-                                <img src="images/Group 549.png" alt="">
+                                <img src="{{url('images/products/Group 549.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="container">
                         <div class="inner-wrapper">
                             <div class="image-block">
-                                <img src="images/Group 550.png" alt="">
+                                <img src="{{url('images/products/Group 550.png')}}" alt="">
                             </div>
                             <div class="content-block">
                                 <h2 class="title">Free WhatsApp <br> widget for website</h2>
@@ -71,13 +71,13 @@
                     </div>
                     <div class="feature-block-section">
                         <div class="curves">
-                            <img src="images/Path 6503.svg" alt="" class="top-curve">
-                            <img src="images/Path 6507.svg" alt="" class="bottom-curve">
+                            <img src="{{url('images/products/Path 6503.svg')}}" alt="" class="top-curve">
+                            <img src="{{url('images/products/Path 6507.svg')}}" alt="" class="bottom-curve">
                         </div>
                         <div class="feature-block block-1">
                             <div class="content-block">
                                 <div class="subtitle-block">
-                                    <img src="images/Polygon 1.png" alt="">
+                                    <img src="{{url('images/products/Polygon 1.png')}}" alt="">
                                     <span class="text">Sub topic have to include here</span>
                                 </div>
                                 <h2 class="title">Team inbox for <br> WhatsApp</h2>
@@ -92,17 +92,17 @@
                                 </p>
                             </div>
                             <div class="image-block">
-                                <img src="images/Group 551.png" alt="">
+                                <img src="{{url('images/products/Group 551.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-2">
                             <div class="content-block">
                                 <div class="curves">
-                                    <img src="images/Path 6503.svg" alt="" class="top-curve">
-                                    <img src="images/Path 6507.svg" alt="" class="bottom-curve">
+                                    <img src="{{url('images/products/Path 6503.svg')}}" alt="" class="top-curve">
+                                    <img src="{{url('images/products/Path 6507.svg')}}" alt="" class="bottom-curve">
                                 </div>
                                 <div class="subtitle-block">
-                                    <img src="images/Polygon 1.png" alt="">
+                                    <img src="{{url('images/products/Polygon 1.png')}}" alt="">
                                     <span class="text">Sub topic have to include here</span>
                                 </div>
                                 <h2 class="title">Customize your <br> widget as you want</h2>
@@ -117,13 +117,13 @@
                                 </p>
                             </div>
                             <div class="image-block">
-                                <img src="images/Group 552.png" alt="">
+                                <img src="{{url('images/products/Group 552.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-3">
                             <div class="content-block">
                                 <div class="subtitle-block">
-                                    <img src="images/Polygon 1.png" alt="">
+                                    <img src="{{url('images/products/Polygon 1.png')}}" alt="">
                                     <span class="text">Sub topic have to include here</span>
                                 </div>
                                 <h2 class="title">Team inbox for <br> WhatsApp</h2>
@@ -138,7 +138,7 @@
                                 </p>
                             </div>
                             <div class="image-block">
-                                <img src="images/2225.png" alt="">
+                                <img src="{{url('images/products/2225.png')}}" alt="">
                             </div>
                         </div>
                     </div>
