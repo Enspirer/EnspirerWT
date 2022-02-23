@@ -1233,8 +1233,6 @@
                         <div class="col-7">                        
                         
                             <div class="mt-4">
-                                <a href="" class="btn btn-primary">Preview</a>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Get Widget</button>
                                 <iframe id="incorme" src="" frameborder="0" style="width: 100%;height: 610px;"></iframe>
                             </div>
       
