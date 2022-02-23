@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.products-body .inner-container {
+    border-left: 2px dashed #BAD1FF;
+    padding-bottom: 1rem;
+}
+
+.products-body .inner-container .hero-section {
+    position: relative;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .content-block {
+    max-width: 500px;
+    width: 100%;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .content-block .title {
+    font-size: 3.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .content-block .subtitle {
+    color: #00AEEF;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .content-block .content {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .content-block .cta-plain-btn {
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .content-block .cta-plain-btn .bi {
+    font-size: 1.5rem;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .image-block img {
+    width: 100%;
+}
+
+.products-body .inner-container .whatsapp-widget {
+    margin: 5rem 0;
+    position: relative;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .image-block img {
+    width: 100%;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .content-block {
+    width: 40%;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .content-block .title {
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .content-block .content {
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .content-block ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .content-block ul li {
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .content-block ul li .bi {
+    color: #00AEEF;
+    margin-right: 1rem;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .content-block .cta-outline-btn {
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #000;
+    width: 200px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .content-block .cta-outline-btn .bi {
+    font-size: 1.5rem;
+}
+
+.products-body .inner-container .more-about-widget {
+    position: relative;
+    margin: 5rem 0;
+}
+
+.products-body .inner-container .more-about-widget .header {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.products-body .inner-container .more-about-widget .header .title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.products-body .inner-container .more-about-widget .header .subtitle {
+    font-weight: 300;
+    text-align: center;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section {
+    position: relative;
+    border-left: 2px dashed #BAD1FF;
+    margin-left: 5rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .curves .top-curve {
+    position: absolute;
+    top: -6.5rem;
+    left: -5.25rem;
+    width: 5.25rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .curves .bottom-curve {
+    position: absolute;
+    bottom: -6.5rem;
+    left: -5.25rem;
+    width: 5.25rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 3.5rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-1 {
+    padding-top: 5rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 {
+    border-left: 2px dashed #BAD1FF;
+    margin: 5rem 0 5rem 5rem;
+    padding-top: 5rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .top-curve {
+    position: absolute;
+    top: -13.4rem;
+    left: -8.75rem;
+    width: 5.25rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .bottom-curve {
+    position: absolute;
+    bottom: -8.25rem;
+    left: -8.75rem;
+    width: 5.25rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .image-block img {
+    width: 100%;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block {
+    position: relative;
+    width: 40%;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .subtitle-block {
+    position: absolute;
+    top: -5.2rem;
+    left: -5.2rem;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .subtitle-block .text {
+    font-weight: 300;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ACACAC;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .content {
+    font-weight: 300;
+    color: #ACACAC;
+}
+
+/*# sourceMappingURL=product.css.map */
