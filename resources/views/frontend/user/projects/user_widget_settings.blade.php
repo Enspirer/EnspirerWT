@@ -45,7 +45,7 @@
             <div class="side-nav-footer">
                 <div class="devices">
                     <a href="#"><img src="{{url('images/resources/baseline-desktop_mac-24px.svg')}}" alt="devices"></a>
-                    <a href="#"><img src="{{url('images/resources/Group 125.svg" alt="devices')}}"></a>
+                    <a href="#"><img src="{{url('images/resources/Group 125.svg')}}" alt="devices"></a>
                     <a href="#"><img src="{{url('images/resources/baseline-smartphone-24px.svg')}}" alt="devices"></a>
                 </div>
             </div>
@@ -142,9 +142,8 @@
                         <div class="header">
                             <div class="title">Content</div>
                             <div class="whatsapp-no-input">
-                                <input type="tel" class="form-control" id="whatsappTPNumber"
-                                    placeholder="Type Your WhatsApp Number...">
-                                <label for="whatsappTPNumber" class="form-label">Make sure to remove [+] or [00]
+                                <input type="text" class="form-control" id="whatsapp_number" placeholder="Type Your WhatsApp Number..." name="whatsapp_number" value="{{ json_decode($widget->settings)[0]->whatsapp_number }}" onchange="myFunction()" required>
+                                <label for="whatsapp_number" class="form-label">Make sure to remove [+] or [00]
                                     before your phone number and add your conuntry code</label>
                             </div>
                         </div>
@@ -1226,9 +1225,26 @@
                 <div class="section-container">
                     <!-- Content goes here -->
 
+                    <div class="row">
+                        <div class="col-5">
+
+                        </div>
+                        <div class="col-7">                        
+                        
+                            <div class="mt-4">
+                                <iframe id="incorme" src="{{route('frontend.user.user_whatsapp_chat_preview',$widget->id)}}" frameborder="0" style="width: 100%;height: 610px;"></iframe>
+                            </div>
+      
+
+                        </div>
+                    </div>
+
+                   
+
                     <div class="button-block">
-                        <div class="btn cancel">Cancel</div>
-                        <div class="btn apply">Apply</div>
+                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$project->id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                        <!-- <div class="btn apply">Apply</div> -->
+                        <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
                         <div class="btn save">Save</div>
                     </div>
 
@@ -1246,6 +1262,240 @@
 
 <script src="{{url('js/widget_settings.js')}}"></script>
 
-    
+    <script>
+        $(document).ready(function() {
+
+            let bubble_icon = <?php echo json_encode (json_decode($widget->settings)[0]->bubble_icon ) ?>
+
+            $('#bubble_icon option').each(function(i){
+                if($(this).val() == bubble_icon) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+
+            let timezone = <?php echo json_encode (json_decode($widget->settings)[0]->timezone ) ?>
+
+            $('#timezone option').each(function(i){
+                if($(this).val() == timezone) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+
+
+        });       
+    </script>
+   
+   <script>
+
+       function template_layout_chage() {
+           template_layout = $('#template_layout').val();
+           hidden_id = $('#hidden_id').val();
+           $.post("{{url('/')}}/api/theme_changers",
+               {
+                   'template_layout': template_layout,
+                   'widget_id' : hidden_id
+
+               },function(data, status){
+                //    console.log(data);
+                   decoded_json = JSON.parse(data);
+                //    console.log(decoded_json[0]);
+
+                    $('#bubble_background_color').val(decoded_json[0].bubble_background_color);
+                    $('#bubble_icon_color').val(decoded_json[0].bubble_icon_color);
+                    $('#button_color').val(decoded_json[0].button_color);
+                    $('#header_background_color').val(decoded_json[0].header_background_color);
+                    $('#button_corner_radius').val(decoded_json[0].button_corner_radius);
+                    $('#custom_css').val(decoded_json[0].custom_css);
+                    $('#template_layout').val(decoded_json[0].template_layout);
+                    
+                   document.getElementById('incorme').contentWindow.location.reload();
+
+               }
+           );
+
+       }
+
+        function myFunction(){
+
+            template_layout = $('#template_layout').val();
+            whatsapp_number = $('#whatsapp_number').val();
+            bubble_icon = $('#bubble_icon').val();
+            chat_header = $('#chat_header').val();
+            caption = $('#caption').val();
+            image = $('#image').val();
+            welcome_message = $('#welcome_message').val();
+            // console.log(welcome_message);
+
+            start_chat = $('#start_chat').val();
+            show_icon = $('#show_icon').val();
+            position = $('#position').val();
+            alignment = $('#alignment').val();            
+            where_display_chat = $('#where_display_chat').val();
+          
+            if($('#desktop').is(':checked')) {
+                desktop = $("#desktop").val();
+            }
+            else{
+                desktop = null;               
+            }
+            if($('#mobile_device').is(':checked')) {
+                mobile_device = $("#mobile_device").val();
+            }
+            else{
+                mobile_device = null;                
+            }
+
+           
+            if($('#all_visitors').is(':checked')) {
+                visitors = $("#all_visitors").val();
+            }
+            if($('#new_visitors').is(':checked')) {
+                visitors = $("#new_visitors").val();
+            }
+            if($('#refurm_visitors').is(':checked')) {
+                visitors = $("#refurm_visitors").val();
+            }
+
+
+
+            if($('#monday').is(':checked')) {
+                monday = $("#monday").val();
+            }
+            else{
+                monday = null;               
+            }
+            if($('#tuesday').is(':checked')) {
+                tuesday = $("#tuesday").val();
+            }
+            else{
+                tuesday = null;                
+            }
+            if($('#wednesday').is(':checked')) {
+                wednesday = $("#wednesday").val();
+            }
+            else{
+                wednesday = null;                
+            }
+            if($('#thursday').is(':checked')) {
+                thursday = $("#thursday").val();
+            }
+            else{
+                thursday = null;                
+            }
+            if($('#friday').is(':checked')) {
+                friday = $("#friday").val();
+            }
+            else{
+                friday = null;                
+            }
+            if($('#saturday').is(':checked')) {
+                saturday = $("#saturday").val();
+            }
+            else{
+                saturday = null;                
+            }
+            if($('#sunday').is(':checked')) {
+                sunday = $("#sunday").val();
+            }
+            else{
+                sunday = null;                
+            }
+
+            start_time = $('#start_time').val();
+            end_time = $('#end_time').val();
+            timezone = $('#timezone').val();
+            time_on_page = $('#time_on_page').val();
+            time_on_site = $('#time_on_site').val();
+            scroll_position = $('#scroll_position').val();
+            
+            if($('#exit_internet').is(':checked')) {
+                exit_internet = $("#exit_internet").val();
+            }
+            else{
+                exit_internet = null;
+            }
+
+            if($('#bubble_notification_bage').is(':checked')) {
+                bubble_notification_bage = $("#bubble_notification_bage").val();
+            }
+            else{
+                bubble_notification_bage = null;                
+            }
+            if($('#show_notification_in_tab_tile').is(':checked')) {
+                show_notification_in_tab_tile = $("#show_notification_in_tab_tile").val();
+            }
+            else{
+                show_notification_in_tab_tile = null;                
+            }
+            
+
+            bubble_background_color = $('#bubble_background_color').val();
+            bubble_icon_color = $('#bubble_icon_color').val();
+            button_color = $('#button_color').val();
+            header_background_color = $('#header_background_color').val();
+            
+
+            if($('#enabled_animation').is(':checked')) {
+                enabled_animation = $("#enabled_animation").val();
+            }
+            else{
+                enabled_animation = null;
+            }
+
+            scroll_position_appearance = $('#scroll_position_appearance').val();
+            button_corner_radius = $('#button_corner_radius').val();
+            custom_css = $('#custom_css').val();
+            hidden_id = $('#hidden_id').val();
+            
+
+            $.post("{{url('/')}}/api/api_chat",
+                {
+                    template_layout: template_layout,
+                    whatsapp_number: whatsapp_number,
+                    bubble_icon: bubble_icon,
+                    chat_header: chat_header,
+                    caption: caption,
+                    image: image,
+                    welcome_message: welcome_message,
+                    start_chat: start_chat,
+                    show_icon: show_icon,
+                    position: position,
+                    alignment: alignment,                    
+                    where_display_chat: where_display_chat,
+                    desktop: desktop,
+                    mobile_device: mobile_device,
+                    visitors: visitors,
+                    monday: monday,
+                    tuesday: tuesday,
+                    wednesday: wednesday,
+                    thursday: thursday,
+                    friday: friday,
+                    saturday: saturday,
+                    sunday: sunday,
+                    start_time: start_time,
+                    end_time: end_time,
+                    timezone: timezone,
+                    time_on_page: time_on_page,
+                    time_on_site: time_on_site,
+                    scroll_position: scroll_position,
+                    exit_internet: exit_internet,
+                    bubble_notification_bage: bubble_notification_bage,
+                    show_notification_in_tab_tile: show_notification_in_tab_tile,
+                    bubble_background_color: bubble_background_color,
+                    bubble_icon_color: bubble_icon_color,
+                    button_color: button_color,
+                    header_background_color: header_background_color,
+                    enabled_animation: enabled_animation,
+                    scroll_position_appearance: scroll_position_appearance,
+                    button_corner_radius: button_corner_radius,
+                    custom_css: custom_css,
+                    hidden_id: hidden_id,
+                },
+            );
+
+            document.getElementById('incorme').contentWindow.location.reload();
+
+        }
+    </script>
 
 @endpush

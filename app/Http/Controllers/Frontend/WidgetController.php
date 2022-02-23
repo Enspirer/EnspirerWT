@@ -64,6 +64,16 @@ class WidgetController extends Controller
         
     }
 
+    public function user_whatsapp_chat_preview($widget_id)
+    {
+        $widgetDetaials = Widgets::where('id',$widget_id)->first();
+
+        return view('backend.widget_display.whatsapp_chat.preview',[
+            'widget_id' => $widget_id,
+            'widget_details' => $widgetDetaials
+        ]);
+    }
+
 
 
 
