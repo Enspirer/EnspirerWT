@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icons.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="https://kit.fontawesome.com/aa4e69f91b.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="{{url('css/main.css')}} ">
         <link rel="stylesheet" href="{{url('css/navbar.css')}} ">

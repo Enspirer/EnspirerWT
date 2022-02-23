@@ -18,6 +18,7 @@ use App\Http\Controllers\Frontend\MarketPlaceController;
 use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\Frontend\ResourcesController;
 use App\Http\Controllers\Frontend\ServicesController;
+use App\Http\Controllers\Frontend\WidgetController;
 
 /*
  * Frontend Controllers
@@ -71,9 +72,13 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('project_details/{id}/widget',[ChatController::class, 'widget'])->name('project.chat');
         Route::get('project_details/{id}/analytics',[AnalyticsController::class, 'analytics'])->name('project.analytics');
 
-
         Route::post('user_projects/store', [DashboardController::class, 'user_projects_store'])->name('user_projects.store');
 
+
+
+        Route::post('user_widget/store', [WidgetController::class, 'user_widget_store'])->name('user_widget.store');
+        Route::get('user_widget/delete/{id}', [WidgetController::class, 'user_widget_destroy'])->name('user_widget.destroy');
+        Route::get('user_widget/settings/{id}', [WidgetController::class, 'user_widget_settings'])->name('user_widget.settings');
 
     });
 });
