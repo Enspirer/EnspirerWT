@@ -1,4 +1,4 @@
-@extends('frontend.layouts.dashboard_app')
+@extends('frontend.layouts.widget_settings_app')
 
 @section('title', app_name() . ' | ' . __('navs.frontend.dashboard') )
 
@@ -1246,19 +1246,6 @@
 
 <script src="{{url('js/widget_settings.js')}}"></script>
 
-    <!-- Clockpicker -->
-    <script>
-        $('#startTime').clockpicker({
-            autoclose: true,
-            twelvehour: true,
-            donetext: 'Done',
-        });
-
-        $('#endTime').clockpicker({
-            autoclose: true,
-            twelvehour: true,
-            donetext: 'Done',
-        });
-    </script>
+    
 
 @endpush

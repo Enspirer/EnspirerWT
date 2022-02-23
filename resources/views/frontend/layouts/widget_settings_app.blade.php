@@ -21,8 +21,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
         <script src="https://kit.fontawesome.com/aa4e69f91b.js" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="{{url('css/main_dashboard.css')}}">
         <link rel="stylesheet" href="{{url('css/jquery-clockpicker.min.css')}}">
+        <link rel="stylesheet" href="{{url('css/widget_settings.css')}}">
 
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
@@ -58,44 +58,20 @@
         <script src="{{url('css/jquery-clockpicker.min.js')}}"></script>
 
         
-        <script>
-            const labels = [
-                'Jan',
-                'Feb',
-                'Mar',
-                'Apr',
-                'May',
-                'Jun',
-                'Jul',
-                'Sep',
-                'Oct',
-                'Nov',
-                'Dec',
-            ];
+        <!-- Clockpicker -->
+    <script>
+        $('#startTime').clockpicker({
+            autoclose: true,
+            twelvehour: true,
+            donetext: 'Done',
+        });
 
-            const data = {
-                labels: labels,
-                datasets: [{
-                    label: 'My First dataset',
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderColor: 'rgb(255, 99, 132)',
-                    data: [0, 10, 5, 2, 20, 30, 45, 22, 36, 18, 28],
-                }]
-            };
-
-            const config = {
-                type: 'line',
-                data: data,
-                options: {}
-            };
-        </script>
-
-        <script>
-            const myChart = new Chart(
-                document.getElementById('myChart'),
-                config
-            );
-        </script>
+        $('#endTime').clockpicker({
+            autoclose: true,
+            twelvehour: true,
+            donetext: 'Done',
+        });
+    </script>
 
         
         @include('includes.partials.ga')
