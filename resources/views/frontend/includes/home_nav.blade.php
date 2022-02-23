@@ -40,8 +40,8 @@
                                     {{auth()->user()->first_name}} {{auth()->user()->last_name}}
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="{{url('dashboard')}}">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>

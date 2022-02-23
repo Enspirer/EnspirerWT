@@ -49,7 +49,7 @@
                 </div>
                 <div class="tab-title">Widgets</div>
                 <div class="tab-info">
-                    <span class="strong-text">14</span>
+                    <span class="strong-text">{{count(App\Models\Widgets::where('project_id',$project_id)->where('status','Enabled')->get())}}</span>
                     Widgets
                 </div>
             </div>
