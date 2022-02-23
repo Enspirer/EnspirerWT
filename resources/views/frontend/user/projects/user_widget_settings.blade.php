@@ -45,7 +45,7 @@
             <div class="side-nav-footer">
                 <div class="devices">
                     <a href="#"><img src="{{url('images/resources/baseline-desktop_mac-24px.svg')}}" alt="devices"></a>
-                    <a href="#"><img src="{{url('images/resources/Group 125.svg" alt="devices')}}"></a>
+                    <a href="#"><img src="{{url('images/resources/Group 125.svg')}}" alt="devices"></a>
                     <a href="#"><img src="{{url('images/resources/baseline-smartphone-24px.svg')}}" alt="devices"></a>
                 </div>
             </div>
