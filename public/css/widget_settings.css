@@ -1,1922 +1,1941 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .border-right {
-  border-right: 1px solid #ddd;
+    border-right: 1px solid #ddd;
 }
 
 .border-bottom {
-  border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .red {
-  color: #dc3545 !important;
+    color: #dc3545 !important;
 }
 
 .gray {
-  color: #6c757d !important;
+    color: #6c757d !important;
 }
 
 .yellow {
-  color: #ffc107 !important;
+    color: #ffc107 !important;
 }
 
 .blue {
-  color: #0d6efd !important;
+    color: #0d6efd !important;
 }
 
 .down {
-  color: #dc3545 !important;
+    color: #dc3545 !important;
 }
 
 .up {
-  color: #0d6efd !important;
+    color: #0d6efd !important;
 }
 
 .main-window {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .main-window .side-nav-section {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  width: 265px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 265px;
 }
 
 .main-window .body-section {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  width: calc(100% - 265px);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: calc(100% - 265px);
 }
 
 .main-window .body-section .section-content {
-  position: relative;
-  background-color: #fff;
+    position: relative;
+    background-color: #fff;
 }
 
 .main-window .body-section .section-content .section-container .button-block {
-  position: fixed;
-  bottom: 4rem;
-  right: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  gap: 1rem;
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    gap: 1rem;
 }
 
 .main-window .body-section .section-content .section-container .button-block .btn {
-  width: 113px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 14px;
-  font-weight: 300;
-  background-color: #fff;
-  padding: 0;
-  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 113px;
+    height: 40px;
+    line-height: 40px;
+    font-size: .875rem;
+    font-weight: 300;
+    background-color: #fff;
+    padding: 0;
+    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main-window .body-section .section-content .section-container .button-block .btn.save {
-  background-color: #FFD94F;
+    background-color: #FFD94F;
 }
 
 .accordion .accordion-item {
-  border: none;
-  margin-bottom: 5px;
-  border-radius: .3rem !important;
-  background-color: #EBEBEB;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: .3rem !important;
+    background-color: #EBEBEB;
 }
 
 .accordion .accordion-item .accordion-header {
-  background-color: #EBEBEB;
-  border-radius: .3rem !important;
+    background-color: #EBEBEB;
+    border-radius: .3rem !important;
 }
 
 .accordion .accordion-item .accordion-header .accordion-button {
-  background-color: #EBEBEB;
-  color: #000;
-  font-weight: 300;
-  border-radius: .3rem !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding: 21px 20px !important;
-  line-height: 1;
+    background-color: #EBEBEB;
+    color: #000;
+    font-weight: 300;
+    border-radius: .3rem !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 21px 20px !important;
+    line-height: 1;
 }
 
 .accordion .accordion-item .accordion-header .accordion-button::after {
-  content: '>';
-  background-image: none;
-  font-size: 1.8rem;
-  position: absolute;
-  right: 21px;
-  top: 15px;
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
-  color: #000;
+    content: '>';
+    background-image: none;
+    font-size: 1.8rem;
+    position: absolute;
+    right: 21px;
+    top: 15px;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    color: #000;
 }
 
 .accordion .accordion-item .accordion-header .accordion-button.collapsed {
-  color: rgba(0, 0, 0, 0.44);
+    color: rgba(0, 0, 0, 0.44);
 }
 
 .accordion .accordion-item .accordion-header .accordion-button.collapsed::after {
-  content: ">";
-  background-image: none;
-  font-size: 1.8rem;
-  position: absolute;
-  right: 14px;
-  top: 20px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  color: rgba(0, 0, 0, 0.44);
+    content: ">";
+    background-image: none;
+    font-size: 1.8rem;
+    position: absolute;
+    right: 14px;
+    top: 20px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: rgba(0, 0, 0, 0.44);
 }
 
 .accordion .accordion-item .accordion-collapse .accordion-body {
-  background-color: #F5F6F8;
+    background-color: #F5F6F8;
 }
 
 .form-switch .form-check-input {
-  background-image: none;
-  position: relative;
-  -webkit-transition: none;
-  transition: none;
+    background-image: none;
+    position: relative;
+    -webkit-transition: none;
+    transition: none;
 }
 
 .form-switch .form-check-input:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .form-switch .form-check-input:focus {
-  background-image: none;
-  border-color: rgba(0, 0, 0, 0.25);
+    background-image: none;
+    border-color: rgba(0, 0, 0, 0.25);
 }
 
 .form-switch .form-check-input::after {
-  content: '';
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: none;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 50%;
-  left: -10px;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 }
 
 .form-switch .form-check-input:checked {
-  background-image: none;
-  background-color: #44BC8E;
-  border-color: #44BC8E;
+    background-image: none;
+    background-color: #44BC8E;
+    border-color: #44BC8E;
 }
 
 .form-switch .form-check-input:checked::after {
-  left: unset;
-  right: -10px;
+    left: unset;
+    right: -10px;
 }
 
 #sideNav.side-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
-  background-color: #0A586C;
-  z-index: 99999;
-  position: fixed;
-  width: 265px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #0A586C;
+    z-index: 99999;
+    position: fixed;
+    width: 265px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 #sideNav.side-nav .side-nav-brands {
-  position: relative;
-  text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 #sideNav.side-nav .side-nav-brands .brand-image {
-  display: block;
-  margin-left: auto;
+    display: block;
+    margin-left: auto;
 }
 
 #sideNav.side-nav .side-nav-brands .title {
-  font-size: 24px;
-  font-weight: 500;
-  color: #fff;
-  display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    display: block;
 }
 
 #sideNav.side-nav .side-nav-brands .sub-title {
-  font-weight: 300;
-  color: #fff;
-  display: block;
+    font-weight: 300;
+    color: #fff;
+    display: block;
 }
 
 #sideNav.side-nav .side-navs {
-  margin: 3rem 0;
+    margin: 3rem 0;
 }
 
 #sideNav.side-nav .side-navs .navbar-nav {
-  gap: 1.5rem;
+    gap: 1.5rem;
 }
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link {
-  color: #92B4BD;
-  position: relative;
-  white-space: nowrap;
-  padding-left: 2rem;
+    color: #92B4BD;
+    position: relative;
+    white-space: nowrap;
+    padding-left: 2rem;
 }
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link::after {
-  content: '\003E';
-  position: absolute;
-  right: 2rem;
-  font-size: 1.5rem;
-  top: 0;
-  color: #92B4BD;
+    content: '\003E';
+    position: absolute;
+    right: 2rem;
+    font-size: 1.5rem;
+    top: 0;
+    color: #92B4BD;
 }
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link.active {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link.active::before {
-  content: '';
-  height: 50px;
-  width: .4rem;
-  border-bottom-right-radius: 1rem;
-  border-top-right-radius: 1rem;
-  background-color: #44BC8E;
-  position: absolute;
-  top: -5px;
-  left: 0;
+    content: '';
+    height: 50px;
+    width: .4rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: #44BC8E;
+    position: absolute;
+    top: -5px;
+    left: 0;
 }
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link.active::after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  color: #fff;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: #fff;
 }
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link:hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .tool-tip {
-  display: none;
+    display: none;
 }
 
 #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .bi {
-  font-size: 2rem;
-  position: relative;
-  top: 5px;
-  margin-right: 1rem;
-  margin-left: 0.5rem;
+    font-size: 2rem;
+    position: relative;
+    top: 5px;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
 }
 
 #sideNav.side-nav .side-nav-footer {
-  margin-top: auto;
-  margin-bottom: 4rem;
+    margin-top: auto;
+    margin-bottom: 4rem;
 }
 
 #sideNav.side-nav .side-nav-footer .devices {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
 }
 
 #sideNavInner {
-  margin-left: 265px;
+    margin-left: 265px;
 }
 
 #sideNavInner .inner-wrapper {
-  background-color: #F5F6F8;
-  width: 440px;
-  min-height: 100vh;
-  position: absolute;
-  z-index: 99998;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+    background-color: #F5F6F8;
+    width: 440px;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 99998;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 #sideNavInner .inner-wrapper .nav-toggle {
-  background-color: #F5F6F8;
-  color: #000;
-  width: 35px;
-  height: 65px;
-  display: block;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  right: -34px;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+    background-color: #F5F6F8;
+    color: #000;
+    width: 35px;
+    height: 65px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: -34px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 }
 
 #sideNavInner .inner-wrapper .nav-toggle .toggle-icon {
-  font-size: 40px;
-  text-decoration: none;
-  line-height: 65px;
-  color: #000;
-  position: absolute;
-  top: -2px;
-  right: 5px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+    font-size: 2.5rem;
+    text-decoration: none;
+    line-height: 65px;
+    color: #000;
+    position: absolute;
+    top: -2px;
+    right: 5px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 #sideNavInner .footer {
-  padding: 4rem 2rem 0;
-  margin-top: auto;
-  margin-bottom: 4rem;
+    padding: 4rem 2rem 0;
+    margin-top: auto;
+    margin-bottom: 4rem;
 }
 
 #sideNavInner .footer .footer-text {
-  font-size: 13px;
-  font-weight: 300;
-  margin-bottom: 10px;
-  display: block;
-  text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
 }
 
 #sideNavInner .footer .btn-whatsapp {
-  color: #fff;
-  font-size: 17px;
-  font-weight: 500;
-  background-color: #44BC8E;
-  height: 60px;
-  width: 100%;
-  line-height: 60px;
-  text-align: center;
-  border-radius: 0.5rem;
-  border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #44BC8E;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: none;
 }
 
 #sideNavInner #template-block .inner-wrapper .header {
-  padding: 3rem 2rem;
+    padding: 3rem 2rem;
 }
 
 #sideNavInner #template-block .inner-wrapper .header .title {
-  font-size: 18px;
-  font-weight: 300;
+    font-size: 1.125rem;
+    font-weight: 300;
 }
 
 #sideNavInner #template-block .inner-wrapper .body {
-  padding: 0 2rem;
+    padding: 0 2rem;
 }
 
 #sideNavInner #template-block .inner-wrapper .body .templates .temps {
-  background-color: #fff;
-  border: 2px solid #fff;
-  text-align: center;
-  padding: 1rem 0;
-  position: relative;
-  overflow: hidden;
+    background-color: #fff;
+    border: 2px solid #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 #sideNavInner #template-block .inner-wrapper .body .templates .temps.active {
-  border: 2px solid #18C655;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #18C655;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 #sideNavInner #template-block .inner-wrapper .body .templates .temps.active .checked-sign {
-  width: 45px;
-  height: 45px;
-  background-color: #18C655;
-  color: #fff;
-  position: absolute;
-  top: -24px;
-  left: -24px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  display: block;
+    width: 45px;
+    height: 45px;
+    background-color: #18C655;
+    color: #fff;
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
 }
 
 #sideNavInner #template-block .inner-wrapper .body .templates .temps.active .checked-sign .bi {
-  position: absolute;
-  font-size: 18px;
-  top: 8px;
-  left: 28px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+    position: absolute;
+    font-size: 1.125rem;
+    top: 8px;
+    left: 28px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 #sideNavInner #template-block .inner-wrapper .body .templates .temps .checked-sign {
-  display: none;
+    display: none;
 }
 
 #sideNavInner #content-block {
-  display: none;
+    display: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .header {
-  padding: 60px 40px 40px;
+    padding: 60px 40px 40px;
 }
 
 #sideNavInner #content-block .inner-wrapper .header .title {
-  font-size: 29px;
-  margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
 }
 
 #sideNavInner #content-block .inner-wrapper .header .whatsapp-no-input .form-control {
-  height: 58px;
-  background-color: #EBEBEB;
-  border: none;
-  padding: 0 1rem;
-  line-height: 58px;
-  font-weight: 300;
-  margin-bottom: 1rem;
+    height: 58px;
+    background-color: #EBEBEB;
+    border: none;
+    padding: 0 1rem;
+    line-height: 58px;
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
 
 #sideNavInner #content-block .inner-wrapper .header .whatsapp-no-input .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .header .whatsapp-no-input .form-label {
-  font-size: 11px;
-  font-weight: 300;
+    font-size: .68rem;
+    font-weight: 300;
 }
 
 #sideNavInner #content-block .inner-wrapper .body {
-  padding: 0 40px;
+    padding: 0 40px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatBubbleCollapse .accordion-body {
-  padding: 20px 40px 30px;
+    padding: 20px 40px 30px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatBubbleCollapse .accordion-body .title {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 20px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatBubbleCollapse .accordion-body .bubble-icone {
-  display: block;
-  text-align: center;
-  height: 64px;
-  width: 64px;
-  background-color: #fff;
-  line-height: 64px;
-  margin: 0 auto;
-  border: 1px solid #fff;
+    display: block;
+    text-align: center;
+    height: 64px;
+    width: 64px;
+    background-color: #fff;
+    line-height: 64px;
+    margin: 0 auto;
+    border: 1px solid #fff;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatBubbleCollapse .accordion-body .bubble-icone.active {
-  border: 1px solid #44BC8E;
+    border: 1px solid #44BC8E;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body {
-  padding: 20px 0 30px;
+    padding: 20px 0 30px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block {
-  -webkit-box-shadow: 0 5px 10px rga(0, 0, 0, 0.2);
-          box-shadow: 0 5px 10px rga(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 5px 10px rga(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rga(0, 0, 0, 0.2);
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .header {
-  padding: 18px 20px;
-  background-color: #0A586C;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+    padding: 18px 20px;
+    background-color: #0A586C;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .header .title {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1;
-  margin-bottom: 0;
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 0;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .header .edit-icons {
-  line-height: 0;
+    line-height: 0;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .header .edit-icons a {
-  text-decoration: none;
-  font-size: 0;
-  margin-left: 15px;
+    text-decoration: none;
+    font-size: 0;
+    margin-left: 15px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .body {
-  background-color: #fff;
-  padding: 15px 25px;
+    background-color: #fff;
+    padding: 15px 25px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .body .file-uploader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 150px;
-  border: 1px dashed #0A586C;
-  border-radius: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 150px;
+    border: 1px dashed #0A586C;
+    border-radius: 16px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .body .file-uploader .title {
-  font-size: 13px;
-  color: #0A586C;
+    font-size: .8rem;
+    color: #0A586C;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .body .file-uploader .title span {
-  font-size: 13px;
-  color: #4CAF50;
+    font-size: .8rem;
+    color: #4CAF50;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .body .file-uploader .sub-title {
-  font-size: 10px;
-  color: #0A586C;
-  font-weight: 300;
+    font-size: .625rem;
+    color: #0A586C;
+    font-weight: 300;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .footer {
-  padding: 0 10px 10px 10px;
-  background-color: #fff;
-  margin-bottom: 20px;
+    padding: 0 10px 10px 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .footer .form-control {
-  background-color: #EBEBEB;
-  border: none;
-  color: rgba(0, 0, 0, 0.42);
-  height: 46px;
-  line-height: 46px;
-  border-radius: 3px;
-  padding: 0 17px;
-  font-size: 12px;
-  font-weight: 300;
+    background-color: #EBEBEB;
+    border: none;
+    color: rgba(0, 0, 0, 0.42);
+    height: 46px;
+    line-height: 46px;
+    border-radius: 3px;
+    padding: 0 17px;
+    font-size: 0.75rem;
+    font-weight: 300;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .footer .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block {
-  -webkit-box-shadow: 0 5px 10px rga(0, 0, 0, 0.2);
-          box-shadow: 0 5px 10px rga(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 5px 10px rga(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rga(0, 0, 0, 0.2);
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .header {
-  padding: 18px 20px;
-  background-color: #0A586C;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+    padding: 18px 20px;
+    background-color: #0A586C;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .header .title {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1;
-  margin-bottom: 0;
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 0;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .header .edit-icons {
-  line-height: 0;
+    line-height: 0;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .header .edit-icons a {
-  text-decoration: none;
-  font-size: 0;
-  margin-left: 15px;
+    text-decoration: none;
+    font-size: 0;
+    margin-left: 15px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body {
-  padding: 15px;
-  background-color: #fff;
+    padding: 15px;
+    background-color: #fff;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset {
-  padding: 10px;
+    padding: 10px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-input {
-  border: 1px solid #bbb;
+    border: 1px solid #bbb;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-input:checked {
-  background-color: #0A586C;
-  border-color: #0A586C;
+    background-color: #0A586C;
+    border-color: #0A586C;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-label {
-  font-size: 13px;
-  color: #989898;
+    font-size: .8rem;
+    color: #989898;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-label:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-#sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-input:checked + .form-check-label {
-  color: #0a586c;
+#sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-input:checked+.form-check-label {
+    color: #0a586c;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body .custom-caption-block {
-  padding: 0 10px;
-  background-color: #fff;
-  display: none;
+    padding: 0 10px;
+    background-color: #fff;
+    display: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body .custom-caption-block .form-control {
-  background-color: #EBEBEB;
-  border: none;
-  color: rgba(0, 0, 0, 0.42);
-  height: 90px;
-  border-radius: 3px;
-  padding: 17px;
-  font-size: 12px;
-  font-weight: 300;
-  resize: none;
+    background-color: #EBEBEB;
+    border: none;
+    color: rgba(0, 0, 0, 0.42);
+    height: 90px;
+    border-radius: 3px;
+    padding: 17px;
+    font-size: .75rem;
+    font-weight: 300;
+    resize: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body .custom-caption-block .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #welcomeMessageCollapse .accordion-body {
-  padding: 20px 0 30px;
+    padding: 20px 0 30px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #welcomeMessageCollapse .accordion-body .form-control {
-  background-color: #EBEBEB;
-  border: none;
-  color: rgba(0, 0, 0, 0.42);
-  height: 150px;
-  border-radius: 3px;
-  padding: 17px;
-  font-size: 12px;
-  font-weight: 300;
-  resize: none;
+    background-color: #EBEBEB;
+    border: none;
+    color: rgba(0, 0, 0, 0.42);
+    height: 150px;
+    border-radius: 3px;
+    padding: 17px;
+    font-size: .75rem;
+    font-weight: 300;
+    resize: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #welcomeMessageCollapse .accordion-body .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatButtonCollapse .accordion-body {
-  padding: 20px 0 30px;
+    padding: 20px 0 30px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatButtonCollapse .accordion-body .chat-button-block .form-floating {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatButtonCollapse .accordion-body .chat-button-block .form-floating .form-control {
-  background-color: #EBEBEB;
-  border: none;
-  color: black;
-  height: 56px;
-  line-height: 1.2;
-  border-radius: 3px;
-  padding: 20px 17px 10px;
-  font-size: 12px;
-  font-weight: 300;
-  resize: none;
+    background-color: #EBEBEB;
+    border: none;
+    color: black;
+    height: 56px;
+    line-height: 1.2;
+    border-radius: 3px;
+    padding: 20px 17px 10px;
+    font-size: .75rem;
+    font-weight: 300;
+    resize: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatButtonCollapse .accordion-body .chat-button-block .form-floating .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatButtonCollapse .accordion-body .chat-button-block .form-floating label {
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.42);
-  padding: 10px 17px;
-  top: 6px;
-  opacity: 1;
+    font-size: .875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.42);
+    padding: 10px 17px;
+    top: 6px;
+    opacity: 1;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatButtonCollapse .accordion-body .chat-button-block .form-switch {
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 17px;
-  height: 56px;
-  background-color: #EBEBEB;
-  border-radius: 3px;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 17px;
+    height: 56px;
+    background-color: #EBEBEB;
+    border-radius: 3px;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatButtonCollapse .accordion-body .chat-button-block .form-switch .form-check-label {
-  font-size: 12px;
-  font-weight: 300;
+    font-size: .75rem;
+    font-weight: 300;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatButtonCollapse .accordion-body .chat-button-block .form-switch .form-check-input {
-  margin: 0;
+    margin: 0;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatButtonCollapse .accordion-body .chat-button-block .form-switch .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block {
-  display: none;
+    display: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .header {
-  padding: 60px 40px 40px;
+    padding: 60px 40px 40px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .header .title {
-  font-size: 29px;
+    font-size: 1.8rem;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body {
-  padding: 0 40px;
+    padding: 0 40px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset {
-  padding: 10px;
+    padding: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check .form-check-input {
-  background-color: #F5F6F8;
-  border: 1px solid #5D5E5E;
-  margin-right: 15px;
+    background-color: #F5F6F8;
+    border: 1px solid #5D5E5E;
+    margin-right: 15px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-  background-color: #44BC8E;
-  border-color: #44BC8E;
+    background-color: #44BC8E;
+    border-color: #44BC8E;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check .form-check-label {
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+    font-size: .875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check .form-check-label:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check .form-check-input:checked + .form-check-label {
-  color: #000;
+#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check .form-check-input:checked+.form-check-label {
+    color: #000;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body .title {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 10px;
+    font-size: .875rem;
+    font-weight: 300;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset {
-  padding: 10px;
+    padding: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-input {
-  border: 1px solid #5D5E5E;
-  margin-right: 15px;
+    border: 1px solid #5D5E5E;
+    margin-right: 15px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-  background-color: #44BC8E;
-  border-color: #44BC8E;
+    background-color: #44BC8E;
+    border-color: #44BC8E;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    font-size: .875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-label span {
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+    font-size: .875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-label a {
-  display: none;
-  text-decoration: none;
-  color: #fff;
-  font-size: 9px;
-  line-height: 25px;
-  font-weight: 300;
-  background-color: #44BC8E;
-  width: 68px;
-  height: 25px;
-  text-align: center;
+    display: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: .56rem;
+    line-height: 25px;
+    font-weight: 300;
+    background-color: #44BC8E;
+    width: 68px;
+    height: 25px;
+    text-align: center;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-label:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-label.active a {
-  display: block;
+    display: block;
 }
 
-#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked + .form-check-label {
-  color: #000;
+#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked+.form-check-label {
+    color: #000;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body .tips {
-  font-size: 11px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.42);
-  margin: 0;
+    font-size: .68rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.42);
+    margin: 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body .title {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 10px;
+    font-size: .875rem;
+    font-weight: 300;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset {
-  padding: 10px;
+    padding: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check .form-check-input {
-  background-color: #F5F6F8;
-  border: 1px solid #5D5E5E;
-  margin-right: 15px;
+    background-color: #F5F6F8;
+    border: 1px solid #5D5E5E;
+    margin-right: 15px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-  background-color: #44BC8E;
-  border-color: #44BC8E;
+    background-color: #44BC8E;
+    border-color: #44BC8E;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check .form-check-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    font-size: .875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check .form-check-label:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked + .form-check-label {
-  color: #000;
+#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked+.form-check-label {
+    color: #000;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body .title {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 10px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset {
-  padding: 10px;
+    padding: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-input {
-  border: 1px solid #5D5E5E;
-  margin-right: 15px;
+    border: 1px solid #5D5E5E;
+    margin-right: 15px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-  background-color: #44BC8E;
-  border-color: #44BC8E;
+    background-color: #44BC8E;
+    border-color: #44BC8E;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-label span {
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-label a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  font-size: 9px;
-  line-height: 25px;
-  font-weight: 300;
-  background-color: #44BC8E;
-  width: 68px;
-  height: 25px;
-  text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: .56rem;
+    line-height: 25px;
+    font-weight: 300;
+    background-color: #44BC8E;
+    width: 68px;
+    height: 25px;
+    text-align: center;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-label:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked + .form-check-label {
-  color: #000;
+#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked+.form-check-label {
+    color: #000;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body .tips {
-  font-size: 11px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.42);
-  margin: 0;
+    font-size: .68rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.42);
+    margin: 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .title {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 10px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset {
-  padding: 10px;
+    padding: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-input {
-  border: 1px solid #5D5E5E;
-  margin-right: 15px;
+    border: 1px solid #5D5E5E;
+    margin-right: 15px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-  background-color: #44BC8E;
-  border-color: #44BC8E;
+    background-color: #44BC8E;
+    border-color: #44BC8E;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-label span {
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-label a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  font-size: 9px;
-  line-height: 25px;
-  font-weight: 300;
-  background-color: #44BC8E;
-  width: 68px;
-  height: 25px;
-  text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: .56rem;
+    line-height: 25px;
+    font-weight: 300;
+    background-color: #44BC8E;
+    width: 68px;
+    height: 25px;
+    text-align: center;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-label:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked + .form-check-label {
-  color: #000;
+#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked+.form-check-label {
+    color: #000;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .form-switch {
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .form-switch .form-check-label {
-  font-size: 14px;
-  font-weight: 300;
+    font-size: 0.875rem;
+    font-weight: 300;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .form-switch .form-check-input {
-  margin: 0;
+    margin: 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .form-switch .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block {
-  padding: 20px 10px 0;
+    padding: 20px 10px 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block .time-blocks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block .time-blocks .form-label {
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 0;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block .time-blocks .form-control {
-  color: #44BC8E;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 0;
-  width: 70px;
-  border: none;
-  line-height: 1.2;
-  text-align: right;
-  background-color: transparent;
+    color: #44BC8E;
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding: 0;
+    width: 70px;
+    border: none;
+    line-height: 1.2;
+    text-align: right;
+    background-color: transparent;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block .time-blocks .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block .time-blocks .form-select {
-  color: #44BC8E;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 0;
-  width: 84px;
-  border: none;
-  line-height: 1.2;
-  background-color: transparent;
-  background-image: none;
+    color: #44BC8E;
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding: 0;
+    width: 84px;
+    border: none;
+    line-height: 1.2;
+    background-color: transparent;
+    background-image: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block .time-blocks .form-select:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .specific-time-block {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .specific-time-block .time-blocks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .specific-time-block .time-blocks .form-label {
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 0;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .specific-time-block .time-blocks .form-control {
-  color: #44BC8E;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 0;
-  width: 70px;
-  border: none;
-  line-height: 1.2;
-  text-align: right;
-  background-color: transparent;
+    color: #44BC8E;
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding: 0;
+    width: 70px;
+    border: none;
+    line-height: 1.2;
+    text-align: right;
+    background-color: transparent;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .specific-time-block .time-blocks .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .specific-time-block .time-blocks .form-select {
-  color: #44BC8E;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 0;
-  width: 78px;
-  border: none;
-  line-height: 1.2;
-  background-color: transparent;
-  background-image: none;
+    color: #44BC8E;
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding: 0;
+    width: 78px;
+    border: none;
+    line-height: 1.2;
+    background-color: transparent;
+    background-image: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .specific-time-block .time-blocks .form-select:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .form-switch {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 15px;
-  padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .form-switch .form-check-label {
-  font-size: 14px;
-  font-weight: 300;
+    font-size: 0.875rem;
+    font-weight: 300;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .form-switch .form-check-input {
-  margin: 0;
+    margin: 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .form-switch .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .tips {
-  font-size: 11px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.42);
-  margin: 0;
+    font-size: .68rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.42);
+    margin: 0;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body .title {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 10px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset {
-  padding: 10px;
+    padding: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check .form-check-input {
-  border: 1px solid #5D5E5E;
-  margin-right: 15px;
+    border: 1px solid #5D5E5E;
+    margin-right: 15px;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-  background-color: #44BC8E;
-  border-color: #44BC8E;
+    background-color: #44BC8E;
+    border-color: #44BC8E;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check .form-check-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check .form-check-label:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check .form-check-input:checked + .form-check-label {
-  color: #000;
+#sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check .form-check-input:checked+.form-check-label {
+    color: #000;
 }
 
 #sideNavInner #appearance-block {
-  display: none;
+    display: none;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .header {
-  padding: 60px 40px 40px;
+    padding: 60px 40px 40px;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .header .title {
-  font-size: 29px;
+    font-size: 1.8rem;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body {
-  padding: 0 40px;
+    padding: 0 40px;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #colorsCollapse .accordion-body fieldset .form-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #colorsCollapse .accordion-body fieldset .form-check .form-check-label {
-  font-size: 14px;
-  font-weight: 300;
-  color: #000;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #000;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #colorsCollapse .accordion-body fieldset .form-check .form-check-label:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #colorsCollapse .accordion-body fieldset .form-check .form-check-input {
-  -webkit-appearance: none;
-  margin: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: none;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: none;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #colorsCollapse .accordion-body fieldset .form-check .form-check-input::-webkit-color-swatch {
-  border-radius: 50%;
-  border: none;
+    border-radius: 50%;
+    border: none;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #colorsCollapse .accordion-body fieldset .form-check .form-check-input::-webkit-color-swatch-wrapper {
-  border-radius: 50%;
-  border: none;
+    border-radius: 50%;
+    border: none;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #colorsCollapse .accordion-body fieldset .form-check .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #colorsCollapse .accordion-body fieldset .form-check .form-check-input:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #bubbleAnimationCollapse .accordion-body .form-switch {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 15px;
-  padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #bubbleAnimationCollapse .accordion-body .form-switch .form-check-label {
-  font-size: 14px;
-  font-weight: 300;
+    font-size: 0.875rem;
+    font-weight: 300;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #bubbleAnimationCollapse .accordion-body .form-switch .form-check-input {
-  margin: 0;
+    margin: 0;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #bubbleAnimationCollapse .accordion-body .form-switch .form-check-input:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #bubbleAnimationCollapse .accordion-body .sroll-position {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #bubbleAnimationCollapse .accordion-body .sroll-position .form-label {
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 0;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 0;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #bubbleAnimationCollapse .accordion-body .sroll-position .form-control {
-  color: #44BC8E;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 0;
-  width: 70px;
-  border: none;
-  line-height: 1.2;
-  text-align: right;
-  background-color: transparent;
+    color: #44BC8E;
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding: 0;
+    width: 70px;
+    border: none;
+    line-height: 1.2;
+    text-align: right;
+    background-color: transparent;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #bubbleAnimationCollapse .accordion-body .sroll-position .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .title {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 15px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 15px;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius label span {
-  font-size: 14px;
-  font-weight: 300;
+    font-size: 0.875rem;
+    font-weight: 300;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius #chatBtnRadius {
-  -webkit-appearance: none;
-  outline: none;
-  width: 100%;
-  height: 9px;
-  border-radius: 10px;
+    -webkit-appearance: none;
+    outline: none;
+    width: 100%;
+    height: 9px;
+    border-radius: 10px;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius #chatBtnRadius:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius #chatBtnRadius::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 3px soldi rgba(0, 0, 0, 0.2);
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px soldi rgba(0, 0, 0, 0.2);
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius .range {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius .range span {
-  font-size: 14px;
-  font-weight: 300;
+    font-size: 0.875rem;
+    font-weight: 300;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #customCssCollapse .accordion-body textarea {
-  resize: none;
-  height: 200px;
-  border: none;
-  border-radius: 3px;
-  background-color: #EBEBEB;
-  font-size: 14px;
-  padding: 15px;
+    resize: none;
+    height: 200px;
+    border: none;
+    border-radius: 3px;
+    background-color: #EBEBEB;
+    font-size: 0.875rem;
+    padding: 15px;
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #customCssCollapse .accordion-body textarea:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #sideNavInner.active .inner-wrapper {
-  margin-left: -440px;
+    margin-left: -440px;
 }
 
 #sideNavInner.active .inner-wrapper .nav-toggle {
-  background-color: #0A586C;
+    background-color: #0A586C;
 }
 
 #sideNavInner.active .inner-wrapper .nav-toggle .toggle-icon {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  right: 8px;
-  color: #fff;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    right: 8px;
+    color: #fff;
 }
 
 .body-section.active {
-  width: calc(100% - 90px) !important;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+    width: calc(100% - 90px) !important;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .side-nav-section.active {
-  width: 90px !important;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+    width: 90px !important;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .side-nav-section.active #sideNav.side-nav {
-  width: 90px !important;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+    width: 90px !important;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-nav-brands .side-nav-toggle .toggle-btn {
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  right: unset;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    right: unset;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-nav-brands .full-logo {
-  opacity: 0;
-  width: 0;
+    opacity: 0;
+    width: 0;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-nav-brands .small-logo {
-  display: block;
-  width: 60px;
+    display: block;
+    width: 60px;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-navs .navbar-nav {
-  margin-left: 1.5rem;
+    margin-left: 1.5rem;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-navs .navbar-nav .nav-item {
-  position: relative;
+    position: relative;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link:hover .tool-tip {
-  opacity: 1;
-  left: 3.5rem;
+    opacity: 1;
+    left: 3.5rem;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link.active::before {
-  left: -1.5rem;
+    left: -1.5rem;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .text {
-  display: none;
+    display: none;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .tool-tip {
-  position: absolute;
-  width: 120px;
-  height: 35px;
-  line-height: 35px;
-  background-color: #0d6efd;
-  color: #fff;
-  font-weight: 500;
-  padding-left: 1rem;
-  border-radius: 5px;
-  top: 2rem;
-  left: 4.5rem;
-  opacity: 0;
-  display: block;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #0d6efd;
+    color: #fff;
+    font-weight: 500;
+    padding-left: 1rem;
+    border-radius: 5px;
+    top: 2rem;
+    left: 4.5rem;
+    opacity: 0;
+    display: block;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .bi {
-  margin-right: 2rem;
+    margin-right: 2rem;
 }
 
 .side-nav-section.active #sideNav.side-nav .side-nav-footer .copyright,
 .side-nav-section.active #sideNav.side-nav .side-nav-footer .theme {
-  display: none;
+    display: none;
 }
 
 #navBar.nav-bar {
-  width: 100%;
-  -webkit-box-shadow: 0 0 5px -1px #333;
-          box-shadow: 0 0 5px -1px #333;
-  position: relative;
-  z-index: 9999;
+    width: 100%;
+    -webkit-box-shadow: 0 0 5px -1px #333;
+    box-shadow: 0 0 5px -1px #333;
+    position: relative;
+    z-index: 9999;
 }
 
 #navBar.nav-bar .property-block .navbar-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #navBar.nav-bar .property-block .navbar-nav .nav-item .nav-link {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 #navBar.nav-bar .property-block .navbar-nav .nav-item .nav-link .dropdown-menu {
-  width: 100%;
+    width: 100%;
 }
 
 #navBar.nav-bar .property-block .navbar-nav .nav-item .add-btn {
-  font-size: 2.5rem;
-  line-height: 0;
+    font-size: 2.5rem;
+    line-height: 0;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell {
-  color: #333;
-  font-size: 2rem;
-  position: relative;
+    color: #333;
+    font-size: 2rem;
+    position: relative;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #dc3545;
-  position: absolute;
-  top: 15px;
-  right: 15px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dc3545;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link {
-  padding: .5rem 1rem;
+    padding: .5rem 1rem;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link .profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link .profile .image {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link .profile .image img {
-  width: 100%;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px -1px #333;
-          box-shadow: 0 0 5px -1px #333;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px -1px #333;
+    box-shadow: 0 0 5px -1px #333;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link .profile .name {
-  color: #999;
-  font-weight: 500;
+    color: #999;
+    font-weight: 500;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link .profile .dropdown-icon i {
-  color: #333;
+    color: #333;
 }
 
 .property {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .property .image {
-  width: 45px;
-  height: 45px;
+    width: 45px;
+    height: 45px;
 }
 
 .property .image img {
-  width: 100%;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+    width: 100%;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .property .content .site-name {
-  color: #333;
-  margin: 0;
-  line-height: 1;
+    color: #333;
+    margin: 0;
+    line-height: 1;
 }
 
 .property .content .site-url {
-  color: #999;
-  font-size: 0.8rem;
-  font-weight: 600;
+    color: #999;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 .property .dropdown-icon i {
-  color: #333;
+    color: #333;
+}
+
+@media screen and (max-width: 1366px) {
+    * {
+        font-size: 14px;
+    }
+
+    #sideNavInner .inner-section .inner-wrapper {
+        width: 350px;
+    }
+
 }
 
 @media screen and (max-width: 991px) {
-  #navBar.nav-bar .property-block .nav-link {
-    padding: 1rem !important;
-  }
+    #navBar.nav-bar .property-block .nav-link {
+        padding: 1rem !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .main-window .body-section {
-    width: 100% !important;
-  }
-  .main-window .side-nav-section.mobile {
-    width: 0 !important;
-  }
-  .main-window .side-nav-section.mobile.active #sideNav.side-nav {
-    height: 143px !important;
-    -webkit-box-pack: center !important;
+    .main-window .body-section {
+        width: 100% !important;
+    }
+
+    .main-window .side-nav-section.mobile {
+        width: 0 !important;
+    }
+
+    .main-window .side-nav-section.mobile.active #sideNav.side-nav {
+        height: 143px !important;
+        -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
-            justify-content: center !important;
-  }
-  .main-window .side-nav-section.mobile.active #sideNav.side-nav .side-nav-brands .small-logo {
-    display: none !important;
-  }
-  .main-window .side-nav-section.mobile.active #sideNav.side-nav .side-navs {
-    display: none !important;
-  }
-  .main-window .side-nav-section.mobile.active #sideNav.side-nav .side-nav-footer {
-    display: none !important;
-  }
-  .main-window .side-nav-section.mobile #sideNav.side-nav {
-    position: absolute !important;
-    height: auto !important;
-  }
+        justify-content: center !important;
+    }
+
+    .main-window .side-nav-section.mobile.active #sideNav.side-nav .side-nav-brands .small-logo {
+        display: none !important;
+    }
+
+    .main-window .side-nav-section.mobile.active #sideNav.side-nav .side-navs {
+        display: none !important;
+    }
+
+    .main-window .side-nav-section.mobile.active #sideNav.side-nav .side-nav-footer {
+        display: none !important;
+    }
+
+    .main-window .side-nav-section.mobile #sideNav.side-nav {
+        position: absolute !important;
+        height: auto !important;
+    }
 }
+
 /*# sourceMappingURL=main.css.map */

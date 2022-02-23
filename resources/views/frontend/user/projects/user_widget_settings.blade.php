@@ -162,7 +162,7 @@
                                         aria-labelledby="chatBubble" data-bs-parent="#whatsappContentAccordion">
                                         <div class="accordion-body">
                                             <div class="title">Bubble Icone</div>
-                                            <div class="row gx-0 gy-4 row-cols-3">
+                                            <div class="row gx-1 gy-4 row-cols-3">
                                                 <div class="col">
                                                     <a href="#" class="bubble-icone active">
                                                         <img src="{{url('images/resources/baseline-chat-24px.svg')}}"
