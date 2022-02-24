@@ -22,6 +22,7 @@
         <script src="https://kit.fontawesome.com/aa4e69f91b.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="{{url('css/main_dashboard.css')}}">
+        <link rel="stylesheet" href="{{url('css/dashboard_navbar.css')}}">
         <link rel="stylesheet" href="{{url('css/jquery-clockpicker.min.css')}}">
 
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
