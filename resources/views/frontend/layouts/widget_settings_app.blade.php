@@ -23,7 +23,6 @@
 
         <link rel="stylesheet" href="{{url('css/jquery-clockpicker.min.css')}}">
         <link rel="stylesheet" href="{{url('css/widget_settings.css')}}">
-        <link rel="stylesheet" href="{{url('css/dashboard_navbar.css')}}">
 
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
