@@ -167,70 +167,64 @@
                                             <div class="title">Bubble Icone</div>
                                             <div class="row gx-1 gy-4 row-cols-3">
                                                 <div class="col">
-                                                    <a href="#" onClick="myFunction()" class="bubble-icone active">
-                                                        <img onchange="myFunction()" id="baseline-chat" value="baseline-chat" src="{{url('images/resources/baseline-chat-24px.svg')}}"
+                                                    <a href="#" onClick="myFunction('baseline_chat')" class="bubble-icone active">
+                                                        <img onchange="myFunction('baseline_chat')" id="baseline_chat" src="{{url('images/resources/baseline-chat-24px.svg')}}" alt="bubble-icone">
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" onClick="myFunction('baseline_email')" class="bubble-icone">
+                                                        <img onchange="myFunction('baseline_email')" id="baseline_email" src="{{url('images/resources/baseline-email-24px.svg')}}" alt="bubble-icone">
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" onClick="myFunction('baseline_forum')" class="bubble-icone">
+                                                        <img onchange="myFunction('baseline_forum')" id="baseline_forum" src="{{url('images/resources/baseline-forum-24px.svg')}}" alt="bubble-icone">
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" onClick="myFunction('chat')" class="bubble-icone">
+                                                        <img onchange="myFunction('chat')" id="chat" src="{{url('images/resources/chat (4).svg')}}" alt="bubble-icone">
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" onClick="myFunction('whatsapp')" class="bubble-icone">
+                                                        <img onchange="myFunction('whatsapp')" id="whatsapp" src="{{url('images/resources/whatsapp-1.svg')}}" alt="bubble-icone">
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" onClick="myFunction('two_chat')" class="bubble-icone">
+                                                        <img onchange="myFunction('two_chat')" id="two_chat" src="{{url('images/resources/chat (3).svg')}}" alt="bubble-icone">
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" onClick="myFunction('baseline_near_me')" class="bubble-icone">
+                                                        <img onchange="myFunction('baseline_near_me')" id="baseline_near_me" src="{{url('images/resources/baseline-near_me-24px.svg')}}" alt="bubble-icone">
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" onClick="myFunction('paper_plane')" class="bubble-icone">
+                                                        <img onchange="myFunction('paper_plane')" id="paper_plane" src="{{url('images/resources/paper-plane.svg')}}" alt="bubble-icone">
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" onClick="myFunction('send_message')" class="bubble-icone">
+                                                        <img onchange="myFunction('send_message')" id="send_message" src="{{url('images/resources/send-message.svg')}}"
                                                             alt="bubble-icone">
                                                     </a>
                                                 </div>
                                                 <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img onClick="myFunction()" id="baseline-email" value="baseline-email" src="{{url('images/resources/baseline-email-24px.svg')}}"
-                                                            alt="bubble-icone">
+                                                    <a href="#" onClick="myFunction('direct_message')" class="bubble-icone">
+                                                        <img onchange="myFunction('direct_message')" id="direct_message" src="{{url('images/resources/dm.svg')}}" alt="bubble-icone">
                                                     </a>
                                                 </div>
                                                 <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img onClick="myFunction()" id="baseline-forum" value="baseline-forum" src="{{url('images/resources/baseline-forum-24px.svg')}}"
-                                                            alt="bubble-icone">
+                                                    <a href="#" onClick="myFunction('comment')" class="bubble-icone">
+                                                        <img onchange="myFunction('comment')" id="comment" src="{{url('images/resources/comment.svg')}}" alt="bubble-icone">
                                                     </a>
                                                 </div>
                                                 <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/chat (4).svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/whatsapp-1.svg')}}"
-                                                            alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/chat (3).svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/baseline-near_me-24px.svg')}}"
-                                                            alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/paper-plane.svg')}}"
-                                                            alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/send-message.svg')}}"
-                                                            alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/dm.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/comment.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/baseline-date_range-24px.svg')}}"
+                                                    <a href="#" onClick="myFunction('calender')" class="bubble-icone">
+                                                        <img onchange="myFunction('calender')" id="calender" src="{{url('images/resources/baseline-date_range-24px.svg')}}"
                                                             alt="bubble-icone">
                                                     </a>
                                                 </div>
@@ -263,7 +257,7 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="body">
+                                                <!-- <div class="body">
                                                     <div class="file-uploader">
                                                         <img src="{{url('images/image (68).png')}}" alt="">
                                                         <div class="title">Drop your image here, or
@@ -272,7 +266,23 @@
                                                         <div class="sub-title">Supports: JPG, JPEG, PNG
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
+
+                                                <div class="form-group mt-1">
+                                                    <label>Image <span class="text-danger">*</span></label>
+                                                    <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                        </div>
+                                                        <div class="form-control file-amount">Choose File</div>
+                                                        <input type="hidden" onchange="myFunction()" id="image" name="image" value="{{ json_decode($widget->settings)[0]->image }}" class="selected-files" >
+                                                    </div>
+                                                    <div class="file-preview box sm">
+                                                    </div>
+                                                </div> 
+                                                <div onClick="myFunction()" class="btn rounded-pill text-light px-4 py-2 ms-2 mb-4 btn-success">Upload Image</div>
+
+
                                                 <div class="footer">
                                                     <input type="text" id="agent_name" class="form-control" name="agent_name" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_site }}" required placeholder="Type you name here...">
                                                 </div>
@@ -470,15 +480,15 @@
                                                             <fieldset id="pageSettingsOptions" class="row g-0">
                                                                 <div class="col">
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="radio" name="where_display_chat" id="all_pages" onchange="myFunction()" value="All" {{ json_decode($widget->settings)[0]->visitors == 'All' ? "checked" : "" }}>
+                                                                        <input class="form-check-input" type="radio" name="where_display_chat" id="all_pages" onchange="myFunction()" value="All" {{ json_decode($widget->settings)[0]->where_display_chat == 'All' ? "checked" : "" }}>
                                                                         <label class="form-check-label" for="all_pages">All Pages</label>
                                                                     </div>
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="radio" name="where_display_chat" id="excluded_pages" onchange="myFunction()" value="Excluded Pages" {{ json_decode($widget->settings)[0]->visitors == 'Excluded Pages' ? "checked" : "" }}>
+                                                                        <input class="form-check-input" type="radio" name="where_display_chat" id="excluded_pages" onchange="myFunction()" value="Excluded Pages" {{ json_decode($widget->settings)[0]->where_display_chat == 'Excluded Pages' ? "checked" : "" }}>
                                                                         <label class="form-check-label" for="excluded_pages"><span>Excluded Pages</span><a href="#">+ Add Page</a></label>
                                                                     </div>
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="radio" name="where_display_chat" id="specific_pages" onchange="myFunction()" value="Specific Pages" {{ json_decode($widget->settings)[0]->visitors == 'Specific Pages' ? "checked" : "" }}>
+                                                                        <input class="form-check-input" type="radio" name="where_display_chat" id="specific_pages" onchange="myFunction()" value="Specific Pages" {{ json_decode($widget->settings)[0]->where_display_chat == 'Specific Pages' ? "checked" : "" }}>
                                                                         <label class="form-check-label" for="specific_pages"><span>Specific Pages</span><a href="#">+ Add Page</a></label>
                                                                     </div>
                                                                 </div>
@@ -1058,7 +1068,7 @@
                         <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$project->id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
                         <!-- <div class="btn apply">Apply</div> -->
                         <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
-                        <button type="submit" class="btn save">Save</button>
+                        <!-- <button type="submit" class="btn save">Save</button> -->
                     </div>
 
                 </div>
@@ -1144,7 +1154,7 @@
    <script>
 
        function template_layout_chage() {
-           template_layout = $('#template_layout').val();
+           template_layout = 2;
            hidden_id = $('#hidden_id').val();
            $.post("{{url('/')}}/api/theme_changers",
                {
@@ -1171,29 +1181,31 @@
 
        }
 
-        function myFunction(){
+        function myFunction(bubble_icon = null){
+
+            // alert(bubble_icon);
+            
 
             template_layout = $('#template_layout').val();
             whatsapp_number = $('#whatsapp_number').val();
-            bubble_icon = $('#bubble_icon').val();
+            // bubble_icon = $('#bubble_icon').val();
             chat_header = $('#chat_header').val();
-            caption = $('#caption').val();
+            // caption = $('#caption').val();
             image = $('#image').val();
+            agent_name = $('#agent_name').val();
+            
+            // console.log(image);
             welcome_message = $('#welcome_message').val();
-
-            baseline-chat = $('#baseline-chat').val();
-            baseline-email = $('#baseline-email').val();
-            baseline-forum = $('#baseline-forum').val();
-
+            btn_text = $('#btn_text').val();
 
             
-            console.log(baseline-chat);
 
-            start_chat = $('#start_chat').val();
-            show_icon = $('#show_icon').val();
-            position = $('#position').val();
-            alignment = $('#alignment').val();            
-            where_display_chat = $('#where_display_chat').val();
+           
+            // start_chat = $('#start_chat').val();
+            // show_icon = $('#show_icon').val();
+            // position = $('#position').val();
+            // alignment = $('#alignment').val();            
+            // where_display_chat = $('#where_display_chat').val();
           
             if($('#desktop').is(':checked')) {
                 desktop = $("#desktop").val();
@@ -1208,6 +1220,51 @@
                 mobile_device = null;                
             }
 
+            
+
+            if($('#caption_1').is(':checked')) {
+                caption = $("#caption_1").val();
+            }
+            if($('#caption_2').is(':checked')) {
+                caption = $("#caption_2").val();
+
+            }
+            if($('#caption_3').is(':checked')) {
+                caption = $("#caption_3").val();
+            }
+            if($('#caption_4').is(':checked')) {
+                caption = $("#caption_4").val();
+            }
+            if($('#caption_5').is(':checked')) {
+                caption = $("#caption_5").val();
+            }
+            if($('#caption_6').is(':checked')) {
+                caption = $("#caption_6").val();
+            }
+
+            if($('#all_pages').is(':checked')) {
+                where_display_chat = $("#all_pages").val();
+            }
+            if($('#excluded_pages').is(':checked')) {
+                where_display_chat = $("#excluded_pages").val();
+            }
+            if($('#specific_pages').is(':checked')) {
+                where_display_chat = $("#specific_pages").val();
+            }
+
+                // console.log(where_display_chat);
+
+
+
+            if($('#floating_bubble').is(':checked')) {
+                position = $("#floating_bubble").val();
+            }
+            if($('#embed_bubble').is(':checked')) {
+                position = $("#embed_bubble").val();
+            }
+            if($('#embed_chat_window').is(':checked')) {
+                position = $("#embed_chat_window").val();
+            }
            
             if($('#all_visitors').is(':checked')) {
                 visitors = $("#all_visitors").val();
@@ -1219,6 +1276,14 @@
                 visitors = $("#refurm_visitors").val();
             }
 
+            if($('#left').is(':checked')) {
+                alignment = $("#left").val();
+            }
+            if($('#right').is(':checked')) {
+                alignment = $("#right").val();
+            }
+            
+            
 
 
             if($('#monday').is(':checked')) {
@@ -1285,6 +1350,21 @@
             else{
                 exit_internet = null;
             }
+            if($('#start_chat').is(':checked')) {
+                start_chat = $("#start_chat").val();
+            }
+            else{
+                start_chat = null;
+            }
+            if($('#show_icon').is(':checked')) {
+                show_icon = $("#show_icon").val();
+            }
+            else{
+                show_icon = null;
+            }
+
+            
+            
 
             if($('#bubble_notification_bage').is(':checked')) {
                 bubble_notification_bage = $("#bubble_notification_bage").val();
@@ -1303,6 +1383,11 @@
             bubble_icon_color = $('#bubble_icon_color').val();
             button_color = $('#button_color').val();
             header_background_color = $('#header_background_color').val();
+            // console.log(bubble_background_color);
+            // console.log(bubble_icon_color);
+            // console.log(button_color);
+            // console.log(bubble_icon);
+
             
 
             if($('#enabled_animation').is(':checked')) {
@@ -1320,13 +1405,15 @@
 
             $.post("{{url('/')}}/api/user_api_chat",
                 {
-                    template_layout: template_layout,
+                    template_layout: 2,
                     whatsapp_number: whatsapp_number,
                     bubble_icon: bubble_icon,
                     chat_header: chat_header,
                     caption: caption,
                     image: image,
+                    agent_name: agent_name,                    
                     welcome_message: welcome_message,
+                    btn_text: btn_text,                    
                     start_chat: start_chat,
                     show_icon: show_icon,
                     position: position,

@@ -211,7 +211,7 @@ class HomeController extends Controller
 
     public function user_api_chat(Request $request)
     {     
-        // dd($request);   
+        // dd($request);
 
         $template_layout_details = WhatsappChatWidgetTemplate::where('id',$request->template_layout)->first();
         // dd($template_layout_details);
@@ -266,7 +266,9 @@ class HomeController extends Controller
         $chat_header = $request->chat_header;
         $caption = $request->caption;
         $image = $request->image;
+        $agent_name = $request->agent_name;        
         $welcome_message = $request->welcome_message;
+        $btn_text = $request->btn_text;        
         $start_chat = $request->start_chat;
         $show_icon = $request->show_icon;
         $position = $request->position;
@@ -297,7 +299,9 @@ class HomeController extends Controller
             'chat_header' => $chat_header,
             'caption' => $caption,
             'image' => $image,
+            'agent_name' => $agent_name,            
             'welcome_message' => $welcome_message,
+            'btn_text' => $btn_text,            
             'start_chat' => $start_chat,
             'show_icon' => $show_icon,
             'position' => $position,
