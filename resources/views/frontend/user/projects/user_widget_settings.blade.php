@@ -4,6 +4,9 @@
 
 @section('content')
 
+
+
+
 <section class="main-window">
 
     <div class="side-nav-section">
@@ -1130,7 +1133,7 @@
 
     <div class="body-section">
         <div class="row g-0">
-            <div class="nav-bar px-4" id="navBar">
+            <!-- <div class="nav-bar px-4" id="navBar">
                 <div class="row g-0 align-items-center justify-content-lg-between flex-lg-row flex-column-reverse">
                     <div class="col-auto ms-lg-0 ms-auto">
                         <div class="property-block">
@@ -1217,7 +1220,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            @include('frontend.includes.nav')
         </div>
 
         <div class="row g-0">
