@@ -641,7 +641,7 @@
                                                                     for="specificTimeSelector">Where to Display
                                                                     Chat</label>
                                                                 <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="specificTimeSelector" checked>
+                                                                    role="switch" value="checked" id="specificTimeSelector">
                                                             </div>
                                                             <div class="specific-time-block">
                                                                 <div class="time-blocks">

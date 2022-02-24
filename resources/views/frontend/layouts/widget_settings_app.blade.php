@@ -71,6 +71,15 @@
             twelvehour: true,
             donetext: 'Done',
         });
+
+        $('#specificTimeSelector').change(function () {
+    const schTime = $('#specificTimeSelector:checked').val();
+    if (schTime == 'checked') {
+        $('.specific-time-block').show();
+    } else {
+        $('.specific-time-block').hide();
+    }
+});
     </script>
 
         

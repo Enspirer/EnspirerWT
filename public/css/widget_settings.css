@@ -1203,6 +1203,7 @@
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block {
     padding: 20px 10px 0;
+    display: none;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block .time-blocks {
