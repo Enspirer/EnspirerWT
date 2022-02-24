@@ -5,7 +5,7 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -1764,7 +1764,7 @@
 }
 
 #navBar.nav-bar .property-block .navbar-nav .nav-item .nav-link {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 #navBar.nav-bar .property-block .navbar-nav .nav-item .nav-link .dropdown-menu {
@@ -1791,7 +1791,7 @@
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell {
     color: #333;
-    font-size: 2rem;
+    font-size: 1.8rem;
     position: relative;
 }
 
@@ -1825,8 +1825,8 @@
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link .profile .image {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link .profile .image img {
@@ -1839,6 +1839,7 @@
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link .profile .name {
     color: #999;
     font-weight: 500;
+    font-size: 13px;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link .profile .dropdown-icon i {
@@ -1875,6 +1876,7 @@
     color: #333;
     margin: 0;
     line-height: 1;
+    font-size: 13px;
 }
 
 .property .content .site-url {
