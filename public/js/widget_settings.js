@@ -97,7 +97,7 @@ displayOption.forEach(function (option) {
 // Range Slider
 const range = document.getElementById("startChatButtonCollapse");
 const output = range.querySelector(".value");
-const slider = document.getElementById("chatBtnRadius")
+const slider = document.getElementById("button_corner_radius")
 const min = slider.min
 const max = slider.max
 const value = slider.value

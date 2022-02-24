@@ -1590,7 +1590,7 @@
     font-weight: 300;
 }
 
-#sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius #chatBtnRadius {
+#sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius #button_corner_radius {
     -webkit-appearance: none;
     outline: none;
     width: 100%;
@@ -1598,11 +1598,11 @@
     border-radius: 10px;
 }
 
-#sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius #chatBtnRadius:hover {
+#sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius #button_corner_radius:hover {
     cursor: pointer;
 }
 
-#sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius #chatBtnRadius::-webkit-slider-thumb {
+#sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #startChatButtonCollapse .accordion-body .chat-button-radius #button_corner_radius::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 30px;
     height: 30px;
