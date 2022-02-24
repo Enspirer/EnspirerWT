@@ -206,7 +206,7 @@
     flex-direction: column;
     height: 100vh;
     background-color: #0A586C;
-    z-index: 99999;
+    z-index: 12;
     position: fixed;
     width: 265px;
     -webkit-transition: all 0.2s ease;
@@ -329,7 +329,7 @@
     width: 440px;
     min-height: 100vh;
     position: absolute;
-    z-index: 99998;
+    z-index: 11;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     display: -webkit-box;
