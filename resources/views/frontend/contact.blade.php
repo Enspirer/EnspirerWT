@@ -1,101 +1,173 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('labels.frontend.contact.box_title'))
+@section('title', app_name() . ' | ' . __('navs.general.home'))
 
 @section('content')
-    <div class="row justify-content-center">
-        <div class="col col-sm-8 align-self-center">
-            <div class="card">
-                <div class="card-header">
-                    <strong>
-                        @lang('labels.frontend.contact.box_title')
-                    </strong>
-                </div><!--card-header-->
+    
+@include('frontend.includes.home_nav')
 
-                <div class="card-body">
-                    {{ html()->form('POST', route('frontend.contact.send'))->open() }}
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    {{ html()->label(__('validation.attributes.frontend.name'))->for('name') }}
+<link rel="stylesheet" href="{{url('css/contact_us.css')}}">
 
-                                    {{ html()->text('name', optional(auth()->user())->name)
-                                        ->class('form-control')
-                                        ->placeholder(__('validation.attributes.frontend.name'))
-                                        ->attribute('maxlength', 191)
-                                        ->required()
-                                        ->autofocus() }}
-                                </div><!--form-group-->
-                            </div><!--col-->
-                        </div><!--row-->
+    <section class="slider-section">
+        <div class="container">
+            <div class="header">
+                <h2 class="title">We are here to help</h2>
+                <h6 class="subtitle">Contact Tallentor</h6>
+            </div>
+            <div class="slider">
+                <div class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="slider-card">
+                                    <div class="icon-block">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </div>
+                                    <div class="main-icon">
+                                        <img src="{{url('images/contact-us/Group 440.png')}}" alt="">
+                                    </div>
+                                    <h5 class="title">Sales Inquires</h5>
+                                    <p class="text">Product information, Bulk purchases and Corporate inquiries, please
+                                        contact</p>
+                                    <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slider-card">
+                                    <div class="icon-block">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </div>
+                                    <div class="main-icon">
+                                        <img src="{{url('images/contact-us/Group 457.png')}}" alt="">
+                                    </div>
+                                    <h5 class="title">Billing</h5>
+                                    <p class="text">Product information, Bulk purchases and Corporate inquiries, please
+                                        contact</p>
+                                    <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slider-card">
+                                    <div class="icon-block">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </div>
+                                    <div class="main-icon">
+                                        <img src="{{url('images/contact-us/Group 483.png')}}" alt="">
+                                    </div>
+                                    <h5 class="title">Support</h5>
+                                    <p class="text">Product information, Bulk purchases and Corporate inquiries, please
+                                        contact</p>
+                                    <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slider-card">
+                                    <div class="icon-block">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </div>
+                                    <div class="main-icon">
+                                        <img src="{{url('images/contact-us/Group 508.png')}}" alt="">
+                                    </div>
+                                    <h5 class="title">Partnership</h5>
+                                    <p class="text">Product information, Bulk purchases and Corporate inquiries, please
+                                        contact</p>
+                                    <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    {{ html()->label(__('validation.attributes.frontend.email'))->for('email') }}
+    <section class="contact-form">
+        <div class="container">
+            <div class="header">
+                <h2 class="title">Contact Us</h2>
+                <h6 class="subtitle">Have any questions ? We'd love to hear from you.</h6>
+            </div>
+            <div class="row g-5">
+                <div class="col-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Full Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" placeholder="Your Inquiry"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="How can we help you ?">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label class="form-check-label">Acceptance * <br>
+                                I would like to receive information & updates from Trace Solutions in relation to my
+                                enquiry. <br>
+                                I understand that Trace will never share my information.</label>
+                        </div>
+                        <button type="submit" class="form-submit-btn">Send Message <i
+                                class="bi bi-arrow-right-short"></i></button>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <div class="inner-wrapper">
+                        <div class="address">
+                            <img src="{{url('images/contact-us/location (1).png')}}" alt="">
+                            <div class="text">19 Koombahla Court, Rowville, <br> Victoria 3178, Australia</div>
+                        </div>
+                        <div class="email">
+                            <img src="{{url('images/contact-us/email (2).png')}}" alt="">
+                            <a href="mailto:info@tallentor.com">info@tallentor.com</a>
+                        </div>
+                        <div class="images">
+                            <img src="{{url('images/contact-us/Group 549.png')}}" alt="" class="large">
+                            <img src="{{url('images/contact-us/679.png')}}" alt="" class="medium">
+                            <img src="{{url('images/contact-us/679 [Converted]-03.png')}}" alt="" class="small">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                                    {{ html()->email('email', optional(auth()->user())->email)
-                                        ->class('form-control')
-                                        ->placeholder(__('validation.attributes.frontend.email'))
-                                        ->attribute('maxlength', 191)
-                                        ->required() }}
-                                </div><!--form-group-->
-                            </div><!--col-->
-                        </div><!--row-->
+    @include('frontend.includes.footer')
 
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    {{ html()->label(__('validation.attributes.frontend.phone'))->for('phone') }}
-
-                                    {{ html()->text('phone')
-                                        ->class('form-control')
-                                        ->placeholder(__('validation.attributes.frontend.phone'))
-                                        ->attribute('maxlength', 191)
-                                        ->required() }}
-                                </div><!--form-group-->
-                            </div><!--col-->
-                        </div><!--row-->
-
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    {{ html()->label(__('validation.attributes.frontend.message'))->for('message') }}
-
-                                    {{ html()->textarea('message')
-                                        ->class('form-control')
-                                        ->placeholder(__('validation.attributes.frontend.message'))
-                                        ->attribute('rows', 3)
-                                        ->required() }}
-                                </div><!--form-group-->
-                            </div><!--col-->
-                        </div><!--row-->
-
-                        @if(config('access.captcha.contact'))
-                            <div class="row">
-                                <div class="col">
-                                    @captcha
-                                    {{ html()->hidden('captcha_status', 'true') }}
-                                </div><!--col-->
-                            </div><!--row-->
-                        @endif
-
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group mb-0 clearfix">
-                                    {{ form_submit(__('labels.frontend.contact.button')) }}
-                                </div><!--form-group-->
-                            </div><!--col-->
-                        </div><!--row-->
-                    {{ html()->form()->close() }}
-                </div><!--card-body-->
-            </div><!--card-->
-        </div><!--col-->
-    </div><!--row-->
+    
 @endsection
 
 @push('after-scripts')
-    @if(config('access.captcha.contact'))
-        @captchaScripts
-    @endif
+
+<script>
+        var splide = new Splide('.splide', {
+            perPage: 3,
+            rewind: false,
+            fixedWidth: '300px',
+            fixedHeight: '320px',
+            gap: '3.5rem',
+        });
+
+        splide.mount();
+
+        // Slider active classes
+        const slideList = document.getElementById("splide01-list");
+        const card = slideList.querySelectorAll('.slider-card');
+
+        card.forEach(function (item) {
+            item.addEventListener("click", function () {
+                card.forEach(function (tab) {
+                    tab.classList.remove("active");
+                });
+                item.classList.add("active");
+            });
+        });
+</script>
+
 @endpush
