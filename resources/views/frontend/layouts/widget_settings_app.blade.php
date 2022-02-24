@@ -72,14 +72,14 @@
             donetext: 'Done',
         });
 
-        $('#specificTimeSelector').change(function () {
-    const schTime = $('#specificTimeSelector:checked').val();
-    if (schTime == 'checked') {
-        $('.specific-time-block').show();
-    } else {
-        $('.specific-time-block').hide();
-    }
-});
+        $('#specific_time_selector').change(function () {
+            const schTime = $('#specific_time_selector:checked').val();
+            if (schTime == 'checked') {
+                $('.specific-time-block').show();
+            } else {
+                $('.specific-time-block').hide();
+            }
+        });
     </script>
 
         

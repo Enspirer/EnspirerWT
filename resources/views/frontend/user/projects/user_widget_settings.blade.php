@@ -167,20 +167,20 @@
                                             <div class="title">Bubble Icone</div>
                                             <div class="row gx-1 gy-4 row-cols-3">
                                                 <div class="col">
-                                                    <a href="#" class="bubble-icone active">
-                                                        <img src="{{url('images/resources/baseline-chat-24px.svg')}}"
+                                                    <a href="#" onClick="myFunction()" class="bubble-icone active">
+                                                        <img onchange="myFunction()" id="baseline-chat" value="baseline-chat" src="{{url('images/resources/baseline-chat-24px.svg')}}"
                                                             alt="bubble-icone">
                                                     </a>
                                                 </div>
                                                 <div class="col">
                                                     <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/baseline-email-24px.svg')}}"
+                                                        <img onClick="myFunction()" id="baseline-email" value="baseline-email" src="{{url('images/resources/baseline-email-24px.svg')}}"
                                                             alt="bubble-icone">
                                                     </a>
                                                 </div>
                                                 <div class="col">
                                                     <a href="#" class="bubble-icone">
-                                                        <img src="{{url('images/resources/baseline-forum-24px.svg')}}"
+                                                        <img onClick="myFunction()" id="baseline-forum" value="baseline-forum" src="{{url('images/resources/baseline-forum-24px.svg')}}"
                                                             alt="bubble-icone">
                                                     </a>
                                                 </div>
@@ -274,8 +274,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="footer">
-                                                    <input type="text" class="form-control" id="pictureInput"
-                                                        placeholder="Type you name here...">
+                                                    <input type="text" id="agent_name" class="form-control" name="agent_name" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_site }}" required placeholder="Type you name here...">
                                                 </div>
                                             </div>
 
@@ -297,45 +296,29 @@
                                                     <fieldset id="captionOptions" class="row g-0">
                                                         <div class="col">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio"
-                                                                    name="caption" id="caption_1" checked>
-                                                                <label class="form-check-label" for="caption_1">
-                                                                    Typically replies instantly
-                                                                </label>
+                                                                <input class="form-check-input" type="radio" name="caption" id="caption_1" onchange="myFunction()" value="Typically replies instantly" {{ json_decode($widget->settings)[0]->caption == 'Typically replies instantly' ? "checked" : "" }}>
+                                                                <label class="form-check-label" for="caption_1">Typically replies instantly</label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio"
-                                                                    name="caption" id="caption_2">
-                                                                <label class="form-check-label" for="caption_2">
-                                                                    Typically replies in minutes
-                                                                </label>
+                                                                <input class="form-check-input" type="radio" name="caption" id="caption_2" onchange="myFunction()" value="Typically replies in minutes" {{ json_decode($widget->settings)[0]->caption == 'Typically replies in minutes' ? "checked" : "" }}>
+                                                                <label class="form-check-label" for="caption_2">Typically replies in minutes</label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio"
-                                                                    name="caption" id="caption_3">
-                                                                <label class="form-check-label" for="caption_3">
-                                                                    Typically replies within an hour
-                                                                </label>
+                                                                <input class="form-check-input" type="radio" name="caption" id="caption_3" onchange="myFunction()" value="Typically replies within an hour" {{ json_decode($widget->settings)[0]->caption == 'Typically replies within an hour' ? "checked" : "" }}>
+                                                                <label class="form-check-label" for="caption_3">Typically replies within an hour</label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio"
-                                                                    name="caption" id="caption_4">
-                                                                <label class="form-check-label" for="caption_4">
-                                                                    Typically replies in a few hours
-                                                                </label>
+                                                                <input class="form-check-input" type="radio" name="caption" id="caption_4" onchange="myFunction()" value="Typically replies in a few hours" {{ json_decode($widget->settings)[0]->caption == 'Typically replies in a few hours' ? "checked" : "" }}>
+                                                                <label class="form-check-label" for="caption_4">Typically replies in a few hours</label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio"
-                                                                    name="caption" id="caption_5" value="custom">
-                                                                <label class="form-check-label" for="caption_5">
-                                                                    Custom caption
-                                                                </label>
+                                                                <input class="form-check-input" type="radio" name="caption" id="caption_5" onchange="myFunction()" value="custom" {{ json_decode($widget->settings)[0]->caption == 'custom' ? "checked" : "" }}>
+                                                                <label class="form-check-label" for="caption_5">Custom caption</label>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                     <div class="custom-caption-block">
-                                                        <textarea class="form-control" id="customCaption"
-                                                            placeholder="Type your custom caption"></textarea>
+                                                        <textarea class="form-control" id="customCaption" placeholder="Type your custom caption"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -353,8 +336,7 @@
                                     <div id="welcomeMessageCollapse" class="accordion-collapse collapse"
                                         aria-labelledby="welcomeMessage" data-bs-parent="#whatsappContentAccordion">
                                         <div class="accordion-body">
-                                            <textarea class="form-control" id="welcomeMsg"
-                                                placeholder="Type your welcome message"></textarea>
+                                            <textarea id="welcome_message" class="form-control" name="welcome_message" rows="4" onchange="myFunction()" placeholder="Type your welcome message">{{ json_decode($widget->settings)[0]->welcome_message }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -371,15 +353,24 @@
                                         <div class="accordion-body">
                                             <div class="chat-button-block">
                                                 <div class="form-floating">
-                                                    <input type="text" class="form-control" id="chatBtnTxt"
-                                                        placeholder="Start Chat" value="Start Chat">
-                                                    <label for="chatBtnTxt">Button Text</label>
+                                                    <input type="text" id="btn_text" class="form-control" name="btn_text" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_site }}" required>
+                                                    <label for="btn_text">Button Text</label>
                                                 </div>
                                                 <div class="form-check form-switch">
-                                                    <label class="form-check-label" for="chatButtonVisibility">Show
-                                                        Icone</label>
-                                                    <input class="form-check-input" type="checkbox" role="switch"
-                                                        id="chatButtonVisibility" checked>
+                                                    <label class="form-check-label" for="start_chat">Start Icon</label>
+                                                    @if(json_decode($widget->settings)[0]->start_chat == 'on')
+                                                        <input type="checkbox" class="form-check-input" name="start_chat" id="start_chat" onchange="myFunction()" checked>
+                                                    @else
+                                                        <input type="checkbox" class="form-check-input" name="start_chat" id="start_chat" onchange="myFunction()">
+                                                    @endif
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <label class="form-check-label" for="chatButtonVisibility">Show Icon</label>
+                                                    @if(json_decode($widget->settings)[0]->show_icon == 'on')
+                                                        <input type="checkbox" class="form-check-input" name="show_icon" id="show_icon" onchange="myFunction()" checked>
+                                                    @else
+                                                        <input type="checkbox" class="form-check-input" name="show_icon" id="show_icon" onchange="myFunction()">
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -418,25 +409,29 @@
                                             <fieldset id="positionOptions" class="row g-0">
                                                 <div class="col">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="position"
-                                                            id="position_1" checked>
-                                                        <label class="form-check-label" for="position_1">
-                                                            Floating Bubble
-                                                        </label>
+                                                        <input class="form-check-input" type="radio" name="position" id="floating_bubble" onchange="myFunction()" value="Floating Bubble" {{ json_decode($widget->settings)[0]->position == 'Floating Bubble' ? "checked" : "" }}>
+                                                        <label class="form-check-label" for="floating_bubble">Floating Bubble</label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="position"
-                                                            id="position_2">
-                                                        <label class="form-check-label" for="position_2">
-                                                            Embed Bubble
-                                                        </label>
+                                                        <input class="form-check-input" type="radio" name="position" id="embed_bubble" onchange="myFunction()" value="Embed Bubble" {{ json_decode($widget->settings)[0]->position == 'Embed Bubble' ? "checked" : "" }}>
+                                                        <label class="form-check-label" for="embed_bubble">Embed Bubble</label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="position"
-                                                            id="position_3">
-                                                        <label class="form-check-label" for="position_3">
-                                                            Embed Chat Window
-                                                        </label>
+                                                        <input class="form-check-input" type="radio" name="position" id="embed_chat_window" onchange="myFunction()" value="Embed Chat Window" {{ json_decode($widget->settings)[0]->position == 'Embed Chat Window' ? "checked" : "" }}>
+                                                        <label class="form-check-label" for="embed_chat_window">Embed Chat Window</label>
+                                                    </div>
+                                                    <div class="specific-time-block mt-4">
+                                                        <div class="time-blocks">
+                                                            <label for="time_on_page" class="form-label">Alignment</label>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="alignment" id="left" onchange="myFunction()" value="left" {{ json_decode($widget->settings)[0]->alignment == 'left' ? "checked" : "" }}>
+                                                                <label class="form-check-label" for="left">Left</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="alignment" id="right" onchange="myFunction()" value="right" {{ json_decode($widget->settings)[0]->alignment == 'right' ? "checked" : "" }}>
+                                                                <label class="form-check-label" for="right">Right</label>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -475,30 +470,16 @@
                                                             <fieldset id="pageSettingsOptions" class="row g-0">
                                                                 <div class="col">
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="setting" id="setting_1" checked>
-                                                                        <label class="form-check-label"
-                                                                            for="setting_1">
-                                                                            All Pages
-                                                                        </label>
+                                                                        <input class="form-check-input" type="radio" name="where_display_chat" id="all_pages" onchange="myFunction()" value="All" {{ json_decode($widget->settings)[0]->visitors == 'All' ? "checked" : "" }}>
+                                                                        <label class="form-check-label" for="all_pages">All Pages</label>
                                                                     </div>
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="setting" id="setting_2">
-                                                                        <label class="form-check-label"
-                                                                            for="setting_2">
-                                                                            <span>Excluded Pages</span>
-                                                                            <a href="#">+ Add Page</a>
-                                                                        </label>
+                                                                        <input class="form-check-input" type="radio" name="where_display_chat" id="excluded_pages" onchange="myFunction()" value="Excluded Pages" {{ json_decode($widget->settings)[0]->visitors == 'Excluded Pages' ? "checked" : "" }}>
+                                                                        <label class="form-check-label" for="excluded_pages"><span>Excluded Pages</span><a href="#">+ Add Page</a></label>
                                                                     </div>
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="setting" id="setting_3">
-                                                                        <label class="form-check-label"
-                                                                            for="setting_3">
-                                                                            <span>Specific Pages</span>
-                                                                            <a href="#">+ Add Page</a>
-                                                                        </label>
+                                                                        <input class="form-check-input" type="radio" name="where_display_chat" id="specific_pages" onchange="myFunction()" value="Specific Pages" {{ json_decode($widget->settings)[0]->visitors == 'Specific Pages' ? "checked" : "" }}>
+                                                                        <label class="form-check-label" for="specific_pages"><span>Specific Pages</span><a href="#">+ Add Page</a></label>
                                                                     </div>
                                                                 </div>
                                                             </fieldset>
@@ -637,11 +618,8 @@
                                                                 </div>
                                                             </fieldset>
                                                             <div class="form-check form-switch">
-                                                                <label class="form-check-label"
-                                                                    for="specificTimeSelector">Where to Display
-                                                                    Chat</label>
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" value="checked" id="specificTimeSelector">
+                                                                <label class="form-check-label" for="specific_time_selector">Set the Time Schedule</label>
+                                                                <input class="form-check-input" type="checkbox" role="switch" value="checked" name="specific_time_selector" id="specific_time_selector">
                                                             </div>
                                                             <div class="specific-time-block">
                                                                 <div class="time-blocks">
@@ -1202,7 +1180,14 @@
             caption = $('#caption').val();
             image = $('#image').val();
             welcome_message = $('#welcome_message').val();
-            // console.log(welcome_message);
+
+            baseline-chat = $('#baseline-chat').val();
+            baseline-email = $('#baseline-email').val();
+            baseline-forum = $('#baseline-forum').val();
+
+
+            
+            console.log(baseline-chat);
 
             start_chat = $('#start_chat').val();
             show_icon = $('#show_icon').val();
@@ -1278,7 +1263,15 @@
             else{
                 sunday = null;                
             }
+            
+            if($('#specific_time_selector').is(':checked')) {
+                specific_time_selector = $("#specific_time_selector").val();
+            }
+            else{
+                specific_time_selector = null;
+            }
 
+            
             start_time = $('#start_time').val();
             end_time = $('#end_time').val();
             timezone = $('#timezone').val();
@@ -1306,7 +1299,6 @@
                 show_notification_in_tab_tile = null;                
             }
             
-
             bubble_background_color = $('#bubble_background_color').val();
             bubble_icon_color = $('#bubble_icon_color').val();
             button_color = $('#button_color').val();
@@ -1326,7 +1318,7 @@
             hidden_id = $('#hidden_id').val();
             
 
-            $.post("{{url('/')}}/api/api_chat",
+            $.post("{{url('/')}}/api/user_api_chat",
                 {
                     template_layout: template_layout,
                     whatsapp_number: whatsapp_number,
@@ -1350,6 +1342,7 @@
                     friday: friday,
                     saturday: saturday,
                     sunday: sunday,
+                    specific_time_selector: specific_time_selector,                    
                     start_time: start_time,
                     end_time: end_time,
                     timezone: timezone,
