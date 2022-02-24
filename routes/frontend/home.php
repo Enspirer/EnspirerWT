@@ -79,6 +79,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('user_widget/delete/{id}', [WidgetController::class, 'user_widget_destroy'])->name('user_widget.destroy');
         Route::get('user_widget/settings/{id}', [WidgetController::class, 'user_widget_settings'])->name('user_widget.settings');
         Route::get('user_whatsapp_chat_preview/{widget_id}', [WidgetController::class, 'user_whatsapp_chat_preview'])->name('user_whatsapp_chat_preview');
+        Route::post('user_widget/update', [WidgetController::class, 'user_widget_update'])->name('user_widget.update');
 
 
     });

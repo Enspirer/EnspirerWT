@@ -318,7 +318,7 @@
                                         
                                 <label class="mt-4">Visitors <span class="text-danger">*</span></label>                        
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="visitors" id="all_visitors" onchange="myFunction()" value="all_visitors" {{ json_decode($widget->settings)[0]->visitors == 'all_visitors' ? "checked" : "" }} id="all_visitors" value="all_visitors">
+                                    <input class="form-check-input" type="radio" name="visitors" id="all_visitors" onchange="myFunction()" value="all_visitors" {{ json_decode($widget->settings)[0]->visitors == 'all_visitors' ? "checked" : "" }}>
                                     <label class="form-check-label" for="all_visitors">All Visitors</label>
                                 </div>
                             

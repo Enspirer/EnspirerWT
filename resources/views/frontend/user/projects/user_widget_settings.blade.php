@@ -5,7 +5,8 @@
 @section('content')
 
 
-
+<form action="{{route('frontend.user.user_widget.update')}}" method="post" enctype="multipart/form-data">
+{{csrf_field()}}
 
 <section class="main-window">
 
@@ -369,11 +370,11 @@
                                         aria-labelledby="chatButton" data-bs-parent="#whatsappContentAccordion">
                                         <div class="accordion-body">
                                             <div class="chat-button-block">
-                                                <form class="form-floating">
+                                                <div class="form-floating">
                                                     <input type="text" class="form-control" id="chatBtnTxt"
                                                         placeholder="Start Chat" value="Start Chat">
                                                     <label for="chatBtnTxt">Button Text</label>
-                                                </form>
+                                                </div>
                                                 <div class="form-check form-switch">
                                                     <label class="form-check-label" for="chatButtonVisibility">Show
                                                         Icone</label>
@@ -525,18 +526,12 @@
                                                             <div class="title">Where to Display Chat</div>
                                                             <fieldset id="devicesSettingsOptions">
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="device_1" checked>
-                                                                    <label class="form-check-label" for="device_1">
-                                                                        Mobile Devices
-                                                                    </label>
+                                                                    <input class="form-check-input" type="checkbox" name="device[]" id="desktop" onchange="myFunction()" value="desktop" @foreach (json_decode($widget->settings)[0]->device as $dev) @if($dev == 'desktop') checked @endif @endforeach>
+                                                                    <label class="form-check-label" for="desktop">Desktop</label>
                                                                 </div>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="device_2" checked>
-                                                                    <label class="form-check-label" for="device_2">
-                                                                        Desktop
-                                                                    </label>
+                                                                    <input class="form-check-input" type="checkbox" name="device[]" id="mobile_device" onchange="myFunction()" value="mobile_device" @foreach (json_decode($widget->settings)[0]->device as $dev) @if($dev == 'mobile_device') checked @endif @endforeach>
+                                                                    <label class="form-check-label" for="mobile_device">Mobile Devices</label>
                                                                 </div>
                                                             </fieldset>
                                                         </div>
@@ -561,28 +556,16 @@
                                                             <fieldset id="visitorsSettingsOptions" class="row g-0">
                                                                 <div class="col">
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="visitor" id="visitor_1" checked>
-                                                                        <label class="form-check-label"
-                                                                            for="visitor_1">
-                                                                            All Visitors
-                                                                        </label>
+                                                                        <input class="form-check-input" type="radio" name="visitors" id="all_visitors" onchange="myFunction()" value="all_visitors" {{ json_decode($widget->settings)[0]->visitors == 'all_visitors' ? "checked" : "" }}>
+                                                                        <label class="form-check-label" for="all_visitors">All Visitors</label>
                                                                     </div>
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="visitor" id="visitor_2">
-                                                                        <label class="form-check-label"
-                                                                            for="visitor_2">
-                                                                            New Visitors
-                                                                        </label>
+                                                                        <input class="form-check-input" type="radio" name="visitors" id="new_visitors" onchange="myFunction()" value="new_visitors" {{ json_decode($widget->settings)[0]->visitors == 'new_visitors' ? "checked" : "" }}>
+                                                                        <label class="form-check-label" for="new_visitors">New Visitors</label>
                                                                     </div>
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="visitor" id="visitor_3">
-                                                                        <label class="form-check-label"
-                                                                            for="visitor_3">
-                                                                            Returning Visitors
-                                                                        </label>
+                                                                        <input class="form-check-input" type="radio" name="visitors" id="refurm_visitors" onchange="myFunction()" value="refurm_visitors" {{ json_decode($widget->settings)[0]->visitors == 'refurm_visitors' ? "checked" : "" }}>
+                                                                        <label class="form-check-label" for="refurm_visitors">Returning Visitors</label>
                                                                     </div>
                                                                 </div>
                                                             </fieldset>
@@ -611,51 +594,44 @@
                                                             <div class="title">Where to Display Chat</div>
                                                             <fieldset id="timeSettingsOptions">
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="day_1" checked>
-                                                                    <label class="form-check-label" for="day_1">
+                                                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="monday" onchange="myFunction()" value="monday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'monday') checked @endif @endforeach>
+                                                                    <label class="form-check-label" for="monday">
                                                                         Monday
                                                                     </label>
                                                                 </div>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="day_2" checked>
-                                                                    <label class="form-check-label" for="day_2">
+                                                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="tuesday" onchange="myFunction()" value="tuesday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'tuesday') checked @endif @endforeach>
+                                                                    <label class="form-check-label" for="tuesday">
                                                                         Tuesday
                                                                     </label>
                                                                 </div>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="day_3" checked>
-                                                                    <label class="form-check-label" for="day_3">
+                                                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="wednesday" onchange="myFunction()" value="wednesday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'wednesday') checked @endif @endforeach>
+                                                                    <label class="form-check-label" for="wednesday">
                                                                         Wednessday
                                                                     </label>
                                                                 </div>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="day_4" checked>
-                                                                    <label class="form-check-label" for="day_4">
+                                                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="thursday" onchange="myFunction()" value="thursday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'thursday') checked @endif @endforeach>
+                                                                    <label class="form-check-label" for="thursday">
                                                                         Thursday
                                                                     </label>
                                                                 </div>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="day_5" checked>
-                                                                    <label class="form-check-label" for="day_5">
+                                                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="friday" onchange="myFunction()" value="friday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'friday') checked @endif @endforeach>
+                                                                    <label class="form-check-label" for="friday">
                                                                         Friday
                                                                     </label>
                                                                 </div>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="day_6" checked>
-                                                                    <label class="form-check-label" for="day_6">
+                                                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="saturday" onchange="myFunction()" value="saturday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'saturday') checked @endif @endforeach>
+                                                                    <label class="form-check-label" for="saturday">
                                                                         Saturday
                                                                     </label>
                                                                 </div>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="day_7" checked>
-                                                                    <label class="form-check-label" for="day_7">
+                                                                    <input class="form-check-input" type="checkbox" name="date_time[]" id="sunday" onchange="myFunction()" value="sunday" @foreach (json_decode($widget->settings)[0]->date_time as $date) @if($date == 'sunday') checked @endif @endforeach>
+                                                                    <label class="form-check-label" for="sunday">
                                                                         Sunday
                                                                     </label>
                                                                 </div>
@@ -669,246 +645,98 @@
                                                             </div>
                                                             <div class="specific-time-block">
                                                                 <div class="time-blocks">
-                                                                    <label for="startTime" class="form-label">Start
-                                                                        Time</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="startTime" value="09:00 AM">
+                                                                    <label for="start_time" class="form-label">Start Time</label>
+                                                                    <input type="text" id="start_time" class="form-control" name="start_time" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->start_time }}" required>
                                                                 </div>
                                                                 <div class="time-blocks">
-                                                                    <label for="endTime" class="form-label">End
-                                                                        Time</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="endTime" value="09:00 PM">
+                                                                    <label for="end_time" class="form-label">End Time</label>
+                                                                    <input type="text" id="end_time" class="form-control" name="end_time" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->end_time }}" required>
                                                                 </div>
                                                                 <div class="time-blocks">
-                                                                    <label for="timeZoneSelect"
-                                                                        class="form-label">Time Zone</label>
-                                                                    <select id="timeZoneSelect" name="timezone"
-                                                                        class="form-select">
-                                                                        <option value="-12">(UTC-12:00)
-                                                                            International Date Line West
-                                                                        </option>
-                                                                        <option value="-11">(UTC-11:00)
-                                                                            Coordinated Universal Time-11
-                                                                        </option>
-                                                                        <option value="-10">(UTC-10:00) Hawaii
-                                                                        </option>
-                                                                        <option value="-9">(UTC-09:00) Alaska
-                                                                        </option>
-                                                                        <option value="-7">(UTC-08:00) Baja
-                                                                            California</option>
-                                                                        <option value="-7">(UTC-07:00) Pacific
-                                                                            Time (US &amp; Canada)</option>
-                                                                        <option value="-8">(UTC-08:00) Pacific
-                                                                            Time (US &amp; Canada)</option>
-                                                                        <option value="-7">(UTC-07:00) Arizona
-                                                                        </option>
-                                                                        <option value="-6">(UTC-07:00)
-                                                                            Chihuahua, La Paz, Mazatlan</option>
-                                                                        <option value="-6">(UTC-07:00) Mountain
-                                                                            Time (US &amp; Canada)</option>
-                                                                        <option value="-6">(UTC-06:00) Central
-                                                                            America</option>
-                                                                        <option value="-5">(UTC-06:00) Central
-                                                                            Time (US &amp; Canada)</option>
-                                                                        <option value="-5">(UTC-06:00)
-                                                                            Guadalajara, Mexico City, Monterrey
-                                                                        </option>
-                                                                        <option value="-6">(UTC-06:00)
-                                                                            Saskatchewan</option>
-                                                                        <option value="-5">(UTC-05:00) Bogota,
-                                                                            Lima, Quito</option>
-                                                                        <option value="-4">(UTC-05:00) Eastern
-                                                                            Time (US &amp; Canada)</option>
-                                                                        <option value="-4">(UTC-05:00) Indiana
-                                                                            (East)</option>
-                                                                        <option value="-4.5">(UTC-04:30) Caracas
-                                                                        </option>
-                                                                        <option value="-4">(UTC-04:00) Asuncion
-                                                                        </option>
-                                                                        <option value="-3">(UTC-04:00) Atlantic
-                                                                            Time (Canada)</option>
-                                                                        <option value="-4">(UTC-04:00) Cuiaba
-                                                                        </option>
-                                                                        <option value="-4">(UTC-04:00)
-                                                                            Georgetown, La Paz, Manaus, San Juan
-                                                                        </option>
-                                                                        <option value="-4">(UTC-04:00) Santiago
-                                                                        </option>
-                                                                        <option value="-2.5">(UTC-03:30)
-                                                                            Newfoundland</option>
-                                                                        <option value="-3">(UTC-03:00) Brasilia
-                                                                        </option>
-                                                                        <option value="-3">(UTC-03:00) Buenos
-                                                                            Aires</option>
-                                                                        <option value="-3">(UTC-03:00) Cayenne,
-                                                                            Fortaleza</option>
-                                                                        <option value="-3">(UTC-03:00) Greenland
-                                                                        </option>
-                                                                        <option value="-3">(UTC-03:00)
-                                                                            Montevideo</option>
-                                                                        <option value="-3">(UTC-03:00) Salvador
-                                                                        </option>
-                                                                        <option value="-2">(UTC-02:00)
-                                                                            Coordinated Universal Time-02
-                                                                        </option>
-                                                                        <option value="-1">(UTC-02:00)
-                                                                            Mid-Atlantic - Old</option>
-                                                                        <option value="0">(UTC-01:00) Azores
-                                                                        </option>
-                                                                        <option value="-1">(UTC-01:00) Cape
-                                                                            Verde Is.</option>
-                                                                        <option value="1">(UTC) Casablanca
-                                                                        </option>
-                                                                        <option value="0">(UTC) Coordinated
-                                                                            Universal Time</option>
-                                                                        <option value="0">(UTC) Edinburgh,
-                                                                            London</option>
-                                                                        <option value="1">(UTC+01:00) Edinburgh,
-                                                                            London</option>
-                                                                        <option value="1">(UTC) Dublin, Lisbon
-                                                                        </option>
-                                                                        <option value="0">(UTC) Monrovia,
-                                                                            Reykjavik</option>
-                                                                        <option value="2">(UTC+01:00) Amsterdam,
-                                                                            Berlin, Bern, Rome, Stockholm,
-                                                                            Vienna</option>
-                                                                        <option value="2">(UTC+01:00) Belgrade,
-                                                                            Bratislava, Budapest, Ljubljana,
-                                                                            Prague</option>
-                                                                        <option value="2">(UTC+01:00) Brussels,
-                                                                            Copenhagen, Madrid, Paris</option>
-                                                                        <option value="2">(UTC+01:00) Sarajevo,
-                                                                            Skopje, Warsaw, Zagreb</option>
-                                                                        <option value="1">(UTC+01:00) West
-                                                                            Central Africa</option>
-                                                                        <option value="1">(UTC+01:00) Windhoek
-                                                                        </option>
-                                                                        <option value="3">(UTC+02:00) Athens,
-                                                                            Bucharest</option>
-                                                                        <option value="3">(UTC+02:00) Beirut
-                                                                        </option>
-                                                                        <option value="2">(UTC+02:00) Cairo
-                                                                        </option>
-                                                                        <option value="3">(UTC+02:00) Damascus
-                                                                        </option>
-                                                                        <option value="3">(UTC+02:00) E. Europe
-                                                                        </option>
-                                                                        <option value="2">(UTC+02:00) Harare,
-                                                                            Pretoria</option>
-                                                                        <option value="3">(UTC+02:00) Helsinki,
-                                                                            Kyiv, Riga, Sofia, Tallinn, Vilnius
-                                                                        </option>
-                                                                        <option value="3">(UTC+03:00) Istanbul
-                                                                        </option>
-                                                                        <option value="3">(UTC+02:00) Jerusalem
-                                                                        </option>
-                                                                        <option value="2">(UTC+02:00) Tripoli
-                                                                        </option>
-                                                                        <option value="3">(UTC+03:00) Amman
-                                                                        </option>
-                                                                        <option value="3">(UTC+03:00) Baghdad
-                                                                        </option>
-                                                                        <option value="3">(UTC+02:00)
-                                                                            Kaliningrad</option>
-                                                                        <option value="3">(UTC+03:00) Kuwait,
-                                                                            Riyadh</option>
-                                                                        <option value="3">(UTC+03:00) Nairobi
-                                                                        </option>
-                                                                        <option value="3">(UTC+03:00) Moscow,
-                                                                            St. Petersburg, Volgograd, Minsk
-                                                                        </option>
-                                                                        <option value="4">(UTC+04:00) Samara,
-                                                                            Ulyanovsk, Saratov</option>
-                                                                        <option value="4.5">(UTC+03:30) Tehran
-                                                                        </option>
-                                                                        <option value="4">(UTC+04:00) Abu Dhabi,
-                                                                            Muscat</option>
-                                                                        <option value="5">(UTC+04:00) Baku
-                                                                        </option>
-                                                                        <option value="4">(UTC+04:00) Port Louis
-                                                                        </option>
-                                                                        <option value="4">(UTC+04:00) Tbilisi
-                                                                        </option>
-                                                                        <option value="4">(UTC+04:00) Yerevan
-                                                                        </option>
-                                                                        <option value="4.5">(UTC+04:30) Kabul
-                                                                        </option>
-                                                                        <option value="5">(UTC+05:00) Ashgabat,
-                                                                            Tashkent</option>
-                                                                        <option value="5">(UTC+05:00)
-                                                                            Yekaterinburg</option>
-                                                                        <option value="5">(UTC+05:00) Islamabad,
-                                                                            Karachi</option>
-                                                                        <option value="5.5">(UTC+05:30) Chennai,
-                                                                            Kolkata, Mumbai, New Delhi</option>
-                                                                        <option value="5.5">(UTC+05:30) Sri
-                                                                            Jayawardenepura</option>
-                                                                        <option value="5.75">(UTC+05:45)
-                                                                            Kathmandu</option>
-                                                                        <option value="6">(UTC+06:00) Nur-Sultan
-                                                                            (Astana)</option>
-                                                                        <option value="6">(UTC+06:00) Dhaka
-                                                                        </option>
-                                                                        <option value="6.5">(UTC+06:30) Yangon
-                                                                            (Rangoon)</option>
-                                                                        <option value="7">(UTC+07:00) Bangkok,
-                                                                            Hanoi, Jakarta</option>
-                                                                        <option value="7">(UTC+07:00)
-                                                                            Novosibirsk</option>
-                                                                        <option value="8">(UTC+08:00) Beijing,
-                                                                            Chongqing, Hong Kong, Urumqi
-                                                                        </option>
-                                                                        <option value="8">(UTC+08:00)
-                                                                            Krasnoyarsk</option>
-                                                                        <option value="8">(UTC+08:00) Kuala
-                                                                            Lumpur, Singapore</option>
-                                                                        <option value="8">(UTC+08:00) Perth
-                                                                        </option>
-                                                                        <option value="8">(UTC+08:00) Taipei
-                                                                        </option>
-                                                                        <option value="8">(UTC+08:00)
-                                                                            Ulaanbaatar</option>
-                                                                        <option value="8">(UTC+08:00) Irkutsk
-                                                                        </option>
-                                                                        <option value="9">(UTC+09:00) Osaka,
-                                                                            Sapporo, Tokyo</option>
-                                                                        <option value="9">(UTC+09:00) Seoul
-                                                                        </option>
-                                                                        <option value="9.5">(UTC+09:30) Adelaide
-                                                                        </option>
-                                                                        <option value="9.5">(UTC+09:30) Darwin
-                                                                        </option>
-                                                                        <option value="10">(UTC+10:00) Brisbane
-                                                                        </option>
-                                                                        <option value="10">(UTC+10:00) Canberra,
-                                                                            Melbourne, Sydney</option>
-                                                                        <option value="10">(UTC+10:00) Guam,
-                                                                            Port Moresby</option>
-                                                                        <option value="10">(UTC+10:00) Hobart
-                                                                        </option>
-                                                                        <option value="9">(UTC+09:00) Yakutsk
-                                                                        </option>
-                                                                        <option value="11">(UTC+11:00) Solomon
-                                                                            Is., New Caledonia</option>
-                                                                        <option value="11">(UTC+11:00)
-                                                                            Vladivostok</option>
-                                                                        <option value="12">(UTC+12:00) Auckland,
-                                                                            Wellington</option>
-                                                                        <option value="12">(UTC+12:00)
-                                                                            Coordinated Universal Time+12
-                                                                        </option>
-                                                                        <option value="12">(UTC+12:00) Fiji
-                                                                        </option>
-                                                                        <option value="12">(UTC+12:00) Magadan
-                                                                        </option>
-                                                                        <option value="13">(UTC+12:00)
-                                                                            Petropavlovsk-Kamchatsky - Old
-                                                                        </option>
-                                                                        <option value="13">(UTC+13:00)
-                                                                            Nuku'alofa</option>
-                                                                        <option value="13">(UTC+13:00) Samoa
-                                                                        </option>
+                                                                    <label for="timezone" class="form-label">Time Zone</label>
+                                                                    <select id="timezone" name="timezone" onchange="myFunction()" required class="form-select">
+                                                                        <option value="Etc/GMT+12">(GMT-12:00) International Date Line West</option>
+                                                                        <option value="Pacific/Midway">(GMT-11:00) Midway Island, Samoa</option>
+                                                                        <option value="Pacific/Honolulu">(GMT-10:00) Hawaii</option>
+                                                                        <option value="US/Alaska">(GMT-09:00) Alaska</option>
+                                                                        <option value="America/Los_Angeles">(GMT-08:00) Pacific Time (US & Canada)</option>
+                                                                        <option value="America/Tijuana">(GMT-08:00) Tijuana, Baja California</option>
+                                                                        <option value="US/Arizona">(GMT-07:00) Arizona</option>
+                                                                        <option value="America/Chihuahua">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                                                                        <option value="US/Mountain">(GMT-07:00) Mountain Time (US & Canada)</option>
+                                                                        <option value="America/Managua">(GMT-06:00) Central America</option>
+                                                                        <option value="US/Central">(GMT-06:00) Central Time (US & Canada)</option>
+                                                                        <option value="America/Mexico_City">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+                                                                        <option value="Canada/Saskatchewan">(GMT-06:00) Saskatchewan</option>
+                                                                        <option value="America/Bogota">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+                                                                        <option value="US/Eastern">(GMT-05:00) Eastern Time (US & Canada)</option>
+                                                                        <option value="US/East-Indiana">(GMT-05:00) Indiana (East)</option>
+                                                                        <option value="Canada/Atlantic">(GMT-04:00) Atlantic Time (Canada)</option>
+                                                                        <option value="America/Caracas">(GMT-04:00) Caracas, La Paz</option>
+                                                                        <option value="America/Manaus">(GMT-04:00) Manaus</option>
+                                                                        <option value="America/Santiago">(GMT-04:00) Santiago</option>
+                                                                        <option value="Canada/Newfoundland">(GMT-03:30) Newfoundland</option>
+                                                                        <option value="America/Sao_Paulo">(GMT-03:00) Brasilia</option>
+                                                                        <option value="America/Argentina/Buenos_Aires">(GMT-03:00) Buenos Aires, Georgetown</option>
+                                                                        <option value="America/Godthab">(GMT-03:00) Greenland</option>
+                                                                        <option value="America/Montevideo">(GMT-03:00) Montevideo</option>
+                                                                        <option value="America/Noronha">(GMT-02:00) Mid-Atlantic</option>
+                                                                        <option value="Atlantic/Cape_Verde">(GMT-01:00) Cape Verde Is.</option>
+                                                                        <option value="Atlantic/Azores">(GMT-01:00) Azores</option>
+                                                                        <option value="Africa/Casablanca">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+                                                                        <option value="Etc/Greenwich">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+                                                                        <option value="Europe/Amsterdam">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+                                                                        <option value="Europe/Belgrade">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                                                                        <option value="Europe/Brussels">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+                                                                        <option value="Europe/Sarajevo">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+                                                                        <option value="Africa/Lagos">(GMT+01:00) West Central Africa</option>
+                                                                        <option value="Asia/Amman">(GMT+02:00) Amman</option>
+                                                                        <option value="Europe/Athens">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+                                                                        <option value="Asia/Beirut">(GMT+02:00) Beirut</option>
+                                                                        <option value="Africa/Cairo">(GMT+02:00) Cairo</option>
+                                                                        <option value="Africa/Harare">(GMT+02:00) Harare, Pretoria</option>
+                                                                        <option value="Europe/Helsinki">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+                                                                        <option value="Asia/Jerusalem">(GMT+02:00) Jerusalem</option>
+                                                                        <option value="Europe/Minsk">(GMT+02:00) Minsk</option>
+                                                                        <option value="Africa/Windhoek">(GMT+02:00) Windhoek</option>
+                                                                        <option value="Asia/Kuwait">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+                                                                        <option value="Europe/Moscow">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+                                                                        <option value="Africa/Nairobi">(GMT+03:00) Nairobi</option>
+                                                                        <option value="Asia/Tbilisi">(GMT+03:00) Tbilisi</option>
+                                                                        <option value="Asia/Tehran">(GMT+03:30) Tehran</option>
+                                                                        <option value="Asia/Muscat">(GMT+04:00) Abu Dhabi, Muscat</option>
+                                                                        <option value="Asia/Baku">(GMT+04:00) Baku</option>
+                                                                        <option value="Asia/Yerevan">(GMT+04:00) Yerevan</option>
+                                                                        <option value="Asia/Kabul">(GMT+04:30) Kabul</option>
+                                                                        <option value="Asia/Yekaterinburg">(GMT+05:00) Yekaterinburg</option>
+                                                                        <option value="Asia/Karachi">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+                                                                        <option value="Asia/Calcutta">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+                                                                        <option value="Asia/Calcutta">(GMT+05:30) Sri Jayawardenapura</option>
+                                                                        <option value="Asia/Katmandu">(GMT+05:45) Kathmandu</option>
+                                                                        <option value="Asia/Almaty">(GMT+06:00) Almaty, Novosibirsk</option>
+                                                                        <option value="Asia/Dhaka">(GMT+06:00) Astana, Dhaka</option>
+                                                                        <option value="Asia/Rangoon">(GMT+06:30) Yangon (Rangoon)</option>
+                                                                        <option value="Asia/Bangkok">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+                                                                        <option value="Asia/Krasnoyarsk">(GMT+07:00) Krasnoyarsk</option>
+                                                                        <option value="Asia/Hong_Kong">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+                                                                        <option value="Asia/Kuala_Lumpur">(GMT+08:00) Kuala Lumpur, Singapore</option>
+                                                                        <option value="Asia/Irkutsk">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+                                                                        <option value="Australia/Perth">(GMT+08:00) Perth</option>
+                                                                        <option value="Asia/Taipei">(GMT+08:00) Taipei</option>
+                                                                        <option value="Asia/Tokyo">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+                                                                        <option value="Asia/Seoul">(GMT+09:00) Seoul</option>
+                                                                        <option value="Asia/Yakutsk">(GMT+09:00) Yakutsk</option>
+                                                                        <option value="Australia/Adelaide">(GMT+09:30) Adelaide</option>
+                                                                        <option value="Australia/Darwin">(GMT+09:30) Darwin</option>
+                                                                        <option value="Australia/Brisbane">(GMT+10:00) Brisbane</option>
+                                                                        <option value="Australia/Canberra">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+                                                                        <option value="Australia/Hobart">(GMT+10:00) Hobart</option>
+                                                                        <option value="Pacific/Guam">(GMT+10:00) Guam, Port Moresby</option>
+                                                                        <option value="Asia/Vladivostok">(GMT+10:00) Vladivostok</option>
+                                                                        <option value="Asia/Magadan">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+                                                                        <option value="Pacific/Auckland">(GMT+12:00) Auckland, Wellington</option>
+                                                                        <option value="Pacific/Fiji">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+                                                                        <option value="Pacific/Tongatapu">(GMT+13:00) Nuku'alofa</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -932,27 +760,25 @@
                                         <div class="accordion-body">
                                             <div class="specific-time-block">
                                                 <div class="time-blocks">
-                                                    <label for="timeOnPage" class="form-label">Time on page</label>
-                                                    <input type="text" class="form-control" id="timeOnPage"
-                                                        value="0s">
+                                                    <label for="time_on_page" class="form-label">Time on page</label>
+                                                    <input type="text" id="time_on_page" class="form-control" name="time_on_page" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_page }}" required>
                                                 </div>
                                                 <div class="time-blocks">
-                                                    <label for="timeOnSite" class="form-label">Time on site</label>
-                                                    <input type="text" class="form-control" id="timeOnSite"
-                                                        value="0s">
+                                                    <label for="time_on_site" class="form-label">Time on site</label>
+                                                    <input type="text" id="time_on_site" class="form-control" name="time_on_site" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_site }}" required>
                                                 </div>
                                                 <div class="time-blocks">
-                                                    <label for="scrollPosition" class="form-label">Scroll
-                                                        Position</label>
-                                                    <input type="text" class="form-control" id="scrollPosition"
-                                                        value="0%">
+                                                    <label for="scroll_position" class="form-label">Scroll Position</label>
+                                                    <input type="text" id="scroll_position" class="form-control" name="scroll_position" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->scroll_position }}" required>
                                                 </div>
                                             </div>
                                             <div class="form-check form-switch">
-                                                <label class="form-check-label" for="specificTimeSelector">Exit
-                                                    Internet</label>
-                                                <input class="form-check-input" type="checkbox" role="switch"
-                                                    id="specificTimeSelector" checked>
+                                                <label class="form-check-label" for="exit_internet">Exit Internet</label>
+                                                @if(json_decode($widget->settings)[0]->exit_internet == 'on')
+                                                    <input type="checkbox" class="form-check-input" name="exit_internet" id="exit_internet" onchange="myFunction()" checked>
+                                                @else
+                                                    <input type="checkbox" class="form-check-input" name="exit_internet" id="exit_internet" onchange="myFunction()">
+                                                @endif
                                             </div>
                                             <p class="tips">Here you can set the type of user behavior that will
                                                 open the chat window automatically.</p>
@@ -973,16 +799,14 @@
                                             <div class="title">Notifications</div>
                                             <fieldset id="notificationSettingsOptions">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="bubbleBadge"
-                                                        checked>
-                                                    <label class="form-check-label" for="bubbleBadge">
+                                                    <input class="form-check-input" type="checkbox" name="notification[]" id="bubble_notification_bage" onchange="myFunction()" value="bubble_notification_bage" @foreach (json_decode($widget->settings)[0]->notification as $notify) @if($notify == 'bubble_notification_bage') checked @endif @endforeach>
+                                                    <label class="form-check-label" for="bubble_notification_bage">
                                                         Bubble notification badge
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="tabNotification" checked>
-                                                    <label class="form-check-label" for="tabNotification">
+                                                    <input class="form-check-input" type="checkbox" name="notification[]" id="show_notification_in_tab_tile" onchange="myFunction()" value="show_notification_in_tab_tile" @foreach (json_decode($widget->settings)[0]->notification as $notify) @if($notify == 'show_notification_in_tab_tile') checked @endif @endforeach>
+                                                    <label class="form-check-label" for="show_notification_in_tab_tile">
                                                         Show notification in browser tab tille
                                                     </label>
                                                 </div>
@@ -1022,28 +846,20 @@
                                         <div class="accordion-body">
                                             <fieldset id="colorPickers">
                                                 <div class="form-check">
-                                                    <label class="form-check-label"
-                                                        for="bubbleBackgroundColor">Bubble Background Color</label>
-                                                    <input class="form-check-input" type="color" value="#00FF9D"
-                                                        id="bubbleBackgroundColor">
+                                                    <label class="form-check-label" for="bubble_background_color">Bubble Background Color</label>
+                                                    <input class="form-check-input" type="color" id="bubble_background_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->bubble_background_color }}" name="bubble_background_color" value="#055147" required>
                                                 </div>
                                                 <div class="form-check">
-                                                    <label class="form-check-label" for="bubbleIconColor">Bubble
-                                                        Icon Color</label>
-                                                    <input class="form-check-input" type="color" value="#FF0000"
-                                                        id="bubbleIconColor">
+                                                    <label class="form-check-label" for="bubble_icon_color">Bubble Icon Color</label>
+                                                    <input class="form-check-input" type="color" id="bubble_icon_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->bubble_icon_color }}" name="bubble_icon_color" value="#487662" required>
                                                 </div>
                                                 <div class="form-check">
-                                                    <label class="form-check-label" for="buttonColor">Button
-                                                        Color</label>
-                                                    <input class="form-check-input" type="color" value="#AFFF00"
-                                                        id="buttonColor">
+                                                    <label class="form-check-label" for="button_color">Button Color</label>
+                                                    <input class="form-check-input" type="color" id="button_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->button_color }}" name="button_color" value="#79a37d" required>
                                                 </div>
                                                 <div class="form-check">
-                                                    <label class="form-check-label"
-                                                        for="headerBackgroundColor">Header Background Color</label>
-                                                    <input class="form-check-input" type="color" value="#AFFF00"
-                                                        id="headerBackgroundColor">
+                                                    <label class="form-check-label" for="header_background_color">Header Background Color</label>
+                                                    <input class="form-check-input" type="color" id="header_background_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->header_background_color }}" name="header_background_color" value="#92967d" required>
                                                 </div>
                                             </fieldset>
                                         </div>
@@ -1062,16 +878,16 @@
                                         data-bs-parent="#whatsappAppearanceAccordion">
                                         <div class="accordion-body">
                                             <div class="form-check form-switch">
-                                                <label class="form-check-label" for="enableAnimation">Enable
-                                                    Animation</label>
-                                                <input class="form-check-input" type="checkbox" role="switch"
-                                                    id="enableAnimation" checked>
+                                                <label class="form-check-label" for="enabled_animation">Enable Animation</label>
+                                                @if(json_decode($widget->settings)[0]->enabled_animation == 'on')
+                                                    <input type="checkbox" class="form-check-input" name="enabled_animation" id="enabled_animation" onchange="myFunction()" checked>
+                                                @else
+                                                    <input type="checkbox" class="form-check-input" name="enabled_animation" id="enabled_animation" onchange="myFunction()">
+                                                @endif
                                             </div>
                                             <div class="sroll-position">
-                                                <label for="bubblePosition" class="form-label">Scroll
-                                                    Position</label>
-                                                <input type="text" class="form-control" id="bubblePosition"
-                                                    value="0%">
+                                                <label for="scroll_position_appearance" class="form-label">Scroll Position</label>
+                                                <input type="text" id="scroll_position_appearance" class="form-control" name="scroll_position_appearance" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->scroll_position_appearance }}" value="0%" required>
                                             </div>
                                         </div>
                                     </div>
@@ -1090,14 +906,15 @@
                                         <div class="accordion-body">
                                             <div class="title">Button Corner Radius</div>
                                             <div class="chat-button-radius">
-                                                <label for="chatBtnRadius">
+                                                <label for="button_corner_radius">
                                                     <span class="name">Radius</span>
-                                                    <span class="value">43</span>
+                                                    <span class="value">100</span>
                                                 </label>
-                                                <input type="range" min="0" max="48" value="43" id="chatBtnRadius">
+                                                <input type="range" min="0" max="100" class="form-control-range" name="button_corner_radius" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->button_corner_radius }}" id="button_corner_radius">
+             
                                                 <div class="range">
                                                     <span>0</span>
-                                                    <span>48</span>
+                                                    <span>100</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1114,7 +931,8 @@
                                     <div id="customCssCollapse" class="accordion-collapse collapse"
                                         aria-labelledby="customCss" data-bs-parent="#whatsappAppearanceAccordion">
                                         <div class="accordion-body">
-                                            <textarea class="form-control" id="customStyles"></textarea>
+                                            <textarea class="form-control" id="custom_css" name="custom_css" rows="4" onchange="myFunction()" required>{{ json_decode($widget->settings)[0]->custom_css }}</textarea>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1262,7 +1080,7 @@
                         <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$project->id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
                         <!-- <div class="btn apply">Apply</div> -->
                         <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
-                        <div class="btn save">Save</div>
+                        <button type="submit" class="btn save">Save</button>
                     </div>
 
                 </div>
@@ -1270,6 +1088,8 @@
         </div>
     </div>
 </section>
+
+</form>
 
 
         <!-- Modal -->

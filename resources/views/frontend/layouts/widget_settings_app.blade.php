@@ -60,13 +60,13 @@
         
         <!-- Clockpicker -->
     <script>
-        $('#startTime').clockpicker({
+        $('#start_time').clockpicker({
             autoclose: true,
             twelvehour: true,
             donetext: 'Done',
         });
 
-        $('#endTime').clockpicker({
+        $('#end_time').clockpicker({
             autoclose: true,
             twelvehour: true,
             donetext: 'Done',
