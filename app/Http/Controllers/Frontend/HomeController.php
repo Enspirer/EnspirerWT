@@ -274,7 +274,7 @@ class HomeController extends Controller
         $position = $request->position;
         $alignment = $request->alignment;
         $where_display_chat = $request->where_display_chat;
-        $visitors = $request->visitors;
+        $specific_time_selector = $request->specific_time_selector;        
         $visitors = $request->visitors;
         $start_time = $request->start_time;
         $end_time = $request->end_time;
@@ -307,6 +307,7 @@ class HomeController extends Controller
             'position' => $position,
             'alignment' => $alignment,
             'where_display_chat' => $where_display_chat,
+            'specific_time_selector' => $specific_time_selector,
             'device' => $device_array,
             'visitors' => $visitors,
             'date_time' => $date_time_array,

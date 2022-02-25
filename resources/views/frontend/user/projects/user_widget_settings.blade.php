@@ -68,72 +68,43 @@
                         <div class="body">
                             <div class="templates">
                                 <div class="row g-4 row-cols-2">
-                                    <div class="col">
-                                        <div class="temps active">
-                                            <div class="checked-sign">
-                                                <i class="bi bi-check2"></i>
-                                            </div>
-                                            <a href="#">
-                                                <img src="{{url('images/Group 135.png')}}" alt="temp-image" class="temp-image">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="temps">
-                                            <div class="checked-sign">
-                                                <i class="bi bi-check2"></i>
-                                            </div>
-                                            <a href="#">
-                                                <img src="{{url('images/Group 139.png')}}" alt="temp-image" class="temp-image">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="temps">
-                                            <div class="checked-sign">
-                                                <i class="bi bi-check2"></i>
-                                            </div>
-                                            <a href="#">
-                                                <img src="{{url('images/Group -1.png')}}" alt="temp-image" class="temp-image">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="temps">
-                                            <div class="checked-sign">
-                                                <i class="bi bi-check2"></i>
-                                            </div>
-                                            <a href="#">
-                                                <img src="{{url('images/Group -1.png')}}" alt="temp-image" class="temp-image">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="temps">
-                                            <div class="checked-sign">
-                                                <i class="bi bi-check2"></i>
-                                            </div>
-                                            <a href="#">
-                                                <img src="{{url('images/Group 141.png')}}" alt="temp-image" class="temp-image">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="temps">
-                                            <div class="checked-sign">
-                                                <i class="bi bi-check2"></i>
-                                            </div>
-                                            <a href="#">
-                                                <img src="{{url('images/Group 140.png')}}" alt="temp-image" class="temp-image">
-                                            </a>
-                                        </div>
-                                    </div>
+
+                                    @if(count($whatsapp_chat) != 0)
+                                        @foreach($whatsapp_chat as $key =>$themes)
+                                            @if($themes->id == json_decode($widget->settings)[0]->template_layout)
+                                                <div class="col">
+                                                    <div class="temps active" name="{{$themes->id}}">
+                                                        <div class="checked-sign">
+                                                            <i class="bi bi-check2"></i>
+                                                        </div>
+                                                        <a href="#">
+                                                            <img src="{{uploaded_asset($themes->image)}}" alt="temp-image" class="temp-image">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            @else
+                                                <div class="col">
+                                                    <div class="temps" name="{{$themes->id}}">
+                                                        <div class="checked-sign">
+                                                            <i class="bi bi-check2"></i>
+                                                        </div>
+                                                        <a href="#">
+                                                            <img src="{{uploaded_asset($themes->image)}}" alt="temp-image" class="temp-image">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            @endif                                            
+                                        @endforeach
+                                    @endif
+
+
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="footer">
-                            <button class="btn-whatsapp"
-                                onclick="innerSection('content-block');navSwitcher('contentNav')">Continue</button>
+                            <a href="#" class="btn-whatsapp"
+                                onclick="innerSection('content-block');navSwitcher('contentNav')">Continue</a>
                         </div>
                     </div>
                 </div>
@@ -166,68 +137,188 @@
                                         <div class="accordion-body">
                                             <div class="title">Bubble Icone</div>
                                             <div class="row gx-1 gy-4 row-cols-3">
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('baseline_chat')" class="bubble-icone active">
-                                                        <img onchange="myFunction('baseline_chat')" id="baseline_chat" src="{{url('images/resources/baseline-chat-24px.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('baseline_email')" class="bubble-icone">
-                                                        <img onchange="myFunction('baseline_email')" id="baseline_email" src="{{url('images/resources/baseline-email-24px.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('baseline_forum')" class="bubble-icone">
-                                                        <img onchange="myFunction('baseline_forum')" id="baseline_forum" src="{{url('images/resources/baseline-forum-24px.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('chat')" class="bubble-icone">
-                                                        <img onchange="myFunction('chat')" id="chat" src="{{url('images/resources/chat (4).svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('whatsapp')" class="bubble-icone">
-                                                        <img onchange="myFunction('whatsapp')" id="whatsapp" src="{{url('images/resources/whatsapp-1.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('two_chat')" class="bubble-icone">
-                                                        <img onchange="myFunction('two_chat')" id="two_chat" src="{{url('images/resources/chat (3).svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('baseline_near_me')" class="bubble-icone">
-                                                        <img onchange="myFunction('baseline_near_me')" id="baseline_near_me" src="{{url('images/resources/baseline-near_me-24px.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('paper_plane')" class="bubble-icone">
-                                                        <img onchange="myFunction('paper_plane')" id="paper_plane" src="{{url('images/resources/paper-plane.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('send_message')" class="bubble-icone">
-                                                        <img onchange="myFunction('send_message')" id="send_message" src="{{url('images/resources/send-message.svg')}}"
-                                                            alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('direct_message')" class="bubble-icone">
-                                                        <img onchange="myFunction('direct_message')" id="direct_message" src="{{url('images/resources/dm.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('comment')" class="bubble-icone">
-                                                        <img onchange="myFunction('comment')" id="comment" src="{{url('images/resources/comment.svg')}}" alt="bubble-icone">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="#" onClick="myFunction('calender')" class="bubble-icone">
-                                                        <img onchange="myFunction('calender')" id="calender" src="{{url('images/resources/baseline-date_range-24px.svg')}}"
-                                                            alt="bubble-icone">
-                                                    </a>
-                                                </div>
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'chat-left-text-fill')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('chat-left-text-fill')" class="bubble-icone active">
+                                                            <img onchange="myFunction('chat-left-text-fill')" id="chat-left-text-fill" src="{{url('images/resources/baseline-chat-24px.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('chat-left-text-fill')" class="bubble-icone">
+                                                            <img onchange="myFunction('chat-left-text-fill')" id="chat-left-text-fill" src="{{url('images/resources/baseline-chat-24px.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'envelope-fill')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('envelope-fill')" class="bubble-icone active">
+                                                            <img onchange="myFunction('envelope-fill')" id="envelope-fill" src="{{url('images/resources/baseline-email-24px.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('envelope-fill')" class="bubble-icone">
+                                                            <img onchange="myFunction('envelope-fill')" id="envelope-fill" src="{{url('images/resources/baseline-email-24px.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'baseline_forum')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('baseline_forum')" class="bubble-icone active">
+                                                            <img onchange="myFunction('baseline_forum')" id="baseline_forum" src="{{url('images/resources/baseline-forum-24px.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                   <div class="col">
+                                                        <a href="#" onClick="myFunction('baseline_forum')" class="bubble-icone">
+                                                            <img onchange="myFunction('baseline_forum')" id="baseline_forum" src="{{url('images/resources/baseline-forum-24px.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'chat-dots-fill')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('chat-dots-fill')" class="bubble-icone active">
+                                                            <img onchange="myFunction('chat-dots-fill')" id="chat-dots-fill" src="{{url('images/resources/chat (4).svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                  <div class="col">
+                                                        <a href="#" onClick="myFunction('chat-dots-fill')" class="bubble-icone">
+                                                            <img onchange="myFunction('chat-dots-fill')" id="chat-dots-fill" src="{{url('images/resources/chat (4).svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'whatsapp')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('whatsapp')" class="bubble-icone active">
+                                                            <img onchange="myFunction('whatsapp')" id="whatsapp" src="{{url('images/resources/whatsapp-1.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('whatsapp')" class="bubble-icone">
+                                                            <img onchange="myFunction('whatsapp')" id="whatsapp" src="{{url('images/resources/whatsapp-1.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'two_chat')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('two_chat')" class="bubble-icone active">
+                                                            <img onchange="myFunction('two_chat')" id="two_chat" src="{{url('images/resources/chat (3).svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('two_chat')" class="bubble-icone">
+                                                            <img onchange="myFunction('two_chat')" id="two_chat" src="{{url('images/resources/chat (3).svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'cursor-fill')
+                                                     <div class="col">
+                                                        <a href="#" onClick="myFunction('cursor-fill')" class="bubble-icone active">
+                                                            <img onchange="myFunction('cursor-fill')" id="cursor-fill" src="{{url('images/resources/baseline-near_me-24px.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                     <div class="col">
+                                                        <a href="#" onClick="myFunction('cursor-fill')" class="bubble-icone">
+                                                            <img onchange="myFunction('cursor-fill')" id="cursor-fill" src="{{url('images/resources/baseline-near_me-24px.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'send-fill')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('send-fill')" class="bubble-icone active">
+                                                            <img onchange="myFunction('send-fill')" id="send-fill" src="{{url('images/resources/paper-plane.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('send-fill')" class="bubble-icone">
+                                                            <img onchange="myFunction('send-fill')" id="send-fill" src="{{url('images/resources/paper-plane.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'caret-right-fill')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('caret-right-fill')" class="bubble-icone active">
+                                                            <img onchange="myFunction('caret-right-fill')" id="caret-right-fill" src="{{url('images/resources/send-message.svg')}}"
+                                                                alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('caret-right-fill')" class="bubble-icone">
+                                                            <img onchange="myFunction('caret-right-fill')" id="caret-right-fill" src="{{url('images/resources/send-message.svg')}}"
+                                                                alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'send')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('send')" class="bubble-icone active">
+                                                            <img onchange="myFunction('send')" id="send" src="{{url('images/resources/dm.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                     <div class="col">
+                                                        <a href="#" onClick="myFunction('send')" class="bubble-icone">
+                                                            <img onchange="myFunction('send')" id="send" src="{{url('images/resources/dm.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'chat-square-text-fill')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('chat-square-text-fill')" class="bubble-icone active">
+                                                            <img onchange="myFunction('chat-square-text-fill')" id="chat-square-text-fill" src="{{url('images/resources/comment.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('chat-square-text-fill')" class="bubble-icone">
+                                                            <img onchange="myFunction('chat-square-text-fill')" id="chat-square-text-fill" src="{{url('images/resources/comment.svg')}}" alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+
+                                                @if(json_decode($widget->settings)[0]->bubble_icon == 'calendar2')
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('calendar2')" class="bubble-icone active">
+                                                            <img onchange="myFunction('calendar2')" id="calendar2" src="{{url('images/resources/baseline-date_range-24px.svg')}}"
+                                                                alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    <div class="col">
+                                                        <a href="#" onClick="myFunction('calendar2')" class="bubble-icone">
+                                                            <img onchange="myFunction('calendar2')" id="calendar2" src="{{url('images/resources/baseline-date_range-24px.svg')}}"
+                                                                alt="bubble-icone">
+                                                        </a>
+                                                    </div>
+                                                @endif
+                                                
+                                                
+                                                
+                                                
+                                                
+                                               
+                                                
+                                                
+                                               
+                                               
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -268,8 +359,7 @@
                                                     </div>
                                                 </div> -->
 
-                                                <div class="form-group mt-1">
-                                                    <label>Image <span class="text-danger">*</span></label>
+                                                <div class="form-group mt-3">                                                    
                                                     <div class="input-group" data-toggle="aizuploader" data-type="image">
                                                         <div class="input-group-prepend">
                                                             <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
@@ -280,11 +370,16 @@
                                                     <div class="file-preview box sm">
                                                     </div>
                                                 </div> 
-                                                <div onClick="myFunction()" class="btn rounded-pill text-light px-4 py-2 ms-2 mb-4 btn-success">Upload Image</div>
+                                                <div onClick="myFunction()" class="col-12 btn rounded-pill text-light px-4 py-2 ms-2 mt-3 mb-4 btn-success">Upload Image</div>
 
 
                                                 <div class="footer">
-                                                    <input type="text" id="agent_name" class="form-control" name="agent_name" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_site }}" required placeholder="Type you name here...">
+                                                    <input type="text" id="agent_name" class="form-control" name="agent_name" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->agent_name }}" required placeholder="Type you name here...">
+                                                </div>
+
+                                                <div class="footer">
+                                                    <label for="chat_header" class="mb-2">Chat Header</label>
+                                                    <input type="text" id="chat_header" class="form-control" name="chat_header" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->chat_header }}" required placeholder="Type Chat Header here...">
                                                 </div>
                                             </div>
 
@@ -321,14 +416,45 @@
                                                                 <input class="form-check-input" type="radio" name="caption" id="caption_4" onchange="myFunction()" value="Typically replies in a few hours" {{ json_decode($widget->settings)[0]->caption == 'Typically replies in a few hours' ? "checked" : "" }}>
                                                                 <label class="form-check-label" for="caption_4">Typically replies in a few hours</label>
                                                             </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="caption" id="caption_5" onchange="myFunction()" value="custom" {{ json_decode($widget->settings)[0]->caption == 'custom' ? "checked" : "" }}>
-                                                                <label class="form-check-label" for="caption_5">Custom caption</label>
-                                                            </div>
+                                                            @if(json_decode($widget->settings)[0]->caption != 'Typically replies instantly')
+                                                                @if(json_decode($widget->settings)[0]->caption != 'Typically replies in minutes')
+                                                                    @if(json_decode($widget->settings)[0]->caption != 'Typically replies within an hour')
+                                                                        @if(json_decode($widget->settings)[0]->caption != 'Typically replies in a few hours')
+
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="radio" name="caption" id="caption_5" onchange="myFunction()" value="custom" checked>
+                                                                                <label class="form-check-label" for="caption_5">Custom caption</label>
+                                                                            </div>
+                                                                        @else
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="radio" name="caption" id="caption_5" onchange="myFunction()" value="custom" >
+                                                                                <label class="form-check-label" for="caption_5">Custom caption</label>
+                                                                            </div>
+                                                                            
+                                                                        @endif
+                                                                    @else
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio" name="caption" id="caption_5" onchange="myFunction()" value="custom" >
+                                                                            <label class="form-check-label" for="caption_5">Custom caption</label>
+                                                                        </div>
+                                                                    @endif
+                                                                @else
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="caption" id="caption_5" onchange="myFunction()" value="custom" >
+                                                                        <label class="form-check-label" for="caption_5">Custom caption</label>
+                                                                    </div>
+                                                                @endif
+                                                            @else
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="caption" id="caption_5" onchange="myFunction()" value="custom" >
+                                                                    <label class="form-check-label" for="caption_5">Custom caption</label>
+                                                                </div>
+                                                            @endif
+                                                            
                                                         </div>
                                                     </fieldset>
                                                     <div class="custom-caption-block">
-                                                        <textarea class="form-control" id="customCaption" placeholder="Type your custom caption"></textarea>
+                                                        <textarea class="form-control" id="customCaption" onchange="myFunction()" placeholder="Type your welcome message">{{ json_decode($widget->settings)[0]->caption }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -363,7 +489,7 @@
                                         <div class="accordion-body">
                                             <div class="chat-button-block">
                                                 <div class="form-floating">
-                                                    <input type="text" id="btn_text" class="form-control" name="btn_text" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_site }}" required>
+                                                    <input type="text" id="btn_text" class="form-control" name="btn_text" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->btn_text }}" required>
                                                     <label for="btn_text">Button Text</label>
                                                 </div>
                                                 <div class="form-check form-switch">
@@ -389,8 +515,8 @@
                             </div>
                         </div>
                         <div class="footer">
-                            <button class="btn-whatsapp"
-                                onclick="innerSection('settings-block');navSwitcher('settingsNav')">Continue</button>
+                            <a href="#" class="btn-whatsapp"
+                                onclick="innerSection('settings-block');navSwitcher('settingsNav')">Continue</a>
                         </div>
                     </div>
                 </div>
@@ -629,7 +755,14 @@
                                                             </fieldset>
                                                             <div class="form-check form-switch">
                                                                 <label class="form-check-label" for="specific_time_selector">Set the Time Schedule</label>
-                                                                <input class="form-check-input" type="checkbox" role="switch" value="checked" name="specific_time_selector" id="specific_time_selector">
+
+                                                                @if(json_decode($widget->settings)[0]->specific_time_selector == 'on')
+                                                                    <input type="checkbox" class="form-check-input" name="specific_time_selector" id="specific_time_selector" onchange="myFunction()" checked>
+                                                                @else
+                                                                    <input type="checkbox" class="form-check-input" name="specific_time_selector" id="specific_time_selector" onchange="myFunction()">
+                                                                @endif
+
+
                                                             </div>
                                                             <div class="specific-time-block">
                                                                 <div class="time-blocks">
@@ -805,8 +938,8 @@
                             </div>
                         </div>
                         <div class="footer">
-                            <button class="btn-whatsapp"
-                                onclick="innerSection('appearance-block');navSwitcher('appearanceNav')">Continue</button>
+                            <a href="#" class="btn-whatsapp"
+                                onclick="innerSection('appearance-block');navSwitcher('appearanceNav')">Continue</a>
                         </div>
                     </div>
                 </div>
@@ -928,7 +1061,7 @@
                         </div>
                         <div class="footer">
                             <span class="footer-text">Like the Results? Try on your website!</span>
-                            <button class="btn-whatsapp">Add to Website</button>
+                            <a href="#" class="btn-whatsapp" data-toggle="modal" data-target="#get_widget_Modal">Add to Website</a>
                         </div>
                     </div>
                 </div>
@@ -1065,9 +1198,12 @@
                    
 
                     <div class="button-block">
-                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$project->id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
                         <!-- <div class="btn apply">Apply</div> -->
                         <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
+                        <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
+                        <input type="hidden" id="hidden_bubble_icon" name="hidden_bubble_icon" value="{{ json_decode($widget->settings)[0]->bubble_icon }}"/>
+                        
                         <!-- <button type="submit" class="btn save">Save</button> -->
                     </div>
 
@@ -1079,6 +1215,28 @@
 
 </form>
 
+
+<!-- Modal -->
+<div class="modal fade" id="get_widget_Modal" tabindex="-1" role="dialog" aria-labelledby="get_widget_Lable" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width: 680px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="get_widget_Lable">Get WidgetCode</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <code>
+                    &lt;div id="{{$widget->widget_key}}"&gt;&lt;/div&gt; <br>
+                    &lt;script src="{{url('')}}/whatsapp_widget/{{$widget->id}}/tallentorw.js"&gt;&lt;/script&gt;
+                </code>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 
         <!-- Modal -->
         <div class="modal fade" id="project_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1145,16 +1303,35 @@
                 if($(this).val() == timezone) {
                     $(this).attr('selected', 'selected');
                 }
-            });
+            });          
 
 
         });       
+
+        $('#captionOptions input[type=radio]').ready(function () {
+            const radioVal = $('#captionOptions input[type=radio]:checked').val();
+            // alert(radioVal);
+            if (radioVal == 'custom') {
+                $('.custom-caption-block').show();
+            } else {
+                $('.custom-caption-block').hide();
+            }
+        });
+
+        $('#specific_time_selector').ready(function () {
+            const schTime = $('#specific_time_selector:checked').val();
+            if (schTime == 'on') {
+                $('.specific-time-block').show();
+            } else {
+                $('.specific-time-block').hide();
+            }
+        });
     </script>
    
    <script>
 
        function template_layout_chage() {
-           template_layout = 2;
+           template_layout = tempVal;
            hidden_id = $('#hidden_id').val();
            $.post("{{url('/')}}/api/theme_changers",
                {
@@ -1181,12 +1358,35 @@
 
        }
 
+        
+       let tempVal;
+
+        $('#template-block .temps').on('click', function () {
+            tempVal = $('#template-block .temps.active').attr('name');
+            // console.log(tempVal);
+            myFunction();
+            template_layout_chage();
+        });
+
         function myFunction(bubble_icon = null){
 
             // alert(bubble_icon);
+
+            if(tempVal != null){
+                template_layout = tempVal;
+            }else{
+                template_layout = $('#hidden_template_id').val();
+            }
+            // console.log(template_layout);
+            if(bubble_icon != null){
+                bubble_icon = bubble_icon;
+            }else{
+                bubble_icon = $('#hidden_bubble_icon').val();
+            }
+
+
             
 
-            template_layout = $('#template_layout').val();
             whatsapp_number = $('#whatsapp_number').val();
             // bubble_icon = $('#bubble_icon').val();
             chat_header = $('#chat_header').val();
@@ -1199,14 +1399,6 @@
             btn_text = $('#btn_text').val();
 
             
-
-           
-            // start_chat = $('#start_chat').val();
-            // show_icon = $('#show_icon').val();
-            // position = $('#position').val();
-            // alignment = $('#alignment').val();            
-            // where_display_chat = $('#where_display_chat').val();
-          
             if($('#desktop').is(':checked')) {
                 desktop = $("#desktop").val();
             }
@@ -1227,7 +1419,6 @@
             }
             if($('#caption_2').is(':checked')) {
                 caption = $("#caption_2").val();
-
             }
             if($('#caption_3').is(':checked')) {
                 caption = $("#caption_3").val();
@@ -1236,11 +1427,13 @@
                 caption = $("#caption_4").val();
             }
             if($('#caption_5').is(':checked')) {
-                caption = $("#caption_5").val();
+                caption = $("#customCaption").val();
             }
-            if($('#caption_6').is(':checked')) {
-                caption = $("#caption_6").val();
-            }
+            // if($('#caption_6').is(':checked')) {
+            //     caption = $("#caption_6").val();
+            // }
+
+            
 
             if($('#all_pages').is(':checked')) {
                 where_display_chat = $("#all_pages").val();
@@ -1335,7 +1528,6 @@
             else{
                 specific_time_selector = null;
             }
-
             
             start_time = $('#start_time').val();
             end_time = $('#end_time').val();
@@ -1405,7 +1597,7 @@
 
             $.post("{{url('/')}}/api/user_api_chat",
                 {
-                    template_layout: 2,
+                    template_layout: template_layout,
                     whatsapp_number: whatsapp_number,
                     bubble_icon: bubble_icon,
                     chat_header: chat_header,
@@ -1454,6 +1646,8 @@
             document.getElementById('incorme').contentWindow.location.reload();
 
         }
+
+        
     </script>
 
 @endpush

@@ -15,7 +15,7 @@ class WidgetController extends Controller
     {        
         // dd($request);  
 
-        $default_settings = '[{"template_layout":"1","whatsapp_number":"079555","bubble_icon":null,"chat_header":null,"caption":"Typically replies in minutes","image":"1","agent_name":"30s","welcome_message":"Welcome Message!","btn_text":"30s","start_chat":null,"show_icon":null,"position":"Floating Bubble","alignment":"left","where_display_chat":"Specific Pages","device":["desktop"],"visitors":"all_visitors","date_time":["friday","saturday","sunday"],"start_time":"01:05PM","end_time":"02:20PM","timezone":"Asia\/Calcutta","time_on_page":"20s","time_on_site":"30s","scroll_position":"Center","exit_internet":"on","notification":["bubble_notification_bage"],"bubble_background_color":"#b31e14","bubble_icon_color":"#ffffff","button_color":"#0224bd","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right","button_corner_radius":"53","custom_css":"No"}]';
+        $default_settings = '[{"template_layout":"1","whatsapp_number":"0797894561","bubble_icon":"chat-left-text-fill","chat_header":"Header Example!","caption":"Typically replies in minutes","image":"1","agent_name":"Sunimal","welcome_message":"Welcome Message!","btn_text":"Start Chat","start_chat":"on","show_icon":"on","position":"Embed Bubble","alignment":"right","where_display_chat":"Excluded Pages","specific_time_selector":"on","device":["desktop","mobile_device"],"visitors":"new_visitors","date_time":["monday","friday","saturday","sunday"],"start_time":"12:05PM","end_time":"01:10PM","timezone":"Asia\/Calcutta","time_on_page":"10s","time_on_site":"20s","scroll_position":"right","exit_internet":"on","notification":["bubble_notification_bage"],"bubble_background_color":"#055147","bubble_icon_color":"#487662","button_color":"#79a37d","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right","button_corner_radius":"53","custom_css":"No"}]';
         
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $pin = mt_rand(1000000, 9999999)
@@ -74,132 +74,6 @@ class WidgetController extends Controller
         ]);
     }
 
-    public function user_widget_update(Request $request)
-    {        
-        dd($request);
-
-        $request->validate(
-            [
-                'welcome_message' => 'required',
-                'device' => 'required',
-                'date_time' => 'required',
-                'notification' => 'required',
-                'image' => 'required'
-            ],
-            [
-                'welcome_message.required' => 'Fill Welcome Message Section',
-                'device.required' => 'Fill Device Section',
-                'date_time.required' => 'Fill Date and Time Section',
-                'notification.required' => 'Fill Notification Section',
-                'image.required' => 'Select an Image'
-            ]
-        );
-
-        $device = $request->device;
-        $device_array = [];
-                    
-        foreach($device as $key => $dev){
-
-            array_push($device_array,$dev);
-        } 
-        
-        $date_time = $request->date_time;
-        $date_time_array = [];
-                    
-        foreach($date_time as $key => $date){
-
-            array_push($date_time_array,$date);
-        }  
-
-        $notification = $request->notification;
-        $notify_array = [];
-                    
-        foreach($notification as $key => $notify){
-
-            // $item_group = [                            
-            //     $notify
-            // ];
-
-            array_push($notify_array,$notify);
-        }  
-        
-        $template_layout = $request->template_layout;
-        $whatsapp_number = $request->whatsapp_number;
-        $bubble_icon = $request->bubble_icon;
-        $chat_header = $request->chat_header;
-        $caption = $request->caption;
-        $image = $request->image;
-        $welcome_message = $request->welcome_message;
-        $start_chat = $request->start_chat;
-        $show_icon = $request->show_icon;
-        $position = $request->position;
-        $alignment = $request->alignment;
-        $where_display_chat = $request->where_display_chat;
-        $visitors = $request->visitors;
-        $visitors = $request->visitors;
-        $start_time = $request->start_time;
-        $end_time = $request->end_time;
-        $timezone = $request->timezone;
-        $time_on_page = $request->time_on_page;
-        $time_on_site = $request->time_on_site;
-        $scroll_position = $request->scroll_position;
-        $exit_internet = $request->exit_internet;
-        $bubble_background_color = $request->bubble_background_color;
-        $bubble_icon_color = $request->bubble_icon_color;
-        $button_color = $request->button_color;
-        $header_background_color = $request->header_background_color;
-        $enabled_animation = $request->enabled_animation;
-        $scroll_position_appearance = $request->scroll_position_appearance;
-        $button_corner_radius = $request->button_corner_radius;
-        $custom_css = $request->custom_css;
-
-        $array = [
-            'template_layout' => $template_layout,
-            'whatsapp_number' => $whatsapp_number,
-            'bubble_icon' => $bubble_icon,
-            'chat_header' => $chat_header,
-            'caption' => $caption,
-            'image' => $image,
-            'welcome_message' => $welcome_message,
-            'start_chat' => $start_chat,
-            'show_icon' => $show_icon,
-            'position' => $position,
-            'alignment' => $alignment,            
-            'where_display_chat' => $where_display_chat,
-            'device' => $device_array,
-            'visitors' => $visitors,
-            'date_time' => $date_time_array,
-            'start_time' => $start_time,
-            'end_time' => $end_time,
-            'timezone' => $timezone,
-            'time_on_page' => $time_on_page,
-            'time_on_site' => $time_on_site,
-            'scroll_position' => $scroll_position,
-            'exit_internet' => $exit_internet,
-            'notification' => $notify_array,
-            'bubble_background_color' => $bubble_background_color,
-            'bubble_icon_color' => $bubble_icon_color,
-            'button_color' => $button_color,
-            'header_background_color' => $header_background_color,
-            'enabled_animation' => $enabled_animation,
-            'scroll_position_appearance' => $scroll_position_appearance,
-            'button_corner_radius' => $button_corner_radius,
-            'custom_css' => $custom_css,
-        ];
-
-        $final_array = [$array];
-     
-        $update = new Widgets;
-
-        $update->settings = json_encode($final_array);
-
-        Widgets::whereId($request->hidden_id)->update($update->toArray());
-
-        return back()->withFlashSuccess('Updated Successfully');      
-
-    }
-
-
-
+    
 
 }

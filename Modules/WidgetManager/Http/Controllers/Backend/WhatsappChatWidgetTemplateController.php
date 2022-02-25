@@ -34,12 +34,17 @@ class WhatsappChatWidgetTemplateController extends Controller
                 }   
                 return $status;
             })
+            ->addColumn('image', function($data){
+                $img = '<img src="'.uploaded_asset($data->image).'" style="width: 50%">';
+             
+                return $img;
+            })
             ->addColumn('action', function($data){
                 $btn = '<a href="'.route("admin.whatsappchat_widget.edit",$data->id).'" class="edit btn btn-secondary btn-sm" style="margin-right: 10px"><i class="fa fa-edit"></i> Edit </a>';
                 $btn .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
                 return $btn;
              })                               
-            ->rawColumns(['action','status'])
+            ->rawColumns(['action','status','image'])
             ->make(true);
       
     }
@@ -60,10 +65,15 @@ class WhatsappChatWidgetTemplateController extends Controller
      */
     public function store(Request $request)
     {
+        if($request->image == null){
+            return back()->withErrors('Insert a Screen Shot');
+        }  
+
         $add = new WhatsappChatWidgetTemplate;
 
         $add->name = $request->name;        
         $add->description = $request->description;
+        $add->image = $request->image;
         $add->source = $request->source;
         $add->user_id = auth()->user()->id;
         $add->status = $request->status;
@@ -105,10 +115,15 @@ class WhatsappChatWidgetTemplateController extends Controller
      */
     public function update(Request $request)
     {
+        if($request->image == null){
+            return back()->withErrors('Insert a Screen Shot');
+        }  
+        
         $update = new WhatsappChatWidgetTemplate;
 
         $update->name = $request->name;        
         $update->description = $request->description;
+        $update->image = $request->image;
         $update->source = $request->source;
         $update->user_id = auth()->user()->id;
         $update->status = $request->status;

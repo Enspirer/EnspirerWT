@@ -20,6 +20,18 @@
                             <textarea class="form-control" id="description" name="description" rows="4" required>{{$whatsapp_chat->description}}</textarea>
                         </div>
                         <div class="form-group">
+                            <label>Screen Shot <span style="color:red">*</span></label>
+                            <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                </div>
+                                <div class="form-control file-amount">Choose File</div>
+                                <input type="hidden" name="image" value="{{ $whatsapp_chat->image }}" class="selected-files" >
+                            </div>
+                            <div class="file-preview box sm">
+                            </div>
+                        </div> 
+                        <div class="form-group">
                             <label>Source</label>
                             <input type="text" class="form-control" value="{{ $whatsapp_chat->source }}" name="source" id="source">
                         </div>

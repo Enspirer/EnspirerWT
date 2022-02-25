@@ -255,7 +255,7 @@ div.innerHTML = `<style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <div id="wappwidgetblock">
-    @if($widget_meta->show_icon == 'Enabled')
+    @if($widget_meta->show_icon == 'on')
         @if($widget_meta->scroll_position_appearance == "Top")
             <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;top: 1px;margin-top: 30px;">
                 @elseif($widget_meta->scroll_position_appearance == "Bottom")
@@ -263,9 +263,9 @@ div.innerHTML = `<style>
                         @elseif($widget_meta->scroll_position_appearance == "Left")
                             <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;left: 1px;margin-left: 30px;">
                                 @elseif($widget_meta->scroll_position_appearance == "Right")
-                                    <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 50px;margin-right: 30px;">
+                                    <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
                                         @endif
-                                        <i style="color:{{$widget_meta->bubble_icon_color}}" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
+                                        <i style="color:{{$widget_meta->bubble_icon_color}};" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
                                     </div>
 
                                 @endif
@@ -276,7 +276,7 @@ div.innerHTML = `<style>
                 <div id="wappclose" onclick="wappclose()">&#10006;</div>
                 <div class="wappprofile">
                     <div class="wappimg">
-                        <img src="{{uploaded_asset($widget_meta->image)}}" alt="">
+                        <img src="{{uploaded_asset($widget_meta->image)}}" style="width:60px; height:60px;" alt="">
                     </div>
                     <div class="wappinfo">
                         <div class="wappname">{{$widget_meta->chat_header}}</div>
@@ -287,7 +287,7 @@ div.innerHTML = `<style>
             </div>
 
             <div class="wappbody">
-                @if($widget_meta->start_chat == 'Enabled')
+                @if($widget_meta->start_chat == 'on')
                 <div class="wappwelcomemsg">
                     <div class="wapptriangle"></div>
                     <!-- <div class="wappsendersname">Rayan Perera</div> -->
@@ -313,7 +313,7 @@ div.innerHTML = `<style>
                 </div>
                 <div id="wappbtn" onclick="startupform()" style="border-radius:{{$widget_meta->button_corner_radius}}px; background-color: {{$widget_meta->button_color}}">
                     <i class="bi bi-whatsapp"></i>
-                    <div class="wappbtntxt">Start Chat</div>
+                    <div class="wappbtntxt">{{ $widget_meta->btn_text}}</div>
                 </div>
             </div>
         </div>

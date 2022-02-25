@@ -382,6 +382,8 @@
 }
 
 #sideNavInner .footer .btn-whatsapp {
+    display: block;
+    text-decoration: none;
     color: #fff;
     font-size: 1rem;
     font-weight: 500;
