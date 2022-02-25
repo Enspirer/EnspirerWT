@@ -317,7 +317,7 @@
     
 @endsection
 
-@push('after-scripts')
+@push('after-scripts-slider')
 
 <script>
         var eShopSlider = new Splide('#eShopSlider', {

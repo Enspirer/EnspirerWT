@@ -57,6 +57,8 @@
 
         <script src="{{url('js/script.js')}}"></script>
 
+        @stack('after-scripts-slider')
+
         <script>
             var splide = new Splide('.splide', {
                 type: 'loop',
