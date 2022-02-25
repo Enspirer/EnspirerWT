@@ -57,41 +57,98 @@
 
         <script src="{{url('js/script.js')}}"></script>
 
+        @stack('after-scripts-slider')
+
+        <!-- Index Slider -->
+
         <script>
-            var splide = new Splide('.splide', {
+            var indexSlider = new Splide('#indexSlider', {
                 type: 'loop',
                 perPage: 1,
                 focus: 'center',
                 gap: '50px',
                 fixedWidth: '415px',
+                pagination: false,
             });
 
-            splide.mount();
+            indexSlider.mount();
         </script>
 
         <!-- Sign Up Slider -->
         <script>
-            var splide = new Splide('.sign-up-splide', {
+            var signUpSlider = new Splide('#signUpSlider', {
                 arrows: false,
                 classes: {
                     pagination: 'splide__pagination splide__pagination--custom',
                     page: 'splide__pagination__page indicator',
                 },
             });
-            splide.mount();
+            signUpSlider.mount();
         </script>
 
          <!-- Sign In Slider -->
         <script>
-            var splide = new Splide('.sign-in-splide', {
+            var signInSlider = new Splide('#signInSlider', {
                 arrows: false,
                 classes: {
                     pagination: 'splide__pagination splide__pagination--custom',
                     page: 'splide__pagination__page indicator',
                 },
             });
-            splide.mount();
+            signInSlider.mount();
         </script>
+
+        <!-- eShop Slider -->
+
+        <script>
+        var eShopSlider = new Splide('#eShopSlider', {
+            rewind: false,
+            fixedWidth: '47rem',
+            height: '18rem',
+            gap: '2rem',
+            pagination: false,
+        });
+
+        eShopSlider.mount();
+        // Slider active classes
+        const eShopSlidesList = document.getElementById("eShopSlider");
+        const eShopSlides = eShopSlidesList.querySelectorAll('.services-card');
+
+        eShopSlides.forEach(function (slide) {
+            slide.addEventListener("click", function () {
+                eShopSlides.forEach(function (tab) {
+                    tab.classList.remove("active");
+                });
+                slide.classList.add("active");
+            });
+        });
+    </script>
+
+    <!-- Contact Slider -->
+    <script>
+        var contactSlider = new Splide('#contactSlider', {
+            perPage: 3,
+            rewind: false,
+            fixedWidth: '300px',
+            fixedHeight: '320px',
+            gap: '3.5rem',
+        });
+
+        contactSlider.mount();
+
+        // Slider active classes
+        const slideList = document.getElementById("contactSlider");
+        const card = slideList.querySelectorAll('.slider-card');
+
+        card.forEach(function (item) {
+            item.addEventListener("click", function () {
+                card.forEach(function (tab) {
+                    tab.classList.remove("active");
+                });
+                item.classList.add("active");
+            });
+        });
+    </script>
                 
         @include('includes.partials.ga')
     </body>

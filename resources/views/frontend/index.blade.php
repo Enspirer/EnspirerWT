@@ -215,7 +215,7 @@
                     has been the industry's</div>
             </div>
             <div class="slider">
-                <div class="splide">
+                <div class="splide" id="indexSlider">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
