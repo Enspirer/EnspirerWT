@@ -15,7 +15,7 @@
                 <h6 class="subtitle">Contact Tallentor</h6>
             </div>
             <div class="slider">
-                <div class="splide">
+                <div class="splide" id="contactSlider">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
@@ -142,32 +142,3 @@
 
     
 @endsection
-
-@push('after-scripts')
-
-<script>
-        var splide = new Splide('.splide', {
-            perPage: 3,
-            rewind: false,
-            fixedWidth: '300px',
-            fixedHeight: '320px',
-            gap: '3.5rem',
-        });
-
-        splide.mount();
-
-        // Slider active classes
-        const slideList = document.getElementById("splide01-list");
-        const card = slideList.querySelectorAll('.slider-card');
-
-        card.forEach(function (item) {
-            item.addEventListener("click", function () {
-                card.forEach(function (tab) {
-                    tab.classList.remove("active");
-                });
-                item.classList.add("active");
-            });
-        });
-</script>
-
-@endpush

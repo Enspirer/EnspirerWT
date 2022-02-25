@@ -317,31 +317,3 @@
     
 @endsection
 
-@push('after-scripts-slider')
-
-<script>
-        var eShopSlider = new Splide('#eShopSlider', {
-            rewind: false,
-            fixedWidth: '47rem',
-            height: '18rem',
-            gap: '2rem',
-            pagination: false,
-        });
-
-        eShopSlider.mount();
-        // Slider active classes
-        const eShopSlidesList = document.getElementById("eShopSlider");
-        const eShopSlides = eShopSlidesList.querySelectorAll('.services-card');
-
-        eShopSlides.forEach(function (slide) {
-            slide.addEventListener("click", function () {
-                eShopSlides.forEach(function (tab) {
-                    tab.classList.remove("active");
-                });
-                slide.classList.add("active");
-            });
-        });
-    </script>
-
-@endpush
-
