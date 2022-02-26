@@ -139,13 +139,13 @@
                                             <div class="row gx-1 gy-4 row-cols-3">
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'chat-left-text-fill')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('chat-left-text-fill')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('chat-left-text-fill')" name="chat-left-text-fill" class="bubble-icone active">
                                                             <img onchange="myFunction('chat-left-text-fill')" id="chat-left-text-fill" src="{{url('images/resources/baseline-chat-24px.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('chat-left-text-fill')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('chat-left-text-fill')" name="chat-left-text-fill" class="bubble-icone">
                                                             <img onchange="myFunction('chat-left-text-fill')" id="chat-left-text-fill" src="{{url('images/resources/baseline-chat-24px.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -153,13 +153,13 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'envelope-fill')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('envelope-fill')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('envelope-fill')" name="envelope-fill" class="bubble-icone active">
                                                             <img onchange="myFunction('envelope-fill')" id="envelope-fill" src="{{url('images/resources/baseline-email-24px.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('envelope-fill')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('envelope-fill')" name="envelope-fill" class="bubble-icone">
                                                             <img onchange="myFunction('envelope-fill')" id="envelope-fill" src="{{url('images/resources/baseline-email-24px.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -167,13 +167,13 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'baseline_forum')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('baseline_forum')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('baseline_forum')" name="baseline_forum" class="bubble-icone active">
                                                             <img onchange="myFunction('baseline_forum')" id="baseline_forum" src="{{url('images/resources/baseline-forum-24px.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                    <div class="col">
-                                                        <a href="#" onClick="myFunction('baseline_forum')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('baseline_forum')" name="baseline_forum" class="bubble-icone">
                                                             <img onchange="myFunction('baseline_forum')" id="baseline_forum" src="{{url('images/resources/baseline-forum-24px.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -181,13 +181,13 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'chat-dots-fill')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('chat-dots-fill')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('chat-dots-fill')" name="chat-dots-fill" class="bubble-icone active">
                                                             <img onchange="myFunction('chat-dots-fill')" id="chat-dots-fill" src="{{url('images/resources/chat (4).svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                   <div class="col">
-                                                        <a href="#" onClick="myFunction('chat-dots-fill')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('chat-dots-fill')" name="chat-dots-fill" class="bubble-icone">
                                                             <img onchange="myFunction('chat-dots-fill')" id="chat-dots-fill" src="{{url('images/resources/chat (4).svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -195,13 +195,13 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'whatsapp')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('whatsapp')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('whatsapp')" name="whatsapp" class="bubble-icone active">
                                                             <img onchange="myFunction('whatsapp')" id="whatsapp" src="{{url('images/resources/whatsapp-1.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('whatsapp')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('whatsapp')" name="whatsapp" class="bubble-icone">
                                                             <img onchange="myFunction('whatsapp')" id="whatsapp" src="{{url('images/resources/whatsapp-1.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -209,13 +209,13 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'two_chat')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('two_chat')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('two_chat')" name="two_chat" class="bubble-icone active">
                                                             <img onchange="myFunction('two_chat')" id="two_chat" src="{{url('images/resources/chat (3).svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('two_chat')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('two_chat')" name="two_chat" class="bubble-icone">
                                                             <img onchange="myFunction('two_chat')" id="two_chat" src="{{url('images/resources/chat (3).svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -223,13 +223,13 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'cursor-fill')
                                                      <div class="col">
-                                                        <a href="#" onClick="myFunction('cursor-fill')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('cursor-fill')" name="cursor-fill" class="bubble-icone active">
                                                             <img onchange="myFunction('cursor-fill')" id="cursor-fill" src="{{url('images/resources/baseline-near_me-24px.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                      <div class="col">
-                                                        <a href="#" onClick="myFunction('cursor-fill')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('cursor-fill')" name="cursor-fill" class="bubble-icone">
                                                             <img onchange="myFunction('cursor-fill')" id="cursor-fill" src="{{url('images/resources/baseline-near_me-24px.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -237,13 +237,13 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'send-fill')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('send-fill')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('send-fill')" name="send-fill" class="bubble-icone active">
                                                             <img onchange="myFunction('send-fill')" id="send-fill" src="{{url('images/resources/paper-plane.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('send-fill')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('send-fill')" name="send-fill" class="bubble-icone">
                                                             <img onchange="myFunction('send-fill')" id="send-fill" src="{{url('images/resources/paper-plane.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -251,29 +251,28 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'caret-right-fill')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('caret-right-fill')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('caret-right-fill')" name="caret-right-fill" class="bubble-icone active">
                                                             <img onchange="myFunction('caret-right-fill')" id="caret-right-fill" src="{{url('images/resources/send-message.svg')}}"
                                                                 alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('caret-right-fill')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('caret-right-fill')" name="caret-right-fill" class="bubble-icone">
                                                             <img onchange="myFunction('caret-right-fill')" id="caret-right-fill" src="{{url('images/resources/send-message.svg')}}"
                                                                 alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @endif
-
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'send')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('send')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('send')" name="send" class="bubble-icone active">
                                                             <img onchange="myFunction('send')" id="send" src="{{url('images/resources/dm.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                      <div class="col">
-                                                        <a href="#" onClick="myFunction('send')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('send')" name="send" class="bubble-icone">
                                                             <img onchange="myFunction('send')" id="send" src="{{url('images/resources/dm.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -281,13 +280,13 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'chat-square-text-fill')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('chat-square-text-fill')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('chat-square-text-fill')" name="chat-square-text-fill" class="bubble-icone active">
                                                             <img onchange="myFunction('chat-square-text-fill')" id="chat-square-text-fill" src="{{url('images/resources/comment.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('chat-square-text-fill')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('chat-square-text-fill')" name="chat-square-text-fill" class="bubble-icone">
                                                             <img onchange="myFunction('chat-square-text-fill')" id="chat-square-text-fill" src="{{url('images/resources/comment.svg')}}" alt="bubble-icone">
                                                         </a>
                                                     </div>
@@ -295,14 +294,14 @@
 
                                                 @if(json_decode($widget->settings)[0]->bubble_icon == 'calendar2')
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('calendar2')" class="bubble-icone active">
+                                                        <a href="#" onClick="myFunction('calendar2')" name="calendar2" class="bubble-icone active">
                                                             <img onchange="myFunction('calendar2')" id="calendar2" src="{{url('images/resources/baseline-date_range-24px.svg')}}"
                                                                 alt="bubble-icone">
                                                         </a>
                                                     </div>
                                                 @else
                                                     <div class="col">
-                                                        <a href="#" onClick="myFunction('calendar2')" class="bubble-icone">
+                                                        <a href="#" onClick="myFunction('calendar2')" name="calendar2" class="bubble-icone">
                                                             <img onchange="myFunction('calendar2')" id="calendar2" src="{{url('images/resources/baseline-date_range-24px.svg')}}"
                                                                 alt="bubble-icone">
                                                         </a>
@@ -1202,7 +1201,6 @@
                         <!-- <div class="btn apply">Apply</div> -->
                         <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
                         <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
-                        <input type="hidden" id="hidden_bubble_icon" name="hidden_bubble_icon" value="{{ json_decode($widget->settings)[0]->bubble_icon }}"/>
                         
                         <!-- <button type="submit" class="btn save">Save</button> -->
                     </div>
@@ -1368,6 +1366,14 @@
             template_layout_chage();
         });
 
+        let icon;
+
+        $('#content-block .bubble-icone').on('click', function () {
+            icon = $('#content-block .bubble-icone.active').attr('name');
+            // console.log(icon);
+            myFunction();
+        });
+
         function myFunction(bubble_icon = null){
 
             // alert(bubble_icon);
@@ -1381,9 +1387,10 @@
             if(bubble_icon != null){
                 bubble_icon = bubble_icon;
             }else{
-                bubble_icon = $('#hidden_bubble_icon').val();
+                bubble_icon = icon;
             }
 
+            // console.log(bubble_icon);
 
             
 
@@ -1553,9 +1560,7 @@
             }
             else{
                 show_icon = null;
-            }
-
-            
+            }            
             
 
             if($('#bubble_notification_bage').is(':checked')) {
