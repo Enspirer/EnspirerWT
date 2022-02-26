@@ -19,6 +19,7 @@ use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\Frontend\ResourcesController;
 use App\Http\Controllers\Frontend\ServicesController;
 use App\Http\Controllers\Frontend\WidgetController;
+use App\Http\Controllers\Frontend\IMSController;
 
 /*
  * Frontend Controllers
@@ -80,6 +81,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('user_widget/settings/{id}', [WidgetController::class, 'user_widget_settings'])->name('user_widget.settings');
         Route::get('user_whatsapp_chat_preview/{widget_id}', [WidgetController::class, 'user_whatsapp_chat_preview'])->name('user_whatsapp_chat_preview');
         Route::post('user_widget/update', [WidgetController::class, 'user_widget_update'])->name('user_widget.update');
+        Route::get('user_widget/ims/{id}', [IMSController::class, 'index'])->name('user_widget.ims');
 
 
     });

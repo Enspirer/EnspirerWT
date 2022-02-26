@@ -103,7 +103,7 @@
                                                         <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}" class="edit btn btn-warning"><i class="fas fa-cog"></i> Settings </a>
                                                     </div>
                                                     <div class="col-2 text-center">
-                                                        <a href="" class="edit btn btn-info ms-3"><i class="fas fa-cog"></i> IMS </a>
+                                                        <a href="{{ route('frontend.user.user_widget.ims', $widgetlist->id) }}" class="edit btn btn-info ms-3"><i class="fas fa-cog"></i> IMS </a>
                                                     </div>
                                                     <div class="col-8 text-end">
                                                         <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
