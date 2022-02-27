@@ -55,6 +55,7 @@
                         </section>
 
                         @foreach($project_details as $project_detail)
+
                             <section id="sectionProperties">
                                 <div class="property-block mb-5">
                                     <div class="row g-0 p-4 border-bottom justify-content-between">
@@ -98,15 +99,39 @@
                                             <div class="row g-0 justify-content-evenly">
                                                 <div class="col-md-auto col-8">
                                                     <span class="block-title">SEO Result</span>
-                                                    <span class="seo-result">69/100</span>
+                                                    <span class="seo-result">{{$project_detail->score}}/100</span>
                                                 </div>
                                                 <div class="col-md-6 col-8">
-                                                    <span class="precentage">86.0<span class="sign">%</span></span>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                    @if($project_detail->score < 25)
+                                                        <span class="precentage">86.0<span class="sign">%</span></span>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" style="background-color:red; width: 25%"
+                                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    @elseif($project_detail->score > 50)
+                                                        <span class="precentage">86.0<span class="sign">%</span></span>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" style="background-color:#ffc11e; width: 25%"
+                                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                            </div>
+                                                        </div>
+                                                    @elseif($project_detail->score > 65)
+                                                        <span class="precentage">86.0<span class="sign">%</span></span>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" style="background-color:#008f23; width: 25%"
+                                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                            </div>
+                                                        </div>
+                                                    @elseif($project_detail->score < 0)
+                                                        <span class="precentage">86.0<span class="sign">%</span></span>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" style="background-color:red; width: 25%"
+                                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                            </div>
+                                                        </div>
+                                                    @endif
+
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +140,7 @@
                                                 <div class="row g-0 justify-content-evenly align-items-end">
                                                     <div class="col-sm-auto col-8 my-sm-0 my-2">
                                                         <span class="block-title mb-2">Analytics Result</span>
-                                                        <span class="sub-title">Visitors</span>
+                                                        <span class="sub-title">Website</span>
                                                         <span class="precentage up"><i
                                                                     class="bi bi-graph-up-arrow up"></i>86.6%</span>
                                                     </div>

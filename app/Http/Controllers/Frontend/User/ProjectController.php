@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+
+    public function index()
+    {
+
+    }
+
     public function show($id)
     {
         return view('frontend.user.projects.seo');

@@ -20,8 +20,9 @@
 
                         <div class="breadcrumb-block">
                             <ul class="breadcrumb mb-5">
-                                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                                <li class="breadcrumb-item active">{{App\Models\Projects::where('id',$project_id)->first()->name}}</li>
+                                <li class="breadcrumb-item"><a href="{{route('frontend.user.project.index')}}">Projects</a></li>
+                                <li class="breadcrumb-item">{{App\Models\Projects::where('id',$project_id)->first()->name}}</li>
+                                <li class="breadcrumb-item active">SEO</li>
                             </ul>
                         </div>
 

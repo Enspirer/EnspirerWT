@@ -39,8 +39,6 @@ class ProjectsController extends Controller
     public function seo_report($id, Request $request)
     {
 
-
-
         $project = Projects::where('id',$id)->first();
         return view('backend.projects.sections.seo_report',[
             'project' => $project

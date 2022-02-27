@@ -17,7 +17,7 @@ class Projects extends Model
     private $url;
 
 
-    public  function create_seo_report($request)
+    public  function create_seo_report($request , Projects $add)
     {
 
         $reportRequest = $request->reportRequest;
@@ -822,22 +822,24 @@ class Projects extends Model
         $totalPoints = 0;
         $resultPoints = 0;
         foreach ($data['results'] as $key => $value) {
-            $totalPoints = $totalPoints + config('settings.report_score_' . $value['importance']);
+            $totalPoints += 1;
 
             if ($value['passed']) {
-                $resultPoints += config('settings.report_score_' . $value['importance']);
+                $resultPoints +=  1;
             }
         }
 
+        $roundfunc = ($resultPoints/ $totalPoints) * 100;
 
-        $add = new Projects;
 
+
+        $add->url = $request->url;
         $add->name = $request->name;
         $add->project_type = $request->project_type;
         $add->url = $request->url;
         $add->seo_result = json_encode($data['results']);
         $add->user_id = auth()->user()->id;
-
+        $add->score = number_format($roundfunc,0);
         $add->save();
 
 

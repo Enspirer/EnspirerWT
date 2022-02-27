@@ -47,7 +47,6 @@ Route::get('services',[ServicesController::class, 'index'])->name('services');
 
 
 
-
 /*
  * These frontend controllers require the user to be logged in
  * All route names are prefixed with 'frontend.'
@@ -60,6 +59,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
+        Route::get('projects', [ProjectController::class, 'index'])->name('project.index');
 
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
