@@ -18,7 +18,6 @@ class CreateWhatsappChatWidgetTemplatesTable extends Migration
             $table->text('name');
             $table->text('description')->nullable();
             $table->text('source')->nullable();
-            $table->text('image')->nullable();
             $table->text('user_id')->nullable();
             $table->text('status')->nullable();
             $table->timestamps();

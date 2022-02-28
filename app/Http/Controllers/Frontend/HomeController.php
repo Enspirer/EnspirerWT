@@ -32,6 +32,7 @@ class HomeController extends Controller
         $client->project_id = $widget->project_id;
         $client->client_name = $request->username;
         $client->client_email = $request->useremail;
+        $client->phone_number = $request->phone_number;
         $client->message = $request->usermessage;
         $client->widget_id = $request->widget_id;
         $client->ip_address = $request->ip();
