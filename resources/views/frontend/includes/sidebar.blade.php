@@ -24,7 +24,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('frontend.user.project.index')}}">
                                 <i class="bi bi-layers"></i>
                                 <span class="text">Projects</span>
                                 <span class="tool-tip">Projects</span>
