@@ -14,7 +14,6 @@ class Projects extends Model
         return trim(preg_replace('/(?:\s{2,}+|[^\S ])/', ' ', $string));
     }
 
-    private $url;
 
 
     public  function create_seo_report($request )
@@ -829,19 +828,13 @@ class Projects extends Model
         }
 
         $roundfunc = ($resultPoints/ $totalPoints) * 100;
-
-
         $add = new Projects;
-
-
-
-        $add->url = $request->url;
         $add->name = $request->name;
         $add->project_type = $request->project_type;
         $add->url = $request->url;
         $add->seo_result = json_encode($data['results']);
         $add->user_id = auth()->user()->id;
-        $add->score = number_format($roundfunc,0);
+        $add->score = (string) $roundfunc;
         $add->save();
 
 
