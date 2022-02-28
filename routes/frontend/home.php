@@ -83,6 +83,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::post('user_widget/update', [WidgetController::class, 'user_widget_update'])->name('user_widget.update');
         Route::get('user_widget/ims/{id}', [IMSController::class, 'index'])->name('user_widget.ims');
         Route::get('user_widget/ims/individual_inbox/{id}', [IMSController::class, 'ims_individual_inbox'])->name('user_widget.ims_individual_inbox');
+        Route::post('user_widget/individual_inbox/store', [IMSController::class, 'ims_individual_store'])->name('ims_individual_inbox.store');
+
         Route::get('user_widget/ims_inbox/{id}', [IMSController::class, 'ims_inbox'])->name('user_widget.ims_inbox');
         Route::get('user_widget/ims_assigned/{id}', [IMSController::class, 'ims_assigned'])->name('user_widget.ims_assigned');
         Route::get('user_widget/ims_unassigned/{id}', [IMSController::class, 'ims_unassigned'])->name('user_widget.ims_unassigned');

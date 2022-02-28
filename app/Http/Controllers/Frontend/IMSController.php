@@ -173,4 +173,24 @@ class IMSController extends Controller
 
     }
 
+
+
+
+    public function ims_individual_store(Request $request)
+    {
+        // dd($request);
+
+        $add = new ImsClients;
+
+        $add->action_taken = $request->action_taken;
+        $add->comment = $request->comment;
+        $add->status = $request->status;
+        $add->manager_comment = $request->manager_comment;      
+        
+        ImsClients::whereId($request->hidden_id)->update($add->toArray());
+            
+        return back();
+        
+    }
+
 }

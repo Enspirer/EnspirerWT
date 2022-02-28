@@ -34,22 +34,22 @@ function assignColor(color) {
 $('#data_action-select').change(function () {
     const selectVal = $(this).val();
 
-    if (selectVal == 1) {
+    if (selectVal == 'Call') {
         $('#ims__icon-block .bi').hide();
         $('#ims__icon-block .call').show();
-    } else if (selectVal == 2) {
+    } else if (selectVal == 'Mail') {
         $('#ims__icon-block .bi').hide();
         $('#ims__icon-block .mail').show();
-    } else if (selectVal == 3) {
+    } else if (selectVal == 'Not responding') {
         $('#ims__icon-block .bi').hide();
         $('#ims__icon-block .not-responding').show();
-    } else if (selectVal == 4) {
+    } else if (selectVal == 'Meeting') {
         $('#ims__icon-block .bi').hide();
         $('#ims__icon-block .meeting').show();
-    } else if (selectVal == 5) {
+    } else if (selectVal == 'Message') {
         $('#ims__icon-block .bi').hide();
         $('#ims__icon-block .message').show();
-    } else if (selectVal == 6) {
+    } else if (selectVal == 'Other') {
         $('#ims__icon-block .bi').hide();
         $('#ims__icon-block .other').show();
     } else {
@@ -61,13 +61,13 @@ $('#data_action-select').change(function () {
 $('#data_status-select').change(function () {
     const selectVal = $(this).val();
 
-    if (selectVal == 1) {
+    if (selectVal == 'Deal close successfully') {
         $('.data--Status .indicator').removeClass("green-background yellow-background red-background");
         $('.data--Status .indicator').addClass("green-background");
-    } else if (selectVal == 2) {
+    } else if (selectVal == 'Pending') {
         $('.data--Status .indicator').removeClass("green-background yellow-background red-background");
         $('.data--Status .indicator').addClass("yellow-background");
-    } else if (selectVal == 3) {
+    } else if (selectVal == 'Not responding') {
         $('.data--Status .indicator').removeClass("green-background yellow-background red-background");
         $('.data--Status .indicator').addClass("red-background");
     } else {

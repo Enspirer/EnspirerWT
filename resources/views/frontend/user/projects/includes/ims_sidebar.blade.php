@@ -22,7 +22,7 @@
                                         <i class="bi bi-chevron-down"></i>
                                         <i class="bi bi-chat-text"></i>
                                         <div class="text">Conversations</div>
-                                        <div class="count">24</div>
+                                        <div class="count">{{count(Modules\WidgetManager\Entities\ImsClients::where('widget_id',$widget->id)->where('assign_by', null)->get())}}</div>
                                     </div>
                                 </a>
                                 <ul class="list-group ims__list-group collapse show" id="conversationNav">
@@ -34,14 +34,14 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="list-group-item">
+                                    <!-- <li class="list-group-item">
                                         <a href="{{ route('frontend.user.user_widget.ims_inbox', $widget->id) }}" class="nav-link" onclick="controlPanel('inbox')">
                                             <div class="nav-link__block">
                                                 <i class="bi bi-envelope"></i>
                                                 <div class="text">Inbox</div>
                                             </div>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li class="list-group-item">
                                         <a href="{{ route('frontend.user.user_widget.ims_assigned', $widget->id) }}" class="nav-link" onclick="controlPanel('assigned')">
                                             <div class="nav-link__block">

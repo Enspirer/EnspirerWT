@@ -14,19 +14,19 @@
                                         aria-expanded="false">
                                         <div class="profile">
                                             <div class="profile__pic">
-                                                <img src="{{url('images/Profile.jpg')}}" alt="">
+                                                <img src="{{auth()->user()->picture}}" alt="">
                                             </div>
-                                            <div class="name">John</div>
+                                            <div class="name">{{auth()->user()->first_name}} {{auth()->user()->last_name}}</div>
                                             <i class="bi bi-chevron-down"></i>
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="imsNavDrop">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="{{route('frontend.user.project.chat',$project->id)}}">Back to Widget</a></li>
+                                        <li><a class="dropdown-item" href="{{route('frontend.user.dashboard')}}">Back to Dashboard</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="{{route('frontend.auth.logout')}}">Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>

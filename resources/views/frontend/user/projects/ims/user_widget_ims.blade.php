@@ -18,22 +18,9 @@
                                 <div class="row g-0">
                                     <div class="col">
                                         <ul class="breadcrumb">
+                                            
                                             <li class="breadcrumb-item">
-                                                <a href="{{url('/')}}" class="breadcrumb-link">Home</a>
-                                            </li>
-                                            <li class="breadcrumb-item">
-                                                <a href="#" class="breadcrumb-link breadcrumb-arrow"><i
-                                                        class="bi bi-chevron-right"></i></a>
-                                            </li>
-                                            <li class="breadcrumb-item">
-                                                <a href="#" class="breadcrumb-link">Chat</a>
-                                            </li>
-                                            <li class="breadcrumb-item">
-                                                <a href="#" class="breadcrumb-link breadcrumb-arrow"><i
-                                                        class="bi bi-chevron-right"></i></a>
-                                            </li>
-                                            <li class="breadcrumb-item">
-                                                <a href="#" class="breadcrumb-link">Conversations</a>
+                                                <a class="breadcrumb-link">Conversations</a>
                                             </li>
                                             <li class="breadcrumb-item">
                                                 <a href="#" class="breadcrumb-link breadcrumb-arrow"><i
@@ -114,7 +101,7 @@
                                                                                     </label>
                                                                                 </td>
                                                                                 <td class="data--pic data-cell">
-                                                                                    <img src="{{url('images/Profile.jpg')}}" alt="">
+                                                                                    <img src="{{url('img/profile_avatar.jpg')}}" alt="">
                                                                                 </td>
                                                                                 <td class="data--name data-cell">
                                                                                     <div class="text">{{$client->client_name}}</div>
