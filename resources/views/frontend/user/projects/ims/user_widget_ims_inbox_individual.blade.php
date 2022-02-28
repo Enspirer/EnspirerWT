@@ -44,85 +44,88 @@
                                                             <div class="card">
                                                                 <div class="card-body">
                                                                     <div class="title">Action Panel</div>
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item">
-                                                                                <div class="action-block">
-                                                                                    <div class="label">Action by</div>
-                                                                                    <div class="action">
-                                                                                        <div class="text">Action by admin</div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li class="list-group-item">
-                                                                                <div class="action-block">
-                                                                                    <div class="label">Action Taken</div>
-                                                                                    <div class="action data--action-taken">
-                                                                                        <div class="icon-block" id="ims__icon-block">
-                                                                                            <i class="bi call bi-telephone-fill"></i>
-                                                                                            <i class="bi mail bi-envelope-fill"></i>
-                                                                                            <i class="bi not-responding bi-dash-circle-fill"></i>
-                                                                                            <i class="bi meeting bi-camera-video-fill"></i>
-                                                                                            <i class="bi message bi-chat-right-text-fill"></i>
-                                                                                            <i class="bi other bi-flag-fill"></i>
+                                                                        <form action="{{route('frontend.user.ims_individual_inbox.store')}}" method="post" enctype="multipart/form-data">
+                                                                        {{csrf_field()}}
+                                                                            <ul class="list-group">
+                                                                                <li class="list-group-item">
+                                                                                    <div class="action-block">
+                                                                                        <div class="label">Action by</div>
+                                                                                        <div class="action">
+                                                                                            <div class="text">Action by {{$ims_client->assign_by}}</div>
                                                                                         </div>
-                                                                                        <select class="form-select" id="data_action-select">
-                                                                                            <option selected>Choose...</option>
-                                                                                            <option value="1">Call
-                                                                                            </option>
-                                                                                            <option value="2">Mail
-                                                                                            </option>
-                                                                                            <option value="3">Not responding
-                                                                                            </option>
-                                                                                            <option value="4">Meeting</option>
-                                                                                            <option value="5">Message</option>
-                                                                                            <option value="6">Other</option>
-                                                                                        </select>
                                                                                     </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li class="list-group-item">
-                                                                                <div class="action-block">
-                                                                                    <div class="label">Comment</div>
-                                                                                    <div class="action">
-                                                                                        <input type="text" class="form-control" placeholder="This is the sample comment ">
+                                                                                </li>
+                                                                                <li class="list-group-item">
+                                                                                    <div class="action-block">
+                                                                                        <div class="label">Action Taken</div>
+                                                                                        <div class="action data--action-taken">
+                                                                                            <div class="icon-block" id="ims__icon-block">
+                                                                                                <i class="bi call bi-telephone-fill"></i>
+                                                                                                <i class="bi mail bi-envelope-fill"></i>
+                                                                                                <i class="bi not-responding bi-dash-circle-fill"></i>
+                                                                                                <i class="bi meeting bi-camera-video-fill"></i>
+                                                                                                <i class="bi message bi-chat-right-text-fill"></i>
+                                                                                                <i class="bi other bi-flag-fill"></i>
+                                                                                            </div>
+                                                                                            <select class="form-select" name="action_taken" id="data_action-select" required>
+                                                                                                <option value="" selected disabled>Choose...</option>
+                                                                                                <option value="Call">Call</option>
+                                                                                                <option value="Mail">Mail</option>
+                                                                                                <option value="Not responding">Not responding</option>
+                                                                                                <option value="Meeting">Meeting</option>
+                                                                                                <option value="Message">Message</option>
+                                                                                                <option value="Other">Other</option>
+                                                                                            </select>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li class="list-group-item">
-                                                                                <div class="action-block">
-                                                                                    <div class="label">Status</div>
-                                                                                    <div class="action data--Status">
-                                                                                        <div class="indicator"></div>
-                                                                                        <select class="form-select" id="data_status-select">
-                                                                                            <option selected>Choose...</option>
-                                                                                            <option value="1">Deal close
-                                                                                                successfully </option>
-                                                                                            <option value="2">Pending</option>
-                                                                                            <option value="3">Not responding
-                                                                                            </option>
-                                                                                        </select>
+                                                                                </li>
+                                                                                <li class="list-group-item">
+                                                                                    <div class="action-block">
+                                                                                        <div class="label">Comment</div>
+                                                                                        <div class="action">
+                                                                                            <input type="text" name="comment" class="form-control" placeholder="This is the sample comment" required>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li class="list-group-item">
-                                                                                <div class="action-block">
-                                                                                    <div class="label">Manager Comments</div>
-                                                                                    <div class="action">
-                                                                                        <input type="text" class="form-control" placeholder="This is the sample comment ">
+                                                                                </li>
+                                                                                <li class="list-group-item">
+                                                                                    <div class="action-block">
+                                                                                        <div class="label">Status</div>
+                                                                                        <div class="action data--Status">
+                                                                                            <div class="indicator"></div>
+                                                                                            <select class="form-select" name="status" id="data_status-select" required>
+                                                                                                <option value="" selected disabled>Choose...</option>
+                                                                                                <option value="Deal close successfully">Deal close successfully</option>
+                                                                                                <option value="Pending">Pending</option>
+                                                                                                <option value="Not responding">Not responding</option>
+                                                                                            </select>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li class="list-group-item">
-                                                                                <div class="action-block">
-                                                                                    <div class="label">Report</div>
-                                                                                    <div class="action">
-                                                                                        <a href="#" class="download-btn">
-                                                                                            <i class="bi bi-download"></i>
-                                                                                        </a>
+                                                                                </li>
+                                                                                <li class="list-group-item">
+                                                                                    <div class="action-block">
+                                                                                        <div class="label">Manager Comments</div>
+                                                                                        <div class="action">
+                                                                                            <input type="text" name="manager_comment" class="form-control" placeholder="This is the sample comment" required>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </ul>
+                                                                                </li>
+                                                                                <li class="list-group-item">
+                                                                                    <div class="action-block">
+                                                                                        <div class="label">Report</div>
+                                                                                        <div class="action">
+                                                                                            <a href="#" class="download-btn">
+                                                                                                <i class="bi bi-download"></i>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="list-group-item">
+                                                                                    <div class="action-block">                                                                                    
+                                                                                        <button type="submit" class="btn btn-success">Submit</button>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </form>
                                                                 </div>
                                                             </div>
 
