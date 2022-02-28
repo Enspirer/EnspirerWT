@@ -342,6 +342,7 @@
 
 .section-content {
     background-color: #f4f4f4f5;
+    min-height: 100vh;
     padding: 2rem 0;
 }
 
