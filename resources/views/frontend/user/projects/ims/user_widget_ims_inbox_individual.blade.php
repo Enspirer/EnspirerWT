@@ -69,12 +69,12 @@
                                                                                             </div>
                                                                                             <select class="form-select" name="action_taken" id="data_action-select" required>
                                                                                                 <option value="" selected disabled>Choose...</option>
-                                                                                                <option value="Call">Call</option>
-                                                                                                <option value="Mail">Mail</option>
-                                                                                                <option value="Not responding">Not responding</option>
-                                                                                                <option value="Meeting">Meeting</option>
-                                                                                                <option value="Message">Message</option>
-                                                                                                <option value="Other">Other</option>
+                                                                                                <option value="Call" {{$ims_client->action_taken == 'Call' ? "selected" : ""}}>Call</option>
+                                                                                                <option value="Mail" {{$ims_client->action_taken == 'Mail' ? "selected" : ""}}>Mail</option>
+                                                                                                <option value="Not responding" {{$ims_client->action_taken == 'Not responding' ? "selected" : ""}}>Not responding</option>
+                                                                                                <option value="Meeting" {{$ims_client->action_taken == 'Meeting' ? "selected" : ""}}>Meeting</option>
+                                                                                                <option value="Message" {{$ims_client->action_taken == 'Message' ? "selected" : ""}}>Message</option>
+                                                                                                <option value="Other" {{$ims_client->action_taken == 'Other' ? "selected" : ""}}>Other</option>
                                                                                             </select>
                                                                                         </div>
                                                                                     </div>
@@ -83,7 +83,7 @@
                                                                                     <div class="action-block">
                                                                                         <div class="label">Comment</div>
                                                                                         <div class="action">
-                                                                                            <input type="text" name="comment" class="form-control" placeholder="This is the sample comment" required>
+                                                                                            <input type="text" value="{{$ims_client->comment}}" name="comment" class="form-control" placeholder="This is the sample comment" required>
                                                                                         </div>
                                                                                     </div>
                                                                                 </li>
@@ -94,9 +94,9 @@
                                                                                             <div class="indicator"></div>
                                                                                             <select class="form-select" name="status" id="data_status-select" required>
                                                                                                 <option value="" selected disabled>Choose...</option>
-                                                                                                <option value="Deal close successfully">Deal close successfully</option>
-                                                                                                <option value="Pending">Pending</option>
-                                                                                                <option value="Not responding">Not responding</option>
+                                                                                                <option value="Deal close successfully" {{$ims_client->status == 'Deal close successfully' ? "selected" : ""}}>Deal close successfully</option>
+                                                                                                <option value="Pending" {{$ims_client->status == 'Pending' ? "selected" : ""}}>Pending</option>
+                                                                                                <option value="Not responding" {{$ims_client->status == 'Not responding' ? "selected" : ""}}>Not responding</option>
                                                                                             </select>
                                                                                         </div>
                                                                                     </div>
@@ -105,7 +105,7 @@
                                                                                     <div class="action-block">
                                                                                         <div class="label">Manager Comments</div>
                                                                                         <div class="action">
-                                                                                            <input type="text" name="manager_comment" class="form-control" placeholder="This is the sample comment" required>
+                                                                                            <input type="text" value="{{$ims_client->manager_comment}}" name="manager_comment" class="form-control" placeholder="This is the sample comment" required>
                                                                                         </div>
                                                                                     </div>
                                                                                 </li>
@@ -120,7 +120,8 @@
                                                                                     </div>
                                                                                 </li>
                                                                                 <li class="list-group-item">
-                                                                                    <div class="action-block">                                                                                    
+                                                                                    <div class="action-block">                    
+                                                                                        <input type="hidden" name="hidden_id" value="{{$ims_client->id}}">                                                                
                                                                                         <button type="submit" class="btn btn-success">Submit</button>
                                                                                     </div>
                                                                                 </li>
