@@ -97,7 +97,7 @@ class IMSController extends Controller
         // dd($id);
         $widget = Widgets::where('id',$id)->first();
         $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        $ims_client = ImsClients::where('widget_id',$widget->id)->where('status','Deal close successfully')->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_closed',[
@@ -188,7 +188,7 @@ class IMSController extends Controller
         $add->manager_comment = $request->manager_comment;      
         
         ImsClients::whereId($request->hidden_id)->update($add->toArray());
-            
+
         return back();
         
     }
