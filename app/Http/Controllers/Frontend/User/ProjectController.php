@@ -10,7 +10,7 @@ class ProjectController extends Controller
 
     public function index()
     {
-
+        return view('frontend.user.projects.index');
     }
 
     public function show($id)
