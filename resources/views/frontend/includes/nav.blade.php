@@ -112,18 +112,18 @@
     <!-- Modal -->
         <div class="modal fade" id="project_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content p-2">
+                <div class="modal-content">
                     
                     <form action="{{route('frontend.user.user_projects.store')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
                         <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">Create Project</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" alt=""> Create your project</h4>
+                            <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label style="font-size:16px">Project Name <span class="text-danger">*</span></label>
-                                <input type="text" style="font-size:15px;" id="name" class="form-control mt-2" name="name" required>
+                                <label style="font-size:16px">Project Name<span class="text-danger">*</span></label>
+                                <input type="text" style="font-size:15px;" id="name" class="form-control mt-2" name="name" placeholder="Type your project name" required>
                             </div>
                             <div class="form-group mt-3">
                                 <label style="font-size:16px">Project Type <span class="text-danger">*</span></label>
@@ -134,9 +134,9 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group mt-3">
+                            <div class="form-group">
                                 <label style="font-size:16px">URL <span class="text-danger">*</span></label>
-                                <input type="text" style="font-size:15px;" id="url" class="form-control mt-2" name="url" required>
+                                <input type="text" style="font-size:15px;" id="url" class="form-control mt-2" name="url" placeholder="Type your URL" required>
                             </div>
                         </div>
                         <div class="modal-footer mt-3">
