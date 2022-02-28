@@ -11,10 +11,10 @@
                                                 @if(isset($project_id))
                                                     <div class="image">
                                                         @if(get_seo_result($project_id)->favicon->value == null)
-                                                            <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
+                                                            <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image" onerror="this.src='{{url('globeicon.png')}}';">
 
                                                         @else
-                                                            <img src="{{get_seo_result($project_id)->favicon->value}}" alt="propery-image">
+                                                            <img src="{{get_seo_result($project_id)->favicon->value}}" alt="propery-image" onerror="this.src='{{url('globeicon.png')}}';">
                                                         @endif
                                                     </div>
                                                     <div class="content">
@@ -47,9 +47,9 @@
 
                                                                 @if(get_seo_result($project->id) != null)
                                                                     @if(get_seo_result($project->id)->favicon->value == null)
-                                                                        <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
+                                                                        <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image" onerror="this.src='{{url('globeicon.png')}}';">
                                                                     @else
-                                                                        <img src="{{get_seo_result($project->id)->favicon->value}}" alt="propery-image">
+                                                                        <img src="{{get_seo_result($project->id)->favicon->value}}" alt="propery-image" onerror="this.src='{{url('globeicon.png')}}';">
                                                                     @endif
                                                                 @endif
                                                                 
