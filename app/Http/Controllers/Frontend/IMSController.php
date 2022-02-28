@@ -18,12 +18,159 @@ class IMSController extends Controller
         $ims_client = ImsClients::where('widget_id',$widget->id)->get();
         // dd($ims_client);
     
-        return view('frontend.user.projects.user_widget_ims',[
+        return view('frontend.user.projects.ims.user_widget_ims',[
             'project' => $project,
             'widget' => $widget,
             'ims_client' => $ims_client
         ]);
         
+    }
+
+    public function ims_individual_inbox($id)
+    {
+        // dd($id);
+
+        $ims_client = ImsClients::where('id',$id)->first();
+
+        $widget = Widgets::where('id',$ims_client->widget_id)->first();
+        $project = Projects::where('id',$ims_client->project_id)->first();           
+        // dd($ims_client);
+    
+        return view('frontend.user.projects.ims.user_widget_ims_inbox_individual',[
+            'project' => $project,
+            'widget' => $widget,
+            'ims_client' => $ims_client
+        ]);
+        
+    }
+
+    public function ims_inbox($id)
+    {
+        // dd($id);
+        $widget = Widgets::where('id',$id)->first();
+        $project = Projects::where('id',$widget->project_id)->first();           
+        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        // dd($ims_client);
+    
+        return view('frontend.user.projects.ims.user_widget_ims_inbox',[
+            'project' => $project,
+            'widget' => $widget,
+            'ims_client' => $ims_client
+        ]);
+        
+    }
+
+    public function ims_assigned($id)
+    {
+        // dd($id);
+        $widget = Widgets::where('id',$id)->first();
+        $project = Projects::where('id',$widget->project_id)->first();           
+        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        // dd($ims_client);
+    
+        return view('frontend.user.projects.ims.user_widget_ims_assigned',[
+            'project' => $project,
+            'widget' => $widget,
+            'ims_client' => $ims_client
+        ]);
+        
+    }
+
+    public function ims_unassigned($id)
+    {
+        // dd($id);
+        $widget = Widgets::where('id',$id)->first();
+        $project = Projects::where('id',$widget->project_id)->first();           
+        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        // dd($ims_client);
+    
+        return view('frontend.user.projects.ims.user_widget_ims_unassigned',[
+            'project' => $project,
+            'widget' => $widget,
+            'ims_client' => $ims_client
+        ]);
+        
+    }
+
+    public function ims_closed($id)
+    {
+        // dd($id);
+        $widget = Widgets::where('id',$id)->first();
+        $project = Projects::where('id',$widget->project_id)->first();           
+        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        // dd($ims_client);
+    
+        return view('frontend.user.projects.ims.user_widget_ims_closed',[
+            'project' => $project,
+            'widget' => $widget,
+            'ims_client' => $ims_client
+        ]);
+        
+    }
+
+    public function ims_spam($id)
+    {
+        // dd($id);
+        $widget = Widgets::where('id',$id)->first();
+        $project = Projects::where('id',$widget->project_id)->first();           
+        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        // dd($ims_client);
+    
+        return view('frontend.user.projects.ims.user_widget_ims_spam',[
+            'project' => $project,
+            'widget' => $widget,
+            'ims_client' => $ims_client
+        ]);
+        
+    }
+
+    public function ims_clients($id)
+    {
+        // dd($id);
+        $widget = Widgets::where('id',$id)->first();
+        $project = Projects::where('id',$widget->project_id)->first();           
+        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        // dd($ims_client);
+    
+        return view('frontend.user.projects.ims.user_widget_ims_clients',[
+            'project' => $project,
+            'widget' => $widget,
+            'ims_client' => $ims_client
+        ]);
+        
+    }
+
+    public function ims_analytics($id)
+    {
+        // dd($id);
+        $widget = Widgets::where('id',$id)->first();
+        $project = Projects::where('id',$widget->project_id)->first();           
+        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        // dd($ims_client);
+    
+        return view('frontend.user.projects.ims.user_widget_ims_analytics',[
+            'project' => $project,
+            'widget' => $widget,
+            'ims_client' => $ims_client
+        ]);
+        
+    }
+
+
+    public function assigned_by(Request $request)
+    {     
+        // dd($request);
+        
+        $id = $request->id;
+        $value = $request->value;
+   
+        $update = new ImsClients;
+        $update->assign_by = $value;
+
+        ImsClients::whereId($id)->update($update->toArray());
+
+        // return json_encode($output);                  
+
     }
 
 }

@@ -17,9 +17,8 @@ class Projects extends Model
     private $url;
 
 
-    public  function create_seo_report($request , Projects $add)
+    public  function create_seo_report($request )
     {
-
         $reportRequest = $request->reportRequest;
         $reportResponse = $reportRequest->getBody()->getContents();
         $reportRequestStats = $request->reportRequestTransferStats->getHandlerStats();
@@ -830,6 +829,9 @@ class Projects extends Model
         }
 
         $roundfunc = ($resultPoints/ $totalPoints) * 100;
+
+
+        $add = new Projects;
 
 
 

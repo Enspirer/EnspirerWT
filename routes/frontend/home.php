@@ -82,6 +82,14 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('user_whatsapp_chat_preview/{widget_id}', [WidgetController::class, 'user_whatsapp_chat_preview'])->name('user_whatsapp_chat_preview');
         Route::post('user_widget/update', [WidgetController::class, 'user_widget_update'])->name('user_widget.update');
         Route::get('user_widget/ims/{id}', [IMSController::class, 'index'])->name('user_widget.ims');
+        Route::get('user_widget/ims/individual_inbox/{id}', [IMSController::class, 'ims_individual_inbox'])->name('user_widget.ims_individual_inbox');
+        Route::get('user_widget/ims_inbox/{id}', [IMSController::class, 'ims_inbox'])->name('user_widget.ims_inbox');
+        Route::get('user_widget/ims_assigned/{id}', [IMSController::class, 'ims_assigned'])->name('user_widget.ims_assigned');
+        Route::get('user_widget/ims_unassigned/{id}', [IMSController::class, 'ims_unassigned'])->name('user_widget.ims_unassigned');
+        Route::get('user_widget/ims_closed/{id}', [IMSController::class, 'ims_closed'])->name('user_widget.ims_closed');
+        Route::get('user_widget/ims_spam/{id}', [IMSController::class, 'ims_spam'])->name('user_widget.ims_spam');
+        Route::get('user_widget/ims_clients/{id}', [IMSController::class, 'ims_clients'])->name('user_widget.ims_clients');
+        Route::get('user_widget/ims_analytics/{id}', [IMSController::class, 'ims_analytics'])->name('user_widget.ims_analytics');
 
 
     });

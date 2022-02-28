@@ -16,13 +16,13 @@ $('#sideNavs .nav-link').click(function () {
 
 // Assign Color
 function assignColor(color) {
-    if (color.value == 1) {
+    if (color.value == 'Admin') {
         color.classList.remove("select-admin", "select-manager", "select-agent");
         color.classList.add("select-admin");
-    } else if (color.value == 2) {
+    } else if (color.value == 'Manager') {
         color.classList.remove("select-admin", "select-manager", "select-agent");
         color.classList.add("select-manager");
-    } else if (color.value == 3) {
+    } else if (color.value == 'Agent') {
         color.classList.remove("select-admin", "select-manager", "select-agent");
         color.classList.add("select-agent");
     } else {

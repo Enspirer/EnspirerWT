@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\IMSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\Frontend\HomeController;
 
 Route::post('api_chat', [HomeController::class, 'api_chat'])->name('api_chat');
 Route::post('user_api_chat', [HomeController::class, 'user_api_chat'])->name('user_api_chat');
+Route::post('assigned_by', [IMSController::class, 'assigned_by'])->name('assigned_by');
 Route::post('theme_changers', [HomeController::class, 'theme_changers'])->name('theme_changers');
 
 Route::post('whatsapp_widget/redirection', [HomeController::class,'save_client'])->name('save_client');
