@@ -87,8 +87,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-auto col-7 my-sm-0 my-2 order-4">
-                                                        <button type="button" class="btn"><i
-                                                                    class="bi bi-trash"></i>Delete</button>
+                                                        <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="btn delete" data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -244,5 +243,34 @@
     </section>
 
     
-    
+    <div class="modal fade" id="deletedashwidget" tabindex="-1" aria-labelledby="deletedashwidgetLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="deletedashwidgetLabel">Delete Widget</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Do you want to delete this?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
 @endsection
+
+@push('after-scripts')
+
+    <script>
+        $('.delete').on('click', function() {
+            let link = $(this).attr('href');
+            $('.modal-footer a').attr('href', link);
+        })
+    </script>
+
+@endpush
