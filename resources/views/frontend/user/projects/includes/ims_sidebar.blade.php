@@ -15,7 +15,7 @@
                     <div class="side-nav__navs" id="sideNavs">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active" type="button" data-bs-toggle="collapse"
+                                <a href="#" class="nav-link {{ Request::segment(2)=='ims' ? 'active' : (Request::segment(2)=='ims_assigned' ? 'active' :(Request::segment(2)=='ims_unassigned' ? 'active' :(Request::segment(2)=='ims_closed' ? 'active' :(Request::segment(2)=='ims_spam' ? 'active' :null)) ) )   }}" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#conversationNav" aria-controls="conversationNav"
                                     aria-expanded="true" aria-label="Toggle navigation">
                                     <div class="nav-link__block">
@@ -27,7 +27,7 @@
                                 </a>
                                 <ul class="list-group ims__list-group collapse show" id="conversationNav">
                                     <li class="list-group-item">
-                                        <a href="{{ route('frontend.user.user_widget.ims', $project->id) }}" class="nav-link active" onclick="controlPanel('admin')">
+                                        <a href="{{ route('frontend.user.user_widget.ims', $project->id) }}" class="nav-link {{Request::segment(2)=='ims' ? 'active' :null }}">
                                             <div class="nav-link__block">
                                                 <i class="bi bi-person-lines-fill"></i>
                                                 <div class="text">Admin</div>
@@ -43,7 +43,7 @@
                                         </a>
                                     </li> -->
                                     <li class="list-group-item">
-                                        <a href="{{ route('frontend.user.user_widget.ims_assigned', $project->id) }}" class="nav-link {{Request::segment(3)=='ims_assigned' ? 'active' :null }}" onclick="controlPanel('assigned')">
+                                        <a href="{{ route('frontend.user.user_widget.ims_assigned', $project->id) }}" class="nav-link {{Request::segment(2)=='ims_assigned' ? 'active' :null }}">
                                             <div class="nav-link__block">
                                                 <i class="bi bi-person-check"></i>
                                                 <div class="text">Assigned</div>
@@ -51,7 +51,7 @@
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="{{ route('frontend.user.user_widget.ims_unassigned', $project->id) }}" class="nav-link" onclick="controlPanel('unassigned')">
+                                        <a href="{{ route('frontend.user.user_widget.ims_unassigned', $project->id) }}" class="nav-link {{Request::segment(2)=='ims_unassigned' ? 'active' :null }}">
                                             <div class="nav-link__block">
                                                 <i class="bi bi-person-x"></i>
                                                 <div class="text">Unassigned</div>
@@ -59,7 +59,7 @@
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="{{ route('frontend.user.user_widget.ims_closed', $project->id) }}" class="nav-link" onclick="controlPanel('closed')">
+                                        <a href="{{ route('frontend.user.user_widget.ims_closed', $project->id) }}" class="nav-link {{Request::segment(2)=='ims_closed' ? 'active' :null }}">
                                             <div class="nav-link__block">
                                                 <i class="bi bi-file-earmark-check"></i>
                                                 <div class="text">Closed</div>
@@ -67,7 +67,7 @@
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="{{ route('frontend.user.user_widget.ims_spam', $project->id) }}" class="nav-link" onclick="controlPanel('spam')">
+                                        <a href="{{ route('frontend.user.user_widget.ims_spam', $project->id) }}" class="nav-link {{Request::segment(2)=='ims_spam' ? 'active' :null }}">
                                             <div class="nav-link__block">
                                                 <i class="bi bi-exclamation-octagon"></i>
                                                 <div class="text">Spam</div>
@@ -77,17 +77,17 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('frontend.user.user_widget.ims_clients', $project->id) }}" class="nav-link" onclick="controlPanel('clients')">
+                                <a href="{{ route('frontend.user.user_widget.ims_clients', $project->id) }}" class="nav-link {{Request::segment(2)=='ims_clients' ? 'active' :null }}">
                                     <div class="nav-link__block">
                                         <i class="bi bi-chevron-down ims__hidden"></i>
                                         <i class="bi bi-people"></i>
                                         <div class="text">Clients</div>
-                                        <div class="count">2400</div>
+                                        <div class="count">{{count(Modules\WidgetManager\Entities\ImsClients::where('project_id',$project->id)->get()->unique('client_email'))}}</div>
                                     </div>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('frontend.user.user_widget.ims_analytics', $project->id) }}" class="nav-link" onclick="controlPanel('analytics')">
+                                <a href="{{ route('frontend.user.user_widget.ims_analytics', $project->id) }}" class="nav-link {{Request::segment(2)=='ims_analytics' ? 'active' :null }}">
                                     <div class="nav-link__block">
                                         <i class="bi bi-chevron-down ims__hidden"></i>
                                         <i class="bi bi-speedometer2"></i>
