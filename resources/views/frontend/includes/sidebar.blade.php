@@ -47,8 +47,8 @@
                     </ul>
                 </div>
                 <div class="side-nav-footer">
-                    <span class="copyright">&copy; MarketingManner.2022</span>
-                    <p class="theme">Marketing Manner - analytics platform for solution of all type of business
+                    <span class="copyright">&copy; Tallentor.2022</span>
+                    <p class="theme">Tallentor - analytics platform for solution of all type of business
                     </p>
                 </div>
             </div>
