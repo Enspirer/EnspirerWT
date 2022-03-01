@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class ReportsController extends Controller
 {
     public function index() {
+        
         $reports = Projects::where('user_id',auth()->user()->id)->get();
+
         return view('frontend.user.reports.index',[
             'reports' => $reports
         ]);
