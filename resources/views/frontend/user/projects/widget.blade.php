@@ -43,6 +43,9 @@
 
                         <section id="sectionWhatsappWidget">
 
+
+
+
                             <div class="block-2 mb-5">
                                 <div class="row g-0 mb-4">
                                     <div class="col">
@@ -51,13 +54,14 @@
                                 </div>
                                 <div class="row gx-5 justify-content-between">
                                     <div class="col-6">
-                                        <div class="innwer-wrapper px-4 mt-4 dotted-border" style="height: 95%;">
-                                            <button type="button" class="btn-whatsapp"  data-bs-toggle="modal" data-bs-target="#exampleModal">Create Widget</button>
+                                        <div class="innwer-wrapper px-4 mt-4 dotted-border" style="height: 200px;">
+                                            <button type="button" class="btn-whatsapp"  data-bs-toggle="modal" data-bs-target="#createWidgetModal">Create
+                                                Widget</button>
                                         </div>
                                     </div>
                                     @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
                                         <div class="col-6">
-                                            <div class="inner-wrapper px-4 mt-4" style="height: 95%;">
+                                            <div class="inner-wrapper px-4 mt-4" >
                                                 <div class="row g-0 mt-4">
                                                     <div class="header">
                                                         <span class="title">{{$widgetlist->widget_type}}</span>
@@ -152,61 +156,58 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" style="width: 1090px;height: 120px;max-width: 1010px;max-height: 1000px;">
+<div class="modal fade" id="createWidgetModal" tabindex="-1" aria-labelledby="createWidgetModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
         <div class="card">
-            <div class="card-header" style="font-size: 20px;padding-left: 30px;padding-top: 10px;padding-bottom: 10px;">
-                Widget Explorer
+            <div class="card-header">
+                <h5 class="modal-title" id="createWidgetModalLabel">Widget Explorer</h5>
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+                </button>
             </div>
-            <div class="card-body" style="height: 500px;overflow-y: scroll;">
-                <div class="block-1 mb-5" style="border-style: solid;border-width: 1px;border-color: gray;">
+            <div class="card-body">
+                <div class="block-1">
                     <div class="row g-0">
                         <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
-                            <div class="inner-wrapper p-4">
+                            <div class="inner-wrapper">
                                 <div class="col">
-                                    <div class="row g-0 mb-3">
-                                        <div class="col">
+                                    <div class="row g-0 align-items-center justify-content-between">
+                                        <div class="col-7">
                                             <div class="header">
                                                 <span class="title">Whatsapp Chat</span>
-                                                <i class="bi bi-whatsapp"></i>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="row gx-4">
-                                        <div class="col-8">
-                                            <p class="body-text">Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Mollitia sit maxime nam sapiente illum,
-                                                consequuntur aperiam quia reprehenderit deserunt delectus quos
-                                                nostrum expedita omnis saepe, in labore quidem numquam quaerat.
-                                                Mollitia sit maxime nam sapiente illum,
-                                                consequuntur aperiam quia reprehenderit.
+                                            <p class="body-text">Give users an opportunity to contact you on WhatsApp straight from your website. 
                                             </p>
-                                        </div>
-                                        <div class="col-4">
                                             <div class="button-block">
                                                 <input type="hidden" name="project_id" value="{{$project_id}}">
                                                 <input type="hidden" name="widget_type" value="Whatsapp Chat">
-                                                <button type="submit" class="btn-whatsapp"></i>Create Widget</button><i class="bi bi-whatsapp"></i>
+                                                <button type="submit" class="btn-whatsapp"></i>Create Widget</button>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <p class="footer-text">Give users an opportunity to contact you on
-                                                Whatsapp straight from your website.</p>
-                                        </div>
+                                        <div class="col-4">
+                                            <div class="whatsapp-feature-block">
+                                                    <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                    <div class="title">WhatsApp Chat</div>
+                                                    <div class="subtitle">Entertainment</div>
+                                                    <div class="star-rating">
+                                                        <i class="bi active bi-star"></i>
+                                                        <i class="bi active bi-star"></i>
+                                                        <i class="bi active bi-star"></i>
+                                                        <i class="bi active bi-star"></i>
+                                                        <i class="bi bi-star"></i>
+                                                    </div>
+                                                    <div class="pricing">Free</div>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-                </div>
-                
-
+                </div>              
             </div>
-
         </div>
     </div>
   </div>
