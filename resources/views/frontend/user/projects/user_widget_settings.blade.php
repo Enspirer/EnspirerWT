@@ -59,9 +59,6 @@
 
                 <div id="template-block" class="inner-section">
                     <div class="inner-wrapper">
-                        <span class="nav-toggle" onclick="innerSliderToggle()">
-                            <a class="toggle-icon" href="#">&lt;</a>
-                        </span>
                         <div class="header">
                             <div class="title">Select a template to start</div>
                         </div>
@@ -111,9 +108,6 @@
 
                 <div id="content-block" class="inner-section">
                     <div class="inner-wrapper">
-                        <span class="nav-toggle" onclick="innerSliderToggle()">
-                            <a class="toggle-icon" href="#">&lt;</a>
-                        </span>
                         <div class="header">
                             <div class="title">Content</div>
                             <div class="whatsapp-no-input">
@@ -522,9 +516,6 @@
 
                 <div id="settings-block" class="inner-section">
                     <div class="inner-wrapper">
-                        <span class="nav-toggle" onclick="innerSliderToggle()">
-                            <a class="toggle-icon" href="#">&lt;</a>
-                        </span>
                         <div class="header">
                             <div class="title">Settings</div>
                         </div>
@@ -945,9 +936,6 @@
 
                 <div id="appearance-block" class="inner-section">
                     <div class="inner-wrapper">
-                        <span class="nav-toggle" onclick="innerSliderToggle()">
-                            <a class="toggle-icon" href="#">&lt;</a>
-                        </span>
                         <div class="header">
                             <div class="title">Appearance</div>
                         </div>
@@ -1072,7 +1060,7 @@
     <div class="body-section">
         <div class="row g-0">
             <div class="nav-bar px-4" id="navBar">
-                <div class="row g-0 align-items-center justify-content-lg-between flex-lg-row flex-column-reverse">
+                <div class="row g-0 align-items-center justify-content-end flex-lg-row flex-column-reverse">
                     <div class="col-auto ms-lg-0 ms-auto">
                         <div class="property-block">
                             <ul class="navbar-nav">

@@ -51,14 +51,14 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 265px;
+    width: 705px;
 }
 
 .main-window .body-section {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: calc(100% - 265px);
+    width: calc(100% - 705px);
 }
 
 .main-window .body-section .section-content {
@@ -327,8 +327,9 @@
 #sideNavInner .inner-wrapper {
     background-color: #F5F6F8;
     width: 440px;
-    min-height: 100vh;
-    position: absolute;
+    height: 100vh;
+    overflow-y: scroll;
+    position: fixed;
     z-index: 11;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -339,6 +340,19 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+
+#sideNavInner .inner-wrapper::-webkit-scrollbar {
+    width: .35rem;
+}
+
+#sideNavInner .inner-wrapper::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#sideNavInner .inner-wrapper::-webkit-scrollbar-thumb {
+    background-color: #E5E5E5;
+    border-radius: 50px;
 }
 
 #sideNavInner .inner-wrapper .nav-toggle {

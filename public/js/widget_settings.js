@@ -36,12 +36,6 @@ function innerSection(sectionName) {
     document.getElementById(sectionName).style.display = "block";
 }
 
-// Inner side nav toggle
-
-function innerSliderToggle() {
-    sideNavInner.classList.toggle("active");
-}
-
 //  Templates
 const temps = sideNavInner.querySelectorAll('.temps');
 
