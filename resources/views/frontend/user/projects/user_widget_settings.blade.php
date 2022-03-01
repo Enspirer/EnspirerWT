@@ -1080,18 +1080,18 @@
                                     <a class="nav-link" href="#" id="propertyDropdown" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         <div class="property">
-                                            @if(isset($project_id))
+                                            @if($project->id != null)
                                                 <div class="image">
-                                                    @if(get_seo_result($project_id)->favicon->value == null)
+                                                    @if(get_seo_result($project->id)->favicon->value == null)
                                                         <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
 
                                                     @else
-                                                        <img src="{{get_seo_result($project_id)->favicon->value}}" alt="propery-image">
+                                                        <img src="{{get_seo_result($project->id)->favicon->value}}" alt="propery-image">
                                                     @endif
                                                 </div>
                                                 <div class="content">
-                                                    <h6 class="site-name">{{\App\Models\Projects::where('id',$project_id)->first()->name}}</h6>
-                                                    <span class="site-url">{{\App\Models\Projects::where('id',$project_id)->first()->url}}</span>
+                                                    <h6 class="site-name">{{\App\Models\Projects::where('id',$project->id)->first()->name}}</h6>
+                                                    <span class="site-url">{{\App\Models\Projects::where('id',$project->id)->first()->url}}</span>
                                                 </div>
                                                  <div class="dropdown-icon">
                                                     <i class="bi bi-chevron-down"></i>

@@ -43,9 +43,6 @@
 
                         <section id="sectionWhatsappWidget">
 
-
-
-
                             <div class="block-2 mb-5">
                                 <div class="row g-0 mb-4">
                                     <div class="col">
@@ -54,14 +51,13 @@
                                 </div>
                                 <div class="row gx-5 justify-content-between">
                                     <div class="col-6">
-                                        <div class="innwer-wrapper px-4 mt-4 dotted-border" style="height: 200px;">
-                                            <button type="button" class="btn-whatsapp"  data-bs-toggle="modal" data-bs-target="#exampleModal">Create
-                                                Widget</button>
+                                        <div class="innwer-wrapper px-4 mt-4 dotted-border" style="height: 95%;">
+                                            <button type="button" class="btn-whatsapp"  data-bs-toggle="modal" data-bs-target="#exampleModal">Create Widget</button>
                                         </div>
                                     </div>
                                     @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
                                         <div class="col-6">
-                                            <div class="inner-wrapper px-4 mt-4" >
+                                            <div class="inner-wrapper px-4 mt-4" style="height: 95%;">
                                                 <div class="row g-0 mt-4">
                                                     <div class="header">
                                                         <span class="title">{{$widgetlist->widget_type}}</span>

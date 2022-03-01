@@ -69,6 +69,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="ims__data-table">
+                                                        @if(count($ims_client) != 0)
                                                             <table class="table table-borderless">
                                                                 <thead>
                                                                     <tr class="data-row">
@@ -86,104 +87,58 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr class="data-row">
-                                                                        <td class="data--select data-cell">
-                                                                            <input class="form-check-input"
-                                                                                type="checkbox" value="">
-                                                                        </td>
-                                                                        <td class="data--fav data-cell">
-                                                                            <label class="fav-btn">
-                                                                                <input type="checkbox">
-                                                                                <i class="bi bi-star-fill"></i>
-                                                                                <i class="bi bi-star"></i>
-                                                                            </label>
-                                                                        </td>
-                                                                        <td class="data--pic data-cell">
-                                                                            <img src="{{url('images/Profile.jpg')}}" alt="">
-                                                                        </td>
-                                                                        <td class="data--name data-cell">
-                                                                            <div class="text">Rayan Perera</div>
-                                                                        </td>
-                                                                        <td class="data--date data-cell">
-                                                                            <div class="text">18, Feb 2022</div>
-                                                                        </td>
-                                                                        <td class="data--comment data-cell">
-                                                                            <input type="text" class="form-control"
-                                                                                placeholder="This is the sample comment ">
-                                                                        </td>
-                                                                        <td class="data--chat data-cell">
-                                                                            <a href="#" class="chat-btn">
-                                                                                <i
-                                                                                    class="bi bi-chat-left-text-fill"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                        <td class="data--conversation data-cell">
-                                                                            <div class="text">01</div>
-                                                                        </td>
-                                                                        <td class="data--last-access data-cell">
-                                                                            <div class="text">19 hours ago</div>
-                                                                        </td>
-                                                                        <td class="data--delete data-cell">
-                                                                            <a href="#" class="delete-btn">
-                                                                                <i class="bi bi-trash-fill"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                        <td class="data--option data-cell">
-                                                                            <a href="#" class="option-btn">
-                                                                                <i class="bi bi-three-dots"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr class="data-row">
-                                                                        <td class="data--select data-cell">
-                                                                            <input class="form-check-input"
-                                                                                type="checkbox" value="">
-                                                                        </td>
-                                                                        <td class="data--fav data-cell">
-                                                                            <label class="fav-btn">
-                                                                                <input type="checkbox">
-                                                                                <i class="bi bi-star-fill"></i>
-                                                                                <i class="bi bi-star"></i>
-                                                                            </label>
-                                                                        </td>
-                                                                        <td class="data--pic data-cell">
-                                                                            <img src="{{url('images/Profile.jpg')}}" alt="">
-                                                                        </td>
-                                                                        <td class="data--name data-cell">
-                                                                            <div class="text">Rayan Perera</div>
-                                                                        </td>
-                                                                        <td class="data--date data-cell">
-                                                                            <div class="text">18, Feb 2022</div>
-                                                                        </td>
-                                                                        <td class="data--comment data-cell">
-                                                                            <input type="text" class="form-control"
-                                                                                placeholder="This is the sample comment ">
-                                                                        </td>
-                                                                        <td class="data--chat data-cell">
-                                                                            <a href="#" class="chat-btn">
-                                                                                <i
-                                                                                    class="bi bi-chat-left-text-fill"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                        <td class="data--conversation data-cell">
-                                                                            <div class="text">01</div>
-                                                                        </td>
-                                                                        <td class="data--last-access data-cell">
-                                                                            <div class="text">19 hours ago</div>
-                                                                        </td>
-                                                                        <td class="data--delete data-cell">
-                                                                            <a href="#" class="delete-btn">
-                                                                                <i class="bi bi-trash-fill"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                        <td class="data--option data-cell">
-                                                                            <a href="#" class="option-btn">
-                                                                                <i class="bi bi-three-dots"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
+                                                                    @foreach($ims_client as $key => $client)
+                                                                        <tr class="data-row">
+                                                                            <td class="data--select data-cell">
+                                                                                <input class="form-check-input"
+                                                                                    type="checkbox" value="">
+                                                                            </td>
+                                                                            <td class="data--fav data-cell">
+                                                                                <label class="fav-btn">
+                                                                                    <input type="checkbox">
+                                                                                    <i class="bi bi-star-fill"></i>
+                                                                                    <i class="bi bi-star"></i>
+                                                                                </label>
+                                                                            </td>
+                                                                            <td class="data--pic data-cell">
+                                                                                <img src="{{url('img/profile_avatar.jpg')}}" alt="">
+                                                                            </td>
+                                                                            <td class="data--name data-cell">
+                                                                                <div class="text">{{$client->client_name}}</div>
+                                                                            </td>
+                                                                            <td class="data--date data-cell">
+                                                                                <div class="text">{{$client->created_at->format('d M Y')}}</div>
+                                                                            </td>
+                                                                            <td class="data--comment data-cell">
+                                                                                <input type="text" class="form-control"
+                                                                                    placeholder="This is the sample comment ">
+                                                                            </td>
+                                                                            <td class="data--chat data-cell">
+                                                                                <a href="#" class="chat-btn">
+                                                                                    <i
+                                                                                        class="bi bi-chat-left-text-fill"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="data--conversation data-cell">
+                                                                                <div class="text">01</div>
+                                                                            </td>
+                                                                            <td class="data--last-access data-cell">
+                                                                                <div class="text">19 hours ago</div>
+                                                                            </td>
+                                                                            <td class="data--delete data-cell">
+                                                                            <input type="hidden" name="hid_id" value="{{$client->id}}">
+                                                                                <a href="{{ route('frontend.user.ims_clients.destroy', $client->id) }}" class="btn text-light delete delete-btn" data-bs-toggle="modal" data-bs-target="#deleteclient"><i class="bi bi-trash-fill"></i></a>
+                                                                            </td>
+                                                                            <td class="data--option data-cell">
+                                                                                <a href="#" class="option-btn">
+                                                                                    <i class="bi bi-three-dots"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>                                                                        
+                                                                    @endforeach
                                                                 </tbody>
                                                             </table>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </div>
@@ -202,12 +157,35 @@
     </section>
     
 
+    <div class="modal fade" id="deleteclient" tabindex="-1" aria-labelledby="deleteclientLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="deleteclientLabel">Delete Clients</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Do you want to delete this?</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+
 @endsection
 
 
 
 @push('after-scripts')
 
-   
+    <script>
+        $('.delete').on('click', function() {
+            let link = $(this).attr('href');
+            $('.modal-footer a').attr('href', link);
+        })
+    </script>
 
 @endpush

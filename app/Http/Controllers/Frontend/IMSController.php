@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Widgets;
 use App\Models\Projects;
 use Modules\WidgetManager\Entities\ImsClients;
+use DB;
 
 class IMSController extends Controller
 {
@@ -127,9 +128,10 @@ class IMSController extends Controller
     public function ims_clients($id)
     {
         // dd($id);
+        
         $widget = Widgets::where('id',$id)->first();
         $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        $ims_client = ImsClients::where('widget_id',$widget->id)->get()->unique('client_email');
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_clients',[
@@ -138,6 +140,14 @@ class IMSController extends Controller
             'ims_client' => $ims_client
         ]);
         
+    }
+
+    public function ims_clients_destroy($id)
+    {
+        $delete = ImsClients::where('id', $id)->first(); 
+        $delete_all = ImsClients::where('client_email', $delete->client_email)->delete(); 
+      
+        return back();
     }
 
     public function ims_analytics($id)
