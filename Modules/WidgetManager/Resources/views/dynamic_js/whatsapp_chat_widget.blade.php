@@ -96,6 +96,40 @@ div.innerHTML = `<style>
         padding: 15px;
         margin-top: 35px;
         margin-left: 35px;
+        z-index: -1;
+        opacity: 0;
+    }
+    #wappwidgetblock #wappwidget .wappcontainer .wappbody .wappwelcomemsg.wappview {
+    z-index: -1;
+    opacity: 0;
+    -webkit-animation: msgPop .3s ease;
+          animation: msgPop .3s ease;
+    -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+    }
+
+    @-webkit-keyframes msgPop {
+    from {
+    z-index: -1;
+    opacity: 0;
+    }
+    to {
+    z-index: 1;
+    opacity: 1;
+    }
+    }
+
+    @keyframes msgPop {
+    from {
+    z-index: -1;
+    opacity: 0;
+    }
+    to {
+    z-index: 1;
+    opacity: 1;
+    }
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappbody .wappwelcomemsg .wapptriangle {
         border-top: 5px solid transparent;
@@ -140,6 +174,7 @@ div.innerHTML = `<style>
         position: relative;
         bottom: 75px;
         opacity: 0;
+        z-index: -1;
         transition: all 0.3s ease;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent input,
@@ -173,8 +208,18 @@ div.innerHTML = `<style>
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform.wappview .wappformcontent {
         opacity: 1;
-        bottom: 125px;
+        z-index: 1;
+        bottom: 135px;
         transition: all 0.3s ease;
+    }
+    #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent .bi {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    color: #333;
+    }
+    #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent .bi:hover {
+    cursor: pointer;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappbtn {
         width: 280px;
@@ -303,6 +348,7 @@ div.innerHTML = `<style>
                     <div class="wappformcontent">
                         <form action="{{route('save_client')}}" method="post">
                             {{csrf_field()}}
+                            <i class="bi bi-x-circle-fill" onclick="wappformclose()"></i>
                             <input type="text" id="username" name="username" placeholder="Your name" required>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="email" id="useremail" name="useremail" placeholder="Your email" required>
@@ -328,18 +374,26 @@ document.getElementById('{{$widget_key}}').appendChild(div);
 window.onload = addWidget;
 
 function wapptoggle() {
-document.querySelector('#wappwidget').classList.toggle("wappview");
-document.querySelector('#wappstartupform').classList.remove("wappview");
+    document.querySelector('#wappwidget').classList.toggle("wappview");
+    document.querySelector('#wappstartupform').classList.remove("wappview");
+    document.querySelector('#wappbtn').classList.remove("wappview");
+    document.querySelector('.wappwelcomemsg').classList.toggle("wappview");
 }
 
 function wappclose() {
-document.querySelector('#wappwidget').classList.remove("wappview");
-document.querySelector('#wappstartupform').classList.remove("wappview");
+    document.querySelector('#wappwidget').classList.remove("wappview");
+    document.querySelector('#wappstartupform').classList.remove("wappview");
+    document.querySelector('.wappwelcomemsg').classList.remove("wappview");
 
 }
 
+function wappformclose() {
+    document.querySelector('#wappstartupform').classList.remove("wappview");
+    document.querySelector('#wappbtn').classList.remove("wappview");
+}
+
 function startupform() {
-document.querySelector('#wappstartupform').classList.toggle("wappview");
-document.querySelector('#wappbtn').classList.toggle("wappview");
+    document.querySelector('#wappstartupform').classList.toggle("wappview");
+    document.querySelector('#wappbtn').classList.add("wappview");
 }
 
