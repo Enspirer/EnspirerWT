@@ -101,7 +101,7 @@
                                                 <div class="block-2">
                                                     <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
                                                     <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}"
-                                                        class="act-btn act-delete" data-bs-toggle="modal"
+                                                        class="act-btn delete act-delete" data-bs-toggle="modal"
                                                         data-bs-target="#deleteFavorite">
                                                         <i class="bi bi-trash"></i>
                                                         Delete
