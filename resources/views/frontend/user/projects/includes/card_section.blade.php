@@ -49,20 +49,10 @@
                 </div>
                 <div class="tab-title">Widgets</div>
                 <div class="tab-info">
-                    <span
-                        class="strong-text">{{count(App\Models\Widgets::where('project_id',$project_id)->where('status','Enabled')->get())}}</span>
+                    <span class="strong-text">{{count(App\Models\Widgets::where('project_id',$project_id)->where('status','Enabled')->get())}}</span>
                     Widgets
                 </div>
             </div>
-        </a>
-    </div>
-</div>
-<div class="row g-0 mb-5">
-    <div class="col">
-        <a href="#" class="ims-dashboard-btn">
-            <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop" style="width:65px;height:65px">
-            </lord-icon>
-            IMS Dashboard
         </a>
     </div>
 </div>
