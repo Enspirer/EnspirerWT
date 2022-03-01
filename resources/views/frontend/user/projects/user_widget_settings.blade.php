@@ -1217,20 +1217,21 @@
 <!-- Modal -->
 <div class="modal fade" id="get_widget_Modal" tabindex="-1" role="dialog" aria-labelledby="get_widget_Lable" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content" style="width: 680px;">
+        <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="get_widget_Lable">Get WidgetCode</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                <img src="{{url('images/Group 389.png')}}" alt="">
+                <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
+                <button type="button" class="btn-close-modal" data-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
             </div>
             <div class="modal-body">
+                <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
                 <code>
                     &lt;div id="{{$widget->widget_key}}"&gt;&lt;/div&gt; <br>
                     &lt;script src="{{url('')}}/whatsapp_widget/{{$widget->id}}/tallentorw.js"&gt;&lt;/script&gt;
                 </code>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <a type="button" class="modal-btn" data-dismiss="modal">I have installed the code</a>
             </div>
         </div>
     </div>
