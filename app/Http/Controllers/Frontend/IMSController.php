@@ -14,14 +14,17 @@ class IMSController extends Controller
     public function index($id)
     {
         // dd($id);
-        $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        $project = Projects::where('id',$id)->first();           
+
+
+        // $widget = Widgets::where('id',$project)->first();
+
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims',[
             'project' => $project,
-            'widget' => $widget,
+            // 'widget' => $widget,
             'ims_client' => $ims_client
         ]);
         
@@ -63,15 +66,13 @@ class IMSController extends Controller
 
     public function ims_assigned($id)
     {
-        // dd($id);
-        $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->where('assign_by','!=', null)->get();
+        // dd($id);      
+        $project = Projects::where('id',$id)->first();   
+        $ims_client = ImsClients::where('project_id',$project->id)->where('assign_by','!=', null)->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_assigned',[
             'project' => $project,
-            'widget' => $widget,
             'ims_client' => $ims_client
         ]);
         
@@ -80,14 +81,12 @@ class IMSController extends Controller
     public function ims_unassigned($id)
     {
         // dd($id);
-        $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->where('assign_by', null)->get();
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->where('assign_by', null)->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_unassigned',[
             'project' => $project,
-            'widget' => $widget,
             'ims_client' => $ims_client
         ]);
         
@@ -96,14 +95,12 @@ class IMSController extends Controller
     public function ims_closed($id)
     {
         // dd($id);
-        $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->where('status','Deal close successfully')->get();
+        $project = Projects::where('id',$id)->first();      
+        $ims_client = ImsClients::where('project_id',$project->id)->where('status','Deal close successfully')->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_closed',[
             'project' => $project,
-            'widget' => $widget,
             'ims_client' => $ims_client
         ]);
         
@@ -112,14 +109,12 @@ class IMSController extends Controller
     public function ims_spam($id)
     {
         // dd($id);
-        $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        $project = Projects::where('id',$id)->first();         
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_spam',[
             'project' => $project,
-            'widget' => $widget,
             'ims_client' => $ims_client
         ]);
         
@@ -129,14 +124,12 @@ class IMSController extends Controller
     {
         // dd($id);
         
-        $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->get()->unique('client_email');
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get()->unique('client_email');
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_clients',[
             'project' => $project,
-            'widget' => $widget,
             'ims_client' => $ims_client
         ]);
         
@@ -153,14 +146,12 @@ class IMSController extends Controller
     public function ims_analytics($id)
     {
         // dd($id);
-        $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_analytics',[
             'project' => $project,
-            'widget' => $widget,
             'ims_client' => $ims_client
         ]);
         
@@ -182,8 +173,6 @@ class IMSController extends Controller
         // return json_encode($output);                  
 
     }
-
-
 
 
     public function ims_individual_store(Request $request)
