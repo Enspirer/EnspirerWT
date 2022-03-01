@@ -36,5 +36,11 @@ class DashboardController extends Controller
                     
     }
 
+    public function project_dash_destroy($id)
+    {
+        Projects::where('id', $id)->delete(); 
+        return back();
+    }
+
 
 }
