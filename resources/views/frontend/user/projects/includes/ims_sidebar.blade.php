@@ -43,7 +43,7 @@
                                         </a>
                                     </li> -->
                                     <li class="list-group-item">
-                                        <a href="{{ route('frontend.user.user_widget.ims_assigned', $project->id) }}" class="nav-link" onclick="controlPanel('assigned')">
+                                        <a href="{{ route('frontend.user.user_widget.ims_assigned', $project->id) }}" class="nav-link {{Request::segment(3)=='ims_assigned' ? 'active' :null }}" onclick="controlPanel('assigned')">
                                             <div class="nav-link__block">
                                                 <i class="bi bi-person-check"></i>
                                                 <div class="text">Assigned</div>

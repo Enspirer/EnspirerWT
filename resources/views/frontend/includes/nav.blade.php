@@ -91,10 +91,10 @@
                                             </div>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-                                            <li><a class="dropdown-item" href="#">Preference</a></li>
+                                            <!-- <li><a class="dropdown-item" href="#">Preference</a></li>
                                             <li>
                                                 <hr class="dropdown-divider">
-                                            </li>
+                                            </li> -->
                                             <li><a class="dropdown-item" href="{{route('frontend.auth.logout')}}">Logout</a></li>
                                         </ul>
                                     </li>

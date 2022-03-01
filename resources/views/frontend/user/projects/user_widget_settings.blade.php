@@ -1152,20 +1152,20 @@
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         <div class="profile">
                                             <div class="image">
-                                                <img src="{{url('images/profile.png')}}" alt="profile-picture">
+                                                <img src="{{auth()->user()->picture}}" alt="profile-picture">
                                             </div>
-                                            <div class="name">John</div>
+                                            <div class="name">{{auth()->user()->first_name}} {{auth()->user()->last_name}}</div>
                                             <div class="dropdown-icon">
                                                 <i class="bi bi-chevron-down"></i>
                                             </div>
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-                                        <li><a class="dropdown-item" href="#">Preference</a></li>
+                                        <li><a class="dropdown-item" href="{{route('frontend.user.dashboard')}}">Back to Dashboard</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
-                                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                                        <li><a class="dropdown-item" href="{{route('frontend.auth.logout')}}">Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1231,7 +1231,7 @@
                 </code>
             </div>
             <div class="modal-footer">
-                <a type="button" class="modal-btn" data-dismiss="modal">I have installed the code</a>
+                <a href="{{route('frontend.user.project.chat',$project->id)}}" class="modal-btn">I have installed the code</a>
             </div>
         </div>
     </div>
