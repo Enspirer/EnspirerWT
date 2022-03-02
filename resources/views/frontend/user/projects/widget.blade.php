@@ -177,7 +177,7 @@
                                             </div>
                                             <div class="row g-0 mt-4 mb-3">
                                                 <div class="button-block">
-                                                    <a href="#" class="create-widget-btn">Create Widget</a>
+                                                    <button href="#" class="create-widget-btn">Create Widget</button>
                                                     <img src="{{url('images/messenger.png')}}" alt="">
                                                 </div>
                                             </div>

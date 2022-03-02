@@ -1033,6 +1033,7 @@
 #sectionWhatsappWidget .chat-applications .inner-wrapper .button-block .create-widget-btn {
     text-decoration: none;
     color: #fff;
+    border: none;
     background-color: #00AEEF;
     padding: 1rem 2.5rem;
     border-radius: 0.5rem;
