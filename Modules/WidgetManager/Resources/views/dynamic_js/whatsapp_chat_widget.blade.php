@@ -397,3 +397,9 @@ function startupform() {
     document.querySelector('#wappbtn').classList.add("wappview");
 }
 
+const animated = document.querySelector('.wappwelcomemsg');
+
+animated.addEventListener('animationend', function () {
+    var audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+    audio.play();
+});
