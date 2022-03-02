@@ -284,7 +284,7 @@ div.innerHTML = `<style>
     #wappwidgetblock #wappwidtoggler i {
         font-size: 45px;
         position: relative;
-        top: 16px;
+        top: 7px;
         left: 16px;
         color: #14C656;
     }
