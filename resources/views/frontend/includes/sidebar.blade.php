@@ -10,21 +10,21 @@
                 <div class="side-navs">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{route('frontend.user.dashboard')}}">
+                            <a class="nav-link {{Request::segment(1)=='dashboard' ? 'active' :null }}" href="{{route('frontend.user.dashboard')}}">
                                 <i class="bi bi-columns-gap"></i>
                                 <span class="text">Dashboard</span>
                                 <span class="tool-tip">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('frontend.user.reports')}}">
+                            <a class="nav-link {{Request::segment(1)=='reports' ? 'active' :null }}" href="{{route('frontend.user.reports')}}">
                                 <i class="bi bi-clipboard2-data"></i>
                                 <span class="text">Reports</span>
                                 <span class="tool-tip">Reports</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('frontend.user.project.index')}}">
+                            <a class="nav-link {{Request::segment(1)=='projects' ? 'active' :null }}" href="{{route('frontend.user.project.index')}}">
                                 <i class="bi bi-layers"></i>
                                 <span class="text">Projects</span>
                                 <span class="tool-tip">Projects</span>
@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('frontend.user.settings.index')}}">
+                            <a class="nav-link {{Request::segment(1)=='settings' ? 'active' :null }}" href="{{route('frontend.user.settings.index')}}">
                                 <i class="bi bi-gear"></i>
                                 <span class="text">Settings</span>
                                 <span class="tool-tip">Settings</span>

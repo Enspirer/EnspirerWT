@@ -72,12 +72,40 @@
                         </fieldset>
                     </div>
                     <div class="footer">
-                        <div class="input-group">
-                            <label class="form-input-label"><i class="bi bi-search"></i></label>
-                            <input type="text" class="form-control" placeholder="Type your website URL here"
-                                aria-describedby="findReports">
-                            <a class="btn" role="button" id="findReports">Show Results</a>
-                        </div>
+                        <form action="{{route('frontend.user.user_projects.store')}}" method="post" enctype="multipart/form-data">
+                        {{csrf_field()}}
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="input-group">
+                                        <label class="form-input-label"><i class="bi bi-search"></i></label>
+                                        <input type="text" name="name" class="form-control" placeholder="Type your project name" aria-describedby="findReports" required>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="input-group">
+                                        <label class="form-input-label"><i class="bi bi-search"></i></label>
+                                        <select class="form-control" name="project_type" style="font-size:15px;" id="project_type" name="project_type" required>
+                                            <option value="" selected disabled>Select project type...</option>
+                                            @foreach($project_type as $key => $type)
+                                                <option style="font-size:15px;" value="{{ $type->id }}">{{ $type->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="input-group">
+                                        <label class="form-input-label"><i class="bi bi-search"></i></label>
+                                        <input type="text" name="url" class="form-control" placeholder="Type your website URL here" aria-describedby="findReports" required>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="input-group">
+                                        <button type="submit" class="btn col-12" style="height:4.5rem;" role="button" id="findReports">Show Results</button>                                  
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                            
                     </div>
                 </div>
 
