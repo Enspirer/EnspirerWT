@@ -1226,16 +1226,10 @@
                     <!-- Content goes here -->
 
                     <div class="row">
-                        <div class="col-5">
-
-                        </div>
-                        <div class="col-7">                        
-                        
+                        <div class="col">
                             <div class="mt-4">
                                 <iframe id="incorme" src="{{route('frontend.user.user_whatsapp_chat_preview',$widget->id)}}" frameborder="0" style="width: 100%;height: 610px;"></iframe>
                             </div>
-      
-
                         </div>
                     </div>
 
