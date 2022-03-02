@@ -90,12 +90,69 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-                                            <!-- <li><a class="dropdown-item" href="#">Preference</a></li>
+                                        <ul class="dropdown-menu profile-dropdown-menu" aria-labelledby="profileDropdown">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-person"></i>
+                                                    </div>
+                                                    <div class="text">Your Details</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-pencil"></i>
+                                                    </div>
+                                                    <div class="text">Edit Profile</div>
+                                                </a>
+                                            </li>
                                             <li>
                                                 <hr class="dropdown-divider">
-                                            </li> -->
-                                            <li><a class="dropdown-item" href="{{route('frontend.auth.logout')}}">Logout</a></li>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-shield-check"></i>
+                                                    </div>
+                                                    <div class="text">Password & Security</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-box-seam"></i>
+                                                    </div>
+                                                    <div class="text">Choose Plan</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-trash3"></i>
+                                                    </div>
+                                                    <div class="text">Delete Your Account</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-gear"></i>
+                                                    </div>
+                                                    <div class="text">Admin Settings</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="{{route('frontend.auth.logout')}}">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-box-arrow-right"></i>
+                                                    </div>
+                                                    <div class="text">Sign Out</div>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </li>
                                     @else

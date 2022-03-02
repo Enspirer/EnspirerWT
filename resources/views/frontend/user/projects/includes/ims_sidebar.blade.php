@@ -2,7 +2,7 @@
                 <div class="ims__side-nav">
                     <div class="side-nav__header">
                         <div class="logo-block">
-                            <img src="{{url('images/Tallentor Logo 2-04.png')}}" alt="" class="logo">
+                            <img src="{{url('images/full-logo.png')}}" alt="" class="logo">
                             <div class="logo-text">- IMS</div>
                         </div>
                         <div class="caption">Inquiry Management Systems</div>
