@@ -982,6 +982,77 @@
     justify-content: center;
 }
 
+#sectionWhatsappWidget .chat-applications .block-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper {
+    height: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .header .title {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .header .image-block {
+    display: flex;
+    gap: 1rem;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .header .image-block img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .body-text {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .button-block {
+    position: relative;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .button-block .create-widget-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #00AEEF;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .button-block .create-widget-btn::before {
+    content: '+';
+    position: relative;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 0.75rem;
+    top: 3px;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .button-block img {
+    position: absolute;
+    right: -3.5rem;
+    top: -7rem;
+}
+
 #sectionWhatsappWidget #whatsappModal .modal-dialog {
     max-width: 660px;
     margin: 6rem auto !important;

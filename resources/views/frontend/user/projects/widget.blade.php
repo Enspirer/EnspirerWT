@@ -34,19 +34,12 @@
                         <div class="block-2 mb-5">
                             <div class="row g-0 mb-4">
                                 <div class="col">
-                                    <div class="block-title">Chat Application</div>
+                                    <div class="block-title">My Applications</div>
                                 </div>
                             </div>
-                            <div class="row g-5 justify-content-between">
-                                <div class="col-6">
-                                    <div class="innwer-wrapper px-4 dotted-border">
-                                        <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
-                                            data-bs-target="#createWidgetModal">Create
-                                            Widget</button>
-                                    </div>
-                                </div>
+                            <div class="row row-cols-md-2 g-5 justify-content-between">
                                 @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
-                                <div class="col-6">
+                                <div class="col">
                                     <div class="inner-wrapper px-5 pt-5 pb-4">
                                         <div class="row g-0">
                                             <div class="header">
@@ -112,6 +105,77 @@
                                     </div>
                                 </div>
                                 @endforeach
+                                <div class="col">
+                                    <div class="innwer-wrapper px-4 dotted-border">
+                                        <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
+                                            data-bs-target="#createWidgetModal">Create
+                                            Widget</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="chat-applications">
+                                <div class="row g-0 mb-4">
+                                    <div class="col">
+                                        <div class="block-title">Chat Applications</div>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-md-2 g-5 justify-content-between">
+                                    <div class="col">
+                                        <div class="inner-wrapper px-5 pt-5 pb-4">
+                                            <div class="row g-0">
+                                                <div class="header">
+                                                    <div class="title">WhatsApp Chat</div>
+                                                    <div class="image-block">
+                                                        <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <p class="body-text">Give users an opportunity to contact you on
+                                                        WhatsApp
+                                                        straight from your website.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row g-0 mt-4 mb-3">
+                                                <div class="button-block">
+                                                    <a href="#" class="create-widget-btn">Create Widget</a>
+                                                    <img src="{{url('images/whatsapp2.png')}}" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="inner-wrapper px-5 pt-5 pb-4">
+                                            <div class="row g-0">
+                                                <div class="header">
+                                                    <div class="title">All-in-One Chat</div>
+                                                    <div class="image-block">
+                                                        <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                        <img src="{{url('images/viber.png')}}" alt="">
+                                                        <img src="{{url('images/instagram (1).png')}}" alt="">
+                                                        <img src="{{url('images/Facebook_Messenger_logo_2020.svg (1).png')}}"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <p class="body-text">Let users chat with you on Facebook Messenger,
+                                                        WhatsApp, Telegram, etc.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row g-0 mt-4 mb-3">
+                                                <div class="button-block">
+                                                    <a href="#" class="create-widget-btn">Create Widget</a>
+                                                    <img src="{{url('images/messenger.png')}}" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
