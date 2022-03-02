@@ -132,6 +132,7 @@
                                                     <div class="image-block">
                                                         <img src="{{url('images/whatsapp (1).png')}}" alt="">
                                                     </div>
+                                                    <img src="{{url('images/whatsapp2.png')}}" alt="" class="watermark-img">
                                                 </div>
                                             </div>
                                             <div class="row g-0">
@@ -149,8 +150,6 @@
                                                         <input type="hidden" name="widget_type" value="Whatsapp Chat">
                                                         <button type="submit" class="create-widget-btn">Create Widget</button>
                                                     </form>
-                                                    
-                                                    <img src="{{url('images/whatsapp2.png')}}" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -167,6 +166,7 @@
                                                         <img src="{{url('images/Facebook_Messenger_logo_2020.svg (1).png')}}"
                                                             alt="">
                                                     </div>
+                                                    <img src="{{url('images/messenger.png')}}" alt="" class="watermark-img">
                                                 </div>
                                             </div>
                                             <div class="row g-0">
@@ -178,7 +178,6 @@
                                             <div class="row g-0 mt-4 mb-3">
                                                 <div class="button-block">
                                                     <button href="#" class="create-widget-btn">Create Widget</button>
-                                                    <img src="{{url('images/messenger.png')}}" alt="">
                                                 </div>
                                             </div>
                                         </div>
