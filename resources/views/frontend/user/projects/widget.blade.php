@@ -31,89 +31,91 @@
                     </section>
 
                     <section id="sectionWhatsappWidget">
-                        <div class="block-2 mb-5">
-                            <div class="row g-0 mb-4">
-                                <div class="col">
-                                    <div class="block-title">My Applications</div>
+                        @if(count(App\Models\Widgets::where('project_id',$project_id)->get()) != 0)
+                            <div class="block-2 mb-5">
+                                <div class="row g-0 mb-4">
+                                    <div class="col">
+                                        <div class="block-title">My Applications</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row row-cols-md-2 g-5 justify-content-between">
-                                @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
-                                <div class="col">
-                                    <div class="inner-wrapper px-5 pt-5 pb-4">
-                                        <div class="row g-0">
-                                            <div class="header">
-                                                <span class="title">{{$widgetlist->widget_type}}</span>
-                                                <img src="{{url('images/whatsapp.png')}}" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="row g-0 mt-5 mb-4">
-                                            <div class="col">
-                                                <div class="row g-0 mb-2 justify-content-between">
-                                                    <div class="col-auto">
-                                                        <div class="progress-label">www.tallentor.com</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <div class="progress-amount">25%</div>
-                                                    </div>
+                                <div class="row row-cols-md-2 g-5 justify-content-between">
+                                    @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
+                                    <div class="col">
+                                        <div class="inner-wrapper px-5 pt-5 pb-4">
+                                            <div class="row g-0">
+                                                <div class="header">
+                                                    <span class="title">{{$widgetlist->widget_type}}</span>
+                                                    <img src="{{url('images/whatsapp.png')}}" alt="">
                                                 </div>
-                                                <div class="row g-0">
-                                                    <div class="col">
-                                                        <div class="progress">
-                                                            <div class="progress-bar w-75" role="progressbar"
-                                                                aria-valuenow="75" aria-valuemin="0"
-                                                                aria-valuemax="100">
+                                            </div>
+                                            <div class="row g-0 mt-5 mb-4">
+                                                <div class="col">
+                                                    <div class="row g-0 mb-2 justify-content-between">
+                                                        <div class="col-auto">
+                                                            <div class="progress-label">www.tallentor.com</div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="progress-amount">25%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row g-0">
+                                                        <div class="col">
+                                                            <div class="progress">
+                                                                <div class="progress-bar w-75" role="progressbar"
+                                                                    aria-valuenow="75" aria-valuemin="0"
+                                                                    aria-valuemax="100">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row g-0">
-                                            <div class="col">
-                                                <p class="body-text">Lorem ipsum dolor sit amet consectetur
-                                                    adipisicing elit. Mollitia sit maxime nam sapiente illum,
-                                                    consequuntur aperiam quia reprehenderit deserunt delectus.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row g-0 mt-4 mb-3">
-                                            <div class="button-block">
-                                                <div class="block-1">
-                                                    <a href="{{ route('frontend.user.user_widget.ims', $project_id) }}"
-                                                        class="act-btn act-ims">
-                                                        <i class="bi bi-file-earmark-medical"></i>
-                                                        IMS
-                                                    </a>
-                                                    <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}"
-                                                        class="act-btn act-settings">
-                                                        <i class="bi bi-gear"></i>
-                                                        Settings
-                                                    </a>
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <p class="body-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Mollitia sit maxime nam sapiente illum,
+                                                        consequuntur aperiam quia reprehenderit deserunt delectus.
+                                                    </p>
                                                 </div>
-                                                <div class="block-2">
-                                                    <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
-                                                    <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}"
-                                                        class="act-btn delete act-delete" data-bs-toggle="modal"
-                                                        data-bs-target="#deleteFavorite">
-                                                        <i class="bi bi-trash"></i>
-                                                        Delete
-                                                    </a>
+                                            </div>
+                                            <div class="row g-0 mt-4 mb-3">
+                                                <div class="button-block">
+                                                    <div class="block-1">
+                                                        <a href="{{ route('frontend.user.user_widget.ims', $project_id) }}"
+                                                            class="act-btn act-ims">
+                                                            <i class="bi bi-file-earmark-medical"></i>
+                                                            IMS
+                                                        </a>
+                                                        <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}"
+                                                            class="act-btn act-settings">
+                                                            <i class="bi bi-gear"></i>
+                                                            Settings
+                                                        </a>
+                                                    </div>
+                                                    <div class="block-2">
+                                                        <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
+                                                        <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}"
+                                                            class="act-btn delete act-delete" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteFavorite">
+                                                            <i class="bi bi-trash"></i>
+                                                            Delete
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                @endforeach
-                                <div class="col">
-                                    <div class="innwer-wrapper px-4 dotted-border">
-                                        <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
-                                            data-bs-target="#createWidgetModal">Create
-                                            Widget</button>
+                                    @endforeach
+                                    <div class="col">
+                                        <div class="innwer-wrapper px-4 dotted-border">
+                                            <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
+                                                data-bs-target="#createWidgetModal">Create
+                                                Widget</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
                         <div class="row g-0">
                             <div class="chat-applications">
                                 <div class="row g-0 mb-4">
@@ -141,7 +143,13 @@
                                             </div>
                                             <div class="row g-0 mt-4 mb-3">
                                                 <div class="button-block">
-                                                    <a href="#" class="create-widget-btn">Create Widget</a>
+                                                    <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
+                                                    {{csrf_field()}}
+                                                        <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                        <input type="hidden" name="widget_type" value="Whatsapp Chat">
+                                                        <button type="submit" class="create-widget-btn">Create Widget</button>
+                                                    </form>
+                                                    
                                                     <img src="{{url('images/whatsapp2.png')}}" alt="">
                                                 </div>
                                             </div>
