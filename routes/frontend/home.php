@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\User\AccountController;
 use App\Http\Controllers\Frontend\User\DashboardController;
 use App\Http\Controllers\Frontend\User\ProfileController;
+use App\Http\Controllers\Frontend\User\SettingsController;
 use App\Http\Controllers\Frontend\TestController;
 use App\Http\Controllers\Frontend\SEOController;
 use App\Http\Controllers\Frontend\SecurityController;
@@ -67,6 +68,9 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
         Route::get('reports', [ReportsController::class, 'index'])->name('reports');
+
+        Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
+
 
         Route::get('project_details/{id}', [ProjectController::class, 'show'])->name('project.show');
 

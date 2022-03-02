@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('frontend.user.settings.index')}}">
                                 <i class="bi bi-gear"></i>
                                 <span class="text">Settings</span>
                                 <span class="tool-tip">Settings</span>
