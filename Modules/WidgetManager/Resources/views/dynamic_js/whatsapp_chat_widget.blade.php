@@ -378,6 +378,8 @@ function wapptoggle() {
     document.querySelector('#wappstartupform').classList.remove("wappview");
     document.querySelector('#wappbtn').classList.remove("wappview");
     document.querySelector('.wappwelcomemsg').classList.toggle("wappview");
+    var audio = new Audio('{{url('blackberrychat.mp3')}}');
+    audio.play();
 }
 
 function wappclose() {
@@ -400,6 +402,5 @@ function startupform() {
 const animated = document.querySelector('.wappwelcomemsg');
 
 animated.addEventListener('animationend', function () {
-    var audio = new Audio('{{url('blackberrychat.mp3')}}');
-    audio.play();
+
 });
