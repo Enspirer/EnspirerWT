@@ -975,6 +975,7 @@
 
 #sectionWhatsappWidget .block-2 .innwer-wrapper.dotted-border {
     height: 100%;
+    min-height: 300px;
     border: 2px dashed #999;
     border-radius: 1rem;
     display: flex;

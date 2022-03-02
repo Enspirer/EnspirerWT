@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="row row-cols-md-2 g-5 justify-content-between">
                                     <div class="col">
-                                        <div class="inner-wrapper px-5 pt-5 pb-4">
+                                        <div class="inner-wrapper px-5 py-4">
                                             <div class="row g-0">
                                                 <div class="header">
                                                     <div class="title">WhatsApp Chat</div>
@@ -148,7 +148,7 @@
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <div class="inner-wrapper px-5 pt-5 pb-4">
+                                        <div class="inner-wrapper px-5 py-4">
                                             <div class="row g-0">
                                                 <div class="header">
                                                     <div class="title">All-in-One Chat</div>
