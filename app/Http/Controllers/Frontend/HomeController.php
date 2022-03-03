@@ -261,8 +261,13 @@ class HomeController extends Controller
             array_push($notify_array,$request->show_notification_in_tab_tile);
         }
 
-        
+        if($request->bubble_icon == null){            
+            $pre_bubble_icon = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->bubble_icon;
+        }else{
+            $pre_bubble_icon = $request->bubble_icon;
+        }
 
+        // dd($pre_bubble_icon);
       
         
         $template_layout = $request->template_layout;
@@ -345,7 +350,6 @@ class HomeController extends Controller
         // return json_encode($output);                  
 
     }
-
 
     
 
