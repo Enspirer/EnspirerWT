@@ -284,7 +284,7 @@ div.innerHTML = `<style>
     #wappwidgetblock #wappwidtoggler i {
         font-size: 45px;
         position: relative;
-        top: 16px;
+        top: 7px;
         left: 16px;
         color: #14C656;
     }
@@ -378,6 +378,8 @@ function wapptoggle() {
     document.querySelector('#wappstartupform').classList.remove("wappview");
     document.querySelector('#wappbtn').classList.remove("wappview");
     document.querySelector('.wappwelcomemsg').classList.toggle("wappview");
+    var audio = new Audio('{{url('blackberrychat.mp3')}}');
+    audio.play();
 }
 
 function wappclose() {
@@ -396,3 +398,9 @@ function startupform() {
     document.querySelector('#wappstartupform').classList.toggle("wappview");
     document.querySelector('#wappbtn').classList.add("wappview");
 }
+
+const animated = document.querySelector('.wappwelcomemsg');
+
+animated.addEventListener('animationend', function () {
+
+});
