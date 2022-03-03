@@ -448,21 +448,21 @@
                                             <div class="col-12">
                                                 <label for="cur-password" class="form-label">Current Password</label>
                                                 <div class="input-group">
-                                                    <input type="text" id="cur-password" class="form-control" name="old_password" required>
+                                                    <input type="password" id="cur-password" class="form-control" name="old_password" required>
                                                     <span class="input-group-text" onclick="showPass('cur-password')"><i class="bi bi-eye-slash-fill"></i></span>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <label for="new-password" class="form-label">New Password</label>
                                                 <div class="input-group">
-                                                    <input type="text" id="new-password" class="form-control" name="password" required>
+                                                    <input type="password" id="new-password" class="form-control" name="password" required>
                                                     <span class="input-group-text" onclick="showPass('new-password')"><i class="bi bi-eye-slash-fill"></i></span>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <label for="confirm-password" class="form-label">Confirm New Password</label>
                                                 <div class="input-group">
-                                                    <input type="text" id="confirm-password" class="form-control" name="password_confirmation" required>
+                                                    <input type="password" id="confirm-password" class="form-control" name="password_confirmation" required>
                                                     <span class="input-group-text" onclick="showPass('confirm-password')"><i class="bi bi-eye-slash-fill"></i></span>
                                                 </div>
                                             </div>
@@ -507,7 +507,7 @@
                                     </div>
                                     <div id="standard-plan" class="plan-info standard-plan">
                                         <div class="title">Your Plan</div>
-                                        <div class="subtitle">Basic Plan</div>
+                                        <div class="subtitle">Standard Plan</div>
                                         <div class="plan-options">
                                             <div class="option"><i class="bi bi-check-circle-fill"></i><span
                                                     class="text">Lorem ipsum dolor sit.</span></div>
@@ -530,7 +530,7 @@
                                     </div>
                                     <div id="premium-plan" class="plan-info premium-plan">
                                         <div class="title">Your Plan</div>
-                                        <div class="subtitle">Basic Plan</div>
+                                        <div class="subtitle">Premium Plan</div>
                                         <div class="plan-options">
                                             <div class="option"><i class="bi bi-check-circle-fill"></i><span
                                                     class="text">Lorem ipsum dolor sit.</span></div>
@@ -664,6 +664,16 @@
                 $('.plan-info').hide();
             }
         });
+
+        // Show hide Password
+        function showPass(id) {
+            var x = document.getElementById(id);
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
     </script>
 
     <script>
