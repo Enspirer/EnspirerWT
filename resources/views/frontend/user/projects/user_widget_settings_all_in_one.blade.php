@@ -71,47 +71,228 @@
                             <div class="title">Please add Channels for your website</div>
                         </div>
                         <div class="body">
-                            <div class="add-channel-block">
-                                <div class="header">
-                                    <button class="add-channel-cancel-btn">Cancel</button>
-                                    <div class="title">Add Channel</div>
-                                </div>
-                                <div class="body">
-                                    <div class="button-block">
-                                        <div class="button">
-                                            <button type="button" class="channel-btn whatsapp-btn">
-                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
-                                                <div class="text">Whatsapp</div>
-                                            </button>
+                                <div class="channels-block">
+                                    <div class="channel channel-whatsapp">
+                                        <div class="content-block">
+                                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                            <div class="content">
+                                                <div class="name">WhatsApp Chat</div>
+                                                <div class="status">(+94) 77 71 234 56</div>
+                                            </div>
                                         </div>
-                                        <div class="button">
-                                            <button type="button" class="channel-btn messnger-btn">
-                                                <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
-                                                <div class="text">Messenger</div>
+                                        <div class="option-block">
+                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots"></i>
                                             </button>
+                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                <li><a class="dropdown-item edit" href="#">
+                                                    <div class="text">Edit</div>
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a></li>
+                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-whatsapp')">
+                                                    <div class="text">Delete</div>
+                                                    <i class="bi bi-trash3"></i>
+                                                </a></li>
+                                            </ul>
                                         </div>
-                                        <div class="button">
-                                            <button type="button" class="channel-btn telegram-btn">
-                                                <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
-                                                <div class="text">Telegram</div>
-                                            </button>
+                                    </div>
+                                    <div class="channel channel-messenger">
+                                        <div class="content-block">
+                                            <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                                            <div class="content">
+                                                <div class="name">Facebook Messenger</div>
+                                                <div class="status">Not set</div>
+                                            </div>
                                         </div>
-                                        <div class="button">
-                                            <button type="button" class="channel-btn line-btn">
-                                                <img src="{{url('images/social_media_icons/line.png')}}" alt="">
-                                                <div class="text">Line</div>
+                                        <div class="option-block">
+                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots"></i>
                                             </button>
+                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                <li><a class="dropdown-item edit" href="#">
+                                                    <div class="text">Edit</div>
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a></li>
+                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-messenger')">
+                                                    <div class="text">Delete</div>
+                                                    <i class="bi bi-trash3"></i>
+                                                </a></li>
+                                            </ul>
                                         </div>
-                                        <div class="button">
-                                            <button type="button" class="channel-btn viber-btn">
-                                                <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
-                                                <div class="text">Viber</div>
+                                    </div>
+                                    <div class="channel channel-telegram">
+                                        <div class="content-block">
+                                            <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                            <div class="content">
+                                                <div class="name">Telegram Chat</div>
+                                                <div class="status">(+94) 77 71 234 56</div>
+                                            </div>
+                                        </div>
+                                        <div class="option-block">
+                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots"></i>
                                             </button>
+                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                <li><a class="dropdown-item edit" href="#">
+                                                    <div class="text">Edit</div>
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a></li>
+                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-telegram')">
+                                                    <div class="text">Delete</div>
+                                                    <i class="bi bi-trash3"></i>
+                                                </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="channel channel-line">
+                                        <div class="content-block">
+                                            <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                                            <div class="content">
+                                                <div class="name">Line Chat</div>
+                                                <div class="status">(+94) 77 71 234 56</div>
+                                            </div>
+                                        </div>
+                                        <div class="option-block">
+                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots"></i>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                <li><a class="dropdown-item edit" href="#">
+                                                    <div class="text">Edit</div>
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a></li>
+                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-line')">
+                                                    <div class="text">Delete</div>
+                                                    <i class="bi bi-trash3"></i>
+                                                </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="channel channel-viber">
+                                        <div class="content-block">
+                                            <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                                            <div class="content">
+                                                <div class="name">Viber Chat</div>
+                                                <div class="status">(+94) 77 71 234 56</div>
+                                            </div>
+                                        </div>
+                                        <div class="option-block">
+                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots"></i>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                <li><a class="dropdown-item edit" href="#">
+                                                    <div class="text">Edit</div>
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a></li>
+                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-viber')">
+                                                    <div class="text">Delete</div>
+                                                    <i class="bi bi-trash3"></i>
+                                                </a></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <button class="add-channel-btn">Add Channel</button>
+                                <div class="add-channel-block">
+                                    <div class="header">
+                                        <button class="add-channel-cancel-btn">Cancel</button>
+                                        <div class="title">Add Channel</div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="button-block">
+                                            <div class="button">
+                                                <a href="#" type="button" onclick="showInfoBlock('whatsapp-block')" class="channel-btn whatsapp-btn">
+                                                    <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                    <div class="text">Whatsapp</div>
+                                                </a>
+                                            </div>
+                                            <div class="button">
+                                                <a href="#" type="button" onclick="showInfoBlock('messenger-block')" class="channel-btn messenger-btn">
+                                                    <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                                                    <div class="text">Messenger</div>
+                                                </a>
+                                            </div>
+                                            <div class="button">
+                                                <a href="#" type="button" onclick="showInfoBlock('telegram-block')" class="channel-btn telegram-btn">
+                                                    <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                                    <div class="text">Telegram</div>
+                                                </a>
+                                            </div>
+                                            <div class="button">
+                                                <a href="#" type="button" onclick="showInfoBlock('line-block')" class="channel-btn line-btn">
+                                                    <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                                                    <div class="text">Line</div>
+                                                </a>
+                                            </div>
+                                            <div class="button">
+                                                <a href="#" type="button" onclick="showInfoBlock('viber-block')" class="channel-btn viber-btn">
+                                                    <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                                                    <div class="text">Viber</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-block">
+                                    <div class="block whatsapp-block">
+                                        <div class="header">
+                                            <div class="title">WhatsApp</div>
+                                            <a href="#" class="info-done-btn" onclick="addchannel('channel-whatsapp')">Done</a>
+                                        </div>
+                                        <div class="body">
+                                            <input type="text" class="form-control" id="whatsappnoInput" placeholder="Type your WhatsApp Number...">
+                                            <label for="whatsappnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
+                                                add your country code</label>
+                                        </div>
+                                    </div>
+                                    <div class="block messenger-block">
+                                        <div class="header">
+                                            <div class="title">Facebook</div>
+                                            <a href="#" class="info-done-btn" onclick="addchannel('channel-messenger')">Done</a>
+                                        </div>
+                                        <div class="body">
+                                            <div class="text">Facebook</div>
+                                            <a href="#" class="connect-fb-btn">
+                                                <i class="bi bi-facebook"></i>
+                                                Connect to Facebook
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="block telegram-block">
+                                        <div class="header">
+                                            <div class="title">Telegram</div>
+                                            <a href="#" class="info-done-btn" onclick="addchannel('channel-telegram')">Done</a>
+                                        </div>
+                                        <div class="body">
+                                            <input type="text" class="form-control" id="telegramnoInput" placeholder="Type your no Number...">
+                                            <label for="telegramnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
+                                                add your country code</label>
+                                        </div>
+                                    </div>
+                                    <div class="block line-block">
+                                        <div class="header">
+                                            <div class="title">Line</div>
+                                            <a href="#" class="info-done-btn" onclick="addchannel('channel-line')">Done</a>
+                                        </div>
+                                        <div class="body">
+                                            <input type="text" class="form-control" id="linenoInput" placeholder="Type your Line Number...">
+                                            <label for="linenoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add
+                                                your country code</label>
+                                        </div>
+                                    </div>
+                                    <div class="block viber-block">
+                                        <div class="header">
+                                            <div class="title">Viber</div>
+                                            <a href="#" class="info-done-btn" onclick="addchannel('channel-viber')">Done</a>
+                                        </div>
+                                        <div class="body">
+                                            <input type="text" class="form-control" id="vibernoInput" placeholder="Type your Viber Number...">
+                                            <label for="vibernoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
+                                                add your country code</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            <a href="#" class="add-channel-btn">Add Channel</a>
                         </div>
                         <div class="footer">
                             <a href="#" class="btn-whatsapp"
@@ -1757,6 +1938,64 @@
         document.getElementById('incorme').contentWindow.location.reload();
 
     }
+</script>
+
+<script>
+    // Channels Block
+    const channelBlock = document.getElementById("channel-block");
+    const addChannelBlock = channelBlock.querySelector('.add-channel-block');
+    const addChannelBtn = channelBlock.querySelector('.add-channel-btn');
+    const addChannelCancelBtn = channelBlock.querySelector('.add-channel-cancel-btn');
+
+    addChannelBtn.addEventListener("click", function () {
+        addChannelBlock.style.display = "block";
+        this.style.display = "none";
+    });
+
+    addChannelCancelBtn.addEventListener("click", function () {
+        addChannelBlock.style.display = "none";
+        addChannelBtn.style.display = "block";
+    });
+
+    function showInfoBlock(infoBlock) {
+        channelBlock.querySelector('.' + infoBlock).style.display = "block";
+        addChannelBlock.style.display = "none";
+    }
+
+    function addchannel(channel) {
+        const channelFetcher = channelBlock.querySelector('.' + channel);
+        channelFetcher.style.display = "flex";
+
+        addChannelBtn.style.display = "block";
+
+        const infoBlocks = channelBlock.querySelectorAll('.block');
+
+        [].forEach.call(infoBlocks, function (block) {
+            block.style.display = "none";
+        });
+    }
+
+    function deleteChannel(channel) {
+    channelBlock.querySelector('.' + channel).style.display = "none";
+    }
+</script>
+
+<script>
+        // Range Slider
+        const range = document.getElementById("startChatButtonCollapse");
+        const output = range.querySelector(".value");
+        const slider = document.getElementById("button_corner_radius")
+        const min = slider.min
+        const max = slider.max
+        const value = slider.value
+        output.innerHTML = value;
+
+        slider.style.background = `linear-gradient(to right, #017FFA 0%, #017FFA ${(value-min)/(max-min)*100}%, #EDEDED ${(value-min)/(max-min)*100}%, #EDEDED 100%)`
+
+        slider.oninput = function () {
+            this.style.background = `linear-gradient(to right, #017FFA 0%, #017FFA ${(this.value-this.min)/(this.max-this.min)*100}%, #EDEDED ${(this.value-this.min)/(this.max-this.min)*100}%, #EDEDED 100%)`
+            output.innerHTML = this.value;
+        };
 </script>
 
 @endpush

@@ -1722,4 +1722,24 @@
         
     </script>
 
+
+    <script>
+        // Range Slider
+        const range = document.getElementById("startChatButtonCollapse");
+        const output = range.querySelector(".value");
+        const slider = document.getElementById("button_corner_radius")
+        const min = slider.min
+        const max = slider.max
+        const value = slider.value
+        output.innerHTML = value;
+
+        slider.style.background = `linear-gradient(to right, #44BC8E 0%, #44BC8E ${(value-min)/(max-min)*100}%, #EDEDED ${(value-min)/(max-min)*100}%, #EDEDED 100%)`
+
+        slider.oninput = function () {
+            this.style.background = `linear-gradient(to right, #44BC8E 0%, #44BC8E ${(this.value-this.min)/(this.max-this.min)*100}%, #EDEDED ${(this.value-this.min)/(this.max-this.min)*100}%, #EDEDED 100%)`
+            output.innerHTML = this.value;
+        };
+    </script>
+
+
 @endpush

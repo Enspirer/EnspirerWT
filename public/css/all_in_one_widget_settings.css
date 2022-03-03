@@ -155,8 +155,8 @@
 
 .form-switch .form-check-input:checked {
     background-image: none;
-    background-color: #44BC8E;
-    border-color: #44BC8E;
+    background-color: #017FFA;
+    border-color: #017FFA;
 }
 
 .form-switch .form-check-input:checked::after {
@@ -406,9 +406,10 @@
 }
 
 #sideNavInner #channel-block .inner-wrapper .body .add-channel-block {
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     background-color: #EBEBEB;
     border-radius: 3px;
+    margin-bottom: 1rem;
 }
 
 #sideNavInner #channel-block .inner-wrapper .body .add-channel-block .header {
@@ -440,23 +441,25 @@
 }
 
 #sideNavInner #channel-block .inner-wrapper .body .add-channel-block .body .button-block {
-    padding: 1rem 2rem;
+    padding: 2rem;
     background-color: #fff;
     border-radius: 3px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    row-gap: 15px;
 }
 
 #sideNavInner #channel-block .inner-wrapper .body .add-channel-block .body .button-block .button {
     flex: 0 0 33%;
-    margin-bottom: 1rem;
 }
 
 #sideNavInner #channel-block .inner-wrapper .body .add-channel-block .body .button-block .button .channel-btn {
     border: none;
     background-color: transparent;
     width: 100%;
+    text-decoration: none;
+    text-align: center;
 }
 
 #sideNavInner #channel-block .inner-wrapper .body .add-channel-block .body .button-block .button .channel-btn img {
@@ -467,9 +470,189 @@
     font-size: 12px;
     font-weight: 300;
     margin-top: 5px;
+    color: #000;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block {
+    background-color: #EBEBEB;
+    padding: 1.5rem 2rem;
+    border-radius: 3px;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block .header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block .header .title {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block .header .info-done-btn {
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 300;
+    color: #017FFA;
+    text-decoration: none;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block .body {
+    padding: 0;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block.messenger-block .body {
+    background-color: #DCDCDC;
+    padding: 1.5rem 2rem;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block.messenger-block .body .text {
+    font-size: 14px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block.messenger-block .body .connect-fb-btn {
+    display: block;
+    background-color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0.625rem 0;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block.messenger-block .body .connect-fb-btn .bi {
+    position: relative;
+    font-size: 16px;
+    color: #1877F2;
+    margin-right: 5px;
+    top: 1px;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block .body .form-control {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block .body .form-control:focus {
+    box-shadow: none;
+    border-color: #e2e5ec;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block .body .form-label {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.42);
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    padding: 0.75rem 1.5rem;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .content-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .content-block img {
+    width: 30px;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .content-block .content .name {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .content-block .content .status {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.42);
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .option-block button {
+    border: none;
+    background-color: transparent;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .option-block button .bi {
+    font-size: 18px;
+    color: #000;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .option-block .dropdown-menu .dropdown-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .option-block .dropdown-menu .dropdown-item:hover {
+    background-color: #EBEBEB;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .option-block .dropdown-menu .dropdown-item.edit .text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #017FFA;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .option-block .dropdown-menu .dropdown-item.edit .bi {
+    font-size: 14px;
+    color: #017FFA;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .option-block .dropdown-menu .dropdown-item.delete .text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #f00;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .option-block .dropdown-menu .dropdown-item.delete .bi {
+    font-size: 14px;
+    color: #f00;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .add-channel-block,
+#sideNavInner #channel-block .inner-wrapper .body .info-block .block,
+#sideNavInner #channel-block .inner-wrapper .body .channels-block .channel {
+    display: none;
 }
 
 #sideNavInner #channel-block .inner-wrapper .body .add-channel-btn {
+    display: block;
+    text-decoration: none;
+    text-align: center;
     width: 100%;
     padding: 1rem 0;
     border: none;
@@ -515,7 +698,7 @@
 }
 
 #sideNavInner #template-block .inner-wrapper .body .templates .temps.active {
-    border: 2px solid #18C655;
+    border: 2px solid #017FFA;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -523,7 +706,7 @@
 #sideNavInner #template-block .inner-wrapper .body .templates .temps.active .checked-sign {
     width: 45px;
     height: 45px;
-    background-color: #18C655;
+    background-color: #017FFA;
     color: #fff;
     position: absolute;
     top: -24px;
@@ -536,7 +719,7 @@
 #sideNavInner #template-block .inner-wrapper .body .templates .temps.active .checked-sign .bi {
     position: absolute;
     font-size: 1.125rem;
-    top: 8px;
+    top: 10px;
     left: 28px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -605,7 +788,7 @@
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatBubbleCollapse .accordion-body .bubble-icone.active {
-    border: 1px solid #44BC8E;
+    border: 1px solid #017FFA;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body {
@@ -619,7 +802,7 @@
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .picture-block .header {
     padding: 18px 20px;
-    background-color: #0A586C;
+    background-color: #1B3D6B;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -727,7 +910,7 @@
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .header {
     padding: 18px 20px;
-    background-color: #0A586C;
+    background-color: #1B3D6B;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -786,8 +969,8 @@
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-input:checked {
-    background-color: #0A586C;
-    border-color: #0A586C;
+    background-color: #017FFA;
+    border-color: #017FFA;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-label {
@@ -800,7 +983,7 @@
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body fieldset .form-check .form-check-input:checked+.form-check-label {
-    color: #0a586c;
+    color: #017FFA;
 }
 
 #sideNavInner #content-block .inner-wrapper .body #whatsappContentAccordion #chatHeaderCollapse .accordion-body .caption-block .body .custom-caption-block {
@@ -953,8 +1136,8 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-    background-color: #44BC8E;
-    border-color: #44BC8E;
+    background-color: #017FFA;
+    border-color: #017FFA;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #positionCollapse .accordion-body fieldset .form-check .form-check-label {
@@ -996,8 +1179,8 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-    background-color: #44BC8E;
-    border-color: #44BC8E;
+    background-color: #017FFA;
+    border-color: #017FFA;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #pageSettingsCollapse .accordion-body fieldset .form-check .form-check-label {
@@ -1031,7 +1214,7 @@
     font-size: .56rem;
     line-height: 25px;
     font-weight: 300;
-    background-color: #44BC8E;
+    background-color: #017FFA;
     width: 68px;
     height: 25px;
     text-align: center;
@@ -1082,8 +1265,8 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-    background-color: #44BC8E;
-    border-color: #44BC8E;
+    background-color: #017FFA;
+    border-color: #017FFA;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #devicesSettingsCollapse .accordion-body fieldset .form-check .form-check-label {
@@ -1137,8 +1320,8 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-    background-color: #44BC8E;
-    border-color: #44BC8E;
+    background-color: #017FFA;
+    border-color: #017FFA;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #visitorsStettingsCollapse .accordion-body fieldset .form-check .form-check-label {
@@ -1172,7 +1355,7 @@
     font-size: .56rem;
     line-height: 25px;
     font-weight: 300;
-    background-color: #44BC8E;
+    background-color: #017FFA;
     width: 68px;
     height: 25px;
     text-align: center;
@@ -1218,8 +1401,8 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-    background-color: #44BC8E;
-    border-color: #44BC8E;
+    background-color: #017FFA;
+    border-color: #017FFA;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body fieldset .form-check .form-check-label {
@@ -1253,7 +1436,7 @@
     font-size: .56rem;
     line-height: 25px;
     font-weight: 300;
-    background-color: #44BC8E;
+    background-color: #017FFA;
     width: 68px;
     height: 25px;
     text-align: center;
@@ -1329,7 +1512,7 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block .time-blocks .form-control {
-    color: #44BC8E;
+    color: #017FFA;
     font-size: 0.875rem;
     font-weight: 300;
     padding: 0;
@@ -1346,7 +1529,7 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #displaySettingsCollapse .accordion-body #displaySettingsAccordion #timeSettingsCollapse .accordion-body .specific-time-block .time-blocks .form-select {
-    color: #44BC8E;
+    color: #017FFA;
     font-size: 0.875rem;
     font-weight: 300;
     padding: 0;
@@ -1391,7 +1574,7 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .specific-time-block .time-blocks .form-control {
-    color: #44BC8E;
+    color: #017FFA;
     font-size: 0.875rem;
     font-weight: 300;
     padding: 0;
@@ -1408,7 +1591,7 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #chatTriggersCollapse .accordion-body .specific-time-block .time-blocks .form-select {
-    color: #44BC8E;
+    color: #017FFA;
     font-size: 0.875rem;
     font-weight: 300;
     padding: 0;
@@ -1488,8 +1671,8 @@
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check .form-check-input:checked {
-    background-color: #44BC8E;
-    border-color: #44BC8E;
+    background-color: #017FFA;
+    border-color: #017FFA;
 }
 
 #sideNavInner #settings-block .inner-wrapper .body .accordion .accordion-item #notificationsCollapse .accordion-body fieldset .form-check .form-check-label {
@@ -1646,7 +1829,7 @@
 }
 
 #sideNavInner #appearance-block .inner-wrapper .body .accordion .accordion-item #bubbleAnimationCollapse .accordion-body .sroll-position .form-control {
-    color: #44BC8E;
+    color: #017FFA;
     font-size: 0.875rem;
     font-weight: 300;
     padding: 0;
