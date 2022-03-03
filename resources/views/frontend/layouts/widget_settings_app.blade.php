@@ -24,13 +24,12 @@
         <script src="https://kit.fontawesome.com/aa4e69f91b.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="{{url('css/jquery-clockpicker.min.css')}}">
-        <link rel="stylesheet" href="{{url('css/widget_settings.css')}}">
 
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
 
         <link rel="stylesheet" href="{{url('css/aiz-core.css')}}">  
-    <link rel="stylesheet" href="{{url('css/vendors.css')}}">  
+        <link rel="stylesheet" href="{{url('css/vendors.css')}}">  
     
     <script>
         var AIZ = AIZ || {};
