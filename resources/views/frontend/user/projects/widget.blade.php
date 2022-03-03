@@ -91,6 +91,10 @@
                                                             <i class="bi bi-gear"></i>
                                                             Settings
                                                         </a>
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" class="me-3 act-btn act-settings">
+                                                            <i class="bi bi-gear"></i>
+                                                            Add Script
+                                                        </a>
                                                     </div>
                                                     <div class="block-2">
                                                         <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
@@ -144,12 +148,16 @@
                                             </div>
                                             <div class="row g-0 mt-4 mb-3">
                                                 <div class="button-block">
-                                                    <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
-                                                    {{csrf_field()}}
-                                                        <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                        <input type="hidden" name="widget_type" value="Whatsapp Chat">
-                                                        <button type="submit" class="create-widget-btn">Create Widget</button>
-                                                    </form>
+                                                    @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null)
+                                                        <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
+                                                        {{csrf_field()}}
+                                                            <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                            <input type="hidden" name="widget_type" value="Whatsapp Chat">
+                                                            <button type="submit" class="create-widget-btn">Create Widget</button>
+                                                        </form>
+                                                    @else
+                                                        <button type="submit" class="create-widget-btn" disabled>Already Installed</button>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -177,7 +185,16 @@
                                             </div>
                                             <div class="row g-0 mt-4 mb-3">
                                                 <div class="button-block">
-                                                    <button href="#" class="create-widget-btn">Create Widget</button>
+                                                    @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
+                                                        <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
+                                                        {{csrf_field()}}
+                                                            <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                            <input type="hidden" name="widget_type" value="All-in-One Chat">
+                                                            <button type="submit" class="create-widget-btn">Create Widget</button>
+                                                        </form>
+                                                    @else
+                                                        <button type="submit" class="create-widget-btn" disabled>Already Installed</button>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -207,8 +224,7 @@
                                                         {{csrf_field()}}
                                                         <div class="inner-wrapper">
                                                             <div class="col">
-                                                                <div
-                                                                    class="row g-0 align-items-center justify-content-between">
+                                                                <div class="row g-0 align-items-center justify-content-between">
                                                                     <div class="col-7">
                                                                         <div class="header">
                                                                             <span class="title">Whatsapp Chat</span>
@@ -218,20 +234,54 @@
                                                                             your website.
                                                                         </p>
                                                                         <div class="button-block">
-                                                                            <input type="hidden" name="project_id"
-                                                                                value="{{$project_id}}">
-                                                                            <input type="hidden" name="widget_type"
-                                                                                value="Whatsapp Chat">
-                                                                            <button type="submit"
-                                                                                class="btn-whatsapp"></i>Create
-                                                                                Widget</button>
+                                                                            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null)
+                                                                                <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                                                <input type="hidden" name="widget_type" value="Whatsapp Chat">
+                                                                                <button type="submit" class="btn-whatsapp"></i>Create Widget</button>
+                                                                            @else
+                                                                                <button type="submit" class="btn-whatsapp" disabled>Already Installed</button>
+                                                                            @endif
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-4">
                                                                         <div class="whatsapp-feature-block">
-                                                                            <img src="{{url('images/whatsapp (1).png')}}"
-                                                                                alt="">
+                                                                            <img src="{{url('images/whatsapp (1).png')}}" alt="">
                                                                             <div class="title">WhatsApp Chat</div>
+                                                                            <div class="subtitle">Entertainment</div>
+                                                                            <div class="star-rating">
+                                                                                <i class="bi active bi-star"></i>
+                                                                                <i class="bi active bi-star"></i>
+                                                                                <i class="bi active bi-star"></i>
+                                                                                <i class="bi active bi-star"></i>
+                                                                                <i class="bi bi-star"></i>
+                                                                            </div>
+                                                                            <div class="pricing">Free</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col mt-3">
+                                                                <div class="row g-0 align-items-center justify-content-between">
+                                                                    <div class="col-7">
+                                                                        <div class="header">
+                                                                            <span class="title">All-in-One Chat</span>
+                                                                        </div>
+                                                                        <p class="body-text">Let users chat with you on Facebook Messenger, WhatsApp, Telegram, etc.</p>
+                                                                        <div class="button-block">
+                                                                            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
+                                                                                <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                                                <input type="hidden" name="widget_type" value="All-in-One Chat">
+                                                                                <button type="submit" class="btn-whatsapp"></i>Create Widget</button>
+                                                                            @else
+                                                                                <button type="submit" class="btn-whatsapp" disabled>Already Installed</button>
+                                                                            @endif
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <div class="whatsapp-feature-block">
+                                                                            <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                                            <div class="title">All-in-One Chat</div>
                                                                             <div class="subtitle">Entertainment</div>
                                                                             <div class="star-rating">
                                                                                 <i class="bi active bi-star"></i>
@@ -262,6 +312,31 @@
     </div>
 </section>
 
+@foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
+
+<!-- Modal -->
+<div class="modal fade" id="get_widget_Modal{{$widgetlist->id}}" tabindex="-1" role="dialog" aria-labelledby="get_widget_Lable" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="{{url('images/Group 389.png')}}" alt="">
+                <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
+                <code>
+                    &lt;div id="{{$widgetlist->widget_key}}"&gt;&lt;/div&gt; <br>
+                    &lt;script src="{{url('')}}/whatsapp_widget/{{$widgetlist->id}}/tallentorw.js"&gt;&lt;/script&gt;
+                </code>
+            </div>
+            <div class="modal-footer">
+                <a href="{{route('frontend.user.project.chat',$project_id)}}" class="modal-btn">I have installed the code</a>
+            </div>
+        </div>
+    </div>
+</div>
+@endforeach
 
 <div class="modal fade" id="deleteFavorite" tabindex="-1" aria-labelledby="deleteFavoriteLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">

@@ -33,6 +33,8 @@ class WidgetController extends Controller
         $add->project_id = $request->project_id;
         if($request->widget_type == 'Whatsapp Chat'){
             $add->settings = $default_settings;
+        }elseif($request->widget_type == 'All-in-One Chat'){
+            $add->settings = $default_settings;
         }
 
         $add->save();
@@ -55,12 +57,24 @@ class WidgetController extends Controller
         $widget = Widgets::where('id',$id)->first();
         $project = Projects::where('id',$widget->project_id)->first();           
         $whatsapp_chat = WhatsappChatWidgetTemplate::where('status','Enabled')->get();
+
+        if($widget->widget_type == 'Whatsapp Chat')
+        {
+            return view('frontend.user.projects.user_widget_settings',[
+                'project' => $project,
+                'widget' => $widget,
+                'whatsapp_chat' => $whatsapp_chat
+            ]);
+        }
+        else{
+            return view('frontend.user.projects.user_widget_settings_all_in_one',[
+                'project' => $project,
+                'widget' => $widget,
+                'whatsapp_chat' => $whatsapp_chat
+            ]);
+        }
     
-        return view('frontend.user.projects.user_widget_settings',[
-            'project' => $project,
-            'widget' => $widget,
-            'whatsapp_chat' => $whatsapp_chat
-        ]);
+        
         
     }
 
