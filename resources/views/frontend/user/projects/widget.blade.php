@@ -315,13 +315,15 @@
 @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
 
 <!-- Modal -->
-<div class="modal fade" id="get_widget_Modal{{$widgetlist->id}}" tabindex="-1" role="dialog" aria-labelledby="get_widget_Lable" aria-hidden="true">
+<div class="modal fade get_widget_Modal" id="get_widget_Modal{{$widgetlist->id}}" tabindex="-1" role="dialog" aria-labelledby="get_widget_Lable" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <img src="{{url('images/Group 389.png')}}" alt="">
                 <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+                </button>
             </div>
             <div class="modal-body">
                 <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
