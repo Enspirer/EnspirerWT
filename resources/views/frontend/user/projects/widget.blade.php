@@ -91,8 +91,8 @@
                                                             <i class="bi bi-gear"></i>
                                                             Settings
                                                         </a>
-                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" class="me-3 act-btn act-settings">
-                                                            <i class="bi bi-gear"></i>
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" class="me-3 act-btn act-script">
+                                                        <i class="bi bi-code-slash"></i>
                                                             Add Script
                                                         </a>
                                                     </div>

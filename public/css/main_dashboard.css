@@ -954,7 +954,8 @@
     color: #fff;
 }
 
-#sectionWhatsappWidget .block-2 .inner-wrapper .button-block .act-btn.act-settings {
+#sectionWhatsappWidget .block-2 .inner-wrapper .button-block .act-btn.act-settings,
+#sectionWhatsappWidget .block-2 .inner-wrapper .button-block .act-btn.act-script {
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
