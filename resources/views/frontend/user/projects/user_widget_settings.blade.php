@@ -102,6 +102,14 @@
                         <div class="footer">
                             <a href="#" class="btn-whatsapp"
                                 onclick="innerSection('content-block');navSwitcher('contentNav')">Continue</a>
+                                <div class="button-block">
+                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                        <!-- <div class="btn apply">Apply</div> -->
+                        <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
+                        <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
+                        
+                        <!-- <button type="submit" class="btn save">Save</button> -->
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -510,6 +518,14 @@
                         <div class="footer">
                             <a href="#" class="btn-whatsapp"
                                 onclick="innerSection('settings-block');navSwitcher('settingsNav')">Continue</a>
+                                <div class="button-block">
+                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                        <!-- <div class="btn apply">Apply</div> -->
+                        <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
+                        <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
+                        
+                        <!-- <button type="submit" class="btn save">Save</button> -->
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -930,6 +946,14 @@
                         <div class="footer">
                             <a href="#" class="btn-whatsapp"
                                 onclick="innerSection('appearance-block');navSwitcher('appearanceNav')">Continue</a>
+                                <div class="button-block">
+                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                        <!-- <div class="btn apply">Apply</div> -->
+                        <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
+                        <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
+                        
+                        <!-- <button type="submit" class="btn save">Save</button> -->
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -1049,6 +1073,14 @@
                         <div class="footer">
                             <span class="footer-text">Like the Results? Try on your website!</span>
                             <a href="#" class="btn-whatsapp" data-toggle="modal" data-target="#get_widget_Modal">Add to Website</a>
+                            <div class="button-block">
+                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                        <!-- <div class="btn apply">Apply</div> -->
+                        <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
+                        <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
+                        
+                        <!-- <button type="submit" class="btn save">Save</button> -->
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -1231,17 +1263,6 @@
                                 <iframe id="incorme" src="{{route('frontend.user.user_whatsapp_chat_preview',$widget->id)}}" frameborder="0" style="width: 100%;height: 610px;"></iframe>
                             </div>
                         </div>
-                    </div>
-
-                   
-
-                    <div class="button-block">
-                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
-                        <!-- <div class="btn apply">Apply</div> -->
-                        <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
-                        <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
-                        
-                        <!-- <button type="submit" class="btn save">Save</button> -->
                     </div>
 
                 </div>

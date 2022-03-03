@@ -66,38 +66,6 @@
     background-color: #fff;
 }
 
-.main-window .body-section .section-content .section-container .button-block {
-    position: fixed;
-    bottom: 4rem;
-    right: 4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    gap: 1rem;
-}
-
-.main-window .body-section .section-content .section-container .button-block .btn {
-    width: 113px;
-    height: 40px;
-    line-height: 40px;
-    font-size: .875rem;
-    font-weight: 300;
-    background-color: #fff;
-    padding: 0;
-    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.main-window .body-section .section-content .section-container .button-block .btn.save {
-    background-color: #FFD94F;
-}
-
 .accordion .accordion-item {
     border: none;
     margin-bottom: 5px;
@@ -385,6 +353,7 @@
     padding: 4rem 2rem 0;
     margin-top: auto;
     margin-bottom: 4rem;
+    position: relative;
 }
 
 #sideNavInner .footer .footer-text {
@@ -408,6 +377,19 @@
     text-align: center;
     border-radius: 0.5rem;
     border: none;
+}
+
+#sideNavInner .footer .button-block {
+    margin-top: 1rem;
+}
+
+#sideNavInner .footer .button-block .btn.cancel {
+    display: block;
+    border: 1px solid #464646;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 0;
+
 }
 
 #sideNavInner #template-block .inner-wrapper .header {
