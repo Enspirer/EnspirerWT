@@ -213,6 +213,7 @@ class HomeController extends Controller
     public function user_api_chat(Request $request)
     {     
         // dd($request);
+        // dd($request->bubble_icon);
 
         $template_layout_details = WhatsappChatWidgetTemplate::where('id',$request->template_layout)->first();
         // dd($template_layout_details);
@@ -259,11 +260,14 @@ class HomeController extends Controller
         if($request->show_notification_in_tab_tile != null){            
             array_push($notify_array,$request->show_notification_in_tab_tile);
         }
+
+        
+
       
         
         $template_layout = $request->template_layout;
         $whatsapp_number = $request->whatsapp_number;
-        $bubble_icon = $request->bubble_icon;
+        $bubble_icon = $pre_bubble_icon;
         $chat_header = $request->chat_header;
         $caption = $request->caption;
         $image = $request->image;
@@ -341,7 +345,6 @@ class HomeController extends Controller
         // return json_encode($output);                  
 
     }
-
 
 
     

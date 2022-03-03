@@ -24,7 +24,10 @@ class WidgetController extends Controller
 
         $widgetJsonOutput = $widpan[0];
 
-
+        $count = Widgets::where('id',$id)->first()->load_count;
+        $update = new Widgets;
+        $update->load_count = $count + 1;
+        Widgets::whereId($id)->update($update->toArray());        
 
 
         return response()
