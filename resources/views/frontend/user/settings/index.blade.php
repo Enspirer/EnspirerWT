@@ -73,7 +73,7 @@
                                         <div class="row g-0">
                                             <div class="col-4">
                                                 <div class="profile-pic">
-                                                    <img src="{{url('images/profile.png')}}" alt="">
+                                                    <img src="{{ auth()->user()->picture }}" alt="">
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </div>
                                             </div>
