@@ -14,7 +14,7 @@
                 <h2 class="title">Top Categories at Tallentor</h2>
                 <div class="text">one place with thousands of creative talents</div>
             </div>
-            <div class="row gx-0 gy-4 row-cols-4">
+            <div class="row gx-0 gy-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1">
                 <div class="col">
                     <div class="card blue-overlay">
                         <a href="#" class="inner-wrapper">

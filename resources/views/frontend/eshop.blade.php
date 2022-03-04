@@ -154,7 +154,7 @@
                 <div class="text">Sample text here</div>
             </div>
             <div class="products">
-                <div class="row g-5 row-cols-xxl-3 row-cols-xl-3">
+                <div class="row g-5 row-cols-lg-3 row-cols-sm-2 row-cols-1 justify-content-center">
                     <div class="col">
                         <div class="product-card">
                             <a href="#">

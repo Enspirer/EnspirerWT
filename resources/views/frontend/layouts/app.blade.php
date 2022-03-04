@@ -69,9 +69,14 @@
                 type: 'loop',
                 perPage: 1,
                 focus: 'center',
-                gap: '50px',
-                fixedWidth: '415px',
+                gap: '2rem',
+                fixedWidth: '400px',
                 pagination: false,
+                breakpoints: {
+		                        574: {
+                                    fixedWidth: '300px',
+		                            },
+                            },
             });
 
             indexSlider.mount();
@@ -107,9 +112,13 @@
         var eShopSlider = new Splide('#eShopSlider', {
             rewind: false,
             fixedWidth: '47rem',
-            height: '18rem',
             gap: '2rem',
             pagination: false,
+            breakpoints: {
+		                        767: {
+                                    fixedWidth: '300px',
+		                            },
+                            },
         });
 
         eShopSlider.mount();

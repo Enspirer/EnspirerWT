@@ -294,4 +294,31 @@
     top: 1rem;
 }
 
+@media screen and (max-width: 991px) {
+    .contact-form .inner-wrapper .images .large {
+        width: 200px;
+        top: 2rem;
+        right: 0;
+    }
+
+    .contact-form .inner-wrapper .images .medium {
+        top: -6rem;
+        width: 150px;
+    }
+
+    .contact-form .inner-wrapper .images .small {
+        width: 150px;
+        right: 10rem;
+        top: -6rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .contact-form .inner-wrapper .images .large {
+        width: 160px;
+    }
+
+}
+
 /*# sourceMappingURL=contact_us.css.map */

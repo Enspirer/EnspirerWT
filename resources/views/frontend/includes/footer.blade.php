@@ -1,10 +1,12 @@
 <section class="footer-section">
         <div class="container">
-            <div class="row g-0">
+            <div class="row inner-wrapper g-0">
                 <div class="col-8">
                     <div class="links">
                         <div class="header">
-                            <img src="{{url('images/Tallentor Logo 2-04.png')}}" alt="">
+                            <a href="{{url('/')}}" rel="noopener noreferrer">
+                            <img src="{{url('images/full-logo.png')}}" alt="">
+                            </a>
                         </div>
                         <div class="body">
                             <div class="company">
