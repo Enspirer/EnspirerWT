@@ -89,7 +89,7 @@
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
-                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-whatsapp')">
+                                                <li><a class="dropdown-item delete social_delete" name="delete_whatsapp" href="#" onclick="deleteChannel('channel-whatsapp')">
                                                     <div class="text">Delete</div>
                                                     <i class="bi bi-trash3"></i>
                                                 </a></li>
@@ -113,7 +113,7 @@
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
-                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-messenger')">
+                                                <li><a class="dropdown-item delete social_delete" name="delete_fb" href="#" onclick="deleteChannel('channel-messenger')">
                                                     <div class="text">Delete</div>
                                                     <i class="bi bi-trash3"></i>
                                                 </a></li>
@@ -137,7 +137,7 @@
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
-                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-telegram')">
+                                                <li><a class="dropdown-item delete social_delete" name="delete_telegram" href="#" onclick="deleteChannel('channel-telegram')">
                                                     <div class="text">Delete</div>
                                                     <i class="bi bi-trash3"></i>
                                                 </a></li>
@@ -161,7 +161,7 @@
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
-                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-line')">
+                                                <li><a class="dropdown-item delete social_delete" name="delete_line" href="#" onclick="deleteChannel('channel-line')">
                                                     <div class="text">Delete</div>
                                                     <i class="bi bi-trash3"></i>
                                                 </a></li>
@@ -185,7 +185,7 @@
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
-                                                <li><a class="dropdown-item delete" href="#" onclick="deleteChannel('channel-viber')">
+                                                <li><a class="dropdown-item delete social_delete" name="delete_viber" href="#" onclick="deleteChannel('channel-viber')">
                                                     <div class="text">Delete</div>
                                                     <i class="bi bi-trash3"></i>
                                                 </a></li>
@@ -240,7 +240,7 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-whatsapp')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="text" class="form-control" id="whatsappnoInput" placeholder="Type your WhatsApp Number..." required>
+                                            <input type="tel" class="form-control" name="whatsapp" id="whatsappnoInput" placeholder="Type your WhatsApp Number..." required>
                                             <label for="whatsappnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
                                                 add your country code</label>
                                         </div>
@@ -250,15 +250,8 @@
                                             <div class="title">Facebook</div>
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-messenger')">Done</a>
                                         </div>
-                                        <!-- <div class="body">
-                                            <div class="text">Facebook</div>
-                                            <a href="#" class="connect-fb-btn">
-                                                <i class="bi bi-facebook"></i>
-                                                Connect to Facebook
-                                            </a>
-                                        </div> -->
                                         <div class="body">
-                                            <input type="text" class="form-control" id="fbIdInput" placeholder="Type your Facebook ID..." required>
+                                            <input type="tel" class="form-control" name="fb" id="fbIdInput" placeholder="Type your Facebook ID..." required>
                                             <label for="fbIdInput" class="form-label"></label>
                                         </div>
                                     </div>
@@ -268,7 +261,7 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-telegram')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="text" class="form-control" id="telegramnoInput" placeholder="Type your no Number..." required>
+                                            <input type="tel" class="form-control" name="telegram" id="telegramnoInput" placeholder="Type your no Number..." required>
                                             <label for="telegramnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
                                                 add your country code</label>
                                         </div>
@@ -279,7 +272,7 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-line')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="text" class="form-control" id="linenoInput" placeholder="Type your Line Number..." required>
+                                            <input type="tel" class="form-control" name="line" id="linenoInput" placeholder="Type your Line Number..." required>
                                             <label for="linenoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add
                                                 your country code</label>
                                         </div>
@@ -290,7 +283,7 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-viber')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="text" class="form-control" id="vibernoInput" placeholder="Type your Viber Number..." required>
+                                            <input type="tel" class="form-control" name="viber" id="vibernoInput" placeholder="Type your Viber Number..." required>
                                             <label for="vibernoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
                                                 add your country code</label>
                                         </div>
@@ -1232,10 +1225,10 @@
                                                     <label class="form-check-label" for="bubble_icon_color">Bubble Icon Color</label>
                                                     <input class="form-check-input" type="color" id="bubble_icon_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->bubble_icon_color }}" name="bubble_icon_color" value="#487662" required>
                                                 </div>
-                                                <div class="form-check">
+                                                <!-- <div class="form-check">
                                                     <label class="form-check-label" for="button_color">Button Color</label>
-                                                    <input class="form-check-input" type="color" id="button_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->button_color }}" name="button_color" value="#79a37d" required>
-                                                </div>
+                                                    <input class="form-check-input" type="color" id="button_color" onchange="myFunction()" name="button_color" value="#79a37d" required>
+                                                </div> -->
                                                 <div class="form-check">
                                                     <label class="form-check-label" for="header_background_color">Header Background Color</label>
                                                     <input class="form-check-input" type="color" id="header_background_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->header_background_color }}" name="header_background_color" value="#92967d" required>
@@ -1271,7 +1264,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
+                                <!-- <div class="accordion-item">
                                     <h2 class="accordion-header" id="startChatButton">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#startChatButtonCollapse"
@@ -1289,7 +1282,7 @@
                                                     <span class="name">Radius</span>
                                                     <span class="value">100</span>
                                                 </label>
-                                                <input type="range" min="0" max="100" class="form-control-range" name="button_corner_radius" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->button_corner_radius }}" id="button_corner_radius">
+                                                <input type="range" min="0" max="100" class="form-control-range" name="button_corner_radius" onchange="myFunction()" id="button_corner_radius">
              
                                                 <div class="range">
                                                     <span>0</span>
@@ -1298,7 +1291,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="customCss">
                                         <button class="accordion-button collapsed" type="button"
@@ -1653,9 +1646,7 @@
 
             $('#bubble_background_color').val(decoded_json[0].bubble_background_color);
             $('#bubble_icon_color').val(decoded_json[0].bubble_icon_color);
-            $('#button_color').val(decoded_json[0].button_color);
             $('#header_background_color').val(decoded_json[0].header_background_color);
-            $('#button_corner_radius').val(decoded_json[0].button_corner_radius);
             $('#custom_css').val(decoded_json[0].custom_css);
             $('#template_layout').val(decoded_json[0].template_layout);
 
@@ -1683,9 +1674,112 @@
         myFunction();
     });
 
-    function myFunction(bubble_icon = null) {
+    
+    const infoInput = document.getElementById("channel-block").querySelectorAll(".form-control");
 
-        // alert(bubble_icon);
+    [].forEach.call(infoInput, function (input) {
+        input.addEventListener("change", function () {
+            infoInputVal = input.value;
+            infoInputName = input.getAttribute("name");
+
+            // console.log(infoInputVal, infoInputName);
+
+            myFunction(infoInputVal,infoInputName);
+
+        });
+    });
+
+
+
+
+    const deleteSocialMediaChat = document.getElementById("channel-block").querySelectorAll(".social_delete");
+
+    let deleteSocialChatDelete;
+
+    [].forEach.call(deleteSocialMediaChat, function (deleteSocialMedia) {
+        deleteSocialMedia.addEventListener("click", function () {
+            
+            deleteSocialChatDelete = deleteSocialMedia.getAttribute("name");
+
+            // console.log(deleteSocialChatDelete);
+
+            myFunction();
+
+        });
+    });
+
+    
+
+
+    function myFunction(infoInputVal,infoInputName) {
+
+     
+        let chat_del = deleteSocialChatDelete;
+
+       
+            delete_social_media = chat_del;
+        
+        
+
+        // console.log(delete_social_media);
+        // console.log(infoInputName);
+
+       
+        if(infoInputName == 'whatsapp') {
+            get_whatsapp_array = [
+                whatsapp = 'whatsapp',
+                whats_number = infoInputVal
+            ];
+        }
+        else {
+            get_whatsapp_array = null;
+        }
+        if(infoInputName == 'fb') {
+            get_fb_array = [
+                fb = 'fb',
+                fb_number = infoInputVal
+            ];
+        }
+        else {
+            get_fb_array = null;
+        }
+
+        if(infoInputName == 'telegram') {
+            get_telegram_array = [
+                telegram = 'telegram',
+                telegram_number = infoInputVal
+            ];
+        }
+        else {
+            get_telegram_array = null;
+        }
+
+        if(infoInputName == 'line') {
+            get_line_array = [
+                line = 'line',
+                line_number = infoInputVal
+            ];
+        }
+        else {
+            get_line_array = null;
+        }
+
+        if(infoInputName == 'viber') {
+            get_viber_array = [
+                viber = 'viber',
+                viber_number = infoInputVal
+            ];
+        }
+        else {
+            get_viber_array = null;
+        }
+
+        // console.log(get_whatsapp_array);
+        // console.log(get_fb_array);
+        // console.log(get_telegram_array);
+        // console.log(get_line_array);
+        // console.log(get_viber_array);        
+   
 
         if (tempVal != null) {
             template_layout = tempVal;
@@ -1693,11 +1787,9 @@
             template_layout = $('#hidden_template_id').val();
         }
         // console.log(template_layout);
-        if (bubble_icon != null) {
-            bubble_icon = bubble_icon;
-        } else {
-            bubble_icon = icon;
-        }
+      
+        bubble_icon = icon;
+        
 
         // console.log(bubble_icon);
 
@@ -1872,11 +1964,9 @@
 
         bubble_background_color = $('#bubble_background_color').val();
         bubble_icon_color = $('#bubble_icon_color').val();
-        button_color = $('#button_color').val();
         header_background_color = $('#header_background_color').val();
         // console.log(bubble_background_color);
         // console.log(bubble_icon_color);
-        // console.log(button_color);
         // console.log(bubble_icon);
 
 
@@ -1888,12 +1978,17 @@
         }
 
         scroll_position_appearance = $('#scroll_position_appearance').val();
-        button_corner_radius = $('#button_corner_radius').val();
         custom_css = $('#custom_css').val();
         hidden_id = $('#hidden_id').val();
 
 
-        $.post("{{url('/')}}/api/user_api_chat", {
+        $.post("{{url('/')}}/api/user_api_chat_all", {
+            delete_social_media:delete_social_media,
+            get_whatsapp_array:get_whatsapp_array,
+            get_fb_array:get_fb_array,
+            get_telegram_array:get_telegram_array,
+            get_line_array:get_line_array,
+            get_viber_array:get_viber_array,
             template_layout: template_layout,
             whatsapp_number: whatsapp_number,
             bubble_icon: bubble_icon,
@@ -1930,11 +2025,9 @@
             show_notification_in_tab_tile: show_notification_in_tab_tile,
             bubble_background_color: bubble_background_color,
             bubble_icon_color: bubble_icon_color,
-            button_color: button_color,
             header_background_color: header_background_color,
             enabled_animation: enabled_animation,
             scroll_position_appearance: scroll_position_appearance,
-            button_corner_radius: button_corner_radius,
             custom_css: custom_css,
             hidden_id: hidden_id,
         }, );
@@ -1989,6 +2082,10 @@
     function deleteChannel(channel) {
         channelBlock.querySelector('.' + channel).style.display = "none";
     }
+
+
+
+    
 </script>
 
 <script>

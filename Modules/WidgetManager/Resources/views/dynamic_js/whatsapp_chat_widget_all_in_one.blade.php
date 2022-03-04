@@ -21,7 +21,7 @@ function addWidget() {
     #allin1widgetblock #allin1widget {
         position: fixed;
         bottom: 150px;
-        right: 90px;
+        {{$widget_meta->alignment}}: 90px;
         z-index: 99999;
         display: none;
     }
@@ -41,7 +41,7 @@ function addWidget() {
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1header {
-        background-color: #06557E;
+        background-color: {{ $widget_meta->header_background_color}};
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         padding: 25px 40px;
@@ -336,16 +336,22 @@ function addWidget() {
         cursor: pointer;
     }
 
-    #allin1widgetblock #allin1widtoggler::after {
-        content: '';
-        width: 12px;
-        height: 12px;
-        background-color: #f00;
-        position: absolute;
-        border-radius: 50%;
-        top: 6px;
-        right: 3px;
-    }
+    @if(count($widget_meta->notification) != 0)
+        @foreach($widget_meta->notification as $key => $notify)
+            @if($notify == 'bubble_notification_bage')
+                #allin1widgetblock #allin1widtoggler::after {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    background-color: #f00;
+                    position: absolute;
+                    border-radius: 50%;
+                    top: 6px;
+                    right: 3px;
+                }
+            @endif
+        @endforeach
+    @endif
 
     #allin1widgetblock #allin1widtoggler i {
         font-size: 35px;
@@ -375,12 +381,29 @@ function addWidget() {
     /*# sourceMappingURL=main.css.map */
     </style>
 
+    <style>
+        {{$widget_meta->custom_css}}
+    </style>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <div id="allin1widgetblock">
-        <div id="allin1widtoggler" onclick="allin1toggle()">
-            <i class="bi bi-chat-dots-fill"></i>
-        </div>
+        @if($widget_meta->show_icon == 'on')
+            @if($widget_meta->scroll_position_appearance == "Top")
+                <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;top: 1px;margin-top: 30px;">
+                    @elseif($widget_meta->scroll_position_appearance == "Bottom")
+                        <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;bottom: 1px;margin-bottom: 30px;">
+                            @elseif($widget_meta->scroll_position_appearance == "Left")
+                                <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;left: 1px;margin-left: 30px;">
+                                    @elseif($widget_meta->scroll_position_appearance == "Right")
+                                        <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
+                                            @endif
+                                            <i style="color:{{$widget_meta->bubble_icon_color}};" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
+                                        </div>
+
+                                    @endif
+                                
+                  
 
         <div id="allin1widget">
             <div class="allin1container">
@@ -388,37 +411,77 @@ function addWidget() {
                     <div id="allin1close" onclick="allin1close()">&#10006;</div>
                     <div class="allin1profile">
                         <div class="allin1img">
-                            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" alt="">
+                            <img src="{{uploaded_asset($widget_meta->image)}}" style="width:60px; height:60px;" alt="">
                         </div>
                         <div class="allin1info">
-                            <div class="allin1name">Rayan Perera</div>
-                            <div class="allin1status">Typically replies within a day</div>
+                            <div class="allin1name">{{$widget_meta->chat_header}}</div>
+                            <div class="allin1status">{{$widget_meta->caption}}</div>
                         </div>
                     </div>
                 </div>
                 <div class="allin1body">
-                    <div class="allin1welcomemsg">
-                        <div class="allin1triangle"></div>
-                        <div class="allin1sendersname">Rayan Perera</div>
-                        <div class="allin1msg">Hello, chamind... <br>How can I help you?</div>
-                        <div class="allin1msgtime">19:12</div>
-                    </div>
+                    @if($widget_meta->start_chat == 'on')
+                        <div class="allin1welcomemsg">
+                            <div class="allin1triangle"></div>
+                            <div class="allin1msg">{{$widget_meta->welcome_message}}</div>
+                        </div>
+                    @else
+
+                    @endif
                 </div>
                 <div class="allin1footer">
-                    <div class="allin1footertitle">Start Chat with:</div>
+                    <div class="allin1footertitle">{{ $widget_meta->btn_text}}</div>
                     <div class="allin1buttonblock">
-                        <button onclick="allin1formpopup(1)" class="allin1btn allin1btn1"><i
-                                class="bi bi-whatsapp"></i></button>
-                        <button onclick="allin1formpopup(2)" class="allin1btn allin1btn2"><i
-                                class="bi bi-messenger"></i></button>
-                        <button onclick="allin1formpopup(3)" class="allin1btn allin1btn3"><i
-                                class="bi bi-telegram"></i></button>
-                        <button onclick="allin1formpopup(4)" class="allin1btn allin1btn4"><i
-                                class="bi bi-line"></i></button>
-                        <button onclick="allin1formpopup(5)" class="allin1btn allin1btn5"><i
-                                class="bi bi-instagram"></i></button>
+                    
+                        @if(count($widget_meta->whatsapp_details) != 0)
+                            @foreach($widget_meta->whatsapp_details as $key => $whats)
+                                @if($whats == 'whatsapp')  
+                                    <button onclick="allin1formpopup(1)" class="allin1btn allin1btn1"><i class="bi bi-whatsapp"></i></button>
+                                @endif
+                            @endforeach
+                        @endif
+
+
+                        @if(count($widget_meta->fb_details) != 0)
+                            @foreach($widget_meta->fb_details as $key => $fb)
+                                @if($fb == 'fb')  
+                                    <button onclick="allin1formpopup(2)" class="allin1btn allin1btn2"><i class="bi bi-messenger"></i></button>
+                                @endif
+                            @endforeach
+                        @endif
+
+                        @if(count($widget_meta->telegram_details) != 0)
+                            @foreach($widget_meta->telegram_details as $key => $telegram)
+                                @if($telegram == 'telegram')  
+                                    <button onclick="allin1formpopup(3)" class="allin1btn allin1btn3"><i class="bi bi-telegram"></i></button>
+                                @endif
+                            @endforeach
+                        @endif
+
+                        @if(count($widget_meta->line_details) != 0)
+                            @foreach($widget_meta->line_details as $key => $line)
+                                @if($line == 'line')  
+                                    <button onclick="allin1formpopup(4)" class="allin1btn allin1btn4"><i class="bi bi-line"></i></button>
+                                @endif
+                            @endforeach
+                        @endif
+
+                        @if(count($widget_meta->viber_details) != 0)
+                            @foreach($widget_meta->viber_details as $key => $viber)
+                                @if($viber == 'viber')  
+                                    <button onclick="allin1formpopup(5)" class="allin1btn allin1btn5"><i class="bi bi-instagram"></i></button>
+                                @endif
+                            @endforeach
+                        @endif
+
+
+
+
+                        
+                        
                     </div>
-                    <form id="allin1startupform">
+                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+                    {{csrf_field()}}
                         <div class="allin1formcontent allin1form1">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username1" name="username" placeholder="Your name" required>
@@ -427,6 +490,9 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage1" placeholder="Your message"></textarea>
                             <button type="submit" name="button">Send</button>
                         </div>
+                    </form>
+                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+                    {{csrf_field()}}
                         <div class="allin1formcontent allin1form2">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username2" name="username" placeholder="Your name" required>
@@ -435,6 +501,9 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage2" placeholder="Your message"></textarea>
                             <button type="submit" name="button">Send</button>
                         </div>
+                    </form>
+                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+                    {{csrf_field()}}
                         <div class="allin1formcontent allin1form3">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username3" name="username" placeholder="Your name" required>
@@ -443,6 +512,9 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage3" placeholder="Your message"></textarea>
                             <button type="submit" name="button">Send</button>
                         </div>
+                    </form>
+                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+                    {{csrf_field()}}
                         <div class="allin1formcontent allin1form4">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username4" name="username" placeholder="Your name" required>
@@ -451,6 +523,9 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage4" placeholder="Your message"></textarea>
                             <button type="submit" name="button">Send</button>
                         </div>
+                    </form>
+                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+                    {{csrf_field()}}
                         <div class="allin1formcontent allin1form5">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username5" name="username" placeholder="Your name" required>
@@ -466,7 +541,7 @@ function addWidget() {
     </div>
     `;
 
-    document.getElementById('allin1').appendChild(div);
+    document.getElementById('{{$widget_key}}').appendChild(div);
 }
 
 window.onload = addWidget;

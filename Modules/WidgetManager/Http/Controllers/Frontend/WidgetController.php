@@ -29,8 +29,8 @@ class WidgetController extends Controller
         $update->load_count = $count + 1;
         Widgets::whereId($id)->update($update->toArray());        
 
-
-        return response()
+        if(Widgets::where('id',$id)->first()->widget_type == 'Whatsapp Chat'){
+            return response()
             ->view('widgetmanager::dynamic_js.whatsapp_chat_widget', [
                 'widget_meta' => $widgetJsonOutput,
                 'widget_id' => $id,
@@ -40,6 +40,21 @@ class WidgetController extends Controller
                 'Content-Type' => 'application/javascript',
                 'X-Venue-ID' => 'function_api'
             ]);
+        }
+        else{
+            return response()
+            ->view('widgetmanager::dynamic_js.whatsapp_chat_widget_all_in_one', [
+                'widget_meta' => $widgetJsonOutput,
+                'widget_id' => $id,
+                'widget_key' => $widgetKey,
+            ])
+            ->withHeaders([
+                'Content-Type' => 'application/javascript',
+                'X-Venue-ID' => 'function_api'
+            ]);
+        }
+
+        
     }
 
     public function save_client(Request $request)

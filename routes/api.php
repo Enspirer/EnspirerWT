@@ -21,6 +21,8 @@ use App\Http\Controllers\Frontend\IMSController;
 
 Route::post('api_chat', [HomeController::class, 'api_chat'])->name('api_chat');
 Route::post('user_api_chat', [HomeController::class, 'user_api_chat'])->name('user_api_chat');
+Route::post('user_api_chat_all', [HomeController::class, 'user_api_chat_all'])->name('user_api_chat_all');
+
 Route::post('assigned_by', [IMSController::class, 'assigned_by'])->name('assigned_by');
 Route::post('theme_changers', [HomeController::class, 'theme_changers'])->name('theme_changers');
 
