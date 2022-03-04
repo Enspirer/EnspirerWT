@@ -85,7 +85,7 @@
                                                 <i class="bi bi-three-dots"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#">
+                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('whatsapp-block','channel-whatsapp')">
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
@@ -109,7 +109,7 @@
                                                 <i class="bi bi-three-dots"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#">
+                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('messenger-block','channel-messenger')">
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
@@ -133,7 +133,7 @@
                                                 <i class="bi bi-three-dots"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#">
+                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('telegram-block','channel-telegram')">
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
@@ -157,7 +157,7 @@
                                                 <i class="bi bi-three-dots"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#">
+                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('line-block','channel-line')">
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
@@ -181,7 +181,7 @@
                                                 <i class="bi bi-three-dots"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#">
+                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('viber-block','channel-viber')">
                                                     <div class="text">Edit</div>
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a></li>
@@ -240,7 +240,7 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-whatsapp')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="text" class="form-control" id="whatsappnoInput" placeholder="Type your WhatsApp Number...">
+                                            <input type="text" class="form-control" id="whatsappnoInput" placeholder="Type your WhatsApp Number..." required>
                                             <label for="whatsappnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
                                                 add your country code</label>
                                         </div>
@@ -250,12 +250,16 @@
                                             <div class="title">Facebook</div>
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-messenger')">Done</a>
                                         </div>
-                                        <div class="body">
+                                        <!-- <div class="body">
                                             <div class="text">Facebook</div>
                                             <a href="#" class="connect-fb-btn">
                                                 <i class="bi bi-facebook"></i>
                                                 Connect to Facebook
                                             </a>
+                                        </div> -->
+                                        <div class="body">
+                                            <input type="text" class="form-control" id="fbIdInput" placeholder="Type your Facebook ID..." required>
+                                            <label for="fbIdInput" class="form-label"></label>
                                         </div>
                                     </div>
                                     <div class="block telegram-block">
@@ -264,7 +268,7 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-telegram')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="text" class="form-control" id="telegramnoInput" placeholder="Type your no Number...">
+                                            <input type="text" class="form-control" id="telegramnoInput" placeholder="Type your no Number..." required>
                                             <label for="telegramnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
                                                 add your country code</label>
                                         </div>
@@ -275,7 +279,7 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-line')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="text" class="form-control" id="linenoInput" placeholder="Type your Line Number...">
+                                            <input type="text" class="form-control" id="linenoInput" placeholder="Type your Line Number..." required>
                                             <label for="linenoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add
                                                 your country code</label>
                                         </div>
@@ -286,7 +290,7 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-viber')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="text" class="form-control" id="vibernoInput" placeholder="Type your Viber Number...">
+                                            <input type="text" class="form-control" id="vibernoInput" placeholder="Type your Viber Number..." required>
                                             <label for="vibernoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
                                                 add your country code</label>
                                         </div>
@@ -1975,8 +1979,15 @@
         });
     }
 
+    function channelEdit(infoBlock, channel) {
+        showInfoBlock(infoBlock);
+        deleteChannel(channel);
+        addChannelBlock.style.display = "none";
+        addChannelBtn.style.display = "none";
+    }
+
     function deleteChannel(channel) {
-    channelBlock.querySelector('.' + channel).style.display = "none";
+        channelBlock.querySelector('.' + channel).style.display = "none";
     }
 </script>
 
