@@ -353,7 +353,7 @@ div.innerHTML = `<style>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="email" id="useremail" name="useremail" placeholder="Your email" required>
                             <input type="text" id="phone_number" name="phone_number" placeholder="Your phone number" required>
-                            <textarea name="usermessage" id="usermessage" placeholder="Your message"></textarea>
+                            <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
                             <button type="submit" name="button" >Send</button>
                         </form>
                     </div>

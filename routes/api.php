@@ -27,3 +27,5 @@ Route::post('assigned_by', [IMSController::class, 'assigned_by'])->name('assigne
 Route::post('theme_changers', [HomeController::class, 'theme_changers'])->name('theme_changers');
 
 Route::post('whatsapp_widget/redirection', [HomeController::class,'save_client'])->name('save_client');
+Route::post('all_in_one_whatsapp_widget/redirection', [HomeController::class,'all_in_one_save_client'])->name('all_in_one_save_client');
+

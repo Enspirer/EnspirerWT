@@ -30,6 +30,7 @@ class HomeController extends Controller
         $widget = Widgets::where('id',$request->widget_id)->first();
         $client =  new ImsClients;
         $client->project_id = $widget->project_id;
+        $client->contact_via = 'Whatsapp';
         $client->client_name = $request->username;
         $client->client_email = $request->useremail;
         $client->phone_number = $request->phone_number;
@@ -54,6 +55,40 @@ class HomeController extends Controller
         return $settings[0]->whatsapp_number;
     }
 
+
+
+    public function all_in_one_save_client(Request $request)
+    {
+      $phone_number =  self::all_in_one_getPhoneNumberByWidget($request->widget_id);
+
+
+        $widget = Widgets::where('id',$request->widget_id)->first();
+        $client = new ImsClients;
+        $client->project_id = $widget->project_id;
+        $client->contact_via = $request->contact_via;
+        $client->client_name = $request->username;
+        $client->client_email = $request->useremail;
+        $client->phone_number = $request->phone_number;
+        $client->message = $request->usermessage;
+        $client->widget_id = $request->widget_id;
+        $client->ip_address = $request->ip();
+        $client->save();
+
+        $incom =  urlencode($request->usermessage);
+
+
+        return redirect()->to('https://wa.me/'.$phone_number.'/?text='.$incom);
+
+    }
+
+    public static function all_in_one_getPhoneNumberByWidget($id)
+    {
+        $widget = Widgets::where('id',$id)->first();
+
+        $settings = json_decode($widget->settings);
+
+        return $settings[0]->whatsapp_number;
+    }
 
     // ******************************  api  *****************************************************
 

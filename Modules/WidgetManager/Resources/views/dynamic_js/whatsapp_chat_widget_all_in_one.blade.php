@@ -472,66 +472,72 @@ function addWidget() {
                                     <button onclick="allin1formpopup(5)" class="allin1btn allin1btn5"><i class="bi bi-instagram"></i></button>
                                 @endif
                             @endforeach
-                        @endif
-
-
-
-
-                        
+                        @endif                        
                         
                     </div>
-                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+
+                    <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
                     {{csrf_field()}}
                         <div class="allin1formcontent allin1form1">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username1" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail1" name="useremail" placeholder="Your email" required>
-                            <input type="tel" id="telephone1" name="userphone" placeholder="Your phone number" required>
-                            <textarea name="usermessage" id="usermessage1" placeholder="Your message"></textarea>
+                            <input type="tel" id="telephone1" name="phone_number" placeholder="Your phone number" required>
+                            <textarea name="usermessage" id="usermessage1" placeholder="Your message" required></textarea>
+                            <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
+                            <input type="hidden" id="username" name="contact_via" value="Whatsapp">
                             <button type="submit" name="button">Send</button>
                         </div>
                     </form>
-                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+                    <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
                     {{csrf_field()}}
                         <div class="allin1formcontent allin1form2">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username2" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail2" name="useremail" placeholder="Your email" required>
-                            <input type="tel" id="telephone2" name="userphone" placeholder="Your phone number" required>
-                            <textarea name="usermessage" id="usermessage2" placeholder="Your message"></textarea>
+                            <input type="tel" id="telephone2" name="phone_number" placeholder="Your phone number" required>
+                            <textarea name="usermessage" id="usermessage2" placeholder="Your message" required></textarea>
+                            <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
+                            <input type="hidden" id="username" name="contact_via" value="Messenger">
                             <button type="submit" name="button">Send</button>
                         </div>
                     </form>
-                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+                    <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
                     {{csrf_field()}}
                         <div class="allin1formcontent allin1form3">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username3" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail3" name="useremail" placeholder="Your email" required>
-                            <input type="tel" id="telephone3" name="userphone" placeholder="Your phone number" required>
-                            <textarea name="usermessage" id="usermessage3" placeholder="Your message"></textarea>
+                            <input type="tel" id="telephone3" name="phone_number" placeholder="Your phone number" required>
+                            <textarea name="usermessage" id="usermessage3" placeholder="Your message" required></textarea>
+                            <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
+                            <input type="hidden" id="username" name="contact_via" value="Telegram">
                             <button type="submit" name="button">Send</button>
                         </div>
                     </form>
-                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+                    <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
                     {{csrf_field()}}
                         <div class="allin1formcontent allin1form4">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username4" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail4" name="useremail" placeholder="Your email" required>
-                            <input type="tel" id="telephone4" name="userphone" placeholder="Your phone number" required>
-                            <textarea name="usermessage" id="usermessage4" placeholder="Your message"></textarea>
+                            <input type="tel" id="telephone4" name="phone_number" placeholder="Your phone number" required>
+                            <textarea name="usermessage" id="usermessage4" placeholder="Your message" required></textarea>
+                            <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
+                            <input type="hidden" id="username" name="contact_via" value="Line">
                             <button type="submit" name="button">Send</button>
                         </div>
                     </form>
-                    <form action="{{route('save_client')}}" method="post" id="allin1startupform">
+                    <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
                     {{csrf_field()}}
                         <div class="allin1formcontent allin1form5">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username5" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail5" name="useremail" placeholder="Your email" required>
-                            <input type="tel" id="telephone5" name="userphone5" placeholder="Your phone number" required>
-                            <textarea name="usermessage" id="usermessage" placeholder="Your message"></textarea>
+                            <input type="tel" id="telephone5" name="phone_number" placeholder="Your phone number" required>
+                            <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
+                            <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
+                            <input type="hidden" id="username" name="contact_via" value="Viber">
                             <button type="submit" name="button">Send</button>
                         </div>
                     </form>
