@@ -85,7 +85,7 @@
                                                             @endif
                                                         @endforeach
                                                     @else
-                                                        <div class="status" name="whatsapp">test</div>
+                                                        <div class="status" name="whatsapp"></div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -118,7 +118,7 @@
                                                             @endif
                                                         @endforeach
                                                     @else
-                                                        <div class="status" name="whatsapp">test</div>
+                                                        <div class="status" name="whatsapp"></div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -151,6 +151,8 @@
                                                                 <div class="status" name="fb">{{$fb}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="fb"></div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -182,6 +184,8 @@
                                                                 <div class="status" name="fb">{{$fb}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="fb"></div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -214,6 +218,8 @@
                                                                 <div class="status" name="telegram">{{$telegram}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="telegram"></div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -245,6 +251,8 @@
                                                                 <div class="status" name="telegram">{{$telegram}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="telegram"></div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -277,6 +285,8 @@
                                                                 <div class="status" name="line">{{$line}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="line"></div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -308,6 +318,8 @@
                                                                 <div class="status" name="line">{{$line}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="line"></div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -340,6 +352,8 @@
                                                                 <div class="status" name="viber">{{$viber}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="viber"></div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -371,6 +385,8 @@
                                                                 <div class="status" name="viber">{{$viber}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="viber"></div>
                                                     @endif 
                                                 </div>
                                             </div>

@@ -433,7 +433,7 @@ function addWidget() {
                     <div class="allin1footertitle">{{ $widget_meta->btn_text}}</div>
                     <div class="allin1buttonblock">
                     
-                        @if(count($widget_meta->whatsapp_details) != 0)
+                        @if(count($widget_meta->whatsapp_details) != 1)
                             @foreach($widget_meta->whatsapp_details as $key => $whats)
                                 @if($whats == 'whatsapp')  
                                     <button onclick="allin1formpopup(1)" class="allin1btn allin1btn1"><i class="bi bi-whatsapp"></i></button>
@@ -442,7 +442,7 @@ function addWidget() {
                         @endif
 
 
-                        @if(count($widget_meta->fb_details) != 0)
+                        @if(count($widget_meta->fb_details) != 1)
                             @foreach($widget_meta->fb_details as $key => $fb)
                                 @if($fb == 'fb')  
                                     <button onclick="allin1formpopup(2)" class="allin1btn allin1btn2"><i class="bi bi-messenger"></i></button>
@@ -450,7 +450,7 @@ function addWidget() {
                             @endforeach
                         @endif
 
-                        @if(count($widget_meta->telegram_details) != 0)
+                        @if(count($widget_meta->telegram_details) != 1)
                             @foreach($widget_meta->telegram_details as $key => $telegram)
                                 @if($telegram == 'telegram')  
                                     <button onclick="allin1formpopup(3)" class="allin1btn allin1btn3"><i class="bi bi-telegram"></i></button>
@@ -458,7 +458,7 @@ function addWidget() {
                             @endforeach
                         @endif
 
-                        @if(count($widget_meta->line_details) != 0)
+                        @if(count($widget_meta->line_details) != 1)
                             @foreach($widget_meta->line_details as $key => $line)
                                 @if($line == 'line')  
                                     <button onclick="allin1formpopup(4)" class="allin1btn allin1btn4"><i class="bi bi-line"></i></button>
@@ -466,7 +466,7 @@ function addWidget() {
                             @endforeach
                         @endif
 
-                        @if(count($widget_meta->viber_details) != 0)
+                        @if(count($widget_meta->viber_details) != 1)
                             @foreach($widget_meta->viber_details as $key => $viber)
                                 @if($viber == 'viber')  
                                     <button onclick="allin1formpopup(5)" class="allin1btn allin1btn5"><i class="bi bi-instagram"></i></button>
@@ -555,6 +555,10 @@ window.onload = addWidget;
 function allin1toggle() {
     document.querySelector('#allin1widget').classList.toggle("allin1view");
     document.querySelector('.allin1welcomemsg').classList.toggle("allin1view");
+    document.querySelector('#allin1btn').classList.remove("allin1view");
+    document.querySelector('.allin1welcomemsg').classList.toggle("allin1view");
+    var audio = new Audio('{{url('blackberrychat.mp3')}}');
+    audio.play();
 }
 
 function allin1close() {
