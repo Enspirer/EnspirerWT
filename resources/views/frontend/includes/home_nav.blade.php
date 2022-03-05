@@ -108,7 +108,7 @@
                             </a>
                         @endif
                     </ul>
-                    <a class='menu-trigger'>
+                    <a class='menu-trigger' id="menuTrigger">
                         <span>Menu</span>
                     </a>
                 </div>
