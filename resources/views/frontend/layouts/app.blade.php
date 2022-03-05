@@ -161,6 +161,15 @@
             });
         });
     </script>
+
+    <script>
+    if ($('.menu-trigger').length) {
+		$(".menu-trigger").on('click', function () {
+			$(this).toggleClass('active');
+			$('.navigation-bar .inner-wrapper .nav-links .navbar-nav').toggleClass("active");
+		});
+	}
+    </script>
                 
         @include('includes.partials.ga')
     </body>
