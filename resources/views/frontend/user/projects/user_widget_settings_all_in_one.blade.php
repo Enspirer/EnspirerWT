@@ -72,130 +72,325 @@
                         </div>
                         <div class="body">
                                 <div class="channels-block">
-                                    <div class="channel channel-whatsapp">
-                                        <div class="content-block">
-                                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
-                                            <div class="content">
-                                                <div class="name">WhatsApp Chat</div>
-                                                <div class="status">(+94) 77 71 234 56</div>
+                                    @if(count(json_decode($widget->settings)[0]->whatsapp_details) != 1)
+                                        <div class="channel channel-whatsapp active">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">WhatsApp Chat</div>
+                                                    @if(count(json_decode($widget->settings)[0]->whatsapp_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->whatsapp_details as $key => $whats)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="whatsapp">{{$whats}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('whatsapp-block','channel-whatsapp')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_whatsapp" href="#" onclick="deleteChannel('channel-whatsapp')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="option-block">
-                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('whatsapp-block','channel-whatsapp')">
-                                                    <div class="text">Edit</div>
-                                                    <i class="bi bi-pencil-fill"></i>
-                                                </a></li>
-                                                <li><a class="dropdown-item delete social_delete" name="delete_whatsapp" href="#" onclick="deleteChannel('channel-whatsapp')">
-                                                    <div class="text">Delete</div>
-                                                    <i class="bi bi-trash3"></i>
-                                                </a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="channel channel-messenger">
-                                        <div class="content-block">
-                                            <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
-                                            <div class="content">
-                                                <div class="name">Facebook Messenger</div>
-                                                <div class="status">Not set</div>
+                                    @else
+                                        <div class="channel channel-whatsapp">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">WhatsApp Chat</div>
+                                                    @if(count(json_decode($widget->settings)[0]->whatsapp_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->whatsapp_details as $key => $whats)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="whatsapp">{{$whats}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('whatsapp-block','channel-whatsapp')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_whatsapp" href="#" onclick="deleteChannel('channel-whatsapp')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="option-block">
-                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('messenger-block','channel-messenger')">
-                                                    <div class="text">Edit</div>
-                                                    <i class="bi bi-pencil-fill"></i>
-                                                </a></li>
-                                                <li><a class="dropdown-item delete social_delete" name="delete_fb" href="#" onclick="deleteChannel('channel-messenger')">
-                                                    <div class="text">Delete</div>
-                                                    <i class="bi bi-trash3"></i>
-                                                </a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="channel channel-telegram">
-                                        <div class="content-block">
-                                            <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
-                                            <div class="content">
-                                                <div class="name">Telegram Chat</div>
-                                                <div class="status">(+94) 77 71 234 56</div>
+                                    @endif
+                                    @if(count(json_decode($widget->settings)[0]->fb_details) != 1)
+                                        <div class="channel channel-messenger active">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Facebook Messenger</div>
+                                                    @if(count(json_decode($widget->settings)[0]->fb_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->fb_details as $key => $fb)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="fb">{{$fb}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('messenger-block','channel-messenger')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_fb" href="#" onclick="deleteChannel('channel-messenger')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="option-block">
-                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('telegram-block','channel-telegram')">
-                                                    <div class="text">Edit</div>
-                                                    <i class="bi bi-pencil-fill"></i>
-                                                </a></li>
-                                                <li><a class="dropdown-item delete social_delete" name="delete_telegram" href="#" onclick="deleteChannel('channel-telegram')">
-                                                    <div class="text">Delete</div>
-                                                    <i class="bi bi-trash3"></i>
-                                                </a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="channel channel-line">
-                                        <div class="content-block">
-                                            <img src="{{url('images/social_media_icons/line.png')}}" alt="">
-                                            <div class="content">
-                                                <div class="name">Line Chat</div>
-                                                <div class="status">(+94) 77 71 234 56</div>
+                                    @else
+                                        <div class="channel channel-messenger">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Facebook Messenger</div>
+                                                    @if(count(json_decode($widget->settings)[0]->fb_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->fb_details as $key => $fb)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="fb">{{$fb}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('messenger-block','channel-messenger')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_fb" href="#" onclick="deleteChannel('channel-messenger')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="option-block">
-                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('line-block','channel-line')">
-                                                    <div class="text">Edit</div>
-                                                    <i class="bi bi-pencil-fill"></i>
-                                                </a></li>
-                                                <li><a class="dropdown-item delete social_delete" name="delete_line" href="#" onclick="deleteChannel('channel-line')">
-                                                    <div class="text">Delete</div>
-                                                    <i class="bi bi-trash3"></i>
-                                                </a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="channel channel-viber">
-                                        <div class="content-block">
-                                            <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
-                                            <div class="content">
-                                                <div class="name">Viber Chat</div>
-                                                <div class="status">(+94) 77 71 234 56</div>
+                                    @endif
+                                    @if(count(json_decode($widget->settings)[0]->telegram_details) != 1)
+                                        <div class="channel channel-telegram active">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Telegram Chat</div>
+                                                    @if(count(json_decode($widget->settings)[0]->telegram_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->telegram_details as $key => $telegram)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="telegram">{{$telegram}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('telegram-block','channel-telegram')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_telegram" href="#" onclick="deleteChannel('channel-telegram')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="option-block">
-                                            <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
-                                                <li><a class="dropdown-item edit" href="#" onclick="channelEdit('viber-block','channel-viber')">
-                                                    <div class="text">Edit</div>
-                                                    <i class="bi bi-pencil-fill"></i>
-                                                </a></li>
-                                                <li><a class="dropdown-item delete social_delete" name="delete_viber" href="#" onclick="deleteChannel('channel-viber')">
-                                                    <div class="text">Delete</div>
-                                                    <i class="bi bi-trash3"></i>
-                                                </a></li>
-                                            </ul>
+                                    @else
+                                        <div class="channel channel-telegram">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Telegram Chat</div>
+                                                    @if(count(json_decode($widget->settings)[0]->telegram_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->telegram_details as $key => $telegram)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="telegram">{{$telegram}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('telegram-block','channel-telegram')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_telegram" href="#" onclick="deleteChannel('channel-telegram')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
+                                    @endif
+                                    @if(count(json_decode($widget->settings)[0]->line_details) != 1)
+                                        <div class="channel channel-line active">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Line Chat</div>
+                                                    @if(count(json_decode($widget->settings)[0]->line_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->line_details as $key => $line)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="line">{{$line}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('line-block','channel-line')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_line" href="#" onclick="deleteChannel('channel-line')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    @else
+                                        <div class="channel channel-line">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Line Chat</div>
+                                                    @if(count(json_decode($widget->settings)[0]->line_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->line_details as $key => $line)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="line">{{$line}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('line-block','channel-line')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_line" href="#" onclick="deleteChannel('channel-line')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    @endif
+                                    @if(count(json_decode($widget->settings)[0]->viber_details) != 1)
+                                        <div class="channel channel-viber active">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Viber Chat</div>
+                                                    @if(count(json_decode($widget->settings)[0]->viber_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->viber_details as $key => $viber)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="viber">{{$viber}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('viber-block','channel-viber')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_viber" href="#" onclick="deleteChannel('channel-viber')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    @else
+                                        <div class="channel channel-viber">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Viber Chat</div>
+                                                    @if(count(json_decode($widget->settings)[0]->viber_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->viber_details as $key => $viber)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="viber">{{$viber}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif 
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="whatsappchanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="whatsappchanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('viber-block','channel-viber')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_viber" href="#" onclick="deleteChannel('channel-viber')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="add-channel-block">
                                     <div class="header">
-                                        <button class="add-channel-cancel-btn">Cancel</button>
+                                        <a href="#" class="add-channel-cancel-btn">Cancel</a>
                                         <div class="title">Add Channel</div>
                                     </div>
                                     <div class="body">
@@ -240,9 +435,17 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-whatsapp')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="tel" class="form-control" name="whatsapp" id="whatsappnoInput" placeholder="Type your WhatsApp Number..." required>
-                                            <label for="whatsappnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
-                                                add your country code</label>
+                                            @if(count(json_decode($widget->settings)[0]->whatsapp_details) != 1)
+                                                @foreach(json_decode($widget->settings)[0]->whatsapp_details as $key => $whats)
+                                                    @if (($key - 1) % 3 == 0)
+                                                        <input type="tel" class="form-control" value="{{ $whats }}" name="whatsapp" id="whatsappnoInput" placeholder="Type your WhatsApp Number..." required>
+                                                        <label for="whatsappnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add your country code</label>
+                                                    @endif
+                                                @endforeach
+                                            @else
+                                                <input type="tel" class="form-control" name="whatsapp" id="whatsappnoInput" placeholder="Type your WhatsApp Number..." required>
+                                                <label for="whatsappnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add your country code</label>
+                                            @endif 
                                         </div>
                                     </div>
                                     <div class="block messenger-block">
@@ -251,8 +454,17 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-messenger')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="tel" class="form-control" name="fb" id="fbIdInput" placeholder="Type your Facebook ID..." required>
-                                            <label for="fbIdInput" class="form-label"></label>
+                                            @if(count(json_decode($widget->settings)[0]->fb_details) != 1)
+                                                @foreach(json_decode($widget->settings)[0]->fb_details as $key => $fb)
+                                                    @if (($key - 1) % 3 == 0)
+                                                        <input type="tel" class="form-control" value="{{ $fb }}" name="fb" id="fbIdInput" placeholder="Type your Facebook ID..." required>
+                                                        <label for="fbIdInput" class="form-label"></label>                                                
+                                                    @endif
+                                                @endforeach
+                                            @else
+                                                <input type="tel" class="form-control" name="fb" id="fbIdInput" placeholder="Type your Facebook ID..." required>
+                                                <label for="fbIdInput" class="form-label"></label>   
+                                            @endif 
                                         </div>
                                     </div>
                                     <div class="block telegram-block">
@@ -261,9 +473,17 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-telegram')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="tel" class="form-control" name="telegram" id="telegramnoInput" placeholder="Type your no Number..." required>
-                                            <label for="telegramnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
-                                                add your country code</label>
+                                            @if(count(json_decode($widget->settings)[0]->telegram_details) != 1)
+                                                @foreach(json_decode($widget->settings)[0]->telegram_details as $key => $telegram)
+                                                    @if (($key - 1) % 3 == 0)
+                                                        <input type="tel" class="form-control" value="{{ $telegram }}" name="telegram" id="telegramnoInput" placeholder="Type your no Number..." required>
+                                                        <label for="telegramnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add your country code</label>                                        
+                                                    @endif
+                                                @endforeach
+                                            @else
+                                                <input type="tel" class="form-control" name="telegram" id="telegramnoInput" placeholder="Type your no Number..." required>
+                                                <label for="telegramnoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add your country code</label>
+                                            @endif                                            
                                         </div>
                                     </div>
                                     <div class="block line-block">
@@ -272,9 +492,17 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-line')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="tel" class="form-control" name="line" id="linenoInput" placeholder="Type your Line Number..." required>
-                                            <label for="linenoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add
-                                                your country code</label>
+                                            @if(count(json_decode($widget->settings)[0]->line_details) != 1)
+                                                @foreach(json_decode($widget->settings)[0]->line_details as $key => $line)
+                                                    @if (($key - 1) % 3 == 0)
+                                                        <input type="tel" class="form-control" value="{{ $line }}" name="line" id="linenoInput" placeholder="Type your Line Number..." required>
+                                                        <label for="linenoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add your country code</label>
+                                                    @endif
+                                                @endforeach
+                                            @else
+                                                <input type="tel" class="form-control" name="line" id="linenoInput" placeholder="Type your Line Number..." required>
+                                                <label for="linenoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add your country code</label>
+                                            @endif 
                                         </div>
                                     </div>
                                     <div class="block viber-block">
@@ -283,9 +511,17 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-viber')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="tel" class="form-control" name="viber" id="vibernoInput" placeholder="Type your Viber Number..." required>
-                                            <label for="vibernoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and
-                                                add your country code</label>
+                                            @if(count(json_decode($widget->settings)[0]->viber_details) != 1)
+                                                @foreach(json_decode($widget->settings)[0]->viber_details as $key => $viber)
+                                                    @if (($key - 1) % 3 == 0)
+                                                        <input type="tel" class="form-control" value="{{ $viber }}" name="viber" id="vibernoInput" placeholder="Type your Viber Number..." required>
+                                                        <label for="vibernoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add your country code</label>
+                                                    @endif
+                                                @endforeach
+                                            @else
+                                                <input type="tel" class="form-control" name="viber" id="vibernoInput" placeholder="Type your Viber Number..." required>
+                                                <label for="vibernoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add your country code</label>
+                                            @endif                                          
                                         </div>
                                     </div>
                                 </div>
@@ -295,8 +531,7 @@
                             <a href="#" class="btn-whatsapp"
                                 onclick="innerSection('template-block');navSwitcher('templateNav')">Continue</a>
                             <div class="button-block">
-                                <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}"
-                                        style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                                <a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;"><div class="btn cancel">Cancel</div></a>
                                 <!-- <div class="btn apply">Apply</div> -->
                                 <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}" />
                                 <input type="hidden" id="hidden_template_id" name="hidden_template_id"
@@ -354,7 +589,7 @@
                             <a href="#" class="btn-whatsapp"
                                 onclick="innerSection('content-block');navSwitcher('contentNav')">Continue</a>
                                 <div class="button-block">
-                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                                <a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;"><div class="btn cancel">Cancel</div></a>
                         <!-- <div class="btn apply">Apply</div> -->
                         <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
                         <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
@@ -759,7 +994,7 @@
                             <a href="#" class="btn-whatsapp"
                                 onclick="innerSection('settings-block');navSwitcher('settingsNav')">Continue</a>
                                 <div class="button-block">
-                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                            <a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;"><div class="btn cancel">Cancel</div></a>
                         <!-- <div class="btn apply">Apply</div> -->
                         <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
                         <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
@@ -1187,7 +1422,7 @@
                             <a href="#" class="btn-whatsapp"
                                 onclick="innerSection('appearance-block');navSwitcher('appearanceNav')">Continue</a>
                                 <div class="button-block">
-                        <div class="btn cancel"><a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;">Cancel</a></div>
+                        <a href="{{route('frontend.user.project.chat',$widget->project_id)}}" style="text-decoration:none; color:#212529; font-size:14px;"><div class="btn cancel">Cancel</div></a>
                         <!-- <div class="btn apply">Apply</div> -->
                         <input type="hidden" id="hidden_id" name="hidden_id" value="{{ $widget->id }}"/>
                         <input type="hidden" id="hidden_template_id" name="hidden_template_id" value="{{ json_decode($widget->settings)[0]->template_layout }}"/>
@@ -2061,7 +2296,7 @@
 
     function addchannel(channel) {
         const channelFetcher = channelBlock.querySelector('.' + channel);
-        channelFetcher.style.display = "flex";
+        channelFetcher.classList.add("active");
 
         addChannelBtn.style.display = "block";
 
@@ -2080,10 +2315,30 @@
     }
 
     function deleteChannel(channel) {
-        channelBlock.querySelector('.' + channel).style.display = "none";
+        channelBlock.querySelector('.' + channel).classList.remove("active");
     }
 
+    const updateInfo = channelBlock.querySelectorAll(".form-control");
 
+    [].forEach.call(updateInfo, function (input) {
+        input.addEventListener("change", function () {
+            const inputName = input.getAttribute("name");
+            let inputVal;
+            let statusName;
+            let statusVal;
+        
+            const status = channelBlock.querySelectorAll(".status");
+
+            [].forEach.call(status, function (channelStatus){
+                statusName = channelStatus.getAttribute("name");
+                statusVal = channelStatus.value;
+            });
+
+            if(inputName == statusName) {
+                inputVal = statusVal;
+            }
+        });
+    });
 
     
 </script>
@@ -2104,6 +2359,8 @@
             this.style.background = `linear-gradient(to right, #017FFA 0%, #017FFA ${(this.value-this.min)/(this.max-this.min)*100}%, #EDEDED ${(this.value-this.min)/(this.max-this.min)*100}%, #EDEDED 100%)`
             output.innerHTML = this.value;
         };
+        
 </script>
+
 
 @endpush

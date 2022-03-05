@@ -424,6 +424,7 @@
 
 #sideNavInner #channel-block .inner-wrapper .body .add-channel-block .header .add-channel-cancel-btn {
     position: absolute;
+    text-decoration:none;
     left: 0;
     border: none;
     background-color: transparent;
@@ -641,6 +642,10 @@
 #sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .option-block .dropdown-menu .dropdown-item.delete .bi {
     font-size: 14px;
     color: #f00;
+}
+
+#sideNavInner #channel-block .inner-wrapper .body .add-channel-block, #sideNavInner #channel-block .inner-wrapper .body .info-block .block, #sideNavInner #channel-block .inner-wrapper .body .channels-block .channel.active {
+    display: flex;
 }
 
 #sideNavInner #channel-block .inner-wrapper .body .add-channel-block,
