@@ -84,6 +84,8 @@
                                                                 <div class="status" name="whatsapp">{{$whats}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="whatsapp">test</div>
                                                     @endif 
                                                 </div>
                                             </div>
@@ -115,6 +117,8 @@
                                                                 <div class="status" name="whatsapp">{{$whats}}</div>
                                                             @endif
                                                         @endforeach
+                                                    @else
+                                                        <div class="status" name="whatsapp">test</div>
                                                     @endif 
                                                 </div>
                                             </div>
