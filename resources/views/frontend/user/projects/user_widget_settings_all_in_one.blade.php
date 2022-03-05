@@ -2323,27 +2323,25 @@
     }
 
     const updateInfo = channelBlock.querySelectorAll(".form-control");
+    const statusField = channelBlock.querySelectorAll(".status");
 
-    [].forEach.call(updateInfo, function (input) {
+    updateInfo.forEach(function (input) {
         input.addEventListener("change", function () {
-            const inputName = input.getAttribute("name");
-            let inputVal;
-            let statusName;
-            let statusVal;
-        
-            const status = channelBlock.querySelectorAll(".status");
+            let inputName;
+            const inputVal = input.value;
 
-            [].forEach.call(status, function (channelStatus){
-                statusName = channelStatus.getAttribute("name");
-                statusVal = channelStatus.value;
+            inputName = input.getAttribute("name");
+
+            statusField.forEach(function (status) {
+                let statusName;
+                statusName = status.getAttribute("name");
+
+                if (inputName == statusName) {
+                    status.textContent = inputVal;
+                }
             });
-
-            if(inputName == statusName) {
-                inputVal = statusVal;
-            }
         });
     });
-
     
 </script>
 
