@@ -4,8 +4,10 @@
                     <div class="side-nav-toggle">
                         <span class="toggle-btn bi bi-list"></span>
                     </div>
+                    <a href="{{url('dashboard')}}">
                     <img src="{{url('images/full-logo.png')}}" alt="full-logo" class="full-logo">
                     <img src="{{url('images/small-logo.png')}}" alt="small-logo" class="small-logo">
+                    </a>
                 </div>
                 <div class="side-navs">
                     <ul class="navbar-nav">

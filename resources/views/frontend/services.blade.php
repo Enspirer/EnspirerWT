@@ -42,7 +42,7 @@
     </section>
 
     <section class="feature-section">
-        <div class="container">
+        <div class="container inner-wrapper">
             <div class="feature-block block-3">
                 <img src="{{url('images/services/03.png')}}" alt="" class="order-no">
                 <div class="image-block">

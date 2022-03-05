@@ -116,6 +116,8 @@
 }
 
 .feature-section {
+  background-color: transparent;
+  padding: 0;
   margin: calc(1.2875rem + 4.24286vw) 0;
 }
 
@@ -224,6 +226,115 @@
 @media (min-width: 1400px) {
   .feature-section .feature-block .cta-btn .bi {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1299px) {
+  .hero-section .image-block img,
+  .enterprise-section .image-block img {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero-section .image-block img,
+  .enterprise-section .image-block img {
+    width: 27rem;
+  }
+  .feature-section .inner-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 5rem;
+  }
+  .feature-section .feature-block {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 33%;
+            flex: 1 1 33%;
+    left: unset !important;
+    top: unset !important;
+    margin: unset !important;
+  }
+  .feature-section .feature-block .order-no {
+    top: -0.5rem;
+    left: 1.25rem;
+    width: 6rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 3rem;
+  }
+  .hero-section .content-block {
+    width: 80%;
+    position: relative;
+    top: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .hero-section .image-block {
+    text-align: right;
+  }
+  .hero-section .image-block img {
+    width: 400px;
+    position: unset;
+    top: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .hero-section .content-block .order-no {
+    left: 0;
+    top: -7rem;
+    width: 6rem;
+  }
+  .enterprise-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3rem;
+  }
+  .enterprise-section .image-block img {
+    width: 400px;
+    position: unset;
+    top: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .enterprise-section .content-block {
+    width: 80%;
+    position: relative;
+    top: unset;
+    right: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .enterprise-section .content-block .order-no {
+    left: unset;
+    top: -7rem;
+    width: 6rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero-section .image-block img {
+    width: 100%;
+  }
+  .enterprise-section .image-block img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=services.css.map */

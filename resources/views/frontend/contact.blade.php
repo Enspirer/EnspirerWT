@@ -92,7 +92,7 @@
                 <h6 class="subtitle">Have any questions ? We'd love to hear from you.</h6>
             </div>
             <div class="row g-5">
-                <div class="col-6">
+                <div class="col-lg-6">
                     <form class="contact-form">
                         <div class="mb-3">
                             <input type="text" class="form-control" placeholder="Full Name">
@@ -117,7 +117,7 @@
                                 class="bi bi-arrow-right-short"></i></button>
                     </form>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                     <div class="inner-wrapper">
                         <div class="address">
                             <img src="{{url('images/contact-us/location (1).png')}}" alt="">
