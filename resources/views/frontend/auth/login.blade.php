@@ -9,8 +9,7 @@
     @include('frontend.includes.home_nav')
 
     <section class="sign-up-section">
-        <div class="container">
-            <div class="inner-wrapper">
+    <div class="inner-wrapper">
                 <div class="sign-up-form">
                     <div class="header">
                         <div class="title">Login to your account</div>
@@ -76,7 +75,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     @include('frontend.includes.footer')
