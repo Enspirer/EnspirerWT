@@ -21,7 +21,7 @@ function addWidget() {
     #allin1widgetblock #allin1widget {
         position: fixed;
         bottom: 150px;
-        {{$widget_meta->alignment}}: 90px;
+        {{$widget_meta->alignment}}: 15px;
         z-index: 99999;
         display: none;
     }
@@ -250,7 +250,9 @@ function addWidget() {
         border-radius: 6px;
         gap: 8px;
         position: absolute;
-        width: 100%;
+        width: 265px;
+        left: 50%;
+        transform: translate(-50%, 0);
         bottom: -22px;
         visibility: hidden;
     }

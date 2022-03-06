@@ -17,7 +17,7 @@ div.innerHTML = `<style>
     #wappwidgetblock #wappwidget {
         position: fixed;
         bottom: 150px;
-        {{$widget_meta->alignment}}: 90px;
+        {{$widget_meta->alignment}}: 15px;
         z-index: 99999;
         display: none;
     }
@@ -398,9 +398,3 @@ function startupform() {
     document.querySelector('#wappstartupform').classList.toggle("wappview");
     document.querySelector('#wappbtn').classList.add("wappview");
 }
-
-const animated = document.querySelector('.wappwelcomemsg');
-
-animated.addEventListener('animationend', function () {
-
-});
