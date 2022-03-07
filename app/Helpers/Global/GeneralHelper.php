@@ -135,12 +135,20 @@ if (! function_exists('get_seo_result')) {
         }else{
             return $seoDecode;
         }
-
     }
-
-
 }
 
+if (! function_exists('get_issues')) {
+    /**
+     * Return the route to the "home" page depending on authentication/authorization status.
+     *
+     * @return string
+     */
+    function get_issues($project_id,$importance = null)
+    {
+
+    }
+}
 
 
 

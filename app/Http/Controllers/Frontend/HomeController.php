@@ -61,6 +61,12 @@ class HomeController extends Controller
     {
       $phone_number =  self::all_in_one_getPhoneNumberByWidget($request->widget_id);
 
+      $getSettings = self::get_widget_settings($request->widget_id);
+
+
+
+
+
 
         $widget = Widgets::where('id',$request->widget_id)->first();
         $client = new ImsClients;
@@ -77,7 +83,33 @@ class HomeController extends Controller
         $incom =  urlencode($request->usermessage);
 
 
-        return redirect()->to('https://wa.me/'.$phone_number.'/?text='.$incom);
+//
+
+        if($request->contact_via == 'Whatsapp'){
+            if ($getSettings[0]->whatsapp_details[0] !=null) {
+                return redirect()->to('https://wa.me/'.$phone_number.'/?text='.$incom);
+            }
+        }else if ($request->contact_via == 'Messenger'){
+            if ($getSettings[0]->fb_details[0] !=null) {
+                $facebook_url = $getSettings[0]->fb_details;
+                return redirect()->to('https://www.messenger.com/t/'.$facebook_url[1].'/?text='.$incom);
+            }
+        }else if ($request->contact_via == 'Telegram'){
+            if ($getSettings[0]->telegram_details[0] !=null) {
+                $telegram = $getSettings[0]->fb_details;
+                return redirect()->to('https://www.messenger.com/t/'.$telegram[1].'/?text='.$incom);
+            }
+        }else if ($request->contact_via == 'Line'){
+            if ($getSettings[0]->line_details[0] !=null) {
+                $line_number = $getSettings[0]->fb_details;
+                return redirect()->to('https://line.me/R/'.$line_number[1].'/?text='.$incom);
+            }
+        }else if ($request->contact_via == 'Viber'){
+            if ($getSettings[0]->viber_details[0] !=null) {
+                return redirect()->to('viber://chat?number=');
+            }
+
+        }
 
     }
 
@@ -88,6 +120,15 @@ class HomeController extends Controller
         $settings = json_decode($widget->settings);
 
         return $settings[0]->whatsapp_number;
+    }
+
+    public static function get_widget_settings($id)
+    {
+        $widget = Widgets::where('id',$id)->first();
+
+        $settings = json_decode($widget->settings);
+
+        return $settings;
     }
 
     // ******************************  api  *****************************************************

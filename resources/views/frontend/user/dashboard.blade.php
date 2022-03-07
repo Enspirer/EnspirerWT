@@ -59,16 +59,16 @@
                                <div class="card-body">
                                    <div class="row">
                                        <div class="col-md-6">
-                                           <div style="background-image: url('{{url('images/Group 411.png')}}');height: 580px;background-position: center;background-size: contain;background-repeat: no-repeat;"></div>
+                                           <div style="background-image: url('{{url('images/Group 411.png')}}');height: 400px;background-position: center;background-size: contain;background-repeat: no-repeat;"></div>
 
                                        </div>
                                        <div class="col-md-6">
-                                           <div class="content-block" style="padding-top: 130px;">
+                                           <div class="content-block" style="padding-top: 50px;">
                                                <h5 style="font-size: 20px;">The Smarter way to <span style="font-size: 30px;">Boost</span> your</h5>
-                                               <h3 class="title" style="font-size: 36px;">Website <br> Performance</h3>
-                                               <h5 class="light" style="font-size: 30px;">WhatsApp Widget with </h5>
+                                               <h3 class="title" style="font-size: 26px;">Website  Performance</h3>
+                                               <h5 class="light" style="font-size: 20px;padding-top: 30px;">WhatsApp Widget with </h5>
                                                <h5 style="font-size: 27px;color: #3d4a85;">Inquiry Management System (IMS)</h5>
-                                           </div>
+                                               <button data-bs-toggle="modal" data-bs-target="#project_modal" class="btn btn-primary" style="font-size: 16px;padding: 10px;margin-top: 30px;">Add your website here </button>                                    </div>
                                        </div>
                                    </div>
                                </div>
@@ -129,28 +129,30 @@
                                                                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                                                                 </div>
                                                             </div>
-                                                        @elseif($project_detail->score > 50)
-                                                            <span class="precentage">86.0<span class="sign">%</span></span>
+                                                        @elseif($project_detail->score < 50)
+                                                            <span class="precentage">{{$project_detail->score}}<span class="sign">%</span></span>
                                                             <div class="progress">
                                                                 <div class="progress-bar" role="progressbar" style="background-color:#ffc11e; width: 25%"
                                                                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                                                                 </div>
                                                             </div>
-                                                        @elseif($project_detail->score > 65)
-                                                            <span class="precentage">86.0<span class="sign">%</span></span>
+                                                        @elseif($project_detail->score < 65)
+                                                            <span class="precentage">{{$project_detail->score}}<span class="sign">%</span></span>
                                                             <div class="progress">
                                                                 <div class="progress-bar" role="progressbar" style="background-color:#008f23; width: 25%"
                                                                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                                                                 </div>
                                                             </div>
                                                         @elseif($project_detail->score < 0)
-                                                            <span class="precentage">86.0<span class="sign">%</span></span>
+                                                            <span class="precentage">{{$project_detail->score}}<span class="sign">%</span></span>
                                                             <div class="progress">
                                                                 <div class="progress-bar" role="progressbar" style="background-color:red; width: 25%"
                                                                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                                                                 </div>
                                                             </div>
                                                         @endif
+
+                                                        {{dd(get_seo_result($project_detail->id))}}
 
                                                     </div>
                                                 </div>
