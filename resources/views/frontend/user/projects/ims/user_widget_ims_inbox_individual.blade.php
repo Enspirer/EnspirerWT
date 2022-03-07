@@ -100,16 +100,10 @@
                                                             </a>
                                                         </div>
                                                     </div> -->
-                                                    <hr style="margin-top:250px;">
+                                                        <hr style="margin-top:270px;">
                                                         <div class="profile">
-                                                            <div class="row">
-                                                                <div class="col-6">
-                                                                    <div class="name">{{$ims_client->client_email}}</div>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <div class="status">{{$ims_client->phone_number}}</div>
-                                                                </div>
-                                                            </div>
+                                                            <div class="name" style="font-size:0.875rem;">Email: {{$ims_client->client_email}}</div>                                                               
+                                                            <div class="status mt-2" style="font-size:0.875rem;">Phone Number: {{$ims_client->phone_number}}</div>                                                               
                                                         </div>
                                                 </div>
                                             </div>
@@ -217,18 +211,13 @@
                                                             </li>
                                                             <li class="list-group-item">
                                                                 <div class="action-block">
-                                                                    <a href="#" class="download-btn">
-                                                                        <i class="bi bi-download"></i>
-                                                                        Download Report File
-                                                                    </a>
+                                                                    <a href="" class="download-btn"><i class="bi bi-download"></i>Download Report File</a>
                                                                 </div>
                                                             </li>
                                                             <li class="list-group-item">
                                                                 <div class="action-block">
-                                                                    <input type="hidden" name="hidden_id"
-                                                                        value="{{$ims_client->id}}">
-                                                                    <button type="submit"
-                                                                        class="submit-btn">Submit</button>
+                                                                    <input type="hidden" name="hidden_id" value="{{$ims_client->id}}">
+                                                                    <button type="submit" class="submit-btn">Submit</button>
                                                                 </div>
                                                             </li>
                                                         </ul>

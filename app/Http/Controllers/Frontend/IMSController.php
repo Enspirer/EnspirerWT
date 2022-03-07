@@ -8,6 +8,8 @@ use App\Models\Widgets;
 use App\Models\Projects;
 use Modules\WidgetManager\Entities\ImsClients;
 use DB;
+use PDF;
+
 
 class IMSController extends Controller
 {
@@ -190,6 +192,33 @@ class IMSController extends Controller
 
         return back();
         
+    }
+
+
+    public function generatePDF($id)
+    {
+        $ims_client = ImsClients::where('id',$id)->first();
+        $widget = Widgets::where('id',$ims_client->widget_id)->first();
+        $project = Projects::where('id',$ims_client->project_id)->first();    
+
+
+        $data = [
+            'client_name' => $ims_client->client_name,
+            'phone_number' => $ims_client->phone_number,
+            'client_email' => $ims_client->client_email,
+            'message' => $ims_client->message,
+            'contact_via' => $ims_client->contact_via,
+            'ip_address' => $ims_client->ip_address,
+            'assign_by' => $ims_client->assign_by,
+            'manager_comment' => $ims_client->manager_comment,
+            'comment' => $ims_client->comment,
+            'action_taken' => $ims_client->action_taken,
+            'status' => $ims_client->status,
+        ];
+
+        $pdf = PDF::loadView('myPDF', $data);
+  
+        return $pdf->download('ims_client.pdf');
     }
 
 }

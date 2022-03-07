@@ -1627,7 +1627,7 @@
                                     <ul class="dropdown-menu" aria-labelledby="propertyDropdown">
                                         @foreach(\App\Models\Projects::where('user_id',auth()->user()->id)->get() as $project)
                                             <li>
-                                                <a class="dropdown-item" href="{{route('frontend.user.project.seo',$project->id)}}">
+                                                <a class="dropdown-item" href="{{route('frontend.user.project.chat',$project->id)}}">
                                                     <div class="property">
                                                         <div class="image">
 

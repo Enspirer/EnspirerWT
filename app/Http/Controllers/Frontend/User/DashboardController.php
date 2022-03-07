@@ -32,7 +32,7 @@ class DashboardController extends Controller
 
         // dd($iresult);
 
-        return redirect()->route('frontend.user.project.seo',$iresult);
+        return redirect()->route('frontend.user.project.chat',$iresult);
                     
     }
 

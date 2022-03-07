@@ -47,6 +47,8 @@ Route::get('resources',[ResourcesController::class, 'index'])->name('resources')
 Route::get('services',[ServicesController::class, 'index'])->name('services');
 
 
+Route::get('generatePDF/{id}',[IMSController::class, 'generatePDF'])->name('generatePDF');
+
 
 /*
  * These frontend controllers require the user to be logged in

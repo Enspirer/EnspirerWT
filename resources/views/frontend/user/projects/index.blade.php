@@ -69,16 +69,16 @@
                                                     <td class="col-3">
                                                         <div class="propery">
                                                             @if(get_seo_result($report->id)->favicon->value == null)
-                                                                <a href="{{route('frontend.user.project.seo',$report->id)}}" style="text-decoration:none;">
+                                                                <a href="{{route('frontend.user.project.chat',$report->id)}}" style="text-decoration:none;">
                                                                     <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
                                                                 </a>
                                                             @else
-                                                                <a href="{{route('frontend.user.project.seo',$report->id)}}" style="text-decoration:none;">
+                                                                <a href="{{route('frontend.user.project.chat',$report->id)}}" style="text-decoration:none;">
                                                                     <img src="{{get_seo_result($report->id)->favicon->value}}" alt="propery-image">
                                                                 </a>                                                        
                                                             @endif
                                                             <div class="name">
-                                                                <a href="{{route('frontend.user.project.seo',$report->id)}}" style="text-decoration:none; color:rgba(0, 0, 0, 0.5)">
+                                                                <a href="{{route('frontend.user.project.chat',$report->id)}}" style="text-decoration:none; color:rgba(0, 0, 0, 0.5)">
                                                                     {{$report->url}}
                                                                 </a>  
                                                             </div>
