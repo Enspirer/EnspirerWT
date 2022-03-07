@@ -101,12 +101,12 @@ class HomeController extends Controller
             }
         }else if ($request->contact_via == 'Line'){
             if ($getSettings[0]->line_details[0] !=null) {
-                $line_number = $getSettings[0]->fb_details;
+                $line_number = $getSettings[0]->line_details;
                 return redirect()->to('https://line.me/R/'.$line_number[1].'/?text='.$incom);
             }
         }else if ($request->contact_via == 'Viber'){
             if ($getSettings[0]->viber_details[0] !=null) {
-                $viberchat = $getSettings[0]->viberchat_details;
+                $viberchat = $getSettings[0]->viber_details;
                 return redirect()->to('viber://chat?number='.$viberchat[1]);
             }
 
