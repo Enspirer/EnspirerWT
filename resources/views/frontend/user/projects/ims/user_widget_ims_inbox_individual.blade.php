@@ -165,18 +165,6 @@
                                                             </li>
                                                             <li class="list-group-item">
                                                                 <div class="action-block">
-                                                                    <div class="label">Comment</div>
-                                                                    <div class="action">
-                                                                        <input type="text"
-                                                                            value="{{$ims_client->comment}}"
-                                                                            name="comment" class="form-control"
-                                                                            placeholder="This is the sample comment"
-                                                                            required>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="list-group-item">
-                                                                <div class="action-block">
                                                                     <div class="label">Status</div>
                                                                     <div class="action data--Status">
                                                                         <div class="indicator"></div>
@@ -197,9 +185,10 @@
                                                                     </div>
                                                                 </div>
                                                             </li>
+                                                                                                                        
                                                             <li class="list-group-item">
                                                                 <div class="action-block">
-                                                                    <div class="label">Manager Comments</div>
+                                                                    <div class="label">Manager Nots</div>
                                                                     <div class="action">
                                                                         <input type="text"
                                                                             value="{{$ims_client->manager_comment}}"
@@ -211,7 +200,19 @@
                                                             </li>
                                                             <li class="list-group-item">
                                                                 <div class="action-block">
-                                                                    <a href="" class="download-btn"><i class="bi bi-download"></i>Download Report File</a>
+                                                                    <div class="label">Comment</div>
+                                                                    <div class="action">
+                                                                        <input type="text"
+                                                                            value="{{$ims_client->comment}}"
+                                                                            name="comment" class="form-control"
+                                                                            placeholder="All in one widget sold for $50"
+                                                                            required>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <div class="action-block">
+                                                                    <a href="{{url('generatePDF',$ims_client->id)}}" class="download-btn"><i class="bi bi-download"></i>Download Report File</a>
                                                                 </div>
                                                             </li>
                                                             <li class="list-group-item">

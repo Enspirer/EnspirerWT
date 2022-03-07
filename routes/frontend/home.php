@@ -48,6 +48,7 @@ Route::get('services',[ServicesController::class, 'index'])->name('services');
 
 
 Route::get('generatePDF/{id}',[IMSController::class, 'generatePDF'])->name('generatePDF');
+Route::get('analytics_generatePDF',[IMSController::class, 'analytics_generatePDF'])->name('analytics_generatePDF');
 
 
 /*

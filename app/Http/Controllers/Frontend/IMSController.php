@@ -199,8 +199,7 @@ class IMSController extends Controller
     {
         $ims_client = ImsClients::where('id',$id)->first();
         $widget = Widgets::where('id',$ims_client->widget_id)->first();
-        $project = Projects::where('id',$ims_client->project_id)->first();    
-
+        $project = Projects::where('id',$ims_client->project_id)->first();  
 
         $data = [
             'client_name' => $ims_client->client_name,
@@ -214,11 +213,31 @@ class IMSController extends Controller
             'comment' => $ims_client->comment,
             'action_taken' => $ims_client->action_taken,
             'status' => $ims_client->status,
+            'date' => $ims_client->created_at->format('d M Y')
         ];
 
         $pdf = PDF::loadView('myPDF', $data);
   
         return $pdf->download('ims_client.pdf');
     }
+
+
+    public function analytics_generatePDF()
+    {
+        $ims_client = ImsClients::orderBy('created_at','DESC')->get(); 
+
+        // $data = [
+        //     'ims_client' => $ims_client
+        // ];
+        // dd($data);
+
+        $pdf = PDF::loadView('ims_clients_all', [
+            'ims_client' => $ims_client
+        ]);
+  
+        return $pdf->download('ims_clients_all.pdf');
+    }
+
+    
 
 }

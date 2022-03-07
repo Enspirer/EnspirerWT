@@ -20,6 +20,7 @@
 	<h4>Contact Via = {{ $contact_via }}</h4>
 	<h4>Message = {{ $message }}</h4>
 	<h4>IP Address = {{ $ip_address }}</h4>
+    <h4>Date = {{$date}}</h4>
 
     @if($assign_by != null)
 	    <h4>Assigned By = {{ $assign_by }}</h4>
