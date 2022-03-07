@@ -152,7 +152,6 @@
                                                             </div>
                                                         @endif
 
-                                                        {{dd(get_seo_result($project_detail->id))}}
 
                                                     </div>
                                                 </div>
