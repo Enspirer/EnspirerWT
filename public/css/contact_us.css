@@ -9,6 +9,10 @@
     font-size: 16px;
 }
 
+.slider-section {
+    padding-top: 80px;
+}
+
 .slider-section .header {
     margin: calc(1.2775rem + 3.11143vw) 0;
 }
