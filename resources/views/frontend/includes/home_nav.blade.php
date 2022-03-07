@@ -112,9 +112,21 @@
                             </ul>
                         </li>
                         @else
-                            <a href="{{url('login')}}" style="text-decoration:none;font-size: 14px;font-weight: 300;color: #000;">
-                                Log in
-                            </a>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn nav-link dropdown-toggle" href="#" role="button" id="getstartedNav" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Get Started
+                                </a>
+                                <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="getstartedNav">
+                                    <li><a class="dropdown-item" href="{{url('login')}}">
+                                        <div class="icon-block"><i class="bi bi-person"></i></div> <div class="text">Log In</div>
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{{url('register')}}">
+                                    <div class="icon-block"><i class="bi bi-person-circle"></i></div> <div class="text">Sign Up</div>
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </li>
                         @endif
                     </ul>
                     <a class='menu-trigger' id="menuTrigger">

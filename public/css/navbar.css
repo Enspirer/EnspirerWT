@@ -196,6 +196,112 @@
     color: #000;
 }
 
+.profile-dropdown-menu .dropdown-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-dropdown-menu .dropdown-item .icon-block .bi {
+    font-size: 18px;
+    color: #9E9E9E;
+}
+
+.profile-dropdown-menu .dropdown-item .text {
+    color: #9E9E9E;
+    font-size: 14px;
+}
+
+.profile-dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.profile-dropdown-menu .dropdown-item:hover .icon-block .bi {
+    color: #000;
+}
+
+.profile-dropdown-menu .dropdown-item:hover .text {
+    color: #000;
+}
+
+
+#getstartedNav {
+    border: 1px solid #00AEEF;
+    padding: 0.5rem 1rem;
+}
+
+#getstartedNav:focus {
+    box-shadow: none;
+}
+
+.getstarted-dropdown-menu {
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-top: 4px solid #017FFA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.getstarted-dropdown-menu .dropdown-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.getstarted-dropdown-menu .dropdown-item .icon-block .bi {
+    font-size: 18px;
+    color: #9E9E9E;
+}
+
+.getstarted-dropdown-menu .dropdown-item .text {
+    color: #9E9E9E;
+    font-size: 14px;
+}
+
+.getstarted-dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.getstarted-dropdown-menu .dropdown-item:hover .icon-block .bi {
+    color: #000;
+}
+
+.getstarted-dropdown-menu .dropdown-item:hover .text {
+    color: #000;
+}
+
+.getstarted-dropdown-menu .dropdown-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.getstarted-dropdown-menu .dropdown-item .icon-block .bi {
+    font-size: 18px;
+    color: #9E9E9E;
+}
+
+.getstarted-dropdown-menu .dropdown-item .text {
+    color: #9E9E9E;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.getstarted-dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.getstarted-dropdown-menu .dropdown-item:hover .icon-block .bi {
+    color: #000;
+}
+
+.getstarted-dropdown-menu .dropdown-item:hover .text {
+    color: #000;
+}
+
 
 @media screen and (max-width: 991px) {
     .navigation-bar .inner-wrapper .nav-links .menu-trigger {
