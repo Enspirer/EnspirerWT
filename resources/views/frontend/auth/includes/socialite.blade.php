@@ -3,15 +3,23 @@
 @endif
 
 @if (config('services.facebook.active'))
-    <a href='{{ route('frontend.auth.social.login', 'facebook') }}' class='btn btn-sm btn-outline-info m-1'><i class='fab fa-facebook'></i> @lang('labels.frontend.auth.login_with', ['social_media' => 'Facebook'])</a>
+    <a href="{{ route('frontend.auth.social.login', 'facebook') }}" class="social-signup-btn">
+        <img src="{{url('images/fb.png')}}"
+             alt="">
+    </a>
 @endif
 
 @if (config('services.google.active'))
-    <a href='{{ route('frontend.auth.social.login', 'google') }}' class='btn btn-sm btn-outline-info m-1'><i class='fab fa-google'></i> @lang('labels.frontend.auth.login_with', ['social_media' => 'Google'])</a>
+    <a href="{{ route('frontend.auth.social.login', 'google') }}" class="social-signup-btn">
+        <img src="{{url('images/google.png')}}" alt="">
+    </a>
 @endif
 
 @if (config('services.github.active'))
-    <a href='{{ route('frontend.auth.social.login', 'github') }}' class='btn btn-sm btn-outline-info m-1'><i class='fab fa-github'></i> @lang('labels.frontend.auth.login_with', ['social_media' => 'Github'])</a>
+    <a href="{{ route('frontend.auth.social.login', 'github') }}" class="social-signup-btn">
+        <img src="{{url('images/github.png')}}"
+             alt="">
+    </a>
 @endif
 
 @if (config('services.linkedin.active'))
@@ -21,3 +29,4 @@
 @if (config('services.twitter.active'))
     <a href='{{ route('frontend.auth.social.login', 'twitter') }}' class='btn btn-sm btn-outline-info m-1'><i class='fab fa-twitter'></i> @lang('labels.frontend.auth.login_with', ['social_media' => 'Twitter'])</a>
 @endif
+

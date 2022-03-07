@@ -46,13 +46,9 @@
                     <div class="footer">
                         <div class="devider">or do it via other accounts</div>
                         <div class="button-block">
-                            <a href="#" class="social-signup-btn">
-                                <img src="{{url('images/google.png')}}" alt="">
-                            </a>
-                            <a href="#" class="social-signup-btn">
-                                <img src="{{url('images/fb.png')}}"
-                                    alt="">
-                            </a>
+                            @include('frontend.auth.includes.socialite')
+
+
                         </div>
                         <div class="signin-text">Don't have an account yet? <a href="{{url('register')}}">Register Now</a></div>
                     </div>
@@ -76,7 +72,6 @@
                 </div>
             </div>
     </section>
-
     @include('frontend.includes.footer')
 
 
