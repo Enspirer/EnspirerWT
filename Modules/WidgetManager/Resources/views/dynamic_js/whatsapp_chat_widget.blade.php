@@ -260,6 +260,11 @@ div.innerHTML = `<style>
         right: 50px;
         box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
         z-index: 99999;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
     }
     #wappwidgetblock #wappwidtoggler:hover {
         cursor: pointer;
@@ -269,13 +274,14 @@ div.innerHTML = `<style>
             @if($notify == 'bubble_notification_bage')
                 #wappwidgetblock #wappwidtoggler::after {
                     content: "";
-                    width: 12px;
-                    height: 12px;
+                    width: 5px;
+                    height: 5px;
                     background-color: #f00;
                     position: absolute;
                     border-radius: 50%;
-                    top: 6px;
-                    right: 3px;
+                    top: 8px;
+                    right: 8px;
+                    animation: pulse 1s infinite;
                 }
             @endif
         @endforeach
@@ -283,10 +289,27 @@ div.innerHTML = `<style>
 
     #wappwidgetblock #wappwidtoggler i {
         font-size: 45px;
-        position: relative;
-        top: 7px;
-        left: 16px;
         color: #14C656;
+    }
+
+    @keyframes pulse
+        {
+        0% {
+            box-shadow: 0 0 0 0px rgba(255, 0, 0, 1);
+        }
+        100% {
+            box-shadow: 0 0 0 5px rgba(255, 0, 0, 1);
+        }
+    }
+
+    @-webkit-keyframes pulse
+        {
+        0% {
+            box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.5);
+        }
+        100% {
+            box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.1);
+        }
     }
 
     /*# sourceMappingURL=main.css.map */

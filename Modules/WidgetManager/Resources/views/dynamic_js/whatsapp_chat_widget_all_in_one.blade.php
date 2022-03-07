@@ -343,13 +343,14 @@ function addWidget() {
             @if($notify == 'bubble_notification_bage')
                 #allin1widgetblock #allin1widtoggler::after {
                     content: '';
-                    width: 12px;
-                    height: 12px;
+                    width: 5px;
+                    height: 5px;
                     background-color: #f00;
                     position: absolute;
                     border-radius: 50%;
-                    top: 6px;
-                    right: 3px;
+                    top: 8px;
+                    right: 8px;
+                    animation: pulse 1s infinite;
                 }
             @endif
         @endforeach
@@ -358,6 +359,26 @@ function addWidget() {
     #allin1widgetblock #allin1widtoggler i {
         font-size: 35px;
         color: #06557E;
+    }
+
+    @keyframes pulse
+        {
+        0% {
+            box-shadow: 0 0 0 0px rgba(255, 0, 0, 1);
+        }
+        100% {
+            box-shadow: 0 0 0 5px rgba(255, 0, 0, 1);
+        }
+    }
+
+    @-webkit-keyframes pulse
+        {
+        0% {
+            box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.5);
+        }
+        100% {
+            box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.1);
+        }
     }
 
     @-webkit-keyframes msgPop {
