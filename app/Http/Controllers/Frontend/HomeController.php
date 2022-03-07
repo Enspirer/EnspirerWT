@@ -96,8 +96,8 @@ class HomeController extends Controller
             }
         }else if ($request->contact_via == 'Telegram'){
             if ($getSettings[0]->telegram_details[0] !=null) {
-                $telegram = $getSettings[0]->fb_details;
-                return redirect()->to('https://www.messenger.com/t/'.$telegram[1].'/?text='.$incom);
+                $telegram = $getSettings[0]->telegram_details;
+                return redirect()->to('https://line.me/R/ti/p/'.$telegram[1]);
             }
         }else if ($request->contact_via == 'Line'){
             if ($getSettings[0]->line_details[0] !=null) {
@@ -106,7 +106,8 @@ class HomeController extends Controller
             }
         }else if ($request->contact_via == 'Viber'){
             if ($getSettings[0]->viber_details[0] !=null) {
-                return redirect()->to('viber://chat?number=');
+                $viberchat = $getSettings[0]->viberchat_details;
+                return redirect()->to('viber://chat?number='.$viberchat[1]);
             }
 
         }
