@@ -155,8 +155,7 @@
                 <div class="button-block">
                     <div class="content">
                         <h1 class="title">The Tallent <br> Marketplace</h1>
-                        <a href="" class="cta-btn">Find Tallent <i class="bi bi-arrow-right-short"></i></a>
-                        <a href="" class="cta-btn-border">Find Work <i class="bi bi-arrow-right-short"></i></a>
+                        <a href="{{url('market_place')}}" class="cta-btn-border">Find Tallent <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                 </div>
                 <div class="card-block">
