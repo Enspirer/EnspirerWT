@@ -3,7 +3,7 @@
             <div class="inner-wrapper">
                 <div class="brand">
                     <a href="{{url('/')}}">
-                        <img src="{{url('images/Tallentor New PNG.png')}}" alt="brand-logo">
+                        <img src="{{url('images/logo/Tallentor-Logo-(PNG).png')}}" alt="brand-logo">
                     </a>
                 </div>
                 <div class="nav-links">
