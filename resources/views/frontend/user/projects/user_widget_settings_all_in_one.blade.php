@@ -407,6 +407,30 @@
                                             </div>
                                         </div>
                                     @endif
+                                        <div class="channel channel-tawkto">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Tawk.to Chat</div>
+                                                    <div class="status" name="tawkto">tawkto</div>
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="tawktochanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="tawktochanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('tawkto-block','channel-tawkto')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_tawkto" href="#" onclick="deleteChannel('channel-tawkto')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                 </div>
                                 <div class="add-channel-block">
                                     <div class="header">
@@ -443,6 +467,12 @@
                                                 <a href="#" type="button" onclick="showInfoBlock('viber-block')" class="channel-btn viber-btn">
                                                     <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
                                                     <div class="text">Viber</div>
+                                                </a>
+                                            </div>
+                                            <div class="button">
+                                                <a href="#" type="button" onclick="showInfoBlock('tawkto-block')" class="channel-btn tawkto-btn">
+                                                    <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
+                                                    <div class="text">Tawk.to</div>
                                                 </a>
                                             </div>
                                         </div>
@@ -542,6 +572,16 @@
                                                 <input type="tel" class="form-control" name="viber" id="vibernoInput" placeholder="Type your Viber Number..." required>
                                                 <label for="vibernoInput" class="form-label">Make sure to remove [+] or [00] before your phone number and add your country code</label>
                                             @endif                                          
+                                        </div>
+                                    </div>
+                                    <div class="block tawkto-block">
+                                        <div class="header">
+                                            <div class="title">Tawk.to</div>
+                                            <a href="#" class="info-done-btn" onclick="addchannel('channel-tawkto')">Done</a>
+                                        </div>
+                                        <div class="body">
+                                            <input type="tel" class="form-control" name="tawkto" id="tawktoInput" placeholder="Type your Tawk.to ID..." required>
+                                            <label for="tawktoInput" class="form-label"></label>
                                         </div>
                                     </div>
                                 </div>

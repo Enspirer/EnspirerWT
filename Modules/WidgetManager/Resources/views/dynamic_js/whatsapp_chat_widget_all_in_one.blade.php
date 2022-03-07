@@ -165,7 +165,7 @@ function addWidget() {
     #allin1widgetblock #allin1widget .allin1container .allin1footer {
         text-align: center;
         position: absolute;
-        bottom: 45px;
+        bottom: 20px;
         left: 50%;
         -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
@@ -181,6 +181,7 @@ function addWidget() {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        flex-wrap: wrap;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
