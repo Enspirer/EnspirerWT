@@ -46,7 +46,8 @@
                                                             </div>
                                                             <div class="profile">
                                                                 <div class="name">{{$ims_client->client_name}}</div>
-                                                                <div class="status">Online</div>
+                                                                <div class="status">{{$ims_client->ip_address}}</div>
+                                                                <!-- <div class="status">Online</div> -->
                                                             </div>
                                                         </div>
                                                         <!-- <div class="control-block">
@@ -99,6 +100,17 @@
                                                             </a>
                                                         </div>
                                                     </div> -->
+                                                    <hr style="margin-top:250px;">
+                                                        <div class="profile">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <div class="name">{{$ims_client->client_email}}</div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="status">{{$ims_client->phone_number}}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                 </div>
                                             </div>
                                             <div class="col-6">

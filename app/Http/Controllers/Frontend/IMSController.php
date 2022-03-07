@@ -19,7 +19,7 @@ class IMSController extends Controller
 
         // $widget = Widgets::where('id',$project)->first();
 
-        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        $ims_client = ImsClients::where('project_id',$project->id)->orderBy('id','desc')->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims',[
@@ -53,7 +53,7 @@ class IMSController extends Controller
         // dd($id);
         $widget = Widgets::where('id',$id)->first();
         $project = Projects::where('id',$widget->project_id)->first();           
-        $ims_client = ImsClients::where('widget_id',$widget->id)->get();
+        $ims_client = ImsClients::where('widget_id',$widget->id)->orderBy('id','desc')->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_inbox',[
@@ -68,7 +68,7 @@ class IMSController extends Controller
     {
         // dd($id);      
         $project = Projects::where('id',$id)->first();   
-        $ims_client = ImsClients::where('project_id',$project->id)->where('assign_by','!=', null)->get();
+        $ims_client = ImsClients::where('project_id',$project->id)->where('assign_by','!=', null)->orderBy('id','desc')->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_assigned',[
@@ -82,7 +82,7 @@ class IMSController extends Controller
     {
         // dd($id);
         $project = Projects::where('id',$id)->first();           
-        $ims_client = ImsClients::where('project_id',$project->id)->where('assign_by', null)->get();
+        $ims_client = ImsClients::where('project_id',$project->id)->where('assign_by', null)->orderBy('id','desc')->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_unassigned',[
@@ -96,7 +96,7 @@ class IMSController extends Controller
     {
         // dd($id);
         $project = Projects::where('id',$id)->first();      
-        $ims_client = ImsClients::where('project_id',$project->id)->where('status','Deal close successfully')->get();
+        $ims_client = ImsClients::where('project_id',$project->id)->where('status','Deal close successfully')->orderBy('id','desc')->get();
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_closed',[

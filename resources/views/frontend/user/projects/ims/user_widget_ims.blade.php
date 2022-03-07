@@ -86,6 +86,7 @@
                                                                                 <th class="data-title">Name</th>
                                                                                 <th class="data-title">Date</th>
                                                                                 <th class="data-title">Title</th>
+                                                                                <th class="data-title">Via</th>
                                                                                 <th class="data-title">Message</th>
                                                                                 <th class="data-title">Assign</th>
                                                                                 <th class="data-title"></th>
@@ -118,8 +119,23 @@
                                                                                         <div class="text">This is the sample
                                                                                             title one</div>
                                                                                     </td>
+                                                                                    <td class="data--title data-cell">
+                                                                                        <div class="text">
+                                                                                            @if($client->contact_via == 'Whatsapp')
+                                                                                                <button style="border: none; color: #4AD504;"><i class="bi bi-whatsapp"></i></button>
+                                                                                            @elseif($client->contact_via == 'Messenger')
+                                                                                                <button style="border: none; color: #0084ff;"><i class="bi bi-messenger"></i></button>
+                                                                                            @elseif($client->contact_via == 'Telegram')
+                                                                                                <button style="border: none; color: #0088cc;"><i class="bi bi-telegram"></i></button>
+                                                                                            @elseif($client->contact_via == 'Line')
+                                                                                                <button style="border: none; color: #07b53b;"><i class="bi bi-line"></i></button>
+                                                                                            @elseif($client->contact_via == 'Viber')
+                                                                                                <button style="border: none; color: #665cac;"><i class="bi bi-instagram"></i></button>
+                                                                                            @endif
+                                                                                        </div>
+                                                                                    </td>
                                                                                     <td class="data--message data-cell">
-                                                                                        <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{$client->message}}</div>
+                                                                                        <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$client->message}}</div>
                                                                                     </td>
                                                                                     <td class="data--assign data-cell">
                                                                                         <select class="form-select" id="{{$client->id}}" name="assigned_by" onchange="assignedBy(this)">

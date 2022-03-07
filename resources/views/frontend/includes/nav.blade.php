@@ -92,7 +92,31 @@
                                         </a>
                                         <ul class="dropdown-menu profile-dropdown-menu" aria-labelledby="profileDropdown">
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item" href="{{url('dashboard')}}">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-speedometer"></i>
+                                                    </div>
+                                                    <div class="text">Dashboard</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="{{url('reports')}}">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-journal-text"></i>
+                                                    </div>
+                                                    <div class="text">Reports</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="{{url('projects')}}">
+                                                    <div class="icon-block">
+                                                        <i class="bi bi-card-checklist"></i>
+                                                    </div>
+                                                    <div class="text">Projects</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="{{url('settings')}}">
                                                     <div class="icon-block">
                                                         <i class="bi bi-person"></i>
                                                     </div>
@@ -100,7 +124,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item" href="{{url('settings')}}">
                                                     <div class="icon-block">
                                                         <i class="bi bi-pencil"></i>
                                                     </div>
@@ -111,7 +135,7 @@
                                                 <hr class="dropdown-divider">
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item" href="{{url('settings')}}">
                                                     <div class="icon-block">
                                                         <i class="bi bi-shield-check"></i>
                                                     </div>
@@ -119,29 +143,14 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item" href="{{url('settings')}}">
                                                     <div class="icon-block">
                                                         <i class="bi bi-box-seam"></i>
                                                     </div>
                                                     <div class="text">Choose Plan</div>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="icon-block">
-                                                        <i class="bi bi-trash3"></i>
-                                                    </div>
-                                                    <div class="text">Delete Your Account</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="icon-block">
-                                                        <i class="bi bi-gear"></i>
-                                                    </div>
-                                                    <div class="text">Admin Settings</div>
-                                                </a>
-                                            </li>
+                                            
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>

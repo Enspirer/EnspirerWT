@@ -119,7 +119,7 @@
                                                                                             title one</div>
                                                                                     </td>
                                                                                     <td class="data--message data-cell">
-                                                                                        <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{$client->message}}</div>
+                                                                                        <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$client->message}}</div>
                                                                                     </td>
                                                                                     <td class="data--assign data-cell">
                                                                                         <select class="form-select" id="{{$client->id}}" name="assigned_by" onchange="assignedBy(this)">
