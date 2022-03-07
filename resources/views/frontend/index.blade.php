@@ -14,7 +14,7 @@
                         <li class="splide__slide">
                             <div class="slide-wrapper">
                                 <div class="content-block">
-                                    <h5>Automate and grow your </h5>
+                                    <h5>The Smarter way to <span>Boost</span> your </h5>
                                     <h3 class="title">Website <br> Performance</h3>
                                     <h5 class="light">All in one Widget with <strong>IMS</strong></h5>
                                     <h6>Inquiry Management System</h6>
