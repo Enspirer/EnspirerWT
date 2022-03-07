@@ -83,7 +83,7 @@
 }
 
 .hero-section {
-    height: calc(100vh - 5rem);
+    height: 100vh;
     position: relative;
     background-image: url("{{url('.../images/eShop/Group523.png')}}"),
     -webkit-gradient(linear, left top, left bottom, from(#fff), to(#F6FBFF));
@@ -96,7 +96,7 @@
 .hero-section .content {
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 15%;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     width: 42rem;

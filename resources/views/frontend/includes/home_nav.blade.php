@@ -9,22 +9,22 @@
                 <div class="nav-links">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="{{url('/')}}" class="nav-link active">Home</a>
+                            <a href="{{url('/')}}" class="nav-link {{ Request::segment(1) == '' ? 'active' : null }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('products')}}" class="nav-link">Products</a>
+                            <a href="{{url('products')}}" class="nav-link {{ Request::segment(1) == 'products' ? 'active' : null }}">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('services')}}" class="nav-link">Services</a>
+                            <a href="{{url('services')}}" class="nav-link {{ Request::segment(1) == 'services' ? 'active' : null }}">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('market_place')}}" class="nav-link">Marketplace</a>
+                            <a href="{{url('market_place')}}" class="nav-link {{ Request::segment(1) == 'market_place' ? 'active' : null }}">Marketplace</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('eshop')}}" class="nav-link">eShop</a>
+                            <a href="{{url('eshop')}}" class="nav-link {{ Request::segment(1) == 'eshop' ? 'active' : null }}">eShop</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('contact')}}" class="nav-link">Contact Us</a>
+                            <a href="{{url('contact')}}" class="nav-link {{ Request::segment(1) == 'contact' ? 'active' : null }}">Contact Us</a>
                         </li>
                         @auth
                         <li class="nav-item dropdown">
