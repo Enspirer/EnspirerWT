@@ -8,23 +8,52 @@
 
     <section class="hero-section">
         <div class="container">
-            <div class="inner-wrapper">
-                <div class="content-block">
-                    <h5>The Smarter way to <span>Boost</span> your</h5>
-                    <h3 class="title">Website <br> Performance</h3>
-                    <h5 class="light">WhatsApp Widget with </h5>
-                    <h5>Inquiry Management System (IMS)</h5>
+            <div class="splide" id="heroSlider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="slide-wrapper">
+                                <div class="content-block">
+                                    <h5>Automate and grow your </h5>
+                                    <h3 class="title">Website <br> Performance</h3>
+                                    <h5 class="light">All in one Widget with <strong>IMS</strong></h5>
+                                    <h6>Inquiry Management System</h6>
 
-                    <a href="{{url('register')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
-                    <div class="featured-icons">
-                        <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
-                        <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
-                        <a href="#" class="icon"><img src="{{url('images/shield (1).png')}}" alt="featured icon"></a>
-                        <a href="#" class="icon"><img src="{{url('images/chat (1).png')}}" alt="featured icon"></a>
-                    </div>
-                </div>
-                <div class="image-block">
-                    <img src="{{url('images/Group 411.png')}}" alt="hero-image">
+                                    <a href="{{url('register')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                                    <!-- <div class="featured-icons">
+                                        <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
+                                        <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
+                                        <a href="#" class="icon"><img src="{{url('images/shield (1).png')}}" alt="featured icon"></a>
+                                        <a href="#" class="icon"><img src="{{url('images/chat (1).png')}}" alt="featured icon"></a>
+                                    </div> -->
+                                </div>
+                                <div class="image-block">
+                                    <img src="{{url('images/Group 411.png')}}" alt="hero-image">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slide-wrapper">
+                                <div class="image-block">
+                                    <img src="{{url('images/Group 835.png')}}" alt="hero-image">
+                                </div>
+                                <div class="content-block">
+                                    <h5>Automate and grow your </h5>
+                                    <h3 class="title">Website <br> Performance</h3>
+                                    <h5 class="light">All in one Widget with <strong>IMS</strong></h5>
+                                    <h6>Inquiry Management System</h6>
+
+                                    <a href="{{url('register')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                                    <!-- <div class="featured-icons">
+                                        <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
+                                        <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
+                                        <a href="#" class="icon"><img src="{{url('images/shield (1).png')}}" alt="featured icon"></a>
+                                        <a href="#" class="icon"><img src="{{url('images/chat (1).png')}}" alt="featured icon"></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
