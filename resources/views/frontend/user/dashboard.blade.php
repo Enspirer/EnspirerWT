@@ -123,31 +123,31 @@
                                                     </div>
                                                     <div class="col-md-6 col-8">
                                                         @if($project_detail->score < 25)
-                                                            <span class="precentage">86.0<span class="sign">%</span></span>
+                                                            <span class="precentage">{{$project_detail->score}}<span class="sign">%</span></span>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="background-color:red; width: 25%"
-                                                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                                <div class="progress-bar" role="progressbar" style="background-color:red; width: {{$project_detail->score}}%"
+                                                                     aria-valuenow="{{$project_detail->score}}" aria-valuemin="0" aria-valuemax="100">
                                                                 </div>
                                                             </div>
                                                         @elseif($project_detail->score < 50)
                                                             <span class="precentage">{{$project_detail->score}}<span class="sign">%</span></span>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="background-color:#ffc11e; width: 25%"
-                                                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                                <div class="progress-bar" role="progressbar" style="background-color:#ffc11e; width: {{$project_detail->score}}%"
+                                                                     aria-valuenow="{{$project_detail->score}}" aria-valuemin="0" aria-valuemax="100">
                                                                 </div>
                                                             </div>
                                                         @elseif($project_detail->score < 65)
                                                             <span class="precentage">{{$project_detail->score}}<span class="sign">%</span></span>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="background-color:#008f23; width: 25%"
-                                                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                                <div class="progress-bar" role="progressbar" style="background-color:#008f23; width: {{$project_detail->score}}%"
+                                                                     aria-valuenow="{{$project_detail->score}}" aria-valuemin="0" aria-valuemax="100">
                                                                 </div>
                                                             </div>
-                                                        @elseif($project_detail->score < 0)
+                                                        @elseif($project_detail->score < 85)
                                                             <span class="precentage">{{$project_detail->score}}<span class="sign">%</span></span>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="background-color:red; width: 25%"
-                                                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                                <div class="progress-bar" role="progressbar" style="background-color:green; width: {{$project_detail->score}}%"
+                                                                     aria-valuenow="{{$project_detail->score}}" aria-valuemin="0" aria-valuemax="100">
                                                                 </div>
                                                             </div>
                                                         @endif
