@@ -29,3 +29,4 @@ Route::post('theme_changers', [HomeController::class, 'theme_changers'])->name('
 Route::post('whatsapp_widget/redirection', [HomeController::class,'save_client'])->name('save_client');
 Route::post('all_in_one_whatsapp_widget/redirection', [HomeController::class,'all_in_one_save_client'])->name('all_in_one_save_client');
 
+Route::post('tawk_details_store', [HomeController::class,'tawk_details_store'])->name('tawk_details_store');

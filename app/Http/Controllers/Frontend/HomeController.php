@@ -120,6 +120,48 @@ class HomeController extends Controller
         return $settings[0]->whatsapp_number;
     }
 
+
+
+
+
+    public function tawk_details_store(Request $request)
+    {
+        // dd($request);
+
+        $phone_number =  self::tawk_details_number_ByWidget($request->widget_id);
+        $widget = Widgets::where('id',$request->widget_id)->first();
+
+        $widget = Widgets::where('id',$request->widget_id)->first();
+        $client = new ImsClients;
+        $client->project_id = $widget->project_id;
+        $client->contact_via = 'Tawkto';
+        $client->client_name = $request->username;
+        $client->client_email = $request->useremail;
+        $client->phone_number = $request->phone_number;
+        $client->message = $request->usermessage;
+        $client->widget_id = $request->widget_id;
+        $client->ip_address = $request->ip();
+        $client->save();
+
+        $incom =  urlencode($request->usermessage);       
+       
+
+    }
+
+    public static function tawk_details_number_ByWidget($id)
+    {
+        $widget = Widgets::where('id',$id)->first();
+
+        $settings = json_decode($widget->settings);
+
+        return $settings[0]->whatsapp_number;
+    }
+
+
+
+
+
+
     public static function get_widget_settings($id)
     {
         $widget = Widgets::where('id',$id)->first();

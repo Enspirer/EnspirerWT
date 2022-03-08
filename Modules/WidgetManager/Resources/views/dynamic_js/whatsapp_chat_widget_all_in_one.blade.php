@@ -437,6 +437,8 @@ function addWidget() {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
+
+
     <div id="allin1widgetblock">
         @if($widget_meta->show_icon == 'on')
             @if($widget_meta->scroll_position_appearance == "Top")
@@ -599,17 +601,16 @@ function addWidget() {
                             <button type="submit" name="button">Send</button>
                         </div>
                     </form>
-                    <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
-                    {{csrf_field()}}
+                    <form id="allin1startupform">
                         <div class="allin1formcontent allin1form6">
                             <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="text" id="username6" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail6" name="useremail" placeholder="Your email" required>
                             <input type="tel" id="telephone6" name="phone_number" placeholder="Your phone number" required>
-                            <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
-                            <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
-                            <input type="hidden" id="username" name="contact_via" value="Tawkto">
-                            <button type="submit" name="button" onclick="allin1tawktoiframe()">Send</button>
+                            <textarea name="usermessage" id="usermessage6" placeholder="Your message" required></textarea>
+                            <input type="hidden" id="widget_id6" name="widget_id6" value="{{$widget_id}}" required>
+                            <input type="hidden" id="contact_via6" name="contact_via" value="Tawkto">
+                            <a href="#" name="button" onclick="allin1tawktoiframe()">Send</a>
                         </div>
                     </form>
                 </div>
@@ -659,8 +660,31 @@ function allin1formclose() {
     document.querySelector('.allin1buttonblock').classList.remove("allin1view");
 }
 
+
 function allin1tawktoiframe() {
+
+    const name = document.getElementById("username6");
+    const email = document.getElementById("useremail6");
+    const tel = document.getElementById("telephone6");
+    const message = document.getElementById("usermessage6");
+    const widget_id = document.getElementById("widget_id6");
+
+    /* console.log(name.value); */
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("demo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("POST", "{{url('api/tawk_details_store')}}", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("username=" + name.value + "&useremail=" + email.value + "&phone_number=" + tel.value + "&usermessage=" + message.value + "&widget_id=" + widget_id.value);
+   
+
+  
     document.querySelector('.allin1ifameblock').classList.add("allin1view");
+    
 }
 
 function allin1closetawktoiframe() {
