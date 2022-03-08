@@ -267,4 +267,20 @@
     }
 }
 
+
+/* Forgot Password */
+
+.email-not-found {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #e31718;
+}
+
+.email-not-found button {
+    display: none;
+}
+
 /*# sourceMappingURL=sign_in.css.map */
