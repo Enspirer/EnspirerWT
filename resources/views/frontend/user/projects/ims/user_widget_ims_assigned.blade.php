@@ -85,7 +85,6 @@
                                                                                 <th class="data-title"></th>
                                                                                 <th class="data-title">Name</th>
                                                                                 <th class="data-title">Date</th>
-                                                                                <th class="data-title">Title</th>
                                                                                 <th class="data-title">Message</th>
                                                                                 <th class="data-title">Assign</th>
                                                                                 <th class="data-title"></th>
@@ -113,10 +112,6 @@
                                                                                     </td>
                                                                                     <td class="data--date data-cell">
                                                                                         <div class="text">{{$client->created_at->format('d M Y')}}</div>
-                                                                                    </td>
-                                                                                    <td class="data--title data-cell">
-                                                                                        <div class="text">This is the sample
-                                                                                            title one</div>
                                                                                     </td>
                                                                                     <td class="data--message data-cell">
                                                                                         <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$client->message}}</div>

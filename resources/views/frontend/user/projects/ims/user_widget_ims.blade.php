@@ -85,7 +85,6 @@
                                                                                 <th class="data-title"></th>
                                                                                 <th class="data-title">Name</th>
                                                                                 <th class="data-title">Date</th>
-                                                                                <th class="data-title">Title</th>
                                                                                 <th class="data-title">Via</th>
                                                                                 <th class="data-title">Message</th>
                                                                                 <th class="data-title">Assign</th>
@@ -114,23 +113,21 @@
                                                                                     </td>
                                                                                     <td class="data--date data-cell">
                                                                                         <div class="text">{{$client->created_at->format('d M Y')}}</div>
-                                                                                    </td>
-                                                                                    <td class="data--title data-cell">
-                                                                                        <div class="text">This is the sample
-                                                                                            title one</div>
-                                                                                    </td>
+                                                                                    </td>                                                                                   
                                                                                     <td class="data--title data-cell">
                                                                                         <div class="text">
                                                                                             @if($client->contact_via == 'Whatsapp')
-                                                                                                <button style="border: none; color: #4AD504;"><i class="bi bi-whatsapp"></i></button>
+                                                                                                <button style="border: none; color: #4AD504; background-color: #fff;"><i class="bi bi-whatsapp"></i></button>
                                                                                             @elseif($client->contact_via == 'Messenger')
-                                                                                                <button style="border: none; color: #0084ff;"><i class="bi bi-messenger"></i></button>
+                                                                                                <button style="border: none; color: #0084ff; background-color: #fff;"><i class="bi bi-messenger"></i></button>
                                                                                             @elseif($client->contact_via == 'Telegram')
-                                                                                                <button style="border: none; color: #0088cc;"><i class="bi bi-telegram"></i></button>
+                                                                                                <button style="border: none; color: #0088cc; background-color: #fff;"><i class="bi bi-telegram"></i></button>
                                                                                             @elseif($client->contact_via == 'Line')
-                                                                                                <button style="border: none; color: #07b53b;"><i class="bi bi-line"></i></button>
+                                                                                                <button style="border: none; color: #07b53b; background-color: #fff;"><i class="bi bi-line"></i></button>
                                                                                             @elseif($client->contact_via == 'Viber')
-                                                                                                <button style="border: none; color: #665cac;"><i class="bi bi-instagram"></i></button>
+                                                                                                <button style="border: none; color: #665cac; background-color: #fff;"><i class="bi bi-instagram"></i></button>
+                                                                                            @elseif($client->contact_via == 'Tawkto')
+                                                                                                <button style="border: none; color: #665cac; background-color: #fff;"><i class="bi bi-snapchat"></i></button>
                                                                                             @endif
                                                                                         </div>
                                                                                     </td>
