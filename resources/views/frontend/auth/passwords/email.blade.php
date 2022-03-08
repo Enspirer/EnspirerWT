@@ -3,7 +3,7 @@
 @section('title', app_name() . ' | ' . __('labels.frontend.passwords.reset_password_box_title'))
 
 @section('content')
- <!--   <div class="row justify-content-center align-items-center">
+<!--    <div class="row justify-content-center align-items-center">
         <div class="col col-sm-6 align-self-center">
             <div class="card">
                 <div class="card-header">
@@ -19,6 +19,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
+                    @include('includes.partials.messages')
 
                     {{ html()->form('POST', route('frontend.auth.password.email.post'))->open() }}
                         <div class="row">
@@ -51,12 +53,6 @@
 
     <link rel="stylesheet" href="{{url('css/sign_in.css')}}">
 
-    <style>
-        .alert.alert-danger {
-            margin-top:80px
-        }
-    </style>
-
     @include('frontend.includes.home_nav')
 
     <section class="sign-up-section">
@@ -80,6 +76,8 @@
                             ->attribute('maxlength', 191)
                             ->required()
                             ->autofocus() }}
+                        
+                        @include('includes.partials.messages')
                     </div>
                     <button type="submit" class="btn-signup">Send Password Reset Link</button>
                 {{ html()->form()->close() }}

@@ -49,7 +49,6 @@
             <div class="">
                 <div id="45736B027404877"></div>
                 <script src="https://tallentor.com/whatsapp_widget/1/tallentorw.js"></script>
-                @include('includes.partials.messages')
                 @yield('content')
             </div><!-- container -->
         </div><!-- #app -->
