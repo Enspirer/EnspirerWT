@@ -496,6 +496,14 @@ function addWidget() {
                                     <button onclick="allin1formpopup(5)" class="allin1btn allin1btn5"><i class="bi bi-instagram"></i></button>
                                 @endif
                             @endforeach
+                        @endif
+
+                        @if(count($widget_meta->viber_details) != 1)
+                            @foreach($widget_meta->viber_details as $key => $viber)
+                                @if($viber == 'viber')  
+                                    <button onclick="allin1formpopup(6)" class="allin1btn allin1btn6"><i class="bi bi-snapchat"></i></button>
+                                @endif
+                            @endforeach
                         @endif                        
                         
                     </div>
@@ -559,6 +567,19 @@ function addWidget() {
                             <input type="text" id="username5" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail5" name="useremail" placeholder="Your email" required>
                             <input type="tel" id="telephone5" name="phone_number" placeholder="Your phone number" required>
+                            <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
+                            <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
+                            <input type="hidden" id="username" name="contact_via" value="Viber">
+                            <button type="submit" name="button">Send</button>
+                        </div>
+                    </form>
+                    <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
+                    {{csrf_field()}}
+                        <div class="allin1formcontent allin1form6">
+                            <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
+                            <input type="text" id="username6" name="username" placeholder="Your name" required>
+                            <input type="email" id="useremail6" name="useremail" placeholder="Your email" required>
+                            <input type="tel" id="telephone6" name="phone_number" placeholder="Your phone number" required>
                             <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Viber">
