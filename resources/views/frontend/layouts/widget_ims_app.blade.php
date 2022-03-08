@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
         <script src="https://kit.fontawesome.com/aa4e69f91b.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.1/dist/echarts.js"></script>
 
         <link rel="stylesheet" href="{{url('css/jquery-clockpicker.min.css')}}">
         <link rel="stylesheet" href="{{url('css/ims_main.css')}}">
@@ -30,7 +31,7 @@
         @stack('before-styles')
 
         <link rel="stylesheet" href="{{url('css/aiz-core.css')}}">  
-    <link rel="stylesheet" href="{{url('css/vendors.css')}}">  
+        <link rel="stylesheet" href="{{url('css/vendors.css')}}">  
     
     <script>
         var AIZ = AIZ || {};
