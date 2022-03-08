@@ -9,7 +9,7 @@ use App\Models\Projects;
 use Modules\WidgetManager\Entities\ImsClients;
 use DB;
 use PDF;
-
+use Carbon\Carbon;
 
 class IMSController extends Controller
 {
@@ -147,7 +147,22 @@ class IMSController extends Controller
 
     public function ims_analytics($id)
     {
-        // dd($id);
+
+        $date = Carbon::now()->subDays(7);
+
+        $ims_clienrt = ImsClients::where('created_at', '>=', Carbon::now()->subMonth())
+                            ->groupBy('date')
+        ->orderBy('date', 'DESC')
+        ->get(array(
+            DB::raw('COUNT(status = "Deal close successfully") as "responded_count" '),
+            DB::raw('Date(created_at) as date'),
+            DB::raw('COUNT(*) as "count"'),
+        ));
+
+
+
+
+//         dd($id);
         $project = Projects::where('id',$id)->first();           
         $ims_client = ImsClients::where('project_id',$project->id)->get();
         // dd($ims_client);
@@ -161,6 +176,7 @@ class IMSController extends Controller
         
 
         return view('frontend.user.projects.ims.user_widget_ims_analytics',[
+            'chart_data' => $ims_clienrt,
             'project' => $project,
             'ims_client' => $ims_client,
             'count_all' => $count_all,
