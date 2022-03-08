@@ -39,9 +39,9 @@
                                 </div>
                                 <div class="content-block">
                                     <h5>Automate and grow your </h5>
-                                    <h3 class="title">Website <br> Performance</h3>
-                                    <h5 class="light">All in one Widget with <strong>IMS</strong></h5>
-                                    <h6>Inquiry Management System</h6>
+                                    <h3 class="title">Engage , <br>Interact, Convert</h3>
+                                    <h5 class="light">Increase sales with All in one Widget <strong>IMS</strong></h5>
+                                    <h6>The customised Inquiry Management System</h6>
 
                                     <a href="{{url('register')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
                                     <!-- <div class="featured-icons">
@@ -72,13 +72,11 @@
                     <div class="content-block">
                         <div class="header">
                             <div class="title"><i class="bi bi-whatsapp"></i>WhatsApp Widget</div>
-                            <span class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the</span>
+                            <span class="text">Integrate the most popular communication channel into your website and improve your customer service quality and sales conversion.</span>
                         </div>
                         <ul class="features">
-                            <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy text of
-                                the</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Customisable ready to use widget</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Inquiry Management System - IMS</li>
                         </ul>
                         <a href="#" class="cta-btn-border">Get Started</a>
                     </div>
@@ -90,13 +88,11 @@
                     <div class="content-block">
                         <div class="header">
                             <div class="title"><i class="bi bi-grid-fill"></i>All in one</div>
-                            <span class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the</span>
+                            <span class="text">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</span>
                         </div>
                         <ul class="features">
-                            <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy text of
-                                the</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Pick and choose the channels</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Quick integration with IMS option.</li>
                         </ul>
                         <a href="#" class="cta-btn-border">Get Started</a>
                     </div>
@@ -111,7 +107,13 @@
     <section class="IMS-section">
         <div class="container">
             <h2 class="title">Inquiry Management System</h2>
-            <span class="text">How it's works ...</span>
+            <span class="text">Keep track of all inquiries with status updates & Sales Reports</span>
+            <ul class="text-block">
+                <li><i class="bi bi-check-circle-fill"></i>Admin dashboard with user privileges management</li>
+                <li><i class="bi bi-check-circle-fill"></i>Assign the inquiry to relevant department</li>
+                <li><i class="bi bi-check-circle-fill"></i>Record of the full status of the inquiry with comments</li>
+                <li><i class="bi bi-check-circle-fill"></i>Analytics of the inquiry management process with reports</li>
+            </ul>
             <div class="image-block">
                 <img src="{{url('images/Group 410.png')}}" alt="">
             </div>
