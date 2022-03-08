@@ -86,3 +86,11 @@ displayOption.forEach(function (option) {
         option.classList.add("active");
     });
 });
+
+// Device sizes
+function device(cls) {
+    const window = document.getElementById("device-view");
+
+    window.classList.remove("desktop", "tablet", "mobile");
+    window.classList.add(cls);
+}

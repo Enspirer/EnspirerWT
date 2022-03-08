@@ -66,6 +66,26 @@
     background-color: #fff;
 }
 
+.main-window .body-section .section-content #device-view {
+    margin: 1rem;
+    border-radius: 15px;
+    background-color: #F5F6F8;
+}
+
+.main-window .body-section .section-content #device-view.desktop {
+    width: auto;
+}
+
+.main-window .body-section .section-content #device-view.tablet {
+    width: 700px;
+    margin-left: auto;
+}
+
+.main-window .body-section .section-content #device-view.mobile {
+    width: 400px;
+    margin-left: auto;
+}
+
 .accordion .accordion-item {
     border: none;
     margin-bottom: 5px;

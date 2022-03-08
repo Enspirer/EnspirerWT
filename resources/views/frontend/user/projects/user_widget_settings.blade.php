@@ -50,9 +50,9 @@
             </div>
             <div class="side-nav-footer">
                 <div class="devices">
-                    <a href="#"><img src="{{url('images/resources/baseline-desktop_mac-24px.svg')}}" alt="devices"></a>
-                    <a href="#"><img src="{{url('images/resources/Group 125.svg')}}" alt="devices"></a>
-                    <a href="#"><img src="{{url('images/resources/baseline-smartphone-24px.svg')}}" alt="devices"></a>
+                    <a onclick="device('desktop')" href="#"><img src="{{url('images/resources/baseline-desktop_mac-24px.svg')}}" alt="devices"></a>
+                    <a onclick="device('tablet')" href="#"><img src="{{url('images/resources/Group 125.svg')}}" alt="devices"></a>
+                    <a onclick="device('mobile')" href="#"><img src="{{url('images/resources/baseline-smartphone-24px.svg')}}" alt="devices"></a>
                 </div>
             </div>
         </div>
@@ -1270,7 +1270,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <div class="mt-4">
+                            <div id="device-view">
                                 <iframe id="incorme" src="{{route('frontend.user.user_whatsapp_chat_preview',$widget->id)}}" frameborder="0" style="width: 100%;height: 610px;"></iframe>
                             </div>
                         </div>
@@ -1749,6 +1749,5 @@
             output.innerHTML = this.value;
         };
     </script>
-
 
 @endpush
