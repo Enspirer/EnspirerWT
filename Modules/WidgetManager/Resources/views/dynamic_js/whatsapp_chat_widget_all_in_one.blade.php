@@ -254,7 +254,7 @@ function addWidget() {
         width: 265px;
         left: 50%;
         transform: translate(-50%, 0);
-        bottom: -22px;
+        bottom: 0;
         visibility: hidden;
     }
 
@@ -307,6 +307,32 @@ function addWidget() {
 
     #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent button:hover {
         cursor: pointer;
+    }
+
+    #allin1widgetblock #allin1widget .allin1container .allin1ifameblock {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: none;
+    }
+
+    #allin1widgetblock #allin1widget .allin1container .allin1ifameblock.allin1view {
+        display: block;
+    }
+
+    #allin1widgetblock #allin1widget .allin1container .allin1ifameblock .bi {
+        position: absolute;
+        color: #fff;
+        right: 10px;
+        top: 8px;
+    }
+
+    #allin1widgetblock #allin1widget .allin1container .allin1ifameblock .bi:hover {
+        cursor: pointer;
+    }
+
+    .tawk-max-container {
+        border: none !important;
     }
 
     #allin1widgetblock #allin1widtoggler {
@@ -583,9 +609,13 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Tawkto">
-                            <button type="submit" name="button">Send</button>
+                            <button type="submit" name="button" onclick="allin1tawktoiframe()">Send</button>
                         </div>
                     </form>
+                </div>
+                <div class="allin1ifameblock">
+                    <i class="bi bi-x-lg" onclick="allin1formclose();allin1closetawktoiframe()"></i>
+                    <iframe class="allin1ifame" src="https://tawk.to/chat/613b9d3bd326717cb680d215/1ff8dsd8m" style=" width: 100%;height: 450px;border-radius: 15px;" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -627,4 +657,12 @@ function allin1formclose() {
         el.classList.remove("allin1view");
     });
     document.querySelector('.allin1buttonblock').classList.remove("allin1view");
+}
+
+function allin1tawktoiframe() {
+    document.querySelector('.allin1ifameblock').classList.add("allin1view");
+}
+
+function allin1closetawktoiframe() {
+    document.querySelector('.allin1ifameblock').classList.remove("allin1view");
 }
