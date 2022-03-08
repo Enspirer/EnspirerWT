@@ -77,9 +77,14 @@
                                                                             <i class="bi bi-three-dots-vertical"></i>
                                                                         </a>
                                                                     </div>
-                                                                    <div class="d-flex justify-content-end"><a href="{{url('analytics_generatePDF')}}" class="download-btn">
-                                                                                            <i class="bi bi-download"></i>
-                                                                                        </a></div>
+                                                                    <div class="d-flex justify-content-end">
+                                                                        <a href="{{url('analytics_generatePDF')}}" class="download-btn">
+                                                                            <i class="bi bi-download"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="d-flex justify-content-end">
+                                                                        <a class="btn btn-warning ms-4 ml-3" href="{{ url('export_ims_client') }}">Export File</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="ims__data-table">
                                                                     <table class="table table-borderless">
@@ -204,6 +209,13 @@
 
 
 @push('after-scripts')
+
+<script>
+   function exportTasks(_this) {
+      let _url = $(_this).data('href');
+      window.location.href = _url;
+   }
+</script>
 
 <script type="text/javascript">
 
