@@ -36,7 +36,7 @@
                                         <section class="analytics-section ims__panel" id="ims__analytics">
                                             <div class="root-section">
                                                 <div class="chart-section">
-                                                    <div id="analyticsChart" style="width: 100%;height: 600px;"></div>
+                                                    <div id="analyticsChart" style="width: 100%;height: 400px;"></div>
                                                 </div>
                                                 <div class="ims__control-panel">
                                                     <div class="row g-0">

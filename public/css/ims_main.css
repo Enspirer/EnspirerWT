@@ -969,6 +969,13 @@
   }
 }
 
+.ims__section .ims__body-container .ims__inner-container .root-section .chart-section {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+
 .ims__section .ims__body-container .ims__inner-container .root-section .ims__control-panel .ims__data-table .data-row .data-cell.data--action-taken {
   display: -webkit-box;
   display: -ms-flexbox;
