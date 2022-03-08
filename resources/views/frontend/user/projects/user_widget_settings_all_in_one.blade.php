@@ -407,12 +407,22 @@
                                             </div>
                                         </div>
                                     @endif
-                                        <div class="channel channel-tawkto">
+
+                                    @if(count(json_decode($widget->settings)[0]->tawk_details) != 1)
+                                        <div class="channel channel-tawkto active">
                                             <div class="content-block">
                                                 <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
                                                 <div class="content">
                                                     <div class="name">Tawk.to Chat</div>
-                                                    <div class="status" name="tawkto">tawkto</div>
+                                                    @if(count(json_decode($widget->settings)[0]->tawk_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->tawk_details as $key => $tawk)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="tawkto">{{$tawk}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @else
+                                                        <div class="status" name="tawkto"></div>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="option-block">
@@ -431,6 +441,41 @@
                                                 </ul>
                                             </div>
                                         </div>
+                                    @else
+                                        <div class="channel channel-tawkto">
+                                            <div class="content-block">
+                                                <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
+                                                <div class="content">
+                                                    <div class="name">Tawk.to Chat</div>
+                                                    @if(count(json_decode($widget->settings)[0]->tawk_details) != 1)
+                                                        @foreach(json_decode($widget->settings)[0]->tawk_details as $key => $tawk)
+                                                            @if (($key - 1) % 3 == 0)
+                                                                <div class="status" name="tawkto">{{$tawk}}</div>
+                                                            @endif
+                                                        @endforeach
+                                                    @else
+                                                        <div class="status" name="tawkto"></div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="option-block">
+                                                <button type="button" id="tawktochanneldropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="tawktochanneldropdown">
+                                                    <li><a class="dropdown-item edit" href="#" onclick="channelEdit('tawkto-block','channel-tawkto')">
+                                                        <div class="text">Edit</div>
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a></li>
+                                                    <li><a class="dropdown-item delete social_delete" name="delete_tawkto" href="#" onclick="deleteChannel('channel-tawkto')">
+                                                        <div class="text">Delete</div>
+                                                        <i class="bi bi-trash3"></i>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    @endif
+                                        
                                 </div>
                                 <div class="add-channel-block">
                                     <div class="header">
@@ -580,8 +625,17 @@
                                             <a href="#" class="info-done-btn" onclick="addchannel('channel-tawkto')">Done</a>
                                         </div>
                                         <div class="body">
-                                            <input type="tel" class="form-control" name="tawkto" id="tawktoInput" placeholder="Type your Tawk.to ID..." required>
-                                            <label for="tawktoInput" class="form-label"></label>
+                                            @if(count(json_decode($widget->settings)[0]->tawk_details) != 1)
+                                                @foreach(json_decode($widget->settings)[0]->tawk_details as $key => $tawk)
+                                                    @if (($key - 1) % 3 == 0)
+                                                        <input type="tel" class="form-control" value="{{ $tawk }}" name="tawkto" id="tawktoInput" placeholder="Type your Tawk.to ID..." required>
+                                                        <label for="tawktoInput" class="form-label"></label>
+                                                    @endif
+                                                @endforeach
+                                            @else
+                                                <input type="tel" class="form-control" name="tawkto" id="tawktoInput" placeholder="Type your Tawk.to ID..." required>
+                                                <label for="tawktoInput" class="form-label"></label>
+                                            @endif                                            
                                         </div>
                                     </div>
                                 </div>
@@ -2078,6 +2132,16 @@
             get_viber_array = null;
         }
 
+        if(infoInputName == 'tawkto') {
+            get_tawkto_array = [
+                tawkto = 'tawkto',
+                tawkto_number = infoInputVal
+            ];
+        }
+        else {
+            get_tawkto_array = null;
+        }
+
         // console.log(get_whatsapp_array);
         // console.log(get_fb_array);
         // console.log(get_telegram_array);
@@ -2293,6 +2357,7 @@
             get_telegram_array:get_telegram_array,
             get_line_array:get_line_array,
             get_viber_array:get_viber_array,
+            get_tawkto_array:get_tawkto_array,
             template_layout: template_layout,
             whatsapp_number: whatsapp_number,
             bubble_icon: bubble_icon,

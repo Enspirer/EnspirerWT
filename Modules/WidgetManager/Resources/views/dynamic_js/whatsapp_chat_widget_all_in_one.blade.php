@@ -498,9 +498,9 @@ function addWidget() {
                             @endforeach
                         @endif
 
-                        @if(count($widget_meta->viber_details) != 1)
-                            @foreach($widget_meta->viber_details as $key => $viber)
-                                @if($viber == 'viber')  
+                        @if(count($widget_meta->tawk_details) != 1)
+                            @foreach($widget_meta->tawk_details as $key => $tawk)
+                                @if($tawk == 'tawkto')  
                                     <button onclick="allin1formpopup(6)" class="allin1btn allin1btn6"><i class="bi bi-snapchat"></i></button>
                                 @endif
                             @endforeach
@@ -582,7 +582,7 @@ function addWidget() {
                             <input type="tel" id="telephone6" name="phone_number" placeholder="Your phone number" required>
                             <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
-                            <input type="hidden" id="username" name="contact_via" value="Viber">
+                            <input type="hidden" id="username" name="contact_via" value="Tawkto">
                             <button type="submit" name="button">Send</button>
                         </div>
                     </form>

@@ -64,10 +64,6 @@ class HomeController extends Controller
       $getSettings = self::get_widget_settings($request->widget_id);
 
 
-
-
-
-
         $widget = Widgets::where('id',$request->widget_id)->first();
         $client = new ImsClients;
         $client->project_id = $widget->project_id;
@@ -516,8 +512,11 @@ class HomeController extends Controller
         }else{
             $db_viber_array = $request->get_viber_array; 
         }
-
-
+        if($request->get_tawkto_array == null){            
+            $db_tawkto_array = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->tawk_details;
+        }else{
+            $db_tawkto_array = $request->get_tawkto_array; 
+        }
         
 
         $whatsapp_details = $db_whatsapp_array;
@@ -525,6 +524,7 @@ class HomeController extends Controller
         $telegram_details = $db_telegram_array;
         $line_details = $db_line_array;
         $viber_details = $db_viber_array;
+        $tawk_details = $db_tawkto_array;
 
 
         if($request->delete_social_media == 'delete_whatsapp'){
@@ -567,6 +567,14 @@ class HomeController extends Controller
                 $viber_details = [null];
             }
         }
+        if($request->delete_social_media == 'delete_tawkto'){
+            if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->tawk_details == [null]){
+                $tawk_details = $db_whatsapp_array;
+            }
+            else{
+                $tawk_details = [null];
+            }
+        }
 
         // dd($whatsapp_details);
       
@@ -607,6 +615,7 @@ class HomeController extends Controller
             'telegram_details' => $telegram_details,
             'line_details' => $line_details,
             'viber_details' => $viber_details,
+            'tawk_details' => $tawk_details,            
             'template_layout' => $template_layout,
             'whatsapp_number' => $whatsapp_number,
             'bubble_icon' => $bubble_icon,
