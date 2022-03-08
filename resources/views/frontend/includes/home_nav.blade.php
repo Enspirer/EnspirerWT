@@ -24,6 +24,9 @@
                             <a href="{{url('eshop')}}" class="nav-link {{ Request::segment(1) == 'eshop' ? 'active' : null }}">eShop</a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{url('portfolio')}}" class="nav-link {{ Request::segment(1) == 'portfolio' ? 'active' : null }}">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{url('contact')}}" class="nav-link {{ Request::segment(1) == 'contact' ? 'active' : null }}">Contact Us</a>
                         </li>
                         @auth
