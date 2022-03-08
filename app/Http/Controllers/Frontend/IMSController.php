@@ -151,10 +151,20 @@ class IMSController extends Controller
         $project = Projects::where('id',$id)->first();           
         $ims_client = ImsClients::where('project_id',$project->id)->get();
         // dd($ims_client);
-    
+
+        $count_all = count(ImsClients::where('project_id',$project->id)->get());
+        $count_success = count(ImsClients::where('project_id',$project->id)->where('status','Deal close successfully')->get());
+        // dd($count_success);
+
+
+
+        
+
         return view('frontend.user.projects.ims.user_widget_ims_analytics',[
             'project' => $project,
-            'ims_client' => $ims_client
+            'ims_client' => $ims_client,
+            'count_all' => $count_all,
+            'count_success' => $count_success
         ]);
         
     }
