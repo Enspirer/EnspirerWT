@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\VisitorLogs;
 use App\Models\Widgets;
 use Illuminate\Http\Request;
 use Modules\WidgetManager\Entities\ImsClients;
@@ -131,7 +132,9 @@ class HomeController extends Controller
 
     public function log_checker(Request $request)
     {
-        dd($request);
+
+       $visitorLogs = VisitorLogs::visitor_update($request->ip(),$request->widget_id,$request->current_url);
+        dd($visitorLogs);
     }
 
 
