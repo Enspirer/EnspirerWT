@@ -187,14 +187,13 @@
     font-size: 0.75rem;
 }
 
-.contact-form .contact-form .form-check .form-check-label::after {
-    content: 'Consent';
-    position: absolute;
-    top: -20px;
-    left: -25px;
+.contact-form .contact-form .button-block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-.contact-form .contact-form .form-submit-btn {
+.contact-form .contact-form .button-block .form-submit-btn {
     font-size: 0.875rem;
     padding: 0.5rem calc(1.2525rem + 0.28286vw);
     margin-left: auto;
@@ -314,6 +313,18 @@
         width: 150px;
         right: 10rem;
         top: -6rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contact-form .contact-form .button-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-form .contact-form .button-block .form-submit-btn {
+        margin: 0;
     }
 }
 
