@@ -741,6 +741,7 @@
     background-color: #FAFAFA;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
+    flex: 1 1 100%;
 }
 
 .news-section .inner-wrapper .card .image-block img {
