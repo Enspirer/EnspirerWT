@@ -691,17 +691,23 @@ function allin1closetawktoiframe() {
     document.querySelector('.allin1ifameblock').classList.remove("allin1view");
 }
 
-function random(min,max){
- return Math.floor(Math.random()*(max-min+1)+min);
+document.cookie = "tallentor_widget=982SHEKKSMLA";
+
+setInterval(myTimer, 1000);
+
+function myTimer() {
+ let x = getCookie('tallentor_widget')
+
+ console.log(x);
 }
 
-var initial = random(500, 2000);
-var count = initial;
-
- setInterval(function() {
- var variation = random(-5,5);
-
- count += variation
- console.log('You currently have ' + count + ' visitors')
-
- }, 2000)
+function getCookie(name) {
+ var nameEQ = name + "=";
+ var ca = document.cookie.split(';');
+ for(var i=0;i < ca.length;i++) {
+ var c = ca[i];
+ while (c.charAt(0)==' ') c = c.substring(1,c.length);
+ if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+ }
+ return null;
+}
