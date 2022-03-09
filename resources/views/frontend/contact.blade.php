@@ -28,8 +28,7 @@
                                         <img src="{{url('images/contact-us/Group 440.png')}}" alt="">
                                     </div>
                                     <h5 class="title">Sales Inquires</h5>
-                                    <p class="text">Product information, Bulk purchases and Corporate inquiries, please
-                                        contact</p>
+                                    <p class="text">Product information and Corporate inquiries</p>
                                     <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
                                 </div>
                             </li>
@@ -43,9 +42,8 @@
                                         <img src="{{url('images/contact-us/Group 457.png')}}" alt="">
                                     </div>
                                     <h5 class="title">Billing</h5>
-                                    <p class="text">Product information, Bulk purchases and Corporate inquiries, please
-                                        contact</p>
-                                    <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
+                                    <p class="text">Account information and bulk purchases</p>
+                                    <a href="mailto:billing@tallentor.com" class="contact">billing@tallentor.com</a>
                                 </div>
                             </li>
                             <li class="splide__slide">
@@ -58,9 +56,8 @@
                                         <img src="{{url('images/contact-us/Group 483.png')}}" alt="">
                                     </div>
                                     <h5 class="title">Support</h5>
-                                    <p class="text">Product information, Bulk purchases and Corporate inquiries, please
-                                        contact</p>
-                                    <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
+                                    <p class="text">Technical support and assistance with installations</p>
+                                    <a href="mailto:support@tallentor.com" class="contact">support@tallentor.com</a>
                                 </div>
                             </li>
                             <li class="splide__slide">
@@ -73,9 +70,8 @@
                                         <img src="{{url('images/contact-us/Group 508.png')}}" alt="">
                                     </div>
                                     <h5 class="title">Partnership</h5>
-                                    <p class="text">Product information, Bulk purchases and Corporate inquiries, please
-                                        contact</p>
-                                    <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
+                                    <p class="text">Become a partner in your region with Tallentor</p>
+                                    <a href="mailto:partner@tallentor.com" class="contact">partner@tallentor.com</a>
                                 </div>
                             </li>
                         </ul>
@@ -108,13 +104,12 @@
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input">
-                            <label class="form-check-label">Acceptance * <br>
-                                I would like to receive information & updates from Trace Solutions in relation to my
-                                enquiry. <br>
-                                I understand that Trace will never share my information.</label>
+                            <label class="form-check-label">I would like to receive information and updates from Tallentor in relation to my enquiry, <br> I understand Tallentor will never share my information</label>
                         </div>
-                        <button type="submit" class="form-submit-btn">Send Message <i
-                                class="bi bi-arrow-right-short"></i></button>
+                        <div class="button-block">
+                            <div class="g-recaptcha" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR" ></div>
+                            <button type="submit" class="form-submit-btn" disabled>Send Message <i class="bi bi-arrow-right-short"></i></button>
+                        </div>
                     </form>
                 </div>
                 <div class="col-lg-6">
@@ -142,3 +137,17 @@
 
     
 @endsection
+
+@push('after-scripts')
+
+<script>
+window.oncontextmenu = () => {
+  var captcha = grecaptcha.getResponse();
+};
+
+function checked() {
+    $('.form-submit-btn').removeAttr('disabled');
+    };
+</script>
+
+@endpush
