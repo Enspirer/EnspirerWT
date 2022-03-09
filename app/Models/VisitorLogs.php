@@ -36,11 +36,7 @@ class VisitorLogs extends Model
             $vistorDetails->url = $url;
             $vistorDetails->save();
 
-            $vistorDetails = new VisitorCount;
-            $vistorDetails->project_id = $widgetDetaials->project_id;
-            $vistorDetails->widget_id = $widget_id;
-            $vistorDetails->ip_address = $ip_address;
-            $vistorDetails->save();
+
 
             return 'ip address changed - log successful';
 
