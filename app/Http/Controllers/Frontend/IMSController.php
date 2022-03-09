@@ -301,6 +301,27 @@ class IMSController extends Controller
         return $pdf->download('ims_clients_all.pdf');
     }
 
+    public function ims_dates_report(Request $request)
+    {
+        // dd($request);
+        
+        $ims_client = ImsClients::orderBy('created_at','DESC')->whereBetween('created_at', [$request->start_date, $request->end_date])->get(); 
+        // dd($ims_client);
+       
+        // $data = [
+        //     'ims_client' => $ims_client
+        // ];
+        // dd($data);
+
+        $pdf = PDF::loadView('ims_clients_dates', [
+            'ims_client' => $ims_client,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date
+        ]);
+  
+        return $pdf->download('ims_clients_dates.pdf');
+    }
+
 
     public function export_ims_client() 
     {

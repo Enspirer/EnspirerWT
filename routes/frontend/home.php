@@ -111,7 +111,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('user_widget/ims_clients/delete/{id}', [IMSController::class, 'ims_clients_destroy'])->name('ims_clients.destroy');
         Route::get('user_widget/ims_analytics/{id}', [IMSController::class, 'ims_analytics'])->name('user_widget.ims_analytics');
         Route::get('user_widget/ims_dashboard/{id}', [IMSController::class, 'ims_dashboard'])->name('user_widget.ims_dashboard');
+        Route::post('user_widget/ims_dates_report', [IMSController::class, 'ims_dates_report'])->name('user_widget.ims_dates_report');
 
-
+        
     });
 });

@@ -77,12 +77,32 @@
                                                                             <i class="bi bi-three-dots-vertical"></i>
                                                                         </a>
                                                                     </div> -->
-                                                                    <div class="d-flex justify-content-end">
+                                                                    <div class="">
                                                                         <a class="btn btn-success ms-4" href="{{ url('analytics_generatePDF') }}">Export PDF</a>
                                                                     </div>
-                                                                    <div class="d-flex justify-content-end">
+                                                                    <div class="">
                                                                         <a class="btn btn-warning ms-4" href="{{ url('export_ims_client') }}">Export CSV</a>
                                                                     </div>
+                                                                    <form action="{{route('frontend.user.user_widget.ims_dates_report')}}" method="post" enctype="multipart/form-data">
+                                                                    {{csrf_field()}}
+                                                                        <div class="row ms-4">
+                                                                            <div class="col-4">
+                                                                                <div class="form-group">
+                                                                                    <input class="form-control" type="text" onfocus="(this.type='date')" name="start_date" id="start_date" placeholder="Start Date" required>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <div class="form-group">
+                                                                                    <input class="form-control" type="text" onfocus="(this.type='date')" name="end_date" id="end_date" placeholder="End Date" required>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <div class="form-group">
+                                                                                    <button type="submit" class="btn btn-info">Search</button>          
+                                                                                </div>
+                                                                            </div>                                                                            
+                                                                        </div>
+                                                                    </form>
                                                                 </div>
                                                                 <div class="ims__data-table">
                                                                     <table class="table table-borderless">
