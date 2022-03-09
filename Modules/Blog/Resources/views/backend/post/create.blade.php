@@ -27,7 +27,8 @@
 
                         <div class="form-group">
                             <label>Category <span style="color:red">*<span></label>
-                            <select class="form-control" name="category" required>
+                            <select class="form-control custom-select" name="category" required>
+                                <option value="" selected disabled>-- Select Here --</option>
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>                    
                                 @endforeach             
@@ -51,6 +52,14 @@
                             <div class="file-preview box sm">
                             </div>
                         </div> 
+
+                        <div class="form-group">
+                            <label>Featured <span style="color:red">*<span></label>
+                            <select class="form-control" name="featured" required>
+                                <option value="Enabled">Enable</option>   
+                                <option value="Disabled" selected>Disable</option>                                
+                            </select>
+                        </div>
 
                         <div class="form-group">
                             <label>Status <span style="color:red">*<span></label>

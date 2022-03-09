@@ -277,7 +277,7 @@
 }
 
 .SEO-section .header {
-    width: 700px;
+    width: 800px;
     margin: 0 auto 35px;
 }
 
@@ -479,7 +479,6 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    z-index: -1;
 }
 
 .marketplace-section .inner-wrapper .card-block .card {
@@ -742,6 +741,7 @@
     background-color: #FAFAFA;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
+    flex: 1 1 100%;
 }
 
 .news-section .inner-wrapper .card .image-block img {

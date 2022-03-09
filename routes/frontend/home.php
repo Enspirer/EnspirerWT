@@ -22,6 +22,7 @@ use App\Http\Controllers\Frontend\ServicesController;
 use App\Http\Controllers\Frontend\WidgetController;
 use App\Http\Controllers\Frontend\IMSController;
 use App\Http\Controllers\Frontend\PortfolioController;
+use App\Http\Controllers\Frontend\BlogController;
 
 /*
  * Frontend Controllers
@@ -47,6 +48,9 @@ Route::get('products',[ProductController::class, 'index'])->name('products');
 Route::get('resources',[ResourcesController::class, 'index'])->name('resources');
 Route::get('services',[ServicesController::class, 'index'])->name('services');
 Route::get('portfolio',[PortfolioController::class, 'index'])->name('portfolio');
+Route::get('home_blog',[BlogController::class, 'index'])->name('home_blog');
+Route::get('solo_post/{id}',[BlogController::class, 'solo_post'])->name('solo_post');
+
 
 
 Route::get('generatePDF/{id}',[IMSController::class, 'generatePDF'])->name('generatePDF');

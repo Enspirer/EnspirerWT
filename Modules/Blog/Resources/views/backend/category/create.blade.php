@@ -28,7 +28,7 @@
                         <br>
 
                         <div class="form-group">
-                            <label>Image</label>
+                            <label>Image <span style="color:red">*<span></label>
                             <div class="input-group" data-toggle="aizuploader" data-type="image">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>

@@ -341,7 +341,7 @@
 }
 
 .section-content {
-    background-color: #f4f4f4f5;
+    background-color: #f4f4f4;
     min-height: 100vh;
     padding: 2rem 0;
 }
@@ -2224,7 +2224,11 @@
     box-shadow: none;
 }
 
-#overlay .modal-content {
+#overlay .modal-dialog {
+    max-width: 600px;
+}
+
+#overlay .modal-dialog .modal-content {
     border: none;
     border-radius: 20px;
 }
@@ -2279,9 +2283,65 @@
 
 #overlay .modal-dialog .modal-content .modal-body {
     padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
 }
 
-#overlay .modal-dialog .modal-content .modal-body .button-block {
+#overlay .modal-dialog .modal-content .modal-body .content-block {
+    flex: 1 1 50%;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .content-block .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .content-block .text {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .content-block .act-btn {
+    width: 110px;
+    height: 40px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #44bc8e;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .content-block .act-btn .bi {
+    font-size: 16px;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .image-block {
+    flex: 1 1 30%;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .image-block img {
+    width: 100%;
+}
+
+#overlay .modal-dialog .modal-content .modal-footer {
+    justify-content: flex-start;
+    border: none;
+    padding: 1rem 2rem;
+    background-color: #f4f4f4;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#overlay .modal-dialog .modal-content .modal-footer .button-block {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -2289,7 +2349,7 @@
     gap: 0.75rem;
 }
 
-#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn {
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn {
     width: 110px;
     height: 40px;
     border-radius: 0.25rem;
@@ -2302,23 +2362,18 @@
     border: 1px solid transparent;
 }
 
-#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn .bi {
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn .bi {
     font-size: 16px;
 }
 
-#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn.act-tutorial {
-    background-color: #44bc8e;
-    color: #fff;
-}
-
-#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn.act-settings,
-#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn.act-script {
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn.act-settings,
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn.act-script {
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
 }
 
-#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn.act-delete {
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn.act-delete {
     background-color: #fff;
     color: #FF0404;
     border: 1px solid #FF0404;

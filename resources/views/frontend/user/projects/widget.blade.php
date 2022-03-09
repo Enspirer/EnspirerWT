@@ -376,10 +376,19 @@
                 <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
             </div>
             <div class="modal-body">
-                <div class="button-block">
+                <div class="content-block">
+                    <div class="title">How to setup the Widget?</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis deserunt ab distinctio. Voluptatum deserunt blanditiis asperiores quos placeat voluptatibus illo possimus facilis.</div>
                     <a href="#" class="act-btn act-tutorial">
                     <i class="bi bi-boxes"></i>
                     Tutorials</a>
+                </div>
+                <div class="image-block">
+                    <img src="{{url('images/tutorial.png')}}" alt="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-block">
                     <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}"
                         class="act-btn act-settings">
                         <i class="bi bi-gear"></i>
@@ -396,7 +405,6 @@
                         <i class="bi bi-trash"></i>
                         Delete
                     </a>
-                    </div>
                 </div>
             </div>
         </div>
