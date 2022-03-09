@@ -16,17 +16,13 @@
                     <div class="container">
                         <div class="inner-wrapper">
                             <div class="content-block">
-                                <h2 class="title">Free WhatsApp <br> widget <br> for website</h2>
-                                <h5 class="subtitle">Free WhatsApp Widget</h5>
-                                <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem
-                                    Ipsum has been the industry's dummy text ever since the 1500s, when an unknown
-                                    printer
-                                    took a galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries, but
-                                    also the leap into electronic typesetting</p>
-                                <a href="" class="cta-plain-btn">
+                                <h2 class="title">WhatsApp<br>widget<br> for websites</h2>
+                                <p class="content">Integrate the most popular communication channel into your website and improve your customer service quality and sales conversion.</p>
+                                <ul>
+                                    <li><i class="bi bi-check-circle-fill"></i> Customisable ready to use widget</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Inquiry Management System - IMS</li>
+                                </ul>
+                                <a href="{{url('login')}}" class="cta-plain-btn">
                                     <span class="text">Get Started</span>
                                     <i class="bi bi-arrow-right-short"></i>
                                 </a>
@@ -42,17 +38,27 @@
                     <div class="container">
                         <div class="inner-wrapper">
                             <div class="image-block">
-                                <img src="{{url('images/products/Group 550.png')}}" alt="">
+                                <div class="splide" id="whatsappFeatureSlider">
+                                    <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="{{url('images/products/Group 550.png')}}" alt="">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="{{url('images/products/Group 552.png')}}" alt="">
+                                                </li>
+                                            </ul>
+                                    </div>
+                                </div>
                             </div>
                             <div class="content-block">
-                                <h2 class="title">Free WhatsApp <br> widget for website</h2>
-                                <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem
-                                    Ipsum has been the industry's dummy text ever since the 1500s,</p>
+                                <h2 class="title">WhatsApp Chat Features</h2>
                                 <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Lorem Ipsum is simply dummy text of the
+                                    <li><i class="bi bi-check-circle-fill"></i> Customisable chat box
                                     </li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Lorem Ipsum is simply dummy</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Choose prefered position on website</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Choose bubble icon and add text</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Your own welcome message</li>
                                 </ul>
                                 <a href="" class="cta-outline-btn">
                                     <span class="text">Get Started</span>
@@ -65,9 +71,7 @@
 
                 <section class="more-about-widget">
                     <div class="header">
-                        <h3 class="title">Why choose Tallentor WhatsApp Widget for
-                            your website ?</h3>
-                        <h6 class="subtitle">Official WhatsApp Provider.</h6>
+                        <h3 class="title">Manage your leads efficiently for better productivity</h3>
                     </div>
                     <div class="feature-block-section">
                         <div class="curves">
@@ -78,21 +82,20 @@
                             <div class="content-block">
                                 <div class="subtitle-block">
                                     <img src="{{url('images/products/Polygon 1.png')}}" alt="">
-                                    <span class="text">Sub topic have to include here</span>
+                                    <span class="text">Convert visitors into customers</span>
                                 </div>
-                                <h2 class="title">Team inbox for <br> WhatsApp</h2>
-                                <p class="content">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been
-                                    the industry's dummy text ever since the 1500s, when an unknown printer took a
-                                    galley of type
-                                    and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries, but also
-                                    the leap
-                                </p>
+                                <h2 class="title">Inquiry Management System</h2>
+                                <div class="content">
+                                    <ul>
+                                        <li><i class="bi bi-check-circle-fill"></i> Admin dashboard with user privileges management</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Assign the inquiry to relevant department</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Record of the full status of the inquiry with comments</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Analytics of the inquiry management process with reports</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/products/Group 551.png')}}" alt="">
+                                <img src="{{url('images/products/ims_analytics.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-2">
@@ -103,25 +106,17 @@
                                 </div>
                                 <div class="subtitle-block">
                                     <img src="{{url('images/products/Polygon 1.png')}}" alt="">
-                                    <span class="text">Sub topic have to include here</span>
+                                    <span class="text">Never miss a valuable lead</span>
                                 </div>
-                                <h2 class="title">Customize your <br> widget as you want</h2>
-                                <p class="content">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been
-                                    the industry's dummy text ever since the 1500s, when an unknown printer took a
-                                    galley of type
-                                    and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries, but also
-                                    the leap
-                                </p>
+                                <h2 class="title">The tool that marketing team Loves</h2>
+                                <p class="content">It makes everybody's life easier with insights of the leads and funnel management</p>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/products/Group 552.png')}}" alt="">
+                                <img src="{{url('images/products/Group 551.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-3">
-                            <div class="content-block">
+                            <!-- <div class="content-block">
                                 <div class="subtitle-block">
                                     <img src="{{url('images/products/Polygon 1.png')}}" alt="">
                                     <span class="text">Sub topic have to include here</span>
@@ -139,7 +134,7 @@
                             </div>
                             <div class="image-block">
                                 <img src="{{url('images/products/2225.png')}}" alt="">
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </section>

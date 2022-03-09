@@ -30,7 +30,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin: 0;
+    margin: 0 0 0 3.5rem;
 }
 
 .products-body .inner-container .hero-section .inner-wrapper .content-block {
@@ -58,6 +58,26 @@
     margin-bottom: 1.5rem;
 }
 
+.products-body .inner-container .hero-section .inner-wrapper .content-block ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .content-block ul li {
+    margin-bottom: .5rem;
+    font-weight: 300;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .content-block ul li .bi {
+    position: relative;
+    left: -20px;
+    margin-right: -18px;
+    font-size: 14px;
+    color: #00AEEF;
+}
+
 .products-body .inner-container .hero-section .inner-wrapper .content-block .cta-plain-btn {
     text-decoration: none;
     color: #000;
@@ -74,6 +94,15 @@
     -ms-flex-align: center;
     align-items: center;
     gap: 1rem;
+    border: 1px solid #000;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+}
+
+.products-body .inner-container .hero-section .inner-wrapper .content-block .cta-plain-btn:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 .products-body .inner-container .hero-section .inner-wrapper .content-block .cta-plain-btn .bi {
@@ -101,14 +130,19 @@
     -ms-flex-align: center;
     align-items: center;
     gap: 3rem;
+    margin-left: 3.5rem;
 }
 
-.products-body .inner-container .whatsapp-widget .inner-wrapper .image-block img {
+.products-body .inner-container .whatsapp-widget .inner-wrapper .image-block {
+    flex: 1 1 100%;
+}
+
+.products-body .inner-container .whatsapp-widget .inner-wrapper .image-block .splide .splide__slide img {
     width: 100%;
 }
 
 .products-body .inner-container .whatsapp-widget .inner-wrapper .content-block {
-    width: 40%;
+    flex: 1 1 100%;
 }
 
 .products-body .inner-container .whatsapp-widget .inner-wrapper .content-block .title {
@@ -130,7 +164,7 @@
 }
 
 .products-body .inner-container .whatsapp-widget .inner-wrapper .content-block ul li {
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     font-weight: 300;
 }
 
@@ -240,16 +274,20 @@
 
 .products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .top-curve {
     position: absolute;
-    top: -13.4rem;
+    top: -16.2rem;
     left: -8.75rem;
     width: 5.25rem;
 }
 
 .products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .bottom-curve {
     position: absolute;
-    bottom: -8.25rem;
+    bottom: -10.25rem;
     left: -8.75rem;
     width: 5.25rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .image-block {
+    flex: 1 1 100%;
 }
 
 .products-body .inner-container .more-about-widget .feature-block-section .feature-block .image-block img {
@@ -258,7 +296,7 @@
 
 .products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block {
     position: relative;
-    width: 40%;
+    flex: 1 1 100%;
 }
 
 .products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .subtitle-block {
@@ -292,9 +330,34 @@
     margin-bottom: 1.5rem;
 }
 
-.products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .content {
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .content ul li {
+    margin-bottom: .5rem;
     font-weight: 300;
-    color: #ACACAC;
+}
+
+.products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .content ul li .bi {
+    position: relative;
+    left: -20px;
+    margin-right: -18px;
+    font-size: 14px;
+    color: #00AEEF;
+}
+
+@media screen and (max-width: 1399px) {
+    .products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .top-curve {
+        top: -12.5rem;
+    }
+
+    .products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .bottom-curve {
+        bottom: -6.4rem;
+    }
 }
 
 @media screen and (max-width: 1199px) {
@@ -364,6 +427,14 @@
     .products-body .inner-container .more-about-widget .feature-block-section .feature-block .content-block .content {
         font-size: 14px;
     }
+
+    .products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .top-curve {
+        top: -14rem;
+    }
+
+    .products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .bottom-curve {
+        bottom: -8.1rem;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -402,7 +473,7 @@
     }
 
     .products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .bottom-curve {
-        bottom: -6.7rem;
+        bottom: -5.7rem;
         left: -11.7rem;
     }
 
@@ -435,7 +506,7 @@
     }
 
     .products-body .inner-container .more-about-widget .feature-block-section .feature-block.block-2 .content-block .curves .bottom-curve {
-        bottom: -6.65rem;
+        bottom: -5.7rem;
         left: -10.55rem;
     }
 
@@ -471,6 +542,14 @@
 
     .products-body .inner-container .more-about-widget .feature-block-section .curves {
         display: none;
+    }
+
+    .products-body .inner-container .hero-section .inner-wrapper {
+        margin: 0;
+    }
+
+    .products-body .inner-container .whatsapp-widget .inner-wrapper {
+        margin: 0;
     }
 }
 

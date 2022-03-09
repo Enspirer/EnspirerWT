@@ -182,6 +182,18 @@
     </script>
 
     <script>
+        // Products slider
+    var whatsappFeatureSlider = new Splide( '#whatsappFeatureSlider', {
+        type   : 'loop',
+        autoplay: true,
+        pagination: false,
+        arrows: false,
+    });
+
+    whatsappFeatureSlider.mount();
+    </script>
+
+    <script>
     if ($('.menu-trigger').length) {
 		$(".menu-trigger").on('click', function () {
 			$(this).toggleClass('active');
