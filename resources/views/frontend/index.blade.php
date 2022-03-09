@@ -17,7 +17,7 @@
                                     <h5>The Smarter way to <span>Boost</span> your </h5>
                                     <h3 class="title">Website <br> Performance</h3>
                                     <h5 class="light">All in one Widget with <strong>IMS</strong></h5>
-                                    <h6>Inquiry Management System</h6>
+                                    <h6>The customised Inquiry Management System</h6>
 
                                     <a href="{{url('register')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
                                     <!-- <div class="featured-icons">
@@ -87,7 +87,7 @@
                 <div class="feature-box">
                     <div class="content-block">
                         <div class="header">
-                            <div class="title"><i class="bi bi-grid-fill"></i>All in one</div>
+                            <div class="title"><i class="bi bi-grid-fill"></i>All in one chat</div>
                             <span class="text">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</span>
                         </div>
                         <ul class="features">
@@ -123,21 +123,18 @@
     <section class="SEO-section">
         <div class="container">
             <div class="header">
-                <h2 class="title">SEO Managing</h2>
-                <span class="text">Fully customizable chat widgets with popular messaging apps, Ready to go solutions to
-                    grow your business faster</span>
+                <h2 class="title">Keep your website on Top of the Game & Secured</h2>
+                <span class="text">The all in one comprehensive tool to manage Google rankings, site analytics, Cyber security and general performance of the website.</span>
             </div>
             <div class="inner-wrapper">
                 <div class="SEO-block">
                     <div class="header">
                         <div class="title"><i class="bi bi-whatsapp"></i>SEO</div>
-                        <span class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum</span>
+                        <span class="text">The power tool to get a comprehensive report to check your website ranking, and performance.</span>
                     </div>
                     <ul class="features">
-                        <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy text of
-                            the</li>
-                        <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Recommendations for the issues</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Expert team to enhance performance</li>
                     </ul>
                     <div class="image-block">
                         <img src="{{url('images/SEO-01.png')}}" alt="">
@@ -147,13 +144,11 @@
                 <div class="SEO-block">
                     <div class="header">
                         <div class="title"><i class="bi bi-whatsapp"></i>Analytics</div>
-                        <span class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum</span>
+                        <span class="text">User engagement and traffic monitoring tool provides with the critical insights of the website for digital marketing</span>
                     </div>
                     <ul class="features">
-                        <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy text of
-                            the</li>
-                        <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Reports with insights</li>
+                        <li><i class="bi bi-check-circle-fill"></i>User behavior monitoring </li>
                     </ul>
                     <div class="image-block">
                         <img src="{{url('images/Analytics-01.png')}}" alt="">
@@ -163,13 +158,11 @@
                 <div class="SEO-block">
                     <div class="header">
                         <div class="title"><i class="bi bi-whatsapp"></i>Security</div>
-                        <span class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum</span>
+                        <span class="text">The intelligent tool to protect the website from cyber attacks, spam emails and management of  blacklisting.</span>
                     </div>
                     <ul class="features">
-                        <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy text of
-                            the</li>
-                        <li><i class="bi bi-check-circle-fill"></i>Lorem Ipsum is simply dummy</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Constant monitoring of the website</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Alerts and technical assistance</li>
                     </ul>
                     <div class="image-block">
                         <img src="{{url('images/Securty-01.png')}}" alt="">
@@ -200,8 +193,8 @@
                         </div>
                         <div class="content">
                             <div class="title">Mobile App Development</div>
-                            <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's dummy text ever since the 1500s</div>
+                            <div class="text">Hire the industry experts to bring your idea into reality.
+                            Dedicated Android & iOS developers to work on your project</div>
                         </div>
                     </div>
                     <div class="card card-middle">
@@ -214,8 +207,7 @@
                         </div>
                         <div class="content">
                             <div class="title">Software Development</div>
-                            <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's dummy text ever since the 1500s</div>
+                            <div class="text">Experienced software developers to work individually or as a part of your team. Save Big with remote working environment, yer achieve the Best results.</div>
                         </div>
                     </div>
                     <div class="card card-bottom">
@@ -228,8 +220,7 @@
                         </div>
                         <div class="content">
                             <div class="title">Digital Marketing</div>
-                            <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's dummy text ever since the 1500s</div>
+                            <div class="text">SEO experts, Social media strategists and creative designers all under one package with a dedicated account manager</div>
                         </div>
                     </div>
                 </div>
