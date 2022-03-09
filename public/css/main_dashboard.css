@@ -1070,6 +1070,14 @@
     top: 3px;
 }
 
+#sectionWhatsappWidget .chat-applications .inner-wrapper .button-block .create-widget-btn:disabled {
+    background-color: #44bc8e;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .button-block .create-widget-btn:disabled::before {
+    content: none;
+}
+
 #sectionWhatsappWidget #whatsappModal .modal-dialog {
     max-width: 660px;
     margin: 6rem auto !important;
@@ -2214,6 +2222,106 @@
 
 #deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete:focus {
     box-shadow: none;
+}
+
+#overlay .modal-content {
+    border: none;
+    border-radius: 20px;
+}
+
+#overlay .modal-dialog .modal-content .modal-header {
+    position: relative;
+    background-color: #00AEEF;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .title .modal-title {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .title .bi {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .btn-close-modal {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    right: -15px;
+    top: -15px;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .btn-close-modal .bi {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-body {
+    padding: 2rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .button-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn {
+    width: 110px;
+    height: 40px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn .bi {
+    font-size: 16px;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn.act-tutorial {
+    background-color: #44bc8e;
+    color: #fff;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn.act-settings,
+#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn.act-script {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .button-block .act-btn.act-delete {
+    background-color: #fff;
+    color: #FF0404;
+    border: 1px solid #FF0404;
 }
 
 .get_widget_Modal .modal-dialog {
