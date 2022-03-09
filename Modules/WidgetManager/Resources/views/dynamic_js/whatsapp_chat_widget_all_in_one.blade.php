@@ -697,5 +697,6 @@ setInterval(myTimer, 1000);
 
 function myTimer() {
  let x = document.cookie;
- console.log(x);
+
+ console.log(x.tallentor_widget);
 }
