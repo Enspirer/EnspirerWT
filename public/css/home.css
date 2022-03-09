@@ -253,6 +253,21 @@
     font-weight: 300;
 }
 
+.IMS-section .text-block {
+    list-style: none;
+    max-width: 600px;
+    width: 80%;
+    margin: 2rem auto;
+    font-weight: 300;
+}
+
+.IMS-section .text-block .bi {
+    position: relative;
+    left: -25px;
+    margin-right: -15px;
+    color: #00AEEF;
+}
+
 .IMS-section .image-block img {
     width: 100%;
 }
