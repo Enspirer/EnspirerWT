@@ -26,7 +26,7 @@
 
                         <div class="form-group">
                             <label>Category <span style="color:red">*<span></label>
-                            <select class="form-control" name="category" required>
+                            <select class="form-control custom-select" name="category" required>
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}" {{ $post->category == $category->id ? "selected" : ""}}>{{ $category->name }}</option>                    
                                 @endforeach             
@@ -52,6 +52,14 @@
                             <div class="file-preview box sm">
                             </div>
                         </div> 
+
+                        <div class="form-group">
+                            <label>Featured <span style="color:red">*<span></label>
+                            <select class="form-control" name="featured" required>
+                                <option value="Enabled" {{ $post->featured == 'Enabled' ? "selected" : "" }}>Enable</option>   
+                                <option value="Disabled" {{ $post->featured == 'Disabled' ? "selected" : "" }}>Disable</option>                                
+                            </select>
+                        </div>
 
                         <div class="form-group">
                             <label>Status <span style="color:red">*<span></label>

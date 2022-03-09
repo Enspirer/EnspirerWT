@@ -339,69 +339,43 @@
                     has been the industry's</div>
             </div>
             <div class="inner-wrapper">
-                <div class="card">
-                    <div class="image-block">
-                        <img src="{{url('images/20211112131039.png')}}" alt="">
-                    </div>
-                    <div class="content-block">
-                        <div class="header">
-                            <img src="{{url('images/test.png')}}" alt="">
-                            <div class="title">Tallentor Facebook </div>
-                        </div>
-                        <div class="text">When you use an application on your mobile phone or smart devices the
-                            application connects to the Internet </div>
-                        <div class="footer">
-                            <div class="reactions">
-                                <div class="likes"><a href="#"><i class="bi bi-heart"></i>1</a></div>
-                                <div class="comments"><a href="#"><i class="bi bi-chat-left-text-fill"></i>Comment</a>
+                @if(count($posts) != 0)
+                    @foreach($posts as $key => $post)
+                        <div class="card">
+                            <div class="image-block">
+                                <img src="{{uploaded_asset($post->feature_image)}}" style="height:254px; width:100%; object-fit:cover;" alt="">
+                            </div>
+                            <div class="content-block">
+                                <div class="header">
+                                    <img src="{{uploaded_asset(Modules\Blog\Entities\Category::where('id',$post->category)->first()->image)}}" alt="">
+                                    <div class="title">{{$post->title}}</div>
+                                </div>
+                                <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{!! $post->description !!}</div>
+                                <div class="footer">
+                                    <a href="{{route('frontend.solo_post',$post->id)}}" class="btn-view">View More</a>
                                 </div>
                             </div>
-                            <a href="#" class="btn-view">View More</a>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="image-block">
-                        <img src="{{url('images/20211112131039.png')}}" alt="">
-                    </div>
-                    <div class="content-block">
-                        <div class="header">
-                            <img src="{{url('images/test.png')}}" alt="">
-                            <div class="title">Latest at Tallentor</div>
+                    @endforeach
+                @endif
+
+                @if($featured_post != null)
+                    <div class="card">
+                        <div class="image-block">
+                            <img src="{{uploaded_asset($featured_post->feature_image)}}" style="height:254px; width:100%; object-fit:cover;" alt="">
                         </div>
-                        <div class="text">When you use an application on your mobile phone or smart devices the
-                            application connects to the Internet </div>
-                        <div class="footer">
-                            <div class="reactions">
-                                <div class="likes"><a href="#"><i class="bi bi-heart"></i>1</a></div>
-                                <div class="comments"><a href="#"><i class="bi bi-chat-left-text-fill"></i>Comment</a>
-                                </div>
+                        <div class="content-block">
+                            <div class="header">
+                                <img src="{{uploaded_asset(Modules\Blog\Entities\Category::where('id',$featured_post->category)->first()->image)}}" alt="">
+                                <div class="title">{{$featured_post->title}}</div>
                             </div>
-                            <a href="#" class="btn-view">View More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="image-block">
-                        <img src="{{url('images/20211112131039.png')}}" alt="">
-                    </div>
-                    <div class="content-block">
-                        <div class="header">
-                            <img src="{{url('images/test.png')}}" alt="">
-                            <div class="title">Tallentor Club</div>
-                        </div>
-                        <div class="text">When you use an application on your mobile phone or smart devices the
-                            application connects to the Internet </div>
-                        <div class="footer">
-                            <div class="reactions">
-                                <div class="likes"><a href="#"><i class="bi bi-heart"></i>1</a></div>
-                                <div class="comments"><a href="#"><i class="bi bi-chat-left-text-fill"></i>Comment</a>
-                                </div>
+                            <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{!! $featured_post->description !!}</div>
+                            <div class="footer">
+                                <a href="{{route('frontend.solo_post',$featured_post->id)}}" class="btn-view">View More</a>
                             </div>
-                            <a href="#" class="btn-view">View More</a>
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </section>

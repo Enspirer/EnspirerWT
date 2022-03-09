@@ -24,7 +24,6 @@ class CategoryController extends Controller
         $category = Category::get();
         return Datatables::of($category)
             ->addColumn('action', function($row){
-
                 if(auth()->user()->can('edit blog category')){
                     $btn1 = '<a href="'.route('admin.category.edit',$row->id).'" class="edit btn btn-primary btn-sm"><i class="fa fa-edit"></i> Edit </a>';
                 }else{
@@ -35,9 +34,23 @@ class CategoryController extends Controller
                 }else{
                     $btn2 = '';
                 }
-                return $btn1.$btn2;
+                return $btn1.$btn2;                
             })
-            ->rawColumns(['action'])
+            ->addColumn('image', function($data){
+                $img = '<img src="'.uploaded_asset($data->image).'" style="width: 60%">';
+             
+                return $img;
+            })
+            ->addColumn('status', function($data){
+                if($data->status == 'Enabled'){
+                    $status = '<span class="badge badge-success">Enabled</span>';
+                }
+                else{
+                    $status = '<span class="badge badge-danger">Disabled</span>';
+                }   
+                return $status;
+            })
+            ->rawColumns(['action','image','status'])
             ->make();
     }
 
@@ -57,6 +70,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        if($request->image == null){
+            return back()->withErrors('Please Add Image');
+        }   
+
         $data = Category::where('name',$request->name)->first(); 
         // dd($data);
 
@@ -112,6 +129,10 @@ class CategoryController extends Controller
      */
     public function update(Request $request)
     {
+        if($request->image == null){
+            return back()->withErrors('Please Add Image');
+        }   
+
         $update = new Category;
 
         $update->image = $request->image;

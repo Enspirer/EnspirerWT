@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller;
 use DataTables;
 use Modules\Blog\Entities\Post;
 use Modules\Blog\Entities\Category;
+use DB;
 
 class NewsController extends Controller
 {
@@ -41,8 +42,31 @@ class NewsController extends Controller
                     }
                     
                     return $button;
-                })                    
-                ->rawColumns(['action'])
+                })        
+                ->addColumn('status', function($data){
+                    if($data->status == 'Enabled'){
+                        $status = '<span class="badge badge-success">Enabled</span>';
+                    }
+                    else{
+                        $status = '<span class="badge badge-danger">Disabled</span>';
+                    }   
+                    return $status;
+                })
+                ->addColumn('featured', function($data){
+                    if($data->featured == 'Enabled'){
+                        $featured = '<span class="badge badge-success">Enabled</span>';
+                    }
+                    else{
+                        $featured = '<span class="badge badge-danger">Disabled</span>';
+                    }   
+                    return $featured;
+                })     
+                ->addColumn('feature_image', function($data){
+                    $img = '<img src="'.uploaded_asset($data->feature_image).'" style="width: 50%">';
+                 
+                    return $img;
+                })       
+                ->rawColumns(['action','status','featured','feature_image'])
                 ->make(true);
         }
         return back();
@@ -74,7 +98,12 @@ class NewsController extends Controller
 
             if($request->feature_image == null){
                 return back()->withErrors('Please Add Feature Image');
-            }else{              
+            }else{         
+                
+                if($request->featured == 'Enabled')
+                {            
+                    DB::table('posts')->where('featured','Enabled')->update(array('featured' => 'Disabled'));           
+                } 
                
                 $add = new Post;
 
@@ -84,6 +113,7 @@ class NewsController extends Controller
                 $add->slug=$request->slug;        
                 $add->feature_image=$request->feature_image;
                 $add->order=$request->order;
+                $add->featured=$request->featured;
                 $add->status=$request->status;
                 $add->save();
 
@@ -134,7 +164,12 @@ class NewsController extends Controller
 
             if($request->feature_image == null){
                 return back()->withErrors('Please Add Feature Image');
-            }else{              
+            }else{           
+                
+                if($request->featured == 'Enabled')
+                {            
+                    DB::table('posts')->where('featured','Enabled')->update(array('featured' => 'Disabled'));           
+                } 
                
                 $update = new Post;
 
@@ -144,11 +179,12 @@ class NewsController extends Controller
                 $update->slug=$request->slug;        
                 $update->feature_image=$request->feature_image;
                 $update->order=$request->order;
+                $update->featured=$request->featured;
                 $update->status=$request->status;
 
                 Post::whereId($request->hidden_id)->update($update->toArray());
 
-                return redirect()->route('admin.post.index')->withFlashSuccess('Added Successfully');  
+                return redirect()->route('admin.post.index')->withFlashSuccess('Updated Successfully');  
             }
             
         }

@@ -23,8 +23,10 @@
                         <thead>
                             <tr>
                                 <th scope="col">#ID</th>
+                                <th scope="col">Feature Image</th>  
                                 <th scope="col">Title</th>
                                 <th scope="col">Status</th>
+                                <th scope="col">Featured</th>                              
                                 <th scope="col">Order</th>
                                 <th scope="col">Option</th>
                             </tr>
@@ -78,8 +80,10 @@
                 order: [[0, "desc"]],
                 columns: [
                     {data: 'id', name: 'id'},
+                    {data: 'feature_image', name: 'feature_image'},                                       
                     {data: 'title', name: 'title'},
                     {data: 'status', name: 'status'},
+                    {data: 'featured', name: 'featured'}, 
                     {data: 'order', name: 'order'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]

@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Modules\WidgetManager\Entities\ImsClients;
 use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
 use Modules\WidgetManager\Entities\WhatsAppModel;
+use Modules\Blog\Entities\Category;
+use Modules\Blog\Entities\Post;
 
 /**
  * Class HomeController.
@@ -19,7 +21,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        $posts = Post::where('status','Enabled')->take(2)->latest()->get();
+        $featured_post = Post::where('status','Enabled')->where('featured','Enabled')->first();
+        // dd($posts);
+
+        return view('frontend.index',[
+            'posts' => $posts,
+            'featured_post' => $featured_post
+        ]);
     }
 
     public function save_client(Request $request)

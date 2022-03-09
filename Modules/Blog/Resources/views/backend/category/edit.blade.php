@@ -29,7 +29,7 @@
                         </div> 
                         
                         <div class="form-group">
-                            <label>Image</label>
+                            <label>Image <span style="color:red">*<span></label>
                             <div class="input-group" data-toggle="aizuploader" data-type="image">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
@@ -40,17 +40,17 @@
                             <div class="file-preview box sm">
                             </div>
                         </div> 
-
+                        
+                        <div class="form-group">
+                            <label>Order <span style="color:red">*<span></label>
+                            <input type="text" class="form-control" name="order" value="{{ $categories->order }}" required>
+                        </div>
                         <div class="form-group">
                             <label>Status <span style="color:red">*<span></label>
                             <select class="form-control" name="status" required>
                                 <option value="Enabled" {{ $categories->status == 'Enabled' ? "selected" : "" }}>Enable</option>   
                                 <option value="Disabled" {{ $categories->status == 'Disabled' ? "selected" : "" }}>Disable</option>                                
                             </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Order <span style="color:red">*<span></label>
-                            <input type="text" class="form-control" name="order" value="{{ $categories->order }}" required>
                         </div>
                         
                     </div>

@@ -23,6 +23,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">#ID</th>
+                                <th scope="col">Image</th>                                
                                 <th scope="col">Category Name</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Order</th>
@@ -79,6 +80,7 @@
                 order: [[0, "desc"]],
                 columns: [
                     {data: 'id', name: 'id'},
+                    {data: 'image', name: 'image'},                    
                     {data: 'name', name: 'name'},
                     {data: 'status', name: 'status'},
                     {data: 'order', name: 'order'},

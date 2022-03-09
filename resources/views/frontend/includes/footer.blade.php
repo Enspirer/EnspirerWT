@@ -26,7 +26,7 @@
                                     <li class="nav-item"><a href="#" class="nav-link">Help & Support</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Partner with us</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                                    <li class="nav-item"><a href="{{url('home_blog')}}" class="nav-link">Blog</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Sitemap</a></li>
                                 </ul>
                             </div>
