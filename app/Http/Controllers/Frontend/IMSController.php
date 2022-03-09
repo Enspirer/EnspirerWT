@@ -14,7 +14,41 @@ use App\Exports\ExportImsClients;
 use Maatwebsite\Excel\Facades\Excel;
 
 class IMSController extends Controller
-{
+{    
+    public function ims_dashboard($id)
+    {
+        $date = Carbon::now()->subDays(7);
+
+        $ims_clienrt = ImsClients::where('created_at', '>=', Carbon::now()->subMonth())
+                            ->groupBy('date')
+        ->orderBy('date', 'DESC')
+        ->get(array(
+            DB::raw('COUNT(status = "Deal close successfully") as "responded_count" '),
+            DB::raw('Date(created_at) as date'),
+            DB::raw('COUNT(*) as "count"'),
+        ));
+
+        //dd($id);
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($ims_client);
+
+        $count_all = count(ImsClients::where('project_id',$project->id)->get());
+        $count_success = count(ImsClients::where('project_id',$project->id)->where('status','Deal close successfully')->get());
+        // dd($count_success);
+       
+
+        return view('frontend.user.projects.ims.user_widget_ims_dashboard',[
+            'chart_data' => $ims_clienrt,
+            'project' => $project,
+            'ims_client' => $ims_client,
+            'count_all' => $count_all,
+            'count_success' => $count_success
+        ]);
+        
+    }
+
+
     public function index($id)
     {
         // dd($id);

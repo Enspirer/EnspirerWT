@@ -15,6 +15,16 @@
                     <div class="side-nav__navs" id="sideNavs">
                         <ul class="navbar-nav">
                             <li class="nav-item">
+                                <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project->id) }}" class="nav-link {{Request::segment(2)=='ims_dashboard' ? 'active' :null }}">
+                                    <div class="nav-link__block">
+                                        <i class="bi bi-chevron-down ims__hidden"></i>
+                                        <i class="bi bi-speedometer2"></i>
+                                        <div class="text">Dashboard</div>
+                                        <div class="count ims__hidden">2400</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="#" class="nav-link {{ Request::segment(2)=='ims' ? 'active' : (Request::segment(2)=='ims_assigned' ? 'active' :(Request::segment(2)=='ims_unassigned' ? 'active' :(Request::segment(2)=='ims_closed' ? 'active' :(Request::segment(2)=='ims_spam' ? 'active' :null)) ) )   }}" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#conversationNav" aria-controls="conversationNav"
                                     aria-expanded="true" aria-label="Toggle navigation">

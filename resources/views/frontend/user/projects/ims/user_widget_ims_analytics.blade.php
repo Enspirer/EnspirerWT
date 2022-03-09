@@ -83,7 +83,7 @@
                                                                         </a>
                                                                     </div>
                                                                     <div class="d-flex justify-content-end">
-                                                                        <a class="btn btn-warning ms-4 ml-3" href="{{ url('export_ims_client') }}">Export File</a>
+                                                                        <a class="btn btn-warning ms-4 ml-3" href="{{ url('export_ims_client') }}">Export CSV</a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="ims__data-table">
@@ -94,9 +94,10 @@
                                                                                 <th class="data-title"></th>
                                                                                 <th class="data-title">Action by</th>
                                                                                 <th class="data-title">Action Taken</th>
-                                                                                <th class="data-title">Comment</th>
+                                                                                <th class="data-title">Name</th>
+                                                                                <th class="data-title">Email</th>
+                                                                                <th class="data-title">Phone Number</th>
                                                                                 <th class="data-title">Status</th>
-                                                                                <th class="data-title">Manager Comments</th>
                                                                                 <th class="data-title">Report</th>
                                                                             </tr>
                                                                         </thead>
@@ -115,7 +116,11 @@
                                                                                         </label>
                                                                                     </td>
                                                                                     <td class="data--action-by data-cell">
-                                                                                        <div class="text">{{$client->assign_by}}</div>
+                                                                                        @if($client->assign_by == null)
+                                                                                            <div class="text text-danger">Not Assigned</div>
+                                                                                        @else
+                                                                                            <div class="text">{{$client->assign_by}}</div>
+                                                                                        @endif
                                                                                     </td>
                                                                                     <td class="data--action-by data-cell">
                                                                                         <!-- <td class="data--action-taken data-cell"> -->
@@ -147,15 +152,31 @@
                                                                                             <option value="5">Message</option>
                                                                                             <option value="6">Other</option>
                                                                                         </select> -->
-                                                                                        <div class="text">{{$client->action_taken}}</div>
+                                                                                        
+                                                                                        @if($client->action_taken == null)
+                                                                                            <div class="text text-danger">Not Taken</div>
+                                                                                        @else
+                                                                                            <div class="text">{{$client->action_taken}}</div>
+                                                                                        @endif
                                                                                     </td>
                                                                                     <td class="data--comment data-cell">
-                                                                                        <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$client->comment}}</div>
+                                                                                        <div class="text">{{$client->client_name}}</div>
                                                                                         <!-- <input type="text" class="form-control" placeholder="This is the sample comment "> -->
+                                                                                    </td>                                                                                   
+                                                                                    <td class="data--manager-comment data-cell">
+                                                                                        <div class="text">{{$client->client_email}}</div>
+                                                                                        <!-- <input type="text" class="form-control" placeholder="This is the sample comment "> -->
+                                                                                    </td>
+                                                                                    <td class="data--manager-comment data-cell">
+                                                                                        <div class="text">{{$client->phone_number}}</div>
                                                                                     </td>
                                                                                     <td class="data--Status data-cell">
                                                                                         <!-- <div class="indicator"></div> -->
-                                                                                        <div class="text">{{$client->status}}</div>
+                                                                                        @if($client->status == null)
+                                                                                            <div class="text text-danger">Not Changed</div>
+                                                                                        @else
+                                                                                            <div class="text">{{$client->status}}</div>
+                                                                                        @endif
                                                                                         <!-- <select class="form-select"
                                                                                             id="data_status-select">
                                                                                             <option selected>Choose...</option>
@@ -165,10 +186,6 @@
                                                                                             <option value="3">Not responding
                                                                                             </option>
                                                                                         </select> -->
-                                                                                    </td>
-                                                                                    <td class="data--manager-comment data-cell">
-                                                                                        <div class="text">{{$client->manager_comment}}</div>
-                                                                                        <!-- <input type="text" class="form-control" placeholder="This is the sample comment "> -->
                                                                                     </td>
                                                                                     <td class="data--report data-cell">
                                                                                         <a href="{{url('generatePDF',$client->id)}}" class="download-btn">
