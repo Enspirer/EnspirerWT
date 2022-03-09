@@ -39,6 +39,13 @@
                                     </div>
                                 </div>
                                 <div class="row row-cols-md-2 g-5 justify-content-between">
+                                    <div class="col">
+                                        <div class="innwer-wrapper px-4 dotted-border">
+                                            <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
+                                                data-bs-target="#createWidgetModal">Create
+                                                Widget</button>
+                                        </div>
+                                    </div>
                                     @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
                                     <div class="col">
                                         <div class="inner-wrapper px-5 pt-5 pb-4">
@@ -110,13 +117,6 @@
                                         </div>
                                     </div>
                                     @endforeach
-                                    <div class="col">
-                                        <div class="innwer-wrapper px-4 dotted-border">
-                                            <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
-                                                data-bs-target="#createWidgetModal">Create
-                                                Widget</button>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         @endif
