@@ -52,7 +52,7 @@
                                                 <div class="col">
                                                     <div class="row g-0 mb-2 justify-content-between">
                                                         <div class="col-auto">
-                                                            <div class="progress-label">www.tallentor.com</div>
+                                                            <div class="progress-label">{{$widgetlist->widget_key}}</div>
                                                         </div>
                                                         <div class="col-auto">
                                                             <div class="progress-amount">25%</div>
