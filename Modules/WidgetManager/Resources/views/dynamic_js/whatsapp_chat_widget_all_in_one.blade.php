@@ -691,17 +691,11 @@ function allin1closetawktoiframe() {
     document.querySelector('.allin1ifameblock').classList.remove("allin1view");
 }
 
-function random(min,max){
- return Math.floor(Math.random()*(max-min+1)+min);
+document.cookie = "tallentor_widget=982SHEKKSMLA";
+
+setInterval(myTimer, 1000);
+
+function myTimer() {
+ let x = document.cookie;
+ console.log(x);
 }
-
-var initial = random(500, 2000);
-var count = initial;
-
- setInterval(function() {
- var variation = random(-5,5);
-
- count += variation
- console.log('You currently have ' + count + ' visitors')
-
- }, 2000)
