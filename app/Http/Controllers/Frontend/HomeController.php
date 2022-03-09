@@ -134,7 +134,6 @@ class HomeController extends Controller
     {
 
        $visitorLogs = VisitorLogs::visitor_update($request->ip(),$request->widget_id,$request->current_url);
-        dd($visitorLogs);
     }
 
 
