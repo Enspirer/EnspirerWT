@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\VisitorCount;
 use App\Models\VisitorLogs;
 use App\Models\Widgets;
 use Illuminate\Http\Request;
@@ -134,6 +135,7 @@ class HomeController extends Controller
     {
 
        $visitorLogs = VisitorLogs::visitor_update($request->ip(),$request->widget_id,$request->current_url);
+       VisitorCount::visitor_update($request->widget_id,$request->ip());
     }
 
 
