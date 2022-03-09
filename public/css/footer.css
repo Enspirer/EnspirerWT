@@ -121,7 +121,7 @@
 
 .footer-section .contact-info .body {
     border: 1px solid #1B3D6B;
-    height: 304px;
+    height: 375px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -221,12 +221,33 @@
     font-weight: 300;
 }
 
-.footer-section .copyright {
+.footer-section .copyright-blocok {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer-section .copyright-blocok .terms {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.footer-section .copyright-blocok .terms a {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.footer-section .copyright-blocok .copyright {
     font-size: 12px;
     color: #fff;
     text-align: center;
     font-weight: 300;
-    padding: 20px 0;
 }
 
 /*# sourceMappingURL=footer.css.map */

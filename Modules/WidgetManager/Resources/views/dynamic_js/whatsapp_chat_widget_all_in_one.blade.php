@@ -693,21 +693,18 @@ function allin1closetawktoiframe() {
 
 document.cookie = "tallentor_widget=982SHEKKSMLA";
 
-setInterval(myTimer, 1000);
+setInterval(myTimer, 10000);
 
 function myTimer() {
- let x = getCookie('tallentor_widget')
-
- console.log(x);
-}
-
-function getCookie(name) {
- var nameEQ = name + "=";
- var ca = document.cookie.split(';');
- for(var i=0;i < ca.length;i++) {
- var c = ca[i];
- while (c.charAt(0)==' ') c = c.substring(1,c.length);
- if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
- }
- return null;
+ const widget_id = '{{$widget_id}}';
+ const current_url = window.location.href;
+ var xhttp = new XMLHttpRequest();
+ xhttp.onreadystatechange = function() {
+   if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("demo").innerHTML = this.responseText;
+   }
+ };
+ xhttp.open("POST", "{{url('api/log_checker')}}", true);
+ xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+ xhttp.send("widget_id=" + widget_id + "&current_url=" + current_url);
 }

@@ -57,7 +57,8 @@
 .hero-section .slide-wrapper .content-block .title {
     font-size: 35px;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
 }
 
 .hero-section .slide-wrapper .content-block .cta-btn {
@@ -255,10 +256,14 @@
 
 .IMS-section .text-block {
     list-style: none;
-    max-width: 600px;
+    max-width: 500px;
     width: 80%;
     margin: 2rem auto;
     font-weight: 300;
+}
+
+.IMS-section .text-block li {
+    margin-bottom: .25rem;
 }
 
 .IMS-section .text-block .bi {
@@ -277,8 +282,7 @@
 }
 
 .SEO-section .header {
-    width: 800px;
-    margin: 0 auto 35px;
+    margin-bottom: 3rem;
 }
 
 .SEO-section .header .title {
@@ -470,6 +474,11 @@
     margin-top: 28px;
 }
 
+.marketplace-section .inner-wrapper .button-block .content .cta-btn-border:hover {
+    color: #fff;
+    background-color: #000;
+}
+
 .marketplace-section .inner-wrapper .button-block .content .cta-btn-border .bi {
     font-size: 20px;
     margin-left: 36px;
@@ -650,6 +659,18 @@
     margin-bottom: 10px;
 }
 
+.shop-section .slider .splide .splide__slide a .card .content .text .list-block {
+    list-style: none;
+    position: relative;
+}
+
+.shop-section .slider .splide .splide__slide a .card .content .text .list-block .bi {
+    color: #00AEEF;
+    position: relative;
+    left: -20px;
+    margin-right: -14px;
+}
+
 .shop-section .slider .splide .splide__slide a .card .content .rating {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -678,6 +699,7 @@
 
 .shop-section .slider .splide .splide__slide a .card .content .footer {
     padding-top: 15px;
+    margin: 0;
     border-top: 1px solid #707070;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -704,6 +726,23 @@
     font-size: 12px;
     font-weight: 300;
     color: #000;
+}
+
+.shop-section .footer {
+    margin-top: 3rem;
+}
+
+.shop-section .footer .cta-btn {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    width: 300px;
+    margin: auto;
+    padding: 13px 0;
+    display: block;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .news-section {

@@ -11,34 +11,36 @@
                         <div class="body">
                             <div class="company">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item">Company</li>
-                                    <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Expert Center</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Live Auction</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Terms & Conditions</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Privacy Policy</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Contact us</a></li>
+                                    <li class="nav-item">Products</li>
+                                    <li class="nav-item"><a href="#" class="nav-link">All-in-One chat</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">WhatsApp Widget</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">SEO Tool</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Analytics Tool</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Security Tool</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">eCommerce Solutions</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">ERP Solutions</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">CRM Solutions</a></li>
                                 </ul>
                             </div>
                             <div class="resources">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item">Resources</li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Help & Support</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Partner with us</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
-                                    <li class="nav-item"><a href="{{url('home_blog')}}" class="nav-link">Blog</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Sitemap</a></li>
+                                    <li class="nav-item">Services</li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Mobile App Development</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Software Development</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Digital Marketing</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">SEO</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">SEM</a></li>
                                 </ul>
                             </div>
                             <div class="quick-links">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item">Quick Links</li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Mobile app development</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">ERP Solutions</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Web applications</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Digital Marketing</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Architecture</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Video animations</a></li>
+                                    <li class="nav-item">Company</li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Expert Center</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Partners</a></li>
+                                    <li class="nav-item"><a href="{{url('home_blog')}}" class="nav-link">Blog</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link"> Help center</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -71,8 +73,8 @@
                             <div class="business">
                                 <div class="image-block"><i class="bi bi-envelope-check"></i></div>
                                 <div class="content">
-                                    <div class="title">Business Inquiries</div>
-                                    <a href="mailto:hello@tallentor.com" class="email">hello@tallentor.com</a>
+                                    <div class="title">Sales Inquiries</div>
+                                    <a href="mailto:hello@tallentor.com" class="email">sales@tallentor.com</a>
                                 </div>
                             </div>
                             <div class="media">
@@ -80,7 +82,7 @@
                                     <i class="bi bi-send"></i>
                                 </div>
                                 <div class="content">
-                                    <div class="title">PR or Media</div>
+                                    <div class="title">General Inquiries</div>
                                     <a href="mailto:hello@tallentor.com" class="email">hello@tallentor.com</a>
                                 </div>
                             </div>
@@ -96,7 +98,10 @@
                 </div>
             </div>
             <div class="row g-0">
-                <div class="copyright">Copyright @2021 | Tallentor Global Ltd</div>
+                <div class="copyright-blocok">
+                    <div class="terms"><a href="#">Terms of Service</a> + <a href="#">Privacy Policy</a></div>
+                    <div class="copyright">Copyright @2021 | Tallentor Global Ltd</div>
+                </div>
             </div>
         </div>
     </section>
