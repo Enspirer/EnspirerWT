@@ -188,13 +188,12 @@
                                                                                                                         
                                                             <li class="list-group-item">
                                                                 <div class="action-block">
-                                                                    <div class="label">Manager Nots</div>
+                                                                    <div class="label">Manager Notes</div>
                                                                     <div class="action">
                                                                         <input type="text"
                                                                             value="{{$ims_client->manager_comment}}"
                                                                             name="manager_comment" class="form-control"
-                                                                            placeholder="This is the sample comment"
-                                                                            required>
+                                                                            placeholder="This is the sample comment">
                                                                     </div>
                                                                 </div>
                                                             </li>
@@ -205,8 +204,7 @@
                                                                         <input type="text"
                                                                             value="{{$ims_client->comment}}"
                                                                             name="comment" class="form-control"
-                                                                            placeholder="All in one widget sold for $50"
-                                                                            required>
+                                                                            placeholder="All in one widget sold for $50">
                                                                     </div>
                                                                 </div>
                                                             </li>

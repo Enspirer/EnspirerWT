@@ -42,6 +42,7 @@
                             <label class="form-check-label" for="signUpCheck">By Creating an account means you agree
                                 to the <a href="#">Terms and Conditions</a>, and our <a href="#">Privacy Policy</a></label>
                         </div>
+                        @include('includes.partials.messages')
                         <button type="submit" class="btn-signup">Sign Up</button>
                     </form>
                     <div class="footer">

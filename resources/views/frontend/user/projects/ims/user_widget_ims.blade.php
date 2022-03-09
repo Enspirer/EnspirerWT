@@ -85,8 +85,9 @@
                                                                                 <th class="data-title"></th>
                                                                                 <th class="data-title">Name</th>
                                                                                 <th class="data-title">Date</th>
+                                                                                <th class="data-title">Client Email</th>                                                                              
+                                                                                <th class="data-title">Status</th>
                                                                                 <th class="data-title">Via</th>
-                                                                                <th class="data-title">Message</th>
                                                                                 <th class="data-title">Assign</th>
                                                                                 <th class="data-title"></th>
                                                                             </tr>
@@ -113,7 +114,13 @@
                                                                                     </td>
                                                                                     <td class="data--date data-cell">
                                                                                         <div class="text">{{$client->created_at->format('d M Y')}}</div>
-                                                                                    </td>                                                                                   
+                                                                                    </td>  
+                                                                                    <td class="data--date data-cell">
+                                                                                        <div class="text">{{$client->client_email}}</div>
+                                                                                    </td>     
+                                                                                    <td class="data--date data-cell">
+                                                                                        <div class="text">{{$client->status}}</div>
+                                                                                    </td>                                                                                
                                                                                     <td class="data--title data-cell">
                                                                                         <div class="text">
                                                                                             @if($client->contact_via == 'Whatsapp')

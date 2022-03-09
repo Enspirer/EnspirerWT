@@ -39,6 +39,13 @@
                                     </div>
                                 </div>
                                 <div class="row row-cols-md-2 g-5 justify-content-between">
+                                    <div class="col">
+                                        <div class="innwer-wrapper px-4 dotted-border">
+                                            <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
+                                                data-bs-target="#createWidgetModal">Create
+                                                Widget</button>
+                                        </div>
+                                    </div>
                                     @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
                                     <div class="col">
                                         <div class="inner-wrapper px-5 pt-5 pb-4">
@@ -52,7 +59,7 @@
                                                 <div class="col">
                                                     <div class="row g-0 mb-2 justify-content-between">
                                                         <div class="col-auto">
-                                                            <div class="progress-label">www.tallentor.com</div>
+                                                            <div class="progress-label">{{$widgetlist->widget_key}}</div>
                                                         </div>
                                                         <div class="col-auto">
                                                             <div class="progress-amount">25%</div>
@@ -81,7 +88,7 @@
                                             <div class="row g-0 mt-4 mb-3">
                                                 <div class="button-block">
                                                     <div class="block-1">
-                                                        <a href="{{ route('frontend.user.user_widget.ims', $project_id) }}"
+                                                        <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}"
                                                             class="act-btn act-ims">
                                                             <i class="bi bi-file-earmark-medical"></i>
                                                             IMS
@@ -110,13 +117,6 @@
                                         </div>
                                     </div>
                                     @endforeach
-                                    <div class="col">
-                                        <div class="innwer-wrapper px-4 dotted-border">
-                                            <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
-                                                data-bs-target="#createWidgetModal">Create
-                                                Widget</button>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         @endif
@@ -280,7 +280,7 @@
                                                                     </div>
                                                                     <div class="col-4">
                                                                         <div class="whatsapp-feature-block">
-                                                                            <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                                            <img src="{{url('images/social_media_icons/chat.png')}}" alt="">
                                                                             <div class="title">All-in-One Chat</div>
                                                                             <div class="subtitle">Entertainment</div>
                                                                             <div class="star-rating">

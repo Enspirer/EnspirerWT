@@ -63,7 +63,7 @@
 
 <div class="row g-0 mb-5">
     <div class="col">
-        <a  href="{{ route('frontend.user.user_widget.ims', $project_id) }}" class="ims-dashboard-btn">
+        <a  href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}" class="ims-dashboard-btn">
             <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop" style="width:65px;height:65px">
             </lord-icon>
             IMS Dashboard

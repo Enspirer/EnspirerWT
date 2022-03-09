@@ -10,6 +10,8 @@ use Modules\WidgetManager\Entities\ImsClients;
 use DB;
 use PDF;
 use Carbon\Carbon;
+use App\Exports\ExportImsClients;
+use Maatwebsite\Excel\Facades\Excel;
 
 class IMSController extends Controller
 {
@@ -264,6 +266,11 @@ class IMSController extends Controller
         return $pdf->download('ims_clients_all.pdf');
     }
 
+
+    public function export_ims_client() 
+    {
+        return Excel::download(new ExportImsClients, 'ims_client.csv');
+    }
     
 
 }

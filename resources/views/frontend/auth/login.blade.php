@@ -30,6 +30,8 @@
                                 ->class('form-control')
                                 ->placeholder('Enter Your Password')
                                 ->required() }}
+
+                            @include('includes.partials.messages')
                         </div>
                         <button type="submit" class="btn-signup">Sign In</button>
                         <div class="inputs">

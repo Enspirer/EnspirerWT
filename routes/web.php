@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\LanguageController;
 
+Route::get('export_ims_client', 'Frontend\IMSController@export_ims_client');
+
+
 /*
  * Global Routes
  * Routes that are used between both frontend and backend.

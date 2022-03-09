@@ -1724,7 +1724,7 @@
     border-radius: 1rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
-    color:grey;
+    color: grey;
 }
 
 #sectionTabs .tabs:hover {
@@ -2067,6 +2067,14 @@
     font-size: 1.2rem;
     width: 180px;
     height: 50px;
+}
+
+#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .button-block .btn-whatsapp:disabled {
+    background-color: #44bc8e;
+}
+
+#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .button-block .btn-whatsapp:disabled::before {
+    content: none;
 }
 
 #createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block {
