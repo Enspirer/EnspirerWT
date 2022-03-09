@@ -275,7 +275,8 @@ class IMSController extends Controller
             'comment' => $ims_client->comment,
             'action_taken' => $ims_client->action_taken,
             'status' => $ims_client->status,
-            'date' => $ims_client->created_at->format('d M Y')
+            'date' => $ims_client->created_at->format('d M Y'),
+            'project_name' => $project->name
         ];
 
         $pdf = PDF::loadView('myPDF', $data);

@@ -49,7 +49,7 @@
                                                                 ])
                                                             @else
                                                                 <div class="control-block">
-                                                                    <div class="controls">
+                                                                    <!-- <div class="controls">
                                                                         <div class="form-check">
                                                                             <input class="form-check-input" type="checkbox"
                                                                                 value="" id="imsSelectAll">
@@ -62,8 +62,8 @@
                                                                             class="ims__refresh control-link active">
                                                                             <i class="bi bi-arrow-clockwise"></i>
                                                                         </a>
-                                                                    </div>
-                                                                    <div class="actions">
+                                                                    </div> -->
+                                                                    <!-- <div class="actions">
                                                                         <a href="#" class="ims__warning control-link">
                                                                             <i class="bi bi-exclamation-octagon-fill"></i>
                                                                         </a>
@@ -76,14 +76,12 @@
                                                                         <a href="#" class="ims__option control-link">
                                                                             <i class="bi bi-three-dots-vertical"></i>
                                                                         </a>
+                                                                    </div> -->
+                                                                    <div class="d-flex justify-content-end">
+                                                                        <a class="btn btn-success ms-4" href="{{ url('analytics_generatePDF') }}">Export PDF</a>
                                                                     </div>
                                                                     <div class="d-flex justify-content-end">
-                                                                        <a href="{{url('analytics_generatePDF')}}" class="download-btn">
-                                                                            <i class="bi bi-download"></i>
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class="d-flex justify-content-end">
-                                                                        <a class="btn btn-warning ms-4 ml-3" href="{{ url('export_ims_client') }}">Export CSV</a>
+                                                                        <a class="btn btn-warning ms-4" href="{{ url('export_ims_client') }}">Export CSV</a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="ims__data-table">
