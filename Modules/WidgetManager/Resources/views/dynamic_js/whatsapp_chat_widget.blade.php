@@ -172,10 +172,12 @@ div.innerHTML = `<style>
         background-color: #00796a;
         border-radius: 5px;
         position: relative;
-        bottom: 75px;
-        opacity: 0;
-        z-index: -1;
-        transition: all 0.3s ease;
+        bottom: 135px;
+        z-index: 1;
+        display: none;
+    }
+    #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform.wappview .wappformcontent {
+        display: block;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent input,
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent textarea {
@@ -206,12 +208,7 @@ div.innerHTML = `<style>
         color: #fff;
         background-color: #14c656;
     }
-    #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform.wappview .wappformcontent {
-        opacity: 1;
-        z-index: 1;
-        bottom: 135px;
-        transition: all 0.3s ease;
-    }
+    
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent .bi {
     position: absolute;
     right: -10px;
@@ -264,11 +261,12 @@ div.innerHTML = `<style>
         flex-direction: row;
         justify-content: center;
         align-items: center;
-}
     }
+
     #wappwidgetblock #wappwidtoggler:hover {
         cursor: pointer;
     }
+
     @if(count($widget_meta->notification) != 0)
         @foreach($widget_meta->notification as $key => $notify)
             @if($notify == 'bubble_notification_bage')
