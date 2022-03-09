@@ -94,10 +94,10 @@
                                                             <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn"><i
                                                                         class="bi bi-x-diamond-fill"></i>Open</a>
                                                         </div>
-                                                        <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-2 order-3">
+                                                        <!-- <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-2 order-3">
                                                             <button type="button" class="btn"><i
                                                                         class="bi bi-x-diamond-fill"></i>Sample</button>
-                                                        </div>
+                                                        </div> -->
                                                         <div class="col-12 col-xl-auto order-xl-3 order-1 my-3">
                                                             <div class="form-check form-switch">
                                                                 <label class="form-check-label"
