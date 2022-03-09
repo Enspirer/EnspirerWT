@@ -261,7 +261,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col mt-3">
+                                                            <div class="col mt-5">
                                                                 <div class="row g-0 align-items-center justify-content-between">
                                                                     <div class="col-7">
                                                                         <div class="header">
@@ -344,15 +344,18 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Delete Widget</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5>Do you want to delete this?</h5>
+                <div class="title"><h3 class="modal-title" id="exampleModalLabel">Delete Widget ?</h3>
+                <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#fff,secondary:#fff" style="width:60px;height:60px"> </lord-icon></div>
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="" class="btn btn-danger">Delete</a>
+                <div class="text-block">
+                Do you want to delete this?
+                </div>
+                <div class="button-block">
+                    <a type="button" class="btn btn-close btn-secondary" data-bs-dismiss="modal">Close</a>
+                    <a href="" class="btn btn-delete btn-danger">Delete</a>
+                </div>
             </div>
         </div>
     </div>

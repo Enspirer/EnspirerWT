@@ -850,10 +850,24 @@
 }
 
 #sectionWhatsappWidget .block-1 .inner-wrapper {
-    height: 100%;
+    height: 450px;
+    padding: 0 1rem;
     background-color: #fff;
     border-radius: 1rem;
-    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper::-webkit-scrollbar {
+    width: .35rem;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper::-webkit-scrollbar-thumb {
+    background-color: #E5E5E5;
+    border-radius: 50px;
 }
 
 #sectionWhatsappWidget .block-1 .inner-wrapper .header .title {
@@ -1979,7 +1993,7 @@
 #createWidgetModal .modal-dialog {
     position: relative;
     margin: 10rem auto 0;
-    max-width: 600px;
+    max-width: 800px;
     min-width: 280px;
     width: 100%;
 }
@@ -2032,7 +2046,7 @@
 
 #createWidgetModal .modal-dialog .modal-content .card .card-body {
     width: 80%;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     padding: 0;
 }
 
@@ -2100,6 +2114,106 @@
 #createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .pricing {
     font-size: 11px;
     margin-top: 1.5rem;
+}
+
+#deleteFavorite .modal-content {
+    border: none;
+    border-radius: 20px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header {
+    position: relative;
+    background-color: #00AEEF;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header .modal-title {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header .btn-close-modal {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    right: -15px;
+    top: -15px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header .btn-close-modal .bi {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    padding: 2rem 0;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .text-block {
+    font-size: 14px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-close {
+    width: 90px;
+    background-color: #000;
+    opacity: 1;
+    color: #fff;
+    padding: 0.75rem 0;
+    line-height: 1;
+    font-size: 14px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-close:focus {
+    box-shadow: none;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete {
+    width: 90px;
+    background-color: #fff;
+    opacity: 1;
+    color: #FF0404;
+    border: 1px solid #FF0404;
+    padding: 0.75rem 0;
+    line-height: 1;
+    font-size: 14px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete:hover {
+    border: 1px solid #FF0404;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete:focus {
+    box-shadow: none;
 }
 
 .get_widget_Modal .modal-dialog {
