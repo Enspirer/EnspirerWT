@@ -529,7 +529,7 @@ function addWidget() {
                         @if(count($widget_meta->tawk_details) != 1)
                             @foreach($widget_meta->tawk_details as $key => $tawk)
                                 @if($tawk == 'tawkto')  
-                                    <button onclick="allin1formpopup(6)" class="allin1btn allin1btn6"><i class="bi bi-snapchat"></i></button>
+                                    <button onclick="allin1formpopup(6)" class="allin1btn allin1btn6"><img width="25" src="{{url('images/social_media_icons/tawkto.png')}}"></button>
                                 @endif
                             @endforeach
                         @endif                        
