@@ -8,4 +8,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.splide__arrow--next {
+    right: -2.5rem !important;
+}
+
+.splide__arrow--prev {
+    left: -2.5rem !important;
+}
+
 /*# sourceMappingURL=main.css.map */

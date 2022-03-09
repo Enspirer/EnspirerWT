@@ -13,13 +13,33 @@
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <div class="slide-wrapper">
+                                <div class="image-block">
+                                    <img src="{{url('images/Group 835.png')}}" alt="hero-image">
+                                </div>
+                                <div class="content-block">
+                                    <h3 class="title">Engage<br>Interact<br>Convert</h3>
+                                    <h5 class="light">Increase sales with All-in-One Widget &amp; <strong>IMS</strong></h5>
+                                    <h6>The customised Inquiry Management System</h6>
+
+                                    <a href="{{url('login')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                                    <!-- <div class="featured-icons">
+                                        <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
+                                        <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
+                                        <a href="#" class="icon"><img src="{{url('images/shield (1).png')}}" alt="featured icon"></a>
+                                        <a href="#" class="icon"><img src="{{url('images/chat (1).png')}}" alt="featured icon"></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slide-wrapper">
                                 <div class="content-block">
                                     <h5>The Smarter way to <span>Boost</span> your </h5>
                                     <h3 class="title">Website <br> Performance</h3>
-                                    <h5 class="light">All in one Widget with <strong>IMS</strong></h5>
+                                    <h5 class="light">WhatsApp Widget with <strong>IMS</strong></h5>
                                     <h6>The customised Inquiry Management System</h6>
 
-                                    <a href="{{url('register')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                                    <a href="{{url('login')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
                                     <!-- <div class="featured-icons">
                                         <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
                                         <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
@@ -29,27 +49,6 @@
                                 </div>
                                 <div class="image-block">
                                     <img src="{{url('images/Group 411.png')}}" alt="hero-image">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="slide-wrapper">
-                                <div class="image-block">
-                                    <img src="{{url('images/Group 835.png')}}" alt="hero-image">
-                                </div>
-                                <div class="content-block">
-                                    <h5>Automate and grow your </h5>
-                                    <h3 class="title">Engage , <br>Interact, Convert</h3>
-                                    <h5 class="light">Increase sales with All in one Widget <strong>IMS</strong></h5>
-                                    <h6>The customised Inquiry Management System</h6>
-
-                                    <a href="{{url('register')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
-                                    <!-- <div class="featured-icons">
-                                        <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
-                                        <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
-                                        <a href="#" class="icon"><img src="{{url('images/shield (1).png')}}" alt="featured icon"></a>
-                                        <a href="#" class="icon"><img src="{{url('images/chat (1).png')}}" alt="featured icon"></a>
-                                    </div> -->
                                 </div>
                             </div>
                         </li>
@@ -87,7 +86,7 @@
                 <div class="feature-box">
                     <div class="content-block">
                         <div class="header">
-                            <div class="title"><i class="bi bi-grid-fill"></i>All in one chat</div>
+                            <div class="title"><i class="bi bi-grid-fill"></i>All-in-One chat</div>
                             <span class="text">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</span>
                         </div>
                         <ul class="features">
@@ -124,7 +123,7 @@
         <div class="container">
             <div class="header">
                 <h2 class="title">Keep your website on Top of the Game & Secured</h2>
-                <span class="text">The all in one comprehensive tool to manage Google rankings, site analytics, Cyber security and general performance of the website.</span>
+                <span class="text">The All-in-One comprehensive tool to manage Google rankings, site analytics, Cyber security and general performance of the website.</span>
             </div>
             <div class="inner-wrapper">
                 <div class="SEO-block">
@@ -139,7 +138,7 @@
                     <div class="image-block">
                         <img src="{{url('images/SEO-01.png')}}" alt="">
                     </div>
-                    <a href="#" class="cta-btn-border">Get Started</a>
+                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started</a>
                 </div>
                 <div class="SEO-block">
                     <div class="header">
@@ -153,7 +152,7 @@
                     <div class="image-block">
                         <img src="{{url('images/Analytics-01.png')}}" alt="">
                     </div>
-                    <a href="#" class="cta-btn-border">Get Started</a>
+                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started</a>
                 </div>
                 <div class="SEO-block">
                     <div class="header">
@@ -167,7 +166,7 @@
                     <div class="image-block">
                         <img src="{{url('images/Securty-01.png')}}" alt="">
                     </div>
-                    <a href="#" class="cta-btn-border">Get Started</a>
+                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started</a>
                 </div>
             </div>
         </div>
@@ -232,8 +231,7 @@
         <div class="container">
             <div class="header">
                 <h2 class="title">Tallentor Shop</h2>
-                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's</div>
+                <div class="text">Get started in No time with Industry standard ready- to- use solutions</div>
             </div>
             <div class="slider">
                 <div class="splide" id="indexSlider">
@@ -244,13 +242,15 @@
                                     <div class="card">
                                         <div class="image-block">
                                             <img src="{{url('images/Ecommerce.png')}}" alt="" class="default">
-                                            <img src="{{url('images/pos-hardware-options-for-every-setup@2x.png')}}" alt=""
-                                                class="focused">
                                         </div>
                                         <div class="content">
-                                            <div class="title">E-Commerce Solutions</div>
-                                            <div class="text">Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem</div>
+                                            <div class="title">Payroll</div>
+                                            <div class="text">
+                                                <ul class="list-block">
+                                                    <li><i class="bi bi-check-circle-fill"></i>Customisable options</li>
+                                                    <li><i class="bi bi-check-circle-fill"></i>Monthly subscription facility</li>
+                                                </ul>
+                                            </div>
                                             <div class="rating">
                                                 <i class="bi bi-star-fill"></i>
                                                 <span class="precentage">4.9</span>
@@ -270,13 +270,10 @@
                                         <div class="image-block">
                                             <img src="{{url('images/LS-One-for-restaurants-main-header.png')}}" alt=""
                                                 class="default">
-                                            <img src="{{url('images/pos-hardware-options-for-every-setup@2x.png')}}" alt=""
-                                                class="focused">
                                         </div>
                                         <div class="content">
-                                            <div class="title">POS System</div>
-                                            <div class="text">Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem</div>
+                                            <div class="title">E-Com</div>
+                                            <div class="text">Global payment gateway integrations with customised delivery module</div>
                                             <div class="rating">
                                                 <i class="bi bi-star-fill"></i>
                                                 <span class="precentage">4.9</span>
@@ -295,13 +292,10 @@
                                     <div class="card">
                                         <div class="image-block">
                                             <img src="{{url('images/Article-11.png')}}" alt="" class="default">
-                                            <img src="{{url('images/pos-hardware-options-for-every-setup@2x.png')}}" alt=""
-                                                class="focused">
                                         </div>
                                         <div class="content">
-                                            <div class="title">Payroll management sys...</div>
-                                            <div class="text">Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem</div>
+                                            <div class="title">Multi Vendor Solutions</div>
+                                            <div class="text">Customised themes with fully functional multi store module</div>
                                             <div class="rating">
                                                 <i class="bi bi-star-fill"></i>
                                                 <span class="precentage">4.9</span>
@@ -318,6 +312,9 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="footer">
+                <a href="{{url('contact')}}" class="cta-btn">Talk to our team</a>
             </div>
         </div>
     </section>
