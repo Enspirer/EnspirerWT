@@ -280,7 +280,7 @@
                                                                     </div>
                                                                     <div class="col-4">
                                                                         <div class="whatsapp-feature-block">
-                                                                            <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                                            <img src="{{url('images/social_media_icons/chat.png')}}" alt="">
                                                                             <div class="title">All-in-One Chat</div>
                                                                             <div class="subtitle">Entertainment</div>
                                                                             <div class="star-rating">
