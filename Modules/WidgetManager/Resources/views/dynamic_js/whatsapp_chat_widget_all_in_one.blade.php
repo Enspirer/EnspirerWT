@@ -297,9 +297,12 @@ function addWidget() {
         resize: none;
     }
 
-    #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent button {
+    #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent button, 
+    #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent a {
         padding: 0.25rem 0;
         border-radius: 5px;
+        text-decoration: none;
+        color: #000;
         border: none;
         background-color: #EFEFEF;
         font-size: 13px;
@@ -631,8 +634,7 @@ window.onload = addWidget;
 function allin1toggle() {
     document.querySelector('#allin1widget').classList.toggle("allin1view");
     document.querySelector('.allin1welcomemsg').classList.toggle("allin1view");
-    document.querySelector('#allin1btn').classList.remove("allin1view");
-    document.querySelector('.allin1welcomemsg').classList.toggle("allin1view");
+    /* document.querySelector('#allin1btn').classList.remove("allin1view"); */
     var audio = new Audio('{{url('blackberrychat.mp3')}}');
     audio.play();
 }
@@ -668,8 +670,6 @@ function allin1tawktoiframe() {
     const tel = document.getElementById("telephone6");
     const message = document.getElementById("usermessage6");
     const widget_id = document.getElementById("widget_id6");
-
-    /* console.log(name.value); */
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
