@@ -129,6 +129,11 @@ class HomeController extends Controller
         return $settings[0]->whatsapp_number;
     }
 
+    public function log_checker(Request $request)
+    {
+        dd($request);
+    }
+
 
 
 
