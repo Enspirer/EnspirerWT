@@ -88,7 +88,7 @@
                                             <div class="row g-0 mt-4 mb-3">
                                                 <div class="button-block">
                                                     <div class="block-1">
-                                                        <a href="{{ route('frontend.user.user_widget.ims', $project_id) }}"
+                                                        <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}"
                                                             class="act-btn act-ims">
                                                             <i class="bi bi-file-earmark-medical"></i>
                                                             IMS
