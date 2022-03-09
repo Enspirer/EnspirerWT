@@ -690,3 +690,24 @@ function allin1tawktoiframe() {
 function allin1closetawktoiframe() {
     document.querySelector('.allin1ifameblock').classList.remove("allin1view");
 }
+
+document.cookie = "tallentor_widget=982SHEKKSMLA";
+
+setInterval(myTimer, 1000);
+
+function myTimer() {
+ let x = getCookie('tallentor_widget')
+
+ console.log(x);
+}
+
+function getCookie(name) {
+ var nameEQ = name + "=";
+ var ca = document.cookie.split(';');
+ for(var i=0;i < ca.length;i++) {
+ var c = ca[i];
+ while (c.charAt(0)==' ') c = c.substring(1,c.length);
+ if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+ }
+ return null;
+}

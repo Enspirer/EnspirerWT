@@ -261,7 +261,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col mt-3">
+                                                            <div class="col mt-5">
                                                                 <div class="row g-0 align-items-center justify-content-between">
                                                                     <div class="col-7">
                                                                         <div class="header">
@@ -344,15 +344,19 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Delete Widget</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5>Do you want to delete this?</h5>
+                <div class="title">
+                <h3 class="modal-title">Delete Widget ?</h3>
+                <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#fff,secondary:#fff" style="width:60px;height:60px"> </lord-icon></div>
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="" class="btn btn-danger">Delete</a>
+                <div class="text-block">
+                Do you want to delete this?
+                </div>
+                <div class="button-block">
+                    <a type="button" class="btn btn-close btn-secondary" data-bs-dismiss="modal">Close</a>
+                    <a href="" class="btn btn-delete btn-danger">Delete</a>
+                </div>
             </div>
         </div>
     </div>
@@ -364,13 +368,44 @@
 <div class="modal fade" id="overlay" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-
-            <div class="modal-body" style="padding: 3rem">
-                <h2 class="text-center">Created Successfully!</h2>
-                <!-- <h5>Email Alert Sent</h5> -->
+            <div class="modal-header">
+                <div class="title">
+                    <h3 class="modal-title" >Created Successfully!</h3>
+                    <i class="bi bi-check-circle"></i>
+                </div>
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="content-block">
+                    <div class="title">How to setup the Widget?</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis deserunt ab distinctio. Voluptatum deserunt blanditiis asperiores quos placeat voluptatibus illo possimus facilis.</div>
+                    <a href="#" class="act-btn act-tutorial">
+                    <i class="bi bi-boxes"></i>
+                    Tutorials</a>
+                </div>
+                <div class="image-block">
+                    <img src="{{url('images/tutorial.png')}}" alt="">
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="button-block">
+                    <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}"
+                        class="act-btn act-settings">
+                        <i class="bi bi-gear"></i>
+                        Settings
+                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" class="act-btn act-script">
+                    <i class="bi bi-code-slash"></i>
+                        Add Script
+                    </a>
+                    <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
+                    <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}"
+                        class="act-btn delete act-delete" data-bs-toggle="modal"
+                        data-bs-target="#deleteFavorite">
+                        <i class="bi bi-trash"></i>
+                        Delete
+                    </a>
+                </div>
             </div>
         </div>
     </div>

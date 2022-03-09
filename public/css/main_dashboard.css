@@ -341,7 +341,7 @@
 }
 
 .section-content {
-    background-color: #f4f4f4f5;
+    background-color: #f4f4f4;
     min-height: 100vh;
     padding: 2rem 0;
 }
@@ -850,10 +850,24 @@
 }
 
 #sectionWhatsappWidget .block-1 .inner-wrapper {
-    height: 100%;
+    height: 450px;
+    padding: 0 1rem;
     background-color: #fff;
     border-radius: 1rem;
-    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper::-webkit-scrollbar {
+    width: .35rem;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#sectionWhatsappWidget .block-1 .inner-wrapper::-webkit-scrollbar-thumb {
+    background-color: #E5E5E5;
+    border-radius: 50px;
 }
 
 #sectionWhatsappWidget .block-1 .inner-wrapper .header .title {
@@ -1054,6 +1068,14 @@
     color: #fff;
     margin-right: 0.75rem;
     top: 3px;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .button-block .create-widget-btn:disabled {
+    background-color: #44bc8e;
+}
+
+#sectionWhatsappWidget .chat-applications .inner-wrapper .button-block .create-widget-btn:disabled::before {
+    content: none;
 }
 
 #sectionWhatsappWidget #whatsappModal .modal-dialog {
@@ -1979,7 +2001,7 @@
 #createWidgetModal .modal-dialog {
     position: relative;
     margin: 10rem auto 0;
-    max-width: 600px;
+    max-width: 800px;
     min-width: 280px;
     width: 100%;
 }
@@ -2032,7 +2054,7 @@
 
 #createWidgetModal .modal-dialog .modal-content .card .card-body {
     width: 80%;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     padding: 0;
 }
 
@@ -2100,6 +2122,261 @@
 #createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .pricing {
     font-size: 11px;
     margin-top: 1.5rem;
+}
+
+#deleteFavorite .modal-content {
+    border: none;
+    border-radius: 20px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header {
+    position: relative;
+    background-color: #00AEEF;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header .modal-title {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header .btn-close-modal {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    right: -15px;
+    top: -15px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-header .btn-close-modal .bi {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    padding: 2rem 0;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .text-block {
+    font-size: 14px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-close {
+    width: 90px;
+    background-color: #000;
+    opacity: 1;
+    color: #fff;
+    padding: 0.75rem 0;
+    line-height: 1;
+    font-size: 14px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-close:focus {
+    box-shadow: none;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete {
+    width: 90px;
+    background-color: #fff;
+    opacity: 1;
+    color: #FF0404;
+    border: 1px solid #FF0404;
+    padding: 0.75rem 0;
+    line-height: 1;
+    font-size: 14px;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete:hover {
+    border: 1px solid #FF0404;
+}
+
+#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete:focus {
+    box-shadow: none;
+}
+
+#overlay .modal-dialog {
+    max-width: 600px;
+}
+
+#overlay .modal-dialog .modal-content {
+    border: none;
+    border-radius: 20px;
+}
+
+#overlay .modal-dialog .modal-content .modal-header {
+    position: relative;
+    background-color: #00AEEF;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .title .modal-title {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .title .bi {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .btn-close-modal {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    right: -15px;
+    top: -15px;
+}
+
+#overlay .modal-dialog .modal-content .modal-header .btn-close-modal .bi {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .content-block {
+    flex: 1 1 50%;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .content-block .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .content-block .text {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .content-block .act-btn {
+    width: 110px;
+    height: 40px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #44bc8e;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .content-block .act-btn .bi {
+    font-size: 16px;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .image-block {
+    flex: 1 1 30%;
+}
+
+#overlay .modal-dialog .modal-content .modal-body .image-block img {
+    width: 100%;
+}
+
+#overlay .modal-dialog .modal-content .modal-footer {
+    justify-content: flex-start;
+    border: none;
+    padding: 1rem 2rem;
+    background-color: #f4f4f4;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#overlay .modal-dialog .modal-content .modal-footer .button-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn {
+    width: 110px;
+    height: 40px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+}
+
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn .bi {
+    font-size: 16px;
+}
+
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn.act-settings,
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn.act-script {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+#overlay .modal-dialog .modal-content .modal-footer .button-block .act-btn.act-delete {
+    background-color: #fff;
+    color: #FF0404;
+    border: 1px solid #FF0404;
 }
 
 .get_widget_Modal .modal-dialog {
