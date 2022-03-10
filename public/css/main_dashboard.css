@@ -1485,12 +1485,12 @@
 
 .section-content #sectionProperties .property-block .inner-wrapper .btn.btn-open {
     border: 1px solid #0d6efd;
-    background-color: #0d6efd;
-    color: #fff;
+    color: #0d6efd;
 }
 
 .section-content #sectionProperties .property-block .inner-wrapper .btn.btn-delete {
     border: 1px solid #FF0404;
+    color: #FF0404;
 }
 
 .section-content #sectionProperties .property-block .inner-wrapper .btn .bi {
