@@ -54,7 +54,7 @@ class HomeController extends Controller
 
 
 //        return redirect()->to('https://web.whatsapp.com/send?phone='.$phone_number.'&text='.$incom);
-        return redirect()->to('https://wa.me/'.$phone_number.'/?text='.$incom);
+        return redirect()->to('https://api.whatsapp.com/send/?phone='.$phone_number.'/?text='.$incom);
 
     }
 
