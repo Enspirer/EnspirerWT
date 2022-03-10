@@ -390,133 +390,6 @@
     font-size: 1.1rem;
 }
 
-.section-content #sectionProperties .property-block {
-    background-color: #fff;
-    border-radius: 1rem;
-}
-
-.section-content #sectionProperties .property-block .property-name .pro-name {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #333;
-    display: block;
-}
-
-.section-content #sectionProperties .property-block .property-name .pro-url {
-    color: #999;
-    font-weight: 500;
-    display: block;
-}
-
-.section-content #sectionProperties .property-block .button-block .btn {
-    border: 1px solid #0d6efd;
-    width: 140px;
-    height: 46px;
-    line-height: 46px;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    padding: 0;
-}
-
-.section-content #sectionProperties .property-block .button-block .btn .bi {
-    margin-right: 0.75rem;
-}
-
-.section-content #sectionProperties .property-block .button-block .form-switch {
-    padding-left: 0;
-    padding-right: 2.5em;
-}
-
-.section-content #sectionProperties .property-block .button-block .form-switch .form-check-label {
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-.section-content #sectionProperties .property-block .button-block .form-switch .form-check-input {
-    float: right;
-    margin-right: -2.5em;
-    margin-left: 0;
-}
-
-.section-content #sectionProperties .property-block .info-blocks:not(:last-child) {
-    border-right: 1px solid #ddd;
-}
-
-.section-content #sectionProperties .property-block .info-blocks .block-title {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.section-content #sectionProperties .property-block .info-blocks .precentage {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #0d6efd;
-    white-space: nowrap;
-}
-
-.section-content #sectionProperties .property-block .seo-block .seo-result {
-    text-align: center;
-    display: block;
-    font-size: 1.75rem;
-    color: #999;
-}
-
-.section-content #sectionProperties .property-block .seo-block .progress {
-    height: 0.4rem;
-}
-
-.section-content #sectionProperties .property-block .seo-block .precentage {
-    display: block;
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
-
-.section-content #sectionProperties .property-block .seo-block .precentage .sign {
-    font-size: 0.9rem;
-    color: #198754;
-}
-
-.section-content #sectionProperties .property-block .analytics-block .block-content .block-title {
-    text-align: left;
-    display: block;
-}
-
-.section-content #sectionProperties .property-block .analytics-block .block-content .sub-title {
-    color: #999;
-    font-size: 1.1rem;
-    margin-right: 1rem;
-}
-
-.section-content #sectionProperties .property-block .analytics-block .block-content i {
-    margin-right: 1rem;
-}
-
-.section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-.section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info,
-.section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info-prec {
-    color: #999;
-    font-size: 0.85rem;
-}
-
-.section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info i,
-.section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info-prec i {
-    margin-right: 0.5rem;
-    font-size: 0.85rem;
-}
-
-.section-content #sectionProperties .property-block .statics-block .issues-blocks .progress {
-    height: 0.4rem;
-}
-
 @media screen and (max-width: 1399px) {
     .section-content {
         height: auto;
@@ -1568,7 +1441,19 @@
     border-radius: 1rem;
 }
 
-.section-content #sectionProperties .property-block .property-name .pro-name {
+.section-content #sectionProperties .property-block .inner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-content #sectionProperties .property-block .inner-wrapper .name-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-content #sectionProperties .property-block .inner-wrapper .name-block .property-name .pro-name {
     font-size: 1.5rem;
     font-weight: 500;
     color: #333;
@@ -1581,8 +1466,15 @@
     display: block;
 }
 
-.section-content #sectionProperties .property-block .button-block .btn {
-    border: 1px solid #0d6efd;
+.section-content #sectionProperties .property-block .inner-wrapper .button-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.section-content #sectionProperties .property-block .inner-wrapper .btn {
     width: 140px;
     height: 46px;
     line-height: 46px;
@@ -1591,7 +1483,17 @@
     padding: 0;
 }
 
-.section-content #sectionProperties .property-block .button-block .btn .bi {
+.section-content #sectionProperties .property-block .inner-wrapper .btn.btn-open {
+    border: 1px solid #0d6efd;
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.section-content #sectionProperties .property-block .inner-wrapper .btn.btn-delete {
+    border: 1px solid #FF0404;
+}
+
+.section-content #sectionProperties .property-block .inner-wrapper .btn .bi {
     margin-right: 0.75rem;
 }
 
