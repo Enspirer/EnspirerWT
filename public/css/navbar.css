@@ -153,6 +153,14 @@
 #profileDropdown .profile {
     display: flex;
     gap: 10px;
+    align-items: center;
+}
+
+#profileDropdown .profile .image img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 #profileDropdown .profile .name {
