@@ -13,9 +13,6 @@
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <div class="slide-wrapper">
-                                <div class="image-block">
-                                    <img src="{{url('images/landing_page/home/banner_1.png')}}" alt="hero-image">
-                                </div>
                                 <div class="content-block">
                                     <h3 class="title">Engage<br>Interact<br>Convert</h3>
                                     <h5 class="light">Increase sales with All-in-One Widget &amp; <strong>IMS</strong></h5>
@@ -28,6 +25,9 @@
                                         <a href="#" class="icon"><img src="{{url('images/shield (1).png')}}" alt="featured icon"></a>
                                         <a href="#" class="icon"><img src="{{url('images/chat (1).png')}}" alt="featured icon"></a>
                                     </div> -->
+                                </div>
+                                <div class="image-block">
+                                    <img src="{{url('images/landing_page/home/banner_1.png')}}" alt="hero-image">
                                 </div>
                             </div>
                         </li>

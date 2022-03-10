@@ -94,6 +94,7 @@
                 breakpoints: {
 		                        574: {
                                     fixedWidth: '300px',
+                                    arrows: false,
 		                            },
                             },
             });
