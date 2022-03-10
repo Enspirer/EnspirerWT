@@ -177,7 +177,7 @@ div.innerHTML = `<style>
         display: none;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform.wappview .wappformcontent {
-        display: block;
+        display: flex;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent input,
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent textarea {
@@ -327,6 +327,31 @@ div.innerHTML = `<style>
         #wappwidgetblock #wappwidget.wappview .wappcontainer .wappheader{
             border-top-left-radius: 0;
             border-top-right-radius: 0;
+        }
+
+        #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            z-index: -1;
+        }
+
+        #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform.wappview {
+            z-index: 1;
+        }
+
+        #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent {
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            justify-content: center;
+        }
+
+        #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent .bi {
+            top: 15px;
+            right: 15px;
+            color: #fff;
         }
     }
 
