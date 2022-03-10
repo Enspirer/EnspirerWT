@@ -99,7 +99,7 @@
             </div>
             <div class="row g-0">
                 <div class="copyright-blocok">
-                    <div class="terms"><a href="#">Terms of Service</a> + <a href="#">Privacy Policy</a></div>
+                    <div class="terms"><a href="{{url('terms-condition')}}">Terms of Service</a> + <a href="{{url('privacy-policy')}}">Privacy Policy</a></div>
                     <div class="copyright">Copyright @ {{date('Y')}} | Tallentor Global Ltd</div>
                 </div>
             </div>
