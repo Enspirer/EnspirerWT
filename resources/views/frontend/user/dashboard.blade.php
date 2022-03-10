@@ -79,37 +79,26 @@
 
                                 <section id="sectionProperties">
                                     <div class="property-block mb-5">
-                                        <div class="row g-0 p-4 border-bottom justify-content-between">
-                                            <div class="col-12 col-xl-auto p-2">
-                                                <div class="property-name">
-                                                    <span class="pro-name">{{$project_detail->name}}</span>
-                                                    <span class="pro-url">{{$project_detail->url}}</span>
+                                        <div class="row g-0 p-4 border-bottom">
+                                            <div class="inner-wrapper">
+                                                <div class="col-4">
+                                                    <div class="name-block">
+                                                        <div class="property-name">
+                                                            <span class="pro-name">{{$project_detail->name}}</span>
+                                                            <span class="pro-url">{{$project_detail->url}}</span>
+                                                        </div>
+                                                        <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn btn-open"><i class="bi bi-x-diamond-fill"></i>Open</a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-12 col-xl-auto p-2">
-                                                <div class="button-block">
-                                                    <div
-                                                            class="row gx-3 justify-content-xxl-end align-items-center flex-sm-row flex-column">
-                                                        <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-1 order-2">
-                                                            <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn"><i
-                                                                        class="bi bi-x-diamond-fill"></i>Open</a>
+                                                <div class="col-4">
+                                                    <div class="button-block">
+                                                        <div class="form-check form-switch">
+                                                            <label class="form-check-label" for="flexSwitchCheckDefault">Email
+                                                                Notifications</label>
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                                                         </div>
-                                                        <!-- <div class="col-sm-auto col-7 my-sm-0 my-2 order-xl-2 order-3">
-                                                            <button type="button" class="btn"><i
-                                                                        class="bi bi-x-diamond-fill"></i>Sample</button>
-                                                        </div> -->
-                                                        <div class="col-12 col-xl-auto order-xl-3 order-1 my-3">
-                                                            <div class="form-check form-switch">
-                                                                <label class="form-check-label"
-                                                                       for="flexSwitchCheckDefault">Email
-                                                                    Notifications</label>
-                                                                <input class="form-check-input" type="checkbox" role="switch"
-                                                                       id="flexSwitchCheckDefault">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-auto col-7 my-sm-0 my-2 order-4">
-                                                            <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="btn delete" data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i>Delete</a>
-                                                        </div>
+                                                        <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="btn btn-delete"
+                                                            data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
