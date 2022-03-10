@@ -72,7 +72,7 @@ class HomeController extends Controller
     {
         $widget = Widgets::where('id',$request->widget_id)->first();
         $heatmapDetails = new HeatMap;
-        $heatmapDetails->postition = json_encode([
+        $heatmapDetails->position = json_encode([
             'x' => $request->position_x,
             'y' => $request->position_y,
         ]);
