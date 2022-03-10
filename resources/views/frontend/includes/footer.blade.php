@@ -66,7 +66,7 @@
                 <div class="col-4">
                     <div class="contact-info">
                         <div class="header">
-                            <i class="bi bi-telephone-fill"></i>
+                            <img src="{{url('images/landing_page/home/phone-icon.png')}}" alt="">
                             <div class="title">Let's Talk</div>
                         </div>
                         <div class="body">
