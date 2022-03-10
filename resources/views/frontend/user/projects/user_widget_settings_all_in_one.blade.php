@@ -723,6 +723,14 @@
                                 <label for="whatsapp_number" class="form-label">Make sure to remove [+] or [00]
                                     before your phone number and add your conuntry code</label>
                             </div>
+                            <div class="form-check form-switch mt-4">
+                                <label class="form-check-label ms-4" for="default_icon">Use Default Icon</label>
+                                @if(json_decode($widget->settings)[0]->default_icon == 'on')
+                                    <input type="checkbox" class="form-check-input" name="default_icon" id="default_icon" onchange="myFunction()" checked>
+                                @else
+                                    <input type="checkbox" class="form-check-input" name="default_icon" id="default_icon" onchange="myFunction()">
+                                @endif
+                            </div>
                         </div>
                         <div class="body">
                             <div class="accordion accordion-flush" id="whatsappContentAccordion">
@@ -2156,10 +2164,14 @@
         }
         // console.log(template_layout);
       
-        bubble_icon = icon;
-        
-
+        bubble_icon = icon;      
         // console.log(bubble_icon);
+
+        if ($('#default_icon').is(':checked')) {
+            default_icon = $("#default_icon").val();
+        } else {
+            default_icon = null;
+        }
 
 
 
@@ -2318,7 +2330,9 @@
             show_icon = null;
         }
 
+       
 
+        
         if ($('#bubble_notification_bage').is(':checked')) {
             bubble_notification_bage = $("#bubble_notification_bage").val();
         } else {
@@ -2361,6 +2375,7 @@
             template_layout: template_layout,
             whatsapp_number: whatsapp_number,
             bubble_icon: bubble_icon,
+            default_icon: default_icon,            
             chat_header: chat_header,
             caption: caption,
             image: image,

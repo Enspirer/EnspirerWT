@@ -648,6 +648,7 @@ class HomeController extends Controller
         $template_layout = $request->template_layout;
         $whatsapp_number = $request->whatsapp_number;
         $bubble_icon = $pre_bubble_icon;
+        $default_icon = $request->default_icon;        
         $chat_header = $request->chat_header;
         $caption = $request->caption;
         $image = $request->image;
@@ -684,7 +685,8 @@ class HomeController extends Controller
             'tawk_details' => $tawk_details,            
             'template_layout' => $template_layout,
             'whatsapp_number' => $whatsapp_number,
-            'bubble_icon' => $bubble_icon,
+            'default_icon' => $default_icon,   
+            'bubble_icon' => $bubble_icon,         
             'chat_header' => $chat_header,
             'caption' => $caption,
             'image' => $image,
