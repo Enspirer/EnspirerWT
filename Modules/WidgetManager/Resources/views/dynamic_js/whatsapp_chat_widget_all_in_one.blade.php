@@ -711,7 +711,9 @@ function myTimer() {
 
 
 function printMousePos(event) {
-   var parentOffset = $(this).parent().offset();
+  var bdy = document.getElementsByTagName("BODY")[0];
+
+  var parentOffset = bdy.parent().offset();
    //or $(this).offset(); if you really just want the current element's offset
    var relX = e.pageX - parentOffset.left;
    var relY = e.pageY - parentOffset.top;
