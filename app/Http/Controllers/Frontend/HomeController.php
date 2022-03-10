@@ -53,8 +53,8 @@ class HomeController extends Controller
         $incom =  urlencode($request->usermessage);
 
 
-        return redirect()->to('https://web.whatsapp.com/send?phone='.$phone_number.'&text='.$incom);
-//        return redirect()->to('https://wa.me/'.$phone_number.'/?text='.$incom);
+//        return redirect()->to('https://web.whatsapp.com/send?phone='.$phone_number.'&text='.$incom);
+        return redirect()->to('https://wa.me/'.$phone_number.'/?text='.$incom);
 
     }
 
