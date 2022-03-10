@@ -14,7 +14,7 @@
                         <li class="splide__slide">
                             <div class="slide-wrapper">
                                 <div class="image-block">
-                                    <img src="{{url('images/Group 835.png')}}" alt="hero-image">
+                                    <img src="{{url('images/landing_page/home/banner_1.png')}}" alt="hero-image">
                                 </div>
                                 <div class="content-block">
                                     <h3 class="title">Engage<br>Interact<br>Convert</h3>
@@ -48,7 +48,7 @@
                                     </div> -->
                                 </div>
                                 <div class="image-block">
-                                    <img src="{{url('images/Group 411.png')}}" alt="hero-image">
+                                    <img src="{{url('images/landing_page/home/banner_2.png')}}" alt="hero-image">
                                 </div>
                             </div>
                         </li>
@@ -70,7 +70,7 @@
                 <div class="feature-box">
                     <div class="content-block">
                         <div class="header">
-                            <div class="title"><i class="bi bi-whatsapp"></i>WhatsApp Widget</div>
+                            <div class="title"><img src="{{url('images/landing_page/home/whatsapp-blue.png')}}" alt="" width="30"> WhatsApp Widget</div>
                             <span class="text">Integrate the most popular communication channel into your website and improve your customer service quality and sales conversion.</span>
                         </div>
                         <ul class="features">
@@ -80,13 +80,13 @@
                         <a href="#" class="cta-btn-border">Get Started</a>
                     </div>
                     <div class="image-block">
-                        <img src="{{url('images/Group 371.png')}}" alt="">
+                        <img src="{{url('images/landing_page/home/whatsapp-widget.png')}}" alt="">
                     </div>
                 </div>
                 <div class="feature-box">
                     <div class="content-block">
                         <div class="header">
-                            <div class="title"><i class="bi bi-grid-fill"></i>All-in-One chat</div>
+                            <div class="title"><img src="{{url('images/landing_page/home/open-menu.png')}}" alt="" width="30"> All-in-One chat</div>
                             <span class="text">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</span>
                         </div>
                         <ul class="features">
@@ -96,7 +96,7 @@
                         <a href="#" class="cta-btn-border">Get Started</a>
                     </div>
                     <div class="image-block">
-                        <img src="{{url('images/Group 412.png')}}" alt="">
+                        <img src="{{url('images/landing_page/home/all-in-one-chat.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                 <li><i class="bi bi-check-circle-fill"></i>Analytics of the inquiry management process with reports</li>
             </ul>
             <div class="image-block">
-                <img src="{{url('images/Group 410.png')}}" alt="">
+                <img src="{{url('images/landing_page/home/ims-banner.png')}}" alt="">
             </div>
         </div>
     </section>
@@ -128,7 +128,7 @@
             <div class="inner-wrapper">
                 <div class="SEO-block">
                     <div class="header">
-                        <div class="title"><i class="bi bi-whatsapp"></i>SEO</div>
+                        <div class="title"><img src="{{url('images/landing_page/home/seo-icon.png')}}" alt="">SEO</div>
                         <span class="text">The power tool to get a comprehensive report to check your website ranking, and performance.</span>
                     </div>
                     <ul class="features">
@@ -136,13 +136,13 @@
                         <li><i class="bi bi-check-circle-fill"></i>Expert team to enhance performance</li>
                     </ul>
                     <div class="image-block">
-                        <img src="{{url('images/SEO-01.png')}}" alt="">
+                        <img src="{{url('images/landing_page/home/seo.png')}}" alt="">
                     </div>
                     <a href="{{url('contact')}}" class="cta-btn-border">Get Started</a>
                 </div>
                 <div class="SEO-block">
                     <div class="header">
-                        <div class="title"><i class="bi bi-whatsapp"></i>Analytics</div>
+                        <div class="title"><img src="{{url('images/landing_page/home/analytics-icon.png')}}" alt="">Analytics</div>
                         <span class="text">User engagement and traffic monitoring tool provides with the critical insights of the website for digital marketing</span>
                     </div>
                     <ul class="features">
@@ -150,13 +150,13 @@
                         <li><i class="bi bi-check-circle-fill"></i>User behavior monitoring </li>
                     </ul>
                     <div class="image-block">
-                        <img src="{{url('images/Analytics-01.png')}}" alt="">
+                        <img src="{{url('images/landing_page/home/analytics.png')}}" alt="">
                     </div>
                     <a href="{{url('contact')}}" class="cta-btn-border">Get Started</a>
                 </div>
                 <div class="SEO-block">
                     <div class="header">
-                        <div class="title"><i class="bi bi-whatsapp"></i>Security</div>
+                        <div class="title"><img src="{{url('images/landing_page/home/security-icon.png')}}" alt="">Security</div>
                         <span class="text">The intelligent tool to protect the website from cyber attacks, spam emails and management of  blacklisting.</span>
                     </div>
                     <ul class="features">
@@ -164,7 +164,7 @@
                         <li><i class="bi bi-check-circle-fill"></i>Alerts and technical assistance</li>
                     </ul>
                     <div class="image-block">
-                        <img src="{{url('images/Securty-01.png')}}" alt="">
+                        <img src="{{url('images/landing_page/home/security.png')}}" alt="">
                     </div>
                     <a href="{{url('contact')}}" class="cta-btn-border">Get Started</a>
                 </div>
@@ -188,7 +188,7 @@
                             <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="image-block">
-                            <img src="{{url('images/xcxcx-01.png')}}" alt="">
+                            <img src="{{url('images/landing_page/home/mobile-app-development.png')}}" alt="">
                         </div>
                         <div class="content">
                             <div class="title">Mobile App Development</div>
@@ -202,7 +202,7 @@
                             <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="image-block">
-                            <img src="{{url('images/cdd-01.png')}}" alt="">
+                            <img src="{{url('images/landing_page/home/software-development.png')}}" alt="">
                         </div>
                         <div class="content">
                             <div class="title">Software Development</div>
@@ -215,7 +215,7 @@
                             <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="image-block">
-                            <img src="{{url('images/sfsf-01.png')}}" alt="">
+                            <img src="{{url('images/landing_page/home/digital-marketing.png')}}" alt="">
                         </div>
                         <div class="content">
                             <div class="title">Digital Marketing</div>
@@ -241,7 +241,7 @@
                                 <a href="#">
                                     <div class="card">
                                         <div class="image-block">
-                                            <img src="{{url('images/Ecommerce.png')}}" alt="" class="default">
+                                            <img src="{{url('images/landing_page/home/payroll.png')}}" alt="" class="default">
                                         </div>
                                         <div class="content">
                                             <div class="title">Payroll</div>
@@ -268,7 +268,7 @@
                                 <a href="#">
                                     <div class="card">
                                         <div class="image-block">
-                                            <img src="{{url('images/LS-One-for-restaurants-main-header.png')}}" alt=""
+                                            <img src="{{url('images/landing_page/home/ecommerce.png')}}" alt=""
                                                 class="default">
                                         </div>
                                         <div class="content">
@@ -291,7 +291,7 @@
                                 <a href="#">
                                     <div class="card">
                                         <div class="image-block">
-                                            <img src="{{url('images/Article-11.png')}}" alt="" class="default">
+                                            <img src="{{url('images/landing_page/home/multi-vendor.png')}}" alt="" class="default">
                                         </div>
                                         <div class="content">
                                             <div class="title">Multi Vendor Solutions</div>

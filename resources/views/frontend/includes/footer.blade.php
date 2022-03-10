@@ -66,7 +66,7 @@
                 <div class="col-4">
                     <div class="contact-info">
                         <div class="header">
-                            <i class="bi bi-telephone-fill"></i>
+                            <img src="{{url('images/landing_page/home/phone-icon.png')}}" alt="">
                             <div class="title">Let's Talk</div>
                         </div>
                         <div class="body">
@@ -99,7 +99,7 @@
             </div>
             <div class="row g-0">
                 <div class="copyright-blocok">
-                    <div class="terms"><a href="#">Terms of Service</a> + <a href="#">Privacy Policy</a></div>
+                    <div class="terms"><a href="{{url('terms-condition')}}">Terms of Service</a> + <a href="{{url('privacy-policy')}}">Privacy Policy</a></div>
                     <div class="copyright">Copyright @ {{date('Y')}} | Tallentor Global Ltd</div>
                 </div>
             </div>

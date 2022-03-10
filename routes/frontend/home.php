@@ -23,6 +23,7 @@ use App\Http\Controllers\Frontend\WidgetController;
 use App\Http\Controllers\Frontend\IMSController;
 use App\Http\Controllers\Frontend\PortfolioController;
 use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\TermsAndPrivacyController;
 
 /*
  * Frontend Controllers
@@ -52,7 +53,8 @@ Route::get('services',[ServicesController::class, 'index'])->name('services');
 Route::get('portfolio',[PortfolioController::class, 'index'])->name('portfolio');
 Route::get('home_blog',[BlogController::class, 'index'])->name('home_blog');
 Route::get('solo_post/{id}',[BlogController::class, 'solo_post'])->name('solo_post');
-
+Route::get('terms-condition',[TermsAndPrivacyController::class, 'terms_condition'])->name('terms_condition');
+Route::get('privacy-policy',[TermsAndPrivacyController::class, 'privacy_policy'])->name('privacy_policy');
 
 
 Route::get('generatePDF/{id}',[IMSController::class, 'generatePDF'])->name('generatePDF');

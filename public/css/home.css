@@ -183,9 +183,8 @@
     margin-bottom: 24px;
 }
 
-.feature-section .body .feature-box .content-block .header .title .bi {
-    color: #00AEEF;
-    margin-right: 28px;
+.feature-section .body .feature-box .content-block .header .title img {
+    margin-right: 25px;
 }
 
 .feature-section .body .feature-box .content-block .header .text {
@@ -331,8 +330,7 @@
     text-align: left;
 }
 
-.SEO-section .inner-wrapper .SEO-block .header .title .bi {
-    color: #00AEEF;
+.SEO-section .inner-wrapper .SEO-block .header .title img {
     margin-right: 12px;
 }
 
