@@ -34,6 +34,9 @@
                             <a class="nav-link" href="#" id="profileDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class="profile">
+                                    <div class="image">
+                                        <img src="{{auth()->user()->picture}}" alt="profile-picture">
+                                    </div>
                                     <div class="name">{{auth()->user()->first_name}} {{auth()->user()->last_name}}</div>
                                     <div class="dropdown-icon">
                                         <i class="bi bi-chevron-down"></i>

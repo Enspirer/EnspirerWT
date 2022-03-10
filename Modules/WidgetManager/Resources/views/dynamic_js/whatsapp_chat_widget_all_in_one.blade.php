@@ -549,7 +549,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage1" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Whatsapp">
-                            <button type="submit" name="button">Send</button>
+                            <button type="submit" name="button" formtarget="_blank">Send</button>
                         </div>
                     </form>
                     <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
@@ -562,7 +562,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage2" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Messenger">
-                            <button type="submit" name="button">Send</button>
+                            <button type="submit" name="button" formtarget="_blank">Send</button>
                         </div>
                     </form>
                     <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
@@ -575,7 +575,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage3" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Telegram">
-                            <button type="submit" name="button">Send</button>
+                            <button type="submit" name="button" formtarget="_blank">Send</button>
                         </div>
                     </form>
                     <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
@@ -588,7 +588,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage4" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Line">
-                            <button type="submit" name="button">Send</button>
+                            <button type="submit" name="button" formtarget="_blank">Send</button>
                         </div>
                     </form>
                     <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
@@ -601,7 +601,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Viber">
-                            <button type="submit" name="button">Send</button>
+                            <button type="submit" name="button" formtarget="_blank">Send</button>
                         </div>
                     </form>
                     <form id="allin1startupform">
@@ -708,3 +708,11 @@ function myTimer() {
  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
  xhttp.send("widget_id=" + widget_id + "&current_url=" + current_url);
 }
+
+
+function printMousePos(event) {
+    console.log('x=' + event.clientX);
+    console.log('y=' + event.clientY);
+}
+
+document.addEventListener("click", printMousePos);
