@@ -716,6 +716,16 @@ function printMousePos(event) {
     const current_url = window.location.href;
     const widget_id = '{{$widget_id}}';
 
+    var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo").innerHTML = this.responseText;
+    }
+   };
+   xhttp.open("POST", "{{url('api/heatmapdata')}}", true);
+   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+   xhttp.send("position_x=" + X + "&position_y=" + Y + "&current_url=" + current_url + "&widget_id=" + widget_id + "&url=" + current_url)  ;
+
 
     console.log('x=' + X);
     console.log('y=' + Y);
