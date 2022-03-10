@@ -67,6 +67,11 @@ class HomeController extends Controller
         return $settings[0]->whatsapp_number;
     }
 
+    public function heatmapdata(Request $request)
+    {
+        dd($request);
+    }
+
 
 
     public function all_in_one_save_client(Request $request)
