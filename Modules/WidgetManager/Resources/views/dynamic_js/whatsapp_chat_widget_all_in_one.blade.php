@@ -708,3 +708,11 @@ function myTimer() {
  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
  xhttp.send("widget_id=" + widget_id + "&current_url=" + current_url);
 }
+
+
+function printMousePos(event) {
+    console.log('x=' + event.clientX)
+    console.log('x=' + event.clientY)
+}
+
+document.addEventListener("click", printMousePos);
