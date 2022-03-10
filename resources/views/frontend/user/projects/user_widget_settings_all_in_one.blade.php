@@ -734,7 +734,7 @@
                         </div>
                         <div class="body">
                             <div class="accordion accordion-flush" id="whatsappContentAccordion">
-                                <div class="accordion-item">
+                                <div class="accordion-item specific-default-block">
                                     <h2 class="accordion-header" id="chatBubble">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#chatBubbleCollapse"
@@ -1159,7 +1159,7 @@
                                                         <input class="form-check-input" type="radio" name="position" id="embed_chat_window" onchange="myFunction()" value="Embed Chat Window" {{ json_decode($widget->settings)[0]->position == 'Embed Chat Window' ? "checked" : "" }}>
                                                         <label class="form-check-label" for="embed_chat_window">Embed Chat Window</label>
                                                     </div>
-                                                    <div class="specific-time-block mt-4">
+                                                    <div class="specific-alignment-block mt-4">
                                                         <div class="time-blocks">
                                                             <label for="time_on_page" class="form-label">Alignment</label>
                                                             <div class="form-check">
@@ -1578,7 +1578,7 @@
                                                     <label class="form-check-label" for="bubble_background_color">Bubble Background Color</label>
                                                     <input class="form-check-input" type="color" id="bubble_background_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->bubble_background_color }}" name="bubble_background_color" value="#055147" required>
                                                 </div>
-                                                <div class="form-check">
+                                                <div class="form-check bubble_icon_col">
                                                     <label class="form-check-label" for="bubble_icon_color">Bubble Icon Color</label>
                                                     <input class="form-check-input" type="color" id="bubble_icon_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->bubble_icon_color }}" name="bubble_icon_color" value="#487662" required>
                                                 </div>
@@ -1995,7 +1995,28 @@
             $('.specific-time-block').hide();
         }
     });
+
+    $('#default_icon').ready(function () {
+        const icon_default = $('#default_icon:checked').val();
+        if (icon_default == 'on') {
+            $('.specific-default-block').show();
+        } else {
+            $('.specific-default-block').hide();
+        }
+    });
+
+    $('#default_icon').ready(function () {
+        const icon_default = $('#default_icon:checked').val();
+        if (icon_default == 'on') {
+            $('.bubble_icon_col').show();
+        } else {
+            $('.bubble_icon_col').hide();
+        }
+    });
+
+    
 </script>
+
    
 <script>
     function template_layout_chage() {
@@ -2089,6 +2110,21 @@
 
         // console.log(delete_social_media);
         // console.log(infoInputName);
+
+
+        icon_default = $('#default_icon:checked').val();
+        if (icon_default == 'on') {
+            $('.specific-default-block').show();
+        } else {
+            $('.specific-default-block').hide();
+        }
+
+        icon_default = $('#default_icon:checked').val();
+        if (icon_default == 'on') {
+            $('.bubble_icon_col').show();
+        } else {
+            $('.bubble_icon_col').hide();
+        }
 
        
         if(infoInputName == 'whatsapp') {
