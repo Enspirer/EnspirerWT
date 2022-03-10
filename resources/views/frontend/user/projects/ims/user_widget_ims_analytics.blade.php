@@ -83,7 +83,7 @@
                                                                     <div class="">
                                                                         <a class="btn btn-warning ms-4" href="{{ url('export_ims_client') }}">Export CSV</a>
                                                                     </div>
-                                                                    <form action="{{route('frontend.user.user_widget.ims_dates_report')}}" method="post" enctype="multipart/form-data">
+                                                                    <form action="{{ route('frontend.user.user_widget.ims_analytics', $project->id) }}" method="get" enctype="multipart/form-data">
                                                                     {{csrf_field()}}
                                                                         <div class="row ms-4">
                                                                             <div class="col-4">
@@ -110,12 +110,13 @@
                                                                             <tr class="data-row">
                                                                                 <th class="data-title"></th>
                                                                                 <th class="data-title"></th>
-                                                                                <th class="data-title">Action by</th>
-                                                                                <th class="data-title">Action Taken</th>
                                                                                 <th class="data-title">Name</th>
                                                                                 <th class="data-title">Email</th>
                                                                                 <th class="data-title">Phone Number</th>
+                                                                                <th class="data-title">Assigned by</th>
+                                                                                <th class="data-title">Action Taken</th>                                                                                
                                                                                 <th class="data-title">Status</th>
+                                                                                <th class="data-title">Date</th>
                                                                                 <th class="data-title">Report</th>
                                                                             </tr>
                                                                         </thead>
@@ -132,6 +133,17 @@
                                                                                             <i class="bi bi-star-fill"></i>
                                                                                             <i class="bi bi-star"></i>
                                                                                         </label>
+                                                                                    </td>                                                                                    
+                                                                                    <td class="data--comment data-cell">
+                                                                                        <div class="text">{{$client->client_name}}</div>
+                                                                                        <!-- <input type="text" class="form-control" placeholder="This is the sample comment "> -->
+                                                                                    </td>                                                                                   
+                                                                                    <td class="data--manager-comment data-cell">
+                                                                                        <div class="text">{{$client->client_email}}</div>
+                                                                                        <!-- <input type="text" class="form-control" placeholder="This is the sample comment "> -->
+                                                                                    </td>
+                                                                                    <td class="data--manager-comment data-cell">
+                                                                                        <div class="text">{{$client->phone_number}}</div>
                                                                                     </td>
                                                                                     <td class="data--action-by data-cell">
                                                                                         @if($client->assign_by == null)
@@ -177,17 +189,6 @@
                                                                                             <div class="text">{{$client->action_taken}}</div>
                                                                                         @endif
                                                                                     </td>
-                                                                                    <td class="data--comment data-cell">
-                                                                                        <div class="text">{{$client->client_name}}</div>
-                                                                                        <!-- <input type="text" class="form-control" placeholder="This is the sample comment "> -->
-                                                                                    </td>                                                                                   
-                                                                                    <td class="data--manager-comment data-cell">
-                                                                                        <div class="text">{{$client->client_email}}</div>
-                                                                                        <!-- <input type="text" class="form-control" placeholder="This is the sample comment "> -->
-                                                                                    </td>
-                                                                                    <td class="data--manager-comment data-cell">
-                                                                                        <div class="text">{{$client->phone_number}}</div>
-                                                                                    </td>
                                                                                     <td class="data--Status data-cell">
                                                                                         <!-- <div class="indicator"></div> -->
                                                                                         @if($client->status == null)
@@ -205,6 +206,9 @@
                                                                                             </option>
                                                                                         </select> -->
                                                                                     </td>
+                                                                                    <td class="data--date data-cell">
+                                                                                        <div class="text">{{$client->created_at->format('d M Y')}}</div>
+                                                                                    </td>   
                                                                                     <td class="data--report data-cell">
                                                                                         <a href="{{url('generatePDF',$client->id)}}" class="download-btn">
                                                                                             <i class="bi bi-download"></i>

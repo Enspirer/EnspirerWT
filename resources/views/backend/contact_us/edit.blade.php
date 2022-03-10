@@ -23,15 +23,15 @@
                                                     <td style="font-size:16px;">{{ $contact_us->name }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="font-weight: 600; font-size:16px;">Phone Number:</td>
-                                                    <td style="font-size:16px;">{{ $contact_us->phone }}</td>
-                                                </tr>
-                                                <tr>
                                                     <td style="font-weight: 600; font-size:16px;">Email:</td>
                                                     <td style="font-size:16px;">{{ $contact_us->email }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="font-weight: 600; font-size:16px;">Message:</td>
+                                                    <td style="font-weight: 600; font-size:16px;">Help:</td>
+                                                    <td style="font-size:16px;">{{ $contact_us->help }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: 600; font-size:16px;">Inquiry:</td>
                                                     <td style="font-size:16px;">{{ $contact_us->message }}</td>
                                                 </tr>
                                             </tbody>                                            

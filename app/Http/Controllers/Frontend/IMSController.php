@@ -181,7 +181,7 @@ class IMSController extends Controller
         return back();
     }
 
-    public function ims_analytics($id)
+    public function ims_analytics(Request $request, $id)
     {
 
         $date = Carbon::now()->subDays(7);
@@ -200,23 +200,33 @@ class IMSController extends Controller
 
 //         dd($id);
         $project = Projects::where('id',$id)->first();           
-        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // $ims_client = ImsClients::where('project_id',$project->id)->get();
         // dd($ims_client);
 
-        $count_all = count(ImsClients::where('project_id',$project->id)->get());
-        $count_success = count(ImsClients::where('project_id',$project->id)->where('status','Deal close successfully')->get());
-        // dd($count_success);
 
+        $sort_search =null;
+        $ims_client = ImsClients::where('project_id',$project->id);
 
-
+        if ($request->has('start_date')){
+            $sort_search = $request->start_date;
+            $sort_search_two = $request->end_date;
+            $ims_client = $ims_client->whereBetween('created_at', [$sort_search, $sort_search_two]);
+        }
         
+        // $ims_client = ImsClients::orderBy('created_at','DESC')->whereBetween('created_at', [$request->start_date, $request->end_date])->get(); 
+
+
+        $ims_client = $ims_client->get();
+
+
+        // dd($ims_client);
+
+
 
         return view('frontend.user.projects.ims.user_widget_ims_analytics',[
             'chart_data' => $ims_clienrt,
             'project' => $project,
-            'ims_client' => $ims_client,
-            'count_all' => $count_all,
-            'count_success' => $count_success
+            'ims_client' => $ims_client
         ]);
         
     }

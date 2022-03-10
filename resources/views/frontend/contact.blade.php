@@ -89,22 +89,30 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6">
-                    <form class="contact-form">
+                    <form action="{{route('frontend.contact_us.store')}}" method="post" class="contact-form" enctype="multipart/form-data">
+                    {{csrf_field()}}
+
+                        @if(session()->has('error'))
+                            <div class="alert alert-danger">
+                                {{ session()->get('error') }}
+                            </div>
+                        @endif
+
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Full Name">
+                            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" placeholder="Your Inquiry"></textarea>
+                            <textarea class="form-control" name="inquiry" placeholder="Your Inquiry" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="How can we help you ?">
+                            <input type="text" class="form-control" name="help" placeholder="How can we help you ?" required>
                         </div>
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input">
-                            <label class="form-check-label">I would like to receive information and updates from Tallentor in relation to my enquiry, <br> I understand Tallentor will never share my information</label>
+                            <input type="checkbox" id="tick" class="form-check-input" required>
+                            <label class="form-check-label" for="tick">I would like to receive information and updates from Tallentor in relation to my enquiry, <br> I understand Tallentor will never share my information</label>
                         </div>
                         <div class="button-block">
                             <div class="g-recaptcha" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR" ></div>
@@ -133,12 +141,41 @@
         </div>
     </section>
 
+
+@if(\Session::has('success') )
+
+<div class="modal fade" id="overlay" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-body" style="padding: 3rem">
+                <h2 class="text-center">Submitted Successfully!</h2>
+                <!-- <h5>Email Alert Sent</h5> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endif
+
     @include('frontend.includes.footer')
 
     
 @endsection
 
 @push('after-scripts')
+
+<script>
+    $(window).on('load', function () {
+        $('#overlay').modal('show');
+    });
+    $("#close-btn").click(function () {
+        $('#overlay').modal('hide');
+    });
+</script>
 
 <script>
 window.oncontextmenu = () => {
