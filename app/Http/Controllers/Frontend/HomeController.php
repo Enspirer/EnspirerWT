@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\HeatMap;
 use App\Models\VisitorCount;
 use App\Models\VisitorLogs;
 use App\Models\Widgets;
@@ -69,7 +70,17 @@ class HomeController extends Controller
 
     public function heatmapdata(Request $request)
     {
-        dd($request);
+        $widget = Widgets::where('id',$request->widget_id)->first();
+        $heatmapDetails = new HeatMap;
+        $heatmapDetails->position = json_encode([
+            'x' => $request->position_x,
+            'y' => $request->position_y,
+        ]);
+        $heatmapDetails->widget_id = $request->widget_id;
+        $heatmapDetails->url = $request->url;
+        $heatmapDetails->ip_address =$request->ip();
+        $heatmapDetails->project_id =$widget->project_id;
+        $heatmapDetails->save();
     }
 
 
