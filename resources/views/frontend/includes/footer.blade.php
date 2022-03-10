@@ -100,7 +100,7 @@
             <div class="row g-0">
                 <div class="copyright-blocok">
                     <div class="terms"><a href="#">Terms of Service</a> + <a href="#">Privacy Policy</a></div>
-                    <div class="copyright">Copyright @2021 | Tallentor Global Ltd</div>
+                    <div class="copyright">Copyright @ {{date('Y')}} | Tallentor Global Ltd</div>
                 </div>
             </div>
         </div>
