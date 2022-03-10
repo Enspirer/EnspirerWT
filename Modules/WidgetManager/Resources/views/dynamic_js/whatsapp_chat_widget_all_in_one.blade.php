@@ -451,14 +451,25 @@ function addWidget() {
                             @elseif($widget_meta->scroll_position_appearance == "Left")
                                 <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;left: 1px;margin-left: 30px;">
                                     @elseif($widget_meta->scroll_position_appearance == "Right")
-                                        <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
-                                            @endif
-                                                @if($widget_meta->default_icon == 'on')
-                                                    <img src="{{url('images/logo/fev/favicon-32x32.png')}}" style="" alt="">
-                                                @else
-                                                    <i style="color:{{$widget_meta->bubble_icon_color}};" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
+
+
+                                        @if($widget_meta->default_icon != 'on')
+                                            <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
+
+
+                                        @else
+                                            <div id="allin1widtoggler" class="default_image" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
+
+                                        @endif
+
                                                 @endif
-                                        </div>
+                                                    @if($widget_meta->default_icon == 'on')
+                                                        <img src="{{url('images/logo/fev/favicon-32x32.png')}}" style="" alt="">
+                                                    @else
+                                                        <i style="color:{{$widget_meta->bubble_icon_color}};" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
+                                                    @endif
+                                            </div>
+                                            
 
                                     @endif
                                 
