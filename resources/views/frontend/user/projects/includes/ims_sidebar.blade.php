@@ -9,7 +9,7 @@
                         <div class="live-status-block">
                             <i class="bi bi-broadcast"></i>
                             <div class="caption">Live Visitors</div>
-                            <div class="count">05</div>
+                            <div class="count">{{\App\Models\VisitorCount::where('project_id',$project->id)->count()}}</div>
                         </div>
                     </div>
                     <div class="side-nav__navs" id="sideNavs">
