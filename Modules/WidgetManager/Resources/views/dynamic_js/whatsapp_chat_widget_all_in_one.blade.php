@@ -339,8 +339,8 @@ function addWidget() {
     }
 
     #allin1widgetblock #allin1widtoggler {
-        width: 78px;
-        height: 78px;
+        width: 60px;
+        height: 60px;
         background-color: #fff;
         border-radius: 50%;
         position: fixed;
@@ -368,19 +368,37 @@ function addWidget() {
         cursor: pointer;
     }
 
+    #allin1widgetblock #allin1widtoggler.default-icon {
+        box-shadow: none;
+        background-color: transparent !important;
+    }
+
     @if(count($widget_meta->notification) != 0)
         @foreach($widget_meta->notification as $key => $notify)
             @if($notify == 'bubble_notification_bage')
                 #allin1widgetblock #allin1widtoggler::after {
                     content: '';
-                    width: 5px;
-                    height: 5px;
+                    width: 2px;
+                    height: 2px;
                     background-color: #f00;
                     position: absolute;
                     border-radius: 50%;
-                    top: 8px;
-                    right: 8px;
+                    top: 7px;
+                    right: 7px;
                     animation: pulse 1s infinite;
+                }
+
+                #allin1widgetblock #allin1widtoggler.default-icon::after {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    background-color: transparent;
+                    border: 3px solid #FF0404;
+                    position: absolute;
+                    border-radius: 50%;
+                    top: 0;
+                    right: 10;
+                    animation: border-pulse 1s infinite;
                 }
             @endif
         @endforeach
@@ -389,6 +407,26 @@ function addWidget() {
     #allin1widgetblock #allin1widtoggler i {
         font-size: 35px;
         color: #06557E;
+    }
+
+    @keyframes border-pulse
+        {
+        0% {
+           transform: scale(0.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @-webkit-keyframes border-pulse
+        {
+        0% {
+            transform: scale(0.1);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 
     @keyframes pulse
@@ -431,6 +469,26 @@ function addWidget() {
         }
     }
 
+    @media screen and (max-width: 574px) {
+        #allin1widgetblock #allin1widget.allin1view {
+            bottom: unset;
+            right: unset;
+            top: 0;
+            left: 0;
+        }
+
+        #allin1widgetblock #allin1widget.allin1view .allin1container{
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+        }
+
+        #allin1widgetblock #allin1widget.allin1view .allin1container .allin1header{
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+
     /*# sourceMappingURL=main.css.map */
     </style>
 
@@ -458,13 +516,13 @@ function addWidget() {
 
 
                                         @else
-                                            <div id="allin1widtoggler" class="default_image" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
+                                            <div id="allin1widtoggler" class="default-icon" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
 
                                         @endif
 
                                                 @endif
                                                     @if($widget_meta->default_icon == 'on')
-                                                        <img src="{{url('images/logo/fev/favicon-32x32.png')}}" style="" alt="">
+                                                        <img src="{{url('images/social_media_icons/all-in-one-chat.svg')}}" width="60" alt="">
                                                     @else
                                                         <i style="color:{{$widget_meta->bubble_icon_color}};" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
                                                     @endif

@@ -248,8 +248,8 @@ div.innerHTML = `<style>
         font-weight: 500;
     }
     #wappwidgetblock #wappwidtoggler {
-        width: 78px;
-        height: 78px;
+        width: 60px;
+        height: 60px;
         background-color: #fff;
         border-radius: 50%;
         position: fixed;
@@ -272,13 +272,13 @@ div.innerHTML = `<style>
             @if($notify == 'bubble_notification_bage')
                 #wappwidgetblock #wappwidtoggler::after {
                     content: "";
-                    width: 5px;
-                    height: 5px;
+                    width: 2px;
+                    height: 2px;
                     background-color: #f00;
                     position: absolute;
                     border-radius: 50%;
-                    top: 8px;
-                    right: 8px;
+                    top: 7px;
+                    right: 7px;
                     animation: pulse 1s infinite;
                 }
             @endif
@@ -286,7 +286,7 @@ div.innerHTML = `<style>
     @endif
 
     #wappwidgetblock #wappwidtoggler i {
-        font-size: 45px;
+        font-size: 30px;
         color: #14C656;
     }
 
@@ -307,6 +307,26 @@ div.innerHTML = `<style>
         }
         100% {
             box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.1);
+        }
+    }
+
+    @media screen and (max-width: 574px) {
+        #wappwidgetblock #wappwidget.wappview {
+            bottom: unset;
+            right: unset;
+            top: 0;
+            left: 0;
+        }
+
+        #wappwidgetblock #wappwidget.wappview .wappcontainer{
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+        }
+
+        #wappwidgetblock #wappwidget.wappview .wappcontainer .wappheader{
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
         }
     }
 
