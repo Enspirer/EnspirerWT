@@ -604,6 +604,7 @@
     flex-direction: row;
     align-items: center;
     gap: 1.5rem;
+    overflow: hidden;
 }
 
 #sideNavInner #channel-block .inner-wrapper .body .channels-block .channel .content-block img {
