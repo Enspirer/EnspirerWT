@@ -711,8 +711,11 @@ function myTimer() {
 
 
 function printMousePos(event) {
-    console.log('x=' + event.clientX);
-    console.log('y=' + event.clientY);
+    const X = event.pageX;
+    const Y = event.pageY;
+
+    console.log('x=' + X);
+    console.log('y=' + Y);
 }
 
 document.addEventListener("click", printMousePos);
