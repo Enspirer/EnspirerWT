@@ -95,7 +95,9 @@ class HomeController extends Controller
 
         if($request->contact_via == 'Whatsapp'){
             if ($getSettings[0]->whatsapp_details[0] !=null) {
-                return redirect()->to('https://web.whatsapp.com/send?phone='.$phone_number.'&text='.$incom);
+                return redirect()->to('https://api.whatsapp.com/send/?phone='.$phone_number.'/?text='.$incom);
+
+//                return redirect()->to('https://web.whatsapp.com/send?phone='.$phone_number.'&text='.$incom);
             }
         }else if ($request->contact_via == 'Messenger'){
             if ($getSettings[0]->fb_details[0] !=null) {
