@@ -424,14 +424,14 @@ function addWidget() {
 
                 #allin1widgetblock #allin1widtoggler.default-icon::after {
                     content: '';
-                    width: 10px;
-                    height: 10px;
+                    width: 12px;
+                    height: 12px;
                     background-color: transparent;
-                    border: 3px solid #FF0404;
+                    border: 2px solid #FF0404;
                     position: absolute;
                     border-radius: 50%;
-                    top: 0;
-                    right: 10;
+                    top: 1px;
+                    right: 10px;
                     animation: border-pulse 1s infinite;
                 }
             @endif
