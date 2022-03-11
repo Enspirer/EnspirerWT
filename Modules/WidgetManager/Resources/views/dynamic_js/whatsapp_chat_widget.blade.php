@@ -172,9 +172,21 @@ div.innerHTML = `<style>
         background-color: #00796a;
         border-radius: 5px;
         position: relative;
-        bottom: 135px;
+        bottom: 180px;
         z-index: 1;
         display: none;
+    }
+    #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent .form-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+    #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent .form-title img {
+        width: 35px;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform.wappview .wappformcontent {
         display: flex;
@@ -211,9 +223,9 @@ div.innerHTML = `<style>
     
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent .bi {
     position: absolute;
-    right: -10px;
-    top: -10px;
-    color: #333;
+    right: 10px;
+    top: 10px;
+    color: #fff;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent .bi:hover {
     cursor: pointer;
@@ -344,14 +356,8 @@ div.innerHTML = `<style>
         #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent {
             width: 100%;
             height: 100%;
-            bottom: 0;
-            justify-content: center;
-        }
-
-        #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform .wappformcontent .bi {
-            top: 15px;
-            right: 15px;
-            color: #fff;
+            bottom: -110px;
+            border-radius: 0;
         }
     }
 
@@ -415,6 +421,7 @@ div.innerHTML = `<style>
                         <form action="{{route('save_client')}}" method="post">
                             {{csrf_field()}}
                             <i class="bi bi-x-circle-fill" onclick="wappformclose()"></i>
+                            <div class="form-title">Start chat with: <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt=""></div>
                             <input type="text" id="username" name="username" placeholder="Your name" required>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="email" id="useremail" name="useremail" placeholder="Your email" required>

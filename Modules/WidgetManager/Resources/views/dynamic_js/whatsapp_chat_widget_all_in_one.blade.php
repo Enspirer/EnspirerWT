@@ -239,7 +239,7 @@ function addWidget() {
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent {
-        background-color: #06557E;
+        background-color: #1B3D6B;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -271,15 +271,31 @@ function addWidget() {
         width: 100%;
     }
 
+    #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent .inner-wrapper .form-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent .inner-wrapper .form-title img {
+        width: 35px;
+    }
+
     #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent.allin1view {
         visibility: visible;
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent .bi {
         position: absolute;
-        right: -10px;
-        top: -10px;
-        color: #333;
+        right: 10px;
+        top: 10px;
+        color: #fff;
+        z-index: 1;
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent .bi:hover {
@@ -504,16 +520,8 @@ function addWidget() {
         #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent {
             width: 100vw;
             height: 100vh;
-            justify-content: center;
             border-radius: 0;
-            bottom: -20px
-        }
-
-        #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent .bi {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            color: #fff;
+            bottom: -130px
         }
     }
 
@@ -544,7 +552,7 @@ function addWidget() {
 
 
                                         @else
-                                            <div id="allin1widtoggler" class="default-icon" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
+                                            <div id="allin1widtoggler" class="default-icon" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}};{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
 
                                         @endif
 
@@ -645,6 +653,7 @@ function addWidget() {
                         <div class="allin1formcontent allin1form1">
                         <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <div class="inner-wrapper">
+                            <div class="form-title">Start chat with: <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt=""></div>
                             <input type="text" id="username1" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail1" name="useremail" placeholder="Your email" required>
                             <input type="tel" id="telephone1" name="phone_number" placeholder="Your phone number" required>
@@ -660,6 +669,7 @@ function addWidget() {
                         <div class="allin1formcontent allin1form2">
                         <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <div class="inner-wrapper">
+                            <div class="form-title">Start chat with: <img src="{{url('images/social_media_icons/messenger.png')}}" alt=""></div>
                             <input type="text" id="username2" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail2" name="useremail" placeholder="Your email" required>
                             <input type="tel" id="telephone2" name="phone_number" placeholder="Your phone number" required>
@@ -675,6 +685,7 @@ function addWidget() {
                         <div class="allin1formcontent allin1form3">
                         <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <div class="inner-wrapper">
+                            <div class="form-title">Start chat with: <img src="{{url('images/social_media_icons/telegram.png')}}" alt=""></div>
                             <input type="text" id="username3" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail3" name="useremail" placeholder="Your email" required>
                             <input type="tel" id="telephone3" name="phone_number" placeholder="Your phone number" required>
@@ -690,6 +701,7 @@ function addWidget() {
                         <div class="allin1formcontent allin1form4">
                         <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <div class="inner-wrapper">
+                            <div class="form-title">Start chat with: <img src="{{url('images/social_media_icons/line.png')}}" alt=""></div>
                             <input type="text" id="username4" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail4" name="useremail" placeholder="Your email" required>
                             <input type="tel" id="telephone4" name="phone_number" placeholder="Your phone number" required>
@@ -705,6 +717,7 @@ function addWidget() {
                         <div class="allin1formcontent allin1form5">
                         <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <div class="inner-wrapper">
+                            <div class="form-title">Start chat with: <img src="{{url('images/social_media_icons/viber.png')}}" alt=""></div>
                             <input type="text" id="username5" name="username" placeholder="Your name" required>
                             <input type="email" id="useremail5" name="useremail" placeholder="Your email" required>
                             <input type="tel" id="telephone5" name="phone_number" placeholder="Your phone number" required>
@@ -717,17 +730,17 @@ function addWidget() {
                     </form>
                     <form id="allin1startupform">
                         <div class="allin1formcontent allin1form6">
+                        <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <div class="inner-wrapper">
+                            <div class="form-title">Start chat with: <img src="{{url('images/social_media_icons/tawkto.png')}}" alt=""></div>
                             <input type="text" id="username6" name="username" placeholder="Your name" required>
-                            <i class="bi bi-x-circle-fill" onclick="allin1formclose()"></i>
                             <input type="email" id="useremail6" name="useremail" placeholder="Your email" required>
                             <input type="tel" id="telephone6" name="phone_number" placeholder="Your phone number" required>
                             <textarea name="usermessage" id="usermessage6" placeholder="Your message" required></textarea>
                             <input type="hidden" id="widget_id6" name="widget_id6" value="{{$widget_id}}" required>
                             <input type="hidden" id="contact_via6" name="contact_via" value="Tawkto">
                             <a href="#" name="button" onclick="allin1tawktoiframe()">Send</a>
-   
-   </div>                         </div>
+                        </div>
                     </form>
                 </div>
                 <div class="allin1ifameblock">
