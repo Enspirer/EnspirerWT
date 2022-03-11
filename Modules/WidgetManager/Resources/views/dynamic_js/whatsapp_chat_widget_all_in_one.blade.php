@@ -341,25 +341,36 @@ function addWidget() {
         cursor: pointer;
     }
 
-    #allin1widgetblock #allin1widget .allin1container .allin1ifameblock {
+    #allin1widgetblock #allin1widget .allin1container .allin1iframeblock {
         position: absolute;
-        width: 100%;
-        bottom: 0;
+        width: 351px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: -20px;
         display: none;
     }
+    #allin1widgetblock #allin1widget .allin1container .allin1iframeblock .allin1iframe{
+        width: 100%;
+        height: 450px;
+        border-radius: 15px;
+    }
 
-    #allin1widgetblock #allin1widget .allin1container .allin1ifameblock.allin1view {
+    #allin1widgetblock #allin1widget .allin1container .allin1iframeblock .allin1iframe .tawk-max-container{
+        border: none !important;
+    }
+
+    #allin1widgetblock #allin1widget .allin1container .allin1iframeblock.allin1view {
         display: block;
     }
 
-    #allin1widgetblock #allin1widget .allin1container .allin1ifameblock .bi {
+    #allin1widgetblock #allin1widget .allin1container .allin1iframeblock .bi {
         position: absolute;
         color: #fff;
         right: 10px;
         top: 8px;
     }
 
-    #allin1widgetblock #allin1widget .allin1container .allin1ifameblock .bi:hover {
+    #allin1widgetblock #allin1widget .allin1container .allin1iframeblock .bi:hover {
         cursor: pointer;
     }
 
@@ -523,6 +534,17 @@ function addWidget() {
             border-radius: 0;
             bottom: -130px
         }
+
+        #allin1widgetblock #allin1widget .allin1container .allin1iframeblock {
+            width: 100vw;
+            height: 100vh;
+            bottom: -130px;
+        }
+
+        #allin1widgetblock #allin1widget .allin1container .allin1iframeblock .allin1iframe {
+            height: 100%;
+            border-radius: 0;
+        }
     }
 
     /*# sourceMappingURL=main.css.map */
@@ -600,7 +622,7 @@ function addWidget() {
                         @if(count($widget_meta->whatsapp_details) != 1)
                             @foreach($widget_meta->whatsapp_details as $key => $whats)
                                 @if($whats == 'whatsapp')  
-                                    <button onclick="allin1formpopup(1)" class="allin1btn allin1btn1"><i class="bi bi-whatsapp"></i></button>
+                                    <button onclick="allin1formpopup(1)" class="allin1btn allin1btn1"><img width="25" src="{{url('images/social_media_icons/whatsapp.png')}}"></button>
                                 @endif
                             @endforeach
                         @endif
@@ -609,7 +631,7 @@ function addWidget() {
                         @if(count($widget_meta->fb_details) != 1)
                             @foreach($widget_meta->fb_details as $key => $fb)
                                 @if($fb == 'fb')  
-                                    <button onclick="allin1formpopup(2)" class="allin1btn allin1btn2"><i class="bi bi-messenger"></i></button>
+                                    <button onclick="allin1formpopup(2)" class="allin1btn allin1btn2"><img width="25" src="{{url('images/social_media_icons/messenger.png')}}"></button>
                                 @endif
                             @endforeach
                         @endif
@@ -617,7 +639,7 @@ function addWidget() {
                         @if(count($widget_meta->telegram_details) != 1)
                             @foreach($widget_meta->telegram_details as $key => $telegram)
                                 @if($telegram == 'telegram')  
-                                    <button onclick="allin1formpopup(3)" class="allin1btn allin1btn3"><i class="bi bi-telegram"></i></button>
+                                    <button onclick="allin1formpopup(3)" class="allin1btn allin1btn3"><img width="25" src="{{url('images/social_media_icons/telegram.png')}}"></button>
                                 @endif
                             @endforeach
                         @endif
@@ -625,7 +647,7 @@ function addWidget() {
                         @if(count($widget_meta->line_details) != 1)
                             @foreach($widget_meta->line_details as $key => $line)
                                 @if($line == 'line')  
-                                    <button onclick="allin1formpopup(4)" class="allin1btn allin1btn4"><i class="bi bi-line"></i></button>
+                                    <button onclick="allin1formpopup(4)" class="allin1btn allin1btn4"><img width="25" src="{{url('images/social_media_icons/line.png')}}"></button>
                                 @endif
                             @endforeach
                         @endif
@@ -633,7 +655,7 @@ function addWidget() {
                         @if(count($widget_meta->viber_details) != 1)
                             @foreach($widget_meta->viber_details as $key => $viber)
                                 @if($viber == 'viber')  
-                                    <button onclick="allin1formpopup(5)" class="allin1btn allin1btn5"><i class="bi bi-instagram"></i></button>
+                                    <button onclick="allin1formpopup(5)" class="allin1btn allin1btn5"><img width="25" src="{{url('images/social_media_icons/viber.png')}}"></button>
                                 @endif
                             @endforeach
                         @endif
@@ -743,9 +765,9 @@ function addWidget() {
                         </div>
                     </form>
                 </div>
-                <div class="allin1ifameblock">
+                <div class="allin1iframeblock">
                     <i class="bi bi-x-lg" onclick="allin1formclose();allin1closetawktoiframe()"></i>
-                    <iframe class="allin1ifame" src="https://tawk.to/chat/613b9d3bd326717cb680d215/1ff8dsd8m" style=" width: 100%;height: 450px;border-radius: 15px;" frameborder="0"></iframe>
+                    <iframe class="allin1iframe" src="https://tawk.to/chat/613b9d3bd326717cb680d215/1ff8dsd8m" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -809,12 +831,12 @@ function allin1tawktoiframe() {
    
 
   
-    document.querySelector('.allin1ifameblock').classList.add("allin1view");
+    document.querySelector('.allin1iframeblock').classList.add("allin1view");
     
 }
 
 function allin1closetawktoiframe() {
-    document.querySelector('.allin1ifameblock').classList.remove("allin1view");
+    document.querySelector('.allin1iframeblock').classList.remove("allin1view");
 }
 
 document.cookie = "tallentor_widget=982SHEKKSMLA";
