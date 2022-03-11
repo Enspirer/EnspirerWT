@@ -97,7 +97,7 @@
                                                                 Notifications</label>
                                                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                                                         </div>
-                                                        <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="btn btn-delete"
+                                                        <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="delete btn btn-delete"
                                                             data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i>Delete</a>
                                                     </div>
                                                 </div>
