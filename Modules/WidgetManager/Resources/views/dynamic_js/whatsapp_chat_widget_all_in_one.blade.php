@@ -753,25 +753,49 @@ function addWidget() {
 
 window.onload = addWidget;
 
-function allin1msgPopTimeout() {
-    setTimeout(function(){
-        document.querySelector('.allin1welcomemsg').classList.add("allin1view");
-    },2000);
-}
+@if($widget_meta->auto_trigger != null)
+    function allin1msgPopTimeout() {
+        setTimeout(function(){
+            document.querySelector('.allin1welcomemsg').classList.add("allin1view");
+        },{{$widget_meta->message_auto_reply_time}});
+    }
+    setTimeout(
+        function allin1chatPopTimeout() {
+            document.querySelector('#allin1widget').classList.add("allin1view");
+            allin1msgPopTimeout();
+            var audio = new Audio('{{url('blackberrychat.mp3')}}');
+            audio.play();
+        }, {{$widget_meta->pop_up_opening_time}}
+    );
+
+@else
+
+    function allin1msgPopTimeout() {
+        setTimeout(function(){
+            document.querySelector('.allin1welcomemsg').classList.add("allin1view");
+        },2000);
+    }
+
+    function allin1toggle() {
+        document.querySelector('#allin1widget').classList.toggle("allin1view");
+        allin1msgPopTimeout();
+    }
+
+    setTimeout(
+        function allin1chatPopTimeout() {
+            document.querySelector('#allin1widget').classList.add("allin1view");
+            allin1msgPopTimeout();
+            var audio = new Audio('{{url('blackberrychat.mp3')}}');
+            audio.play();
+        }, 2000
+    );
+@endif
 
 function allin1toggle() {
     document.querySelector('#allin1widget').classList.toggle("allin1view");
     allin1msgPopTimeout();
 }
 
-setTimeout(
-    function allin1chatPopTimeout() {
-        document.querySelector('#allin1widget').classList.add("allin1view");
-        allin1msgPopTimeout();
-        var audio = new Audio('{{url('blackberrychat.mp3')}}');
-        audio.play();
-    }, 2000
-);
 
 function allin1close() {
     document.querySelector('#allin1widget').classList.remove("allin1view");
