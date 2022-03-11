@@ -19,7 +19,7 @@
                     <div class="section-container">
                         <div class="breadcrumb-block">
                             <ul class="breadcrumb mb-5">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
                                 <li class="breadcrumb-item active">Projects</li>
                             </ul>
                         </div>
