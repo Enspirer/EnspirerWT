@@ -3,7 +3,7 @@
             <div class="inner-wrapper">
                 <div class="brand">
                     <a href="{{url('/')}}">
-                        <img src="{{url('images/logo/Tallentor-Logo-(PNG).png')}}" alt="brand-logo">
+                        <img src="{{url('images/logo/tallentor-logo.png')}}" alt="brand-logo">
                     </a>
                 </div>
                 <div class="nav-links">
@@ -12,7 +12,19 @@
                             <a href="{{url('/')}}" class="nav-link {{ Request::segment(1) == '' ? 'active' : null }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('products')}}" class="nav-link {{ Request::segment(1) == 'products' ? 'active' : null }}">Products</a>
+                            <div class="dropdown">
+                                <a class="btn nav-link dropdown-toggle" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Products
+                                </a>
+                                <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="productNav">
+                                    <li><a class="dropdown-item" href="{{url('product-whatsapp-widget')}}">
+                                        <div class="icon-block"><i class="bi bi-whatsapp"></i></div> <div class="text">WhatsApp Widget</div>
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{{url('product-all-in-one-chat')}}">
+                                        <div class="icon-block"><i class="bi bi-grid-fill"></i></div> <div class="text">All-in-One Chat</div>
+                                    </a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a href="{{url('services')}}" class="nav-link {{ Request::segment(1) == 'services' ? 'active' : null }}">Services</a>

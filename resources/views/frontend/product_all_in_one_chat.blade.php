@@ -16,7 +16,7 @@
                     <div class="container">
                         <div class="inner-wrapper">
                             <div class="content-block">
-                                <h2 class="title">WhatsApp<br>widget<br> for websites</h2>
+                                <h2 class="title"><span>All-in-One</span><br>Chat<br> for websites</h2>
                                 <p class="content">Integrate the most popular communication channel into your website and improve your customer service quality and sales conversion.</p>
                                 <ul>
                                     <li><i class="bi bi-check-circle-fill"></i> Customisable ready to use widget</li>
@@ -28,7 +28,7 @@
                                 </a>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/products/Group 549.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/all_in_one_chat/hero_image.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -42,10 +42,10 @@
                                     <div class="splide__track">
                                             <ul class="splide__list">
                                                 <li class="splide__slide">
-                                                    <img src="{{url('images/products/Group 550.png')}}" alt="">
+                                                    <img src="{{url('images/landing_page/products/all_in_one_chat/slide_1.png')}}" alt="">
                                                 </li>
                                                 <li class="splide__slide">
-                                                    <img src="{{url('images/products/Group 552.png')}}" alt="">
+                                                    <img src="{{url('images/landing_page/products/all_in_one_chat/slide_1.png')}}" alt="">
                                                 </li>
                                             </ul>
                                     </div>
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/products/ims_analytics.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/all_in_one_chat/ims.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-2">

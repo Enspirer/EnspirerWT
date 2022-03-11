@@ -57,6 +57,10 @@
     color: #00AEEF;
 }
 
+.navigation-bar .inner-wrapper .nav-links .navbar-nav .nav-item .nav-link:focus {
+    box-shadow: none;
+}
+
 .navigation-bar .inner-wrapper .nav-links .menu-trigger {
     cursor: pointer;
     display: block;
