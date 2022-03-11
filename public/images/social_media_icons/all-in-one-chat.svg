@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1458.735" height="1375.104" viewBox="0 0 1458.735 1375.104">
+  <defs>
+    <filter id="Union_1" x="0" y="0" width="1458.735" height="1375.104" filterUnits="userSpaceOnUse">
+      <feOffset dx="88" dy="62" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="35" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Union_1-2" x="0" y="0" width="1458.735" height="1375.104" filterUnits="userSpaceOnUse">
+      <feOffset dx="41" dy="69" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="41" result="blur-2"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_316">
+      <feOffset dx="18" dy="29" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-3"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_318">
+      <feOffset dx="18" dy="29" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161" result="color-3"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-4"/>
+      <feComposite operator="in" in="color-3"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.325" y1="0.931" x2="0.655" y2="0.033" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0793ff"/>
+      <stop offset="0.335" stop-color="#7e47ff"/>
+      <stop offset="0.795" stop-color="#d745b2"/>
+      <stop offset="1" stop-color="#ff6767"/>
+    </linearGradient>
+    <filter id="Ellipse_317">
+      <feOffset dx="18" dy="29" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161" result="color-4"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-5"/>
+      <feComposite operator="in" in="color-4"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_951" data-name="Group 951" transform="translate(-1963.896 -448.79)">
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 1963.9, 448.79)" filter="url(#Union_1)">
+        <path id="Union_1-3" data-name="Union 1" d="M0,1165.1s160.009-72.51,161.4-291.582A582.266,582.266,0,0,1,666.184,0,589.562,589.562,0,0,1,752.2,6.306a261.07,261.07,0,0,0-15.274,88.357c0,142.829,114.8,259.03,255.907,259.03a253.4,253.4,0,0,0,174.033-69.121,579.842,579.842,0,0,1,81.872,297.98A586.807,586.807,0,0,1,1236.9,699.957a579.331,579.331,0,0,1-87.655,208.305,584.262,584.262,0,0,1-256.306,211.062,579.573,579.573,0,0,1-109.351,33.944,585.5,585.5,0,0,1-96.488,11.464l.124.373Z" transform="translate(17 43)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 1963.9, 448.79)" filter="url(#Union_1-2)">
+        <path id="Union_1-4" data-name="Union 1" d="M0,1165.1s160.009-72.51,161.4-291.582A582.266,582.266,0,0,1,666.184,0,589.562,589.562,0,0,1,752.2,6.306a261.07,261.07,0,0,0-15.274,88.357c0,142.829,114.8,259.03,255.907,259.03a253.4,253.4,0,0,0,174.033-69.121,579.842,579.842,0,0,1,81.872,297.98A586.807,586.807,0,0,1,1236.9,699.957a579.331,579.331,0,0,1-87.655,208.305,584.262,584.262,0,0,1-256.306,211.062,579.573,579.573,0,0,1-109.351,33.944,585.5,585.5,0,0,1-96.488,11.464l.124.373Z" transform="translate(17 43)" fill="#fff"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <ellipse id="Ellipse_316-2" data-name="Ellipse 316" cx="99.866" cy="99.866" rx="99.866" ry="99.866" transform="translate(2285.064 984.878)" fill="#4caf50"/>
+      <g transform="matrix(1, 0, 0, 1, 1963.9, 448.79)" filter="url(#Ellipse_316)">
+        <ellipse id="Ellipse_316-3" data-name="Ellipse 316" cx="99.866" cy="99.866" rx="99.866" ry="99.866" transform="translate(321.17 536.09)" fill="#fff"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <ellipse id="Ellipse_318-2" data-name="Ellipse 318" cx="99.866" cy="99.866" rx="99.866" ry="99.866" transform="translate(2809.361 984.878)" fill="#23b6eb"/>
+      <g transform="matrix(1, 0, 0, 1, 1963.9, 448.79)" filter="url(#Ellipse_318)">
+        <ellipse id="Ellipse_318-3" data-name="Ellipse 318" cx="99.866" cy="99.866" rx="99.866" ry="99.866" transform="translate(845.47 536.09)" fill="#fff"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <ellipse id="Ellipse_317-2" data-name="Ellipse 317" cx="99.866" cy="99.866" rx="99.866" ry="99.866" transform="translate(2547.213 984.878)" fill="url(#linear-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 1963.9, 448.79)" filter="url(#Ellipse_317)">
+        <ellipse id="Ellipse_317-3" data-name="Ellipse 317" cx="99.866" cy="99.866" rx="99.866" ry="99.866" transform="translate(583.32 536.09)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
