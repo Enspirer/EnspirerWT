@@ -16,4 +16,10 @@
     left: -2.5rem !important;
 }
 
+.splide__arrow {
+    background-color: #fff !important;
+    opacity: 1 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
 /*# sourceMappingURL=main.css.map */

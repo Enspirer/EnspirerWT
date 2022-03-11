@@ -45,6 +45,12 @@
     margin-bottom: 1.5rem;
 }
 
+.products-body .inner-container .hero-section .inner-wrapper .content-block .title span {
+    font-size: 3.25rem;
+    font-weight: 700;
+    color: #00AEEF;
+}
+
 .products-body .inner-container .hero-section .inner-wrapper .content-block .subtitle {
     color: #00AEEF;
     font-size: 1.5rem;

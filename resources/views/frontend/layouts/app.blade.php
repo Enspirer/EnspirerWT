@@ -88,7 +88,7 @@
                 type: 'loop',
                 perPage: 1,
                 focus: 'center',
-                gap: '2rem',
+                gap: '1rem',
                 fixedWidth: '400px',
                 pagination: false,
                 breakpoints: {

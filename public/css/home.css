@@ -238,7 +238,7 @@
     position: relative;
     padding: 48px 0;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, #F5F6F8), color-stop(0, #fff));
-    background: linear-gradient(to bottom, #F5F6F8 65%, #fff 0);
+    background: linear-gradient(to bottom, #F5F6F8 75%, #fff 0);
 }
 
 .IMS-section .title {
@@ -253,23 +253,29 @@
     font-weight: 300;
 }
 
-.IMS-section .text-block {
-    list-style: none;
-    max-width: 500px;
-    width: 80%;
-    margin: 2rem auto;
+.IMS-section .card-block {
+    display: flex;
+    gap: 4vw;
+    margin: 3.5rem 0;
+}
+
+.IMS-section .card-block .card {
+    flex: 1 1 100%;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.IMS-section .card-block .card img {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.IMS-section .card-block .card .text {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 1rem;
     font-weight: 300;
-}
-
-.IMS-section .text-block li {
-    margin-bottom: .25rem;
-}
-
-.IMS-section .text-block .bi {
-    position: relative;
-    left: -25px;
-    margin-right: -15px;
-    color: #00AEEF;
 }
 
 .IMS-section .image-block img {
@@ -514,6 +520,10 @@
     justify-content: space-between;
 }
 
+.marketplace-section .inner-wrapper .card-block .card .icon-block .bi-check-circle-fill {
+    color: #017FFA;
+}
+
 .marketplace-section .inner-wrapper .card-block .card .image-block img {
     width: 100%;
 }
@@ -539,25 +549,6 @@
     z-index: 20;
 }
 
-.marketplace-section .inner-wrapper .card-block .card-top:hover {
-    z-index: 22;
-    opacity: 1;
-    border: 1px solid #017ffa;
-}
-
-.marketplace-section .inner-wrapper .card-block .card-top:hover .bi-check-circle-fill {
-    color: #017FFA;
-}
-
-.marketplace-section .inner-wrapper .card-block .card-top:hover+.card-middle {
-    opacity: 0.5;
-    border: 1px solid rgba(1, 127, 250, 0.4);
-}
-
-.marketplace-section .inner-wrapper .card-block .card-top:hover+.card-middle .bi-check-circle-fill {
-    color: #000;
-}
-
 .marketplace-section .inner-wrapper .card-block .card-middle {
     position: absolute;
     top: 50%;
@@ -568,35 +559,12 @@
     z-index: 21;
 }
 
-.marketplace-section .inner-wrapper .card-block .card-middle .bi-check-circle-fill {
-    color: #017FFA;
-}
-
 .marketplace-section .inner-wrapper .card-block .card-bottom {
     position: absolute;
     bottom: 45px;
     left: 65%;
     opacity: 0.5;
     z-index: 20;
-}
-
-.marketplace-section .inner-wrapper .card-block .card-bottom:hover {
-    z-index: 23;
-    opacity: 1;
-    border: 1px solid #017ffa;
-}
-
-.marketplace-section .inner-wrapper .card-block .card-bottom:hover .bi-check-circle-fill {
-    color: #017FFA;
-}
-
-.marketplace-section .inner-wrapper .card-block .card-bottom:hover+.card-top {
-    opacity: 0.5;
-    border: 1px solid rgba(1, 127, 250, 0.4);
-}
-
-.marketplace-section .inner-wrapper .card-block .card-bottom:hover+.card-top .bi-check-circle-fill {
-    color: #000;
 }
 
 .shop-section {
@@ -629,6 +597,17 @@
 .shop-section .slider .splide .splide__slide a .card {
     border: none;
     border-radius: 0;
+    transform: translateX(0%) scale(0.75);
+    box-shadow: 0 10px 20px rgba(1, 127, 250, 0.06);
+    transition: all .3s ease-in-out;
+}
+
+.shop-section .slider .splide .splide__slide.is-active a .card {
+    border: none;
+    border-radius: 0;
+    transform: translateX(0%) scale(0.9);
+    box-shadow: 0 5px 10px rgba(1, 127, 250, 0.2);
+    transition: all .3s ease-in-out;
 }
 
 .shop-section .slider .splide .splide__slide a .card .image-block .default {
@@ -999,6 +978,15 @@
         width: 300px;
     }
 
+    .IMS-section .card-block {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .IMS-section .card-block .card {
+        flex: 1 1 35%;
+    }
+
     .news-section .header {
         margin-bottom: 40px;
     }
@@ -1010,17 +998,6 @@
 
     .news-section .inner-wrapper .card {
         max-width: 600px;
-        width: 100%;
-    }
-
-    .footer-section .inner-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .footer-section .inner-wrapper>div {
         width: 100%;
     }
 }
@@ -1051,19 +1028,12 @@
         gap: 3rem;
     }
 
-    .footer-section .links .header {
-        justify-content: center;
+    .IMS-section .card-block .card .text {
+        font-size: 14px;
     }
 
-    .footer-section .links .body {
-        display: flex;
-        flex-direction: column !important;
-        gap: 4rem;
-        text-align: center;
-    }
-
-    .footer-section .contact-info .header {
-        justify-content: center;
+    .IMS-section .card-block .card img {
+        width: 70px;
     }
 }
 

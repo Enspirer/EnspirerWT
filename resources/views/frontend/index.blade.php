@@ -61,8 +61,7 @@
     <section class="feature-section">
         <div class="container">
             <div class="header">
-                <h3 class="title">Turn website visitors into customers, High Octane performance and exceptional
-                    conversions</h3>
+                <h3 class="title">Turn website visitors into customers, <br> delivering exceptional performance & conversions</h3>
                 <span class="text">Fully customizable chat widgets with popular messaging apps, Ready to go solutions to
                     grow your business faster</span>
             </div>
@@ -107,12 +106,24 @@
         <div class="container">
             <h2 class="title">Inquiry Management System</h2>
             <span class="text">Keep track of all inquiries with status updates & Sales Reports</span>
-            <ul class="text-block">
-                <li><i class="bi bi-check-circle-fill"></i>Admin dashboard with user privileges management</li>
-                <li><i class="bi bi-check-circle-fill"></i>Assign the inquiry to relevant department</li>
-                <li><i class="bi bi-check-circle-fill"></i>Record of the full status of the inquiry with comments</li>
-                <li><i class="bi bi-check-circle-fill"></i>Analytics of the inquiry management process with reports</li>
-            </ul>
+            <div class="card-block">
+                <div class="card">
+                    <img src="{{url('images/landing_page/home/ims_admin.png')}}" alt="">
+                    <div class="text">Admin dashboard with user privileges management</div>
+                </div>
+                <div class="card">
+                    <img src="{{url('images/landing_page/home/ims_analytics.png')}}" alt="">
+                    <div class="text">Analytics of the inquiry management process with reports</div>
+                </div>
+                <div class="card">
+                    <img src="{{url('images/landing_page/home/ims_record.png')}}" alt="">
+                    <div class="text">Record of the full status of the inquiry with comments</div>
+                </div>
+                <div class="card">
+                    <img src="{{url('images/landing_page/home/ims_assign.png')}}" alt="">
+                    <div class="text">Assign the inquiry to relevant department</div>
+                </div>
+            </div>
             <div class="image-block">
                 <img src="{{url('images/landing_page/home/ims-banner.png')}}" alt="">
             </div>
@@ -122,14 +133,14 @@
     <section class="SEO-section">
         <div class="container">
             <div class="header">
-                <h2 class="title">Keep your website on Top of the Game & Secured</h2>
-                <span class="text">The All-in-One comprehensive tool to manage Google rankings, site analytics, Cyber security and general performance of the website.</span>
+                <h2 class="title">SEO Managing</h2>
+                <span class="text">Fully customizable chat widgets with popular messaging apps, Ready to go solutions to grow your business faster</span>
             </div>
             <div class="inner-wrapper">
                 <div class="SEO-block">
                     <div class="header">
                         <div class="title"><img src="{{url('images/landing_page/home/seo-icon.png')}}" alt="">SEO</div>
-                        <span class="text">The power tool to get a comprehensive report to check your website ranking, and performance.</span>
+                        <span class="text">The power tool to get a comprehensive report to check your website ranking, and performance.<br/> &nbsp;</span>
                     </div>
                     <ul class="features">
                         <li><i class="bi bi-check-circle-fill"></i>Recommendations for the issues</li>
@@ -244,7 +255,7 @@
                                             <img src="{{url('images/landing_page/home/payroll.png')}}" alt="" class="default">
                                         </div>
                                         <div class="content">
-                                            <div class="title">Payroll</div>
+                                            <div class="title">Payroll Management Systems</div>
                                             <div class="text">
                                                 <ul class="list-block">
                                                     <li><i class="bi bi-check-circle-fill"></i>Customisable options</li>
@@ -272,7 +283,7 @@
                                                 class="default">
                                         </div>
                                         <div class="content">
-                                            <div class="title">E-Com</div>
+                                            <div class="title">E-Commerce Solutions</div>
                                             <div class="text">Global payment gateway integrations with customised delivery module</div>
                                             <div class="rating">
                                                 <i class="bi bi-star-fill"></i>
