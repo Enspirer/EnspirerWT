@@ -58,7 +58,7 @@
                                                 @if($project->settings != null)
                                                 
                                                     <div class="form-group mt-3">  
-                                                        <label>Logo <span class="text-danger">*</span></label>                                                  
+                                                        <label style="font-size:14px;" class="mb-2">Logo <span class="text-danger">*</span></label>                                                  
                                                         <div class="input-group" data-toggle="aizuploader" data-type="image">
                                                             <div class="input-group-prepend">
                                                                 <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
@@ -71,7 +71,7 @@
                                                     </div> 
 
                                                     <div class="form-group mt-3">
-                                                        <label>Email Update <span class="text-danger">*</span></label>
+                                                        <label style="font-size:14px;" class="mb-2">Email Update <span class="text-danger">*</span></label>
                                                         <select class="form-select" name="email_update" required>
                                                             <option value="Enabled" {{json_decode($project->settings)->email_update == 'Enabled' ? "selected" : ""}}>Enable</option>   
                                                             <option value="Disabled" {{json_decode($project->settings)->email_update == 'Disabled' ? "selected" : ""}}>Disable</option>                                
@@ -79,7 +79,7 @@
                                                     </div>
 
                                                     <div class="form-group mt-3">
-                                                        <label>IMS <span class="text-danger">*</span></label>
+                                                        <label style="font-size:14px;" class="mb-2">IMS <span class="text-danger">*</span></label>
                                                         <select class="form-select" name="ims" required>
                                                             <option value="Enabled" {{json_decode($project->settings)->ims == 'Enabled' ? "selected" : ""}}>Enable</option>   
                                                             <option value="Disabled" {{json_decode($project->settings)->ims == 'Disabled' ? "selected" : ""}}>Disable</option>                                
@@ -87,7 +87,7 @@
                                                     </div>
 
                                                     <div class="form-group mt-3">
-                                                        <label>Security Alert Email Notification <span class="text-danger">*</span></label>
+                                                        <label style="font-size:14px;" class="mb-2">Security Alert Email Notification <span class="text-danger">*</span></label>
                                                         <select class="form-select custom-select" name="security_alert_email_notification" required>
                                                             <option value="Enabled" {{json_decode($project->settings)->security_alert_email_notification == 'Enabled' ? "selected" : ""}}>Enable</option>   
                                                             <option value="Disabled" {{json_decode($project->settings)->security_alert_email_notification == 'Disabled' ? "selected" : ""}}>Disable</option>                                
@@ -95,26 +95,26 @@
                                                     </div>
                                                     
                                                     <div class="form-group mt-3">
-                                                        <label>Owner Email <span class="text-danger">*</span></label>
-                                                        <input type="email" value="{{ json_decode($project->settings)->owner_email }}" class="form-control" name="owner_email" required>
+                                                        <label style="font-size:14px;" class="mb-2">Owner Email <span class="text-danger">*</span></label>
+                                                        <input type="email" style="font-size:13px;" value="{{ json_decode($project->settings)->owner_email }}" class="form-control" name="owner_email" required>
                                                     </div>
                                                     <div class="form-group mt-3">
-                                                        <label>Owner Phone Number <span class="text-danger">*</span></label>
-                                                        <input type="text" value="{{ json_decode($project->settings)->owner_phone_number }}" class="form-control" name="owner_phone_number" required>
+                                                        <label style="font-size:14px;" class="mb-2">Owner Phone Number <span class="text-danger">*</span></label>
+                                                        <input type="text" style="font-size:13px;" value="{{ json_decode($project->settings)->owner_phone_number }}" class="form-control" name="owner_phone_number" required>
                                                     </div>
                                                     <div class="form-group mt-3">
-                                                        <label>Company Address <span class="text-danger">*</span></label>
-                                                        <input type="text" value="{{ json_decode($project->settings)->company_address }}" class="form-control" name="company_address" required>
+                                                        <label style="font-size:14px;" class="mb-2">Company Address <span class="text-danger">*</span></label>
+                                                        <input type="text" style="font-size:13px;" value="{{ json_decode($project->settings)->company_address }}" class="form-control" name="company_address" required>
                                                     </div>
                                                     <div class="form-group mt-3">
-                                                        <label>Company Email <span class="text-danger">*</span></label>
-                                                        <input type="email" value="{{ json_decode($project->settings)->company_email }}" class="form-control" name="company_email" required>
+                                                        <label style="font-size:14px;" class="mb-2">Company Email <span class="text-danger">*</span></label>
+                                                        <input type="email" style="font-size:13px;" value="{{ json_decode($project->settings)->company_email }}" class="form-control" name="company_email" required>
                                                     </div>
 
                                                 @else
 
                                                     <div class="form-group mt-3">  
-                                                            <label>Logo <span class="text-danger">*</span></label>                                                  
+                                                            <label style="font-size:14px;" class="mb-2">Logo <span class="text-danger">*</span></label>                                                  
                                                             <div class="input-group" data-toggle="aizuploader" data-type="image">
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
@@ -127,7 +127,7 @@
                                                         </div> 
 
                                                         <div class="form-group mt-3">
-                                                            <label>Email Update <span class="text-danger">*</span></label>
+                                                            <label style="font-size:14px;" class="mb-2">Email Update <span class="text-danger">*</span></label>
                                                             <select class="form-select" name="email_update" required>
                                                                 <option value="Enabled">Enable</option>   
                                                                 <option value="Disabled">Disable</option>                                
@@ -135,7 +135,7 @@
                                                         </div>
 
                                                         <div class="form-group mt-3">
-                                                            <label>IMS <span class="text-danger">*</span></label>
+                                                            <label style="font-size:14px;" class="mb-2">IMS <span class="text-danger">*</span></label>
                                                             <select class="form-select" name="ims" required>
                                                                 <option value="Enabled">Enable</option>   
                                                                 <option value="Disabled">Disable</option>                                
@@ -143,7 +143,7 @@
                                                         </div>
 
                                                         <div class="form-group mt-3">
-                                                            <label>Security Alert Email Notification <span class="text-danger">*</span></label>
+                                                            <label style="font-size:14px;" class="mb-2">Security Alert Email Notification <span class="text-danger">*</span></label>
                                                             <select class="form-select custom-select" name="security_alert_email_notification" required>
                                                                 <option value="Enabled">Enable</option>   
                                                                 <option value="Disabled">Disable</option>                                
@@ -151,20 +151,20 @@
                                                         </div>
                                                         
                                                         <div class="form-group mt-3">
-                                                            <label>Owner Email <span class="text-danger">*</span></label>
-                                                            <input type="email" class="form-control" name="owner_email" required>
+                                                            <label style="font-size:14px;" class="mb-2">Owner Email <span class="text-danger">*</span></label>
+                                                            <input type="email" style="font-size:13px;" class="form-control" name="owner_email" required>
                                                         </div>
                                                         <div class="form-group mt-3">
-                                                            <label>Owner Phone Number <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" name="owner_phone_number" required>
+                                                            <label style="font-size:14px;" class="mb-2">Owner Phone Number <span class="text-danger">*</span></label>
+                                                            <input type="text" style="font-size:13px;" class="form-control" name="owner_phone_number" required>
                                                         </div>
                                                         <div class="form-group mt-3">
-                                                            <label>Company Address <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" name="company_address" required>
+                                                            <label style="font-size:14px;" class="mb-2">Company Address <span class="text-danger">*</span></label>
+                                                            <input type="text" style="font-size:13px;" class="form-control" name="company_address" required>
                                                         </div>
                                                         <div class="form-group mt-3">
-                                                            <label>Company Email <span class="text-danger">*</span></label>
-                                                            <input type="email" class="form-control" name="company_email" required>
+                                                            <label style="font-size:14px;" class="mb-2">Company Email <span class="text-danger">*</span></label>
+                                                            <input type="email" style="font-size:13px;" class="form-control" name="company_email" required>
                                                         </div>
                                                 @endif
 
