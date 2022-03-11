@@ -4,196 +4,158 @@
 
 @section('content')
 
+<link rel="stylesheet" href="{{url('css/reports.css')}}">
 <link rel="stylesheet" href="{{url('css/projects.css')}}">
-   
+<link rel="stylesheet" href="{{url('css/dashboard_settings.css')}}">
 
-    <section id="sectionMainWindow">
-        @include('frontend.includes.sidebar')
 
-        <div id="sectionBody">
-            @include('frontend.includes.nav')
-            
-            <!-- Content goes here -->
-            <div class="row g-0">
-                <div class="section-content">
-                    <div class="section-container">
-                        <div class="breadcrumb-block">
-                            <ul class="breadcrumb mb-5">
-                                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                                <li class="breadcrumb-item active">Projects Settings</li>
-                            </ul>
-                        </div>
+<section id="sectionMainWindow">
+    @include('frontend.includes.sidebar')
 
-                        <!-- Dashboard -->
+    <div id="sectionBody">
+        @include('frontend.includes.nav')
 
-                        <section class="section-project-reports">
+        <!-- Content goes here -->
+        <div class="row g-0">
+            <section class="section-settings">
+                <div class="tab-block">
+                    <div class="nav nav-pills " id="settingsTab" role="tablist" aria-orientation="vertical">
+                        <!-- <button class="nav-link active" id="accounts-details-tab" data-bs-toggle="pill"
+                            data-bs-target="#accounts-details" type="button" role="tab" aria-controls="accounts-details"
+                            aria-selected="true">
+                            <div class="inner-wrapper">
+                                <i class="bi bi-person"></i>
+                                <div class="text">Your Details</div>
+                            </div>
+                            <i class="bi bi-chevron-right"></i>
+                        </button> -->
+                        <button class="nav-link" id="edit-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#edit-profile" type="button" role="tab" aria-controls="edit-profile"
+                            aria-selected="false">
+                            <div class="inner-wrapper">
+                                <i class="bi bi-pencil"></i>
+                                <div class="text">General</div>
+                            </div>
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                       
+                    </div>
+                </div>
+                <div class="content-block">
+                    <div class="tab-content" id="settingsTabContent">
+                        <!-- <div class="tab-pane " id="accounts-details" role="tabpanel"
+                            aria-labelledby="accounts-details-tab">
                             <div class="row g-0">
-                                <div class="header">
-                                    <div class="title">Projects Settings</div>
-                                    <div class="search-block">
-                                        
+                                <div class="col">
+                                    <div class="title">Account Details</div>
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-9">
+                                    <div class="content">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <div class="profile-pic">
+                                                    <img src="" alt="">
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="profile-info">
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                    <div class="info-item">
+                                                        Your Name :
+                                                        <span class="data"></span>
+                                                    </div>
+                                                    <div class="info-item">
+                                                        Email :
+                                                        <span class="data"></span>
+                                                    </div>
+                                                    <div class="info-item">
+                                                        Contact Number :
+                                                        <span class="data"></span>
+                                                    </div>
+                                                    <div class="info-item">
+                                                        Address :
+                                                        <span class="data"></span>
+                                                    </div>
+                                                    <div class="info-item">
+                                                        City :
+                                                        <span class="data"></span>
+                                                    </div>
+                                                    <div class="info-item">
+                                                        Province :
+                                                        <span class="data"></span>
+                                                    </div>
+                                                    <div class="info-item">
+                                                        Zip Code :
+                                                        <span class="data"></span>
+                                                    </div>
+                                                    <div class="info-item">
+                                                        Country :
+                                                        <span class="data"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            @if(session()->has('error'))
-                                <div class="alert alert-danger">
-                                    {{ session()->get('error') }}
+                        </div> -->
+                        <div class="tab-pane fade show active" id="edit-profile" role="tabpanel" aria-labelledby="edit-profile-tab">
+                            <div class="row g-0">
+                                <div class="col">
+                                    <div class="title">General</div>
                                 </div>
-                            @endif
-                            @if(session()->has('success'))
-                                <div class="alert alert-success">
-                                    {{ session()->get('success') }}
-                                </div>
-                            @endif
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-6">
+                                    <div class="content">
+                                       
+                                        <form action="{{route('frontend.user.user_widget.project_settings_update')}}" method="post" enctype="multipart/form-data">
+                                        {{csrf_field()}}
 
-
-                            <form action="{{route('frontend.user.user_widget.project_settings_update')}}" method="post" enctype="multipart/form-data">
-                                {{csrf_field()}}
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-body">
-
-                                                @if($project->settings != null)
-                                                
-                                                    <div class="form-group mt-3">  
-                                                        <label style="font-size:14px;" class="mb-2">Logo <span class="text-danger">*</span></label>                                                  
-                                                        <div class="input-group" data-toggle="aizuploader" data-type="image">
-                                                            <div class="input-group-prepend">
-                                                                <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
-                                                            </div>
-                                                            <div class="form-control file-amount">Choose File</div>
-                                                            <input type="hidden" id="logo" value="{{ json_decode($project->settings)->logo }}" name="logo" value="" class="selected-files" >
-                                                        </div>
-                                                        <div class="file-preview box sm">
-                                                        </div>
-                                                    </div> 
-
-                                                    <div class="form-group mt-3">
-                                                        <label style="font-size:14px;" class="mb-2">Email Update <span class="text-danger">*</span></label>
-                                                        <select class="form-select" name="email_update" required>
-                                                            <option value="Enabled" {{json_decode($project->settings)->email_update == 'Enabled' ? "selected" : ""}}>Enable</option>   
-                                                            <option value="Disabled" {{json_decode($project->settings)->email_update == 'Disabled' ? "selected" : ""}}>Disable</option>                                
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="form-group mt-3">
-                                                        <label style="font-size:14px;" class="mb-2">IMS <span class="text-danger">*</span></label>
-                                                        <select class="form-select" name="ims" required>
-                                                            <option value="Enabled" {{json_decode($project->settings)->ims == 'Enabled' ? "selected" : ""}}>Enable</option>   
-                                                            <option value="Disabled" {{json_decode($project->settings)->ims == 'Disabled' ? "selected" : ""}}>Disable</option>                                
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="form-group mt-3">
-                                                        <label style="font-size:14px;" class="mb-2">Security Alert Email Notification <span class="text-danger">*</span></label>
-                                                        <select class="form-select custom-select" name="security_alert_email_notification" required>
-                                                            <option value="Enabled" {{json_decode($project->settings)->security_alert_email_notification == 'Enabled' ? "selected" : ""}}>Enable</option>   
-                                                            <option value="Disabled" {{json_decode($project->settings)->security_alert_email_notification == 'Disabled' ? "selected" : ""}}>Disable</option>                                
-                                                        </select>
-                                                    </div>
-                                                    
-                                                    <div class="form-group mt-3">
-                                                        <label style="font-size:14px;" class="mb-2">Owner Email <span class="text-danger">*</span></label>
-                                                        <input type="email" style="font-size:13px;" value="{{ json_decode($project->settings)->owner_email }}" class="form-control" name="owner_email" required>
-                                                    </div>
-                                                    <div class="form-group mt-3">
-                                                        <label style="font-size:14px;" class="mb-2">Owner Phone Number <span class="text-danger">*</span></label>
-                                                        <input type="text" style="font-size:13px;" value="{{ json_decode($project->settings)->owner_phone_number }}" class="form-control" name="owner_phone_number" required>
-                                                    </div>
-                                                    <div class="form-group mt-3">
-                                                        <label style="font-size:14px;" class="mb-2">Company Address <span class="text-danger">*</span></label>
-                                                        <input type="text" style="font-size:13px;" value="{{ json_decode($project->settings)->company_address }}" class="form-control" name="company_address" required>
-                                                    </div>
-                                                    <div class="form-group mt-3">
-                                                        <label style="font-size:14px;" class="mb-2">Company Email <span class="text-danger">*</span></label>
-                                                        <input type="email" style="font-size:13px;" value="{{ json_decode($project->settings)->company_email }}" class="form-control" name="company_email" required>
-                                                    </div>
-
-                                                @else
-
-                                                    <div class="form-group mt-3">  
-                                                            <label style="font-size:14px;" class="mb-2">Logo <span class="text-danger">*</span></label>                                                  
-                                                            <div class="input-group" data-toggle="aizuploader" data-type="image">
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
-                                                                </div>
-                                                                <div class="form-control file-amount">Choose File</div>
-                                                                <input type="hidden" id="logo" name="logo" value="" class="selected-files" >
-                                                            </div>
-                                                            <div class="file-preview box sm">
-                                                            </div>
-                                                        </div> 
-
-                                                        <div class="form-group mt-3">
-                                                            <label style="font-size:14px;" class="mb-2">Email Update <span class="text-danger">*</span></label>
-                                                            <select class="form-select" name="email_update" required>
-                                                                <option value="Enabled">Enable</option>   
-                                                                <option value="Disabled">Disable</option>                                
-                                                            </select>
-                                                        </div>
-
-                                                        <div class="form-group mt-3">
-                                                            <label style="font-size:14px;" class="mb-2">IMS <span class="text-danger">*</span></label>
-                                                            <select class="form-select" name="ims" required>
-                                                                <option value="Enabled">Enable</option>   
-                                                                <option value="Disabled">Disable</option>                                
-                                                            </select>
-                                                        </div>
-
-                                                        <div class="form-group mt-3">
-                                                            <label style="font-size:14px;" class="mb-2">Security Alert Email Notification <span class="text-danger">*</span></label>
-                                                            <select class="form-select custom-select" name="security_alert_email_notification" required>
-                                                                <option value="Enabled">Enable</option>   
-                                                                <option value="Disabled">Disable</option>                                
-                                                            </select>
-                                                        </div>
-                                                        
-                                                        <div class="form-group mt-3">
-                                                            <label style="font-size:14px;" class="mb-2">Owner Email <span class="text-danger">*</span></label>
-                                                            <input type="email" style="font-size:13px;" class="form-control" name="owner_email" required>
-                                                        </div>
-                                                        <div class="form-group mt-3">
-                                                            <label style="font-size:14px;" class="mb-2">Owner Phone Number <span class="text-danger">*</span></label>
-                                                            <input type="text" style="font-size:13px;" class="form-control" name="owner_phone_number" required>
-                                                        </div>
-                                                        <div class="form-group mt-3">
-                                                            <label style="font-size:14px;" class="mb-2">Company Address <span class="text-danger">*</span></label>
-                                                            <input type="text" style="font-size:13px;" class="form-control" name="company_address" required>
-                                                        </div>
-                                                        <div class="form-group mt-3">
-                                                            <label style="font-size:14px;" class="mb-2">Company Email <span class="text-danger">*</span></label>
-                                                            <input type="email" style="font-size:13px;" class="form-control" name="company_email" required>
-                                                        </div>
-                                                @endif
-
-                                                
+                                        
+                                            <div class="col-12">
+                                                <label class="form-label">Owner Email <span class="text-danger">*</span></label>
+                                                <input type="email" class="form-control" name="owner_email" required>
                                             </div>
-                                        </div>
-
-                                        <input type="hidden" name="hidden_id" value="{{ $project->id }}" />
-                                        <div align="right">
-                                            <button type="submit" class="btn btn-success pull-right btn-lg mt-4">Update</button><br>
-                                        </div>
-
-                                    </div><br>            
-                                                
+                                            <div class="col-12 mt-3">
+                                                <label class="form-label">Owner Phone Number <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="owner_phone_number" required>
+                                            </div>
+                                            <div class="col-12 mt-3">
+                                                <label class="form-label">Company Address <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="company_address" required>
+                                            </div>
+                                            <div class="col-12 mt-3">
+                                                <label class="form-label">Company Email <span class="text-danger">*</span></label>
+                                                <input type="email" class="form-control" name="company_email" required>
+                                            </div>
+                                            
+                                            
+                                            <div class="col-12 mt-4">
+                                                <input type="hidden" name="hidden_id" value="{{ $project->id }}">
+                                                <button type="submit" class="save-btn">Update</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-
-                            </form>
-
-
-                            
-                        </section>
-
-
+                            </div>
+                        </div>
+                        
+                        
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
 
-    
-    
-@endsection
+
+
+    @endsection
+
+    @push('after-scripts')
+
+
+    @endpush

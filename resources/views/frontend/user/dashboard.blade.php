@@ -29,7 +29,7 @@
                                 <div class="header-block mb-xxl-5 mb-4">
                                     <div class="row g-0 align-items-center justify-content-between">
                                         <div class="col-auto">
-                                            <h2 class="title">Good Morning, {{auth()->user()->first_name}}</h2>
+                                            <h2 class="title">{{$greetings}}, {{auth()->user()->first_name}}</h2>
                                             <span class="sub-title">Here's your websites situation for today</span>
                                         </div>
                                         <div class="col-auto my-xxl-0 my-4">
@@ -45,7 +45,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-sm-auto my-sm-0 my-2">
-                                                    <button class="btn btn-optimize">Optimize</button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#optimizeModal" class="btn btn-optimize">Optimize</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -151,13 +151,15 @@
                                                         <div class="col-sm-auto col-8 my-sm-0 my-2">
                                                             <span class="block-title mb-2">Analytics Result</span>
                                                             <span class="sub-title">Website</span>
-                                                            <span class="precentage up"><i
-                                                                        class="bi bi-graph-up-arrow up"></i>86.6%</span>
+                                                            @if(App\Models\Widgets::where('project_id',$project_detail->id)->first() != null)
+                                                            <span class="precentage up"><i class="bi bi-graph-up-arrow up"> {{ App\Models\Widgets::where('project_id',$project_detail->id)->first()->load_count }}</i></span>
+                                                            @else
+                                                            <span class="precentage up"><i class="bi bi-graph-up-arrow up"> No Details</i></span>
+                                                            @endif
                                                         </div>
                                                         <div class="col-sm-auto col-8 my-sm-0 my-2">
                                                             <span class="sub-title">Pageviews</span>
-                                                            <span class="precentage down"><i
-                                                                        class="bi bi-graph-down-arrow down"></i>86.6%</span>
+                                                            <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i>{{ count(App\Models\VisitorCount::where('project_id',$project_detail->id)->get()) }}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -256,6 +258,24 @@
         </div>
     </section>
 
+    <!-- Modal -->
+    <div class="modal fade" id="optimizeModal" tabindex="-1" aria-labelledby="optimizeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="optimizeModalLabel">Optimize</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
     
     <div class="modal fade" id="deletedashwidget" tabindex="-1" aria-labelledby="deletedashwidgetLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

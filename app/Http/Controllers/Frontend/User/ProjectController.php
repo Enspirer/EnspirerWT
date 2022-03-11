@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Frontend\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Projects;
+use DB;
+use App\Models\Auth\User;
 
 class ProjectController extends Controller
 {
@@ -26,9 +28,12 @@ class ProjectController extends Controller
     public function project_settings($id)
     {
         $project = Projects::where('id',$id)->first();
+        $user = User::where('id',auth()->user()->id)->first(); 
+
 
         return view('frontend.user.projects.project_settings',[
-            'project' => $project
+            'project' => $project,
+            'user' => $user
         ]);
     }
 

@@ -18,10 +18,27 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $projectDetails = Projects::where('user_id',auth()->user()->id)->get();
+        $projectDetails = Projects::where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
+
+        $greetings = "";
+        $time = date("H");
+        $timezone = date("e");
+        if ($time < "12") {
+            $greetings = "Good Morning";
+        } else
+        if ($time >= "12" && $time < "17") {
+            $greetings = "Good Afternoon";
+        } else
+        if ($time >= "17" && $time < "19") {
+            $greetings = "Good Evening";
+        } else
+        if ($time >= "19") {
+            $greetings = "Good Night";
+        }
 
         return view('frontend.user.dashboard',[
-            'project_details' => $projectDetails
+            'project_details' => $projectDetails,
+            'greetings' => $greetings
         ]);
     }
 
