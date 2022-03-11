@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
+
+    public function heatmap()
+    {
+        return view('frontend.user.test_heatmap.index');
+    }
+
     public function index($id,Request $request)
     {
         // repalce venue info in the javascript as an object
