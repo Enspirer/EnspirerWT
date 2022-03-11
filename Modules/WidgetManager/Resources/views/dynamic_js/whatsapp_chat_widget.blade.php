@@ -96,41 +96,13 @@ div.innerHTML = `<style>
         padding: 15px;
         margin-top: 35px;
         margin-left: 35px;
-        z-index: -1;
-        opacity: 0;
+        z-index: 0;
+        display: none;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappbody .wappwelcomemsg.wappview {
-    z-index: -1;
-    opacity: 0;
-    -webkit-animation: msgPop .3s ease;
-          animation: msgPop .3s ease;
-    -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+        display: block;
     }
 
-    @-webkit-keyframes msgPop {
-    from {
-    z-index: -1;
-    opacity: 0;
-    }
-    to {
-    z-index: 1;
-    opacity: 1;
-    }
-    }
-
-    @keyframes msgPop {
-    from {
-    z-index: -1;
-    opacity: 0;
-    }
-    to {
-    z-index: 1;
-    opacity: 1;
-    }
-    }
     #wappwidgetblock #wappwidget .wappcontainer .wappbody .wappwelcomemsg .wapptriangle {
         border-top: 5px solid transparent;
         border-right: 15px solid #fff;
@@ -446,14 +418,25 @@ document.getElementById('{{$widget_key}}').appendChild(div);
 
 window.onload = addWidget;
 
+function wappmsgPopTimeout() {
+    setTimeout(function(){
+        document.querySelector('.wappwelcomemsg').classList.add("wappview");
+    },2000);
+}
+
 function wapptoggle() {
     document.querySelector('#wappwidget').classList.toggle("wappview");
-    document.querySelector('#wappstartupform').classList.remove("wappview");
-    document.querySelector('#wappbtn').classList.remove("wappview");
-    document.querySelector('.wappwelcomemsg').classList.toggle("wappview");
-    var audio = new Audio('{{url('blackberrychat.mp3')}}');
-    audio.play();
+    wappmsgPopTimeout();
 }
+
+setTimeout(
+    function wappchatPopTimeout() {
+        document.querySelector('#wappwidget').classList.add("wappview");
+        wappmsgPopTimeout();
+        var audio = new Audio('{{url('blackberrychat.mp3')}}');
+        audio.play();
+    }, 2000
+);
 
 function wappclose() {
     document.querySelector('#wappwidget').classList.remove("wappview");
