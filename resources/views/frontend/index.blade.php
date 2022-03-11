@@ -14,8 +14,10 @@
                         <li class="splide__slide">
                             <div class="slide-wrapper">
                                 <div class="content-block">
-                                    <h3 class="title">Engage<br>Interact<br>Convert</h3>
-                                    <h5 class="light">Increase sales with All-in-One Widget &amp; <strong>IMS</strong></h5>
+                                    <h6 class="light">Upgrade your website with the most</h6>
+                                    <h3 class="title">Interactive <span>Communication tool</span></h3>
+                                    <h5>Improve user engagement &amp; <br> grow your business fast</h5>
+                                    <strong>All-in-One Chat With <span>IMS</span></strong>
                                     <h6>The customised Inquiry Management System</h6>
 
                                     <a href="{{url('login')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>

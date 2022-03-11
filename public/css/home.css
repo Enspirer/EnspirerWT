@@ -26,8 +26,17 @@
     width: 100%;
 }
 
+.hero-section .slide-wrapper .content-block h6.light {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
 .hero-section .slide-wrapper .content-block h5 {
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 1.5rem;
 }
 
 .hero-section .slide-wrapper .content-block h5:first-child {
@@ -40,6 +49,16 @@
 
 .hero-section .slide-wrapper .content-block h5 strong {
     font-weight: 600;
+    color: #00AEEF;
+}
+
+.hero-section .slide-wrapper .content-block strong {
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 18px;
+}
+
+.hero-section .slide-wrapper .content-block strong span {
     color: #00AEEF;
 }
 
@@ -58,7 +77,12 @@
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 2rem;
-    line-height: 1.5;
+    line-height: 1.2;
+}
+
+.hero-section .slide-wrapper .content-block .title span {
+    font-size: 28px;
+    font-weight: 500;
 }
 
 .hero-section .slide-wrapper .content-block .cta-btn {
