@@ -94,3 +94,9 @@ Breadcrumbs::for('admin.projects.widget_manager.edit', function ($trail) {
 Breadcrumbs::for('admin.projects.widget_manager.settings', function ($trail) {
     $trail->push('Widget Manager Settings', route('admin.projects.widget_manager.settings',1));
 });
+
+
+
+Breadcrumbs::for('admin.widget_settings_update.index', function ($trail) {
+    $trail->push('Widget Settings Update', route('admin.widget_settings_update.index'));
+});
