@@ -192,7 +192,7 @@
                         <a href="{{url('market_place')}}" class="cta-btn-border">Find Tallent <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                 </div>
-                <div class="card-block">
+                <div class="card-block" id="marketplaceCards">
                     <div class="card card-top">
                         <div class="icon-block">
                             <i class="bi bi-check-circle-fill"></i>
@@ -207,7 +207,7 @@
                             Dedicated Android & iOS developers to work on your project</div>
                         </div>
                     </div>
-                    <div class="card card-middle">
+                    <div class="card active card-middle">
                         <div class="icon-block">
                             <i class="bi bi-check-circle-fill"></i>
                             <i class="bi bi-three-dots-vertical"></i>
@@ -242,7 +242,7 @@
         <div class="container">
             <div class="header">
                 <h2 class="title">Tallentor Shop</h2>
-                <div class="text">Get started in No time with Industry standard ready- to- use solutions</div>
+                <div class="text">Get started in No time with Industry standard ready-to-use solutions</div>
             </div>
             <div class="slider">
                 <div class="splide" id="indexSlider">
@@ -333,7 +333,7 @@
     <section class="news-section">
         <div class="container">
             <div class="header">
-                <h2 class="title">Latest happening at Tallentor</h2>
+                <h2 class="title">Latest at Tallentor</h2>
                 <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                     has been the industry's</div>
             </div>

@@ -498,10 +498,17 @@
     max-width: 375px;
     width: 100%;
     padding: 24px;
+    filter: grayscale(1);
     border: 1px solid rgba(1, 127, 250, 0.4);
     border-radius: 8px;
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 5px 10px rgba(1, 127, 250, 0.25);
+    box-shadow: 0 5px 10px rgba(1, 127, 250, 0.25);
+}
+
+.marketplace-section .inner-wrapper .card-block .card.active {
+    filter: grayscale(0);
+    opacity: 1;
+    z-index: 23;
 }
 
 .marketplace-section .inner-wrapper .card-block .card:hover {
@@ -543,9 +550,8 @@
 
 .marketplace-section .inner-wrapper .card-block .card-top {
     position: absolute;
-    top: 45px;
+    top: 10%;
     left: 35%;
-    opacity: 0.5;
     z-index: 20;
 }
 
@@ -556,15 +562,14 @@
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     border: 1px solid #017ffa;
-    z-index: 21;
+    z-index: 22;
 }
 
 .marketplace-section .inner-wrapper .card-block .card-bottom {
     position: absolute;
-    bottom: 45px;
+    bottom: 10%;
     left: 65%;
-    opacity: 0.5;
-    z-index: 20;
+    z-index: 21;
 }
 
 .shop-section {
@@ -757,6 +762,7 @@
     background-color: #FAFAFA;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
+    box-shadow: 0 10px 20px rgba(1, 127, 250, 0.2);
     flex: 1 1 100%;
 }
 

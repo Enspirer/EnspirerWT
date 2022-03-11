@@ -81,6 +81,7 @@
             heroSlider.mount();
         </script>
 
+        
         <!-- Index Slider -->
 
         <script>
@@ -100,6 +101,30 @@
             });
 
             indexSlider.mount();
+        </script>
+
+        <!-- Marketplace Hover -->
+
+        <script>
+            const marketplace = document.getElementById("marketplaceCards");
+            const cards = marketplace.querySelectorAll(".card");
+            const midCard = marketplace.querySelector(".card-middle");
+
+            cards.forEach(function (card) {
+                card.addEventListener("mouseout", function () {
+                    cards.forEach(function(reclass){
+                        reclass.classList.remove("active");
+                    });
+                    midCard.classList.add("active");
+                });
+
+                card.addEventListener("mouseover", function () {
+                    cards.forEach(function(reclass){
+                        reclass.classList.remove("active");
+                    });
+                    card.classList.add("active");
+                });
+            });
         </script>
 
         <!-- Sign Up Slider -->
