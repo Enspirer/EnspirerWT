@@ -680,9 +680,10 @@ class HomeController extends Controller
         $visitors = $request->visitors;
         $start_time = $request->start_time;
         $end_time = $request->end_time;
-        $timezone = $request->timezone;
-        $time_on_page = $request->time_on_page;
-        $time_on_site = $request->time_on_site;
+        $timezone = $request->timezone;        
+        $auto_trigger = $request->auto_trigger;
+        $pop_up_opening_time = $request->pop_up_opening_time;
+        $message_auto_reply_time = $request->message_auto_reply_time;
         $scroll_position = $request->scroll_position;
         $exit_internet = $request->exit_internet;
         $bubble_background_color = $request->bubble_background_color;
@@ -720,9 +721,10 @@ class HomeController extends Controller
             'date_time' => $date_time_array,
             'start_time' => $start_time,
             'end_time' => $end_time,
-            'timezone' => $timezone,
-            'time_on_page' => $time_on_page,
-            'time_on_site' => $time_on_site,
+            'timezone' => $timezone,            
+            'auto_trigger' => $auto_trigger,
+            'pop_up_opening_time' => $pop_up_opening_time,
+            'message_auto_reply_time' => $message_auto_reply_time,
             'scroll_position' => $scroll_position,
             'exit_internet' => $exit_internet,
             'notification' => $notify_array,
