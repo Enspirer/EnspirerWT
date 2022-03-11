@@ -87,7 +87,7 @@
                                                             <span class="pro-name">{{$project_detail->name}}</span>
                                                             <span class="pro-url">{{$project_detail->url}}</span>
                                                         </div>
-                                                        <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn btn-open"><i class="bi bi-x-diamond-fill"></i>Open</a>
+                                                        <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn btn-open"><i class="bi bi-x-diamond-fill"></i>View</a>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
