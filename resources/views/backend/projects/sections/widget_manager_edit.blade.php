@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('Create Widgets Manager'))
+@section('title', __('Edit Widgets Manager'))
 
 @section('content')
     
@@ -15,6 +15,7 @@
                             <label>Widget Type <span class="text-danger">*</span></label>
                             <select class="form-control" id="widget_type" name="widget_type" required>
                                 <option value="Whatsapp Chat" {{ $widget->widget_type == 'Whatsapp' ? "selected" : "" }}>Whatsapp Chat</option>
+                                <option value="All-in-One Chat" {{ $widget->widget_type == 'All-in-One Chat' ? "selected" : "" }}>All-in-One Chat</option>                                
                                 <option value="Clock" {{ $widget->widget_type == 'Clock' ? "selected" : "" }}>Clock</option>
                                 <option value="Wallpapers" {{ $widget->widget_type == 'Wallpapers' ? "selected" : "" }}>Wallpapers</option>
                             </select>

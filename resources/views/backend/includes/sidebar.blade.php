@@ -52,11 +52,20 @@
 
             @if(Module::has('WidgetManager'))
                 @if(Module::find('WidgetManager')->isStatus(1))
-                    <li class="nav-item">
-                        <a class="nav-link {{active_class(Route::is('admin/whatsappchat_widget'))}}" href="{{ route('admin.whatsappchat_widget.index') }}">    
+                
+                    <li class="nav-item nav-dropdown ">
+                        <a class="nav-link nav-dropdown-toggle " href="#">
                             <i class="nav-icon fas fa-chart-bar"></i>
-                            Widget Manager
+                                Widget Manager
                         </a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link {{active_class(Route::is('admin/whatsappchat_widget'))}}" href="{{ route('admin.whatsappchat_widget.index') }}">
+                                    Whatsapp Chat Widget
+                                </a>
+                            </li> 
+                            
+                        </ul>
                     </li>
                 @endif
             @endif
@@ -118,6 +127,13 @@
                 <a class="nav-link {{active_class(Route::is('admin/contact_us'))}}" href="{{ route('admin.contact_us.index') }}">
                     <i class="nav-icon fas fa-comments"></i>
                     Contact Us
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{active_class(Route::is('admin/widget_settings_update'))}}" href="{{ route('admin.widget_settings_update.index') }}">
+                    <i class="nav-icon fas fa-cogs"></i>
+                    Widget Settings
                 </a>
             </li>
 

@@ -16,6 +16,7 @@
                             <select class="form-control" id="widget_type" name="widget_type" required>
                                 <option value="" selected disabled>Select...</option>
                                 <option value="Whatsapp Chat">Whatsapp Chat</option>
+                                <option value="All-in-One Chat">All-in-One Chat</option>
                                 <option value="Clock">Clock</option>
                                 <option value="Wallpapers">Wallpapers</option>
                             </select>

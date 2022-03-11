@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\HelpCategoryController;
 use App\Http\Controllers\Backend\HelpSupportsController;
 use App\Http\Controllers\Backend\WidgetController;
 use App\Http\Controllers\Frontend\TestController;
+use App\Http\Controllers\Backend\WidgetSettingController;
 
 
 // All route names are prefixed with 'admin.'.
@@ -94,3 +95,5 @@ Route::get('help_supports/edit/{id}', [HelpSupportsController::class, 'edit'])->
 Route::post('help_supports/update', [HelpSupportsController::class, 'update'])->name('help_supports.update');
 Route::get('help_supports/delete/{id}', [HelpSupportsController::class, 'destroy'])->name('help_supports.destroy');
 
+Route::get('widget_settings_update', [WidgetSettingController::class, 'index'])->name('widget_settings_update.index');
+Route::post('widget_settings_update/update', [WidgetSettingController::class, 'update'])->name('widget_settings_update.update');

@@ -118,17 +118,11 @@ function addWidget() {
         padding: 15px;
         margin-top: 35px;
         margin-left: 35px;
-        visibility: hidden;
+        display: none;
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1body .allin1welcomemsg.allin1view {
-        visibility: hidden;
-        -webkit-animation: msgPop .3s ease;
-        animation: msgPop .3s ease;
-        -webkit-animation-delay: 1s;
-        animation-delay: 1s;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
+        display: block;
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1body .allin1welcomemsg .allin1triangle {
@@ -489,26 +483,6 @@ function addWidget() {
         }
     }
 
-    @-webkit-keyframes msgPop {
-        from {
-            visibility: hidden;
-        }
-
-        to {
-            visibility: visible;
-        }
-    }
-
-    @keyframes msgPop {
-        from {
-            visibility: hidden;
-        }
-
-        to {
-            visibility: visible;
-        }
-    }
-
     @media screen and (max-width: 574px) {
         #allin1widgetblock #allin1widget.allin1view {
             bottom: unset;
@@ -779,13 +753,25 @@ function addWidget() {
 
 window.onload = addWidget;
 
+function allin1msgPopTimeout() {
+    setTimeout(function(){
+        document.querySelector('.allin1welcomemsg').classList.add("allin1view");
+    },2000);
+}
+
 function allin1toggle() {
     document.querySelector('#allin1widget').classList.toggle("allin1view");
-    document.querySelector('.allin1welcomemsg').classList.toggle("allin1view");
-    /* document.querySelector('#allin1btn').classList.remove("allin1view"); */
-    var audio = new Audio('{{url('blackberrychat.mp3')}}');
-    audio.play();
+    allin1msgPopTimeout();
 }
+
+setTimeout(
+    function allin1chatPopTimeout() {
+        document.querySelector('#allin1widget').classList.add("allin1view");
+        allin1msgPopTimeout();
+        var audio = new Audio('{{url('blackberrychat.mp3')}}');
+        audio.play();
+    }, 2000
+);
 
 function allin1close() {
     document.querySelector('#allin1widget').classList.remove("allin1view");
