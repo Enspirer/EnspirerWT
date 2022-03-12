@@ -64,8 +64,9 @@
 .cta-btn-fill .text {
     position: relative;
     z-index: 1;
-    font-size: 16px;
+    font-size: 16px !important;
     font-weight: 300;
+    margin: 0 !important;
 }
 
 .cta-btn-fill .bi {
@@ -112,8 +113,9 @@
 .cta-btn-border .text {
     position: relative;
     z-index: 1;
-    font-size: 16px;
+    font-size: 16px !important;
     font-weight: 300;
+    margin: 0 !important;
 }
 
 .cta-btn-border .bi {
