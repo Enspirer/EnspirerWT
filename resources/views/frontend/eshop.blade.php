@@ -159,7 +159,7 @@
                         <div class="product-card">
                             <a href="#">
                                 <div class="image-block">
-                                    <img src="{{url('images/eShop/Ecommerce.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/real_state_portal.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">E-Commerce Solutions</h6>
@@ -182,7 +182,7 @@
                         <div class="product-card">
                             <a href="#">
                                 <div class="image-block">
-                                    <img src="{{url('images/eShop/Ecommerce.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/travel_website.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">E-Commerce Solutions</h6>
@@ -205,7 +205,7 @@
                         <div class="product-card">
                             <a href="#">
                                 <div class="image-block">
-                                    <img src="{{url('images/eShop/Ecommerce.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/car_pool_app.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">E-Commerce Solutions</h6>
@@ -228,7 +228,7 @@
                         <div class="product-card">
                             <a href="#">
                                 <div class="image-block">
-                                    <img src="{{url('images/eShop/Ecommerce.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/business_card_app.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">E-Commerce Solutions</h6>
@@ -251,7 +251,7 @@
                         <div class="product-card">
                             <a href="#">
                                 <div class="image-block">
-                                    <img src="{{url('images/eShop/Ecommerce.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/erp_solution.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">E-Commerce Solutions</h6>
@@ -274,7 +274,7 @@
                         <div class="product-card">
                             <a href="#">
                                 <div class="image-block">
-                                    <img src="{{url('images/eShop/Ecommerce.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/pos_system.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">E-Commerce Solutions</h6>
