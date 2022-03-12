@@ -753,20 +753,31 @@ function addWidget() {
 
 window.onload = addWidget;
 
+const screenSize = window.matchMedia("(max-width: 768px)");
+mobileChat(screenSize);
+screenSize.addListener(mobileChat);
+
 @if($widget_meta->auto_trigger != null)
     function allin1msgPopTimeout() {
         setTimeout(function(){
             document.querySelector('.allin1welcomemsg').classList.add("allin1view");
         },{{$widget_meta->message_auto_reply_time}});
     }
-    setTimeout(
-        function allin1chatPopTimeout() {
-            document.querySelector('#allin1widget').classList.add("allin1view");
-            allin1msgPopTimeout();
-            var audio = new Audio('{{url('blackberrychat.mp3')}}');
-            audio.play();
-        }, {{$widget_meta->pop_up_opening_time}}
-    );
+
+    function mobileChat(screenSize) {
+    if(screenSize.matches) {
+        return;
+    } else {
+        setTimeout(
+            function allin1chatPopTimeout() {
+                document.querySelector('#allin1widget').classList.add("allin1view");
+                allin1msgPopTimeout();
+                var audio = new Audio('{{url('blackberrychat.mp3')}}');
+                audio.play();
+            }, {{$widget_meta->pop_up_opening_time}}
+        );
+    }
+}
 
 @else
 
@@ -781,14 +792,20 @@ window.onload = addWidget;
         allin1msgPopTimeout();
     }
 
-    setTimeout(
-        function allin1chatPopTimeout() {
-            document.querySelector('#allin1widget').classList.add("allin1view");
-            allin1msgPopTimeout();
-            var audio = new Audio('{{url('blackberrychat.mp3')}}');
-            audio.play();
-        }, 2000
-    );
+    function mobileChat(screenSize) {
+        if(screenSize.matches) {
+            return;
+        } else {
+            setTimeout(
+                function allin1chatPopTimeout() {
+                    document.querySelector('#allin1widget').classList.add("allin1view");
+                    allin1msgPopTimeout();
+                    var audio = new Audio('{{url('blackberrychat.mp3')}}');
+                    audio.play();
+                }, 2000
+            );
+        }
+    }
 @endif
 
 function allin1toggle() {
