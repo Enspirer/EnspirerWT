@@ -20,8 +20,8 @@ function addWidget() {
 
     #allin1widgetblock #allin1widget {
         position: fixed;
-        bottom: 150px;
-        {{$widget_meta->alignment}}: 15px;
+        bottom: 50px;
+        {{$widget_meta->alignment}}: 30px;
         z-index: 99999;
         display: none;
     }
@@ -31,8 +31,8 @@ function addWidget() {
     }
 
     #allin1widgetblock #allin1widget .allin1container {
-        width: 350px;
-        height: 450px;
+        width: 300px;
+        height: 400px;
         background-color: #EFEFEF;
         border-radius: 15px;
         position: relative;
@@ -44,7 +44,7 @@ function addWidget() {
         background-color: {{ $widget_meta->header_background_color}};
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        padding: 25px 40px;
+        padding: 20px;
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1header #allin1close {
@@ -93,13 +93,13 @@ function addWidget() {
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1header .allin1profile .allin1info .allin1name {
-        font-size: 19px;
+        font-size: 16px;
         font-weight: 500;
         color: #fff;
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1header .allin1profile .allin1info .allin1status {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 300;
         color: #fff;
     }
@@ -337,7 +337,7 @@ function addWidget() {
 
     #allin1widgetblock #allin1widget .allin1container .allin1iframeblock {
         position: absolute;
-        width: 351px;
+        width: 301px;
         left: 50%;
         transform: translate(-50%, 0);
         bottom: -20px;
@@ -345,7 +345,7 @@ function addWidget() {
     }
     #allin1widgetblock #allin1widget .allin1container .allin1iframeblock .allin1iframe{
         width: 100%;
-        height: 450px;
+        height: 400px;
         border-radius: 15px;
     }
 

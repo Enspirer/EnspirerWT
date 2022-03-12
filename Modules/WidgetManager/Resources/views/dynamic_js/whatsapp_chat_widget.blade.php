@@ -16,8 +16,8 @@ div.innerHTML = `<style>
     }
     #wappwidgetblock #wappwidget {
         position: fixed;
-        bottom: 150px;
-        {{$widget_meta->alignment}}: 15px;
+        bottom: 50px;
+        {{$widget_meta->alignment}}: 30px;
         z-index: 99999;
         display: none;
     }
@@ -25,8 +25,8 @@ div.innerHTML = `<style>
         display: block !important;
     }
     #wappwidgetblock #wappwidget .wappcontainer {
-        width: 350px;
-        height: 450px;
+        width: 300px;
+        height: 400px;
         background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
         background-size: cover;
         border-radius: 15px;
@@ -37,7 +37,7 @@ div.innerHTML = `<style>
         background-color: {{ $widget_meta->header_background_color}};
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        padding: 25px 40px;
+        padding: 20px;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappheader #wappclose {
         position: absolute;
@@ -74,12 +74,12 @@ div.innerHTML = `<style>
         border-radius: 50%;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappheader .wappprofile .wappinfo .wappname {
-        font-size: 19px;
+        font-size: 16px;
         font-weight: 500;
         color: #fff;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappheader .wappprofile .wappinfo .wappstatus {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 300;
         color: #fff;
     }
@@ -142,9 +142,9 @@ div.innerHTML = `<style>
         margin: 0 auto;
         padding: 15px;
         background-color: #00796a;
-        border-radius: 5px;
+        border-radius: 15px;
         position: relative;
-        bottom: 180px;
+        bottom: 208px;
         z-index: 1;
         display: none;
     }
@@ -203,8 +203,8 @@ div.innerHTML = `<style>
     cursor: pointer;
     }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappbtn {
-        width: 280px;
-        height: 50px;
+        width: 250px;
+        height: 45px;
         background-color: #14C656;
         border-radius: 30px;
         margin: 0 auto;
