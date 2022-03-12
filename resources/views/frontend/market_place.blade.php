@@ -173,6 +173,10 @@
 </section>
 <section class="section-inner-category" id="innerCat">
     <div class="container">
+        <div class="header">
+            <h2 class="title">Top Categories at Tallentor</h2>
+            <div class="text">one place with thousands of creative talents</div>
+        </div>
         <div class="row g-5">
             <div class="col-lg-3">
                 <div class="category-nav" id="categories">

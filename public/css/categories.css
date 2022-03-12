@@ -169,11 +169,14 @@
 
 .section-categories .header .title {
     font-weight: 700;
+    font-size: 40px;
+    color: #2d465b;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .section-categories .header .text {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     text-align: center;
 }
@@ -391,11 +394,14 @@
 
 .section-inner-category .header .title {
     font-weight: 700;
+    font-size: 40px;
+    color: #2d465b;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .section-inner-category .header .text {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     text-align: center;
 }
