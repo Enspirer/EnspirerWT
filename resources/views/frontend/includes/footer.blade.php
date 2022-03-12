@@ -47,16 +47,15 @@
                         <div class="footer">
                             <div class="social-media">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-facebook"></i></a>
+                                    <li class="nav-item"><a href="https://www.facebook.com/tallentor/" class="nav-link" target="_blank"><i class="bi bi-facebook"></i></a>
                                     </li>
-                                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-linkedin"></i></a>
+                                    <li class="nav-item"><a href="https://www.linkedin.com/company/tallentor/ " class="nav-link" target="_blank"><i class="bi bi-linkedin"></i></a>
                                     </li>
-                                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-youtube"></i></a>
+                                    <li class="nav-item"><a href="#" class="nav-link" target="_blank"><i class="bi bi-youtube"></i></a>
                                     </li>
-                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                class="bi bi-pinterest"></i></a>
+                                    <li class="nav-item"><a href="https://www.instagram.com/tallentor/" class="nav-link" target="_blank"><i class="bi bi-instagram"></i></a>
                                     </li>
-                                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-twitter"></i></a>
+                                    <li class="nav-item"><a href="https://twitter.com/tallentor" class="nav-link" target="_blank"><i class="bi bi-twitter"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -99,7 +98,7 @@
             </div>
             <div class="row g-0">
                 <div class="copyright-blocok">
-                    <div class="terms"><a href="{{url('terms-condition')}}">Terms of Service</a> + <a href="{{url('privacy-policy')}}">Privacy Policy</a></div>
+                    <div class="terms"><a href="{{url('terms-condition')}}">Terms of Service</a> <a href="{{url('privacy-policy')}}">Privacy Policy</a></div>
                     <div class="copyright">Copyright @ {{date('Y')}} | Tallentor Global Ltd</div>
                 </div>
             </div>
