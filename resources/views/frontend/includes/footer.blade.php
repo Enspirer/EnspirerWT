@@ -51,7 +51,7 @@
                                     </li>
                                     <li class="nav-item"><a href="https://www.linkedin.com/company/tallentor/ " class="nav-link" target="_blank"><i class="bi bi-linkedin"></i></a>
                                     </li>
-                                    <li class="nav-item"><a href="#" class="nav-link" target="_blank"><i class="bi bi-youtube"></i></a>
+                                    <li class="nav-item"><a href="https://www.youtube.com/channel/UCwJgWOtpffBLBbYCgGtieVw" class="nav-link" target="_blank"><i class="bi bi-youtube"></i></a>
                                     </li>
                                     <li class="nav-item"><a href="https://www.instagram.com/tallentor/" class="nav-link" target="_blank"><i class="bi bi-instagram"></i></a>
                                     </li>
