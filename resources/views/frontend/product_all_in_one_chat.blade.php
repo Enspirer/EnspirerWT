@@ -29,10 +29,10 @@
                         <div class="inner-wrapper">
                             <div class="content-block">
                                 <h2 class="title"><span>All-in-One</span><br>Chat<br> for websites</h2>
-                                <p class="content">Integrate the most popular communication channel into your website and improve your customer service quality and sales conversion.</p>
+                                <p class="content">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</p>
                                 <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Customisable ready to use widget</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Inquiry Management System - IMS</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Pick and choose the channels</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Quick integration with IMS option</li>
                                 </ul>
                                 <a href="{{url('login')}}" class="cta-plain-btn">
                                     <span class="text">Get Started</span>
@@ -64,13 +64,12 @@
                                 </div>
                             </div>
                             <div class="content-block">
-                                <h2 class="title">WhatsApp Chat Features</h2>
+                                <h2 class="title">All-in-One Chat Features</h2>
                                 <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Customisable chat box
-                                    </li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Choose prefered position on website</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Choose bubble icon and add text</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Your own welcome message</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> The choice of multiple messenger options</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Customisable chat bow and welcome note</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Setting a chat-opening trigger</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Integration into your website with IMS</li>
                                 </ul>
                                 <a href="" class="cta-outline-btn">
                                     <span class="text">Get Started</span>

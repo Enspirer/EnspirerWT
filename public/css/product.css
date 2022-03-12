@@ -19,6 +19,33 @@
     position: relative;
 }
 
+.products-body .inner-container .hero-section .breadcrumb {
+    margin: 3.5rem 0 1rem 3.5rem;
+}
+
+.products-body .inner-container .hero-section .breadcrumb .breadcrumb-item::before {
+    content: none;
+}
+
+.products-body .inner-container .hero-section .breadcrumb .breadcrumb-item .breadcrumb-link {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+}
+
+.products-body .inner-container .hero-section .breadcrumb .breadcrumb-item .breadcrumb-arrow,
+.products-body .inner-container .hero-section .breadcrumb .breadcrumb-item .breadcrumb-current {
+    cursor: default;
+    pointer-events: none;
+}
+
+.products-body .inner-container .hero-section .breadcrumb .breadcrumb-item .breadcrumb-arrow .bi,
+.products-body .inner-container .hero-section .breadcrumb .breadcrumb-item .breadcrumb-current .bi {
+    font-size: 0.75rem;
+}
+
+
 .products-body .inner-container .hero-section .inner-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -224,7 +251,9 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
+    font-size: 40px;
+    color: #2d465b;
 }
 
 .products-body .inner-container .more-about-widget .header .subtitle {
