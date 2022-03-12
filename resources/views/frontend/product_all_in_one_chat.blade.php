@@ -14,6 +14,18 @@
 
                 <section class="hero-section">
                     <div class="container">
+                        <ul class="breadcrumb">                                            
+                            <li class="breadcrumb-item">
+                                <a class="breadcrumb-link">Products</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#" class="breadcrumb-link breadcrumb-arrow"><i
+                                        class="bi bi-chevron-right"></i></a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a class="breadcrumb-link breadcrumb-current">All-in-One Chat</a>
+                            </li>
+                        </ul>
                         <div class="inner-wrapper">
                             <div class="content-block">
                                 <h2 class="title"><span>All-in-One</span><br>Chat<br> for websites</h2>
