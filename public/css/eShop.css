@@ -104,31 +104,21 @@
 }
 
 .hero-section .content .title {
+    font-size: 40px;
     font-weight: 400;
     text-align: center;
     line-height: 1.2;
-    margin-bottom: calc(1.2525rem + 0.28286vw);
-}
-
-@media (min-width: 1400px) {
-    .hero-section .content .title {
-        margin-bottom: 1.5rem;
-    }
+    margin-bottom: 1.5rem;
 }
 
 .hero-section .content .title span {
-    font-size: calc(1.2575rem + 0.84857vw);
-    font-weight: 400;
+    font-size: 40px;
     color: #00AEEF;
 }
 
-@media (min-width: 1400px) {
-    .hero-section .content .title span {
-        font-size: 2rem;
-    }
-}
-
 .hero-section .content .text {
+    font-size: 20px;
+    font-weight: 300;
     text-align: center;
     margin-bottom: calc(1.2575rem + 0.84857vw);
 }
@@ -188,10 +178,15 @@
 .services-section .header .title {
     text-align: center;
     font-weight: 700;
+    font-size: 40px;
+    color: #2d465b;
+    margin-bottom: 1rem;
 }
 
 .services-section .header .text {
     text-align: center;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .services-section .services-slider .services-card {
@@ -354,10 +349,15 @@
 .tallentor-shop .header .title {
     font-weight: 700;
     text-align: center;
+    font-size: 40px;
+    color: #2d465b;
+    margin-bottom: 1rem;
 }
 
 .tallentor-shop .header .text {
     text-align: center;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .tallentor-shop .product-card {

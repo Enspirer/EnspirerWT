@@ -16,8 +16,8 @@
                 <p class="text">We design world-class digital products that bring joy their customers, transform
                     business, and deliver results.</p>
                 <div class="button-block">
-                    <a href="#" class="cta-outline-btn">See Portfolio<i class="bi bi-arrow-right-short"></i></a>
-                    <a href="#" class="cta-btn">Contact Us<i class="bi bi-arrow-right-short"></i></a>
+                    <a href="#" class="cta-btn-border"><span class="text">See Portfolio</span><i class="bi bi-arrow-right-short"></i></a>
+                    <a href="#" class="cta-btn-fill"><span class="text">Contact Us</span><i class="bi bi-arrow-right-short"></i></a>
                 </div>
                 <div class="image-block">
                     <img src="{{url('images/eShop/f3d0c857aaf69810618821c2a799adb5.png')}}" alt="" class="img-1">
@@ -64,43 +64,9 @@
                                             <div class="duration">per month</div>
                                         </div>
                                         <div class="button-block">
-                                            <a href="#" class="cta-outline-btn">Customization<i
+                                            <a href="#" class="cta-btn-border"><span class="text">Customization</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
-                                            <a href="#" class="cta-btn">Add to cart<i
-                                                    class="bi bi-arrow-right-short"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="services-card">
-                                    <div class="image-block">
-                                        <img src="{{url('images/eShop/Ecommerce.png')}}" alt="">
-                                    </div>
-                                    <div class="content-block">
-                                        <h4 class="title">E-Commerce Solutions</h4>
-                                        <div class="rating">
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                            </div>
-                                            <div class="rate">4.9</div>
-                                            <div class="amount">(1k+)</div>
-                                        </div>
-                                        <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                            industry.Lorem Ipsum has been the industry's
-                                            standard dummy text ever since the 1500 ...</p>
-                                        <div class="pricing">
-                                            <div class="fee">From $50</div>
-                                            <div class="duration">per month</div>
-                                        </div>
-                                        <div class="button-block">
-                                            <a href="#" class="cta-outline-btn">Customization<i
-                                                    class="bi bi-arrow-right-short"></i></a>
-                                            <a href="#" class="cta-btn">Add to cart<i
+                                            <a href="#" class="cta-btn-fill"><span class="text">Add to cart</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
                                         </div>
                                     </div>
@@ -132,9 +98,43 @@
                                             <div class="duration">per month</div>
                                         </div>
                                         <div class="button-block">
-                                            <a href="#" class="cta-outline-btn">Customization<i
+                                            <a href="#" class="cta-btn-border"><span class="text">Customization</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
-                                            <a href="#" class="cta-btn">Add to cart<i
+                                            <a href="#" class="cta-btn-fill"><span class="text">Add to cart</span><i
+                                                    class="bi bi-arrow-right-short"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="services-card">
+                                    <div class="image-block">
+                                        <img src="{{url('images/eShop/Ecommerce.png')}}" alt="">
+                                    </div>
+                                    <div class="content-block">
+                                        <h4 class="title">E-Commerce Solutions</h4>
+                                        <div class="rating">
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="rate">4.9</div>
+                                            <div class="amount">(1k+)</div>
+                                        </div>
+                                        <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                            industry.Lorem Ipsum has been the industry's
+                                            standard dummy text ever since the 1500 ...</p>
+                                        <div class="pricing">
+                                            <div class="fee">From $50</div>
+                                            <div class="duration">per month</div>
+                                        </div>
+                                        <div class="button-block">
+                                            <a href="#" class="cta-btn-border"><span class="text">Customization</span><i
+                                                    class="bi bi-arrow-right-short"></i></a>
+                                            <a href="#" class="cta-btn-fill"><span class="text">Add to cart</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
                                         </div>
                                     </div>
@@ -185,7 +185,7 @@
                                     <img src="{{url('images/landing_page/eShop/travel_website.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
-                                    <h6 class="title">E-Commerce Solutions</h6>
+                                    <h6 class="title">Payroll Management Systems</h6>
                                     <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                         industry.</p>
                                     <div class="rating">
@@ -208,7 +208,7 @@
                                     <img src="{{url('images/landing_page/eShop/car_pool_app.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
-                                    <h6 class="title">E-Commerce Solutions</h6>
+                                    <h6 class="title">POS Systems</h6>
                                     <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                         industry.</p>
                                     <div class="rating">
@@ -231,7 +231,7 @@
                                     <img src="{{url('images/landing_page/eShop/business_card_app.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
-                                    <h6 class="title">E-Commerce Solutions</h6>
+                                    <h6 class="title">Multi Vendor Solutions</h6>
                                     <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                         industry.</p>
                                     <div class="rating">
@@ -254,7 +254,7 @@
                                     <img src="{{url('images/landing_page/eShop/erp_solution.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
-                                    <h6 class="title">E-Commerce Solutions</h6>
+                                    <h6 class="title">ERP Hospital Management</h6>
                                     <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                         industry.</p>
                                     <div class="rating">
@@ -277,7 +277,7 @@
                                     <img src="{{url('images/landing_page/eShop/pos_system.png')}}" alt="">
                                 </div>
                                 <div class="content-block">
-                                    <h6 class="title">E-Commerce Solutions</h6>
+                                    <h6 class="title">CRM Systems</h6>
                                     <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                         industry.</p>
                                     <div class="rating">
