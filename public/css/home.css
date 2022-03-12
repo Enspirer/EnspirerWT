@@ -26,63 +26,61 @@
     width: 100%;
 }
 
-.hero-section .slide-wrapper .content-block h6.light {
+.hero-section .slide-wrapper .content-block h6 {
     color: #000;
     font-size: 16px;
     font-weight: 300;
     margin-bottom: 1.5rem;
 }
 
-.hero-section .slide-wrapper .content-block h5 {
-    font-weight: 300;
-    font-size: 18px;
+.hero-section .slide-wrapper .content-block h6 .strong {
+    font-size: 28px;
+    font-weight: 500;
+    color: #00AEEF;
+}
+
+.hero-section .slide-wrapper .content-block h2.title {
+    font-weight: 700;
+    font-size: 40px;
     margin-bottom: 1.5rem;
 }
 
-.hero-section .slide-wrapper .content-block h5:first-child {
-    margin-bottom: 20px;
+.hero-section .slide-wrapper .content-block h2.title span {
+    font-size: 28px;
+    font-weight: 500;
 }
 
-.hero-section .slide-wrapper .content-block h5.light {
-    font-weight: 300;
-}
-
-.hero-section .slide-wrapper .content-block h5 strong {
+.hero-section .slide-wrapper .content-block h5 {
+    margin-top: 1rem;
+    margin-bottom: 0;
     font-weight: 600;
-    color: #00AEEF;
-}
-
-.hero-section .slide-wrapper .content-block strong {
-    margin-bottom: 0.5rem;
-    display: block;
-    font-size: 18px;
-}
-
-.hero-section .slide-wrapper .content-block strong span {
-    color: #00AEEF;
-}
-
-.hero-section .slide-wrapper .content-block h6 {
-    margin-bottom: 50px;
-    font-weight: 400;
-    color: #00AEEF;
 }
 
 .hero-section .slide-wrapper .content-block h5 span {
-    font-size: 28px;
     color: #00AEEF;
 }
 
-.hero-section .slide-wrapper .content-block .title {
-    font-size: 35px;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    line-height: 1.2;
+.hero-section .slide-wrapper .content-block h5.text {
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0;
 }
 
-.hero-section .slide-wrapper .content-block .title span {
-    font-size: 28px;
+.hero-section .slide-wrapper .content-block h5.text span {
     font-weight: 500;
+    font-size: 18px;
+    color: #00AEEF;
+}
+
+.hero-section .slide-wrapper .content-block h6.blue-text {
+    font-weight: 300;
+    color: #00AEEF;
+    margin-top: .5rem;
+}
+
+.hero-section .slide-wrapper .content-block h6.blue-text span {
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .hero-section .slide-wrapper .content-block .cta-btn {
@@ -148,7 +146,7 @@
 
 .feature-section {
     background-color: #F5F6F8;
-    padding: 48px 0;
+    padding: 3rem 0 6rem;
 }
 
 .feature-section .header {
@@ -160,10 +158,14 @@
 
 .feature-section .header .title {
     font-weight: 700;
+    font-size: 40px;
+    color: #2d465b;
+    margin-bottom: 1rem;
 }
 
 .feature-section .header .text {
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .feature-section .body {
@@ -260,7 +262,7 @@
 
 .IMS-section {
     position: relative;
-    padding: 48px 0;
+    padding: 3rem 0;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, #F5F6F8), color-stop(0, #fff));
     background: linear-gradient(to bottom, #F5F6F8 75%, #fff 0);
 }
@@ -268,30 +270,36 @@
 .IMS-section .title {
     font-weight: 700;
     text-align: center;
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: #2d465b;
 }
 
 .IMS-section .text {
     text-align: center;
     display: block;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
 }
 
 .IMS-section .card-block {
     display: flex;
     gap: 4vw;
-    margin: 3.5rem 0;
+    margin: 5rem 0;
 }
 
 .IMS-section .card-block .card {
     flex: 1 1 100%;
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-radius: 20px;
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .IMS-section .card-block .card img {
-    width: 100px;
+    width: 60px;
     margin: 0 auto;
 }
 
@@ -317,10 +325,13 @@
 .SEO-section .header .title {
     font-weight: 700;
     text-align: center;
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: #2d465b;
 }
 
 .SEO-section .header .text {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     display: block;
     text-align: center;
@@ -608,13 +619,15 @@
 }
 
 .shop-section .header .title {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 1rem;
+    color: #2d465b;
 }
 
 .shop-section .header .text {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     text-align: center;
 }
@@ -762,10 +775,13 @@
 .news-section .header .title {
     font-weight: 700;
     text-align: center;
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: #2d465b;
 }
 
 .news-section .header .text {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     text-align: center;
 }

@@ -14,11 +14,11 @@
                         <li class="splide__slide">
                             <div class="slide-wrapper">
                                 <div class="content-block">
-                                    <h6 class="light">Upgrade your website with the most</h6>
-                                    <h3 class="title">Interactive <span>Communication tool</span></h3>
-                                    <h5>Improve user engagement &amp; <br> grow your business fast</h5>
-                                    <strong>All-in-One Chat With <span>IMS</span></strong>
-                                    <h6>The customised Inquiry Management System</h6>
+                                    <h6>Upgrade your website with the most</h6>
+                                    <h2 class="title">Interactive <span>Communication tool</span></h2>
+                                    <h5 class="text">Improve user engagement &amp; <br> grow your business fast</h5>
+                                    <h5>All-in-One Chat With <span>IMS</span></h5>
+                                    <h6 class="blue-text"><span>I</span>nquiry <span>M</span>anagement <span>S</span>ystem</h6>
 
                                     <a href="{{url('login')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
                                     <!-- <div class="featured-icons">
@@ -36,10 +36,10 @@
                         <li class="splide__slide">
                             <div class="slide-wrapper">
                                 <div class="content-block">
-                                    <h5>The Smarter way to <span>Boost</span> your </h5>
-                                    <h3 class="title">Website <br> Performance</h3>
-                                    <h5 class="light">WhatsApp Widget with <strong>IMS</strong></h5>
-                                    <h6>The customised Inquiry Management System</h6>
+                                    <h6>The Smarter way to <span class="strong">Boost</span> your </h6>
+                                    <h2 class="title">Website <br> Performance</h2>
+                                    <h5 class="text">WhatsApp Widget with <span>IMS</span></h5>
+                                    <h6 class="blue-text"><span>I</span>nquiry <span>M</span>anagement <span>S</span>ystem</h6>
 
                                     <a href="{{url('login')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
                                     <!-- <div class="featured-icons">
@@ -63,8 +63,8 @@
     <section class="feature-section">
         <div class="container">
             <div class="header">
-                <h3 class="title">Turn website visitors into customers, <br> delivering exceptional performance & conversions</h3>
-                <span class="text">Fully customizable chat widgets with popular messaging apps, Ready to go solutions to
+                <h3 class="title">Turn website visitors into customers</h3>
+                <span class="text">Delivering exceptional performance & conversions. Fully customizable chat widgets with popular messaging apps, Ready to go solutions to
                     grow your business faster</span>
             </div>
             <div class="body">
@@ -78,7 +78,7 @@
                             <li><i class="bi bi-check-circle-fill"></i>Customisable ready to use widget</li>
                             <li><i class="bi bi-check-circle-fill"></i>Inquiry Management System - IMS</li>
                         </ul>
-                        <a href="#" class="cta-btn-border">Get Started</a>
+                        <a href="#" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/whatsapp-widget.png')}}" alt="">
@@ -94,7 +94,7 @@
                             <li><i class="bi bi-check-circle-fill"></i>Pick and choose the channels</li>
                             <li><i class="bi bi-check-circle-fill"></i>Quick integration with IMS option.</li>
                         </ul>
-                        <a href="#" class="cta-btn-border">Get Started</a>
+                        <a href="#" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/all-in-one-chat.png')}}" alt="">
@@ -115,7 +115,7 @@
                 </div>
                 <div class="card">
                     <img src="{{url('images/landing_page/home/ims_analytics.png')}}" alt="">
-                    <div class="text">Analytics of the inquiry management process with reports</div>
+                    <div class="text">Analytics of the inquiry process with reports</div>
                 </div>
                 <div class="card">
                     <img src="{{url('images/landing_page/home/ims_record.png')}}" alt="">
@@ -135,8 +135,8 @@
     <section class="SEO-section">
         <div class="container">
             <div class="header">
-                <h2 class="title">SEO Managing</h2>
-                <span class="text">Fully customizable chat widgets with popular messaging apps, Ready to go solutions to grow your business faster</span>
+                <h2 class="title">Keep your website on Top of the Game & Secured</h2>
+                <span class="text">The All-in-One comprehensive tool to manage Google rankings, site analytics, Cyber security and general performance of the website.</span>
             </div>
             <div class="inner-wrapper">
                 <div class="SEO-block">
@@ -151,7 +151,7 @@
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/seo.png')}}" alt="">
                     </div>
-                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started</a>
+                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
                 </div>
                 <div class="SEO-block">
                     <div class="header">
@@ -165,7 +165,7 @@
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/analytics.png')}}" alt="">
                     </div>
-                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started</a>
+                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
                 </div>
                 <div class="SEO-block">
                     <div class="header">
@@ -179,7 +179,7 @@
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/security.png')}}" alt="">
                     </div>
-                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started</a>
+                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
                 </div>
             </div>
         </div>
@@ -266,12 +266,12 @@
                                             </div>
                                             <div class="rating">
                                                 <i class="bi bi-star-fill"></i>
-                                                <span class="precentage">4.9</span>
+                                                <span class="precentage">4.1</span>
                                                 <span class="amount">(1k+)</span>
                                             </div>
                                             <div class="footer">
-                                                <div class="fee">From 50$</div>
-                                                <div class="period">Per Month</div>
+                                                <div class="fee">From $2000</div>
+                                                <div class="period">Fully Customisable</div>
                                             </div>
                                         </div>
                                     </div>
@@ -293,8 +293,8 @@
                                                 <span class="amount">(1k+)</span>
                                             </div>
                                             <div class="footer">
-                                                <div class="fee">From 2500$</div>
-                                                <div class="period">Fully Customizable</div>
+                                                <div class="fee">From $50</div>
+                                                <div class="period">Per Month</div>
                                             </div>
                                         </div>
                                     </div>
@@ -311,11 +311,11 @@
                                             <div class="text">Customised themes with fully functional multi store module</div>
                                             <div class="rating">
                                                 <i class="bi bi-star-fill"></i>
-                                                <span class="precentage">4.9</span>
+                                                <span class="precentage">4.5</span>
                                                 <span class="amount">(1k+)</span>
                                             </div>
                                             <div class="footer">
-                                                <div class="fee">From 3000$</div>
+                                                <div class="fee">From $100</div>
                                                 <div class="period">Per Month</div>
                                             </div>
                                         </div>
@@ -327,7 +327,7 @@
                 </div>
             </div>
             <div class="footer">
-                <a href="{{url('contact')}}" class="cta-btn">Talk to our team</a>
+                <a href="{{url('contact')}}" class="cta-btn">Talk to our team <i class="bi bi-arrow-right-short"></i></a>
             </div>
         </div>
     </section>
