@@ -398,6 +398,10 @@ function addWidget() {
         justify-content: center;
     }
 
+    #allin1widgetblock #allin1widtoggler.allin1view {
+        display: none;
+    }
+
     #allin1widgetblock #allin1widtoggler:hover {
         cursor: pointer;
     }
@@ -765,19 +769,20 @@ screenSize.addListener(mobileChat);
     }
 
     function mobileChat(screenSize) {
-    if(screenSize.matches) {
-        return;
-    } else {
-        setTimeout(
-            function allin1chatPopTimeout() {
-                document.querySelector('#allin1widget').classList.add("allin1view");
-                allin1msgPopTimeout();
-                var audio = new Audio('{{url('blackberrychat.mp3')}}');
-                audio.play();
-            }, {{$widget_meta->pop_up_opening_time}}
-        );
+        if(screenSize.matches) {
+            return;
+        } else {
+            setTimeout(
+                function allin1chatPopTimeout() {
+                    document.querySelector('#allin1widget').classList.add("allin1view");
+                    document.getElementById("allin1widtoggler").classList.add("allin1view");
+                    allin1msgPopTimeout();
+                    var audio = new Audio('{{url('blackberrychat.mp3')}}');
+                    audio.play();
+                }, {{$widget_meta->pop_up_opening_time}}
+            );
+        }
     }
-}
 
 @else
 
@@ -788,7 +793,8 @@ screenSize.addListener(mobileChat);
     }
 
     function allin1toggle() {
-        document.querySelector('#allin1widget').classList.toggle("allin1view");
+        document.querySelector('#allin1widget').classList.add("allin1view");
+        document.getElementById("allin1widtoggler").classList.add("allin1view");
         allin1msgPopTimeout();
     }
 
@@ -799,6 +805,7 @@ screenSize.addListener(mobileChat);
             setTimeout(
                 function allin1chatPopTimeout() {
                     document.querySelector('#allin1widget').classList.add("allin1view");
+                    document.getElementById("allin1widtoggler").classList.add("allin1view");
                     allin1msgPopTimeout();
                     var audio = new Audio('{{url('blackberrychat.mp3')}}');
                     audio.play();
@@ -809,13 +816,15 @@ screenSize.addListener(mobileChat);
 @endif
 
 function allin1toggle() {
-    document.querySelector('#allin1widget').classList.toggle("allin1view");
+    document.querySelector('#allin1widget').classList.add("allin1view");
+    document.getElementById("allin1widtoggler").classList.add("allin1view");
     allin1msgPopTimeout();
 }
 
 
 function allin1close() {
     document.querySelector('#allin1widget').classList.remove("allin1view");
+    document.getElementById("allin1widtoggler").classList.remove("allin1view");
     document.querySelector('.allin1welcomemsg').classList.remove("allin1view");
     const forms = document.querySelectorAll('.allin1formcontent');
     [].forEach.call(forms, function (el) {

@@ -247,6 +247,10 @@ div.innerHTML = `<style>
         align-items: center;
     }
 
+    #wappwidgetblock #wappwidtoggler.wappview {
+        display: none;
+    }
+
     #wappwidgetblock #wappwidtoggler:hover {
         cursor: pointer;
     }
@@ -418,6 +422,10 @@ document.getElementById('{{$widget_key}}').appendChild(div);
 
 window.onload = addWidget;
 
+const screenSize = window.matchMedia("(max-width: 768px)");
+mobileChat(screenSize);
+screenSize.addListener(mobileChat);
+
 @if($widget_meta->auto_trigger != null)
 
     function wappmsgPopTimeout() {
@@ -426,19 +434,21 @@ window.onload = addWidget;
         },{{$widget_meta->message_auto_reply_time}});
     }
 
-    function wapptoggle() {
-        document.querySelector('#wappwidget').classList.toggle("wappview");
-        wappmsgPopTimeout();
+    function mobileChat(screenSize) {
+        if(screenSize.matches) {
+            return;
+        } else {
+            setTimeout(
+                function wappchatPopTimeout() {
+                    document.querySelector('#wappwidget').classList.add("wappview");
+                    document.getElementById("wappwidtoggler").classList.add("wappview");
+                    wappmsgPopTimeout();
+                    var audio = new Audio('{{url('blackberrychat.mp3')}}');
+                    audio.play();
+                }, {{$widget_meta->pop_up_opening_time}}
+            );
+        }
     }
-
-    setTimeout(
-        function wappchatPopTimeout() {
-            document.querySelector('#wappwidget').classList.add("wappview");
-            wappmsgPopTimeout();
-            var audio = new Audio('{{url('blackberrychat.mp3')}}');
-            audio.play();
-        }, {{$widget_meta->pop_up_opening_time}}
-    );
 
 @else
 
@@ -449,18 +459,26 @@ window.onload = addWidget;
     }
 
     function wapptoggle() {
-        document.querySelector('#wappwidget').classList.toggle("wappview");
+        document.querySelector('#wappwidget').classList.add("wappview");
+        document.getElementById("wappwidtoggler").classList.add("wappview");
         wappmsgPopTimeout();
     }
 
-    setTimeout(
-        function wappchatPopTimeout() {
-            document.querySelector('#wappwidget').classList.add("wappview");
-            wappmsgPopTimeout();
-            var audio = new Audio('{{url('blackberrychat.mp3')}}');
-            audio.play();
-        }, 2000
-    );
+    function mobileChat(screenSize) {
+        if(screenSize.matches) {
+            return;
+        } else {
+            setTimeout(
+                function wappchatPopTimeout() {
+                    document.querySelector('#wappwidget').classList.add("wappview");
+                    document.getElementById("wappwidtoggler").classList.add("wappview");
+                    wappmsgPopTimeout();
+                    var audio = new Audio('{{url('blackberrychat.mp3')}}');
+                    audio.play();
+                }, 2000
+            );
+        }
+    }
 
 @endif
 
@@ -468,6 +486,7 @@ function wappclose() {
     document.querySelector('#wappwidget').classList.remove("wappview");
     document.querySelector('#wappstartupform').classList.remove("wappview");
     document.querySelector('.wappwelcomemsg').classList.remove("wappview");
+    document.getElementById("wappwidtoggler").classList.remove("wappview");
 
 }
 
