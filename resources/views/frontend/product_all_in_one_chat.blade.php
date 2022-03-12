@@ -34,7 +34,7 @@
                                     <li><i class="bi bi-check-circle-fill"></i> Pick and choose the channels</li>
                                     <li><i class="bi bi-check-circle-fill"></i> Quick integration with IMS option</li>
                                 </ul>
-                                <a href="{{url('login')}}" class="cta-plain-btn">
+                                <a href="{{url('login')}}" class="cta-btn-border">
                                     <span class="text">Get Started</span>
                                     <i class="bi bi-arrow-right-short"></i>
                                 </a>
@@ -71,7 +71,7 @@
                                     <li><i class="bi bi-check-circle-fill"></i> Setting a chat-opening trigger</li>
                                     <li><i class="bi bi-check-circle-fill"></i> Integration into your website with IMS</li>
                                 </ul>
-                                <a href="" class="cta-outline-btn">
+                                <a href="" class="cta-btn-border">
                                     <span class="text">Get Started</span>
                                     <i class="bi bi-arrow-right-short"></i>
                                 </a>

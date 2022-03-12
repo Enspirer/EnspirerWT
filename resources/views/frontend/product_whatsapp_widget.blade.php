@@ -34,7 +34,7 @@
                                     <li><i class="bi bi-check-circle-fill"></i> Customisable ready to use widget</li>
                                     <li><i class="bi bi-check-circle-fill"></i> Inquiry Management System - IMS</li>
                                 </ul>
-                                <a href="{{url('login')}}" class="cta-plain-btn">
+                                <a href="{{url('login')}}" class="cta-btn-border">
                                     <span class="text">Get Started</span>
                                     <i class="bi bi-arrow-right-short"></i>
                                 </a>
@@ -72,7 +72,7 @@
                                     <li><i class="bi bi-check-circle-fill"></i> Choose bubble icon and add text</li>
                                     <li><i class="bi bi-check-circle-fill"></i> Your own welcome message</li>
                                 </ul>
-                                <a href="" class="cta-outline-btn">
+                                <a href="" class="cta-btn-border">
                                     <span class="text">Get Started</span>
                                     <i class="bi bi-arrow-right-short"></i>
                                 </a>
