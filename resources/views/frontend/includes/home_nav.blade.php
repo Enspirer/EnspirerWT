@@ -13,7 +13,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a class="btn nav-link dropdown-toggle" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'product-whatsapp-widget' ? 'active' : null }} {{ Request::segment(1) == 'product-all-in-one-chat' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
                                     Products
                                 </a>
                                 <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="productNav">
