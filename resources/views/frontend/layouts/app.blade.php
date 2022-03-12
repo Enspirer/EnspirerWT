@@ -32,7 +32,17 @@
         <link rel="stylesheet" href="{{url('css/navbar.css')}} ">
         <link rel="stylesheet" href="{{url('css/home.css')}} ">
         <link rel="stylesheet" href="{{url('css/footer.css')}} ">
-
+        <!-- Hotjar Tracking Code for https://tallentor.com/ -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2872426,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
 
