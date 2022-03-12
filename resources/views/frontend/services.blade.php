@@ -9,94 +9,91 @@
 @include('frontend.includes.home_nav')
 
 <section class="hero-section">
-        <div class="container">
+    <div class="container">
+        <div class="inner-wrapper">
             <div class="content-block">
                 <img src="{{url('images/services/01.png')}}" alt="" class="order-no">
-                <h2 class="title">Express web</h2>
-                <p class="text">build a website in few hours . You can use
-                    only drag and drop method for build your
-                    own website <strong>Without coding</strong></p>
-                <a href="#" class="cta-btn">Inquiry Now <i class="bi bi-arrow-right-short"></i></a>
+                <h2 class="title">Built it, the way <br> you want</h2>
+                <p class="text">The fastest way create your online presence in few hours on Drag &amp; Drop method <strong>Without coding</strong></p>
+                <a href="#" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
             </div>
             <div class="image-block">
                 <img src="{{url('images/services/5721524-02.png')}}" alt="">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="enterprise-section">
-        <div class="container">
+<section class="enterprise-section">
+    <div class="container">
+        <div class="inner-wrapper">
             <div class="image-block">
                 <img src="{{url('images/services/Drag and drop web-02.png')}}" alt="">
             </div>
             <div class="content-block">
                 <img src="{{url('images/services/02.png')}}" alt="" class="order-no">
-                <h2 class="title">Express web</h2>
-                <p class="text">Customized web applications Enspirer
-                    build a website in few hours . You can use
-                    only drag and drop method for build your
-                    own website With coding</p>
-                <a href="#" class="cta-btn">Inquiry Now <i class="bi bi-arrow-right-short"></i></a>
+                <h2 class="title">Customized Web Applications</h2>
+                <p class="text">Build to perfection by a Team of experts with a blend of creativity & technology</p>
+                <p class="text">Consult out Expert Centre for a FREE analysis of your system requirements.</p>
+                <a href="#" class="cta-btn-border"><span class="text">Talk to Expert Centre</span> <i class="bi bi-arrow-right-short"></i></a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="feature-section">
-        <div class="container inner-wrapper">
-            <div class="feature-block block-3">
-                <img src="{{url('images/services/03.png')}}" alt="" class="order-no">
-                <div class="image-block">
-                    <img src="{{url('images/services/cdd-01.png')}}" alt="">
-                </div>
-                <h4 class="title">Software Development</h4>
-                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's dummy text ever since the 1500s, when an</p>
-                <a href="#" class="cta-btn">Inquiry Now <i class="bi bi-arrow-right-short"></i></a>
+<section class="feature-section">
+    <div class="container inner-wrapper">
+        <div class="feature-block block-3">
+            <img src="{{url('images/services/03.png')}}" alt="" class="order-no">
+            <div class="image-block">
+                <img src="{{url('images/services/cdd-01.png')}}" alt="">
             </div>
-            <div class="feature-block block-4">
-                <img src="{{url('images/services/04.png')}}" alt="" class="order-no">
-                <div class="image-block">
-                    <img src="{{url('images/services/xcxcx-01.png')}}" alt="">
-                </div>
-                <h4 class="title">Mobile App Development</h4>
-                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's dummy text ever since the 1500s, when an</p>
-                <a href="#" class="cta-btn">Inquiry Now <i class="bi bi-arrow-right-short"></i></a>
-            </div>
-            <div class="feature-block block-5">
-                <img src="{{url('images/services/05.png')}}" alt="" class="order-no">
-                <div class="image-block">
-                    <img src="{{url('images/services/sfsf-01.png')}}" alt="">
-                </div>
-                <h4 class="title">Digital Marketing</h4>
-                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's dummy text ever since the 1500s, when an</p>
-                <a href="#" class="cta-btn">Inquiry Now <i class="bi bi-arrow-right-short"></i></a>
-            </div>
-            <div class="feature-block block-6">
-                <img src="{{url('images/services/06.png')}}" alt="" class="order-no">
-                <div class="image-block">
-                    <img src="{{url('images/services/SEO-01.png')}}" alt="">
-                </div>
-                <h4 class="title">Search Engine Optimisation</h4>
-                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's dummy text ever since the 1500s, when an</p>
-                <a href="#" class="cta-btn">Inquiry Now <i class="bi bi-arrow-right-short"></i></a>
-            </div>
-            <div class="feature-block block-7">
-                <img src="{{url('images/services/08.png')}}" alt="" class="order-no">
-                <div class="image-block">
-                    <img src="{{url('images/services/Analytics-01.png')}}" alt="">
-                </div>
-                <h4 class="title">Search Engine marketing</h4>
-                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's dummy text ever since the 1500s, when an</p>
-                <a href="#" class="cta-btn">Inquiry Now <i class="bi bi-arrow-right-short"></i></a>
-            </div>
+            <h4 class="title">Software Development</h4>
+            <p class="text">Experienced software developers to work individually or as a part of your team. Save Big with remote working environment, yer achieve the Best results.</p>
+            <a href="#" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
         </div>
-    </section>
+        <div class="feature-block block-4">
+            <img src="{{url('images/services/04.png')}}" alt="" class="order-no">
+            <div class="image-block">
+                <img src="{{url('images/services/xcxcx-01.png')}}" alt="">
+            </div>
+            <h4 class="title">Mobile App Development</h4>
+            <p class="text">Hire the industry experts to bring your idea into reality. Dedicated Android & iOS developers to work on your project</p>
+            <a href="#" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+        <div class="feature-block block-5">
+            <img src="{{url('images/services/05.png')}}" alt="" class="order-no">
+            <div class="image-block">
+                <img src="{{url('images/services/sfsf-01.png')}}" alt="">
+            </div>
+            <h4 class="title">Digital Marketing</h4>
+            <p class="text">SEO experts, Social media strategists and creative designers all under one package with a dedicated account manager</p>
+            <a href="#" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+        <div class="feature-block block-6">
+            <img src="{{url('images/services/06.png')}}" alt="" class="order-no">
+            <div class="image-block">
+                <img src="{{url('images/services/SEO-01.png')}}" alt="">
+            </div>
+            <h4 class="title">Search Engine Optimisation</h4>
+            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry's dummy text ever since the 1500s, when an</p>
+            <a href="#" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+        <div class="feature-block block-7">
+            <img src="{{url('images/services/08.png')}}" alt="" class="order-no">
+            <div class="image-block">
+                <img src="{{url('images/services/Analytics-01.png')}}" alt="">
+            </div>
+            <h4 class="title">Search Engine Marketing</h4>
+            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry's dummy text ever since the 1500s, when an</p>
+            <a href="#" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+    </div>
+</section>
 
-    @include('frontend.includes.footer')
+@include('frontend.includes.footer')
 
     
 @endsection
