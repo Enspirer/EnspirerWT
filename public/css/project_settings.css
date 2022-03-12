@@ -1,0 +1,559 @@
+.section-settings {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #F5F6F8;
+}
+
+.section-settings .tab-block {
+  width: 255px;
+  border-right: 1px solid #ddd;
+  height: 100%;
+  min-height: calc(100vh - 93px);
+}
+
+.section-settings .tab-block .nav-pills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-settings .tab-block .nav-pills .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  border-radius: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #E7ECF1;
+  padding: 1.25rem 1.5rem 1.25rem 3rem;
+}
+
+.section-settings .tab-block .nav-pills .nav-link .inner-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+.section-settings .tab-block .nav-pills .nav-link .inner-wrapper .bi {
+  font-size: 20px;
+  color: #000;
+}
+
+.section-settings .tab-block .nav-pills .nav-link .inner-wrapper .text {
+  font-size: 14px;
+  color: #000;
+}
+
+.section-settings .tab-block .nav-pills .nav-link .bi-chevron-right {
+  display: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.section-settings .tab-block .nav-pills .nav-link.active {
+  background-color: #E3E3E3;
+}
+
+.section-settings .tab-block .nav-pills .nav-link.active .bi-chevron-right {
+  display: block;
+}
+
+.section-settings .content-block {
+  width: calc(100% - 255px);
+  padding: 3rem;
+}
+
+.section-settings .content-block #accounts-details .title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.section-settings .content-block #accounts-details .content {
+  background-color: #fff;
+  padding: 3rem 2rem 3rem 3rem;
+  border-radius: 20px;
+}
+
+.section-settings .content-block #accounts-details .content .profile-pic {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #017FFA;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-settings .content-block #accounts-details .content .profile-pic img {
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-settings .content-block #accounts-details .content .profile-pic .bi {
+  position: absolute;
+  background-color: #017FFA;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  right: 0;
+}
+
+.section-settings .content-block #accounts-details .content .profile-info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.section-settings .content-block #accounts-details .content .profile-info .bi {
+  position: absolute;
+  background-color: #017FFA;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  right: 0;
+}
+
+.section-settings .content-block #accounts-details .content .profile-info .info-item {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.section-settings .content-block #accounts-details .content .profile-info .info-item .data {
+  font-size: 15px;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.section-settings .content-block #edit-profile .title,
+.section-settings .content-block #pw-n-security .title {
+  /* font-size: 26px; */
+  /* font-weight: 600; */
+  /* margin-bottom: 3rem; */
+}
+
+.section-settings .content-block #edit-profile .content .profile-pic,
+.section-settings .content-block #pw-n-security .content .profile-pic {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #017FFA;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 3rem auto;
+}
+
+.section-settings .content-block #edit-profile .content .profile-pic img,
+.section-settings .content-block #pw-n-security .content .profile-pic img {
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-settings .content-block #edit-profile .content .profile-pic .bi,
+.section-settings .content-block #pw-n-security .content .profile-pic .bi {
+  position: absolute;
+  background-color: #017FFA;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  right: 0;
+}
+
+.section-settings .content-block #edit-profile .content .form-label,
+.section-settings .content-block #pw-n-security .content .form-label {
+  font-size: 14px;
+}
+
+.section-settings .content-block #edit-profile .content .form-control,
+.section-settings .content-block #pw-n-security .content .form-control {
+  font-size: 14px;
+  border: none;
+  padding: 0.75rem 1rem;
+}
+
+.section-settings .content-block #edit-profile .content .form-select,
+.section-settings .content-block #pw-n-security .content .form-select {
+  border: none;
+  font-size: 14px;
+  padding: 0.75rem 1rem;
+}
+
+.section-settings .content-block #edit-profile .content .form-select option,
+.section-settings .content-block #pw-n-security .content .form-select option {
+  font-size: 14px;
+}
+
+.section-settings .content-block #edit-profile .content .form-control:focus,
+.section-settings .content-block #edit-profile .content .form-select:focus,
+.section-settings .content-block #pw-n-security .content .form-control:focus,
+.section-settings .content-block #pw-n-security .content .form-select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.section-settings .content-block #edit-profile .content .input-group-text,
+.section-settings .content-block #pw-n-security .content .input-group-text {
+  background-color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+}
+
+.section-settings .content-block #edit-profile .content .input-group-text:hover,
+.section-settings .content-block #pw-n-security .content .input-group-text:hover {
+  cursor: pointer;
+}
+
+.section-settings .content-block #edit-profile .content .input-group-text .bi,
+.section-settings .content-block #pw-n-security .content .input-group-text .bi {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.section-settings .content-block #edit-profile .content .save-btn,
+.section-settings .content-block #pw-n-security .content .save-btn {
+  background-color: #00AEEF;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 3rem;
+}
+
+.section-settings .content-block #choose-plan .title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.section-settings .content-block #choose-plan .plan-info {
+  background-color: #fff;
+  display: none;
+  padding: 3rem 2rem 3rem 4.5rem;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-settings .content-block #choose-plan .plan-info.active {
+  display: block;
+}
+
+.section-settings .content-block #choose-plan .plan-info .title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.section-settings .content-block #choose-plan .plan-info .subtitle {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-settings .content-block #choose-plan .plan-info.basic-plan .subtitle {
+  color: #31AE0B;
+}
+
+.section-settings .content-block #choose-plan .plan-info.standard-plan .subtitle {
+  color: #FFAC1B;
+}
+
+.section-settings .content-block #choose-plan .plan-info.premium-plan .subtitle {
+  color: #017FFA;
+}
+
+.section-settings .content-block #choose-plan .plan-info .plan-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.section-settings .content-block #choose-plan .plan-info .plan-options .option {
+  position: relative;
+}
+
+.section-settings .content-block #choose-plan .plan-info .plan-options .option .bi {
+  position: absolute;
+  font-size: 14px;
+  left: -25px;
+  top: -1px;
+  color: #017FFA;
+}
+
+.section-settings .content-block #choose-plan .plan-info .plan-options .option .text {
+  font-size: 14px;
+}
+
+.section-settings .content-block #choose-plan .plan-info .plan-options .option.unavailable .bi,
+.section-settings .content-block #choose-plan .plan-info .plan-options .option.unavailable .text {
+  color: #65666F;
+}
+
+.section-settings .content-block #choose-plan .plan-info .plan-options .option.unavailable .text {
+  text-decoration: line-through;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check {
+  position: relative;
+  background-color: #fff;
+  padding-left: 5rem;
+  padding-right: 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 3rem;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .bi {
+  position: absolute;
+  top: 52%;
+  left: 17px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 15px;
+  z-index: 1;
+  display: none;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-input {
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-input:checked {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-input:checked + .bi {
+  display: block;
+  color: #017FFA;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  gap: 3rem;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label:hover {
+  cursor: pointer;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .icon-block {
+  width: 100px;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .icon-block img {
+  width: 60px;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .title-block {
+  width: 100px;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .title-block .title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .title-block .subtitle {
+  text-align: center;
+  font-size: 12px;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .discount-block {
+  width: 100px;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .discount-block.basic {
+  color: #31AE0B;
+  background-color: #C6E5BF;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .discount-block.standard {
+  color: #FFAE21;
+  background-color: #FFE1AD;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .discount-block.premium {
+  color: #017FFA;
+  background-color: #A3E2F9;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .fees-block {
+  width: 100px;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .fees-block .currency,
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .fees-block .cents {
+  font-weight: 600;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .fees-block .fee {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .fees-block.basic .fee {
+  color: #31AE0B;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .fees-block.standard .fee {
+  color: #FFAE21;
+}
+
+.section-settings .content-block #choose-plan .subscriptions .form-check .form-check-label .fees-block.premium .fee {
+  color: #017FFA;
+}
+
+.section-settings .content-block #choose-plan .plan-change-confirmation .text {
+  font-size: 14px;
+}
+
+.section-settings .content-block #choose-plan .plan-change-confirmation .button-block .btn {
+  width: 100px;
+  height: 40px;
+  padding: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  border-radius: 0.5em;
+  border: 1px solid transparent;
+}
+
+.section-settings .content-block #choose-plan .plan-change-confirmation .button-block .btn.cancel-btn {
+  border-color: #8A8A8A;
+  background-color: transparent;
+  color: #8A8A8A;
+}
+
+.section-settings .content-block #choose-plan .plan-change-confirmation .button-block .btn.submit-btn {
+  border-color: #00AEEF;
+  background-color: #00AEEF;
+  color: #fff;
+}
+
+.section-settings .content-block #choose-plan .plan-change-confirmation .button-block .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=dashboard_settings.css.map */
