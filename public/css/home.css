@@ -83,31 +83,6 @@
     font-size: 18px;
 }
 
-.hero-section .slide-wrapper .content-block .cta-btn {
-    text-decoration: none;
-    color: #fff;
-    background-color: #000;
-    font-size: 14px;
-    width: 180px;
-    display: block;
-    padding: 18px 0;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.hero-section .slide-wrapper .content-block .cta-btn .bi {
-    font-size: 20px;
-    margin-left: 5px;
-}
-
 .hero-section .slide-wrapper .content-block .featured-icons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -235,25 +210,6 @@
 .feature-section .body .feature-box .content-block .features li .bi {
     color: #00AEEF;
     margin-right: 12px;
-}
-
-.feature-section .body .feature-box .content-block .cta-btn-border {
-    text-decoration: none;
-    color: #000;
-    width: 200px;
-    padding: 16px 0;
-    display: block;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.feature-section .body .feature-box .content-block .cta-btn-border:hover {
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #fff;
 }
 
 .feature-section .body .feature-box .image-block img {
@@ -403,27 +359,16 @@
     margin-left: -10px;
 }
 
+.SEO-section .inner-wrapper .SEO-block .image-block {
+    margin: 2rem 0;
+}
+
 .SEO-section .inner-wrapper .SEO-block .image-block img {
     width: 100%;
 }
 
 .SEO-section .inner-wrapper .SEO-block .cta-btn-border {
-    text-decoration: none;
-    color: #000;
     width: 100%;
-    padding: 13px 0;
-    display: block;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.SEO-section .inner-wrapper .SEO-block .cta-btn-border:hover {
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #fff;
 }
 
 .marketplace-section {
@@ -469,58 +414,9 @@
     background-color: #fff;
 }
 
-.marketplace-section .inner-wrapper .button-block .content .cta-btn {
-    text-decoration: none;
-    color: #fff;
-    background-color: #000;
-    font-size: 16px;
-    width: 340px;
-    padding: 17px 0;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.marketplace-section .inner-wrapper .button-block .content .cta-btn .bi {
-    font-size: 20px;
-    margin-left: 36px;
-}
-
 .marketplace-section .inner-wrapper .button-block .content .cta-btn-border {
-    text-decoration: none;
-    color: #000;
+    width: 100%;
     background-color: #fff;
-    width: 340px;
-    padding: 17px 0;
-    border: 1px solid #000;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 28px;
-}
-
-.marketplace-section .inner-wrapper .button-block .content .cta-btn-border:hover {
-    color: #fff;
-    background-color: #000;
-}
-
-.marketplace-section .inner-wrapper .button-block .content .cta-btn-border .bi {
-    font-size: 20px;
-    margin-left: 36px;
 }
 
 .marketplace-section .inner-wrapper .card-block {
@@ -751,17 +647,8 @@
     margin-top: 3rem;
 }
 
-.shop-section .footer .cta-btn {
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    width: 300px;
-    margin: auto;
-    padding: 13px 0;
-    display: block;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-align: center;
+.shop-section .footer .cta-btn-fill {
+    margin: 0 auto;
 }
 
 .news-section {
@@ -952,10 +839,6 @@
         margin-bottom: 40px;
     }
 
-    .hero-section .slide-wrapper .content-block .cta-btn {
-        padding: 12px 0;
-    }
-
     .hero-section .slide-wrapper {
         align-items: flex-start;
     }
@@ -988,17 +871,6 @@
         font-size: 40px;
         text-align: center;
         margin-bottom: 40px;
-    }
-
-    .marketplace-section .inner-wrapper .button-block .content .cta-btn {
-        padding: 12px 0;
-        width: 300px;
-    }
-
-    .marketplace-section .inner-wrapper .button-block .content .cta-btn-border {
-        padding: 12px 0;
-        width: 300px;
-        margin-top: 20px;
     }
 
     .marketplace-section .inner-wrapper .card-block {

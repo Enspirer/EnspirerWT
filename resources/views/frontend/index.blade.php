@@ -20,7 +20,7 @@
                                     <h5>All-in-One Chat With <span>IMS</span></h5>
                                     <h6 class="blue-text"><span>I</span>nquiry <span>M</span>anagement <span>S</span>ystem</h6>
 
-                                    <a href="{{url('login')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                                    <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                                     <!-- <div class="featured-icons">
                                         <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
                                         <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
@@ -41,7 +41,7 @@
                                     <h5 class="text">WhatsApp Widget with <span>IMS</span></h5>
                                     <h6 class="blue-text"><span>I</span>nquiry <span>M</span>anagement <span>S</span>ystem</h6>
 
-                                    <a href="{{url('login')}}" class="cta-btn">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                                    <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                                     <!-- <div class="featured-icons">
                                         <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
                                         <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
@@ -78,7 +78,7 @@
                             <li><i class="bi bi-check-circle-fill"></i>Customisable ready to use widget</li>
                             <li><i class="bi bi-check-circle-fill"></i>Inquiry Management System - IMS</li>
                         </ul>
-                        <a href="#" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                        <a href="#" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/whatsapp-widget.png')}}" alt="">
@@ -94,7 +94,7 @@
                             <li><i class="bi bi-check-circle-fill"></i>Pick and choose the channels</li>
                             <li><i class="bi bi-check-circle-fill"></i>Quick integration with IMS option.</li>
                         </ul>
-                        <a href="#" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                        <a href="#" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/all-in-one-chat.png')}}" alt="">
@@ -151,7 +151,7 @@
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/seo.png')}}" alt="">
                     </div>
-                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                    <a href="{{url('contact')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                 </div>
                 <div class="SEO-block">
                     <div class="header">
@@ -165,7 +165,7 @@
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/analytics.png')}}" alt="">
                     </div>
-                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                    <a href="{{url('contact')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                 </div>
                 <div class="SEO-block">
                     <div class="header">
@@ -179,7 +179,7 @@
                     <div class="image-block">
                         <img src="{{url('images/landing_page/home/security.png')}}" alt="">
                     </div>
-                    <a href="{{url('contact')}}" class="cta-btn-border">Get Started <i class="bi bi-arrow-right-short"></i></a>
+                    <a href="{{url('contact')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                 </div>
             </div>
         </div>
@@ -191,7 +191,7 @@
                 <div class="button-block">
                     <div class="content">
                         <h1 class="title">The Tallent <br> Marketplace</h1>
-                        <a href="{{url('market_place')}}" class="cta-btn-border">Find Tallent <i class="bi bi-arrow-right-short"></i></a>
+                        <a href="{{url('market_place')}}" class="cta-btn-border"><span class="text">Find Tallent</span> <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                 </div>
                 <div class="card-block" id="marketplaceCards">
@@ -327,7 +327,7 @@
                 </div>
             </div>
             <div class="footer">
-                <a href="{{url('contact')}}" class="cta-btn">Talk to our team <i class="bi bi-arrow-right-short"></i></a>
+                <a href="{{url('contact')}}" class="cta-btn-fill"><span class="text">Talk to Our Team</span> <i class="bi bi-arrow-right-short"></i></a>
             </div>
         </div>
     </section>
