@@ -71,7 +71,7 @@
 
         @stack('after-styles')
     </head>
-    <body>
+    <body id="tocking">
         @include('includes.partials.read-only')
 
         <div id="app">

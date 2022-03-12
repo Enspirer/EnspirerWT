@@ -21,15 +21,8 @@
 
         <!-- Content goes here -->
             <div class="row g-0">
-                <div class="section-content">
-                    <div id="heatmapContainer" style="height: 1000px;">
-                        <iframe src="https://tallentor.com/" height="100%" width="100%"></iframe>
+                <div class="section-content" id="stack_overflow">
 
-                    </div>
-                    <div class="section-container">
-
-
-                    </div>
                 </div>
             </div>
         </div>
@@ -41,6 +34,8 @@
 @endsection
 
 @push('after-scripts')
+
+
 
 <script>
     $('.delete').on('click', function() {
@@ -60,19 +55,20 @@
     window.onload = function() {
         // create a heatmap instance
         var heatmap = h337.create({
-            container: document.getElementById('heatmapContainer'),
+            container: document.getElementById('tocking'),
             maxOpacity: .6,
             radius: 50,
             blur: .90,
             // backgroundColor with alpha so you can see through it
-            backgroundColor: 'rgba(0, 0, 58, 0.10)'
+            backgroundColor: 'rgba(0, 0, 58, 0.10)',
+
         });
         var heatmapContainer = document.getElementById('heatmapContainerWrapper');
 
 
         heatmap.addData({ x: 500, y: 467, value: 1 });
-        heatmap.addData({ x: 500, y: 467, value: 1 });
-        heatmap.addData({ x: 500, y: 467, value: 1 });
+        heatmap.addData({ x: 700, y: 200, value: 1 });
+        heatmap.addData({ x: 400, y: 1000, value: 1 });
 
 
 
