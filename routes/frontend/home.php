@@ -72,7 +72,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         // User Dashboard Specific
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('project_dash/delete/{id}', [DashboardController::class, 'project_dash_destroy'])->name('project_dash.destroy');
-              
+        Route::get('heatmap', [TestController::class, 'heatmap'])->name('heatmap');
 
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
