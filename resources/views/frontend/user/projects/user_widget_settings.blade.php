@@ -888,13 +888,23 @@
                                         aria-labelledby="chatTriggers" data-bs-parent="#whatsappSettingsAccordion">
                                         <div class="accordion-body">
                                             <div class="specific-time-block">
-                                                <div class="time-blocks">
-                                                    <label for="time_on_page" class="form-label">Time on page</label>
-                                                    <input type="text" id="time_on_page" class="form-control" name="time_on_page" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_page }}" required>
+                                                <div class="form-check form-switch mt-4">
+                                                    <label class="form-check-label" for="auto_trigger">Auto Trigger</label>
+                                                    @if(json_decode($widget->settings)[0]->auto_trigger == 'on')
+                                                        <input type="checkbox" class="form-check-input" name="auto_trigger" id="auto_trigger" onchange="myFunction()" checked>
+                                                    @else
+                                                        <input type="checkbox" class="form-check-input" name="auto_trigger" id="auto_trigger" onchange="myFunction()">
+                                                    @endif
                                                 </div>
-                                                <div class="time-blocks">
-                                                    <label for="time_on_site" class="form-label">Time on site</label>
-                                                    <input type="text" id="time_on_site" class="form-control" name="time_on_site" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->time_on_site }}" required>
+                                                <div class="specific-time-block" id="auto_trigger_details">
+                                                    <div class="time-blocks">
+                                                        <label for="pop_up_opening_time" class="form-label">Pop up Opening Time</label>
+                                                        <input type="text" id="pop_up_opening_time" class="form-control" name="pop_up_opening_time" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->pop_up_opening_time }}" required>
+                                                    </div>
+                                                    <div class="time-blocks">
+                                                        <label for="message_auto_reply_time" class="form-label">Message Auto Reply Time</label>
+                                                        <input type="text" id="message_auto_reply_time" class="form-control" name="message_auto_reply_time" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->message_auto_reply_time }}" required>
+                                                    </div>
                                                 </div>
                                                 <div class="time-blocks">
                                                     <label for="scroll_position" class="form-label">Scroll Position</label>
@@ -1400,6 +1410,16 @@
                 $('.specific-time-block').hide();
             }
         });
+
+        $('#auto_trigger').ready(function () {
+            const auto_trigger_check = $('#auto_trigger:checked').val();
+            if (auto_trigger_check == 'on') {
+                $('#auto_trigger_details').show();
+            } else {
+                $('#auto_trigger_details').hide();
+            }
+        });
+        
     </script>
    
    <script>
@@ -1467,6 +1487,14 @@
             }
 
             // console.log(bubble_icon);
+
+            
+            auto_trigger_check = $('#auto_trigger:checked').val();
+            if (auto_trigger_check == 'on') {
+                $('#auto_trigger_details').show();
+            } else {
+                $('#auto_trigger_details').hide();
+            }
 
             
 
@@ -1615,8 +1643,16 @@
             start_time = $('#start_time').val();
             end_time = $('#end_time').val();
             timezone = $('#timezone').val();
-            time_on_page = $('#time_on_page').val();
-            time_on_site = $('#time_on_site').val();
+            
+            if ($('#auto_trigger').is(':checked')) {
+                auto_trigger = $("#auto_trigger").val();
+            } else {
+                auto_trigger = null;
+            }
+
+            pop_up_opening_time = $('#pop_up_opening_time').val();
+            message_auto_reply_time = $('#message_auto_reply_time').val();
+
             scroll_position = $('#scroll_position').val();
             
             if($('#exit_internet').is(':checked')) {
@@ -1706,8 +1742,9 @@
                     start_time: start_time,
                     end_time: end_time,
                     timezone: timezone,
-                    time_on_page: time_on_page,
-                    time_on_site: time_on_site,
+                    auto_trigger: auto_trigger,
+                    pop_up_opening_time: pop_up_opening_time,
+                    message_auto_reply_time: message_auto_reply_time,
                     scroll_position: scroll_position,
                     exit_internet: exit_internet,
                     bubble_notification_bage: bubble_notification_bage,

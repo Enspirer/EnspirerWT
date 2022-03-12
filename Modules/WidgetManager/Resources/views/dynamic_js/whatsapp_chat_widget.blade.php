@@ -418,25 +418,51 @@ document.getElementById('{{$widget_key}}').appendChild(div);
 
 window.onload = addWidget;
 
-function wappmsgPopTimeout() {
-    setTimeout(function(){
-        document.querySelector('.wappwelcomemsg').classList.add("wappview");
-    },2000);
-}
+@if($widget_meta->auto_trigger != null)
 
-function wapptoggle() {
-    document.querySelector('#wappwidget').classList.toggle("wappview");
-    wappmsgPopTimeout();
-}
+    function wappmsgPopTimeout() {
+        setTimeout(function(){
+            document.querySelector('.wappwelcomemsg').classList.add("wappview");
+        },{{$widget_meta->message_auto_reply_time}});
+    }
 
-setTimeout(
-    function wappchatPopTimeout() {
-        document.querySelector('#wappwidget').classList.add("wappview");
+    function wapptoggle() {
+        document.querySelector('#wappwidget').classList.toggle("wappview");
         wappmsgPopTimeout();
-        var audio = new Audio('{{url('blackberrychat.mp3')}}');
-        audio.play();
-    }, 2000
-);
+    }
+
+    setTimeout(
+        function wappchatPopTimeout() {
+            document.querySelector('#wappwidget').classList.add("wappview");
+            wappmsgPopTimeout();
+            var audio = new Audio('{{url('blackberrychat.mp3')}}');
+            audio.play();
+        }, {{$widget_meta->pop_up_opening_time}}
+    );
+
+@else
+
+    function wappmsgPopTimeout() {
+        setTimeout(function(){
+            document.querySelector('.wappwelcomemsg').classList.add("wappview");
+        },2000);
+    }
+
+    function wapptoggle() {
+        document.querySelector('#wappwidget').classList.toggle("wappview");
+        wappmsgPopTimeout();
+    }
+
+    setTimeout(
+        function wappchatPopTimeout() {
+            document.querySelector('#wappwidget').classList.add("wappview");
+            wappmsgPopTimeout();
+            var audio = new Audio('{{url('blackberrychat.mp3')}}');
+            audio.play();
+        }, 2000
+    );
+
+@endif
 
 function wappclose() {
     document.querySelector('#wappwidget').classList.remove("wappview");

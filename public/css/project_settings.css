@@ -187,12 +187,7 @@
   margin-left: 1rem;
 }
 
-.section-settings .content-block #edit-profile .title,
-.section-settings .content-block #pw-n-security .title {
-  /* font-size: 26px; */
-  /* font-weight: 600; */
-  /* margin-bottom: 3rem; */
-}
+
 
 .section-settings .content-block #edit-profile .content .profile-pic,
 .section-settings .content-block #pw-n-security .content .profile-pic {
