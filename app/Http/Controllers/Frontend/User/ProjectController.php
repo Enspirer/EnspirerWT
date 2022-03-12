@@ -11,9 +11,20 @@ use App\Models\Auth\User;
 class ProjectController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $reports = Projects::where('user_id',auth()->user()->id)->get();
+
+        $sort_search =null;
+        $reports = Projects::orderBy('id', 'desc')->where('user_id',auth()->user()->id);
+
+        if ($request->has('search_project')){
+            $sort_search = $request->search_project;
+            $reports = $reports->where('name', 'like', '%'.$sort_search.'%');
+        }
+        
+        $reports = $reports->get();
+
+
 
         return view('frontend.user.projects.index',[
             'reports' => $reports

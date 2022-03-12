@@ -31,14 +31,18 @@
                                 <div class="header">
                                     <div class="title">Projects</div>
                                     <div class="search-block">
-                                        <div class="input-group">
-                                            <input type="search" class="form-control">
-                                            <span class="input-group-text">
-                                                <a href="#" class="search-btn">
-                                                    <i class="bi bi-search"></i>
-                                                </a>
-                                            </span>
-                                        </div>
+                                        <form action="{{ route('frontend.user.project.index') }}" method="get" enctype="multipart/form-data">
+                                        {{csrf_field()}}
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="search_project" id="search_project" placeholder="Search Name Here" required>
+                                                <span class="input-group-text">                                                    
+                                                    <button type="submit" class="search-btn" style="border: none; background-color: #A5A5A5; color: #fff;">
+                                                        <i class="bi bi-search" style="color: #fff;"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </form>
+
                                         <a href="#" class="report-download">
                                             <i class="bi bi-box-arrow-in-down"></i>
                                         </a>
@@ -56,6 +60,7 @@
                                     <table class="table table-borderless">
                                         <thead>
                                             <tr>
+                                                <th class="text-center">Name</th>
                                                 <th>URL</th>
                                                 <th>SEO Result</th>
                                                 <th>Analytics Result</th>
@@ -66,7 +71,10 @@
                                         <tbody>
                                             @foreach($reports as $report)
                                                 <tr>
-                                                    <td class="col-3">
+                                                    <td class="col-2">
+                                                        <div class="time">{{$report->name}}</div>
+                                                    </td>
+                                                    <td class="col-2">
                                                         <div class="propery">
                                                             @if(get_seo_result($report->id)->favicon->value == null)
                                                                 <a href="{{route('frontend.user.project.chat',$report->id)}}" style="text-decoration:none;">
@@ -84,7 +92,7 @@
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td class="col-3">
+                                                    <td class="col-2">
                                                         <div class="seo-result">
                                                             <div class="progress">
                                                                 <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
@@ -99,25 +107,31 @@
                                                                 <div class="name">Visitors</div>
                                                                 <div class="icon-block">
                                                                     <i class="bi bi-graph-up-arrow"></i>
-                                                                    <div class="precentage">86.6%</div>
+                                                                    @if(App\Models\Widgets::where('project_id',$report->id)->first() != null)
+                                                                        @if(App\Models\Widgets::where('project_id',$report->id)->first()->load_count == null)
+                                                                            <div class="precentage">0</div>
+                                                                        @else
+                                                                            <div class="precentage">{{ App\Models\Widgets::where('project_id',$report->id)->first()->load_count }}</div>
+                                                                        @endif
+                                                                    @else
+                                                                        <div class="precentage"> No Details</i></div>
+                                                                    @endif
                                                                 </div>
                                                             </div>
                                                             <div class="pageviews-block down">
                                                                 <div class="name">Pageviews</div>
                                                                 <div class="icon-block">
                                                                     <i class="bi bi-graph-down-arrow"></i>
-                                                                    <div class="precentage">86.6%</div>
+                                                                    <div class="precentage">{{ count(App\Models\VisitorCount::where('project_id',$report->id)->get()) }}</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td class="col-2">
-                                                        <div class="time">19 hours ago</div>
+                                                        <div class="time">{{$report->created_at->toDateString()}}</div>
                                                     </td>
                                                     <td class="col-1">
-                                                        <a href="#" class="more-option-btn">
-                                                            <i class="bi bi-three-dots"></i>
-                                                        </a>
+                                                        <a href="{{ route('frontend.user.project_dash.destroy', $report->id) }}" class="delete btn btn-danger btn-delete" data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i> Delete</a>
                                                     </td>
                                                 </tr>                                            
                                             @endforeach
@@ -135,5 +149,32 @@
     </section>
 
     
-    
+    <div class="modal fade" id="deletedashwidget" tabindex="-1" aria-labelledby="deletedashwidgetLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="deletedashwidgetLabel">Delete Project</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Do you want to delete this?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div> 
 @endsection
+
+@push('after-scripts')
+
+    <script>
+        $('.delete').on('click', function() {
+            let link = $(this).attr('href');
+            $('.modal-footer a').attr('href', link);
+        })
+    </script>
+
+@endpush
