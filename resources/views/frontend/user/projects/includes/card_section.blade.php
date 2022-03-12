@@ -69,7 +69,7 @@
             IMS Dashboard
         </a>
         <a href="{{ route('frontend.user.project_settings', $project_id) }}" class="ims-dashboard-btn ms-5">
-            <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop" style="width:65px;height:65px">
+            <lord-icon src="https://cdn.lordicon.com/ryyjawhw.json" trigger="loop" colors="primary:#1f2851" style="width:65px;height:65px">
             </lord-icon>
             Settings
         </a>
