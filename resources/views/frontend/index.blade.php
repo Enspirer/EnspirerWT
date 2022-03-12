@@ -136,7 +136,7 @@
         <div class="container">
             <div class="header">
                 <h2 class="title">Keep your website on Top of the Game & Secured</h2>
-                <span class="text">The All-in-One comprehensive tool to manage Google rankings, site analytics, Cyber security and general performance of the website.</span>
+                <span class="text">The All-in-One comprehensive tool to manage Google rankings, <br> site analytics, Cyber security and general performance of the website.</span>
             </div>
             <div class="inner-wrapper">
                 <div class="SEO-block">
@@ -336,8 +336,7 @@
         <div class="container">
             <div class="header">
                 <h2 class="title">Latest at Tallentor</h2>
-                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's</div>
+                <div class="text">New Product releases, Promotions and articles from Tallentor members club</div>
             </div>
             <div class="inner-wrapper">
                 @if(count($posts) != 0)
