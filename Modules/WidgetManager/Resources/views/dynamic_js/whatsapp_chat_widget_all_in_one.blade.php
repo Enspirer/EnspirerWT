@@ -31,8 +31,8 @@ function addWidget() {
     }
 
     #allin1widgetblock #allin1widget .allin1container {
-        width: 300px;
-        height: 400px;
+        width: 334px;
+        height: 423px;
         background-color: #EFEFEF;
         border-radius: 15px;
         position: relative;
