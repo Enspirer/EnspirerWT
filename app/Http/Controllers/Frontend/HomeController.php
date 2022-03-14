@@ -601,7 +601,8 @@ class HomeController extends Controller
         }else{
             $db_tawkto_array = $request->get_tawkto_array; 
         }
-        
+
+        // dd($db_viber_array);
 
         $whatsapp_details = $db_whatsapp_array;
         $fb_details = $db_fb_array;
@@ -609,6 +610,8 @@ class HomeController extends Controller
         $line_details = $db_line_array;
         $viber_details = $db_viber_array;
         $tawk_details = $db_tawkto_array;
+
+
 
 
         if($request->delete_social_media == 'delete_whatsapp' && $request->get_whatsapp_array == null){
@@ -621,7 +624,7 @@ class HomeController extends Controller
         }
         if($request->delete_social_media == 'delete_fb' && $request->get_fb_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->fb_details == [null]){
-                $fb_details = $db_whatsapp_array;
+                $fb_details = $db_fb_array;
             }
             else{
                 $fb_details = [null];
@@ -629,7 +632,7 @@ class HomeController extends Controller
         }
         if($request->delete_social_media == 'delete_telegram' && $request->get_telegram_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->telegram_details == [null]){
-                $telegram_details = $db_whatsapp_array;
+                $telegram_details = $db_telegram_array;
             }
             else{
                 $telegram_details = [null];
@@ -637,7 +640,7 @@ class HomeController extends Controller
         }
         if($request->delete_social_media == 'delete_line' && $request->get_line_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->line_details == [null]){
-                $line_details = $db_whatsapp_array;
+                $line_details = $db_line_array;
             }
             else{
                 $line_details = [null];
@@ -645,7 +648,7 @@ class HomeController extends Controller
         }
         if($request->delete_social_media == 'delete_viber' && $request->get_viber_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->viber_details == [null]){
-                $viber_details = $db_whatsapp_array;
+                $viber_details = $db_viber_array;
             }
             else{
                 $viber_details = [null];
@@ -653,13 +656,14 @@ class HomeController extends Controller
         }
         if($request->delete_social_media == 'delete_tawkto' && $request->get_tawkto_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->tawk_details == [null]){
-                $tawk_details = $db_whatsapp_array;
+                $tawk_details = $db_tawkto_array;
             }
             else{
                 $tawk_details = [null];
             }
         }
 
+        // dd($tawk_details);
         // dd($whatsapp_details);
       
         
