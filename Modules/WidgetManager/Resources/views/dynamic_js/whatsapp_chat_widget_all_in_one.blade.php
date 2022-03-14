@@ -31,8 +31,8 @@ function addWidget() {
     }
 
     #allin1widgetblock #allin1widget .allin1container {
-        width: 334px;
-        height: 423px;
+        width: 300px;
+        height: 400px;
         background-color: #EFEFEF;
         border-radius: 15px;
         position: relative;
@@ -106,8 +106,8 @@ function addWidget() {
 
     #allin1widgetblock #allin1widget .allin1container .allin1body .allin1welcomemsg {
         position: relative;
-        width: 166px;
-        height: 118px;
+        width: 165px;
+        height: 100px;
         border-top-left-radius: 0;
         border-top-right-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -163,6 +163,7 @@ function addWidget() {
         left: 50%;
         -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
+        width: 200px;
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1footer .allin1footertitle {
