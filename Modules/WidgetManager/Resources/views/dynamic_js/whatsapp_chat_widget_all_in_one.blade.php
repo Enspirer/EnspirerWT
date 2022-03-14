@@ -421,8 +421,8 @@ function addWidget() {
         font-size: 13px;
         border-radius: 10px;
         box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-        bottom: -50px;
-        right: 25px;
+        bottom: 8px;
+        right: 75px;
         display:block;
     }
 
