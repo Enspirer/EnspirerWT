@@ -305,6 +305,7 @@ function addWidget() {
         border: none;
         font-size: 12px;
         color: #000;
+        background-color: #fff;
     }
 
     #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent input:focus-visible,
