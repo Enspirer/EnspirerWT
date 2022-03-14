@@ -86,7 +86,7 @@ div.innerHTML = `<style>
     #wappwidgetblock #wappwidget .wappcontainer .wappbody .wappwelcomemsg {
         position: relative;
         width: 165px;
-        height: 100px;
+        height: auto;
         border-top-left-radius: 0;
         border-top-right-radius: 5px;
         border-bottom-left-radius: 5px;
