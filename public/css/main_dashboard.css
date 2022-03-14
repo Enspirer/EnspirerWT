@@ -83,7 +83,7 @@
     flex-direction: column;
     height: 100vh;
     background-color: #1f2851;
-    z-index: 99999;
+    z-index: 10;
     position: fixed;
     width: 260px;
     transition: all 0.2s ease;
@@ -1129,7 +1129,7 @@
     flex-direction: column;
     height: 100vh;
     background-color: #1f2851;
-    z-index: 99999;
+    z-index: 10;
     position: fixed;
     width: 260px;
     transition: all 0.2s ease;
