@@ -2009,7 +2009,7 @@
 
     $('#default_icon').ready(function () {
         const icon_default = $('#default_icon:checked').val();
-        if (icon_default == 'on') {
+        if (icon_default != 'on') {
             $('.specific-default-block').show();
         } else {
             $('.specific-default-block').hide();
@@ -2018,7 +2018,7 @@
 
     $('#default_icon').ready(function () {
         const icon_default = $('#default_icon:checked').val();
-        if (icon_default == 'on') {
+        if (icon_default != 'on') {
             $('.bubble_icon_col').show();
         } else {
             $('.bubble_icon_col').hide();
@@ -2133,14 +2133,14 @@
 
 
         icon_default = $('#default_icon:checked').val();
-        if (icon_default == 'on') {
+        if (icon_default != 'on') {
             $('.specific-default-block').show();
         } else {
             $('.specific-default-block').hide();
         }
 
         icon_default = $('#default_icon:checked').val();
-        if (icon_default == 'on') {
+        if (icon_default != 'on') {
             $('.bubble_icon_col').show();
         } else {
             $('.bubble_icon_col').hide();
