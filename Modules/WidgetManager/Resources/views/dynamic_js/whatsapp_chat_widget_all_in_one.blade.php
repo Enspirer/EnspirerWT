@@ -379,7 +379,7 @@ function addWidget() {
         background-color: #fff;
         border-radius: 50%;
         position: fixed;
-        bottom: 50px;
+        bottom: 70px;
         right: 50px;
         -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
         box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
@@ -420,7 +420,7 @@ function addWidget() {
         font-size: 13px;
         border-radius: 10px;
         box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-        top: -50px;
+        bottom: -50px;
         right: 25px;
         display:block;
     }
