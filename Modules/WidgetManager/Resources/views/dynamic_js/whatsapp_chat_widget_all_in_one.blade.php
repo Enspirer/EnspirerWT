@@ -681,7 +681,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage1" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Whatsapp">
-                            <button type="submit" name="button" formtarget="_blank">Send</button>
+                            <button type="submit" onclick="resetForm()" name="button" formtarget="_blank">Send</button>
                             </div>
                         </div>
                     </form>
@@ -697,7 +697,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage2" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Messenger">
-                            <button type="submit" name="button" formtarget="_blank">Send</button>
+                            <button type="submit" onclick="resetForm()" name="button" formtarget="_blank">Send</button>
                             </div>
                         </div>
                     </form>
@@ -713,7 +713,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage3" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Telegram">
-                            <button type="submit" name="button" formtarget="_blank">Send</button>
+                            <button type="submit" onclick="resetForm()" name="button" formtarget="_blank">Send</button>
                             </div>
                         </div>
                     </form>
@@ -729,7 +729,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage4" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Line">
-                            <button type="submit" name="button" formtarget="_blank">Send</button>
+                            <button type="submit" onclick="resetForm()" name="button" formtarget="_blank">Send</button>
                             </div>
                         </div>
                     </form>
@@ -745,7 +745,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
                             <input type="hidden" id="username" name="widget_id" value="{{$widget_id}}" required>
                             <input type="hidden" id="username" name="contact_via" value="Viber">
-                            <button type="submit" name="button" formtarget="_blank">Send</button>
+                            <button type="submit" onclick="resetForm()" name="button" formtarget="_blank">Send</button>
                             </div>
                         </div>
                     </form>
@@ -760,7 +760,7 @@ function addWidget() {
                             <textarea name="usermessage" id="usermessage6" placeholder="Your message" required></textarea>
                             <input type="hidden" id="widget_id6" name="widget_id6" value="{{$widget_id}}" required>
                             <input type="hidden" id="contact_via6" name="contact_via" value="Tawkto">
-                            <a href="#" name="button" onclick="allin1tawktoiframe()">Send</a>
+                            <a href="#" name="button" onclick="allin1tawktoiframe();resetForm()">Send</a>
                         </div>
                     </form>
                 </div>
@@ -873,13 +873,34 @@ function allin1formpopup(id) {
 }
 
 function allin1formclose() {
-    const forms = document.querySelectorAll('.allin1formcontent');
-    [].forEach.call(forms, function (el) {
+    const formcontent = document.querySelectorAll('.allin1formcontent');
+    [].forEach.call(formcontent, function (el) {
         el.classList.remove("allin1view");
     });
     document.querySelector('.allin1buttonblock').classList.remove("allin1view");
+
+    const forms = document.querySelectorAll("#allin1startupform");
+
+    forms.forEach(function (form) {
+        form.reset();
+    });
 }
 
+function resetForm() {
+    setTimeout(function () {
+        const forms = document.querySelectorAll("#allin1startupform");
+
+        forms.forEach(function (form) {
+            form.reset();
+        });
+
+        const formcontent = document.querySelectorAll('.allin1formcontent');
+        [].forEach.call(formcontent, function (el) {
+            el.classList.remove("allin1view");
+        });
+        document.querySelector('.allin1buttonblock').classList.remove("allin1view");
+    }, 1000);
+}
 
 function allin1tawktoiframe() {
 

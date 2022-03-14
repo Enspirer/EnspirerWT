@@ -129,6 +129,12 @@ div.innerHTML = `<style>
         right: 10px;
         bottom: 5px;
     }
+    #wappwidgetblock #wappwidget .wappcontainer .wappfooter {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
     #wappwidgetblock #wappwidget .wappcontainer .wappfooter #wappstartupform {
         position: relative;
     }
@@ -138,13 +144,15 @@ div.innerHTML = `<style>
         flex-wrap: nowrap;
         align-content: center;
         align-items: center;
-        width: 300px;
+        width: 90%;
         margin: 0 auto;
         padding: 15px;
         background-color: #00796a;
         border-radius: 15px;
-        position: relative;
-        bottom: 208px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 15px;
         z-index: 1;
         display: none;
     }
@@ -403,7 +411,7 @@ div.innerHTML = `<style>
                             <input type="email" id="useremail" name="useremail" placeholder="Your email" required>
                             <input type="text" id="phone_number" name="phone_number" placeholder="Your phone number" required>
                             <textarea name="usermessage" id="usermessage" placeholder="Your message" required></textarea>
-                            <button type="submit" name="button" >Send</button>
+                            <button type="submit" onclick="resetForm()" name="button" formtarget="_blank">Send</button>
                         </form>
                     </div>
                 </div>
@@ -493,6 +501,14 @@ function wappclose() {
 function wappformclose() {
     document.querySelector('#wappstartupform').classList.remove("wappview");
     document.querySelector('#wappbtn').classList.remove("wappview");
+    document.querySelector("#wappstartupform form").reset();
+}
+
+function resetForm() {
+    setTimeout(function () {
+        document.querySelector("#wappstartupform form").reset();
+        wappformclose();
+    }, 1000);
 }
 
 function startupform() {
