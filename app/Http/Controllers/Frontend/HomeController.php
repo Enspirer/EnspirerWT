@@ -513,7 +513,7 @@ class HomeController extends Controller
     public function user_api_chat_all(Request $request)
     {     
         // dd($request);
-        // dd($request->bubble_icon);
+        // dd($request->get_tawkto_array);
 
         $template_layout_details = WhatsappChatWidgetTemplate::where('id',$request->template_layout)->first();
         // dd($template_layout_details);
@@ -611,7 +611,7 @@ class HomeController extends Controller
         $tawk_details = $db_tawkto_array;
 
 
-        if($request->delete_social_media == 'delete_whatsapp'){
+        if($request->delete_social_media == 'delete_whatsapp' && $request->get_whatsapp_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->whatsapp_details == [null]){
                 $whatsapp_details = $db_whatsapp_array;
             }
@@ -619,7 +619,7 @@ class HomeController extends Controller
                 $whatsapp_details = [null];
             }
         }
-        if($request->delete_social_media == 'delete_fb'){
+        if($request->delete_social_media == 'delete_fb' && $request->get_fb_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->fb_details == [null]){
                 $fb_details = $db_whatsapp_array;
             }
@@ -627,7 +627,7 @@ class HomeController extends Controller
                 $fb_details = [null];
             }
         }
-        if($request->delete_social_media == 'delete_telegram'){
+        if($request->delete_social_media == 'delete_telegram' && $request->get_telegram_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->telegram_details == [null]){
                 $telegram_details = $db_whatsapp_array;
             }
@@ -635,7 +635,7 @@ class HomeController extends Controller
                 $telegram_details = [null];
             }
         }
-        if($request->delete_social_media == 'delete_line'){
+        if($request->delete_social_media == 'delete_line' && $request->get_line_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->line_details == [null]){
                 $line_details = $db_whatsapp_array;
             }
@@ -643,7 +643,7 @@ class HomeController extends Controller
                 $line_details = [null];
             }
         }
-        if($request->delete_social_media == 'delete_viber'){
+        if($request->delete_social_media == 'delete_viber' && $request->get_viber_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->viber_details == [null]){
                 $viber_details = $db_whatsapp_array;
             }
@@ -651,7 +651,7 @@ class HomeController extends Controller
                 $viber_details = [null];
             }
         }
-        if($request->delete_social_media == 'delete_tawkto'){
+        if($request->delete_social_media == 'delete_tawkto' && $request->get_tawkto_array == null){
             if(json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->tawk_details == [null]){
                 $tawk_details = $db_whatsapp_array;
             }
