@@ -1,5 +1,5 @@
 .sign-up-section {
-    padding-top: 80px;
+    padding-top: 120px;
     margin: 40px 0 60px;
 }
 
@@ -243,6 +243,10 @@
 }
 
 @media screen and (max-width: 991px) {
+    .sign-up-section {
+        padding-top: 50px;
+    }
+
     .sign-up-section .inner-wrapper {
         width: 95%;
     }
