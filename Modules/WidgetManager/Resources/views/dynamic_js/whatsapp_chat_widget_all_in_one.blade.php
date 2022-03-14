@@ -422,6 +422,11 @@ function addWidget() {
         box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
         top: -50px;
         right: 25px;
+        display:block;
+    }
+
+    #allin1widgetblock #allin1widtoggler .allin1tooltip.allin1view {
+        display:none;
     }
 
     @if(count($widget_meta->notification) != 0)
@@ -772,6 +777,19 @@ function addWidget() {
 }
 
 window.onload = addWidget;
+
+window.addEventListener("load", function () {
+    window.addEventListener("scroll", function () {
+        const toggler = document.getElementById("allin1widtoggler");
+        const tooltip = toggler.querySelector(".allin1tooltip");
+
+        if (window.scrollY == 0) {
+            tooltip.classList.remove("allin1view");
+        } else {
+            tooltip.classList.add("allin1view");
+        }
+    });
+});
 
 const screenSize = window.matchMedia("(max-width: 768px)");
 mobileChat(screenSize);
