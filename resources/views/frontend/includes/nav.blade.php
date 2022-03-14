@@ -64,7 +64,7 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Create Your Project">
                                         <a type="button" class="nav-link add-btn bi bi-plus-square-fill" data-bs-toggle="modal" data-bs-target="#project_modal"></a>
                                     </li>
                                 </ul>

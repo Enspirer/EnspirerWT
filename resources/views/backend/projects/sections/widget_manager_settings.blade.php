@@ -241,7 +241,7 @@
                                     </div>
                                 </div> 
 
-                                <div onClick="myFunction()" class="btn rounded-pill text-light px-4 py-2 ms-2 mb-4 btn-success">Upload Image</div>
+                                <div onClick="myFunction()" class="btn rounded-pill text-light px-4 mb-4 btn-success">Upload Image</div>
 
                             </div>
                             

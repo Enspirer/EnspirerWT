@@ -968,7 +968,7 @@
                                                     <div class="file-preview box sm">
                                                     </div>
                                                 </div> 
-                                                <div onClick="myFunction()" class="col-12 btn rounded-pill text-light px-4 py-2 ms-2 mt-3 mb-4 btn-success">Upload Image</div>
+                                                <div onClick="myFunction()" class="col-12 btn rounded-pill text-light px-4 mt-3 mb-4 btn-success">Upload Image</div>
 
 
                                                 <div class="footer">
@@ -1763,7 +1763,7 @@
                                         @endforeach
                                     </ul>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Create Your Project">
                                 <a type="button" class="nav-link add-btn bi bi-plus-square-fill" data-bs-toggle="modal" data-bs-target="#project_modal"></a>
                                 </li>
                             </ul>
