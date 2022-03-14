@@ -96,7 +96,7 @@
 .hero-section .content {
     position: absolute;
     left: 50%;
-    top: 15%;
+    top: 20%;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     width: 42rem;
@@ -500,6 +500,12 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
+    .hero-section .content {
+        top: 5%;
+    }
 }
 
 

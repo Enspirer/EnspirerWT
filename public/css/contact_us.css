@@ -10,7 +10,7 @@
 }
 
 .slider-section {
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 .slider-section .header {
@@ -306,6 +306,10 @@
 }
 
 @media screen and (max-width: 991px) {
+    .slider-section {
+        padding-top: 25px;
+    }
+
     .contact-form .inner-wrapper .images .large {
         width: 200px;
         top: 2rem;

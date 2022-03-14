@@ -74,7 +74,7 @@
 
 .hero-section {
     position: relative;
-    padding-top: 80px;
+    padding-top: 120px;
     width: 100%;
     background-image: url("images/s1.png"), url("images/s2.png"), url("images/s3.png"), url("images/s4.png"), url("images/s5.png"), url("images/s6.png"), url("images/s7.png"), url("images/s8.png"), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#F6FBFF));
     background-image: url("images/s1.png"), url("images/s2.png"), url("images/s3.png"), url("images/s4.png"), url("images/s5.png"), url("images/s6.png"), url("images/s7.png"), url("images/s8.png"), linear-gradient(to bottom, #fff, #F6FBFF);
@@ -288,6 +288,10 @@
 }
 
 @media screen and (max-width: 991px) {
+    .hero-section {
+        padding-top: 50px;
+    }
+
     .hero-section .inner-wrapper {
         display: flex;
         flex-direction: column-reverse;

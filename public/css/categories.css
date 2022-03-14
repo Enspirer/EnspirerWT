@@ -159,7 +159,7 @@
 
 .section-categories.active {
     display: block;
-    padding: 130px 0 90px;
+    padding: 150px 0 90px;
     background-color: #F5F6F8;
 }
 
@@ -379,7 +379,7 @@
 /* ------------------------------------------------------------ */
 
 .section-inner-category {
-    padding: 130px 0 90px;
+    padding: 150px 0 90px;
     background-color: #F5F6F8;
     display: none;
 }
@@ -588,6 +588,11 @@
 }
 
 @media screen and (max-width: 991px) {
+
+    .section-categories.active,
+    .section-inner-category {
+        padding: 50px 0 90px;
+    }
 
     .section-inner-category .category-nav,
     .card {

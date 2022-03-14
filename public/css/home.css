@@ -822,6 +822,10 @@
 }
 
 @media screen and (max-width: 991px) {
+    .hero-section {
+        padding-top: 50px;
+    }
+
     .hero-section .slide-wrapper .content-block h5 {
         font-size: 16px;
     }
