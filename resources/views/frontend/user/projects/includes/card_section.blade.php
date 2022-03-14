@@ -1,3 +1,15 @@
+<div class="row g-0 mb-5">
+        <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}" target="_blank" class="ims-dashboard-btn">
+            <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop" style="width:65px;height:65px">
+            </lord-icon>
+            IMS Dashboard
+        </a>
+        <a href="{{ route('frontend.user.project_settings', $project_id) }}" class="ims-dashboard-btn ms-5">
+        <i class="bi bi-gear"></i>
+        Enspirer Account Settings
+        </a>
+</div>
+
 <div class="row gy-0 gx-5 mb-5">
     <div class="col">
         <a href="{{route('frontend.user.project.chat',$project_id)}}" style="text-decoration:none">
@@ -59,19 +71,4 @@
         </a>
     </div>
     
-</div>
-
-<div class="row g-0 mb-5">
-    <div class="col">
-        <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}" class="ims-dashboard-btn">
-            <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop" style="width:65px;height:65px">
-            </lord-icon>
-            IMS Dashboard
-        </a>
-        <a href="{{ route('frontend.user.project_settings', $project_id) }}" class="ims-dashboard-btn ms-5">
-            <lord-icon src="https://cdn.lordicon.com/ryyjawhw.json" trigger="loop" colors="primary:#1f2851" style="width:65px;height:65px">
-            </lord-icon>
-            Settings
-        </a>
-    </div>
 </div>
