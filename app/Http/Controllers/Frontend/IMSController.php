@@ -19,7 +19,7 @@ class IMSController extends Controller
     {
         $date = Carbon::now()->subDays(7);
 
-        $ims_clienrt = ImsClients::where('created_at', '>=', Carbon::now()->subMonth())
+        $ims_clienrt = ImsClients::where('project_id',$id)->where('created_at', '>=', Carbon::now()->subMonth())
                             ->groupBy('date')
         ->orderBy('date', 'DESC')
         ->get(array(
@@ -186,7 +186,7 @@ class IMSController extends Controller
 
         $date = Carbon::now()->subDays(7);
 
-        $ims_clienrt = ImsClients::where('created_at', '>=', Carbon::now()->subMonth())
+        $ims_clienrt = ImsClients::where('project_id',$id)->where('created_at', '>=', Carbon::now()->subMonth())
                             ->groupBy('date')
         ->orderBy('date', 'DESC')
         ->get(array(

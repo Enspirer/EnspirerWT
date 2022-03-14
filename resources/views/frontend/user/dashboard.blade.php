@@ -37,9 +37,10 @@
                                                 <div class="col-12 col-sm-auto my-sm-0 my-2">
                                                     <div class="input-group">
                                                         <label for="datePicker" class="form-label">
-                                                            <i class="bi bi-calendar3"></i>
-                                                            <span>22 February 2022</span>
-                                                            <i class="bi bi-chevron-down"></i>
+                                                            <!-- <i class="bi bi-calendar3"></i>
+                                                            <span>{{date('d')}} {{date('m')}} {{date('Y')}}</span>
+                                                            <i class="bi bi-chevron-down"></i>  -->
+                                                            <input type="date" class="form-control" value="{{date('Y')}}-{{date('m')}}-{{date('d')}}">
                                                         </label>
                                                         <!-- <input type="date" class="form-control" id="datePicker"> -->
                                                     </div>
@@ -108,7 +109,7 @@
                                                 <div class="row g-0 justify-content-evenly">
                                                     <div class="col-md-auto col-8">
                                                         <span class="block-title">SEO Result</span>
-                                                        <span class="seo-result">{{$project_detail->score}}/100</span>
+                                                        <span class="seo-result">{{round($project_detail->score)}}/100</span>
                                                     </div>
                                                     <div class="col-md-6 col-8">
                                                         @if($project_detail->score < 25)
