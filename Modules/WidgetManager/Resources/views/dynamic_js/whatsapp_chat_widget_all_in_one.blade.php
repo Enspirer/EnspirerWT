@@ -792,6 +792,22 @@ window.addEventListener("load", function () {
     });
 });
 
+window.addEventListener("load", function () {
+    localStorage.pageTitle = parent.document.title;
+
+    setTimeout(function () {
+        parent.document.title = "1 new Message";
+
+        setInterval(function () {
+            if (parent.document.title == '1 new Message') {
+                parent.document.title = localStorage.pageTitle;
+            } else {
+                parent.document.title = "1 new Message";
+            }
+        }, 1000);
+    }, 5000);
+});
+
 const screenSize = window.matchMedia("(max-width: 768px)");
 mobileChat(screenSize);
 screenSize.addListener(mobileChat);
