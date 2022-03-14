@@ -245,7 +245,7 @@ div.innerHTML = `<style>
         background-color: #fff;
         border-radius: 50%;
         position: fixed;
-        bottom: 50px;
+        bottom: 70px;
         right: 50px;
         box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
         z-index: 99999;
@@ -261,6 +261,23 @@ div.innerHTML = `<style>
 
     #wappwidgetblock #wappwidtoggler:hover {
         cursor: pointer;
+    }
+
+    #wappwidgetblock #wappwidtoggler .wapptooltip {
+        position: absolute;
+        background-color: #fff;
+        width: 175px;
+        padding: 10px 20px;
+        font-size: 13px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+        bottom: -50px;
+        right: 25px;
+        display: block;
+    }
+
+    #wappwidgetblock #wappwidtoggler .wapptooltip.wappview {
+        display:none;
     }
 
     @if(count($widget_meta->notification) != 0)
@@ -359,13 +376,17 @@ div.innerHTML = `<style>
     @if($widget_meta->show_icon == 'on')
         @if($widget_meta->scroll_position_appearance == "Top")
             <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;top: 1px;margin-top: 30px;">
-                @elseif($widget_meta->scroll_position_appearance == "Bottom")
+            <div class="wapptooltip">How may I help you?</div>   
+            @elseif($widget_meta->scroll_position_appearance == "Bottom")
                     <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;bottom: 1px;margin-bottom: 30px;">
-                        @elseif($widget_meta->scroll_position_appearance == "Left")
+                    <div class="wapptooltip">How may I help you?</div>     
+                    @elseif($widget_meta->scroll_position_appearance == "Left")
                             <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;left: 1px;margin-left: 30px;">
-                                @elseif($widget_meta->scroll_position_appearance == "Right")
+                            <div class="wapptooltip">How may I help you?</div>      
+                            @elseif($widget_meta->scroll_position_appearance == "Right")
                                     <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
-                                        @endif
+                                    <div class="wapptooltip">How may I help you?</div>      
+                                    @endif
                                         <i style="color:{{$widget_meta->bubble_icon_color}};" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
                                     </div>
 
@@ -429,6 +450,26 @@ document.getElementById('{{$widget_key}}').appendChild(div);
 
 
 window.onload = addWidget;
+
+window.addEventListener("load", function () {
+    window.addEventListener("scroll", function () {
+        const toggler = document.getElementById("wappwidtoggler");
+        const tooltip = toggler.querySelector(".wapptooltip");
+
+        if (window.scrollY == 0) {
+            tooltip.classList.remove("wappview");
+        } else {
+            tooltip.classList.add("wappview");
+        }
+    });
+});
+
+window.addEventListener("load", function(){
+    setTimeout(function(){
+        parent.document.title = "1 new Message";
+        console.log("testing");
+    },5000);
+});
 
 const screenSize = window.matchMedia("(max-width: 768px)");
 mobileChat(screenSize);
