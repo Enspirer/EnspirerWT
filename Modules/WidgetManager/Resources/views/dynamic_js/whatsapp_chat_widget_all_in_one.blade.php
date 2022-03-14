@@ -107,7 +107,7 @@ function addWidget() {
     #allin1widgetblock #allin1widget .allin1container .allin1body .allin1welcomemsg {
         position: relative;
         width: 165px;
-        height: 100px;
+        height: auto;
         border-top-left-radius: 0;
         border-top-right-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -412,6 +412,18 @@ function addWidget() {
         background-color: transparent !important;
     }
 
+    #allin1widgetblock #allin1widtoggler .allin1tooltip {
+        position: absolute;
+        background-color: #fff;
+        width: 175px;
+        padding: 10px 20px;
+        font-size: 13px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+        top: -50px;
+        right: 25px;
+    }
+
     @if(count($widget_meta->notification) != 0)
         @foreach($widget_meta->notification as $key => $notify)
             @if($notify == 'bubble_notification_bage')
@@ -541,20 +553,23 @@ function addWidget() {
         @if($widget_meta->show_icon == 'on')
             @if($widget_meta->scroll_position_appearance == "Top")
                 <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;top: 1px;margin-top: 30px;">
+                <div class="allin1tooltip">How may I help you?</div>
                     @elseif($widget_meta->scroll_position_appearance == "Bottom")
                         <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;bottom: 1px;margin-bottom: 30px;">
-                            @elseif($widget_meta->scroll_position_appearance == "Left")
+                        <div class="allin1tooltip">How may I help you?</div>    
+                        @elseif($widget_meta->scroll_position_appearance == "Left")
                                 <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;left: 1px;margin-left: 30px;">
-                                    @elseif($widget_meta->scroll_position_appearance == "Right")
+                                <div class="allin1tooltip">How may I help you?</div>  
+                                @elseif($widget_meta->scroll_position_appearance == "Right")
 
 
                                         @if($widget_meta->default_icon != 'on')
                                             <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
-
+                                            <div class="allin1tooltip">How may I help you?</div>
 
                                         @else
-                                            <div id="allin1widtoggler" class="default-icon" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}};{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
-
+                                            <div id="allin1widtoggler" onclick="allin1toggle()" class="default-icon"  style="background-color: {{ $widget_meta->bubble_background_color}};{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
+                                            <div class="allin1tooltip">How may I help you?</div>
                                         @endif
 
                                                 @endif
