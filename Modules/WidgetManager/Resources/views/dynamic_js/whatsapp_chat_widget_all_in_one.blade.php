@@ -20,7 +20,7 @@ function addWidget() {
 
     #allin1widgetblock #allin1widget {
         position: fixed;
-        bottom: 50px;
+        bottom: 70px;
         {{$widget_meta->alignment}}: 30px;
         z-index: 99999;
         display: none;
