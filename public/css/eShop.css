@@ -83,7 +83,7 @@
 }
 
 .hero-section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     background-image: url("{{url('.../images/eShop/Group523.png')}}"),
     -webkit-gradient(linear, left top, left bottom, from(#fff), to(#F6FBFF));
@@ -91,11 +91,12 @@
     linear-gradient(to bottom, #fff, #F6FBFF);
     background-position: center;
     background-repeat: no-repeat;
+    padding: 10rem 0 5rem;
 }
 
 .hero-section .content {
     position: absolute;
-    left: 50%;
+    left: 48%;
     top: 20%;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
@@ -200,6 +201,7 @@
     -ms-flex-align: center;
     align-items: center;
     gap: 1.5rem;
+    min-height: 289px;
 }
 
 @media (min-width: 1400px) {
@@ -280,7 +282,7 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: 50%;
+    width: 80%;
     color: #00AEEF;
     margin-bottom: 1rem;
 }
@@ -289,8 +291,15 @@
     font-size: 1.1rem;
 }
 
+.services-section .services-slider .services-card .content-block .pricing .fee span {
+    color: #009100;
+    font-weight: 300;
+    font-size: 14px;
+}
+
 .services-section .services-slider .services-card .content-block .pricing .duration {
     font-size: 0.8125rem;
+    color: #000;
 }
 
 .services-section .services-slider .services-card .content-block .button-block {
@@ -390,6 +399,7 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    min-height: 195px;
 }
 
 .tallentor-shop .product-card .content-block .title {
@@ -400,6 +410,25 @@
     font-size: 0.75rem;
     margin-bottom: 0.5rem;
     color: #000;
+}
+
+.tallentor-shop .product-card .content-block .list-block {
+    list-style: none;
+    position: relative;
+}
+
+.tallentor-shop .product-card .content-block .list-block li {
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+}
+
+.tallentor-shop .product-card .content-block .list-block .bi {
+    font-size: 14px;
+    color: #00AEEF;
+    position: relative;
+    left: -20px;
+    margin-right: -14px;
 }
 
 .tallentor-shop .product-card .content-block .rating {
@@ -446,6 +475,12 @@
 .tallentor-shop .product-card .content-block .pricing .fee {
     font-size: 1rem;
     color: #00AEEF;
+}
+
+.tallentor-shop .product-card .content-block .pricing .fee span {
+    font-size: 14px;
+    font-weight: 300;
+    color: #009100;
 }
 
 .tallentor-shop .product-card .content-block .pricing .duration {
@@ -504,7 +539,7 @@
 
 @media screen and (max-width: 991px) {
     .hero-section .content {
-        top: 5%;
+        top: 15%;
     }
 }
 
@@ -512,6 +547,16 @@
 @media screen and (max-width: 767px) {
     .hero-section .content {
         width: 90%;
+    }
+
+    .hero-section .content .button-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-section .content .button-block a {
+        width: 195px;
     }
 
     .hero-section .content .image-block {
@@ -543,8 +588,14 @@
         flex: 1 1 100%;
     }
 
+    .services-section .services-slider .services-card {
+        min-height: 722px;
+    }
+
     .services-section .services-slider .services-card .content-block .pricing {
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .services-section .services-slider .services-card .content-block .button-block {
@@ -553,8 +604,23 @@
         gap: 1rem;
     }
 
+    .services-section .services-slider .services-card .content-block .button-block a {
+        width: 210px;
+    }
+
+    .tallentor-shop .product-card .content-block .pricing {
+        display: flex;
+        flex-direction: column;
+    }
+
     .tallentor-shop .product-card {
         margin: auto;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .hero-section {
+        min-height: 110vh;
     }
 }
 
