@@ -95,7 +95,7 @@
                                 <div class="col-3">
                                     <div class="input-group">
                                         <label class="form-input-label"><i class="bi bi-search"></i></label>
-                                        <input type="text" name="url" class="form-control" placeholder="Type your website URL here" aria-describedby="findReports" required>
+                                        <input type="text" name="url" class="form-control" placeholder="Type your website URL here with https://" aria-describedby="findReports" required>
                                     </div>
                                 </div>
                                 <div class="col-3">

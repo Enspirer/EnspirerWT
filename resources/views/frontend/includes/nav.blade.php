@@ -206,8 +206,8 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label style="font-size:16px">URL <span class="text-danger">*</span></label>
+                            <div class="form-group mt-3">
+                                <label style="font-size:16px">URL (With https://) <span class="text-danger">*</span></label>
                                 <input type="text" style="font-size:15px;" id="url" class="form-control mt-2" name="url" placeholder="Type your URL" required>
                             </div>
                         </div>
