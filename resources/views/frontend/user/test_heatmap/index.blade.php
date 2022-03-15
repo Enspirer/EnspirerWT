@@ -20,7 +20,6 @@
 
         const body = JSON.stringify({ events ,widget_details});
 
-        events = [];
         fetch('http://localhost:8000/api/session_rec', {
             method: 'POST',
             headers: {

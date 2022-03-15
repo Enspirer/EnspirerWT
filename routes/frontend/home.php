@@ -76,7 +76,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('project_dash/delete/{id}', [DashboardController::class, 'project_dash_destroy'])->name('project_dash.destroy');
         Route::get('heatmap', [TestController::class, 'heatmap'])->name('heatmap');
-
+        Route::get('session_player', [HomeController::class,'session_player'])->name('session_player');
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
         Route::get('projects', [ProjectController::class, 'index'])->name('project.index');

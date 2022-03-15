@@ -33,3 +33,4 @@ Route::post('tawk_details_store', [HomeController::class,'tawk_details_store'])-
 Route::post('log_checker', [HomeController::class,'log_checker'])->name('log_checker');
 
 Route::post('heatmapdata', [HomeController::class,'heatmapdata'])->name('heatmapdata');
+Route::post('session_rec', [HomeController::class,'session_rec'])->name('session_rec');
