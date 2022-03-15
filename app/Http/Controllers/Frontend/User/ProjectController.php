@@ -44,6 +44,7 @@ class ProjectController extends Controller
 
         return view('frontend.user.projects.project_settings',[
             'project' => $project,
+            'project_id' => $project->id,
             'user' => $user
         ]);
     }
