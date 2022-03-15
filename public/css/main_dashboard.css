@@ -2399,4 +2399,71 @@
     line-height: 1;
 }
 
+
+/* if no projects available */
+
+.content-block.no-projects {
+    max-width: 350px;
+    width: 100%;
+}
+
+.content-block.no-projects h6 {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.content-block.no-projects h6 .strong {
+    font-size: 28px;
+    font-weight: 500;
+    color: #00AEEF;
+}
+
+.content-block.no-projects h2.title {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.content-block.no-projects h2.title span {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.content-block.no-projects h5 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.content-block.no-projects h5 span {
+    font-size: 16px;
+    color: #00AEEF;
+}
+
+.content-block.no-projects h5.text {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+}
+
+.content-block.no-projects h5.text span {
+    font-weight: 500;
+    font-size: 18px;
+    color: #00AEEF;
+}
+
+.content-block.no-projects h6.blue-text {
+    font-weight: 400;
+    color: #00AEEF;
+    margin-top: .5rem;
+}
+
+.content-block.no-projects h6.blue-text span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
 /*# sourceMappingURL=main.css.map */
