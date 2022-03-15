@@ -78,8 +78,7 @@
                 <img src="{{url('images/services/SEO-01.png')}}" alt="">
             </div>
             <h4 class="title">Search Engine Optimisation</h4>
-            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                has been the industry's dummy text ever since the 1500s, when an</p>
+            <p class="text">Put your website ahead of your competitors organically. Tallentor SEO tool will scan through the website and generate a report in minutes and our SEO specialists will give you a plan to get you on track fast.</p>
             <a href="#" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
         </div>
         <div class="feature-block block-7">
@@ -88,8 +87,7 @@
                 <img src="{{url('images/services/Analytics-01.png')}}" alt="">
             </div>
             <h4 class="title">Search Engine Marketing</h4>
-            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                has been the industry's dummy text ever since the 1500s, when an</p>
+            <p class="text">The fastest method to get your website visibility on search engines. We will make sure every penny spent wisely with paid digital campaigns with our tested and proven strategies.</p>
             <a href="#" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
         </div>
     </div>

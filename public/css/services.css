@@ -20,7 +20,7 @@
 .hero-section .content-block h1,
 .enterprise-section .content-block h1 {
     margin-bottom: 1.5rem;
-    font-size: 100px;
+    font-size: 80px;
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: 1.5px #00AEEF;
@@ -30,21 +30,21 @@
 .hero-section .content-block .title,
 .enterprise-section .content-block .title {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 32px;
     color: #f38a01;
     margin-bottom: 1.5rem;
 }
 
 .hero-section .content-block .text,
 .enterprise-section .content-block .text {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
 }
 
 .hero-section .content-block .text strong,
 .enterprise-section .content-block .text strong {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     color: #00AEEF;
 }
 
@@ -84,7 +84,7 @@
 
 .hero-section {
     position: relative;
-    padding-top: 120px;
+    padding: 10rem 0 5rem;
     width: 100%;
     background-image: url("images/s1.png"), url("images/s2.png"), url("images/s3.png"), url("images/s4.png"), url("images/s5.png"), url("images/s6.png"), url("images/s7.png"), url("images/s8.png"), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#F6FBFF));
     background-image: url("images/s1.png"), url("images/s2.png"), url("images/s3.png"), url("images/s4.png"), url("images/s5.png"), url("images/s6.png"), url("images/s7.png"), url("images/s8.png"), linear-gradient(to bottom, #fff, #F6FBFF);
@@ -101,12 +101,9 @@
 
 .hero-section .inner-wrapper .content-block {
     position: relative;
-    flex: 0 0 50%;
 }
 
-.hero-section .inner-wrapper .image-block {
-    flex: 0 0 auto;
-}
+.hero-section .inner-wrapper .image-block {}
 
 .hero-section .inner-wrapper .image-block img {
     width: 100%;
@@ -127,13 +124,10 @@
 }
 
 .enterprise-section .inner-wrapper .content-block {
-    flex: 0 0 auto;
     position: relative;
 }
 
-.enterprise-section .inner-wrapper .image-block {
-    flex: 0 0 50%;
-}
+.enterprise-section .inner-wrapper .image-block {}
 
 .enterprise-section .inner-wrapper .image-block img {
     width: 100%;
@@ -268,9 +262,25 @@
 
 @media screen and (max-width: 1199px) {
 
-    .hero-section .image-block img,
-    .enterprise-section .image-block img {
-        width: 27rem;
+    .hero-section .content-block h1,
+    .enterprise-section .content-block h1 {
+        font-size: 70px;
+        -webkit-text-stroke: 1px #00AEEF;
+    }
+
+    .hero-section .content-block .title,
+    .enterprise-section .content-block .title {
+        font-size: 28px;
+    }
+
+    .hero-section .content-block .text,
+    .enterprise-section .content-block .text {
+        font-size: 14px;
+    }
+
+    .hero-section .content-block .text strong,
+    .enterprise-section .content-block .text strong {
+        font-size: 14px;
     }
 
     .feature-section .inner-wrapper {
@@ -323,6 +333,35 @@
         margin: 3rem 0;
     }
 
+    .hero-section .inner-wrapper .image-block,
+    .enterprise-section .inner-wrapper .image-block {
+        text-align: center;
+    }
+
+    .hero-section .inner-wrapper .image-block img,
+    .enterprise-section .inner-wrapper .image-block img {
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .hero-section .content-block .title,
+    .enterprise-section .content-block .title {
+        font-size: 24px;
+    }
+
+    .hero-section .content-block h1,
+    .enterprise-section .content-block h1 {
+        font-size: 42.5px;
+        -webkit-text-stroke: 1px #00AEEF;
+    }
+
+    .hero-section .inner-wrapper .content-block,
+    .enterprise-section .inner-wrapper .content-block {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 575px) {
