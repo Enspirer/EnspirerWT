@@ -506,7 +506,7 @@ function addWidget() {
         }
     }
 
-    @media screen and (max-width: 574px) {
+    /* @media screen and (max-width: 574px) {
         #allin1widgetblock #allin1widget.allin1view {
             bottom: unset;
             right: unset;
@@ -542,7 +542,7 @@ function addWidget() {
             height: 100%;
             border-radius: 0;
         }
-    }
+    } */
 
     /*# sourceMappingURL=main.css.map */
     </style>

@@ -323,7 +323,7 @@ div.innerHTML = `<style>
         }
     }
 
-    @media screen and (max-width: 574px) {
+    /* @media screen and (max-width: 574px) {
         #wappwidgetblock #wappwidget.wappview {
             bottom: unset;
             right: unset;
@@ -360,7 +360,7 @@ div.innerHTML = `<style>
             bottom: -110px;
             border-radius: 0;
         }
-    }
+    } */
 
     /*# sourceMappingURL=main.css.map */
 
