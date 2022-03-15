@@ -13,6 +13,7 @@
         <div class="inner-wrapper">
             <div class="content-block">
                 <img src="{{url('images/services/01.png')}}" alt="" class="order-no">
+                <h1>Express Web</h1>
                 <h2 class="title">Built it, the way <br> you want</h2>
                 <p class="text">The fastest way create your online presence in few hours on Drag &amp; Drop method <strong>Without coding</strong></p>
                 <a href="#" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
@@ -32,6 +33,7 @@
             </div>
             <div class="content-block">
                 <img src="{{url('images/services/02.png')}}" alt="" class="order-no">
+                <h1>Enterprise Web</h1>
                 <h2 class="title">Customized Web Applications</h2>
                 <p class="text">Build to perfection by a Team of experts with a blend of creativity & technology</p>
                 <p class="text">Consult out Expert Centre for a FREE analysis of your system requirements.</p>
