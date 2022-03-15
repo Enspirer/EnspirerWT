@@ -376,16 +376,16 @@ div.innerHTML = `<style>
     @if($widget_meta->show_icon == 'on')
         @if($widget_meta->scroll_position_appearance == "Top")
             <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;top: 1px;margin-top: 30px;">
-            <div class="wapptooltip">How may I help you?</div>   
+            <div class="wapptooltip">How can we help?</div>   
             @elseif($widget_meta->scroll_position_appearance == "Bottom")
                     <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;bottom: 1px;margin-bottom: 30px;">
-                    <div class="wapptooltip">How may I help you?</div>     
+                    <div class="wapptooltip">How can we help?</div>     
                     @elseif($widget_meta->scroll_position_appearance == "Left")
                             <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;left: 1px;margin-left: 30px;">
-                            <div class="wapptooltip">How may I help you?</div>      
+                            <div class="wapptooltip">How can we help?</div>      
                             @elseif($widget_meta->scroll_position_appearance == "Right")
                                     <div id="wappwidtoggler" onclick="wapptoggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
-                                    <div class="wapptooltip">How may I help you?</div>      
+                                    <div class="wapptooltip">How can we help?</div>      
                                     @endif
                                         <i style="color:{{$widget_meta->bubble_icon_color}};" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
                                     </div>
@@ -463,7 +463,6 @@ window.addEventListener("load", function () {
         }
     });
 });
-
 
 const screenSize = window.matchMedia("(max-width: 768px)");
 mobileChat(screenSize);
