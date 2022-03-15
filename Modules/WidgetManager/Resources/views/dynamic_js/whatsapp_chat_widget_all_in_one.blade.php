@@ -792,22 +792,6 @@ window.addEventListener("load", function () {
     });
 });
 
-window.addEventListener("load", function () {
-    localStorage.pageTitle = parent.document.title;
-
-    setTimeout(function () {
-        parent.document.title = "1 new Message";
-
-        setInterval(function () {
-            if (parent.document.title == '1 new Message') {
-                parent.document.title = localStorage.pageTitle;
-            } else {
-                parent.document.title = "1 new Message";
-            }
-        }, 1000);
-    }, 5000);
-});
-
 const screenSize = window.matchMedia("(max-width: 768px)");
 mobileChat(screenSize);
 screenSize.addListener(mobileChat);
@@ -841,12 +825,6 @@ screenSize.addListener(mobileChat);
         setTimeout(function(){
             document.querySelector('.allin1welcomemsg').classList.add("allin1view");
         },2000);
-    }
-
-    function allin1toggle() {
-        document.querySelector('#allin1widget').classList.add("allin1view");
-        document.getElementById("allin1widtoggler").classList.add("allin1view");
-        allin1msgPopTimeout();
     }
 
     function mobileChat(screenSize) {

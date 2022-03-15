@@ -464,21 +464,6 @@ window.addEventListener("load", function () {
     });
 });
 
-window.addEventListener("load", function () {
-    localStorage.pageTitle = parent.document.title;
-
-    setTimeout(function () {
-        parent.document.title = "1 new Message";
-
-        setInterval(function () {
-            if (parent.document.title == '1 new Message') {
-                parent.document.title = localStorage.pageTitle;
-            } else {
-                parent.document.title = "1 new Message";
-            }
-        }, 1000);
-    }, 5000);
-});
 
 const screenSize = window.matchMedia("(max-width: 768px)");
 mobileChat(screenSize);
@@ -516,12 +501,6 @@ screenSize.addListener(mobileChat);
         },2000);
     }
 
-    function wapptoggle() {
-        document.querySelector('#wappwidget').classList.add("wappview");
-        document.getElementById("wappwidtoggler").classList.add("wappview");
-        wappmsgPopTimeout();
-    }
-
     function mobileChat(screenSize) {
         if(screenSize.matches) {
             return;
@@ -539,6 +518,12 @@ screenSize.addListener(mobileChat);
     }
 
 @endif
+
+function wapptoggle() {
+        document.querySelector('#wappwidget').classList.add("wappview");
+        document.getElementById("wappwidtoggler").classList.add("wappview");
+        wappmsgPopTimeout();
+}
 
 function wappclose() {
     document.querySelector('#wappwidget').classList.remove("wappview");
