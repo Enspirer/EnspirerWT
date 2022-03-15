@@ -139,6 +139,10 @@
     right: 0;
 }
 
+.section-settings .content-block #accounts-details .content .profile-pic .bi:hover {
+    cursor: pointer;
+}
+
 .section-settings .content-block #accounts-details .content .profile-info {
     position: relative;
     display: -webkit-box;
@@ -173,6 +177,10 @@
     justify-content: center;
     top: 0;
     right: 0;
+}
+
+.section-settings .content-block #accounts-details .content .profile-info .bi:hover {
+    cursor: pointer;
 }
 
 .section-settings .content-block #accounts-details .content .profile-info .info-item {
