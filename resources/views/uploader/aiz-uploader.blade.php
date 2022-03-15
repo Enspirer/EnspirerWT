@@ -12,7 +12,7 @@
                         </li>
                     </ul>
                 </div>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close" onclick="uploaderClose()">
                     <span aria-hidden="true"></span>
                 </button>
             </div>

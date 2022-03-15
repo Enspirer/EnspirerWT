@@ -282,5 +282,10 @@
 
     @push('after-scripts')
 
+    <script>
+        function uploaderClose() {
+            document.getElementById("aizUploaderModal").click();
+        }
+    </script>
 
     @endpush
