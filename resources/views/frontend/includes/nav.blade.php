@@ -29,11 +29,11 @@
 
                                                     </div>
                                                     <div class="content">
-                                                        <h6 class="site-name">Select Your Project</h6>
+                                                        <a type="button" data-bs-toggle="modal" data-bs-target="#project_modal">Add New Project</a>
                                                     </div>
-                                                    <div class="dropdown-icon">
+                                                    <!-- <div class="dropdown-icon">
                                                         <i class="bi bi-chevron-down"></i>
-                                                    </div>
+                                                    </div> -->
                                                 @endif
 
                                             </div>
