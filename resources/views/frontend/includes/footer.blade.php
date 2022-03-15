@@ -5,7 +5,7 @@
                     <div class="links">
                         <div class="header">
                             <a href="{{url('/')}}" rel="noopener noreferrer">
-                            <img src="{{url('images/full-logo.png')}}" alt="">
+                            <img src="{{url('images/logo/footer-logo.png')}}" alt="">
                             </a>
                         </div>
                         <div class="body">
