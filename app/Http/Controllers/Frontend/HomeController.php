@@ -26,9 +26,8 @@ class HomeController extends Controller
 
     public function session_player(Request $request)
     {
-        $sessionDetails = SessionRecord::where('ip_address','127.0.0.1')->first();
-        $infact = json_decode($sessionDetails->event);
-        dd($infact);
+//        $sessionDetails = SessionRecord::where('ip_address','127.0.0.1')->first();
+//        $infact = json_decode($sessionDetails->event);
         return view('frontend.user.test_heatmap.session_rec');
     }
 
