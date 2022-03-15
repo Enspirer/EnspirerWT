@@ -968,7 +968,7 @@
                                                     <div class="file-preview box sm">
                                                     </div>
                                                 </div> 
-                                                <div onClick="myFunction()" class="col-12 btn rounded-pill text-light px-4 mt-3 mb-4 btn-success">Upload Image</div>
+                                                <div onClick="myFunction()" class="col-12 btn rounded-pill text-light px-4 py-2 ms-2 mt-3 mb-4 btn-success">Upload Image</div>
 
 
                                                 <div class="footer">
@@ -1708,32 +1708,38 @@
                                     <a class="nav-link" href="#" id="propertyDropdown" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         <div class="property">
-                                            @if($project->id != null)
-                                                <div class="image">
-                                                    @if(get_seo_result($project->id)->favicon->value == null)
-                                                        <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
+                                            @if(count(App\Models\Projects::where('user_id',auth()->user()->id)->get()) != 0)
+                                                @if($project->id != null)
+                                                    <div class="image">
+                                                        @if(get_seo_result($project->id)->favicon->value == null)
+                                                            <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
 
-                                                    @else
-                                                        <img src="{{get_seo_result($project->id)->favicon->value}}" alt="propery-image">
-                                                    @endif
-                                                </div>
-                                                <div class="content">
-                                                    <h6 class="site-name">{{\App\Models\Projects::where('id',$project->id)->first()->name}}</h6>
-                                                    <span class="site-url">{{\App\Models\Projects::where('id',$project->id)->first()->url}}</span>
-                                                </div>
-                                                 <div class="dropdown-icon">
-                                                    <i class="bi bi-chevron-down"></i>
-                                                </div>
+                                                        @else
+                                                            <img src="{{get_seo_result($project->id)->favicon->value}}" alt="propery-image">
+                                                        @endif
+                                                    </div>
+                                                    <div class="content">
+                                                        <h6 class="site-name">{{\App\Models\Projects::where('id',$project->id)->first()->name}}</h6>
+                                                        <span class="site-url">{{\App\Models\Projects::where('id',$project->id)->first()->url}}</span>
+                                                    </div>
+                                                    <div class="dropdown-icon">
+                                                        <i class="bi bi-chevron-down"></i>
+                                                    </div>
+                                                @else
+                                                    <div class="image">
+
+                                                    </div>
+                                                    <div class="content">
+                                                        <h6 class="site-name">Select Your Project</h6>
+                                                    </div>
+                                                    <div class="dropdown-icon">
+                                                        <i class="bi bi-chevron-down"></i>
+                                                    </div>
+                                                @endif
                                             @else
-                                                <div class="image">
-
-                                                </div>
                                                 <div class="content">
                                                     <a type="button" data-bs-toggle="modal" data-bs-target="#project_modal">Add New Project</a>
                                                 </div>
-                                                <!-- <div class="dropdown-icon">
-                                                    <i class="bi bi-chevron-down"></i>
-                                                </div> -->
                                             @endif
                                         </div>
                                     </a>
@@ -1763,7 +1769,7 @@
                                         @endforeach
                                     </ul>
                                 </li>
-                                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Create Your Project">
+                                <li class="nav-item">
                                 <a type="button" class="nav-link add-btn bi bi-plus-square-fill" data-bs-toggle="modal" data-bs-target="#project_modal"></a>
                                 </li>
                             </ul>

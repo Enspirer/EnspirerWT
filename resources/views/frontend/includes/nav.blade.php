@@ -8,32 +8,38 @@
                                         <a class="nav-link" href="#" id="propertyDropdown" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <div class="property">
-                                                @if(isset($project_id))
-                                                    <div class="image">
-                                                        @if(get_seo_result($project_id)->favicon->value == null)
-                                                            <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                                @if(count(App\Models\Projects::where('user_id',auth()->user()->id)->get()) != 0)
+                                                    @if(isset($project_id))
+                                                        <div class="image">
+                                                            @if(get_seo_result($project_id)->favicon->value == null)
+                                                                <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image" onerror="this.src='{{url('globeicon.png')}}';">
 
-                                                        @else
-                                                            <img src="{{get_seo_result($project_id)->favicon->value}}" alt="propery-image" onerror="this.src='{{url('globeicon.png')}}';">
-                                                        @endif
-                                                    </div>
-                                                    <div class="content">
-                                                        <h6 class="site-name">{{\App\Models\Projects::where('id',$project_id)->first()->name}}</h6>
-                                                        <span class="site-url">{{\App\Models\Projects::where('id',$project_id)->first()->url}}</span>
-                                                    </div>
-                                                    <div class="dropdown-icon">
-                                                        <i class="bi bi-chevron-down"></i>
-                                                    </div>
+                                                            @else
+                                                                <img src="{{get_seo_result($project_id)->favicon->value}}" alt="propery-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                                            @endif
+                                                        </div>
+                                                        <div class="content">
+                                                            <h6 class="site-name">{{\App\Models\Projects::where('id',$project_id)->first()->name}}</h6>
+                                                            <span class="site-url">{{\App\Models\Projects::where('id',$project_id)->first()->url}}</span>
+                                                        </div>
+                                                        <div class="dropdown-icon">
+                                                            <i class="bi bi-chevron-down"></i>
+                                                        </div>
+                                                    @else
+                                                        <div class="image">
+
+                                                        </div>
+                                                        <div class="content">
+                                                            <h6 class="site-name">Select Your Project</h6>
+                                                        </div>
+                                                        <div class="dropdown-icon">
+                                                            <i class="bi bi-chevron-down"></i>
+                                                        </div>
+                                                    @endif
                                                 @else
-                                                    <div class="image">
-
-                                                    </div>
                                                     <div class="content">
                                                         <a type="button" data-bs-toggle="modal" data-bs-target="#project_modal">Add New Project</a>
                                                     </div>
-                                                    <!-- <div class="dropdown-icon">
-                                                        <i class="bi bi-chevron-down"></i>
-                                                    </div> -->
                                                 @endif
 
                                             </div>
