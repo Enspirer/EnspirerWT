@@ -6,7 +6,7 @@
         </a>
         <a href="{{ route('frontend.user.project_settings', $project_id) }}" class="ims-dashboard-btn ms-5">
         <i class="bi bi-gear"></i>
-        Enspirer Account Settings
+        {{App\Models\Projects::where('id',$project_id)->first()->name}} Account Settings
         </a>
 </div>
 

@@ -40,9 +40,15 @@ class WidgetController extends Controller
 
         $add->save();
 
-        return back()->with([
-            'success' => 'success'
-        ]);    
+        if($request->widget_type == 'Whatsapp Chat'){
+            return redirect()->route('frontend.user.user_widget.settings', $add->id);
+        }elseif($request->widget_type == 'All-in-One Chat'){
+            return redirect()->route('frontend.user.user_widget.settings', $add->id);
+        }
+
+        // return back()->with([
+        //     'success' => 'success'
+        // ]);    
                     
     }
 
