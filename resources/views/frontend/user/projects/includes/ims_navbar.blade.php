@@ -7,7 +7,15 @@
                                         <a class="nav-link" href="#" id="propertyDropdown" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <div class="property">
-                                                @if(count(App\Models\Projects::where('user_id',auth()->user()->id)->get()) != 0)
+                                            @if(count(\App\Models\Projects::where('user_id',auth()->user()->id)->get()) == 0)
+                                                <div class="image"></div>
+                                                <div class="content">
+                                                    <h6 class="site-name" data-bs-toggle="modal" data-bs-target="#project_modal">Create New Project</h6>
+                                                </div>
+                                                <div class="dropdown-icon">
+                                                    <i class="bi"></i>
+                                                </div>
+                                            @else
                                                     @if($project->id != null)
                                                         <div class="image">
                                                             @if(get_seo_result($project->id)->favicon->value == null)
@@ -35,16 +43,14 @@
                                                             <i class="bi bi-chevron-down"></i>
                                                         </div>
                                                     @endif
-                                                @else
-                                                    <div class="content">
-                                                        <a type="button" data-bs-toggle="modal" data-bs-target="#project_modal">Add New Project</a>
-                                                    </div>
-                                                @endif
+                                            @endif
 
                                             </div>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="propertyDropdown">
-                                            @foreach(\App\Models\Projects::where('user_id',auth()->user()->id)->get() as $project)
+                                        @if(count(\App\Models\Projects::where('user_id',auth()->user()->id)->get()) == 0)
+                                        @else
+                                        @foreach(\App\Models\Projects::where('user_id',auth()->user()->id)->get() as $project)
                                                 <li>
                                                     <a class="dropdown-item" href="{{route('frontend.user.project.chat',$project->id)}}">
                                                         <div class="property">
@@ -67,6 +73,7 @@
                                                     </a>
                                                 </li>
                                             @endforeach
+                                        @endif
                                         </ul>
                                     </li>
                                     <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Create Your Project">

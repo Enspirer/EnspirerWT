@@ -60,15 +60,16 @@
                                <div class="card-body">
                                    <div class="row">
                                        <div class="col-md-6">
-                                           <div style="background-image: url('{{url('images/Group 411.png')}}');height: 400px;background-position: center;background-size: contain;background-repeat: no-repeat;"></div>
+                                           <div style="background-image: url('{{url('images/landing_page/home/banner_1.png')}}');height: 400px;background-position: center;background-size: contain;background-repeat: no-repeat;"></div>
 
                                        </div>
                                        <div class="col-md-6">
-                                           <div class="content-block" style="padding-top: 50px;">
-                                               <h5 style="font-size: 20px;">The Smarter way to <span style="font-size: 30px;">Boost</span> your</h5>
-                                               <h3 class="title" style="font-size: 26px;">Website  Performance</h3>
-                                               <h5 class="light" style="font-size: 20px;padding-top: 30px;">WhatsApp Widget with </h5>
-                                               <h5 style="font-size: 27px;color: #3d4a85;">Inquiry Management System (IMS)</h5>
+                                           <div class="content-block no-projects" style="padding-top: 50px;">
+                                            <h6>Upgrade your website with the most</h6>
+                                            <h2 class="title">Interactive <span>Communication tool</span></h2>
+                                            <h5 class="text">Improve user engagement &amp; <br> grow your business fast</h5>
+                                            <h5>All-in-One Chat With <span>IMS</span></h5>
+                                            <h6 class="blue-text"><span>I</span>nquiry <span>M</span>anagement <span>S</span>ystem</h6>
                                                <button data-bs-toggle="modal" data-bs-target="#project_modal" class="btn btn-primary" style="font-size: 16px;padding: 10px;margin-top: 30px;">Add your website here </button>                                    </div>
                                        </div>
                                    </div>

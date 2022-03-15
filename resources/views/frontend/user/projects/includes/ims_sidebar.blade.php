@@ -6,11 +6,13 @@
                             <div class="logo-text">- IMS</div>
                         </div>
                         <div class="caption">Inquiry Management Systems</div>
-                        <div class="live-status-block">
-                            <i class="bi bi-broadcast"></i>
-                            <div class="caption">Live Visitors</div>
-                            <div class="count">{{\App\Models\VisitorCount::where('project_id',$project->id)->count()}}</div>
-                        </div>
+                        <a href="{{ route('frontend.user.ims.visitor_statistics', $project->id) }}" style="text-decoration:none;">
+                            <div class="live-status-block">
+                                <i class="bi bi-broadcast"></i>
+                                <div class="caption">Live Visitors</div>
+                                <div class="count">{{\App\Models\VisitorCount::where('project_id',$project->id)->count()}}</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="side-nav__navs" id="sideNavs">
                         <ul class="navbar-nav">

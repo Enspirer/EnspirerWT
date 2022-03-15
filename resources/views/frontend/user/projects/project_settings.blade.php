@@ -266,17 +266,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-6">
-                                    <div class="card p-4 ms-2" style="border-radius:20px; height:50rem;">
-                                        <div class="content">
-                                        
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-
-
                             </div>
                         </div>
                         
@@ -293,5 +282,10 @@
 
     @push('after-scripts')
 
+    <script>
+        function uploaderClose() {
+            document.getElementById("aizUploaderModal").click();
+        }
+    </script>
 
     @endpush

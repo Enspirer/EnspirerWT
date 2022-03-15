@@ -74,12 +74,12 @@
                                             <div class="col-4">
                                                 <div class="profile-pic">
                                                     <img src="{{ auth()->user()->picture }}" alt="">
-                                                    <i class="bi bi-pencil-fill"></i>
+                                                    <i class="bi bi-pencil-fill" onclick="editProf()"></i>
                                                 </div>
                                             </div>
                                             <div class="col-8">
                                                 <div class="profile-info">
-                                                    <i class="bi bi-pencil-fill"></i>
+                                                    <i class="bi bi-pencil-fill" onclick="editProf()"></i>
                                                     <div class="info-item">
                                                         Your Name :
                                                         <span class="data">{{$user->first_name}} {{$user->last_name}}</span>
@@ -692,6 +692,13 @@
             });
 
         });
+    </script>
+
+    <script>
+        // Edit profile tab trigger 
+        function editProf() {
+            document.getElementById("edit-profile-tab").click();
+        }
     </script>
 
     @endpush

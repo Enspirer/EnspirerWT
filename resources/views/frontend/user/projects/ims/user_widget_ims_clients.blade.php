@@ -19,13 +19,13 @@
                                     <div class="col">
                                         <ul class="breadcrumb">
                                             
-                                            <li class="breadcrumb-item">
+                                            <!-- <li class="breadcrumb-item">
                                                 <a class="breadcrumb-link">Conversations</a>
                                             </li>
                                             <li class="breadcrumb-item">
                                                 <a href="#" class="breadcrumb-link breadcrumb-arrow"><i
                                                         class="bi bi-chevron-right"></i></a>
-                                            </li>
+                                            </li> -->
                                             <li class="breadcrumb-item">
                                                 <a class="breadcrumb-link breadcrumb-current">Clients</a>
                                             </li>
