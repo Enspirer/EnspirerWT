@@ -1,6 +1,9 @@
 <section class="navigation-bar">
         <div class="container">
             <div class="inner-wrapper">
+                <div class="mobile-brand">
+                    <img src="{{url('images/logo/mobile-logo.png')}}" alt="">
+                </div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="{{url('/')}}" class="nav-link {{ Request::segment(1) == '' ? 'active' : null }}">Home</a>

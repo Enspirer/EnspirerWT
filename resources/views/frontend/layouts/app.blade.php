@@ -234,6 +234,7 @@
 		$(".menu-trigger").on('click', function () {
 			$(this).toggleClass('active');
 			$('.navigation-bar .inner-wrapper .navbar-nav').toggleClass("active");
+			$('.navigation-bar .inner-wrapper').toggleClass("active");
 		});
 	}
     </script>

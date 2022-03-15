@@ -25,6 +25,10 @@
     justify-content: space-between;
 }
 
+.navigation-bar .inner-wrapper .mobile-brand {
+    display: none;
+}
+
 .navigation-bar .inner-wrapper .navbar-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -99,7 +103,7 @@
     cursor: pointer;
     display: block;
     position: absolute;
-    top: 23px;
+    top: 21px;
     width: 32px;
     height: 40px;
     text-indent: -9999em;
@@ -355,6 +359,47 @@
         top: 0;
     }
 
+    .navigation-bar .inner-wrapper {
+        display: block;
+    }
+
+    .navigation-bar .inner-wrapper.active {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .navigation-bar .inner-wrapper .mobile-brand {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navigation-bar .inner-wrapper .mobile-brand::after {
+        content: '';
+        width: 11px;
+        height: 11px;
+        background-color: transparent;
+        border: 2px solid #fb0000;
+        position: absolute;
+        border-radius: 50%;
+        top: 15px;
+        left: 49px;
+        animation: border-pulse 1s infinite;
+    }
+
+    .navigation-bar .inner-wrapper .mobile-brand img {
+        width: 170px;
+    }
+
     .navigation-bar .inner-wrapper .navbar-nav .nav-item.mobile-none {
         display: none;
     }
@@ -363,20 +408,19 @@
         display: block !important;
     }
 
-    .navigation-bar .inner-wrapper {
-        display: block;
-    }
-
     .navigation-bar .inner-wrapper .navbar-nav {
         position: absolute;
-        right: 4.5rem;
+        top: 80px;
+        left: 50%;
+        transform: translate(-50%, 0);
         background-color: #fff;
         padding: 2rem 0;
-        width: 260px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: .5rem;
         visibility: hidden;
     }
 
