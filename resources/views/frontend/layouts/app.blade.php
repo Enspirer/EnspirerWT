@@ -172,6 +172,7 @@
             breakpoints: {
 		                        767: {
                                     fixedWidth: '300px',
+                                    arrows: false,
 		                            },
                             },
         });
@@ -199,6 +200,11 @@
             fixedWidth: '300px',
             fixedHeight: '320px',
             gap: '3.5rem',
+            breakpoints: {
+		                        767: {
+                                    arrows: false,
+		                            },
+                            },
         });
 
         contactSlider.mount();

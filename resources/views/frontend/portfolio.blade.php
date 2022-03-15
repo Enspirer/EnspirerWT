@@ -12,11 +12,9 @@
     <div class="container">
         <div class="inner-wrapper">
             <div class="content-block">
-                <h1 class="title">We <span>design & built</span> <br>
-                    Ready-made software for you <br>
-                    Here some project</h1>
-                <p class="text">We design world-class digital products that bring joy their customers, transform
-                    business, and deliver results.</p>
+                <h1 class="title"><span>Design. Integrate. Convert</span> <br>
+                We believe in customer focused unique experiences</h1>
+                <p class="text">Here are few hand picked projects.</p>
                 <div class="image-block">
                     <img src="{{url('images/portfolio/Group 557.png')}}" alt="">
                 </div>
