@@ -1585,7 +1585,7 @@
                                         aria-labelledby="colors" data-bs-parent="#whatsappAppearanceAccordion">
                                         <div class="accordion-body">
                                             <fieldset id="colorPickers">
-                                                <div class="form-check">
+                                                <div class="form-check bubble_background_col">
                                                     <label class="form-check-label" for="bubble_background_color">Bubble Background Color</label>
                                                     <input class="form-check-input" type="color" id="bubble_background_color" onchange="myFunction()" value="{{ json_decode($widget->settings)[0]->bubble_background_color }}" name="bubble_background_color" value="#055147" required>
                                                 </div>
@@ -2031,6 +2031,15 @@
         }
     });
 
+    $('#default_icon').ready(function () {
+        const icon_default = $('#default_icon:checked').val();
+        if (icon_default != 'on') {
+            $('.bubble_background_col').show();
+        } else {
+            $('.bubble_background_col').hide();
+        }
+    });
+
     $('#auto_trigger').ready(function () {
         const auto_trigger_check = $('#auto_trigger:checked').val();
         if (auto_trigger_check == 'on') {
@@ -2151,6 +2160,15 @@
         } else {
             $('.bubble_icon_col').hide();
         }
+
+      
+        icon_default = $('#default_icon:checked').val();
+        if (icon_default != 'on') {
+            $('.bubble_background_col').show();
+        } else {
+            $('.bubble_background_col').hide();
+        }
+ 
 
         auto_trigger_check = $('#auto_trigger:checked').val();
         if (auto_trigger_check == 'on') {
