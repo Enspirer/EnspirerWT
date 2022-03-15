@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\HeatMap;
+use App\Models\SessionRecord;
 use App\Models\VisitorCount;
 use App\Models\VisitorLogs;
 use App\Models\Widgets;
@@ -22,6 +23,33 @@ class HomeController extends Controller
     /**
      * @return \Illuminate\View\View
      */
+
+    public function session_player(Request $request)
+    {
+        $sessionDetails = SessionRecord::where('ip_address','127.0.0.1')->first();
+        $infact = json_decode($sessionDetails->event);
+        dd($infact);
+        return view('frontend.user.test_heatmap.session_rec');
+    }
+
+    public function session_rec(Request $request)
+    {
+
+        if(count($request->events) == 0){
+            return 'stack flow';
+        }else{
+            $steampanel = new SessionRecord;
+            $steampanel->ip_address = $request->ip();
+            $steampanel->event = json_encode($request->events);
+            $steampanel->widget_id = 1;
+            $steampanel->project_id = 1;
+            $steampanel->save();
+            return 'stack flow';
+
+        }
+
+    }
+
     public function index()
     {
         $posts = Post::where('status','Enabled')->take(2)->latest()->get();

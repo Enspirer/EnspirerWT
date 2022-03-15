@@ -17,11 +17,21 @@
     left: 0;
 }
 
+.hero-section .content-block h1,
+.enterprise-section .content-block h1 {
+    margin-bottom: 1.5rem;
+    font-size: 100px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #00AEEF;
+    white-space: nowrap;
+}
+
 .hero-section .content-block .title,
 .enterprise-section .content-block .title {
     font-weight: 700;
     font-size: 40px;
-    color: #2d465b;
+    color: #f38a01;
     margin-bottom: 1.5rem;
 }
 
@@ -91,11 +101,11 @@
 
 .hero-section .inner-wrapper .content-block {
     position: relative;
-    flex: 0 0 33%;
+    flex: 0 0 50%;
 }
 
 .hero-section .inner-wrapper .image-block {
-    flex: 0 0 60%;
+    flex: 0 0 auto;
 }
 
 .hero-section .inner-wrapper .image-block img {
@@ -106,6 +116,7 @@
     background-image: url("images/s1.png"), url("images/s2.png"), url("images/s3.png"), url("images/s4.png"), url("images/s5.png"), url("images/s6.png"), url("images/s7.png"), url("images/s8.png");
     background-repeat: no-repeat;
     background-position: 10% 13%, 40% 38%, 60% 90%, -30% 400%, 50% 25%, 90% 30%, 40% 70%, 35% 90%;
+    margin: 5rem 0 10rem;
 }
 
 .enterprise-section .inner-wrapper {
@@ -116,12 +127,12 @@
 }
 
 .enterprise-section .inner-wrapper .content-block {
-    flex: 0 0 33%;
+    flex: 0 0 auto;
     position: relative;
 }
 
 .enterprise-section .inner-wrapper .image-block {
-    flex: 0 0 60%;
+    flex: 0 0 50%;
 }
 
 .enterprise-section .inner-wrapper .image-block img {

@@ -559,23 +559,23 @@ function addWidget() {
         @if($widget_meta->show_icon == 'on')
             @if($widget_meta->scroll_position_appearance == "Top")
                 <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;top: 1px;margin-top: 30px;">
-                <div class="allin1tooltip">How may I help you?</div>
+                <div class="allin1tooltip">How can we help?</div>
                     @elseif($widget_meta->scroll_position_appearance == "Bottom")
                         <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;bottom: 1px;margin-bottom: 30px;">
-                        <div class="allin1tooltip">How may I help you?</div>    
+                        <div class="allin1tooltip">How can we help?</div>    
                         @elseif($widget_meta->scroll_position_appearance == "Left")
                                 <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;left: 1px;margin-left: 30px;">
-                                <div class="allin1tooltip">How may I help you?</div>  
+                                <div class="allin1tooltip">How can we help?</div>  
                                 @elseif($widget_meta->scroll_position_appearance == "Right")
 
 
                                         @if($widget_meta->default_icon != 'on')
                                             <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}}!important;{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
-                                            <div class="allin1tooltip">How may I help you?</div>
+                                            <div class="allin1tooltip">How can we help?</div>
 
                                         @else
                                             <div id="allin1widtoggler" onclick="allin1toggle()" class="default-icon"  style="background-color: {{ $widget_meta->bubble_background_color}};{{$widget_meta->alignment}}: 10px;margin-right: 30px;">
-                                            <div class="allin1tooltip">How may I help you?</div>
+                                            <div class="allin1tooltip">How can we help?</div>
                                         @endif
 
                                                 @endif
@@ -790,6 +790,22 @@ window.addEventListener("load", function () {
             tooltip.classList.add("allin1view");
         }
     });
+});
+
+window.addEventListener("load", function () {
+    localStorage.pageTitle = parent.document.title;
+
+    setTimeout(function () {
+        parent.document.title = "1 New Message";        
+        
+        setInterval(function(){
+            if (parent.document.title == '1 New Message') {
+                parent.document.title = localStorage.pageTitle;
+            } else {
+                parent.document.title = "1 New Message";
+            }
+        },1000);
+    }, 5000);
 });
 
 const screenSize = window.matchMedia("(max-width: 768px)");

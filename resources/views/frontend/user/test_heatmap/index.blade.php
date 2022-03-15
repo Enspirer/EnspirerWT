@@ -1,78 +1,35 @@
-@extends('frontend.layouts.dashboard_app')
-
-@section('title', app_name() . ' | ' . __('navs.frontend.dashboard') )
-
-@section('content')
-    <style>
-        body, html { margin:0; padding:0; height:100%;}
-        body { font-family:sans-serif; }
-        body * { font-weight:200;}
-        #heatmapContainerWrapper { width:100%; height:100%; position:absolute; }
-        #heatmapContainer { width:100%; height:100%;}
-        h1 { position:absolute; background:black; color:white; padding:10px; font-weight:200; z-index:10000;}
-        #all-examples-info { position:absolute; background:white; font-size:16px; padding:20px; top:100px; width:350px; line-height:150%; border:1px solid rgba(0,0,0,.2);}
-    </style>
-
-    <section id="sectionMainWindow">
-        @include('frontend.includes.sidebar')
-
-        <div id="sectionBody">
-        @include('frontend.includes.nav')
-
-        <!-- Content goes here -->
-            <div class="row g-0">
-                <div class="section-content" id="stack_overflow">
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-@endsection
-
-@push('after-scripts')
-
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.js"></script>
 
 <script>
-    $('.delete').on('click', function() {
-        let link = $(this).attr('href');
-        $('.modal-footer a').attr('href', link);
-    })
-</script>
+    let events = [];
 
-@endpush
+    rrweb.record({
+        emit(event) {
+            // push event into the events array
+            events.push(event);
+        },
+    });
 
+    // this function will send events to the backend and reset the events array
+    function save() {
+        const widget_details = {
+          'widget_id' : '1',
+          'product_id' : '2'
+        };
 
+        const body = JSON.stringify({ events ,widget_details});
 
-
-
-<script src="{{url('js/heatmap.min.js')}}"></script>
-<script>
-    window.onload = function() {
-        // create a heatmap instance
-        var heatmap = h337.create({
-            container: document.getElementById('tocking'),
-            maxOpacity: .6,
-            radius: 50,
-            blur: .90,
-            // backgroundColor with alpha so you can see through it
-            backgroundColor: 'rgba(0, 0, 58, 0.10)',
-
+        events = [];
+        fetch('http://localhost:8000/api/session_rec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body
         });
-        var heatmapContainer = document.getElementById('heatmapContainerWrapper');
+    }
 
-
-        heatmap.addData({ x: 500, y: 467, value: 1 });
-        heatmap.addData({ x: 700, y: 200, value: 1 });
-        heatmap.addData({ x: 400, y: 1000, value: 1 });
-
-
-
-    };
+    // save events every 10 seconds
+    setInterval(save, 10 * 1000);
 </script>
-</body>
-</html>
