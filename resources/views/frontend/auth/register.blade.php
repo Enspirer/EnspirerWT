@@ -19,15 +19,15 @@
                     {{ csrf_field() }}
                         <div class="inputs">
                             <label for="first_name" class="form-label">Your First Name</label>
-                            <input type="text" name="first_name" class="form-control" id="first_name" aria-describedby="first_name" placeholder="Enter Your First Name" required>
+                            <input type="text" name="first_name" class="form-control" value="{{old('first_name')}}" id="first_name" aria-describedby="first_name" placeholder="Enter Your First Name" required>
                         </div>
                         <div class="inputs">
                             <label for="last_name" class="form-label">Your Last Name</label>
-                            <input type="text" name="last_name" class="form-control" id="last_name" aria-describedby="last_name" placeholder="Enter Your Last Name" required>
+                            <input type="text" name="last_name" class="form-control" value="{{old('last_name')}}" id="last_name" aria-describedby="last_name" placeholder="Enter Your Last Name" required>
                         </div>
                         <div class="inputs">
                             <label for="signUpEmail" class="form-label">Your Email</label>
-                            <input type="email" name="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter Your Email" required>
+                            <input type="email" name="email" class="form-control" value="{{old('email')}}" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter Your Email" required>
                         </div>
                         <div class="inputs">
                             <label for="signUpPassword" class="form-label">Your Password</label>
