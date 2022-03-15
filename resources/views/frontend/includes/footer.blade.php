@@ -40,7 +40,9 @@
                                     <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Partners</a></li>
                                     <li class="nav-item"><a href="{{url('home_blog')}}" class="nav-link">Blog</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link"> Help center</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Help center</a></li>
+                                    <li class="nav-item"><a href="{{url('terms-condition')}}" class="nav-link">Terms of Service</a></li>
+                                    <li class="nav-item"><a href="{{url('privacy-policy')}}" class="nav-link">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -97,8 +99,7 @@
                 </div>
             </div>
             <div class="row g-0">
-                <div class="copyright-blocok">
-                    <div class="terms"><a href="{{url('terms-condition')}}">Terms of Service</a> <a href="{{url('privacy-policy')}}">Privacy Policy</a></div>
+                <div class="copyright-block">
                     <div class="copyright">Copyright @ {{date('Y')}} | Tallentor Global Ltd</div>
                 </div>
             </div>
