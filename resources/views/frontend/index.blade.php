@@ -28,7 +28,7 @@
                                         <a href="#" class="icon"><img src="{{url('images/chat (1).png')}}" alt="featured icon"></a>
                                     </div> -->
                                 </div>
-                                <div class="image-block">
+                                <div class="image-block slide-01">
                                     <img src="{{url('images/landing_page/home/banner_1.png')}}" alt="hero-image">
                                 </div>
                             </div>
@@ -190,8 +190,8 @@
             <div class="inner-wrapper">
                 <div class="button-block">
                     <div class="content">
-                        <h1 class="title">The Tallent <br> Marketplace</h1>
-                        <a href="{{url('market_place')}}" class="cta-btn-border"><span class="text">Find Tallent</span> <i class="bi bi-arrow-right-short"></i></a>
+                        <h1 class="title">The Talent <br> Marketplace</h1>
+                        <a href="{{url('market_place')}}" class="cta-btn-border"><span class="text">Find Talent</span> <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                 </div>
                 <div class="card-block" id="marketplaceCards">

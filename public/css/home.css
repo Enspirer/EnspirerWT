@@ -925,16 +925,14 @@
 }
 
 @media screen and (max-width: 767px) {
-    .SEO-section .header {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 574px) {
     .hero-section .slide-wrapper {
         flex-direction: column-reverse;
         align-items: center;
         gap: 3rem;
+    }
+
+    .hero-section .slide-wrapper .content-block {
+        text-align: center;
     }
 
     .hero-section .slide-wrapper .image-block {
@@ -945,10 +943,21 @@
         width: 80%;
     }
 
+    .hero-section .slide-wrapper .image-block.slide-01 img {
+        width: 90%;
+    }
+
+    .SEO-section .header {
+        width: 100%;
+    }
+
     .feature-section .body .feature-box {
         flex-direction: column-reverse;
         gap: 3rem;
     }
+}
+
+@media screen and (max-width: 574px) {
 
     .IMS-section .card-block .card .text {
         font-size: 14px;
