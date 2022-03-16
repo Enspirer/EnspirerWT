@@ -116,24 +116,12 @@
                                                             </a>
                                                         @endforeach
                                                     @endif
-                                                    <!-- <a href="#" class="list-group-item list-group-item-action">
-                                                        <div class="d-flex w-100 justify-content-between">
-                                                        <h5 class="mb-1">List group item heading</h5>
-                                                        <small class="text-muted">3 days ago</small>
-                                                        </div>
-                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                                        <small class="text-muted">And some muted small print.</small>
-                                                    </a>
-                                                    <a href="#" class="list-group-item list-group-item-action">
-                                                        <div class="d-flex w-100 justify-content-between">
-                                                        <h5 class="mb-1">List group item heading</h5>
-                                                        <small class="text-muted">3 days ago</small>
-                                                        </div>
-                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                                        <small class="text-muted">And some muted small print.</small>
-                                                    </a> -->
                                                 </div>
-                                                <a href="#" class="view-more">View More</a>
+                                                @if(count(App\Models\Notification::where('user_id',auth()->user()->id)->get()) != 0)
+                                                    <a href="#" class="view-more">View More</a>
+                                                @else
+                                                    <a class="view-more" disabled>No Any Notifications</a>
+                                                @endif
                                             </div>
                                         </ul>
                                     </li>

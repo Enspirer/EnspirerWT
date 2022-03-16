@@ -114,7 +114,11 @@
                                                         @endforeach
                                                     @endif
                                                 </div>
-                                                <a href="#" class="view-more">View More</a>
+                                                @if(count(App\Models\Notification::where('user_id',auth()->user()->id)->get()) != 0)
+                                                    <a href="#" class="view-more">View More</a>
+                                                @else
+                                                    <a class="view-more" disabled>No Any Notifications</a>
+                                                @endif
                                             </div>
                                         </ul>
                                     </li>
