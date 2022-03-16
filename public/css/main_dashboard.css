@@ -2534,4 +2534,284 @@
     font-size: 12px;
 }
 
-/*# sourceMappingURL=main.css.map */
+/* Dashboard Statics Header */
+
+#sectionStaticsHeader {
+    background-color: #fff;
+}
+
+#sectionStaticsHeader .inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#sectionStaticsHeader .inner-wrapper .icon-block {
+    padding: 15px;
+    border-right: 1px solid #ededed;
+}
+
+#sectionStaticsHeader .inner-wrapper .icon-block .icon {
+    background-color: #ebf3ff;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#sectionStaticsHeader .inner-wrapper .icon-block .icon .bi {
+    color: #0d6efd;
+    font-size: 20px;
+}
+
+#sectionStaticsHeader .inner-wrapper .info-block {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 {
+    border-right: 1px solid #ededed;
+}
+
+#sectionStaticsHeader .inner-wrapper .info-block .block-1,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 {
+    flex: 1 1 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 .content .header,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 .content .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 .content .header .primary-icon .bi,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 .content .header .primary-icon .bi,
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 .content .header .secondary-icon .bi,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 .content .header .secondary-icon .bi {
+    font-size: 16px;
+}
+
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 .content .header .title,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 .content .header .title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 .content .info,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 .content .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 .content .info .icon-main .bi,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 .content .info .icon-main .bi,
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 .content .info .text,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 .content .info .text {
+    font-size: 16px;
+}
+
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 .status .count,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 .status .count,
+#sectionStaticsHeader .inner-wrapper .info-block .block-1 .status .precentage,
+#sectionStaticsHeader .inner-wrapper .info-block .block-2 .status .precentage {
+    font-size: 16px;
+    text-align: right;
+}
+
+/* Dashboard Data Chart */
+
+#sectionDataChart {
+    background-color: #fff;
+}
+
+#sectionDataChart .inner-wrapper .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#sectionDataChart .inner-wrapper .header .title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#sectionDataChart .inner-wrapper .header .options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 20%;
+}
+
+#sectionDataChart .inner-wrapper .header .options .input-group .form-control {
+    font-size: 14px;
+    height: 40px;
+}
+
+#sectionDataChart .inner-wrapper .header .options .input-group .filter-btn {
+    border: 1px solid #e2e5ec;
+    background-color: #e2e5ec;
+    padding: 0 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#sectionDataChart .inner-wrapper .header .options .input-group .filter-btn::after {
+    content: none;
+}
+
+#sectionDataChart .inner-wrapper .header .options .input-group .filter-btn .bi {
+    font-size: 16px;
+}
+
+#sectionDataChart .inner-wrapper .header .options .report-download {
+    border: 2px solid #e2e5ec;
+    padding: 6px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #464646;
+}
+
+#sectionDataChart .inner-wrapper .header .options .report-download .bi {
+    font-size: 16px;
+}
+
+#sectionDataChart .inner-wrapper .header .options .input-group .dropdown-menu {
+    max-width: unset;
+    width: 100%;
+}
+
+#sectionDataChart .inner-wrapper .header .options .input-group .dropdown-menu .dropdown-wrapper .header {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 16px;
+}
+
+#sectionDataChart .inner-wrapper .header .options .input-group .dropdown-menu .dropdown-wrapper .form-content {
+    font-size: 13px;
+    padding: 8px 16px 16px;
+}
+
+#sectionDataChart .inner-wrapper .header .options .input-group .dropdown-menu .dropdown-wrapper .form-content .form-label,
+#sectionDataChart .inner-wrapper .header .options .input-group .dropdown-menu .dropdown-wrapper .form-content .form-select,
+#sectionDataChart .inner-wrapper .header .options .input-group .dropdown-menu .dropdown-wrapper .form-content .form-select option {
+    font-size: 13px;
+}
+
+#sectionDataChart .inner-wrapper .header .options .input-group .dropdown-menu .dropdown-wrapper .form-content .search-btn {
+    font-size: 13px;
+    width: 100%;
+    background-color: #0d6efd;
+    border: 1px solid #0d6efd;
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px 0;
+}
+
+#sectionDataChart .inner-wrapper .content {
+    padding: 0 20px 20px;
+}
+
+#sectionDataChart .inner-wrapper .content .row-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 0;
+}
+
+#sectionDataChart .inner-wrapper .content .row-title .title {
+    font-size: 16px;
+    color: #757575;
+}
+
+#sectionDataChart .inner-wrapper .content .row-subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 0;
+}
+
+#sectionDataChart .inner-wrapper .content .row-subtitle .subtitle {
+    font-size: 13px;
+    color: #757575;
+}
+
+#sectionDataChart .inner-wrapper .content .row-subtitle .status {
+    display: flex;
+    width: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sectionDataChart .inner-wrapper .content .row-subtitle .status>* {
+    font-size: 13px;
+    color: #757575;
+}
+
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-info .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0 6px;
+}
+
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-info .info .icon-primary .bi,
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-info .info .icon-secondary .bi {
+    font-size: 16px;
+    color: #757575;
+}
+
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-info .info .text {
+    font-size: 16px;
+    color: #757575;
+}
+
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-info .count {
+    display: flex;
+    width: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-info .count>* {
+    font-size: 16px;
+    color: #757575;
+}
+
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-progress {
+    padding: 6px 0 12px;
+}
+
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-progress .progress {
+    height: 5px;
+}
+
+#sectionDataChart .inner-wrapper .content .data-row-wrapper .row-data .row-progress .progress .progress-bar {
+    background-color: #0d6efd;
+}
