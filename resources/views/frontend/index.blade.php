@@ -135,7 +135,7 @@
     <section class="SEO-section">
         <div class="container">
             <div class="header">
-                <h2 class="title">Keep your website on Top of the Game & Secured</h2>
+                <h2 class="title">Keep your website on Top of the Game</h2>
                 <span class="text">The All-in-One comprehensive tool to manage Google rankings, <br> site analytics, Cyber security and general performance of the website.</span>
             </div>
             <div class="inner-wrapper">
