@@ -30,8 +30,7 @@
     <section class="services-section">
         <div class="container">
             <div class="header">
-                <h3 class="title">Most Popular Services in Tallentor</h3>
-                <p class="text">Sample text here</p>
+                <h3 class="title">Best Sellers at Tallentor</h3>
             </div>
             <div class="services-slider">
                 <div class="splide" id="eShopSlider">
@@ -175,8 +174,7 @@
     <section class="tallentor-shop">
         <div class="container">
             <div class="header">
-                <h3 class="title">Tallentor Shop</h3>
-                <div class="text">Sample text here</div>
+                <h3 class="title">Latest from Tallentor</h3>
             </div>
             <div class="products">
                 <div class="row g-5 row-cols-lg-3 row-cols-sm-2 row-cols-1 justify-content-center">
