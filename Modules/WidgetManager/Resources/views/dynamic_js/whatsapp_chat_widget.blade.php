@@ -451,6 +451,33 @@ document.getElementById('{{$widget_key}}').appendChild(div);
 
 window.onload = addWidget;
 
+// Notify alert on title of the page
+
+localStorage.pageTitle;
+
+window.addEventListener("load", function () {
+    localStorage.pageTitle = parent.document.title;
+
+    setTimeout(function () {
+        parent.document.title = "1 New Message";
+
+        titleNotifier();
+    }, 1000);
+});
+
+const titleNotifier = setInterval(function () {
+    if (parent.document.title == '1 New Message') {
+        parent.document.title = localStorage.pageTitle;
+    } else {
+        parent.document.title = "1 New Message";
+    }
+}, 1000);
+
+const stopNotifier = function () {
+    clearInterval(titleNotifier);
+    parent.document.title = localStorage.pageTitle;
+}
+
 window.addEventListener("load", function () {
     window.addEventListener("scroll", function () {
         const toggler = document.getElementById("wappwidtoggler");
@@ -518,10 +545,16 @@ screenSize.addListener(mobileChat);
 
 @endif
 
+const stopChatPop = function() {
+    clearTimeout(wappchatPopTimeout)
+}
+
 function wapptoggle() {
         document.querySelector('#wappwidget').classList.add("wappview");
         document.getElementById("wappwidtoggler").classList.add("wappview");
         wappmsgPopTimeout();
+        stopNotifier();
+        stopChatPop();
 }
 
 function wappclose() {
@@ -529,7 +562,7 @@ function wappclose() {
     document.querySelector('#wappstartupform').classList.remove("wappview");
     document.querySelector('.wappwelcomemsg').classList.remove("wappview");
     document.getElementById("wappwidtoggler").classList.remove("wappview");
-
+    stopNotifier();
 }
 
 function wappformclose() {
