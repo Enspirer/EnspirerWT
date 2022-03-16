@@ -779,6 +779,32 @@ function addWidget() {
 
 window.onload = addWidget;
 
+localStorage.pageTitle;
+
+window.addEventListener("load", function () {
+    localStorage.pageTitle = parent.document.title;
+
+    setTimeout(function () {
+        parent.document.title = "1 New Message";
+
+        titleNotifier();
+    }, 1000);
+});
+
+const titleNotifier = setInterval(function () {
+    if (parent.document.title == '1 New Message') {
+        parent.document.title = localStorage.pageTitle;
+    } else {
+        parent.document.title = "1 New Message";
+    }
+}, 1000);
+
+const stopNotifier = function () {
+    clearInterval(titleNotifier);
+    parent.document.title = localStorage.pageTitle;
+}
+
+
 window.addEventListener("load", function () {
     window.addEventListener("scroll", function () {
         const toggler = document.getElementById("allin1widtoggler");
@@ -844,12 +870,17 @@ screenSize.addListener(mobileChat);
     }
 @endif
 
+const stopChatPop = function() {
+    clearTimeout(allin1chatPopTimeout)
+}
+
 function allin1toggle() {
     document.querySelector('#allin1widget').classList.add("allin1view");
     document.getElementById("allin1widtoggler").classList.add("allin1view");
     allin1msgPopTimeout();
+    stopNotifier();
+    stopChatPop();
 }
-
 
 function allin1close() {
     document.querySelector('#allin1widget').classList.remove("allin1view");
@@ -860,6 +891,7 @@ function allin1close() {
         el.classList.remove("allin1view");
     });
     document.querySelector('.allin1buttonblock').classList.remove("allin1view");
+    stopNotifier();
 }
 
 function allin1formpopup(id) {
