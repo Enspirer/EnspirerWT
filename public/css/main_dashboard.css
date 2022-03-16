@@ -2470,4 +2470,25 @@
     font-size: 18px;
 }
 
+/* Notification Panel */
+
+.dropdown-menu[aria-labelledby=notifyDrop] {
+    width: 350px;
+    max-width: unset;
+    top: 10px !important;
+    left: -300px !important;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper {
+    padding: 1rem;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .view-more {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */

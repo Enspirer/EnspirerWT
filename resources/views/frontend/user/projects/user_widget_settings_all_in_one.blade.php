@@ -1785,9 +1785,40 @@
                     <div class="col-auto ms-lg-0 ms-auto">
                         <div class="profile-block">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link notification-bell bi bi-bell" href="#"></a>
-                                </li>
+                            <li class="nav-item dropdown">
+                                        <a class="nav-link notification-bell bi bi-bell dropdown-toggle" href="#" role="button" id="notifyDrop" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                        <ul class="dropdown-menu" aria-labelledby="notifyDrop">
+                                            <div class="inner-wrapper">
+                                                <div class="list-group">
+                                                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">List group item heading</h5>
+                                                        <small>3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small>And some small print.</small>
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">List group item heading</h5>
+                                                        <small class="text-muted">3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small class="text-muted">And some muted small print.</small>
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">List group item heading</h5>
+                                                        <small class="text-muted">3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small class="text-muted">And some muted small print.</small>
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="view-more">View More</a>
+                                            </div>
+                                        </ul>
+                                    </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link" href="#" id="profileDropdown" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
