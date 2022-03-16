@@ -34,13 +34,13 @@
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell::after {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background-color: #dc3545;
+    background-color: #fb0000;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 7px;
+    right: 14px;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link {

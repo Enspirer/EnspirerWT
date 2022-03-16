@@ -2106,14 +2106,14 @@
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell::after {
-    content: '';
-    width: 10px;
-    height: 10px;
+    content: "";
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background-color: #dc3545;
+    background-color: #fb0000;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 7px;
+    right: 16px;
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .nav-link {
@@ -2528,5 +2528,66 @@
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
 }
+
+/* Notification Panel */
+
+.dropdown-menu[aria-labelledby=notifyDrop] {
+    min-width: 350px;
+    max-width: unset;
+    top: 10px !important;
+    left: -300px !important;
+    padding: 0 !important;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper {
+    padding: 8px;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group {
+    max-height: 220px;
+    overflow-y: scroll;
+    border: 1px solid #ebedf2;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group::-webkit-scrollbar {
+    width: 3px;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group::-webkit-scrollbar-thumb {
+    background-color: #E5E5E5;
+    border-radius: 50px;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group .list-group-item {
+    padding: 6px 12px;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group .list-group-item h5 {
+    font-size: 15px;
+    margin-bottom: 3px !important;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group .list-group-item small {
+    font-size: 10.5px;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group .list-group-item p {
+    font-size: 12px;
+    margin-bottom: 3px !important;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .view-more {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: fit-content;
+    margin: 8px auto 0;
+    font-size: 12px;
+}
+
 
 /*# sourceMappingURL=main.css.map */
