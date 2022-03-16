@@ -620,7 +620,11 @@
 
 @media screen and (max-width: 499px) {
     .hero-section {
-        min-height: 110vh;
+        min-height: auto;
+    }
+
+    .hero-section .content {
+        position: relative;
     }
 }
 
