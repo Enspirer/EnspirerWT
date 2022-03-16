@@ -2106,6 +2106,10 @@
 }
 
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell::after {
+    content: none;
+}
+
+#navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell.notify::after {
     content: "";
     width: 8px;
     height: 8px;

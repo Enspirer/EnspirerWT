@@ -8,6 +8,7 @@ use App\Models\SessionRecord;
 use App\Models\VisitorCount;
 use App\Models\VisitorLogs;
 use App\Models\Widgets;
+use App\Models\Projects;
 use Illuminate\Http\Request;
 use Modules\WidgetManager\Entities\ImsClients;
 use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
@@ -78,6 +79,10 @@ class HomeController extends Controller
         $client->ip_address = $request->ip();
         $client->save();
 
+        $project = Projects::where('id',$widget->project_id)->first();
+        push_notification('New Message From Tallentor Whatsapp Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', $project->id, $project->user_id);
+
+
         $incom =  urlencode($request->usermessage);
 
 
@@ -114,6 +119,7 @@ class HomeController extends Controller
 
     public function all_in_one_save_client(Request $request)
     {
+        // dd($request);
       $phone_number =  self::all_in_one_getPhoneNumberByWidget($request->widget_id);
 
       $getSettings = self::get_widget_settings($request->widget_id);
@@ -130,6 +136,11 @@ class HomeController extends Controller
         $client->widget_id = $request->widget_id;
         $client->ip_address = $request->ip();
         $client->save();
+
+
+        $project = Projects::where('id',$widget->project_id)->first();
+        push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', $project->id, $project->user_id);
+
 
         $incom =  urlencode($request->usermessage);
 
@@ -208,6 +219,9 @@ class HomeController extends Controller
         $client->widget_id = $request->widget_id;
         $client->ip_address = $request->ip();
         $client->save();
+
+        $project = Projects::where('id',$widget->project_id)->first();
+        push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', $project->id, $project->user_id);
 
         $incom =  urlencode($request->usermessage);       
        

@@ -85,34 +85,34 @@
                             <div class="profile-block">
                             <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                        <a class="nav-link notification-bell bi bi-bell dropdown-toggle" href="#" role="button" id="notifyDrop" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                        @if(count(App\Models\Notification::where('user_id',auth()->user()->id)->where('status','Pending')->get()) != 0)
+                                            <a class="nav-link notification-bell notify bi bi-bell dropdown-toggle" href="#" role="button" id="notifyDrop" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                        @else
+                                            <a class="nav-link notification-bell bi bi-bell dropdown-toggle" href="#" role="button" id="notifyDrop" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                        @endif
                                         <ul class="dropdown-menu" aria-labelledby="notifyDrop">
                                             <div class="inner-wrapper">
                                                 <div class="list-group">
-                                                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                                                        <div class="d-flex w-100 justify-content-between">
-                                                        <h5 class="mb-1">List group item heading</h5>
-                                                        <small>3 days ago</small>
-                                                        </div>
-                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                                        <small>And some small print.</small>
-                                                    </a>
-                                                    <a href="#" class="list-group-item list-group-item-action">
-                                                        <div class="d-flex w-100 justify-content-between">
-                                                        <h5 class="mb-1">List group item heading</h5>
-                                                        <small class="text-muted">3 days ago</small>
-                                                        </div>
-                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                                        <small class="text-muted">And some muted small print.</small>
-                                                    </a>
-                                                    <a href="#" class="list-group-item list-group-item-action">
-                                                        <div class="d-flex w-100 justify-content-between">
-                                                        <h5 class="mb-1">List group item heading</h5>
-                                                        <small class="text-muted">3 days ago</small>
-                                                        </div>
-                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                                        <small class="text-muted">And some muted small print.</small>
-                                                    </a>
+                                                    @if(count(App\Models\Notification::where('user_id',auth()->user()->id)->get()) != 0)
+                                                        @foreach(App\Models\Notification::where('user_id',auth()->user()->id)->orderBy('id','desc')->get() as $notification)
+                                                            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                                                                <div class="d-flex w-100 justify-content-between">
+                                                                    <div class="row">
+                                                                        <div class="col-8">
+                                                                            <h5 class="mb-1" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$notification->title}}</h5>
+                                                                        </div>
+                                                                        <div class="col-4">
+                                                                            <small>{{$notification->created_at->diffForHumans()}}</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="mb-1" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                                                                    {{$notification->description}}
+                                                                </p>
+                                                                <!-- <small>And some small print.</small> -->
+                                                            </a>
+                                                        @endforeach
+                                                    @endif
                                                 </div>
                                                 <a href="#" class="view-more">View More</a>
                                             </div>

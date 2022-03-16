@@ -390,6 +390,10 @@
 }
 
 .ims__section .ims__navbar .profile-block .navbar-nav .nav-item .nav-link.notification-bell::after {
+    content: none;
+}
+
+.ims__section .ims__navbar .profile-block .navbar-nav .nav-item .nav-link.notification-bell.notify::after {
     content: "";
     width: 8px;
     height: 8px;

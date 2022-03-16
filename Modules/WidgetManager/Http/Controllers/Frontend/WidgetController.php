@@ -27,7 +27,11 @@ class WidgetController extends Controller
         $count = Widgets::where('id',$id)->first()->load_count;
         $update = new Widgets;
         $update->load_count = $count + 1;
-        Widgets::whereId($id)->update($update->toArray());        
+        Widgets::whereId($id)->update($update->toArray());  
+        
+        
+        $project_id = Widgets::where('id',$id)->first()->project_id;
+
 
         if(Widgets::where('id',$id)->first()->widget_type == 'Whatsapp Chat'){
             return response()
@@ -35,6 +39,7 @@ class WidgetController extends Controller
                 'widget_meta' => $widgetJsonOutput,
                 'widget_id' => $id,
                 'widget_key' => $widgetKey,
+                'project_id' => $project_id
             ])
             ->withHeaders([
                 'Content-Type' => 'application/javascript',
@@ -47,6 +52,7 @@ class WidgetController extends Controller
                 'widget_meta' => $widgetJsonOutput,
                 'widget_id' => $id,
                 'widget_key' => $widgetKey,
+                'project_id' => $project_id
             ])
             ->withHeaders([
                 'Content-Type' => 'application/javascript',
