@@ -1189,38 +1189,68 @@
                     <div class="col-auto ms-lg-0 ms-auto">
                         <div class="profile-block">
                             <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
+                                    <li class="nav-item dropdown">
                                         @if(count(App\Models\Notification::where('user_id',auth()->user()->id)->where('status','Pending')->get()) != 0)
                                             <a class="nav-link notification-bell notify bi bi-bell dropdown-toggle" href="#" role="button" id="notifyDrop" data-bs-toggle="dropdown" aria-expanded="false"></a>
                                         @else
                                             <a class="nav-link notification-bell bi bi-bell dropdown-toggle" href="#" role="button" id="notifyDrop" data-bs-toggle="dropdown" aria-expanded="false"></a>
                                         @endif
+
                                         <ul class="dropdown-menu" aria-labelledby="notifyDrop">
                                             <div class="inner-wrapper">
                                                 <div class="list-group">
                                                     @if(count(App\Models\Notification::where('user_id',auth()->user()->id)->get()) != 0)
-                                                        @foreach(App\Models\Notification::where('user_id',auth()->user()->id)->orderBy('id','desc')->get() as $notification)
-                                                            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                                                                <div class="d-flex w-100 justify-content-between">
-                                                                    <div class="row">
-                                                                        <div class="col-8">
-                                                                            <h5 class="mb-1" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$notification->title}}</h5>
+                                                        @foreach(App\Models\Notification::where('user_id',auth()->user()->id)->orderBy('id','desc')->take(15)->get() as $notification)
+                                                            @if($notification->status == 'Pending')                                                        
+                                                                <a href="{{route('frontend.user.user_notifications_status',$notification->id)}}" class="list-group-item list-group-item-action" aria-current="true">
+                                                                    <div class="d-flex w-100 justify-content-between">
+
+                                                                        <div class="row">
+                                                                            <div class="col-1">
+                                                                                <i class="{{$notification->icon}} mt-3" style="font-size:24px;"></i>
+                                                                            </div>
+                                                                            <div class="col-8">
+                                                                                <h5 class="mb-1 ms-1" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$notification->title}}</h5>
+                                                                                <p class="mb-1 ms-1" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                                                                                    {{$notification->description}}
+                                                                                </p>
+                                                                                <!-- <small>And some small print.</small> -->
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <small>{{$notification->created_at->diffForHumans()}}</small>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="col-4">
-                                                                            <small>{{$notification->created_at->diffForHumans()}}</small>
+
+                                                                    </div>                                                                   
+                                                                </a>
+                                                            @else
+                                                                <a href="{{route('frontend.user.user_notifications_status',$notification->id)}}" class="list-group-item list-group-item-action seen_status" aria-current="true">
+                                                                    <div class="d-flex w-100 justify-content-between">
+                                                                        
+                                                                        <div class="row">
+                                                                            <div class="col-1">
+                                                                                <i class="{{$notification->icon}} mt-3" style="font-size:24px;"></i>
+                                                                            </div>
+                                                                            <div class="col-8">
+                                                                                <h5 class="mb-1 ms-1" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$notification->title}}</h5>
+                                                                                <p class="mb-1 ms-1" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                                                                                    {{$notification->description}}
+                                                                                </p>
+                                                                                <!-- <small>And some small print.</small> -->
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <small>{{$notification->created_at->diffForHumans()}}</small>
+                                                                            </div>
                                                                         </div>
+
                                                                     </div>
-                                                                </div>
-                                                                <p class="mb-1" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
-                                                                    {{$notification->description}}
-                                                                </p>
-                                                                <!-- <small>And some small print.</small> -->
-                                                            </a>
+                                                                </a>
+                                                            @endif
                                                         @endforeach
                                                     @endif
                                                 </div>
                                                 @if(count(App\Models\Notification::where('user_id',auth()->user()->id)->get()) != 0)
-                                                    <a href="#" class="view-more">View More</a>
+                                                    <a href="{{route('frontend.user.notifications.index')}}" class="view-more">View More</a>
                                                 @else
                                                     <a class="view-more" disabled>No Any Notifications</a>
                                                 @endif

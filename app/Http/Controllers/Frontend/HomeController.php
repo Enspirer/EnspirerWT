@@ -80,7 +80,7 @@ class HomeController extends Controller
         $client->save();
 
         $project = Projects::where('id',$widget->project_id)->first();
-        push_notification('New Message From Tallentor Whatsapp Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', $project->id, $project->user_id);
+        push_notification('New Message From Tallentor Whatsapp Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'fab fa-whatsapp', $project->id, $project->user_id);
 
 
         $incom =  urlencode($request->usermessage);
@@ -139,7 +139,7 @@ class HomeController extends Controller
 
 
         $project = Projects::where('id',$widget->project_id)->first();
-        push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', $project->id, $project->user_id);
+        push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'far fa-comment-dots', $project->id, $project->user_id);
 
 
         $incom =  urlencode($request->usermessage);
@@ -221,7 +221,7 @@ class HomeController extends Controller
         $client->save();
 
         $project = Projects::where('id',$widget->project_id)->first();
-        push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', $project->id, $project->user_id);
+        push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'far fa-comment-dots', $project->id, $project->user_id);
 
         $incom =  urlencode($request->usermessage);       
        

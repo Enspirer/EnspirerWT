@@ -25,6 +25,7 @@ use App\Http\Controllers\Frontend\PortfolioController;
 use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\TermsAndPrivacyController;
 use App\Http\Controllers\Frontend\User\VisitorStatisticsController;
+use App\Http\Controllers\Frontend\User\NotificationsController;
 
 
 
@@ -89,6 +90,10 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('reports', [ReportsController::class, 'index'])->name('reports');
 
         Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
+
+        Route::get('notifications', [NotificationsController::class, 'index'])->name('notifications.index');
+        Route::get('user_notifications_status/{id}', [NotificationsController::class, 'user_notifications_status'])->name('user_notifications_status');
+
 
 
         Route::get('project_details/{id}', [ProjectController::class, 'show'])->name('project.show');

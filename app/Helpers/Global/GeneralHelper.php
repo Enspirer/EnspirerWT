@@ -171,13 +171,14 @@ if (! function_exists('push_notification')) {
      *
      * @return string
      */
-    function push_notification($title, $description, $url, $user_id)
+    function push_notification($title, $description, $icon, $url, $user_id)
     {
 
         $add = new Notification;
 
         $add->title=$title;
         $add->description=$description;
+        $add->icon=$icon;
         $add->url=$url;
         $add->user_id=$user_id;
         $add->status='Pending';

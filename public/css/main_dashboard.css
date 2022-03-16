@@ -2473,7 +2473,7 @@
 /* Notification Panel */
 
 .dropdown-menu[aria-labelledby=notifyDrop] {
-    min-width: 350px;
+    min-width: 425px;
     max-width: unset;
     top: 10px !important;
     left: -300px !important;
@@ -2505,6 +2505,10 @@
 
 .dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group .list-group-item {
     padding: 6px 12px;
+}
+
+.dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group .list-group-item.seen_status {
+    color: #999;
 }
 
 .dropdown-menu[aria-labelledby=notifyDrop] .inner-wrapper .list-group .list-group-item h5 {
