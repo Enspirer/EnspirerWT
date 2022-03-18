@@ -34,82 +34,17 @@
                                 </div>
                                 <div class="row g-0 mb-3">
                                     <div class="col">
-                                        <div class="data-title-bar">
-                                            <h2 class="title">tallentor.com</h2>
-                                            <div class="option-block">
-                                                <a href="#" target="_blank" class="open">
-                                                    <div class="text">Open</div>
-                                                    <i class="bi bi-box-arrow-up-right"></i>
-                                                </a>
-                                                <input type="text" id="dateRange" value="01/01/2018 - 01/15/2018" />
-                                            </div>
-                                        </div>
+                                        @include('frontend.user.projects.includes.analytics_dataTitle')
                                     </div>
                                 </div>
                                 <div class="row g-0 mb-5">
                                     <div class="col">
-                                        @include('frontend.user.projects.includes.analytics_nav')
+                                        @include('frontend.user.projects.includes.analytics_innerNav')
                                     </div>
                                 </div>
                                 <div class="row g-0 mb-4">
                                     <div class="col">
-                                        <div class="data-header">
-                                            <div class="inner-wrapper">
-                                                <div class="icon-block">
-                                                    <div class="icon">
-                                                        <i class="bi bi-graph-up-arrow"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="info-block">
-                                                    <div class="block-1">
-                                                        <div class="header">
-                                                            <div class="inner-content">
-                                                                <div class="primary-icon">
-                                                                    <i class="bi bi-check-square-fill"></i>
-                                                                </div>
-                                                                <div class="title">Sample Title</div>
-                                                                <div class="secondary-icon">
-                                                                    <i class="bi bi-info-circle"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="count">10</div>
-                                                        </div>
-                                                        <div class="info">
-                                                            <div class="inner-content">
-                                                                <div class="icon-main">
-                                                                    <i class="bi bi-activity"></i>
-                                                                </div>
-                                                                <div class="text">Sample Text Here</div>
-                                                            </div>
-                                                            <div class="precentage">20%</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="block-2">
-                                                        <div class="header">
-                                                            <div class="inner-content">
-                                                                <div class="primary-icon">
-                                                                    <i class="bi bi-check-square-fill"></i>
-                                                                </div>
-                                                                <div class="title">Sample Title</div>
-                                                                <div class="secondary-icon">
-                                                                    <i class="bi bi-info-circle"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="count">10</div>
-                                                        </div>
-                                                        <div class="info">
-                                                            <div class="inner-content">
-                                                                <div class="icon-main">
-                                                                    <i class="bi bi-activity"></i>
-                                                                </div>
-                                                                <div class="text">Sample Text Here</div>
-                                                            </div>
-                                                            <div class="precentage">20%</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @include('frontend.user.projects.includes.analytics_dataHeader')
                                     </div>
                                 </div>
                                 <div class="row g-0">
