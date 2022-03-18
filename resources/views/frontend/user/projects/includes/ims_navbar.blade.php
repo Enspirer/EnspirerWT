@@ -16,18 +16,18 @@
                                                     <i class="bi"></i>
                                                 </div>
                                             @else
-                                                    @if($project->id != null)
+                                                    @if($project_id != null)
                                                         <div class="image">
-                                                            @if(get_seo_result($project->id)->favicon->value == null)
+                                                            @if(get_seo_result($project_id)->favicon->value == null)
                                                                 <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
 
                                                             @else
-                                                                <img src="{{get_seo_result($project->id)->favicon->value}}" alt="propery-image">
+                                                                <img src="{{get_seo_result($project_id)->favicon->value}}" alt="propery-image">
                                                             @endif
                                                         </div>
                                                         <div class="content">
-                                                            <h6 class="site-name">{{\App\Models\Projects::where('id',$project->id)->first()->name}}</h6>
-                                                            <span class="site-url">{{\App\Models\Projects::where('id',$project->id)->first()->url}}</span>
+                                                            <h6 class="site-name">{{\App\Models\Projects::where('id',$project_id)->first()->name}}</h6>
+                                                            <span class="site-url">{{\App\Models\Projects::where('id',$project_id)->first()->url}}</span>
                                                         </div>
                                                         <div class="dropdown-icon">
                                                             <i class="bi bi-chevron-down"></i>
@@ -79,7 +79,7 @@
                                     <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Create Your Project">
                                     <a type="button" class="nav-link add-btn bi bi-plus-square-fill" data-bs-toggle="modal" data-bs-target="#project_modal"></a>
                                     </li>
-                                    <a href="{{ route('frontend.user.project.chat',$project->id) }}" style="text-decoration:none"><p class="px-4 mt-3">Go back</p></a>
+                                    <a href="{{ route('frontend.user.project.chat',$project_id) }}" style="text-decoration:none"><p class="px-4 mt-3">Go back</p></a>
                                 </ul>
                             </div>
                             <div class="profile-block">

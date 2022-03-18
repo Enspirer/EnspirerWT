@@ -31,7 +31,7 @@ class IMSController extends Controller
         //dd($id);
         $project = Projects::where('id',$id)->first();           
         $ims_client = ImsClients::where('project_id',$project->id)->get();
-        // dd($ims_client);
+        // dd($project->id);
 
         $count_all = count(ImsClients::where('project_id',$project->id)->get());
         $count_success = count(ImsClients::where('project_id',$project->id)->where('status','Deal close successfully')->get());
@@ -40,7 +40,7 @@ class IMSController extends Controller
 
         return view('frontend.user.projects.ims.user_widget_ims_dashboard',[
             'chart_data' => $ims_clienrt,
-            'project' => $project,
+            'project_id' => $project->id,
             'ims_client' => $ims_client,
             'count_all' => $count_all,
             'count_success' => $count_success
@@ -53,6 +53,7 @@ class IMSController extends Controller
     {
         // dd($id);
         $project = Projects::where('id',$id)->first();           
+        // dd($project->id);
 
 
         // $widget = Widgets::where('id',$project)->first();
@@ -61,7 +62,7 @@ class IMSController extends Controller
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims',[
-            'project' => $project,
+            'project_id' => $project->id,
             // 'widget' => $widget,
             'ims_client' => $ims_client
         ]);
@@ -80,6 +81,7 @@ class IMSController extends Controller
     
         return view('frontend.user.projects.ims.user_widget_ims_inbox_individual',[
             'project' => $project,
+            'project_id' => $project->id,
             'widget' => $widget,
             'ims_client' => $ims_client
         ]);
@@ -96,6 +98,7 @@ class IMSController extends Controller
     
         return view('frontend.user.projects.ims.user_widget_ims_inbox',[
             'project' => $project,
+            'project_id' => $project->id,
             'widget' => $widget,
             'ims_client' => $ims_client
         ]);
@@ -110,7 +113,7 @@ class IMSController extends Controller
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_assigned',[
-            'project' => $project,
+            'project_id' => $project->id,
             'ims_client' => $ims_client
         ]);
         
@@ -124,7 +127,7 @@ class IMSController extends Controller
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_unassigned',[
-            'project' => $project,
+            'project_id' => $project->id,
             'ims_client' => $ims_client
         ]);
         
@@ -138,7 +141,7 @@ class IMSController extends Controller
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_closed',[
-            'project' => $project,
+            'project_id' => $project->id,
             'ims_client' => $ims_client
         ]);
         
@@ -152,7 +155,7 @@ class IMSController extends Controller
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_spam',[
-            'project' => $project,
+            'project_id' => $project->id,
             'ims_client' => $ims_client
         ]);
         
@@ -167,7 +170,7 @@ class IMSController extends Controller
         // dd($ims_client);
     
         return view('frontend.user.projects.ims.user_widget_ims_clients',[
-            'project' => $project,
+            'project_id' => $project->id,
             'ims_client' => $ims_client
         ]);
         
@@ -226,6 +229,7 @@ class IMSController extends Controller
         return view('frontend.user.projects.ims.user_widget_ims_analytics',[
             'chart_data' => $ims_clienrt,
             'project' => $project,
+            'project_id' => $project->id,
             'ims_client' => $ims_client
         ]);
         

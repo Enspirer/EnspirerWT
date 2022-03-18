@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Notification;
+use Illuminate\Support\Facades\Redirect;
 
 class NotificationsController extends Controller
 {
@@ -27,7 +28,9 @@ class NotificationsController extends Controller
 
         Notification::whereId($id)->update($update->toArray());
 
-        return redirect()->route('frontend.user.user_widget.ims_dashboard',[$ims_url]); 
+        return redirect($ims_url);
+
+        // return url($ims_url); 
         
     }
 
