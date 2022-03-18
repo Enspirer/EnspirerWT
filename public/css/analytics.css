@@ -43,7 +43,7 @@
 
 .data-tab {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(175, 175, 175, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .data-tab .navbar-nav {
@@ -101,7 +101,7 @@
 
 .data-header {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(175, 175, 175, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .data-header .inner-wrapper {
@@ -213,7 +213,7 @@
 
 .data-chart {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(175, 175, 175, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .data-chart .inner-wrapper .header {
