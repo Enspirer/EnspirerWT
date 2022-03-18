@@ -3,9 +3,9 @@
 
         <div class="icon-block">
             <div class="icon">
-                @if(calcGrowth($growthCurrent, $totalVisitorsOld) > 0)
+                @if(calcGrowth($totalVisitors, $totalVisitorsOld) > 0)
                     <i class="bi bi-graph-up-arrow"></i>
-                @elseif(calcGrowth($growthCurrent, $totalVisitorsOld) < 0)
+                @elseif(calcGrowth($totalVisitors, $totalVisitorsOld) < 0)
                     <i class="bi bi-graph-down-arrow"></i>
                 @else
 
