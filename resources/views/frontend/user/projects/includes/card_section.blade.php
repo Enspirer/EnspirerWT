@@ -1,18 +1,3 @@
-<div class="row g-0 mb-5">
-        <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}" target="_blank" class="ims-dashboard-btn">
-            <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop" style="width:65px;height:65px">
-            </lord-icon>
-            IMS Dashboard
-        </a>
-        <a href="{{ route('frontend.user.project_settings', $project_id) }}" class="ims-dashboard-btn ms-5">
-        <i class="bi bi-gear"></i>
-        {{App\Models\Projects::where('id',$project_id)->first()->name}} Account Settings
-        </a>
-        <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="ims-dashboard-btn ms-5">
-            <i class="bi bi-clipboard2-pulse"></i>
-            Analytics
-        </a>
-</div>
 
 <div class="row gy-0 gx-5 mb-5">
     <div class="col">
@@ -75,4 +60,43 @@
         </a>
     </div>
     
+</div>
+
+<div class="row g-0 mb-5">
+    @if(Request::segment(3)=='widget')
+        <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}" target="_blank" class="ims-dashboard-btn">
+            <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop" style="width:65px;height:65px">
+            </lord-icon>
+            IMS Dashboard
+        </a>
+
+
+        <a href="{{ route('frontend.user.project_settings', $project_id) }}" class="ims-dashboard-btn ms-5">
+            <i class="bi bi-gear"></i>{{App\Models\Projects::where('id',$project_id)->first()->name}} Account Settings
+        </a>
+    @endif
+
+    @if(Request::segment(3)=='analytics')
+        <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="ims-dashboard-btn">
+            <i class="bi bi-clipboard2-pulse"></i>
+            Analytics
+        </a>
+
+        <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="ims-dashboard-btn ms-5">
+            <i class="bi bi-clipboard2-pulse"></i>
+            Statistics
+        </a>
+
+        <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="ims-dashboard-btn ms-5">
+            <i class="bi bi-clipboard2-pulse"></i>
+            Heatmaps
+        </a>
+
+        <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="ims-dashboard-btn ms-5">
+            <i class="bi bi-clipboard2-pulse"></i>
+            Session Recording
+        </a>
+    @endif
+
+
 </div>

@@ -30,625 +30,431 @@
                             @include('frontend.user.projects.includes.card_section')
                         </section>
 
-                        <section id="sectionTabNavs">
-                            <div class="row g-0 mb-5">
-                                <div class="col">
-                                    <div class="inner-wrapper">
-                                        <ul class="navbar-nav row g-0 flex-row">
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3 active">
-                                                        <i class="bi bi-clipboard-data"></i>
-                                                        <span class="text">Overview</span>
-                                                    </a>
-                                                </li>
-                                            </div>
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3">
-                                                        <i class="bi bi-search-heart"></i>
-                                                        <span class="text">SEO</span>
-                                                    </a>
-                                                </li>
-                                            </div>
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3">
-                                                        <i class="bi bi-speedometer2"></i>
-                                                        <span class="text">Performance</span>
-                                                    </a>
-                                                </li>
-                                            </div>
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3">
-                                                        <i class="bi bi-shield-check"></i>
-                                                        <span class="text">Security</span>
-                                                    </a>
-                                                </li>
-                                            </div>
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3">
-                                                        <i class="bi bi-person"></i>
-                                                        <span class="text">Miscellaneous</span>
-                                                    </a>
-                                                </li>
-                                            </div>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Analytics -->
-
-                        <section id="sectionTabStatics">
-                            <div class="inner-wrapper p-4 mb-5">
-                                <div class="row g-0 pb-3 border-bottom align-items-center justify-content-between">
-                                    <div class="col-auto titile">Overview</div>
-                                    <div class="col-auto duration">3 days ago</div>
-                                </div>
-                                <div class="row g-0">
-                                    <div class="col-8">
-                                        <div>
-                                            <canvas id="myChart"></canvas>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="row g-0 flex-column">
-                                            <div class="col my-3">
-                                                <div class="info-block-wrapper">
-                                                    <div class="row g-0 p-3">
-                                                        <div class="col">
-                                                            <div class="chart-info-block">
-                                                                <div class="title mb-2">
-                                                                    <i class="bi bi-square-fill up"></i>
-                                                                    <div class="text">Visitors</div>
-                                                                    <i class="bi bi-info-circle"></i>
-                                                                </div>
-                                                                <div class="info">
-                                                        <span class="precentage up"><i
-                                                                    class="bi bi-graph-up-arrow up"></i>86.6%</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col">
-                                                            <div class="count">15</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col my-3">
-                                                <div class="info-block-wrapper">
-                                                    <div class="row g-0 p-3">
-                                                        <div class="col">
-                                                            <div class="chart-info-block">
-                                                                <div class="title mb-2">
-                                                                    <i class="bi bi-square-fill down"></i>
-                                                                    <div class="text">Pageviews</div>
-                                                                    <i class="bi bi-info-circle"></i>
-                                                                </div>
-                                                                <div class="info">
-                                                        <span class="precentage down"><i
-                                                                    class="bi bi-graph-down-arrow down"></i>86.6%</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col">
-                                                            <div class="count">02</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Visitors -->
-
-                        <section id="sectionVisitors">
-                            <div class="row g-4 mb-5">
-                                <div class="col-4 h-100">
-                                    <div class="visitors-block">
-                                        <div class="row g-0 border-bottom py-4 px-5">
-                                            <div class="title">Countries</div>
-                                        </div>
-                                        <div class="row g-0">
-                                            <div class="col p-4">
-                                                <div class="row g-0 pb-3 border-bottom">
-                                                    <div class="header">
-                                                        <div class="thead">
-                                                            Name
-                                                        </div>
-                                                        <div class="thead">
-                                                            Visitors
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0 py-3 border-bottom">
-                                                    <div class="body">
-                                                        <ul class="visitors-list">
-                                                            <li class="visitor-item pb-3">
-                                                                <div class="row g-0 my-2 justify-content-between">
-                                                                    <div class="col-auto">
-                                                                        <div class="label">
-                                                                            <span class="flag flag-icon flag-icon-lk"></span>
-                                                                            <span class="name">Sri Lanka</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-auto">
-                                                                        <div class="count">4</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row g-0 mb-2">
-                                                                    <div class="col">
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar w-75" role="progressbar"
-                                                                                 aria-valuenow="75" aria-valuemin="0"
-                                                                                 aria-valuemax="100">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="visitor-item pb-3">
-                                                                <div class="row g-0 my-2 justify-content-between">
-                                                                    <div class="col-auto">
-                                                                        <div class="label">
-                                                                            <span class="flag flag-icon flag-icon-lk"></span>
-                                                                            <span class="name">Sri Lanka</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-auto">
-                                                                        <div class="count">4</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row g-0 mb-2">
-                                                                    <div class="col">
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar w-75" role="progressbar"
-                                                                                 aria-valuenow="75" aria-valuemin="0"
-                                                                                 aria-valuemax="100">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0 pt-4">
-                                                    <div class="footer">
-                                                        <a href="#" class="footer-link">View all</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4 h-100">
-                                    <div class="visitors-block">
-                                        <div class="row g-0 border-bottom py-4 px-5">
-                                            <div class="title">Browsers</div>
-                                        </div>
-                                        <div class="row g-0">
-                                            <div class="col p-4">
-                                                <div class="row g-0 pb-3 border-bottom">
-                                                    <div class="header">
-                                                        <div class="thead">
-                                                            Name
-                                                        </div>
-                                                        <div class="thead">
-                                                            Visitors
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0 py-3 border-bottom">
-                                                    <div class="body">
-                                                        <ul class="visitors-list">
-                                                            <li class="visitor-item pb-3">
-                                                                <div class="row g-0 my-2 justify-content-between">
-                                                                    <div class="col-auto">
-                                                                        <div class="label">
-                                                                            <span class="flag flag-icon flag-icon-lk"></span>
-                                                                            <span class="name">Sri Lanka</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-auto">
-                                                                        <div class="count">4</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row g-0 mb-2">
-                                                                    <div class="col">
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar w-75" role="progressbar"
-                                                                                 aria-valuenow="75" aria-valuemin="0"
-                                                                                 aria-valuemax="100">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="visitor-item pb-3">
-                                                                <div class="row g-0 my-2 justify-content-between">
-                                                                    <div class="col-auto">
-                                                                        <div class="label">
-                                                                            <span class="flag flag-icon flag-icon-lk"></span>
-                                                                            <span class="name">Sri Lanka</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-auto">
-                                                                        <div class="count">4</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row g-0 mb-2">
-                                                                    <div class="col">
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar w-75" role="progressbar"
-                                                                                 aria-valuenow="75" aria-valuemin="0"
-                                                                                 aria-valuemax="100">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0 pt-4">
-                                                    <div class="footer">
-                                                        <a href="#" class="footer-link">View all</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4 h-100">
-                                    <div class="visitors-block">
-                                        <div class="row g-0 border-bottom py-4 px-5">
-                                            <div class="title">Operating System</div>
-                                        </div>
-                                        <div class="row g-0">
-                                            <div class="col p-4">
-                                                <div class="row g-0 pb-3 border-bottom">
-                                                    <div class="header">
-                                                        <div class="thead">
-                                                            Name
-                                                        </div>
-                                                        <div class="thead">
-                                                            Visitors
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0 py-3 border-bottom">
-                                                    <div class="body">
-                                                        <ul class="visitors-list">
-                                                            <li class="visitor-item pb-3">
-                                                                <div class="row g-0 my-2 justify-content-between">
-                                                                    <div class="col-auto">
-                                                                        <div class="label">
-                                                                            <span class="flag flag-icon flag-icon-lk"></span>
-                                                                            <span class="name">Sri Lanka</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-auto">
-                                                                        <div class="count">4</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row g-0 mb-2">
-                                                                    <div class="col">
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar w-75" role="progressbar"
-                                                                                 aria-valuenow="75" aria-valuemin="0"
-                                                                                 aria-valuemax="100">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="visitor-item pb-3">
-                                                                <div class="row g-0 my-2 justify-content-between">
-                                                                    <div class="col-auto">
-                                                                        <div class="label">
-                                                                            <span class="flag flag-icon flag-icon-lk"></span>
-                                                                            <span class="name">Sri Lanka</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-auto">
-                                                                        <div class="count">4</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row g-0 mb-2">
-                                                                    <div class="col">
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar w-75" role="progressbar"
-                                                                                 aria-valuenow="75" aria-valuemin="0"
-                                                                                 aria-valuemax="100">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0 pt-4">
-                                                    <div class="footer">
-                                                        <a href="#" class="footer-link">View all</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- SEO -->
-
-                        <div class="data-tab mb-5">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">
-                                        <div class="icon-primary"></div>
-                                        <div class="text">Realtime</div>
-                                        <div class="icon-secondary"></i></div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">
-                                        <div class="icon-primary"><i class="bi bi-clipboard-data"></i></div>
-                                        <div class="text">Overview</div>
-                                        <div class="icon-secondary"></div>
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#" role="button" id="behaviorDrop" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <div class="icon-primary"><i class="bi bi-layout-text-window"></i></div>
-                                        <div class="text">Behavior</div>
-                                        <div class="icon-secondary"><i class="bi bi-chevron-down"></i></div>
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="behaviorDrop">
-                                        <li><a class="dropdown-item" href="#">Pages</a></li>
-                                        <li><a class="dropdown-item" href="#">Landing Pages</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#" role="button" id="acquisitionsDrop" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <div class="icon-primary"><i class="bi bi-boxes"></i></div>
-                                        <div class="text">Acquisitions</div>
-                                        <div class="icon-secondary"><i class="bi bi-chevron-down"></i></div>
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="acquisitionsDrop">
-                                        <li><a class="dropdown-item" href="#">Referrers</a></li>
-                                        <li><a class="dropdown-item" href="#">Search engines</a></li>
-                                        <li><a class="dropdown-item" href="#">Social networks</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Campaigns</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#" role="button" id="geographicDrop" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                        <div class="text">Geographic</div>
-                                        <div class="icon-secondary"><i class="bi bi-chevron-down"></i></div>
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="geographicDrop">
-                                        <li><a class="dropdown-item" href="#">Continents</a></li>
-                                        <li><a class="dropdown-item" href="#">Countries</a></li>
-                                        <li><a class="dropdown-item" href="#">Cities</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Languages</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#" role="button" id="technologyDrop" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <div class="icon-primary"><i class="bi bi-laptop"></i></div>
-                                        <div class="text">Technology</div>
-                                        <div class="icon-secondary"><i class="bi bi-chevron-down"></i></div>
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="technologyDrop">
-                                        <li><a class="dropdown-item" href="#">Operating systems</a></li>
-                                        <li><a class="dropdown-item" href="#">Browsers</a></li>
-                                        <li><a class="dropdown-item" href="#">Screen resolutions</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Devices</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">
-                                        <div class="icon-primary"><i class="bi bi-flag"></i></div>
-                                        <div class="text">Events</div>
-                                        <div class="icon-secondary"></div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                         
-                        <div class="data-header mb-5">
-                            <div class="inner-wrapper">
-                                <div class="icon-block">
-                                    <div class="icon">
-                                        <i class="bi bi-graph-up-arrow"></i>
+
+                        <section id="sectionWhatsappWidget">
+                            @if(count(App\Models\Widgets::where('project_id',$project_id)->get()) != 0)
+                                <div class="block-2 mb-5">
+                                    <div class="row g-0 mb-4">
+                                        <div class="col">
+                                            <div class="block-title">My Applications</div>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cols-md-2 g-5 justify-content-between">
+                                        <div class="col">
+                                            <div class="innwer-wrapper px-4 dotted-border">
+                                                <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
+                                                    data-bs-target="#createWidgetModal">Create
+                                                    Widget</button>
+                                            </div>
+                                        </div>
+                                        @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
+                                        <div class="col">
+                                            <div class="inner-wrapper px-5 pt-5 pb-4">
+                                                <div class="row g-0">
+                                                    <div class="header">
+                                                        <span class="title">{{$widgetlist->widget_type}}</span> 
+                                                        @if($widgetlist->widget_type == 'Whatsapp Chat')                                          
+                                                            <img src="{{url('images/whatsapp (1).png')}}" style="top:0rem; right:18rem; width:30px;" alt="">    
+                                                            <img src="{{url('images/whatsapp.png')}}" alt="">
+                                                        @elseif($widgetlist->widget_type == 'All-in-One Chat')   
+                                                            <img src="{{url('images/whatsapp (1).png')}}" style="top:0rem; right:18rem; width:30px;" alt="">
+                                                            <img src="{{url('images/viber.png')}}" style="top:0rem; right:14.5rem; width:30px;" alt="">
+                                                            <img src="{{url('images/instagram (1).png')}}" style="top:0rem; right:11rem; width:30px;" alt="">
+                                                            <img src="{{url('images/Facebook_Messenger_logo_2020.svg (1).png')}}" style="top:0rem; right:7rem; width:30px;" alt="">
+                                                            <img src="{{url('images/messenger.png')}}" alt="" class="watermark-img">
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <div class="row g-0 mt-5 mb-4">
+                                                    <div class="col">
+                                                        <div class="row g-0 mb-2 justify-content-between">
+                                                            <div class="col-auto">
+                                                                <div class="progress-label">{{$widgetlist->widget_key}}</div>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <div class="progress-amount">25%</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-0">
+                                                            <div class="col">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar w-75" role="progressbar"
+                                                                        aria-valuenow="75" aria-valuemin="0"
+                                                                        aria-valuemax="100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row g-0">
+                                                    <div class="col">
+                                                        <p class="body-text">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Mollitia sit maxime nam sapiente illum,
+                                                            consequuntur aperiam quia reprehenderit deserunt delectus.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row g-0 mt-4 mb-3">
+                                                    <div class="button-block">
+                                                        <div class="block-1">
+                                                            <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}"
+                                                                class="act-btn act-ims">
+                                                                <i class="bi bi-file-earmark-medical"></i>
+                                                                IMS
+                                                            </a>
+                                                            <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}"
+                                                                class="act-btn act-settings">
+                                                                <i class="bi bi-gear"></i>
+                                                                Settings
+                                                            </a>
+                                                            <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" class="me-3 act-btn act-script">
+                                                            <i class="bi bi-code-slash"></i>
+                                                                Add Script
+                                                            </a>
+                                                        </div>
+                                                        <div class="block-2">
+                                                            <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
+                                                            <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}"
+                                                                class="act-btn delete act-delete" data-bs-toggle="modal"
+                                                                data-bs-target="#deleteFavorite">
+                                                                <i class="bi bi-trash"></i>
+                                                                Delete
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
-                                <div class="info-block">
-                                    <div class="block-1">
-                                        <div class="header">
-                                            <div class="inner-content">
-                                                <div class="primary-icon">
-                                                    <i class="bi bi-check-square-fill"></i>
-                                                </div>
-                                                <div class="title">Sample Title</div>
-                                                <div class="secondary-icon">
-                                                    <i class="bi bi-info-circle"></i>
-                                                </div>
+                            @endif
+                            <div class="row g-0">
+                                <div class="chat-applications">
+                                    <div class="row g-0 mb-4">
+                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null || App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
+                                            <div class="col">
+                                                <div class="block-title">Chat Applications</div>
                                             </div>
-                                            <div class="count">10</div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="inner-content">
-                                                <div class="icon-main">
-                                                    <i class="bi bi-activity"></i>
-                                                </div>
-                                                <div class="text">Sample Text Here</div>
-                                            </div>
-                                            <div class="precentage">20%</div>
-                                        </div>
+                                        @endif
                                     </div>
-                                    <div class="block-2">
-                                        <div class="header">
-                                            <div class="inner-content">
-                                                <div class="primary-icon">
-                                                    <i class="bi bi-check-square-fill"></i>
-                                                </div>
-                                                <div class="title">Sample Title</div>
-                                                <div class="secondary-icon">
-                                                    <i class="bi bi-info-circle"></i>
+                                    <div class="row row-cols-md-2 g-5 justify-content-between">
+                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null)
+                                            <div class="col">
+                                                <div class="inner-wrapper px-5 py-4">
+                                                    <div class="row g-0">
+                                                        <div class="header">
+                                                            <div class="title">WhatsApp Chat</div>
+                                                            <div class="image-block">
+                                                                <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                            </div>
+                                                            <img src="{{url('images/whatsapp2.png')}}" alt="" class="watermark-img">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row g-0">
+                                                        <div class="col">
+                                                            <p class="body-text">Give users an opportunity to contact you on
+                                                                WhatsApp
+                                                                straight from your website.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row g-0 mt-4 mb-3">
+                                                        <div class="button-block">
+                                                            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null)
+                                                                <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
+                                                                {{csrf_field()}}
+                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                                    <input type="hidden" name="widget_type" value="Whatsapp Chat">
+                                                                    <button type="submit" class="create-widget-btn">Create Widget</button>
+                                                                </form>
+                                                            @else
+                                                                <button type="submit" class="create-widget-btn" disabled>Already Installed</button>
+                                                            @endif
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="count">10</div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="inner-content">
-                                                <div class="icon-main">
-                                                    <i class="bi bi-activity"></i>
+                                        @endif
+                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
+                                            <div class="col">
+                                                <div class="inner-wrapper px-5 py-4">
+                                                    <div class="row g-0">
+                                                        <div class="header">
+                                                            <div class="title">All-in-One Chat</div>
+                                                            <div class="image-block">
+                                                                <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                                <img src="{{url('images/viber.png')}}" alt="">
+                                                                <img src="{{url('images/instagram (1).png')}}" alt="">
+                                                                <img src="{{url('images/Facebook_Messenger_logo_2020.svg (1).png')}}"
+                                                                    alt="">
+                                                            </div>
+                                                            <img src="{{url('images/messenger.png')}}" alt="" class="watermark-img">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row g-0">
+                                                        <div class="col">
+                                                            <p class="body-text">Let users chat with you on Facebook Messenger,
+                                                                WhatsApp, Telegram, etc.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row g-0 mt-4 mb-3">
+                                                        <div class="button-block">
+                                                            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
+                                                                <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
+                                                                {{csrf_field()}}
+                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                                    <input type="hidden" name="widget_type" value="All-in-One Chat">
+                                                                    <button type="submit" class="create-widget-btn">Create Widget</button>
+                                                                </form>
+                                                            @else
+                                                                <button type="submit" class="create-widget-btn" disabled>Already Installed</button>
+                                                            @endif
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="text">Sample Text Here</div>
                                             </div>
-                                            <div class="precentage">20%</div>
-                                        </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="data-chart mb-5">
-                            <div class="inner-wrapper">
-                                <div class="header">
-                                    <div class="title">Title</div>
-                                    <div class="options">
-                                        <div class="input-group">
-                                            <input type="search" class="form-control" placeholder="Search">
-                                            <button class="dropdown-toggle filter-btn" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false"><i class="bi bi-funnel-fill"></i></button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <div class="dropdown-wrapper">
-                                                    <div class="header">Filters</div>
-                                                    <div class="form-content">
-                                                        <form action="">
-                                                            <label for="dataFilter" class="form-label">Sort</label>
-                                                            <select id="dataFilter" class="form-select mb-3">
-                                                                <option selected>Best Profoming</option>
-                                                                <option>Least Profoming</option>
-                                                            </select>
-                                                            <button type="button" class="search-btn">Search</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="createWidgetModal" tabindex="-1"
+                                aria-labelledby="createWidgetModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5 class="modal-title" id="createWidgetModalLabel">Widget Explorer</h5>
+                                                <button type="button" class="btn-close-modal" data-bs-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <i class="bi bi-x-lg"></i>
+                                                </button>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="block-1">
+                                                    <div class="row g-0">
+                                                        <form action="{{route('frontend.user.user_widget.store')}}"
+                                                            method="post" enctype="multipart/form-data">
+                                                            {{csrf_field()}}
+                                                            <div class="inner-wrapper">
+                                                                <div class="col">
+                                                                    <div class="row g-0 align-items-center justify-content-between">
+                                                                        <div class="col-7">
+                                                                            <div class="header">
+                                                                                <span class="title">Whatsapp Chat</span>
+                                                                            </div>
+                                                                            <p class="body-text">Give users an opportunity
+                                                                                to contact you on WhatsApp straight from
+                                                                                your website.
+                                                                            </p>
+                                                                            <div class="button-block">
+                                                                                @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null)
+                                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                                                    <input type="hidden" name="widget_type" value="Whatsapp Chat">
+                                                                                    <button type="submit" class="btn-whatsapp"></i>Create Widget</button>
+                                                                                @else
+                                                                                    <button type="submit" class="btn-whatsapp" disabled>Already Installed</button>
+                                                                                @endif
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-4">
+                                                                            <div class="whatsapp-feature-block">
+                                                                                <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                                                <div class="title">WhatsApp Chat</div>
+                                                                                <div class="subtitle">Entertainment</div>
+                                                                                <div class="star-rating">
+                                                                                    <i class="bi active bi-star"></i>
+                                                                                    <i class="bi active bi-star"></i>
+                                                                                    <i class="bi active bi-star"></i>
+                                                                                    <i class="bi active bi-star"></i>
+                                                                                    <i class="bi bi-star"></i>
+                                                                                </div>
+                                                                                <div class="pricing">Free</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col mt-5">
+                                                                    <div class="row g-0 align-items-center justify-content-between">
+                                                                        <div class="col-7">
+                                                                            <div class="header">
+                                                                                <span class="title">All-in-One Chat</span>
+                                                                            </div>
+                                                                            <p class="body-text">Let users chat with you on Facebook Messenger, WhatsApp, Telegram, etc.</p>
+                                                                            <div class="button-block">
+                                                                                @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
+                                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                                                    <input type="hidden" name="widget_type" value="All-in-One Chat">
+                                                                                    <button type="submit" class="btn-whatsapp"></i>Create Widget</button>
+                                                                                @else
+                                                                                    <button type="submit" class="btn-whatsapp" disabled>Already Installed</button>
+                                                                                @endif
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-4">
+                                                                            <div class="whatsapp-feature-block">
+                                                                                <img src="{{url('images/social_media_icons/chat.png')}}" alt="">
+                                                                                <div class="title">All-in-One Chat</div>
+                                                                                <div class="subtitle">Entertainment</div>
+                                                                                <div class="star-rating">
+                                                                                    <i class="bi active bi-star"></i>
+                                                                                    <i class="bi active bi-star"></i>
+                                                                                    <i class="bi active bi-star"></i>
+                                                                                    <i class="bi active bi-star"></i>
+                                                                                    <i class="bi bi-star"></i>
+                                                                                </div>
+                                                                                <div class="pricing">Free</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </form>
                                                     </div>
                                                 </div>
-                                            </ul>
-                                        </div>
-                                        <a href="#" class="report-download">
-                                            <i class="bi bi-download"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="row-title">
-                                        <div class="title">Website</div>
-                                        <div class="title">Visitors</div>
-                                    </div>
-                                    <div class="row-subtitle">
-                                        <div class="subtitle">Total</div>
-                                        <div class="status">
-                                            <div class="total-count">37</div>
-                                            <div class="total-precentage">100%</div>
-                                        </div>
-                                    </div>
-                                    <div class="row-data">
-                                        <div class="row-info">
-                                            <div class="info">
-                                                <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                <div class="text">tallentor.com</div>
-                                                <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
-                                            </div>
-                                            <div class="count">
-                                                <div class="total-count">37</div>
-                                                <div class="total-precentage">100%</div>
                                             </div>
                                         </div>
-                                        <div class="row-progress">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row-footer">
-                                        <div class="item-count">Showing <span class="current">1-10</span> of <span class="total">57</span></div>
-                                        <ul class="pagination">
-                                            <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
-                                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="data-chart data-chart-feature mb-5">
-                            <div class="inner-wrapper">
-                                <div class="header">
-                                    <div class="title">Title</div>
-                                </div>
-                                <div class="content">
-                                    <div class="row-title">
-                                        <div class="title">Website</div>
-                                        <div class="title">Visitors</div>
-                                    </div>
-                                    <div class="row-data">
-                                        <div class="row-info">
-                                            <div class="info">
-                                                <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                <div class="text">tallentor.com</div>
-                                                <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
-                                            </div>
-                                            <div class="count">
-                                                <div class="total-count">37</div>
-                                            </div>
-                                        </div>
-                                        <div class="row-progress">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <a href="#" class="foote-link">
-                                        <div class="text">View all</div>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Whatsapp Chat Blocks -->
+                            @include('frontend.user.projects.dialogs.widget_source')
+                        </section>
+                        
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+@foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
+
+<!-- Modal -->
+<div class="modal fade get_widget_Modal" id="get_widget_Modal{{$widgetlist->id}}" tabindex="-1" role="dialog" aria-labelledby="get_widget_Lable" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="{{url('images/Group 389.png')}}" alt="">
+                <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
+                <code>
+                    &lt;div id="{{$widgetlist->widget_key}}"&gt;&lt;/div&gt; <br>
+                    &lt;script src="{{url('')}}/whatsapp_widget/{{$widgetlist->id}}/tallentorw.js"&gt;&lt;/script&gt;
+                </code>
+            </div>
+            <div class="modal-footer">
+                <a href="{{route('frontend.user.project.chat',$project_id)}}" class="modal-btn">I have installed the code</a>
+            </div>
+        </div>
+    </div>
+</div>
+@endforeach
+
+<div class="modal fade" id="deleteFavorite" tabindex="-1" aria-labelledby="deleteFavoriteLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="title">
+                <h3 class="modal-title">Delete Widget ?</h3>
+                <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#fff,secondary:#fff" style="width:60px;height:60px"> </lord-icon></div>
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="modal-footer">
+                <div class="text-block">
+                Do you want to delete this?
+                </div>
+                <div class="button-block">
+                    <a type="button" class="btn btn-close btn-secondary" data-bs-dismiss="modal">Close</a>
+                    <a href="" class="btn btn-delete btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if(\Session::has('success') )
+
+<div class="modal fade" id="overlay" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="title">
+                    <h3 class="modal-title" >Created Successfully!</h3>
+                    <i class="bi bi-check-circle"></i>
+                </div>
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="content-block">
+                    <div class="title">How to setup the Widget?</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis deserunt ab distinctio. Voluptatum deserunt blanditiis asperiores quos placeat voluptatibus illo possimus facilis.</div>
+                    <a href="#" class="act-btn act-tutorial">
+                    <i class="bi bi-boxes"></i>
+                    Tutorials</a>
+                </div>
+                <div class="image-block">
+                    <img src="{{url('images/tutorial.png')}}" alt="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-block">
+                    <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}"
+                        class="act-btn act-settings">
+                        <i class="bi bi-gear"></i>
+                        Settings
+                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" class="act-btn act-script">
+                    <i class="bi bi-code-slash"></i>
+                        Add Script
+                    </a>
+                    <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
+                    <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}"
+                        class="act-btn delete act-delete" data-bs-toggle="modal"
+                        data-bs-target="#deleteFavorite">
+                        <i class="bi bi-trash"></i>
+                        Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endif
+
 @endsection
+
+
+@push('after-scripts')
+
+<script>
+    $(window).on('load', function () {
+        $('#overlay').modal('show');
+    });
+    $("#close-btn").click(function () {
+        $('#overlay').modal('hide');
+    });
+</script>
+
+<script>
+    $('.delete').on('click', function () {
+        let link = $(this).attr('href');
+        $('.modal-footer a').attr('href', link);
+    })
+</script>
+
+@endpush
+
+
+
