@@ -3,9 +3,9 @@
                     <div class="side-nav__header">
                         <div class="logo-block">
                             <img src="{{url('images/full-logo.png')}}" alt="" class="logo">
-                            <div class="logo-text">- Analytics</div>
+                            <!-- <div class="logo-text">- Analytics</div> -->
                         </div>
-                        <div class="caption">Tallentor Analytics</div>
+                        <div class="caption">Tallentor Analytics Center</div>
                         <a href="{{ route('frontend.user.ims.visitor_statistics', $project_id) }}" style="text-decoration:none;">
                             <div class="live-status-block">
                                 <i class="bi bi-broadcast"></i>
