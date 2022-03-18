@@ -31,10 +31,10 @@ class HomeController extends Controller
         $website = DB::table('projects')
             ->select(['projects.id', 'projects.url', 'projects.user_id', 'projects.exclude_bots', 'projects.exclude_ips', 'projects.exclude_params'])
             ->join('users', 'users.id', '=', 'projects.user_id')
-            ->where('projects.url', '=', $page['non_www_host'] ?? null)
+            ->where('projects.url', '=', $request->input('page') ?? null)
             ->first();
 
-        dd($page);
+        dd($website);
 
         // If the user's account exceeded the limit
         if (isset($website->can_track) && !$website->can_track) {
