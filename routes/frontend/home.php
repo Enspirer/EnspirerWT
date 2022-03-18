@@ -132,6 +132,21 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
 
         Route::get('user_widget/analytics/{id}', [AnalyticController::class, 'index'])->name('user_widget.analytics');
+        Route::get('user_widget/analytics/page/{id}', [AnalyticController::class, 'page'])->name('user_widget.analytics.page');
+        Route::get('user_widget/analytics/landing_page/{id}', [AnalyticController::class, 'landing_page'])->name('user_widget.analytics.landing_page');
+        Route::get('user_widget/analytics/referrers/{id}', [AnalyticController::class, 'referrers'])->name('user_widget.analytics.referrers');
+        Route::get('user_widget/analytics/search_engines/{id}', [AnalyticController::class, 'search_engines'])->name('user_widget.analytics.search_engines');
+        Route::get('user_widget/analytics/social_networks/{id}', [AnalyticController::class, 'social_networks'])->name('user_widget.analytics.social_networks');
+        Route::get('user_widget/analytics/campaigns/{id}', [AnalyticController::class, 'campaigns'])->name('user_widget.analytics.campaigns');
+        Route::get('user_widget/analytics/continents/{id}', [AnalyticController::class, 'continents'])->name('user_widget.analytics.continents');
+        Route::get('user_widget/analytics/countries/{id}', [AnalyticController::class, 'countries'])->name('user_widget.analytics.countries');
+        Route::get('user_widget/analytics/cities/{id}', [AnalyticController::class, 'cities'])->name('user_widget.analytics.cities');
+        Route::get('user_widget/analytics/languages/{id}', [AnalyticController::class, 'languages'])->name('user_widget.analytics.languages');
+        Route::get('user_widget/analytics/operating_systems/{id}', [AnalyticController::class, 'operating_systems'])->name('user_widget.analytics.operating_systems');
+        Route::get('user_widget/analytics/browsers/{id}', [AnalyticController::class, 'browsers'])->name('user_widget.analytics.browsers');
+        Route::get('user_widget/analytics/screen_resolutions/{id}', [AnalyticController::class, 'screen_resolutions'])->name('user_widget.analytics.screen_resolutions');
+        Route::get('user_widget/analytics/devices/{id}', [AnalyticController::class, 'devices'])->name('user_widget.analytics.devices');
+        Route::get('user_widget/analytics/events/{id}', [AnalyticController::class, 'events'])->name('user_widget.analytics.events');
 
         
         Route::get('user_widget/project_settings/{id}', [ProjectController::class, 'project_settings'])->name('project_settings');
