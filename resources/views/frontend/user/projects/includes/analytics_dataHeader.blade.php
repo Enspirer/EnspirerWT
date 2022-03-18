@@ -40,7 +40,7 @@
                             <i class="bi bi-info-circle"></i>
                         </div>
                     </div>
-                    <div class="count">{ number_format($totalPageviews, 0, __('.'), __(',')) }}</div>
+                    <div class="count">{{ number_format($totalPageviews, 0, __('.'), __(',')) }}</div>
                 </div>
                 <div class="info">
                     <div class="inner-content">
