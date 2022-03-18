@@ -17,7 +17,7 @@ use Modules\Blog\Entities\Category;
 use Modules\Blog\Entities\Post;
 use DB;
 use WhichBrowser\Parser as UserAgent;
-
+use Carbon\Carbon;
 /**
  * Class HomeController.
  */
@@ -69,7 +69,7 @@ class HomeController extends Controller
         // If the UA is not of a BOT
         $data = $values = [];
 
-        $now = Carbon::now();
+        $now =  Carbon::now();
 
         $date = $now->format('Y-m-d');
         $time = $now->format('H');
