@@ -29,7 +29,7 @@ class HomeController extends Controller
         $page = $this->parseUrl($request->input('page'));
 
         $website = DB::table('projects')
-            ->select(['projects.id', 'projects.url', 'projects.user_id', 'projects.exclude_bots', 'projects.exclude_ips', 'projects.exclude_params'])
+            ->select(['projects.id', 'projects.url', 'projects.user_id', 'projects.exclude_bots', 'projects.exclude_ips', 'projects.exclude_params','projects.can_track'])
             ->join('users', 'users.id', '=', 'projects.user_id')
             ->where('projects.url', '=', $request->input('page') ?? null)
             ->first();
