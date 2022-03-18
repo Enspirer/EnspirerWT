@@ -86,12 +86,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
         Route::post('profile_details/update', [SettingsController::class, 'profile_details_update'])->name('profile_details.update');
-
-
         Route::get('reports', [ReportsController::class, 'index'])->name('reports');
-
         Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
-
         Route::get('notifications', [NotificationsController::class, 'index'])->name('notifications.index');
         Route::get('user_notifications_status/{id}', [NotificationsController::class, 'user_notifications_status'])->name('user_notifications_status');
 
