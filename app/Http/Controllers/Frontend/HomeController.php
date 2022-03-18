@@ -16,6 +16,8 @@ use Modules\WidgetManager\Entities\WhatsAppModel;
 use Modules\Blog\Entities\Category;
 use Modules\Blog\Entities\Post;
 use DB;
+use WhichBrowser\Parser as UserAgent;
+
 /**
  * Class HomeController.
  */
