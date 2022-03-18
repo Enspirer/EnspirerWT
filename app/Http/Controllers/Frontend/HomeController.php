@@ -197,6 +197,24 @@ class HomeController extends Controller
         return 200;
     }
 
+    private function parseUrl($url)
+    {
+        $url = parse_url($url);
+
+        // If the URL has a host
+        if (isset($url['host'])) {
+            // If the URL starts with "www."
+            if(substr($url['host'], 0, 4 ) == "www.") {
+                $url['non_www_host'] = str_replace('www.', '', $url['host']);
+            } else {
+                $url['non_www_host'] = $url['host'];
+            }
+            return $url;
+        } else {
+            return null;
+        }
+    }
+
     public function session_player(Request $request)
     {
 //        $sessionDetails = SessionRecord::where('ip_address','127.0.0.1')->first();
