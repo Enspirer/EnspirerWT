@@ -1,6 +1,5 @@
 <div class="data-tab">
-    <ul class="navbar-nav">
-        
+    <ul class="navbar-nav">        
         <li class="nav-item">
             <a class="nav-link" href="{{ route('frontend.user.user_widget.analytics', $project_id) }}">
                 <div class="icon-primary"><i class="bi bi-clipboard-data"></i></div>
