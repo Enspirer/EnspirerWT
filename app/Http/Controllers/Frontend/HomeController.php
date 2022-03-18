@@ -34,7 +34,7 @@ class HomeController extends Controller
             ->where('projects.url', '=', $request->input('page') ?? null)
             ->first();
 
-        dd($request->input('page'));
+        dd($website);
 
         // If the user's account exceeded the limit
         if (isset($website->can_track) && !$website->can_track) {
