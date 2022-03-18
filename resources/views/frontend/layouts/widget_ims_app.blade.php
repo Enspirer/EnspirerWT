@@ -34,37 +34,43 @@
         <link rel="stylesheet" href="{{url('css/jquery-clockpicker.min.css')}}">
         <link rel="stylesheet" href="{{url('css/ims_main.css')}}">
 
+        <!-- Date Range Picker -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
 
         <link rel="stylesheet" href="{{url('css/aiz-core.css')}}">  
         <link rel="stylesheet" href="{{url('css/vendors.css')}}">  
     
-    <script>
-        var AIZ = AIZ || {};
-        AIZ.local = {
-        nothing_selected: 'Nothing selected',
-        nothing_found: 'Nothing found',
-        choose_file: 'Choose file',
-        file_selected: 'File selected',
-        files_selected: 'Files selected',
-        add_more_files: 'Add more files',
-        adding_more_files: 'Adding more files',
-        drop_files_here_paste_or: 'Drop files here, paste or',
-        browse: 'Browse',
-        upload_complete: 'Upload complete',
-        upload_paused: 'Upload paused',
-        resume_upload: 'Resume upload',
-        pause_upload: 'Pause upload',
-        retry_upload: 'Retry upload',
-        cancel_upload: 'Cancel upload',
-        uploading: 'Uploading',
-        processing: 'Processing',
-        complete: 'Complete',
-        file: 'File',
-        files: 'Files',
-        }
-</script>
+        <script>
+            var AIZ = AIZ || {};
+            AIZ.local = {
+            nothing_selected: 'Nothing selected',
+            nothing_found: 'Nothing found',
+            choose_file: 'Choose file',
+            file_selected: 'File selected',
+            files_selected: 'Files selected',
+            add_more_files: 'Add more files',
+            adding_more_files: 'Adding more files',
+            drop_files_here_paste_or: 'Drop files here, paste or',
+            browse: 'Browse',
+            upload_complete: 'Upload complete',
+            upload_paused: 'Upload paused',
+            resume_upload: 'Resume upload',
+            pause_upload: 'Pause upload',
+            retry_upload: 'Retry upload',
+            cancel_upload: 'Cancel upload',
+            uploading: 'Uploading',
+            processing: 'Processing',
+            complete: 'Complete',
+            file: 'File',
+            files: 'Files',
+            }
+        </script>
 
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
@@ -96,7 +102,30 @@
         <script src="{{url('js/vendors.js')}}"></script>
         <script src="{{url('js/aiz-core.js')}}"></script>
 
-          
+
+        <!-- Date range picker -->
+
+        <script>
+            $('#dateRange').daterangepicker({
+                "showDropdowns": true,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf(
+                        'month')]
+                },
+                "alwaysShowCalendars": true,
+                "startDate": "03/18/2022",
+                "endDate": "03/18/2022",
+                "opens": "left"
+            }, function (start, end, label) {
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format(
+                    'YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+            });
+        </script>
         
         @include('includes.partials.ga')
     </body>
