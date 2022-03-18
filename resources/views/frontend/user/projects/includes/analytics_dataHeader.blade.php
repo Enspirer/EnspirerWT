@@ -8,7 +8,20 @@
                 @elseif(calcGrowth($totalVisitors, $totalVisitorsOld) < 0)
                     <i class="bi bi-graph-down-arrow"></i>
                 @else
-
+                    @if($totalVisitors == $totalVisitorsOld && $totalVisitors > 0)
+                    <!-- Constant -->
+                        <div class="text-muted">
+                            —
+                        </div>
+                    @elseif(!$totalVisitorsOld)
+                        <div class="text-muted text-truncate">
+                            {{ __('No prior data') }}
+                        </div>
+                    @else
+                        <div class="text-muted text-truncate">
+                            {{ __('No current data') }}
+                        </div>
+                    @endif
                 @endif
 
 
