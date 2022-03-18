@@ -33,6 +33,9 @@
         <link rel="stylesheet" href="{{url('css/home.css')}} ">
         <link rel="stylesheet" href="{{url('css/footer.css')}} ">
         <!-- Hotjar Tracking Code for https://tallentor.com/ -->
+
+        <script data-host="https://tallentor.com" data-dnt="false" src="https://tallentor.com/js/script_tracker.js" id="ZwSg9rf6GA" async defer></script>
+
         <script>
             (function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
