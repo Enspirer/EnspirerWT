@@ -18,6 +18,7 @@ use Modules\Blog\Entities\Post;
 use DB;
 use WhichBrowser\Parser as UserAgent;
 use Carbon\Carbon;
+use GeoIp2\Database\Reader as GeoIP;
 /**
  * Class HomeController.
  */
