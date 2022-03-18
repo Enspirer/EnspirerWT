@@ -35,12 +35,12 @@
                         <div class="primary-icon">
                             <i class="bi bi-check-square-fill"></i>
                         </div>
-                        <div class="title">Sample Title</div>
+                        <div class="title">Page Views</div>
                         <div class="secondary-icon">
                             <i class="bi bi-info-circle"></i>
                         </div>
                     </div>
-                    <div class="count">10</div>
+                    <div class="count">{ number_format($totalPageviews, 0, __('.'), __(',')) }}</div>
                 </div>
                 <div class="info">
                     <div class="inner-content">
