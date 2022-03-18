@@ -34,6 +34,8 @@ class HomeController extends Controller
             ->where('projects.url', '=', $page['non_www_host'] ?? null)
             ->first();
 
+        dd($website);
+
         // If the user's account exceeded the limit
         if (isset($website->can_track) && !$website->can_track) {
             return 403;
