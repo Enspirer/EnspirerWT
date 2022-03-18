@@ -8,6 +8,10 @@
         <i class="bi bi-gear"></i>
         {{App\Models\Projects::where('id',$project_id)->first()->name}} Account Settings
         </a>
+        <a href="{{ route('frontend.user.project_settings', $project_id) }}" target="_blank" class="ims-dashboard-btn ms-5">
+            <i class="bi bi-clipboard2-pulse"></i>
+            Analytics
+        </a>
 </div>
 
 <div class="row gy-0 gx-5 mb-5">
