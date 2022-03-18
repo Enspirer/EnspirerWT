@@ -1,8 +1,17 @@
 <div class="data-header">
     <div class="inner-wrapper">
+
         <div class="icon-block">
             <div class="icon">
-                <i class="bi bi-graph-up-arrow"></i>
+                @if(calcGrowth($growthCurrent, $totalVisitorsOld) > 0)
+                    <i class="bi bi-graph-up-arrow"></i>
+                @elseif(calcGrowth($growthCurrent, $totalVisitorsOld) < 0)
+                    <i class="bi bi-graph-down-arrow"></i>
+                @else
+
+                @endif
+
+
             </div>
         </div>
         <div class="info-block">
