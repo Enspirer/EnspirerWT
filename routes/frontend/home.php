@@ -26,6 +26,7 @@ use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\TermsAndPrivacyController;
 use App\Http\Controllers\Frontend\User\VisitorStatisticsController;
 use App\Http\Controllers\Frontend\User\NotificationsController;
+use App\Http\Controllers\Frontend\User\AnalyticController;
 
 
 
@@ -127,6 +128,10 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::post('user_widget/ims_dates_report', [IMSController::class, 'ims_dates_report'])->name('user_widget.ims_dates_report');
 
         Route::get('ims/visitor_statistics/{id}', [VisitorStatisticsController::class, 'index'])->name('ims.visitor_statistics');
+
+
+
+        Route::get('user_widget/analytics/{id}', [AnalyticController::class, 'index'])->name('user_widget.analytics');
 
         
         Route::get('user_widget/project_settings/{id}', [ProjectController::class, 'project_settings'])->name('project_settings');
