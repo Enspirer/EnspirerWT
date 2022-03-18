@@ -32,17 +32,32 @@ class WidgetController extends Controller
         $add->widget_key = $widget_key;
         $add->load_count = $request->load_count;
         $add->project_id = $request->project_id;
+
         if($request->widget_type == 'Whatsapp Chat'){
             $add->settings = $default_settings;
         }elseif($request->widget_type == 'All-in-One Chat'){
             $add->settings = $all_in_one;
+        }elseif($request->widget_type == 'Analytics'){
+            $add->settings = $default_settings;
+        }
+
+        if($request->widget_type == 'Whatsapp Chat'){
+            $add->category = 'Widgets';
+        }elseif($request->widget_type == 'All-in-One Chat'){
+            $add->category = 'Widgets';
+        }elseif($request->widget_type == 'Analytics'){
+            $add->category = 'Analytics';
         }
 
         $add->save();
 
         if($request->widget_type == 'Whatsapp Chat'){
             return redirect()->route('frontend.user.user_widget.settings', $add->id);
-        }elseif($request->widget_type == 'All-in-One Chat'){
+        }
+        elseif($request->widget_type == 'All-in-One Chat'){
+            return redirect()->route('frontend.user.user_widget.settings', $add->id);
+        }
+        elseif($request->widget_type == 'Analytics'){
             return redirect()->route('frontend.user.user_widget.settings', $add->id);
         }
 
@@ -73,8 +88,15 @@ class WidgetController extends Controller
                 'whatsapp_chat' => $whatsapp_chat
             ]);
         }
-        else{
+        elseif($widget->widget_type == 'All-in-One Chat'){
             return view('frontend.user.projects.user_widget_settings_all_in_one',[
+                'project' => $project,
+                'widget' => $widget,
+                'whatsapp_chat' => $whatsapp_chat
+            ]);
+        }
+        elseif($widget->widget_type == 'Analytics'){
+            return view('frontend.user.projects.user_widget_analytics',[
                 'project' => $project,
                 'widget' => $widget,
                 'whatsapp_chat' => $whatsapp_chat

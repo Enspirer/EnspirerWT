@@ -33,7 +33,7 @@
                         
 
                         <section id="sectionWhatsappWidget">
-                            @if(count(App\Models\Widgets::where('project_id',$project_id)->get()) != 0)
+                            @if(count(App\Models\Widgets::where('project_id',$project_id)->where('category','Analytics')->get()) != 0)
                                 <div class="block-2 mb-5">
                                     <div class="row g-0 mb-4">
                                         <div class="col">
@@ -44,25 +44,18 @@
                                         <div class="col">
                                             <div class="innwer-wrapper px-4 dotted-border">
                                                 <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
-                                                    data-bs-target="#createWidgetModal">Create
-                                                    Widget</button>
+                                                    data-bs-target="#createWidgetModal">Create Analytics</button>
                                             </div>
                                         </div>
-                                        @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
+                                        @foreach(\App\Models\Widgets::where('project_id',$project_id)->where('category','Analytics')->get() as $widgetlist)
                                         <div class="col">
                                             <div class="inner-wrapper px-5 pt-5 pb-4">
                                                 <div class="row g-0">
                                                     <div class="header">
                                                         <span class="title">{{$widgetlist->widget_type}}</span> 
-                                                        @if($widgetlist->widget_type == 'Whatsapp Chat')                                          
-                                                            <img src="{{url('images/whatsapp (1).png')}}" style="top:0rem; right:18rem; width:30px;" alt="">    
+                                                        @if($widgetlist->widget_type == 'Analytics')                                          
+                                                            <i class="bi bi-clipboard2-pulse" style="font-size:25px;"></i>
                                                             <img src="{{url('images/whatsapp.png')}}" alt="">
-                                                        @elseif($widgetlist->widget_type == 'All-in-One Chat')   
-                                                            <img src="{{url('images/whatsapp (1).png')}}" style="top:0rem; right:18rem; width:30px;" alt="">
-                                                            <img src="{{url('images/viber.png')}}" style="top:0rem; right:14.5rem; width:30px;" alt="">
-                                                            <img src="{{url('images/instagram (1).png')}}" style="top:0rem; right:11rem; width:30px;" alt="">
-                                                            <img src="{{url('images/Facebook_Messenger_logo_2020.svg (1).png')}}" style="top:0rem; right:7rem; width:30px;" alt="">
-                                                            <img src="{{url('images/messenger.png')}}" alt="" class="watermark-img">
                                                         @endif
                                                     </div>
                                                 </div>
@@ -99,11 +92,7 @@
                                                 <div class="row g-0 mt-4 mb-3">
                                                     <div class="button-block">
                                                         <div class="block-1">
-                                                            <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}"
-                                                                class="act-btn act-ims">
-                                                                <i class="bi bi-file-earmark-medical"></i>
-                                                                IMS
-                                                            </a>
+                                                           
                                                             <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}"
                                                                 class="act-btn act-settings">
                                                                 <i class="bi bi-gear"></i>
@@ -133,22 +122,23 @@
                             @endif
                             <div class="row g-0">
                                 <div class="chat-applications">
-                                    <div class="row g-0 mb-4">
-                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null || App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
+                                    <div class="row g-0 mb-5">
+                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
                                             <div class="col">
                                                 <div class="block-title">Chat Applications</div>
                                             </div>
                                         @endif
                                     </div>
                                     <div class="row row-cols-md-2 g-5 justify-content-between">
-                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null)
+
+                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
                                             <div class="col">
                                                 <div class="inner-wrapper px-5 py-4">
                                                     <div class="row g-0">
                                                         <div class="header">
-                                                            <div class="title">WhatsApp Chat</div>
+                                                            <div class="title">Analytics</div>
                                                             <div class="image-block">
-                                                                <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                                <i class="bi bi-clipboard2-pulse" style="font-size:25px;"></i>
                                                             </div>
                                                             <img src="{{url('images/whatsapp2.png')}}" alt="" class="watermark-img">
                                                         </div>
@@ -162,12 +152,12 @@
                                                     </div>
                                                     <div class="row g-0 mt-4 mb-3">
                                                         <div class="button-block">
-                                                            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null)
+                                                            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
                                                                 <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
                                                                 {{csrf_field()}}
                                                                     <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                                    <input type="hidden" name="widget_type" value="Whatsapp Chat">
-                                                                    <button type="submit" class="create-widget-btn">Create Widget</button>
+                                                                    <input type="hidden" name="widget_type" value="Analytics">
+                                                                    <button type="submit" class="create-widget-btn">Create Analytics</button>
                                                                 </form>
                                                             @else
                                                                 <button type="submit" class="create-widget-btn" disabled>Already Installed</button>
@@ -177,45 +167,7 @@
                                                 </div>
                                             </div>
                                         @endif
-                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
-                                            <div class="col">
-                                                <div class="inner-wrapper px-5 py-4">
-                                                    <div class="row g-0">
-                                                        <div class="header">
-                                                            <div class="title">All-in-One Chat</div>
-                                                            <div class="image-block">
-                                                                <img src="{{url('images/whatsapp (1).png')}}" alt="">
-                                                                <img src="{{url('images/viber.png')}}" alt="">
-                                                                <img src="{{url('images/instagram (1).png')}}" alt="">
-                                                                <img src="{{url('images/Facebook_Messenger_logo_2020.svg (1).png')}}"
-                                                                    alt="">
-                                                            </div>
-                                                            <img src="{{url('images/messenger.png')}}" alt="" class="watermark-img">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row g-0">
-                                                        <div class="col">
-                                                            <p class="body-text">Let users chat with you on Facebook Messenger,
-                                                                WhatsApp, Telegram, etc.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row g-0 mt-4 mb-3">
-                                                        <div class="button-block">
-                                                            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
-                                                                <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
-                                                                {{csrf_field()}}
-                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                                    <input type="hidden" name="widget_type" value="All-in-One Chat">
-                                                                    <button type="submit" class="create-widget-btn">Create Widget</button>
-                                                                </form>
-                                                            @else
-                                                                <button type="submit" class="create-widget-btn" disabled>Already Installed</button>
-                                                            @endif
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endif
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +179,7 @@
                                     <div class="modal-content">
                                         <div class="card">
                                             <div class="card-header">
-                                                <h5 class="modal-title" id="createWidgetModalLabel">Widget Explorer</h5>
+                                                <h5 class="modal-title" id="createWidgetModalLabel">Analytics</h5>
                                                 <button type="button" class="btn-close-modal" data-bs-dismiss="modal"
                                                     aria-label="Close">
                                                     <i class="bi bi-x-lg"></i>
@@ -236,15 +188,14 @@
                                             <div class="card-body">
                                                 <div class="block-1">
                                                     <div class="row g-0">
-                                                        <form action="{{route('frontend.user.user_widget.store')}}"
-                                                            method="post" enctype="multipart/form-data">
+                                                        <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
                                                             {{csrf_field()}}
                                                             <div class="inner-wrapper">
                                                                 <div class="col">
                                                                     <div class="row g-0 align-items-center justify-content-between">
                                                                         <div class="col-7">
                                                                             <div class="header">
-                                                                                <span class="title">Whatsapp Chat</span>
+                                                                                <span class="title">Analytics</span>
                                                                             </div>
                                                                             <p class="body-text">Give users an opportunity
                                                                                 to contact you on WhatsApp straight from
@@ -254,7 +205,7 @@
                                                                                 @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null)
                                                                                     <input type="hidden" name="project_id" value="{{$project_id}}">
                                                                                     <input type="hidden" name="widget_type" value="Whatsapp Chat">
-                                                                                    <button type="submit" class="btn-whatsapp"></i>Create Widget</button>
+                                                                                    <button type="submit" class="btn-whatsapp"></i>Create Analytics</button>
                                                                                 @else
                                                                                     <button type="submit" class="btn-whatsapp" disabled>Already Installed</button>
                                                                                 @endif
@@ -278,40 +229,7 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="col mt-5">
-                                                                    <div class="row g-0 align-items-center justify-content-between">
-                                                                        <div class="col-7">
-                                                                            <div class="header">
-                                                                                <span class="title">All-in-One Chat</span>
-                                                                            </div>
-                                                                            <p class="body-text">Let users chat with you on Facebook Messenger, WhatsApp, Telegram, etc.</p>
-                                                                            <div class="button-block">
-                                                                                @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
-                                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                                                    <input type="hidden" name="widget_type" value="All-in-One Chat">
-                                                                                    <button type="submit" class="btn-whatsapp"></i>Create Widget</button>
-                                                                                @else
-                                                                                    <button type="submit" class="btn-whatsapp" disabled>Already Installed</button>
-                                                                                @endif
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-4">
-                                                                            <div class="whatsapp-feature-block">
-                                                                                <img src="{{url('images/social_media_icons/chat.png')}}" alt="">
-                                                                                <div class="title">All-in-One Chat</div>
-                                                                                <div class="subtitle">Entertainment</div>
-                                                                                <div class="star-rating">
-                                                                                    <i class="bi active bi-star"></i>
-                                                                                    <i class="bi active bi-star"></i>
-                                                                                    <i class="bi active bi-star"></i>
-                                                                                    <i class="bi active bi-star"></i>
-                                                                                    <i class="bi bi-star"></i>
-                                                                                </div>
-                                                                                <div class="pricing">Free</div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                
                                                             </div>
                                                         </form>
                                                     </div>
@@ -365,7 +283,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <div class="title">
-                <h3 class="modal-title">Delete Widget ?</h3>
+                <h3 class="modal-title">Delete Analitycs ?</h3>
                 <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#fff,secondary:#fff" style="width:60px;height:60px"> </lord-icon></div>
                 <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
             </div>

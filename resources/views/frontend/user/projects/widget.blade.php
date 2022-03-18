@@ -31,7 +31,7 @@
                     </section>
 
                     <section id="sectionWhatsappWidget">
-                        @if(count(App\Models\Widgets::where('project_id',$project_id)->get()) != 0)
+                        @if(count(App\Models\Widgets::where('project_id',$project_id)->where('category','Widgets')->get()) != 0)
                             <div class="block-2 mb-5">
                                 <div class="row g-0 mb-4">
                                     <div class="col">
@@ -46,7 +46,7 @@
                                                 Widget</button>
                                         </div>
                                     </div>
-                                    @foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
+                                    @foreach(\App\Models\Widgets::where('project_id',$project_id)->where('category','Widgets')->get() as $widgetlist)
                                     <div class="col">
                                         <div class="inner-wrapper px-5 pt-5 pb-4">
                                             <div class="row g-0">
