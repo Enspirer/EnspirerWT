@@ -87,6 +87,7 @@
                                                                                 <th class="data-title">Date</th>
                                                                                 <th class="data-title">Client Email</th>                                                                              
                                                                                 <th class="data-title">Status</th>
+                                                                                <th class="data-title">Action Taken</th>
                                                                                 <th class="data-title">Via</th>
                                                                                 <th class="data-title">Assign</th>
                                                                                 <th class="data-title"></th>
@@ -116,11 +117,18 @@
                                                                                         <div class="text">{{$client->created_at->format('d M Y')}}</div>
                                                                                     </td>  
                                                                                     <td class="data--date data-cell">
-                                                                                        <div class="text">{{$client->client_email}}</div>
+                                                                                        <div class="text">{{$client->assign_by}}</div>
                                                                                     </td>     
                                                                                     <td class="data--date data-cell">
                                                                                         <div class="text">{{$client->status}}</div>
-                                                                                    </td>                                                                                
+                                                                                    </td>
+                                                                                    <td class="data--date data-cell">
+                                                                                        @if($client->action_taken == null)
+                                                                                            <div class="text">(Not Taken Action)</div>
+                                                                                        @else
+                                                                                            <div class="text">{{$client->action_taken}}</div>
+                                                                                        @endif
+                                                                                    </td>
                                                                                     <td class="data--title data-cell">
                                                                                         <div class="text">
                                                                                             @if($client->contact_via == 'Whatsapp')
@@ -138,9 +146,7 @@
                                                                                             @endif
                                                                                         </div>
                                                                                     </td>
-                                                                                    <td class="data--message data-cell">
-                                                                                        <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$client->message}}</div>
-                                                                                    </td>
+                                                                                    
                                                                                     <td class="data--assign data-cell">
                                                                                         <select class="form-select" id="{{$client->id}}" name="assigned_by" onchange="assignedBy(this)">
                                                                                             <option selected disabled>Choose...</option>
