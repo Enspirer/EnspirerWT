@@ -37,7 +37,7 @@
                                 <div class="block-2 mb-5">
                                     <div class="row g-0 mb-4">
                                         <div class="col">
-                                            <div class="block-title">My Applications</div>
+                                            <div class="block-title">My Analytics Widget</div>
                                         </div>
                                     </div>
                                     <div class="row row-cols-md-2 g-5 justify-content-between">
@@ -125,7 +125,7 @@
                                     <div class="row g-0 mb-5">
                                         @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
                                             <div class="col">
-                                                <div class="block-title">Chat Applications</div>
+                                                <div class="block-title">Analytics Widget</div>
                                             </div>
                                         @endif
                                     </div>
@@ -202,9 +202,9 @@
                                                                                 your website.
                                                                             </p>
                                                                             <div class="button-block">
-                                                                                @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null)
+                                                                                @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
                                                                                     <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                                                    <input type="hidden" name="widget_type" value="Whatsapp Chat">
+                                                                                    <input type="hidden" name="widget_type" value="Analytics">
                                                                                     <button type="submit" class="btn-whatsapp"></i>Create Analytics</button>
                                                                                 @else
                                                                                     <button type="submit" class="btn-whatsapp" disabled>Already Installed</button>
