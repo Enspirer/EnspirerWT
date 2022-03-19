@@ -265,7 +265,7 @@
 </div>
 
 
-<div class="modal fade" id="widgetdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
+<div class="modal fade action-modal" id="widgetdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -302,7 +302,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="analyticsdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
+<div class="modal fade action-modal" id="analyticsdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
