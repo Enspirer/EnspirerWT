@@ -65,9 +65,6 @@
                                                             <div class="col-auto">
                                                                 <div class="progress-label">{{$widgetlist->widget_key}}</div>
                                                             </div>
-                                                            <div class="col-auto">
-                                                                <div class="progress-amount">25%</div>
-                                                            </div>
                                                         </div>
                                                         <div class="row g-0">
                                                             <div class="col">

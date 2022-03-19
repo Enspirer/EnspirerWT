@@ -80,9 +80,12 @@ class WidgetController extends Controller
         $project = Projects::where('id',$widget->project_id)->first();           
         $whatsapp_chat = WhatsappChatWidgetTemplate::where('status','Enabled')->get();
 
+
+
         if($widget->widget_type == 'Whatsapp Chat')
         {
             return view('frontend.user.projects.user_widget_settings',[
+                'project_id' => $project->id,
                 'project' => $project,
                 'widget' => $widget,
                 'whatsapp_chat' => $whatsapp_chat
@@ -91,6 +94,7 @@ class WidgetController extends Controller
         elseif($widget->widget_type == 'All-in-One Chat'){
             return view('frontend.user.projects.user_widget_settings_all_in_one',[
                 'project' => $project,
+                'project_id' => $project->id,
                 'widget' => $widget,
                 'whatsapp_chat' => $whatsapp_chat
             ]);
@@ -98,6 +102,7 @@ class WidgetController extends Controller
         elseif($widget->widget_type == 'Analytics'){
             return view('frontend.user.projects.user_widget_analytics',[
                 'project' => $project,
+                'project_id' => $project->id,
                 'widget' => $widget,
                 'whatsapp_chat' => $whatsapp_chat
             ]);
