@@ -459,9 +459,12 @@ window.addEventListener("load", function () {
     localStorage.pageTitle = parent.document.title;
 
     setTimeout(function () {
-        parent.document.title = "1 New Message";
-
-        titleNotifier();
+        if (parent.document.title == '' || parent.document.title == 'undefined') {
+            return;
+        } else {
+            parent.document.title = "1 New Message";
+            titleNotifier();
+        }
     }, 1000);
 });
 
