@@ -44,7 +44,7 @@
                                         <div class="col">
                                             <div class="innwer-wrapper px-4 dotted-border">
                                                 <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
-                                                    data-bs-target="#createWidgetModal">Create Analytics</button>
+                                                    data-bs-target="#createAnalyticsModal">Create Analytics</button>
                                             </div>
                                         </div>
                                         @foreach(\App\Models\Widgets::where('project_id',$project_id)->where('category','Analytics')->get() as $widgetlist)
@@ -173,7 +173,7 @@
                             </div>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="createWidgetModal" tabindex="-1"
+                            <div class="modal fade" id="createAnalyticsModal" tabindex="-1"
                                 aria-labelledby="createWidgetModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
