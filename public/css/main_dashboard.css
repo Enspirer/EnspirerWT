@@ -2498,3 +2498,280 @@
     margin: 8px auto 0;
     font-size: 12px;
 }
+
+
+/* Card Section */
+
+.section-cards {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.section-cards .cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    top: 3px;
+}
+
+.section-cards .cards .card {
+    flex: 1 1 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 1px solid transparent;
+    box-shadow: none;
+    margin: 0;
+    padding: 15px 15px 25px;
+    background-color: transparent;
+}
+
+.section-cards .cards .card>* {
+    color: #464646;
+}
+
+.section-cards .cards .card.active {
+    background-color: #e1eeff;
+    box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-cards .cards .card.active>* {
+    color: #fff;
+}
+
+.section-cards .cards .card:hover>* {
+    color: #fff;
+}
+
+.section-cards .cards .card:hover .card-link {
+    background-color: #00AEEF;
+}
+
+.section-cards .cards .card.disable>* {
+    color: #ccc;
+}
+
+.section-cards .cards .card.disable:hover>* {
+    color: #ccc;
+}
+
+.section-cards .cards .card.disable:hover .card-link {
+    background-color: #fff;
+}
+
+.section-cards .cards .card.active .card-link {
+    background-color: #00AEEF;
+}
+
+.section-cards .cards .card .card-link {
+    background-color: #fff;
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.section-cards .cards .card .card-link .icon .bi {
+    font-size: 32px;
+}
+
+.section-cards .cards .card .card-link .title {
+    font-size: 16px;
+}
+
+.section-cards .cards .card .card-link .stats {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.section-cards .cards .card .card-link .stats span {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.section-cards .tabs {
+    position: relative !important;
+    z-index: 1 !important;
+    padding: 15px !important;
+    border-radius: 15px !important;
+    background-color: #e1eeff !important;
+    box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.section-cards .tabs .tab {
+    display: none;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.section-cards .tabs .tab.active {
+    display: block;
+    display: flex;
+}
+
+.section-cards .tabs .tab .inner-tab {
+    flex: 0 0 23%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-cards .tabs .tab .inner-tab .tab-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.section-cards .tabs .tab .inner-tab .tab-link>* {
+    color: #464646;
+}
+
+.section-cards .tabs .tab .inner-tab .tab-link .icon .bi {
+    font-size: 24px;
+}
+
+.section-cards .tabs .tab .inner-tab .tab-link .icon img {
+    width: 24px;
+}
+
+.section-cards .tabs .tab .inner-tab .tab-link .text {
+    font-size: 16px;
+}
+
+
+/* Action Modal */
+
+.action-modal .modal-dialog {
+    position: relative;
+    margin: 5rem auto 0;
+    max-width: 800px;
+    min-width: 280px;
+    width: 100%;
+}
+
+.action-modal .modal-dialog .modal-content {
+    border-radius: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.action-modal .modal-dialog .modal-content .card {
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-header {
+    position: relative;
+    background-color: #00AEEF;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1.5rem 1rem;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-header .modal-title {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-header .btn-close-modal {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    right: -15px;
+    top: -15px;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-header .btn-close-modal .bi {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body {
+    width: 80%;
+    margin: 1.5rem auto;
+    padding: 0;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .header .title {
+    font-weight: 400;
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .body-text {
+    margin-bottom: 3rem;
+}
+
+.action-modal .modal-dialog .modal-content .btn-whatsapp {
+    background-color: #00AEEF;
+    border: none;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 180px;
+    height: 50px;
+}
+
+.action-modal .modal-dialog .modal-content .btn-whatsapp:disabled {
+    background-color: #44bc8e;
+}
+
+.action-modal .modal-dialog .modal-content .btn-whatsapp:disabled::before {
+    content: none;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block {
+    border: 2px dashed #44BC8E;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block img {
+    width: 50px;
+    object-fit: cover;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .title {
+    margin: 2rem 0 0.1rem;
+    font-size: 13px;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .subtitle {
+    font-size: 11px;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .star-rating .bi {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .star-rating .bi.active {
+    color: #FBD100;
+}
+
+.action-modal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .pricing {
+    font-size: 11px;
+    margin-top: 1.5rem;
+}
