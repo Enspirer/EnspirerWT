@@ -51,9 +51,7 @@ class IMSController extends Controller
 
     public function index($id)
     {
-        // dd($id);
-        $project = Projects::where('id',$id)->first();           
-        // dd($project->id);
+        $project = Projects::where('id',$id)->first();
 
 
         // $widget = Widgets::where('id',$project)->first();
