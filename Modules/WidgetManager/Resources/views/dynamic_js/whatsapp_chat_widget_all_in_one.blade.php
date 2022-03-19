@@ -779,10 +779,10 @@ function addWidget() {
 
 window.onload = addWidget;
 
-localStorage.pageTitle;
+let oldTitle;
 
 window.addEventListener("load", function () {
-    localStorage.pageTitle = parent.document.title;
+    oldTitle = parent.document.title;
 
     setTimeout(function () {
         if (parent.document.title == '' || parent.document.title == 'undefined') {
@@ -796,7 +796,7 @@ window.addEventListener("load", function () {
 
 const titleNotifier = setInterval(function () {
     if (parent.document.title == '1 New Message') {
-        parent.document.title = localStorage.pageTitle;
+        parent.document.title = oldTitle;
     } else {
         parent.document.title = "1 New Message";
     }
@@ -804,7 +804,7 @@ const titleNotifier = setInterval(function () {
 
 const stopNotifier = function () {
     clearInterval(titleNotifier);
-    parent.document.title = localStorage.pageTitle;
+    parent.document.title = oldTitle;
 }
 
 
