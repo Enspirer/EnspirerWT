@@ -75,7 +75,7 @@
                                             @endif
                                         </ul>
                                     </li>
-                                    <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Create Your Project">
+                                    <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Create Your Project" id="create_project_button">
                                         <a type="button" class="nav-link add-btn bi bi-plus-square-fill" data-bs-toggle="modal" data-bs-target="#project_modal"></a>
                                     </li>
                                 </ul>

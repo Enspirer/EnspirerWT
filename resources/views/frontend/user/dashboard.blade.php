@@ -10,6 +10,8 @@
 
         <div id="sectionBody">
             @include('frontend.includes.nav')
+
+
             
             <!-- Content goes here -->
             <div class="row g-0">

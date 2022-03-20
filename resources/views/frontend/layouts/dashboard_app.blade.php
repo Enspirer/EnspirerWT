@@ -27,8 +27,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icons.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+        <link rel="stylesheet" href="{{url('css/intromin.css')}}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
         <script src="https://kit.fontawesome.com/aa4e69f91b.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
 
         <link rel="stylesheet" href="{{url('css/main_dashboard.css')}}">
         <link rel="stylesheet" href="{{url('css/dashboard_navbar.css')}}">
@@ -38,7 +40,9 @@
         @stack('before-styles')
 
         <link rel="stylesheet" href="{{url('css/aiz-core.css')}}">  
-        <link rel="stylesheet" href="{{url('css/vendors.css')}}">  
+        <link rel="stylesheet" href="{{url('css/vendors.css')}}">
+
+
     
     <script>
         var AIZ = AIZ || {};
@@ -77,7 +81,6 @@
         <div id="app">
             @include('includes.partials.logged-in-as')
             <div class="">
-                @include('includes.partials.messages')
                 @yield('content')
             </div><!-- container -->
         </div><!-- #app -->
@@ -97,6 +100,67 @@
         <script src="{{url('css/jquery-clockpicker.min.js')}}"></script>
         <script src="{{url('js/vendors.js')}}"></script>
         <script src="{{url('js/aiz-core.js')}}"></script>
+
+        @if(session()->get('flash_success'))
+            <script>
+                introJs().setOptions({
+                    steps: [{
+                        intro:
+                        "<div class='row'>" +
+                        "<div class='col-md-6'>" +
+                        "<img src='{{url('images/landing_page/home/mobile-app-development.png')}}' style='width: -webkit-fill-available;'>"+
+                        "</div>" +
+                        "<div class='col-md-6'>" +
+                        "<h3> Welcome to Tallentor </h3>" +
+                        "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet metus mauris, ac tincidunt sem facilisis ac. Donec posuere, leo vitae fermentum rhoncus, elit elit sodales dolor, in aliquam nunc enim a tortor. Pellentesque quis sem in odio auctor vehicula. Cras lorem eros, ultrices non mattis nec </p> <br>"+
+                        "<p><b>Lorem ipsum dolor sit amet</b></p>"+
+                        "</div>" +
+                        "</div> ",
+                        tooltipClass: 'customTooltip'
+                    }, {
+                        element: document.querySelector('#dashboard_sidebar'),
+                        intro: "<div class='row'>" +
+                        "<div class='col-md-6'>" +
+                        "<img src='{{url('demo_dashboard.png')}}' style='width: -webkit-fill-available;'>"+
+                        "</div>" +
+                        "<div class='col-md-6'>" +
+                        "<h3> Dashboard </h3>" +
+                        "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet metus mauris, ac tincidunt sem facilisis ac. Donec posuere, leo vitae fermentum rhoncus,</p>"+
+                        "</div>" +
+                        "</div> ",
+                    },{
+                        element: document.querySelector('#create_project_button'),
+                        intro: "<div class='row'>" +
+                        "<div class='col-md-6'>" +
+                        "<img src='{{url('create_project_demo.png')}}' style='width: -webkit-fill-available;height: 170px;object-fit: contain;'>"+
+                        "</div>" +
+                        "<div class='col-md-6'>" +
+                        "<h3> How to Create Project </h3>" +
+                        "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet metus mauris, ac tincidunt sem facilisis ac. Donec posuere, leo vitae fermentum rhoncus,</p>"+
+                        "</div>" +
+                        "</div> ",
+                    },{
+                        element: document.querySelector('#notifyDrop'),
+                        intro: "<div class='row'>" +
+                        "<div class='col-md-6'>" +
+                        "<img src='{{url('notification_demo.png')}}' style='width: -webkit-fill-available;height: 170px;object-fit: contain;'>"+
+                        "</div>" +
+                        "<div class='col-md-6'>" +
+                        "<h3> Notification </h3>" +
+                        "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet metus mauris, ac tincidunt sem facilisis ac. Donec posuere, leo vitae fermentum rhoncus,</p>"+
+                        "</div>" +
+                        "</div> ",
+                    }
+
+
+
+
+
+                    ]
+                }).start();
+            </script>
+        @endif
+
 
         
         <script>

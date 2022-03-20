@@ -11,7 +11,7 @@
                 </div>
                 <div class="side-navs">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
+                        <li class="nav-item" id="dashboard_sidebar">
                             <a class="nav-link {{Request::segment(1)=='dashboard' ? 'active' :null }}" href="{{route('frontend.user.dashboard')}}">
                                 <i class="bi bi-columns-gap"></i>
                                 <span class="text">Dashboard</span>
