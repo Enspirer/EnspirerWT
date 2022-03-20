@@ -48,7 +48,7 @@
                         </div>
                         <div class="text">Sample Text Here</div>
                     </div>
-                    <div class="precentage">20%</div>
+                    <div class="precentage"> {{ str_replace(['-', __('.') . '0'], '', number_format(calcGrowth($totalPageviews, $totalPageviewsOld), 1, __('.'), __(','))) }}%</div>
                 </div>
             </div>
             <div class="block-2">
@@ -71,7 +71,7 @@
                         </div>
                         <div class="text">Sample Text Here</div>
                     </div>
-                    <div class="precentage">20%</div>
+                    <div class="precentage">{{ str_replace(['-', __('.') . '0'], '', number_format(calcGrowth($totalPageviews, $totalPageviewsOld), 1, __('.'), __(','))) }}%</div>
                 </div>
             </div>
         </div>
