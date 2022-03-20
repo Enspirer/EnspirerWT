@@ -46,7 +46,7 @@
                         <div class="icon-main">
                             <i class="bi bi-activity"></i>
                         </div>
-                        <div class="text">Sample Text Here</div>
+                        <div class="text"></div>
                     </div>
                     <div class="precentage"> {{ str_replace(['-', __('.') . '0'], '', number_format(calcGrowth($totalPageviews, $totalPageviewsOld), 1, __('.'), __(','))) }}%</div>
                 </div>
@@ -69,7 +69,7 @@
                         <div class="icon-main">
                             <i class="bi bi-activity"></i>
                         </div>
-                        <div class="text">Sample Text Here</div>
+                        <div class="text"></div>
                     </div>
                     <div class="precentage">{{ str_replace(['-', __('.') . '0'], '', number_format(calcGrowth($totalPageviews, $totalPageviewsOld), 1, __('.'), __(','))) }}%</div>
                 </div>

@@ -51,31 +51,33 @@
                                         <div class="data-chart data-chart-feature">
                                             <div class="inner-wrapper">
                                                 <div class="header">
-                                                    <div class="title">Title</div>
+                                                    <div class="title">Pages</div>
                                                 </div>
                                                 <div class="content">
                                                     <div class="row-title">
                                                         <div class="title">Website</div>
                                                         <div class="title">Visitors</div>
                                                     </div>
-                                                    <div class="row-data">
-                                                        <div class="row-info">
-                                                            <div class="info">
-                                                                <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                                <div class="text">tallentor.com</div>
-                                                                <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                    @foreach($pages as $page)
+                                                        <div class="row-data">
+                                                            <div class="row-info">
+                                                                <div class="info">
+                                                                    <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                    <div class="text">{{ $page->value }}</div>
+                                                                    <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                </div>
+                                                                <div class="count">
+                                                                    <div class="total-count"> {{ number_format($page->count, 0, __('.'), __(',')) }}</div>
+                                                                </div>
                                                             </div>
-                                                            <div class="count">
-                                                                <div class="total-count">37</div>
+                                                            <div class="row-progress">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row-progress">
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    @endforeach
                                                 </div>
                                                 <div class="footer">
                                                     <a href="#" class="foote-link">
