@@ -90,9 +90,16 @@
                                                         <div class="row-subtitle">
                                                             <div class="subtitle">Total</div>
                                                             <div class="status">
-                                                                <div class="total-count">{{ number_format($total->count, 0, __('.'), __(',')) }}</div>
-                                                                <div class="total-precentage">{{ number_format((($total->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
-                                                            </div>
+                                                                @if($total->count == null)
+                                                                    <div class="total-count">0</div>
+                                                                    <div class="total-precentage">0%</div>
+
+                                                                @else
+                                                                    <div class="total-count">{{ number_format($total->count, 0, __('.'), __(',')) }}</div>
+                                                                    <div class="total-precentage">{{ number_format((($total->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+
+                                                                @endif
+                                                                                                                            </div>
                                                         </div>
                                                         @foreach($pages as $page)
                                                             <div class="row-data">
