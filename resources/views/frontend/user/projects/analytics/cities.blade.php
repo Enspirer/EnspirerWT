@@ -110,7 +110,7 @@
                                                                     </div>
                                                                     <div class="count">
                                                                         <div class="total-count">{ number_format($city->count, 0, __('.'), __(',')) }}</div>
-                                                                        <div class="total-precentage">{{ number_format((($city->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                                        <div class="total-precentage">{{ number_format((($city->count() / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row-progress">
