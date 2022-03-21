@@ -570,6 +570,13 @@ class AnalyticController extends Controller
 
 
         $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSearchEnginesList();
 
         $visitorsMap = $this->getTraffic($website, $range, 'visitors');
         $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
@@ -597,6 +604,10 @@ class AnalyticController extends Controller
             ->where([['website_id', '=', $website->id], ['name', '=', 'page']])
             ->whereBetween('date', [$range['from'], $range['to']])
             ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
             
 
         $pages = $this->getPages($website, $range, null, ['count', 'desc'])
@@ -646,8 +657,24 @@ class AnalyticController extends Controller
             'totalVisitorsOld' => $totalVisitorsOld,
             'totalPageviewsOld' => $totalPageviewsOld,
             'totalReferrers' => $totalReferrers,
-            'total' => $total
+            'total' => $total,
+            'searchEngines' => $searchEngines
         ]);
+    }
+
+    private function getSearchEngines($website, $range, $search = null, $sort = null)
+    {
+        $websites = $this->getSearchEnginesList();
+
+        return State::selectRaw('`value`, SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->when($search, function($query) use ($search) {
+                return $query->searchValue($search);
+            })
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->groupBy('value')
+            ->orderBy($sort[0], $sort[1]);
     }
 
     public function social_networks(Request $request,$id)
