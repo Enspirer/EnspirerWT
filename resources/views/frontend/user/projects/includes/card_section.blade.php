@@ -164,7 +164,7 @@
                     </a>
                 </div>
                 @else
-                <div class="inner-tab">
+                <div class="inner-tab active">
                     <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}" target="_blank" class="tab-link">
                         <div class="icon">
                             <img src="{{url('images/dashboard/tab_section/privacy-policy.png')}}" alt="">
@@ -173,7 +173,7 @@
                     </a>
                 </div>
             @endif
-            <div class="inner-tab">
+            <div class="inner-tab active">
                 <a href="{{ route('frontend.user.project_settings', $project_id) }}" class="tab-link">
                     <div class="icon"><i class="bi bi-gear"></i></div>
                     <div class="text">{{App\Models\Projects::where('id',$project_id)->first()->name}} Account Settings</div>
@@ -196,27 +196,35 @@
             @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
             <div class="inner-tab">
                 <a class="tab-link" data-bs-toggle="modal" data-bs-target="#analyticsdisableModal">
-                    <div class="icon"><i class="bi bi-clipboard-pulse"></i></div>
-                    <div class="text">Statics</div>
+                    <div class="icon">
+                        <img src="{{url('images/dashboard/tab_section/statistics.png')}}" alt="">
+                    </i></div>
+                    <div class="text">Statistics</div>
                 </a>
             </div>
             @else
-            <div class="inner-tab">
+            <div class="inner-tab active">
                 <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="tab-link">
-                    <div class="icon"><i class="bi bi-clipboard-pulse"></i></div>
-                    <div class="text">Statics</div>
+                    <div class="icon">
+                        <img src="{{url('images/dashboard/tab_section/statistics.png')}}" alt="">
+                    </i></div>
+                    <div class="text">Statistics</div>
                 </a>
             </div>
             @endif
-            <div class="inner-tab" data-bs-toggle="modal" data-bs-target="#heatmapModel" >
+            <div class="inner-tab active" data-bs-toggle="modal" data-bs-target="#heatmapModel" >
                 <a href="#"class="tab-link">
-                    <div class="icon"><i class="bi bi-compass"></i></div>
+                    <div class="icon">
+                        <img src="{{url('images/dashboard/tab_section/heatmap.png')}}" alt="">
+                    </div>
                     <div class="text">Heatmaps</div>
                 </a>
             </div>
-            <div class="inner-tab">
+            <div class="inner-tab active">
                 <a href="#"class="tab-link">
-                    <div class="icon"><i class="bi bi-clock-history"></i></div>
+                    <div class="icon">
+                        <img src="{{url('images/dashboard/tab_section/session-recording.png')}}" alt="">
+                    </div>
                     <div class="text">Session Recording</div>
                 </a>
             </div>

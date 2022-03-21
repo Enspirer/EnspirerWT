@@ -29,8 +29,9 @@ class HomeController extends Controller
      */
     public function analytics_post(Request $request)
     {
-        $page = $this->parseUrl($request->input('page'));
 
+        $page = $this->parseUrl($request->input('page'));
+        dd($page);
         $website = DB::table('projects')
             ->select(['projects.id', 'projects.url', 'projects.user_id', 'projects.exclude_bots', 'projects.exclude_ips', 'projects.exclude_params','projects.can_track'])
             ->join('users', 'users.id', '=', 'projects.user_id')

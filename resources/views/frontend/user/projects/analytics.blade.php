@@ -133,7 +133,7 @@
                                                 <div class="inner-wrapper px-5 py-4">
                                                     <div class="row g-0">
                                                         <div class="header">
-                                                            <div class="title">Analytics</div>
+                                                            <div class="title">Statistics</div>
                                                             <div class="image-block">
                                                                 <i class="bi bi-clipboard2-pulse" style="font-size:25px;"></i>
                                                             </div>
@@ -192,7 +192,7 @@
                                                                     <div class="row g-0 align-items-center justify-content-between">
                                                                         <div class="col-7">
                                                                             <div class="header">
-                                                                                <span class="title">Analytics</span>
+                                                                                <span class="title">Statistics</span>
                                                                             </div>
                                                                             <p class="body-text">Give users an opportunity
                                                                                 to contact you on WhatsApp straight from
