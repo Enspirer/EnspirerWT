@@ -90,8 +90,8 @@
                                                         <div class="row-subtitle">
                                                             <div class="subtitle">Total</div>
                                                             <div class="status">
-                                                                <div class="total-count">{{ number_format($total->count, 0, __('.'), __(',')) }}</div>
-                                                                <div class="total-precentage">{{ number_format((($total->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                                <div class="total-count">{{ number_format($total->count(), 0, __('.'), __(',')) }}</div>
+                                                                <div class="total-precentage">{{ number_format((($total->count() / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
                                                             </div>
                                                         </div>
                                                         @foreach($screenResolutions as $screenResolution)
@@ -110,12 +110,12 @@
                                                                     </div>
                                                                     <div class="count">
                                                                         <div class="total-count">{{ number_format($screenResolution->count, 0, __('.'), __(',')) }}</div>
-                                                                        <div class="total-precentage">{{ number_format((($screenResolution->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                                        <div class="total-precentage">{{ number_format((($screenResolution->count / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row-progress">
                                                                     <div class="progress">
-                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (($screenResolution->count / $total->count) * 100) }}%" aria-valuenow="25"
+                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (($screenResolution->count / $total->count()) * 100) }}%" aria-valuenow="25"
                                                                             aria-valuemin="0" aria-valuemax="100"></div>
                                                                     </div>
                                                                 </div>
