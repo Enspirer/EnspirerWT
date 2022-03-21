@@ -34,10 +34,9 @@ class HomeController extends Controller
         $website = DB::table('projects')
             ->select(['projects.id', 'projects.url', 'projects.user_id', 'projects.exclude_bots', 'projects.exclude_ips', 'projects.exclude_params','projects.can_track'])
             ->join('users', 'users.id', '=', 'projects.user_id')
-            ->where('projects.url', '=', $page['non_www_host'] ?? null)
+            ->where('projects.url', '=', $page['scheme'].'://'.$page['non_www_host'].'/' ?? null)
             ->first();
 
-        dd( $page['scheme'].'://'.$page['non_www_host'].'/');
 
 
 
