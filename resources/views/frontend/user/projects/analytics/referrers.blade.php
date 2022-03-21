@@ -99,12 +99,23 @@
                                                                 <div class="row-info">
                                                                     <div class="info">
                                                                         <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                                        <div class="text">tallentor.com</div>
+                                                                            @if($referrer->value)
+                                                                                <div class="text">
+                                                                                    <img src="https://icons.duckduckgo.com/ip3/{{ $referrer->value }}.ico" rel="noreferrer" class="width-4 height-4">
+                                                                                    <div class="text">{{ $referrer->value }}</div>
+                                                                                </div>
+                                                                            @else
+                                                                                <div class="text">
+                                                                                    <img src="{{ url('images/analytics/unknown.svg') }}" rel="noreferrer" class="width-4 height-4">
+                                                                                    <div class="text">Direct, Email, SMS</div>
+                                                                                </div>
+                                                                            @endif
+
                                                                         <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
                                                                     </div>
                                                                     <div class="count">
-                                                                        <div class="total-count">37</div>
-                                                                        <div class="total-precentage">100%</div>
+                                                                        <div class="total-count">{{ number_format($referrer->count, 0, __('.'), __(',')) }}</div>
+                                                                        <div class="total-precentage">{{ number_format((($referrer->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row-progress">
