@@ -256,6 +256,11 @@ class AnalyticController extends Controller
             ->whereBetween('date', [$range['from_old'], $range['to_old']])
             ->sum('count');
 
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer'], ['value', '<>', $website->url], ['value', '<>', '']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
         $pages = $this->getPages($website, $range, null, ['count', 'desc'])
             ->limit(5)
             ->get();
@@ -302,7 +307,8 @@ class AnalyticController extends Controller
             'totalPageviews' => $totalPageviews,
             'totalVisitorsOld' => $totalVisitorsOld,
             'totalPageviewsOld' => $totalPageviewsOld,
-            'totalReferrers' => $totalReferrers
+            'totalReferrers' => $totalReferrers,
+            'total' => $total
         ]);
     }
 
@@ -337,7 +343,7 @@ class AnalyticController extends Controller
             ->whereBetween('date', [$range['from_old'], $range['to_old']])
             ->sum('count');
 
-        $total = Stat::selectRaw('SUM(`count`) as `count`')
+        $total = State::selectRaw('SUM(`count`) as `count`')
             ->where([['website_id', '=', $website->id], ['name', '=', 'referrer'], ['value', '<>', $website->url], ['value', '<>', '']])
             ->whereBetween('date', [$range['from'], $range['to']])
             ->first();
@@ -425,7 +431,7 @@ class AnalyticController extends Controller
             ->whereBetween('date', [$range['from_old'], $range['to_old']])
             ->sum('count');
 
-        $total = Stat::selectRaw('SUM(`count`) as `count`')
+        $total = State::selectRaw('SUM(`count`) as `count`')
             ->where([['website_id', '=', $website->id], ['name', '=', 'referrer'], ['value', '<>', $website->url], ['value', '<>', '']])
             ->whereBetween('date', [$range['from'], $range['to']])
             ->first();
@@ -587,7 +593,7 @@ class AnalyticController extends Controller
             ->whereBetween('date', [$range['from_old'], $range['to_old']])
             ->sum('count');
 
-        $total = Stat::selectRaw('SUM(`count`) as `count`')
+        $total = State::selectRaw('SUM(`count`) as `count`')
             ->where([['website_id', '=', $website->id], ['name', '=', 'page']])
             ->whereBetween('date', [$range['from'], $range['to']])
             ->first();
