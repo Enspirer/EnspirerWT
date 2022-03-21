@@ -124,7 +124,7 @@
                                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                                 <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
                                                             </ul> -->
-                                                            {{ $pages->onEachSide(1)->links() }}
+                                                            {{ $pages->links() }}
                                                         </div>
                                                     @endif
                                                 </div>
