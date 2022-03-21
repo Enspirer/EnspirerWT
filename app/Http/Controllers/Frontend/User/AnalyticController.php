@@ -262,6 +262,8 @@ class AnalyticController extends Controller
             ->first();
 
 
+
+
         $pages = $this->getPages($website, $range, null, ['count', 'desc'])
             ->limit(5)
             ->get();
@@ -486,6 +488,7 @@ class AnalyticController extends Controller
         $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
             ->limit(5)
             ->get();
+        dd($referrers);
 
         $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
             ->limit(5)
