@@ -425,6 +425,18 @@ class AnalyticController extends Controller
         ]);
     }
 
+    private function getLandingPages($website, $range, $search = null, $sort = null)
+    {
+        return State::selectRaw('`value`, SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'landing_page']])
+            ->when($search, function($query) use ($search) {
+                return $query->searchValue($search);
+            })
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->groupBy('value')
+            ->orderBy($sort[0], $sort[1]);
+    }
+
     public function referrers(Request $request,$id)
     {
         $project = Projects::where('id',$id)->first();           
