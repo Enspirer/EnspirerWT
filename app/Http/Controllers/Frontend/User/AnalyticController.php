@@ -265,8 +265,6 @@ class AnalyticController extends Controller
             ->limit(5)
             ->get();
 
-        dd($pages);
-
         $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
             ->whereBetween('date', [$range['from'], $range['to']])
             ->sum('count');
