@@ -47,44 +47,51 @@
                                     </div>
                                 </div>
                                 <div class="row g-4 mb-4">
-                                    <div class="col-6">
+                                    <div class="col-6">                                    
                                         <div class="data-chart data-chart-feature">
                                             <div class="inner-wrapper">
                                                 <div class="header">
                                                     <div class="title">Pages</div>
                                                 </div>
-                                                <div class="content">
-                                                    <div class="row-title">
-                                                        <div class="title">Website</div>
-                                                        <div class="title">Visitors</div>
-                                                    </div>
-                                                    @foreach($pages as $page)
-                                                        <div class="row-data">
-                                                            <div class="row-info">
-                                                                <div class="info">
-                                                                    <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                                    <div class="text">{{ $page->value }}</div>
-                                                                    <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
-                                                                </div>
-                                                                <div class="count">
-                                                                    <div class="total-count"> {{ number_format($page->count, 0, __('.'), __(',')) }}</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row-progress">
-                                                                <div class="progress">
-                                                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </div>
+                                                @if(count($pages) == 0)
+                                                    <p class="p-3 ms-1">No Data</p>
+                                                @else
+                                                    <div class="content">
+                                                        <div class="row-title">
+                                                            <div class="title">URL</div>
+                                                            <div class="title">Pageviews</div>
                                                         </div>
-                                                    @endforeach
-                                                </div>
-                                                <div class="footer">
-                                                    <a href="#" class="foote-link">
-                                                        <div class="text">View all</div>
-                                                        <i class="bi bi-chevron-right"></i>
-                                                    </a>
-                                                </div>
+                                                        @foreach($pages as $page)
+                                                            <div class="row-data">
+                                                                <div class="row-info">
+                                                                    <div class="info">
+                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="text">{{ $page->value }}</div>
+                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                    </div>
+                                                                    <div class="count">
+                                                                        <div class="total-count"> {{ number_format($page->count, 0, __('.'), __(',')) }}</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-progress">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (($page->count / $totalPageviews) * 100) }}%" aria-valuenow="25"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                    </div>
+                                                @endif
+
+                                                @if(count($pages) > 0)
+                                                    <div class="footer">
+                                                        <a href="#" class="foote-link">
+                                                            <div class="text">View all</div>
+                                                            <i class="bi bi-chevron-right"></i>
+                                                        </a>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -92,38 +99,46 @@
                                         <div class="data-chart data-chart-feature">
                                             <div class="inner-wrapper">
                                                 <div class="header">
-                                                    <div class="title">Title</div>
+                                                    <div class="title">Referrers</div>
                                                 </div>
-                                                <div class="content">
-                                                    <div class="row-title">
-                                                        <div class="title">Website</div>
-                                                        <div class="title">Visitors</div>
-                                                    </div>
-                                                    <div class="row-data">
-                                                        <div class="row-info">
-                                                            <div class="info">
-                                                                <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                                <div class="text">tallentor.com</div>
-                                                                <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
-                                                            </div>
-                                                            <div class="count">
-                                                                <div class="total-count">37</div>
-                                                            </div>
+                                                @if(count($referrers) == 0)
+                                                    <p class="p-3 ms-1">No Data</p>
+                                                @else
+                                                    <div class="content">
+                                                        <div class="row-title">
+                                                            <div class="title">Website</div>
+                                                            <div class="title">Visitors</div>
                                                         </div>
-                                                        <div class="row-progress">
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                        @foreach($referrers as $referrer)
+                                                            <div class="row-data">
+                                                                <div class="row-info">
+                                                                    <div class="info">
+                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="text">{{ $referrer->value }}</div>
+                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                    </div>
+                                                                    <div class="count">
+                                                                        <div class="total-count">{{ number_format($referrer->count, 0, __('.'), __(',')) }}</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-progress">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (($referrer->count / $totalReferrers) * 100) }}%" aria-valuenow="25"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
-                                                </div>
-                                                <div class="footer">
-                                                    <a href="#" class="foote-link">
-                                                        <div class="text">View all</div>
-                                                        <i class="bi bi-chevron-right"></i>
-                                                    </a>
-                                                </div>
+                                                @endif
+                                                @if(count($referrers) > 0)
+                                                    <div class="footer">
+                                                        <a href="#" class="foote-link">
+                                                            <div class="text">View all</div>
+                                                            <i class="bi bi-chevron-right"></i>
+                                                        </a>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -133,38 +148,52 @@
                                         <div class="data-chart data-chart-feature">
                                             <div class="inner-wrapper">
                                                 <div class="header">
-                                                    <div class="title">Title</div>
+                                                    <div class="title">Countries</div>
                                                 </div>
-                                                <div class="content">
-                                                    <div class="row-title">
-                                                        <div class="title">Website</div>
-                                                        <div class="title">Visitors</div>
-                                                    </div>
-                                                    <div class="row-data">
-                                                        <div class="row-info">
-                                                            <div class="info">
-                                                                <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                                <div class="text">tallentor.com</div>
-                                                                <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
-                                                            </div>
-                                                            <div class="count">
-                                                                <div class="total-count">37</div>
-                                                            </div>
+                                                @if(count($countries) == 0)
+                                                    <p class="p-3 ms-1">No Data</p>
+                                                @else
+                                                    <div class="content">
+                                                        <div class="row-title">
+                                                            <div class="title">Name</div>
+                                                            <div class="title">Visitors</div>
                                                         </div>
-                                                        <div class="row-progress">
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                        @foreach($countries as $country)
+                                                            <div class="row-data">
+                                                                <div class="row-info">
+                                                                    <div class="info">
+                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="text">
+                                                                            @if(!empty(explode(':', $country->value)[1]))
+                                                                                <a href="" class="text-body">{{ explode(':', $country->value)[1] }}</a>
+                                                                            @else
+                                                                                <p class="p-3 ms-1">Unknown</p>
+                                                                            @endif
+                                                                        </div>
+                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                    </div>
+                                                                    <div class="count">
+                                                                        <div class="total-count">{{ number_format($country->count, 0, __('.'), __(',')) }}</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-progress">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (($country->count / $totalVisitors) * 100) }}%" aria-valuenow="25"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
-                                                </div>
-                                                <div class="footer">
-                                                    <a href="#" class="foote-link">
-                                                        <div class="text">View all</div>
-                                                        <i class="bi bi-chevron-right"></i>
-                                                    </a>
-                                                </div>
+                                                @endif
+                                                @if(count($countries) > 0)
+                                                    <div class="footer">
+                                                        <a href="#" class="foote-link">
+                                                            <div class="text">View all</div>
+                                                            <i class="bi bi-chevron-right"></i>
+                                                        </a>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -172,38 +201,54 @@
                                         <div class="data-chart data-chart-feature">
                                             <div class="inner-wrapper">
                                                 <div class="header">
-                                                    <div class="title">Title</div>
+                                                    <div class="title">Browsers</div>
                                                 </div>
-                                                <div class="content">
-                                                    <div class="row-title">
-                                                        <div class="title">Website</div>
-                                                        <div class="title">Visitors</div>
-                                                    </div>
-                                                    <div class="row-data">
-                                                        <div class="row-info">
-                                                            <div class="info">
-                                                                <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                                <div class="text">tallentor.com</div>
-                                                                <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
-                                                            </div>
-                                                            <div class="count">
-                                                                <div class="total-count">37</div>
-                                                            </div>
+                                                @if(count($browsers) == 0)
+                                                    <p class="p-3 ms-1">No Data</p>
+                                                @else
+                                                    <div class="content">
+                                                        <div class="row-title">
+                                                            <div class="title">Name</div>
+                                                            <div class="title">Visitors</div>
                                                         </div>
-                                                        <div class="row-progress">
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                        @foreach($browsers as $browser)
+                                                            <div class="row-data">
+                                                                <div class="row-info">
+                                                                    <div class="info">
+                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="text">
+                                                                            @if($browser->value)
+                                                                                {{ $browser->value }}
+                                                                            @else
+                                                                                <p class="p-3 ms-1">Unknown</p>
+                                                                            @endif
+                                                                        </div>
+                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                    </div>
+                                                                    <div class="count">
+                                                                        <div class="total-count">
+                                                                            {{ number_format($browser->count, 0, __('.'), __(',')) }}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-progress">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (($browser->count / $totalVisitors) * 100) }}%" aria-valuenow="25"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
-                                                </div>
-                                                <div class="footer">
-                                                    <a href="#" class="foote-link">
-                                                        <div class="text">View all</div>
-                                                        <i class="bi bi-chevron-right"></i>
-                                                    </a>
-                                                </div>
+                                                @endif
+                                                @if(count($browsers) > 0)
+                                                    <div class="footer">
+                                                        <a href="#" class="foote-link">
+                                                            <div class="text">View all</div>
+                                                            <i class="bi bi-chevron-right"></i>
+                                                        </a>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
