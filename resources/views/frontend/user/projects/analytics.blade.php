@@ -170,7 +170,7 @@
                             </div>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="createAnalyticsModal" tabindex="-1"
+                            <div class="modal fade widget-explorer" id="createAnalyticsModal" tabindex="-1"
                                 aria-labelledby="createWidgetModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -263,8 +263,7 @@
             <div class="modal-body">
                 <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
                 <code>
-                    &lt;div id="{{$widgetlist->widget_key}}"&gt;&lt;/div&gt; <br>
-                    &lt;script src="{{url('')}}/whatsapp_widget/{{$widgetlist->id}}/tallentorw.js"&gt;&lt;/script&gt;
+                    &lt;script data-host="{{url('')}}" data-dnt="false" src="{{url('js/script_tracker.js')}}" id="{{$widgetlist->widget_key}}" async defer&gt;&lt;/script&gt
                 </code>
             </div>
             <div class="modal-footer">
@@ -275,7 +274,7 @@
 </div>
 @endforeach
 
-<div class="modal fade" id="deleteFavorite" tabindex="-1" aria-labelledby="deleteFavoriteLabel" aria-hidden="true">
+<div class="modal fade dashboard-modal delete-modal" id="deleteFavorite" tabindex="-1" aria-labelledby="deleteFavoriteLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">

@@ -1864,7 +1864,7 @@
     height: 0.4rem;
 }
 
-#createWidgetModal .modal-dialog {
+.widget-explorer .modal-dialog {
     position: relative;
     margin: 5rem auto 0;
     max-width: 800px;
@@ -1872,19 +1872,19 @@
     width: 100%;
 }
 
-#createWidgetModal .modal-dialog .modal-content {
+.widget-explorer .modal-dialog .modal-content {
     border-radius: 20px;
     background-color: transparent;
     border: none;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card {
+.widget-explorer .modal-dialog .modal-content .card {
     border-radius: 20px;
     background-color: #FFFFFF;
     border: none;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-header {
+.widget-explorer .modal-dialog .modal-content .card .card-header {
     position: relative;
     background-color: #00AEEF;
     border: none;
@@ -1893,14 +1893,14 @@
     padding: 1.5rem 1rem;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-header .modal-title {
+.widget-explorer .modal-dialog .modal-content .card .card-header .modal-title {
     color: #fff;
     font-size: 1.75rem;
     font-weight: 400;
     text-align: center;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-header .btn-close-modal {
+.widget-explorer .modal-dialog .modal-content .card .card-header .btn-close-modal {
     position: absolute;
     display: block;
     width: 35px;
@@ -1913,29 +1913,29 @@
     top: -15px;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-header .btn-close-modal .bi {
+.widget-explorer .modal-dialog .modal-content .card .card-header .btn-close-modal .bi {
     color: #fff;
     font-size: 1.2rem;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body {
+.widget-explorer .modal-dialog .modal-content .card .card-body {
     width: 80%;
     margin: 1.5rem auto;
     padding: 0;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .header .title {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .header .title {
     font-weight: 400;
     font-size: 1.6rem;
     display: block;
     margin-bottom: 1rem;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .body-text {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .body-text {
     margin-bottom: 3rem;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .button-block .btn-whatsapp {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .button-block .btn-whatsapp {
     background-color: #00AEEF;
     border: none;
     color: #fff;
@@ -1946,15 +1946,15 @@
     height: 50px;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .button-block .btn-whatsapp:disabled {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .button-block .btn-whatsapp:disabled {
     background-color: #44bc8e;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .button-block .btn-whatsapp:disabled::before {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .button-block .btn-whatsapp:disabled::before {
     content: none;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block {
     border: 2px dashed #44BC8E;
     border-radius: 10px;
     display: flex;
@@ -1963,41 +1963,68 @@
     padding: 1.5rem 0;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block img {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block img {
     width: 50px;
     object-fit: cover;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .title {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .title {
     margin: 2rem 0 0.1rem;
     font-size: 13px;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .subtitle {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .subtitle {
     font-size: 11px;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .star-rating .bi {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .star-rating .bi {
     color: rgba(0, 0, 0, 0.2);
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .star-rating .bi.active {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .star-rating .bi.active {
     color: #FBD100;
 }
 
-#createWidgetModal .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .pricing {
+.widget-explorer .modal-dialog .modal-content .card .card-body .block-1 .inner-wrapper .whatsapp-feature-block .pricing {
     font-size: 11px;
     margin-top: 1.5rem;
 }
 
-#deleteFavorite .modal-content {
+/* Dashboard Modal */
+
+.dashboard-modal .btn-modal {
+    padding: 1rem 0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    width: 180px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.dashboard-modal.action-modal .modal-dialog {
+    max-width: 700px;
+    min-width: 650px;
+}
+
+.dashboard-modal.cta-modal .modal-dialog {
+    margin: 5rem auto;
+    max-width: 700px;
+    min-width: 650px;
+}
+
+.dashboard-modal .modal-dialog .modal-content {
     border: none;
     border-radius: 20px;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-header {
+.dashboard-modal .modal-dialog .modal-content .modal-header {
     position: relative;
-    background-color: #00AEEF;
+    background: linear-gradient(to right, #00AEEF, #017FFA);
     border: none;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -2005,21 +2032,26 @@
     justify-content: center;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-header .title {
+.dashboard-modal.action-modal .modal-dialog .modal-content .modal-header {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.dashboard-modal .modal-dialog .modal-content .modal-header .title {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-header .modal-title {
+.dashboard-modal .modal-dialog .modal-content .modal-header .modal-title {
     color: #fff;
     font-size: 1.75rem;
     font-weight: 400;
     text-align: center;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-header .btn-close-modal {
+.dashboard-modal .modal-dialog .modal-content .modal-header .btn-close-modal {
     position: absolute;
     display: block;
     width: 35px;
@@ -2032,12 +2064,104 @@
     top: -15px;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-header .btn-close-modal .bi {
+.dashboard-modal .modal-dialog .modal-content .modal-header .btn-close-modal .bi {
     color: #fff;
     font-size: 1.2rem;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-footer {
+.dashboard-modal.action-modal .modal-dialog .modal-content .modal-header .inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.dashboard-modal.action-modal .modal-dialog .modal-content .modal-header .content .title {
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.dashboard-modal.action-modal .modal-dialog .modal-content .modal-header .content .text {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-modal.action-modal .modal-dialog .modal-content .modal-header .content .button-block {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.dashboard-modal.action-modal .modal-dialog .modal-content .modal-header .content .button-block .btn-create {
+    background-color: #fff;
+    color: #017FFA;
+}
+
+.dashboard-modal.action-modal .modal-dialog .modal-content .modal-header .content .button-block .btn-close {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    opacity: 1;
+    margin: 0;
+    background: none;
+}
+
+.dashboard-modal .modal-dialog .modal-content .modal-body {
+    padding: 2rem;
+}
+
+.dashboard-modal.cta-modal .modal-dialog .modal-content .modal-body .inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.dashboard-modal.cta-modal .modal-dialog .modal-content .modal-body .inner-wrapper .content-block .title {
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+
+.dashboard-modal.cta-modal .modal-dialog .modal-content .modal-body .inner-wrapper .content-block .text {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.dashboard-modal.cta-modal .modal-dialog .modal-content .modal-body .inner-wrapper .content-block .fee {
+    font-size: 20px;
+    font-weight: 700;
+    color: #00AEEF;
+    margin-bottom: 1rem;
+}
+
+.dashboard-modal.cta-modal .modal-dialog .modal-content .modal-body .inner-wrapper .content-block .button-block {
+    margin-top: 1.5rem;
+}
+
+.dashboard-modal.cta-modal .modal-dialog .modal-content .modal-body .inner-wrapper .content-block .button-block .btn-create-widget {
+    background-color: #00AEEF;
+    color: #fff;
+    position: relative;
+}
+
+.dashboard-modal.cta-modal .modal-dialog .modal-content .modal-body .inner-wrapper .content-block .button-block .btn-create-widget::before {
+    content: '+';
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.dashboard-modal.cta-modal .modal-dialog .modal-content .modal-body .inner-wrapper .content-block .button-block .btn-purchase {
+    background-color: #00AEEF;
+    color: #fff;
+}
+
+.dashboard-modal .modal-dialog .modal-content .modal-footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2046,32 +2170,33 @@
     padding: 2rem 0;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-footer .text-block {
+.dashboard-modal .modal-dialog .modal-content .modal-footer .text-block {
     font-size: 14px;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block {
+.dashboard-modal .modal-dialog .modal-content .modal-footer .button-block {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-close {
+.dashboard-modal .modal-dialog .modal-content .modal-footer .button-block .btn-close {
     width: 90px;
-    background-color: #000;
+    border: 1px solid #00AEEF;
+    background-color: #fff;
     opacity: 1;
-    color: #fff;
+    color: #00AEEF;
     padding: 0.75rem 0;
     line-height: 1;
     font-size: 14px;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-close:focus {
+.dashboard-modal .modal-dialog .modal-content .modal-footer .button-block .btn-close:focus {
     box-shadow: none;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete {
+.dashboard-modal .modal-dialog .modal-content .modal-footer .button-block .btn-delete {
     width: 90px;
     background-color: #fff;
     opacity: 1;
@@ -2082,11 +2207,11 @@
     font-size: 14px;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete:hover {
+.dashboard-modal .modal-dialog .modal-content .modal-footer .button-block .btn-delete:hover {
     border: 1px solid #FF0404;
 }
 
-#deleteFavorite .modal-dialog .modal-content .modal-footer .button-block .btn-delete:focus {
+.dashboard-modal .modal-dialog .modal-content .modal-footer .button-block .btn-delete:focus {
     box-shadow: none;
 }
 
@@ -2541,28 +2666,12 @@
     color: #fff;
 }
 
-.section-cards .cards .card:hover>* {
-    color: #fff;
-}
-
-.section-cards .cards .card:hover .card-link {
-    background-color: #00AEEF;
-}
-
 .section-cards .cards .card.disable>* {
     color: #ccc;
 }
 
 .section-cards .cards .card.disable:hover>* {
     color: #ccc;
-}
-
-.section-cards .cards .card.disable:hover .card-link {
-    background-color: #fff;
-}
-
-.section-cards .cards .card.active .card-link {
-    background-color: #00AEEF;
 }
 
 .section-cards .cards .card .card-link {
@@ -2575,6 +2684,26 @@
     align-items: center;
     gap: 5px;
     box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.section-cards .cards .card.active .card-link {
+    background-color: #00AEEF;
+}
+
+.section-cards .cards .card .card-link:hover {
+    background-color: #00AEEF;
+}
+
+.section-cards .cards .card .card-link:hover>* {
+    color: #fff;
+}
+
+.section-cards .cards .card.disable .card-link:hover>* {
+    color: #ccc;
+}
+
+.section-cards .cards .card.disable .card-link:hover {
+    background-color: #fff;
 }
 
 .section-cards .cards .card .card-link .icon .bi {
@@ -2643,15 +2772,29 @@
 }
 
 .section-cards .tabs .tab .inner-tab .tab-link>* {
+    color: #ccc;
+}
+
+.section-cards .tabs .tab .inner-tab.active .tab-link>* {
     color: #464646;
 }
 
 .section-cards .tabs .tab .inner-tab .tab-link .icon .bi {
     font-size: 24px;
+    color: #ccc;
+}
+
+.section-cards .tabs .tab .inner-tab.active .tab-link .icon .bi {
+    color: #464646;
 }
 
 .section-cards .tabs .tab .inner-tab .tab-link .icon img {
     width: 24px;
+    filter: opacity(0.5);
+}
+
+.section-cards .tabs .tab .inner-tab.active .tab-link .icon img {
+    filter: opacity(1);
 }
 
 .section-cards .tabs .tab .inner-tab .tab-link .text {

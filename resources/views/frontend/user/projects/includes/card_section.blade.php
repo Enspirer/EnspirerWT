@@ -221,7 +221,7 @@
                 </a>
             </div>
             <div class="inner-tab active">
-                <a href="#"class="tab-link">
+                <a href="#"class="tab-link" data-bs-toggle="modal" data-bs-target="#sessionRecordModal">
                     <div class="icon">
                         <img src="{{url('images/dashboard/tab_section/session-recording.png')}}" alt="">
                     </div>
@@ -291,35 +291,22 @@
 </div>
 
 
-<div class="modal fade action-modal" id="widgetdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
+<div class="modal fade dashboard-modal action-modal" id="widgetdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="modal-title" id="createWidgetModalLabel">Active Widget</h5>
-                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
-                </div>
-                <div class="card-body">
-                    <div class="block-1">
-                        <div class="row g-0">
-                            <div class="inner-wrapper">
-                                <div class="col">
-                                    <div class="row g-0 align-items-center justify-content-between">
-                                        <div class="col-12">
-                                            <div class="header">
-                                                <span class="title">In order to view Whatsapp Widget and All-in-one
-                                                    Widget click here.
-                                                </span>
-                                            </div>
-                                            <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
-                                                data-bs-target="#createWidgetModal">Create Widget</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="modal-header">
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="inner-wrapper">
+                    <img src="{{url('images/dashboard/popups/notification.png')}}" alt="">
+                    <div class="content">
+                        <div class="title">Hay, Kamal Perera</div>
+                        <div class="text">In order to view WhatsApp Widget and All-in-one Widget click here.</div>
+                        <div class="button-block">
+                            <a type="button" href="#" class="btn-modal btn-create" data-bs-toggle="modal" data-bs-target="#createWidgetModal">Create Widget</a>
+                            <a href="#" class="btn-modal btn-close" data-bs-dismiss="modal" aria-label="Close">No, I want to stay</a>
                         </div>
                     </div>
                 </div>
@@ -328,45 +315,31 @@
     </div>
 </div>
 
-<div class="modal fade action-modal" id="analyticsdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
-    aria-hidden="true">
+<div class="modal fade dashboard-modal cta-modal" id="analyticsdisableModal" tabindex="-1"
+    aria-labelledby="createWidgetModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="modal-title" id="createWidgetModalLabel">Active Statics</h5>
-                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
+            <div class="modal-header">
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="title">
+                        <h3 class="modal-title">Analytics Center</h3>
                 </div>
-                <div class="card-body">
-                    <div class="block-1">
-                        <div class="row g-0">
-                            <div class="inner-wrapper">
-                                <div class="col">
-                                    <div class="row g-0 align-items-center justify-content-between">
-                                        <div class="col-12">
-                                            <div class="header">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div style="background-image: url('{{url('images/landing_page/home/all-in-one-chat.png')}}');height: 323px;background-repeat: no-repeat;background-size: contain;background-position: center; "></div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h3>Tallentor Statics</h3>
-
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lectus turpis, ultrices quis elit in, maximus interdum velit. Sed nec euismod nulla. Nam congue sagittis ultricies. Donec quis elit mattis, suscipit leo eget, egestas nulla. Nunc quis mattis turpis, eu placerat enim. Morbi libero eros, </p>
-                                                        <br>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lectus turpis, ultrices quis elit in, maximus interdum velit. Sed nec euismod nulla. Nam congue sagittis ultricies. Donec quis elit mattis, suscipit leo eget, egestas nulla. Nunc quis mattis turpis, eu placerat enim. Morbi libero eros, </p>
-                                                        <button type="button" class="btn-whatsapp" data-bs-toggle="modal" data-bs-target="#createAnalyticsModal">Active Statics</button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+            <div class="modal-body">
+                <div class="inner-wrapper">
+                    <div class="content-block">
+                        <div class="title">Statistics</div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque dolorem
+                            aliquam pariatur odio id soluta cum, tempora consequuntur,</div>
+                        <div class="button-block">
+                            <a type="button" href="#" class="btn-modal btn-create-widget" data-bs-toggle="modal"
+                                data-bs-target="#createAnalyticsModal">Create Widget</a>
                         </div>
+                    </div>
+                    <div class="image-block">
+                        <img src="{{url('images/dashboard/popups/statistics.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -374,45 +347,31 @@
     </div>
 </div>
 
-
-<div class="modal fade action-modal" id="heatmapModel" tabindex="-1" aria-labelledby="createWidgetModalLabel"
-     aria-hidden="true">
+<div class="modal fade dashboard-modal cta-modal" id="heatmapModel" tabindex="-1"
+    aria-labelledby="createWidgetModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="modal-title" id="createWidgetModalLabel">Active Heatmaps</h5>
-                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
+            <div class="modal-header">
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="title">
+                        <h3 class="modal-title">Analytics Center</h3>
                 </div>
-                <div class="card-body">
-                    <div class="block-1">
-                        <div class="row g-0">
-                            <div class="inner-wrapper">
-                                <div class="col">
-                                    <div class="row g-0 align-items-center justify-content-between">
-                                        <div class="col-12">
-                                            <div class="header">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div style="background-image: url('{{url('images/heatmap_js.jpg')}}');height: 323px;background-repeat: no-repeat;background-size: contain;background-position: center; "></div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h3 style="padding-top: 50px;">Website Heatmap</h3>
-
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lectus turpis, ultrices quis elit in, maximus interdum velit. Sed nec euismod nulla. Nam congue sagittis ultricies. Donec quis elit mattis, suscipit leo eget, egestas nulla. Nunc quis mattis turpis, eu placerat enim. Morbi libero eros, </p>
-                                                        <h3>USD 35.00</h3>
-                                                        <button type="button" class="btn-whatsapp">Purchase This Plugin</button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+            <div class="modal-body">
+                <div class="inner-wrapper">
+                    <div class="content-block">
+                        <div class="title">Heatmaps</div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque dolorem
+                            aliquam pariatur odio id soluta cum, tempora consequuntur,</div>
+                        <div class="fee">$ 52.00</div>
+                        <div class="button-block">
+                            <a type="button" href="#" class="btn-modal btn-purchase">Purchase this plugin</a>
                         </div>
+                    </div>
+                    <div class="image-block">
+                        <img src="{{url('images/dashboard/popups/heatmap.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -420,49 +379,35 @@
     </div>
 </div>
 
-
-<div class="modal fade action-modal" id="analyticsdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
-     aria-hidden="true">
+<div class="modal fade dashboard-modal cta-modal" id="sessionRecordModal" tabindex="-1"
+    aria-labelledby="createWidgetModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="modal-title" id="createWidgetModalLabel">Active Statics</h5>
-                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
+            <div class="modal-header">
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="title">
+                        <h3 class="modal-title">Analytics Center</h3>
                 </div>
-                <div class="card-body">
-                    <div class="block-1">
-                        <div class="row g-0">
-                            <div class="inner-wrapper">
-                                <div class="col">
-                                    <div class="row g-0 align-items-center justify-content-between">
-                                        <div class="col-12">
-                                            <div class="header">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div style="background-image: url('{{url('images/landing_page/home/all-in-one-chat.png')}}');height: 323px;background-repeat: no-repeat;background-size: contain;background-position: center; "></div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h3>Tallentor Statics</h3>
-
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lectus turpis, ultrices quis elit in, maximus interdum velit. Sed nec euismod nulla. Nam congue sagittis ultricies. Donec quis elit mattis, suscipit leo eget, egestas nulla. Nunc quis mattis turpis, eu placerat enim. Morbi libero eros, </p>
-                                                        <br>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lectus turpis, ultrices quis elit in, maximus interdum velit. Sed nec euismod nulla. Nam congue sagittis ultricies. Donec quis elit mattis, suscipit leo eget, egestas nulla. Nunc quis mattis turpis, eu placerat enim. Morbi libero eros, </p>
-                                                        <button type="button" class="btn-whatsapp" data-bs-toggle="modal" data-bs-target="#createAnalyticsModal">Active Statics</button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+            <div class="modal-body">
+                <div class="inner-wrapper">
+                    <div class="content-block">
+                        <div class="title">Session Recording</div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque dolorem
+                            aliquam pariatur odio id soluta cum, tempora consequuntur,</div>
+                        <div class="fee">$ 52.00</div>
+                        <div class="button-block">
+                            <a type="button" href="#" class="btn-modal btn-purchase">Purchase this plugin</a>
                         </div>
+                    </div>
+                    <div class="image-block">
+                        <img src="{{url('images/dashboard/popups/session_recording.png')}}" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
