@@ -376,6 +376,31 @@ class AnalyticController extends Controller
             ->limit(5)
             ->get();
 
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+
+        $total = Stat::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'landing_page']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $landingPages = $this->getLandingPages($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getLandingPages($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getLandingPages($website, $range, null, ['count', 'asc'])
+            ->first();
+
+
+
         return view('frontend.user.projects.analytics.landing_page',[
             'view' => 'overview',
             'project_id' => $project->id,
@@ -384,6 +409,7 @@ class AnalyticController extends Controller
             'range' => $range,
             'referrers' => $referrers,
             'pages' => $pages,
+            'landingPages'=>$landingPages,
             'visitorsMap' => $visitorsMap,
             'pageviewsMap' => $pageviewsMap,
             'countries' => $countries,
