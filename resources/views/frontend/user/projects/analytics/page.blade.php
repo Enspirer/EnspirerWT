@@ -90,8 +90,8 @@
                                                         <div class="row-subtitle">
                                                             <div class="subtitle">Total</div>
                                                             <div class="status">
-                                                                <div class="total-count"></div>
-                                                                <div class="total-precentage">%</div>
+                                                                <div class="total-count">{{ number_format($total->count, 0, __('.'), __(',')) }}</div>
+                                                                <div class="total-precentage">{{ number_format((($total->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
                                                             </div>
                                                         </div>
                                                         @foreach($pages as $page)
@@ -124,7 +124,7 @@
                                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                                 <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
                                                             </ul> -->
-                                                            {{ $pages->links() }}
+                                                            
                                                         </div>
                                                     @endif
                                                 </div>
