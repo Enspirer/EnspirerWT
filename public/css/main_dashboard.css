@@ -2514,6 +2514,7 @@
     position: relative;
     z-index: 2;
     top: 3px;
+    padding: 0 1rem;
 }
 
 .section-cards .cards .card {
