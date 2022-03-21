@@ -113,7 +113,7 @@
                                                                         @if($page->count != null)
                                                                             @if($total->count)
                                                                                 <div class="total-count">{{ number_format($page->count, 0, __('.'), __(',')) }}</div>
-                                                                                <div class="total-precentage">  {{ number_format((($page->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                                                <div class="total-precentage">  {{ number_format((($page->count / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
                                                                             @else
                                                                                 <div class="total-count">0</div>
                                                                                 <div class="total-precentage"> 0%</div>
@@ -129,8 +129,8 @@
                                                                 <div class="row-progress">
                                                                     <div class="progress">
                                                                         @if($page->count != null)
-                                                                            @if($total->count)
-                                                                                <div class="progress-bar" role="progressbar" style="width: {{ (($page->count / $total->count) * 100) }}%" aria-valuenow="25"
+                                                                            @if($total->count())
+                                                                                <div class="progress-bar" role="progressbar" style="width: {{ (($page->count / $total->count()) * 100) }}%" aria-valuenow="25"
                                                                                      aria-valuemin="0" aria-valuemax="100"></div>
                                                                             @else
                                                                                 <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="25"
