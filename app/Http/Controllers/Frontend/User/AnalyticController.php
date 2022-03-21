@@ -337,6 +337,11 @@ class AnalyticController extends Controller
             ->whereBetween('date', [$range['from_old'], $range['to_old']])
             ->sum('count');
 
+        $total = Stat::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer'], ['value', '<>', $website->url], ['value', '<>', '']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
         $pages = $this->getPages($website, $range, null, ['count', 'desc'])
             ->limit(5)
             ->get();
@@ -383,7 +388,8 @@ class AnalyticController extends Controller
             'totalPageviews' => $totalPageviews,
             'totalVisitorsOld' => $totalVisitorsOld,
             'totalPageviewsOld' => $totalPageviewsOld,
-            'totalReferrers' => $totalReferrers
+            'totalReferrers' => $totalReferrers,
+            'total' => $total
         ]);
     }
 
@@ -418,6 +424,11 @@ class AnalyticController extends Controller
         $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
             ->whereBetween('date', [$range['from_old'], $range['to_old']])
             ->sum('count');
+
+        $total = Stat::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer'], ['value', '<>', $website->url], ['value', '<>', '']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
 
         $pages = $this->getPages($website, $range, null, ['count', 'desc'])
             ->limit(5)
@@ -466,7 +477,8 @@ class AnalyticController extends Controller
             'totalPageviews' => $totalPageviews,
             'totalVisitorsOld' => $totalVisitorsOld,
             'totalPageviewsOld' => $totalPageviewsOld,
-            'totalReferrers' => $totalReferrers
+            'totalReferrers' => $totalReferrers,
+            'total' => $total
         ]);
     }
 
@@ -548,9 +560,87 @@ class AnalyticController extends Controller
         $ims_client = ImsClients::where('project_id',$project->id)->get();
         // dd($project->id);
 
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = Stat::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'page']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
         return view('frontend.user.projects.analytics.search_engines',[
+            'view' => 'overview',
             'project_id' => $project->id,
-            'ims_client' => $ims_client
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total
         ]);
     }
 
