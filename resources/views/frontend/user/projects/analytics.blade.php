@@ -263,8 +263,7 @@
             <div class="modal-body">
                 <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
                 <code>
-                    &lt;div id="{{$widgetlist->widget_key}}"&gt;&lt;/div&gt; <br>
-                    &lt;script src="{{url('')}}/whatsapp_widget/{{$widgetlist->id}}/tallentorw.js"&gt;&lt;/script&gt;
+                    <script data-host="{{url('')}}" data-dnt="false" src="{{url('js/script_tracker.js')}}" id="{{$widgetlist->widget_key}}" async defer></script>
                 </code>
             </div>
             <div class="modal-footer">
