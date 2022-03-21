@@ -37,7 +37,7 @@ class HomeController extends Controller
             ->where('projects.url', '=', $page['non_www_host'] ?? null)
             ->first();
 
-        dd( $page);
+        dd( $page['scheme'].'://'.$page['non_www_host'].'/');
 
 
 
