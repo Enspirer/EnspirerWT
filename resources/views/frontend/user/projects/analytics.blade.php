@@ -263,7 +263,7 @@
             <div class="modal-body">
                 <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
                 <code>
-                    <script data-host="{{url('')}}" data-dnt="false" src="{{url('js/script_tracker.js')}}" id="{{$widgetlist->widget_key}}" async defer></script>
+                    &lt;script data-host="{{url('')}}" data-dnt="false" src="{{url('js/script_tracker.js')}}" id="{{$widgetlist->widget_key}}" async defer&gt;&lt;/script&gt
                 </code>
             </div>
             <div class="modal-footer">
