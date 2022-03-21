@@ -37,6 +37,8 @@ class HomeController extends Controller
             ->where('projects.url', '=', $request->input('page') ?? null)
             ->first();
 
+        dd( $website);
+
 
 
         // If the user's account exceeded the limit
@@ -123,7 +125,6 @@ class HomeController extends Controller
             // Add the page
             $data['page'] = mb_substr((isset($page['query']) && !empty($page['query']) ? $page['path'].'?'.$page['query'] : $page['path'] ?? '/'), 0, 255);
 
-            dd( $data['page'] );
             // Get the user's geolocation
             try {
                 $geoip = (new GeoIP(storage_path('app/geoip/GeoLite2-City.mmdb')))->city($request->ip());
