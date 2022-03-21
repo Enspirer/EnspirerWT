@@ -457,7 +457,7 @@ window.addEventListener("load", function () {
     oldTitle = parent.document.title;
 
     setTimeout(function () {
-        if (parent.document.title == '' || parent.document.title == 'undefined') {
+        if (oldTitle == '' || oldTitle == 'undefined') {
             return;
         } else {
             parent.document.title = "1 New Message";
