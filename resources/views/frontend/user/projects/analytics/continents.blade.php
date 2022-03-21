@@ -90,7 +90,7 @@
                                                         <div class="row-subtitle">
                                                             <div class="subtitle">Total</div>
                                                             <div class="status">
-                                                                @if($total == null)
+                                                                @if($total->count == null)
                                                                     <div class="total-count">0</div>
                                                                     <div class="total-precentage">0%</div>
                                                                 @else
