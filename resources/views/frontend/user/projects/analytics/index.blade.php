@@ -256,38 +256,54 @@
                                         <div class="data-chart data-chart-feature">
                                             <div class="inner-wrapper">
                                                 <div class="header">
-                                                    <div class="title">Title</div>
+                                                    <div class="title">Operating systems</div>
                                                 </div>
-                                                <div class="content">
-                                                    <div class="row-title">
-                                                        <div class="title">Website</div>
-                                                        <div class="title">Visitors</div>
-                                                    </div>
-                                                    <div class="row-data">
-                                                        <div class="row-info">
-                                                            <div class="info">
-                                                                <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                                <div class="text">tallentor.com</div>
-                                                                <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
-                                                            </div>
-                                                            <div class="count">
-                                                                <div class="total-count">37</div>
-                                                            </div>
+                                                @if(count($operatingSystems) == 0)
+                                                    <p class="p-3 ms-1">No Data</p>
+                                                @else
+                                                    <div class="content">
+                                                        <div class="row-title">
+                                                            <div class="title">Name</div>
+                                                            <div class="title">Visitors</div>
                                                         </div>
-                                                        <div class="row-progress">
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                        @foreach($operatingSystems as $operatingSystem)
+                                                            <div class="row-data">
+                                                                <div class="row-info">
+                                                                    <div class="info">
+                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="text">
+                                                                            @if($operatingSystem->value)
+                                                                                {{ $operatingSystem->value }}
+                                                                            @else
+                                                                                {{ __('Unknown') }}
+                                                                            @endif
+                                                                        </div>
+                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                    </div>
+                                                                    <div class="count">
+                                                                        <div class="total-count">
+                                                                            {{ number_format($operatingSystem->count, 0, __('.'), __(',')) }}                                                                    
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-progress">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (($operatingSystem->count / $totalVisitors) * 100) }}%" aria-valuenow="25"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
-                                                </div>
-                                                <div class="footer">
-                                                    <a href="#" class="foote-link">
-                                                        <div class="text">View all</div>
-                                                        <i class="bi bi-chevron-right"></i>
-                                                    </a>
-                                                </div>
+                                                @endif
+                                                @if(count($operatingSystems) > 0)
+                                                    <div class="footer">
+                                                        <a href="#" class="foote-link">
+                                                            <div class="text">View all</div>
+                                                            <i class="bi bi-chevron-right"></i>
+                                                        </a>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -297,38 +313,62 @@
                                         <div class="data-chart data-chart-feature">
                                             <div class="inner-wrapper">
                                                 <div class="header">
-                                                    <div class="title">Title</div>
+                                                    <div class="title">Events</div>
                                                 </div>
-                                                <div class="content">
-                                                    <div class="row-title">
-                                                        <div class="title">Website</div>
-                                                        <div class="title">Visitors</div>
-                                                    </div>
-                                                    <div class="row-data">
-                                                        <div class="row-info">
-                                                            <div class="info">
-                                                                <div class="icon-primary"><i class="bi bi-globe2"></i></div>
-                                                                <div class="text">tallentor.com</div>
-                                                                <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
-                                                            </div>
-                                                            <div class="count">
-                                                                <div class="total-count">37</div>
-                                                            </div>
+                                                @if(count($events) == 0)
+                                                    <p class="p-3 ms-1">No Data</p>
+                                                @else
+                                                    <div class="content">
+                                                        <div class="row-title">
+                                                            <div class="title">Name</div>
+                                                            <div class="title">Completions</div>
                                                         </div>
-                                                        <div class="row-progress">
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                        @foreach($events as $event)
+                                                            <div class="row-data">
+                                                                <div class="row-info">
+                                                                    <div class="info">
+                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="text"> {{ explode(':', $event->value)[0] }}</div>
+                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                    </div>
+                                                                    <div class="count">
+                                                                        <div class="total-count">
+
+                                                                            @if(!empty(explode(':', $event->value)[1]) || !empty(explode(':', $event->value)[2]))
+                                                                                <span class="badge badge-secondary">
+                                                                                    @if(!empty(explode(':', $event->value)[1]))
+                                                                                        {{ number_format((explode(':', $event->value)[1] * $event->count), 2, __('.'), __(',')) }}
+                                                                                    @endif
+
+                                                                                    @if(!empty(explode(':', $event->value)[2]))
+                                                                                        {{ explode(':', $event->value)[2] }}
+                                                                                    @endif
+                                                                                </span>
+                                                                            @endif
+
+                                                                            {{ number_format($event->count, 0, __('.'), __(',')) }}
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- <div class="row-progress">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div> -->
                                                             </div>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
-                                                </div>
-                                                <div class="footer">
-                                                    <a href="#" class="foote-link">
-                                                        <div class="text">View all</div>
-                                                        <i class="bi bi-chevron-right"></i>
-                                                    </a>
-                                                </div>
+                                                @endif
+                                                @if(count($events) > 0)
+                                                    <div class="footer">
+                                                        <a href="#" class="foote-link">
+                                                            <div class="text">View all</div>
+                                                            <i class="bi bi-chevron-right"></i>
+                                                        </a>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
