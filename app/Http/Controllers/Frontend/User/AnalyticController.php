@@ -512,7 +512,7 @@ class AnalyticController extends Controller
             'ims_client' => $ims_client,
             'website' => $website,
             'range' => $range,
-            'referrer' => $referrers,
+            'referrers' => $referrers,
             'pages' => $pages,
             'visitorsMap' => $visitorsMap,
             'pageviewsMap' => $pageviewsMap,
