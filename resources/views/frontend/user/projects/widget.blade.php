@@ -219,7 +219,7 @@
                         </div>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="createWidgetModal" tabindex="-1"
+                        <div class="modal fade widget-explorer" id="createWidgetModal" tabindex="-1"
                             aria-labelledby="createWidgetModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -355,7 +355,7 @@
 </div>
 @endforeach
 
-<div class="modal fade" id="deleteFavorite" tabindex="-1" aria-labelledby="deleteFavoriteLabel" aria-hidden="true">
+<div class="modal fade dashboard-modal delete-modal" id="deleteFavorite" tabindex="-1" aria-labelledby="deleteFavoriteLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
