@@ -261,6 +261,8 @@ class AnalyticController extends Controller
             ->whereBetween('date', [$range['from'], $range['to']])
             ->first();
 
+        dd($total);
+
         $pages = $this->getPages($website, $range, null, ['count', 'desc'])
             ->limit(5)
             ->get();
