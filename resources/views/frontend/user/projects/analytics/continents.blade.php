@@ -121,7 +121,7 @@
 
                                                                         @else
                                                                             <div class="total-count">{{ number_format($continent->count, 0, __('.'), __(',')) }}</div>
-                                                                            <div class="total-precentage">{{ number_format((($continent->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                                            <div class="total-precentage">{{ number_format((($continent->count / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
 
                                                                         @endif
 

@@ -90,8 +90,8 @@
                                                         <div class="row-subtitle">
                                                             <div class="subtitle">Total</div>
                                                             <div class="status">
-                                                                <div class="total-count">{{ number_format($total->count, 0, __('.'), __(',')) }}</div>
-                                                                <div class="total-precentage">{{ number_format((($total->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                                <div class="total-count">{{ number_format($total->count(), 0, __('.'), __(',')) }}</div>
+                                                                <div class="total-precentage">{{ number_format((($total->count() / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
                                                             </div>
                                                         </div>
                                                         @foreach($cities as $city)
