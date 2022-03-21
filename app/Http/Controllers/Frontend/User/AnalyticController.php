@@ -384,7 +384,7 @@ class AnalyticController extends Controller
             $sort = ['count', 'desc', 'max'];
         }
 
-        $total = Stat::selectRaw('SUM(`count`) as `count`')
+        $total = State::selectRaw('SUM(`count`) as `count`')
             ->where([['website_id', '=', $website->id], ['name', '=', 'landing_page']])
             ->whereBetween('date', [$range['from'], $range['to']])
             ->first();
