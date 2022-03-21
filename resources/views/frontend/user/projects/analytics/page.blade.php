@@ -110,7 +110,7 @@
                                                                         <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
                                                                     </div>
                                                                     <div class="count">
-                                                                        @if($page->count)
+                                                                        @if($page->count != null)
                                                                             <div class="total-count">{{ number_format($page->count, 0, __('.'), __(',')) }}</div>
                                                                             <div class="total-precentage">  {{ number_format((($page->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
 
