@@ -53,8 +53,10 @@ return [
      */
     'max_age' => 0,
 
+    
+
     /*
      * Sets the Access-Control-Allow-Credentials header.
      */
-    'supports_credentials' => true,
+    'supports_credentials' => false,
 ];
