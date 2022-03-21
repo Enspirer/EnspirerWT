@@ -179,6 +179,18 @@
                     <div class="text">{{App\Models\Projects::where('id',$project_id)->first()->name}} Account Settings</div>
                 </a>
             </div>
+            <div class="inner-tab hidden">
+                <a href="#" class="tab-link">
+                    <div class="icon"><i class="bi bi-gear"></i></div>
+                    <div class="text">hidden</div>
+                </a>
+            </div>
+            <div class="inner-tab hidden">
+                <a href="#" class="tab-link">
+                    <div class="icon"><i class="bi bi-gear"></i></div>
+                    <div class="text">hidden</div>
+                </a>
+            </div>
         </div>
         <div class="tab {{Request::segment(3)=='analytics' ? 'active' :null }}">
             @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
@@ -206,6 +218,12 @@
                 <a href="#"class="tab-link">
                     <div class="icon"><i class="bi bi-clock-history"></i></div>
                     <div class="text">Session Recording</div>
+                </a>
+            </div>
+            <div class="inner-tab hidden">
+                <a href="#" class="tab-link">
+                    <div class="icon"><i class="bi bi-gear"></i></div>
+                    <div class="text">hidden</div>
                 </a>
             </div>
         </div>
