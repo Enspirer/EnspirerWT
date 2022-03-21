@@ -35,10 +35,6 @@ Route::post('log_checker', [HomeController::class,'log_checker'])->name('log_che
 Route::post('heatmapdata', [HomeController::class,'heatmapdata'])->name('heatmapdata');
 Route::post('session_rec', [HomeController::class,'session_rec'])->name('session_rec');
 
-Route::group([
-    'middleware' => ['cors']
-], function ($router) {
-    //Add you routes here, for example:
-    Route::post('event', [HomeController::class,'analytics_post'])->name('analytics_post');
-});
+
+Route::post('event', [HomeController::class,'analytics_post'])->name('analytics_post');
 
