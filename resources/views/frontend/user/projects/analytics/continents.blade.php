@@ -129,7 +129,7 @@
                                                                 </div>
                                                                 <div class="row-progress">
                                                                     <div class="progress">
-                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (($continent->count / $total->count) * 100) }}%" aria-valuenow="25"
+                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (($continent->count / $total->count()) * 100) }}%" aria-valuenow="25"
                                                                             aria-valuemin="0" aria-valuemax="100"></div>
                                                                     </div>
                                                                 </div>
