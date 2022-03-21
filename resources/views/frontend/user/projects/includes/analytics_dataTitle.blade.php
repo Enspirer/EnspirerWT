@@ -1,7 +1,7 @@
 <div class="data-title-bar">
-    <h2 class="title">tallentor.com</h2>
+    <h2 class="title">{{\App\Models\Projects::where('id',$project_id)->first()->url}}</h2>
     <div class="option-block">
-        <a href="#" target="_blank" class="open">
+        <a href="{{\App\Models\Projects::where('id',$project_id)->first()->url}}" target="_blank" class="open">
             <div class="text">Open</div>
             <i class="bi bi-box-arrow-up-right"></i>
         </a>
