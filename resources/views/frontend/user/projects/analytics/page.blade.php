@@ -111,8 +111,13 @@
                                                                     </div>
                                                                     <div class="count">
                                                                         @if($page->count != null)
-                                                                            <div class="total-count">{{ number_format($page->count, 0, __('.'), __(',')) }}</div>
-                                                                            <div class="total-precentage">  {{ number_format((($page->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                                            @if($total->count)
+                                                                                <div class="total-count">{{ number_format($page->count, 0, __('.'), __(',')) }}</div>
+                                                                                <div class="total-precentage">  {{ number_format((($page->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                                            @else
+                                                                                <div class="total-count">0</div>
+                                                                                <div class="total-precentage"> 0%</div>
+                                                                            @endif
 
                                                                         @else
                                                                             <div class="total-count">0</div>
