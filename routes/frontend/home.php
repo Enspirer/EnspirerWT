@@ -27,6 +27,7 @@ use App\Http\Controllers\Frontend\TermsAndPrivacyController;
 use App\Http\Controllers\Frontend\User\VisitorStatisticsController;
 use App\Http\Controllers\Frontend\User\NotificationsController;
 use App\Http\Controllers\Frontend\User\AnalyticController;
+use App\Http\Controllers\Frontend\User\IMSProController;
 
 
 
@@ -125,6 +126,10 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         Route::get('ims/visitor_statistics/{id}', [VisitorStatisticsController::class, 'index'])->name('ims.visitor_statistics');
 
+
+        Route::get('user_widget/ims_pro_index/{id}', [IMSProController::class, 'ims_pro_index'])->name('user_widget.ims_pro_index');
+
+        
 
 
         Route::get('user_widget/analytics/overview/{id}', [AnalyticController::class, 'index'])->name('user_widget.analytics.overview');
