@@ -16,7 +16,7 @@ class IMSProController extends Controller
         $ims_client = ImsClients::where('project_id',$project->id)->get();
         // dd($project->id);
 
-        return view('frontend.user.projects.ims_pro.user_widget_ims_inbox',[
+        return view('frontend.user.projects.ims_pro.user_widget_ims_index',[
             'project_id' => $project->id,
             'project' => $project,
             'ims_client' => $ims_client            
