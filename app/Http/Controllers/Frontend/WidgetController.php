@@ -39,7 +39,10 @@ class WidgetController extends Controller
             $add->settings = $all_in_one;
         }elseif($request->widget_type == 'Analytics'){
             $add->settings = $default_settings;
+        }elseif($request->widget_type == 'IMS Pro'){
+            $add->settings = $default_settings;
         }
+
 
         if($request->widget_type == 'Whatsapp Chat'){
             $add->category = 'Widgets';
@@ -47,6 +50,8 @@ class WidgetController extends Controller
             $add->category = 'Widgets';
         }elseif($request->widget_type == 'Analytics'){
             $add->category = 'Analytics';
+        }elseif($request->widget_type == 'IMS Pro'){
+            $add->category = 'Widgets';
         }
 
         $add->save();
@@ -58,6 +63,9 @@ class WidgetController extends Controller
             return redirect()->route('frontend.user.user_widget.settings', $add->id);
         }
         elseif($request->widget_type == 'Analytics'){
+            return redirect()->route('frontend.user.user_widget.settings', $add->id);
+        }
+        elseif($request->widget_type == 'IMS Pro'){
             return redirect()->route('frontend.user.user_widget.settings', $add->id);
         }
 
@@ -101,6 +109,14 @@ class WidgetController extends Controller
         }
         elseif($widget->widget_type == 'Analytics'){
             return view('frontend.user.projects.user_widget_analytics',[
+                'project' => $project,
+                'project_id' => $project->id,
+                'widget' => $widget,
+                'whatsapp_chat' => $whatsapp_chat
+            ]);
+        }
+        elseif($widget->widget_type == 'IMS Pro'){
+            return view('frontend.user.projects.user_widget_ims_pro',[
                 'project' => $project,
                 'project_id' => $project->id,
                 'widget' => $widget,
