@@ -1,7 +1,7 @@
 <div class="data-tab">
     <ul class="navbar-nav">        
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('frontend.user.user_widget.analytics', $project_id) }}">
+            <a class="nav-link" href="{{ route('frontend.user.user_widget.analytics.overview', $project_id) }}">
                 <div class="icon-primary"><i class="bi bi-clipboard-data"></i></div>
                 <div class="text">Overview</div>
                 <div class="icon-secondary"></div>

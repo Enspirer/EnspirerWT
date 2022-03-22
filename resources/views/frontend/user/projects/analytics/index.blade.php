@@ -46,6 +46,223 @@
                                         @include('frontend.user.projects.includes.analytics_dataHeader')
                                     </div>
                                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="card-body">
+                                    <div style="height: 230px">
+                                        <canvas id="trend-chart"></canvas>
+                                    </div>
+                                    <script>
+                                        'use strict';
+
+                                        document.addEventListener("DOMContentLoaded", function() {
+                                            Chart.defaults.global.defaultFontFamily = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
+
+                                            const ctx = document.querySelector('#trend-chart').getContext('2d');
+                                            const gradient1 = ctx.createLinearGradient(0, 0, 0, 300);
+                                            gradient1.addColorStop(0, 'rgba(0, 132, 255, 0.35)');
+                                            gradient1.addColorStop(1, 'rgba(0, 123, 255, 0.01)');
+
+                                            const gradient2 = ctx.createLinearGradient(0, 0, 0, 300);
+                                            gradient2.addColorStop(0, 'rgba(220, 53, 69, 0.35)');
+                                            gradient2.addColorStop(1, 'rgba(220, 53, 69, 0.01)');
+
+                                            let tooltipTitles = [
+                                                @foreach($visitorsMap as $date => $value)
+                                                    @if($range['unit'] == 'hour')
+                                                        '{{ \Carbon\Carbon::createFromFormat('H', $date)->format(__('H:i')) }}',
+                                                    @elseif($range['unit'] == 'day')
+                                                        '{{ \Carbon\Carbon::parse($date)->format(__('Y-m-d')) }}',
+                                                    @elseif($range['unit'] == 'month')
+                                                        '{{ \Carbon\Carbon::parse($date)->format(__('Y-m')) }}',
+                                                    @else
+                                                        '{{ $date }}',
+                                                    @endif
+                                                @endforeach
+                                            ];
+
+                                            const uniqueColor = '#3584ff';
+                                            const pageViewsColor = '#dc3545';
+
+                                            const lineOptions = {
+                                                pointRadius: 4,
+                                                pointHoverRadius: 6,
+                                                hitRadius: 5,
+                                                pointHoverBorderWidth: 3,
+                                                lineTension: 0,
+                                            }
+
+                                            let trendChart = new Chart(ctx, {
+                                                type: 'line',
+
+                                                data: {
+                                                    labels: [
+                                                        @foreach($pageviewsMap as $date => $value)
+                                                            @if($range['unit'] == 'hour')
+                                                                '{{ \Carbon\Carbon::createFromFormat('H', $date)->format(__('H:i')) }}',
+                                                            @elseif($range['unit'] == 'day')
+                                                                '{{ __(':month :day', ['month' => mb_substr(__(\Carbon\Carbon::parse($date)->format('F')), 0, 3), 'day' => __(\Carbon\Carbon::parse($date)->format('j'))]) }}',
+                                                            @elseif($range['unit'] == 'month')
+                                                                '{{ __(':year :month', ['year' => \Carbon\Carbon::parse($date)->format('Y'), 'month' => mb_substr(__(\Carbon\Carbon::parse($date)->format('F')), 0, 3)]) }}',
+                                                            @else
+                                                                '{{ $date }}',
+                                                            @endif
+                                                        @endforeach
+                                                    ],
+                                                    datasets: [{
+                                                        label: '{{ __('Visitors') }}',
+                                                        data: [
+                                                            @foreach($visitorsMap as $date => $value)
+                                                                {{ $value }},
+                                                            @endforeach
+                                                        ],
+                                                        backgroundColor : gradient1,
+                                                        borderColor: uniqueColor,
+                                                        pointBorderColor: uniqueColor,
+                                                        pointBackgroundColor: uniqueColor,
+                                                        pointHoverBackgroundColor: '#addfff',
+                                                        pointHoverBorderColor: uniqueColor,
+                                                        ...lineOptions
+                                                    }, {
+                                                        label: '{{ __('Pageviews') }}',
+                                                        data: [
+                                                            @foreach($pageviewsMap as $date => $value)
+                                                                {{ $value }},
+                                                            @endforeach
+                                                        ],
+                                                        backgroundColor : gradient2,
+                                                        borderColor: pageViewsColor,
+                                                        pointBorderColor: pageViewsColor,
+                                                        pointBackgroundColor: pageViewsColor,
+                                                        pointHoverBackgroundColor: '#ffc2c2',
+                                                        pointHoverBorderColor: pageViewsColor,
+                                                        ...lineOptions
+                                                    }]
+                                                },
+                                                options: {
+                                                    legend: {
+                                                        rtl: {{ (__('lang_dir') == 'rtl' ? 'true' : 'false') }},
+                                                        display: false,
+                                                        labels: {
+                                                            usePointStyle: true,
+                                                            pointStyle: 'round',
+                                                        }
+                                                    },
+                                                    tooltips: {
+                                                        rtl: {{ (__('lang_dir') == 'rtl' ? 'true' : 'false') }},
+                                                        mode: 'index',
+                                                        intersect: false,
+                                                        reverse: true,
+                                                        backgroundColor: '{{ (request()->cookie('dark_mode') == 1 ? '#FFF' : '#000') }}',
+
+                                                        xPadding: 16,
+                                                        yPadding: 16,
+
+                                                        titleFontColor: '{{ (request()->cookie('dark_mode') == 1 ? '#000' : '#FFF') }}',
+                                                        titleSpacing: 30,
+                                                        titleFontSize: 16,
+                                                        titleFontStyle: 'normal',
+                                                        titleMarginBottom: 10,
+
+                                                        bodyFontColor: '{{ (request()->cookie('dark_mode') == 1 ? '#000' : '#FFF') }}',
+                                                        bodyFontSize: 14,
+                                                        bodySpacing: 10,
+
+                                                        footerMarginTop: 10,
+                                                        footerFontStyle: 'normal',
+                                                        footerFontSize: 12,
+
+                                                        cornerRadius: 4,
+                                                        caretSize: 7,
+
+                                                        callbacks: {
+                                                            label: function (tooltipItem, data) {
+                                                                return ' ' + data.datasets[tooltipItem.datasetIndex].label + ': ' + parseFloat(data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]).format(0, 3, '{{ __(',') }}').toString();
+                                                            },
+                                                            title: function (tooltipItem) {
+                                                                return tooltipTitles[tooltipItem[0].index];
+                                                            }
+                                                        }
+                                                    },
+                                                    hover: {
+                                                        mode: 'index',
+                                                        intersect: false
+                                                    },
+                                                    scales: {
+                                                        xAxes: [{
+                                                            gridLines: {
+                                                                lineWidth: 0,
+                                                                zeroLineWidth: 1,
+                                                                tickMarkLength: 0
+                                                            },
+                                                            display: true,
+                                                            ticks: {
+                                                                maxTicksLimit: @if($range['unit'] == 'day') 12 @else 15 @endif,
+                                                                padding: 10,
+                                                            }
+                                                        }],
+                                                        yAxes: [{
+                                                            gridLines: {
+                                                                tickMarkLength: 0
+                                                            },
+                                                            display: true,
+                                                            ticks: {
+                                                                beginAtZero: true,
+                                                                maxTicksLimit: 8,
+                                                                padding: 10,
+                                                                callback: function(value) {
+                                                                    return commarize(value, 1000);
+                                                                }
+                                                            }
+                                                        }],
+                                                    },
+                                                    responsive: true,
+                                                    maintainAspectRatio: false
+                                                }
+                                            });
+
+                                            // Update the tooltip color
+                                            document.querySelector('#dark-mode').addEventListener('click', function(e) {
+                                                e.preventDefault();
+
+                                                trendChart.options.tooltips.backgroundColor = (this.dataset.darkMode == 0 ? '#FFF' : '#000');
+                                                trendChart.options.tooltips.titleFontColor = (this.dataset.darkMode == 0 ? '#000' : '#FFF');
+                                                trendChart.options.tooltips.bodyFontColor = (this.dataset.darkMode == 0 ? '#000' : '#FFF');
+                                                trendChart.update();
+                                            });
+                                        });
+                                    </script>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 <div class="row g-4 mb-4">
                                     <div class="col-6">                                    
                                         <div class="data-chart data-chart-feature">
@@ -67,10 +284,10 @@
                                                                     <div class="info">
                                                                         <div class="icon-primary"><i class="bi bi-globe2"></i></div>
                                                                         <div class="text">{{ $page->value }}</div>
-                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                        <div class="icon-secondary"><a href="http://{{ $website->url . $page->value }}" target="_blank" rel="nofollow noreferrer noopener" class="text-secondary"><i class="bi bi-box-arrow-up-right"></i></a></div>
                                                                     </div>
                                                                     <div class="count">
-                                                                        <div class="total-count"> {{ number_format($page->count, 0, __('.'), __(',')) }}</div>
+                                                                        <div class="total-count">{{ number_format($page->count, 0, __('.'), __(',')) }}</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row-progress">
@@ -86,7 +303,7 @@
 
                                                 @if(count($pages) > 0)
                                                     <div class="footer">
-                                                        <a href="#" class="foote-link">
+                                                        <a href="{{ route('frontend.user.user_widget.analytics.page', $project_id) }}" class="foote-link">
                                                             <div class="text">View all</div>
                                                             <i class="bi bi-chevron-right"></i>
                                                         </a>
@@ -113,9 +330,9 @@
                                                             <div class="row-data">
                                                                 <div class="row-info">
                                                                     <div class="info">
-                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="icon-primary"><img src="https://icons.duckduckgo.com/ip3/{{ $referrer->value }}.ico" rel="noreferrer" class="width-4 height-4"></div>
                                                                         <div class="text">{{ $referrer->value }}</div>
-                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                        <div class="icon-secondary"><a href="http://{{ $referrer->value }}" target="_blank" class="text-secondary"><i class="bi bi-box-arrow-up-right"></i></a></div>
                                                                     </div>
                                                                     <div class="count">
                                                                         <div class="total-count">{{ number_format($referrer->count, 0, __('.'), __(',')) }}</div>
@@ -133,7 +350,7 @@
                                                 @endif
                                                 @if(count($referrers) > 0)
                                                     <div class="footer">
-                                                        <a href="#" class="foote-link">
+                                                        <a href="{{ route('frontend.user.user_widget.analytics.referrers', $project_id) }}" class="foote-link">
                                                             <div class="text">View all</div>
                                                             <i class="bi bi-chevron-right"></i>
                                                         </a>
@@ -162,7 +379,7 @@
                                                             <div class="row-data">
                                                                 <div class="row-info">
                                                                     <div class="info">
-                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="icon-primary"><img src="{{ asset('/images/icons/countries/'. formatFlag($country->value)) }}.svg" class="width-4 height-4"></div>
                                                                         <div class="text">
                                                                             @if(!empty(explode(':', $country->value)[1]))
                                                                                 <a href="" class="text-body">{{ explode(':', $country->value)[1] }}</a>
@@ -170,7 +387,7 @@
                                                                                 <p class="p-3 ms-1">Unknown</p>
                                                                             @endif
                                                                         </div>
-                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                        <!-- <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div> -->
                                                                     </div>
                                                                     <div class="count">
                                                                         <div class="total-count">{{ number_format($country->count, 0, __('.'), __(',')) }}</div>
@@ -188,7 +405,7 @@
                                                 @endif
                                                 @if(count($countries) > 0)
                                                     <div class="footer">
-                                                        <a href="#" class="foote-link">
+                                                        <a href="{{ route('frontend.user.user_widget.analytics.countries', $project_id) }}" class="foote-link">
                                                             <div class="text">View all</div>
                                                             <i class="bi bi-chevron-right"></i>
                                                         </a>
@@ -215,7 +432,7 @@
                                                             <div class="row-data">
                                                                 <div class="row-info">
                                                                     <div class="info">
-                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="icon-primary"><img src="{{ asset('/images/icons/browsers/'.formatBrowser($browser->value)) }}.svg" class="width-4 height-4"></div>
                                                                         <div class="text">
                                                                             @if($browser->value)
                                                                                 {{ $browser->value }}
@@ -223,7 +440,7 @@
                                                                                 <p class="p-3 ms-1">Unknown</p>
                                                                             @endif
                                                                         </div>
-                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                        <!-- <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div> -->
                                                                     </div>
                                                                     <div class="count">
                                                                         <div class="total-count">
@@ -243,7 +460,7 @@
                                                 @endif
                                                 @if(count($browsers) > 0)
                                                     <div class="footer">
-                                                        <a href="#" class="foote-link">
+                                                        <a href="{{ route('frontend.user.user_widget.analytics.browsers', $project_id) }}" class="foote-link">
                                                             <div class="text">View all</div>
                                                             <i class="bi bi-chevron-right"></i>
                                                         </a>
@@ -270,7 +487,7 @@
                                                             <div class="row-data">
                                                                 <div class="row-info">
                                                                     <div class="info">
-                                                                        <div class="icon-primary"><i class="bi bi-globe2"></i></div>
+                                                                        <div class="icon-primary"><img src="{{ asset('/images/icons/os/'.formatOperatingSystem($operatingSystem->value)) }}.svg" class="width-4 height-4"></div>
                                                                         <div class="text">
                                                                             @if($operatingSystem->value)
                                                                                 {{ $operatingSystem->value }}
@@ -278,7 +495,7 @@
                                                                                 {{ __('Unknown') }}
                                                                             @endif
                                                                         </div>
-                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                        <!-- <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div> -->
                                                                     </div>
                                                                     <div class="count">
                                                                         <div class="total-count">
@@ -298,7 +515,7 @@
                                                 @endif
                                                 @if(count($operatingSystems) > 0)
                                                     <div class="footer">
-                                                        <a href="#" class="foote-link">
+                                                        <a href="{{ route('frontend.user.user_widget.analytics.operating_systems', $project_id) }}" class="foote-link">
                                                             <div class="text">View all</div>
                                                             <i class="bi bi-chevron-right"></i>
                                                         </a>
@@ -329,7 +546,7 @@
                                                                     <div class="info">
                                                                         <div class="icon-primary"><i class="bi bi-globe2"></i></div>
                                                                         <div class="text"> {{ explode(':', $event->value)[0] }}</div>
-                                                                        <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                        <!-- <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div> -->
                                                                     </div>
                                                                     <div class="count">
                                                                         <div class="total-count">
@@ -363,7 +580,7 @@
                                                 @endif
                                                 @if(count($events) > 0)
                                                     <div class="footer">
-                                                        <a href="#" class="foote-link">
+                                                        <a href="{{ route('frontend.user.user_widget.analytics.events', $project_id) }}" class="foote-link">
                                                             <div class="text">View all</div>
                                                             <i class="bi bi-chevron-right"></i>
                                                         </a>

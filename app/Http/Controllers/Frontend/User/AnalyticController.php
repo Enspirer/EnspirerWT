@@ -7,9 +7,13 @@ use App\Model\State;
 use Illuminate\Http\Request;
 use App\Models\Projects;
 use DB;
+use App\Recent;
 use App\Models\Widgets;
 use Modules\WidgetManager\Entities\ImsClients;
 use Carbon\Carbon;
+use Carbon\CarbonTimeZone;
+use App\Traits\DateRangeTrait;
+
 
 class AnalyticController extends Controller
 {
@@ -145,6 +149,7 @@ class AnalyticController extends Controller
 
     public function index(Request $request,$id)
     {
+        // dd($id);
 
         $project = Projects::where('id',$id)->first();
         $ims_client = ImsClients::where('project_id',$project->id)->get();
@@ -2076,6 +2081,33 @@ class AnalyticController extends Controller
     }
 
    
+    private function calcAllDates($from, $to, $unit, $format, $output = 0)
+    {
+        $from = Carbon::createFromFormat($format, $from);
+        $to = Carbon::createFromFormat($format, $to);
+
+        $possibleDateResults[$from->copy()->format($format)] = $output;
+
+        while ($from->lt($to)) {
+            if ($unit == 'year') {
+                $from = $from->addYears(1);
+            } elseif ($unit == 'month') {
+                $from = $from->addMonths(1);
+            } elseif ($unit == 'day') {
+                $from = $from->addDays(1);
+            } elseif ($unit == 'hour') {
+                $from = $from->addHour();
+            } elseif ($unit == 'second') {
+                $from = $from->addSecond();
+            }
+
+            if ($from->lte($to)) {
+                $possibleDateResults[$from->copy()->format($format)] = $output;
+            }
+        }
+
+        return $possibleDateResults;
+    }
 
 
 }
