@@ -127,7 +127,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
 
 
-        Route::get('user_widget/analytics/{id}', [AnalyticController::class, 'index'])->name('user_widget.analytics');
+        Route::get('user_widget/analytics/overview/{id}', [AnalyticController::class, 'index'])->name('user_widget.analytics.overview');
         Route::get('user_widget/analytics/page/{id}', [AnalyticController::class, 'page'])->name('user_widget.analytics.page');
         Route::get('user_widget/analytics/landing_page/{id}', [AnalyticController::class, 'landing_page'])->name('user_widget.analytics.landing_page');
         Route::get('user_widget/analytics/referrers/{id}', [AnalyticController::class, 'referrers'])->name('user_widget.analytics.referrers');

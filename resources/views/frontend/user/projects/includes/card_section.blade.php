@@ -96,7 +96,7 @@
             </a>
 
         @else
-            <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="ims-dashboard-btn">
+            <a href="{{ route('frontend.user.user_widget.analytics.overview', $project_id) }}" target="_blank" class="ims-dashboard-btn">
                 <i class="bi bi-clipboard2-pulse"></i>
                 Statistics
             </a>
@@ -104,12 +104,12 @@
         @endif
 
      
-        <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="ims-dashboard-btn ms-5">
+        <a href="{{ route('frontend.user.user_widget.analytics.overview', $project_id) }}" target="_blank" class="ims-dashboard-btn ms-5">
             <i class="bi bi-clipboard2-pulse"></i>
             Heatmaps
         </a>
 
-        <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="ims-dashboard-btn ms-5">
+        <a href="{{ route('frontend.user.user_widget.analytics.overview', $project_id) }}" target="_blank" class="ims-dashboard-btn ms-5">
             <i class="bi bi-clipboard2-pulse"></i>
             Session Recording
         </a>
@@ -204,7 +204,7 @@
             </div>
             @else
             <div class="inner-tab active">
-                <a href="{{ route('frontend.user.user_widget.analytics', $project_id) }}" target="_blank" class="tab-link">
+                <a href="{{ route('frontend.user.user_widget.analytics.overview', $project_id) }}" target="_blank" class="tab-link">
                     <div class="icon">
                         <img src="{{url('images/dashboard/tab_section/statistics.png')}}" alt="">
                     </i></div>
