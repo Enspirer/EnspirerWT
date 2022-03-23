@@ -109,6 +109,9 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('user_widget/settings/{id}', [WidgetController::class, 'user_widget_settings'])->name('user_widget.settings');
         Route::get('user_whatsapp_chat_preview/{widget_id}', [WidgetController::class, 'user_whatsapp_chat_preview'])->name('user_whatsapp_chat_preview');
         Route::post('user_widget/update', [WidgetController::class, 'user_widget_update'])->name('user_widget.update');
+        Route::post('user_widget_ims_pro_settings/update', [WidgetController::class, 'user_widget_ims_pro_settings_update'])->name('user_widget_ims_pro_settings.update');
+
+
         Route::get('user_widget/ims/{id}', [IMSController::class, 'index'])->name('user_widget.ims');
         Route::get('user_widget/ims/individual_inbox/{id}', [IMSController::class, 'ims_individual_inbox'])->name('user_widget.ims_individual_inbox');
         Route::post('user_widget/individual_inbox/store', [IMSController::class, 'ims_individual_store'])->name('ims_individual_inbox.store');
@@ -129,6 +132,12 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         Route::get('user_widget/ims_pro_index/{id}', [IMSProController::class, 'ims_pro_index'])->name('user_widget.ims_pro_index');
 
+
+        Route::post('user_widget_ims_pro_role_management/store', [IMSProController::class, 'user_widget_ims_pro_role_management_store'])->name('user_widget_ims_pro_role_management.store');
+        Route::get('user_widget_ims_pro_role_management/getdetails/{id}', [IMSProController::class, 'user_widget_ims_pro_role_management_details'])->name('user_widget_ims_pro_role_management.getdetails');
+        Route::get('user_widget_ims_pro_role_management/edit/{id}', [IMSProController::class, 'user_widget_ims_pro_role_management_edit'])->name('user_widget_ims_pro_role_management.edit');
+        Route::post('user_widget_ims_pro_role_management/update', [IMSProController::class, 'user_widget_ims_pro_role_management_update'])->name('user_widget_ims_pro_role_management.update');
+        Route::get('user_widget_ims_pro_role_management/delete/{id}', [IMSProController::class, 'user_widget_ims_pro_role_management_destroy'])->name('user_widget_ims_pro_role_management.destroy');
         
 
 

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Widgets;
 use App\Models\Projects;
 use App\Models\ProjectType;
+use App\Models\IMSProUsers;
 use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
 
 class WidgetController extends Controller
@@ -28,7 +29,6 @@ class WidgetController extends Controller
 
         $add->status = 'Enabled';        
         $add->widget_type = $request->widget_type;
-        // $add->settings = $request->settings;
         $add->widget_key = $widget_key;
         $add->load_count = $request->load_count;
         $add->project_id = $request->project_id;
@@ -38,9 +38,9 @@ class WidgetController extends Controller
         }elseif($request->widget_type == 'All-in-One Chat'){
             $add->settings = $all_in_one;
         }elseif($request->widget_type == 'Analytics'){
-            $add->settings = $default_settings;
+            $add->settings = null;
         }elseif($request->widget_type == 'IMS Pro'){
-            $add->settings = $default_settings;
+            $add->settings = null;
         }
 
 
@@ -116,11 +116,15 @@ class WidgetController extends Controller
             ]);
         }
         elseif($widget->widget_type == 'IMS Pro'){
-            return view('frontend.user.projects.user_widget_ims_pro',[
+
+            $ims_pro_users = IMSProUsers::where('project_id',$project->id)->where('widget_id',$widget->id)->get();
+
+            return view('frontend.user.projects.user_widget_ims_pro_settings',[
                 'project' => $project,
                 'project_id' => $project->id,
                 'widget' => $widget,
-                'whatsapp_chat' => $whatsapp_chat
+                'whatsapp_chat' => $whatsapp_chat,
+                'ims_pro_users' => $ims_pro_users
             ]);
         }
     
@@ -136,6 +140,44 @@ class WidgetController extends Controller
             'widget_id' => $widget_id,
             'widget_details' => $widgetDetaials
         ]);
+    }
+
+
+    public function user_widget_ims_pro_settings_update(Request $request)
+    {        
+        // dd($request); 
+
+        if($request->logo == null){
+            return back()->with([
+                'error' => 'Add a Logo'
+            ]); 
+        }
+
+        $whatsapp_number = $request->whatsapp_number;
+        $logo = $request->logo;
+        $address = $request->address;
+        $company_email = $request->company_email;
+       
+        $array = [
+            'whatsapp_number' => $whatsapp_number,
+            'logo' => $logo,
+            'address' => $address,
+            'company_email' => $company_email            
+        ];
+
+        $final_array = [$array];         
+     
+        $update = new Widgets;
+
+        $update->settings = json_encode($final_array);
+
+        Widgets::whereId($request->hidden_id)->update($update->toArray());
+
+        
+        return back()->with([
+            'success' => 'Updated Successfully'
+        ]);   
+
     }
 
     

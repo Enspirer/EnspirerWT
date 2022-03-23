@@ -42,6 +42,8 @@
         <link rel="stylesheet" href="{{url('css/aiz-core.css')}}">  
         <link rel="stylesheet" href="{{url('css/vendors.css')}}">
 
+        <link href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 
     
     <script>
@@ -100,6 +102,11 @@
         <script src="{{url('css/jquery-clockpicker.min.js')}}"></script>
         <script src="{{url('js/vendors.js')}}"></script>
         <script src="{{url('js/aiz-core.js')}}"></script>
+
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap4.min.js"></script>
 
         @if(session()->get('flash_success'))
             <script>

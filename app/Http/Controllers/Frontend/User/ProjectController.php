@@ -55,7 +55,7 @@ class ProjectController extends Controller
 
         if($request->logo == null){
             return back()->with([
-                'error' => 'Select a Logo'
+                'error' => 'Add a Logo'
             ]); 
         }
 
