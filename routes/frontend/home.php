@@ -130,7 +130,10 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('ims/visitor_statistics/{id}', [VisitorStatisticsController::class, 'index'])->name('ims.visitor_statistics');
 
 
+        Route::get('user_widget/ims_pro_media_scan/{id}', [IMSProController::class, 'ims_pro_media_scan'])->name('user_widget.ims_pro_media_scan');
         Route::get('user_widget/ims_pro_index/{id}', [IMSProController::class, 'ims_pro_index'])->name('user_widget.ims_pro_index');
+        Route::get('user_widget/ims_pro_chat_summary/{id}', [IMSProController::class, 'ims_pro_chat_summary'])->name('user_widget.ims_pro_chat_summary');
+        Route::get('user_widget/ims_pro_inquiry_summary/{id}', [IMSProController::class, 'ims_pro_inquiry_summary'])->name('user_widget.ims_pro_inquiry_summary');
 
 
         Route::post('user_widget_ims_pro_role_management/store', [IMSProController::class, 'user_widget_ims_pro_role_management_store'])->name('user_widget_ims_pro_role_management.store');

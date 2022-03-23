@@ -12,6 +12,16 @@ use Modules\WidgetManager\Entities\ImsClients;
 
 class IMSProController extends Controller
 {    
+    public function ims_pro_media_scan($id)
+    {     
+        $project = Projects::where('id',$id)->first();  
+
+        return view('frontend.user.projects.ims_pro.ims_pro_media_scan',[
+            'project_id' => $project->id,
+            'project' => $project          
+        ]);
+    }
+
     public function ims_pro_index($id)
     {     
         $project = Projects::where('id',$id)->first();           
@@ -24,6 +34,35 @@ class IMSProController extends Controller
             'ims_client' => $ims_client            
         ]);
     }
+
+    
+
+    public function ims_pro_chat_summary($id)
+    {     
+        $project = Projects::where('id',$id)->first();  
+
+        return view('frontend.user.projects.ims_pro.ims_pro_chat_summary',[
+            'project_id' => $project->id,
+            'project' => $project          
+        ]);
+    }
+
+    public function ims_pro_inquiry_summary($id)
+    {     
+        $project = Projects::where('id',$id)->first();  
+
+        return view('frontend.user.projects.ims_pro.ims_pro_inquiry_summary',[
+            'project_id' => $project->id,
+            'project' => $project          
+        ]);
+    }
+
+  
+
+
+
+
+    // *************************************** Settings ***********************************************
 
 
     public function user_widget_ims_pro_role_management_store(Request $request)
