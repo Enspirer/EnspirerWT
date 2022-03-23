@@ -21,6 +21,7 @@ class CreateIMSProUsersTable extends Migration
             $table->text('email');
             $table->text('phone_number');
             $table->text('role');
+            $table->text('password');
             $table->text('status');
             $table->timestamps();
         });

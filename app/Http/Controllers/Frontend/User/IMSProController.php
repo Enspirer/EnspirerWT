@@ -9,6 +9,7 @@ use App\Models\Widgets;
 use App\Models\IMSProUsers;
 use DataTables;
 use Modules\WidgetManager\Entities\ImsClients;
+use Illuminate\Support\Facades\Hash;
 
 class IMSProController extends Controller
 {    
@@ -69,6 +70,25 @@ class IMSProController extends Controller
     {        
         // dd($request); 
 
+        $password = $request->password;
+        $confirm_password = $request->confirm_password;
+
+        if($password != $confirm_password){
+            return back()->with([
+                'error_pw' => 'The password confirmation does not match.'
+            ]); 
+        }
+
+        $password_count = strlen($password);
+
+        if($password_count < 8){
+            return back()->with([
+                'error_pw' => 'The password must be at least 8 characters.'
+            ]);             
+        }
+
+        $hashed_password = Hash::make($password);
+       
         $add = new IMSProUsers;
 
         $add->name=$request->name;
@@ -77,6 +97,7 @@ class IMSProController extends Controller
         $add->role=$request->role;
         $add->project_id=$request->project_id;
         $add->widget_id=$request->widget_id;
+        $add->password=$hashed_password;
         $add->status='Enabled'; 
 
         $add->save();
@@ -94,9 +115,9 @@ class IMSProController extends Controller
             $data = IMSProUsers::where('widget_id',$id)->get();
             return DataTables::of($data)
                 ->addColumn('action', function($data){
-                    $button = '<button data-bs-toggle="modal" data-bs-target="#exampleModaledit'.$data->id.'" name="edit" id="'.$data->id.'" class="btn text-light table-btn me-4" style="background-color: #4195E1"><i class="fas fa-edit"></i> Edit</button>';
+                    $button = '<button data-bs-toggle="modal" data-bs-target="#exampleModaledit'.$data->id.'" name="edit" id="'.$data->id.'" class="btn btn-secondary text-light table-btn "><i class="fas fa-edit"></i> Edit</button>';
                     $button .= '<input type="hidden" name="hid_id" value="'.$data->id.'">';
-                    $button .= '<a href="'.route('frontend.user.user_widget_ims_pro_role_management.destroy', $data->id).'" name="delete" id="'.$data->id.'" class="btn text-light table-btn disapprove ms-1" style="background-color: #FF2C4B;" data-bs-toggle="modal" data-bs-target="#exampleModaldelete"><i class="fas fa-trash"></i> Delete</a>';
+                    $button .= '<a href="'.route('frontend.user.user_widget_ims_pro_role_management.destroy', $data->id).'" name="delete" id="'.$data->id.'" class="btn btn-danger text-light table-btn disapprove ms-1" data-bs-toggle="modal" data-bs-target="#exampleModaldelete"><i class="fas fa-trash"></i> Delete</a>';
                     return $button;
                 })
                 ->rawColumns(['action'])
