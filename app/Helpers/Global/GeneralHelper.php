@@ -202,5 +202,87 @@ if (! function_exists('calcGrowth')) {
 
 }
 
+if (! function_exists('formatFlag')) {
+    function formatFlag($value)
+    {
+        $country = explode(':', $value);
 
+        if (isset($country[0]) && !empty($country[0])) {
+            // Return the country code
+            return strtolower($country[0]);
+        } else {
+            return 'unknown';
+        }
+    }
+}
+if (! function_exists('formatTitle')) {
+    function formatTitle($value = null)
+    {
+        if (is_array($value)) {
+            return implode(" - ", $value);
+        }
 
+        return $value;
+    }
+}
+
+if (! function_exists('formatBrowser')) {
+    function formatBrowser($key)
+    {
+        $browsers = [
+            'Chrome' => 'chrome',
+            'Chromium' => 'chromium',
+            'Firefox' => 'firefox',
+            'Firefox Mobile' => 'firefox',
+            'Edge' => 'edge',
+            'Internet Explorer' => 'ie',
+            'Mobile Internet Explorer' => 'ie',
+            'Vivaldi' => 'vivaldi',
+            'Brave' => 'brave',
+            'Safari' => 'safari',
+            'Opera' => 'opera',
+            'Opera Mini' => 'opera',
+            'Opera Mobile' => 'opera',
+            'Opera Touch' => 'operatouch',
+            'Yandex Browser' => 'yandex',
+            'UC Browser' => 'ucbrowser',
+            'Samsung Internet' => 'samsung',
+            'QQ Browser' => 'qq',
+            'BlackBerry Browser' => 'bbbrowser',
+            'Maxthon' => 'maxthon'
+        ];
+
+        if (array_key_exists($key, $browsers)) {
+            return $browsers[$key];
+        } else {
+            return 'unknown';
+        }
+    }
+}
+
+if (! function_exists('formatOperatingSystem')) {
+    function formatOperatingSystem($key)
+    {
+        $operatingSystems = [
+            'Windows' => 'windows',
+            'Linux' => 'linux',
+            'Ubuntu' => 'ubuntu',
+            'Windows Phone' => 'windows',
+            'iOS' => 'apple',
+            'OS X' => 'apple',
+            'FreeBSD' => 'freebsd',
+            'Android' => 'android',
+            'Chrome OS' => 'chromeos',
+            'BlackBerry OS' => 'bbos',
+            'Tizen' => 'tizen',
+            'KaiOS' => 'kaios',
+            'BlackBerry Tablet OS' => 'bbos'
+        ];
+
+        if (array_key_exists($key, $operatingSystems)) {
+            return $operatingSystems[$key];
+        } else {
+            return 'unknown';
+        }
+    }
+}
