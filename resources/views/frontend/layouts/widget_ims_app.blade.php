@@ -126,6 +126,36 @@
                     'YYYY-MM-DD') + ' (predefined range: ' + label + ')');
             });
         </script> -->
+
+        <script>
+            function sideNavToggle() {
+                const section = document.querySelector('.ims__section');
+                const sideCol = section.querySelector('.ims__side-col');
+                const mainCol = section.querySelector('.ims__main-col');
+
+                sideCol.classList.toggle('active');
+                mainCol.classList.toggle('active');
+            }
+        </script>
+
+        <script>
+            function myFunction(x) {
+                const section = document.querySelector('.ims__section');
+                const sideCol = section.querySelector('.ims__side-col');
+                const mainCol = section.querySelector('.ims__main-col');
+            if (x.matches) { // If media query matches
+                sideCol.classList.add('active');
+                mainCol.classList.add('active');
+            } else {
+                sideCol.classList.remove('active');
+                mainCol.classList.remove('active');
+            }
+            }
+
+            var x = window.matchMedia("(max-width: 1600px)")
+            myFunction(x) // Call listener function at run time
+            x.addListener(myFunction) // Attach listener function on state changes
+        </script>
         
         @include('includes.partials.ga')
     </body>
