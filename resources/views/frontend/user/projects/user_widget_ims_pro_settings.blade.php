@@ -75,78 +75,96 @@
                             </div>
                            
                             <div class="row g-0">
-                                <div class="col-6">
-                                    <div class="card p-5" style="border-radius:20px;">
-                                        <div class="content">
-                                           
-                                            <form action="{{route('frontend.user.user_widget_ims_pro_settings.update')}}" class="row g-4" method="post" enctype="multipart/form-data" >
-                                                {{csrf_field()}}
+                                <form action="{{route('frontend.user.user_widget_ims_pro_settings.update')}}" class="row" method="post" enctype="multipart/form-data" >
+                                {{csrf_field()}}
 
-                                                @if($widget->settings == null)
-                                                    <div class="col-12">
-                                                        <label for="whatsapp_number" class="form-label" style="font-size:14px;">Whatsapp Number</label>
-                                                        <input type="text" class="form-control" style="font-size:14px;" name="whatsapp_number" id="whatsapp_number" required>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">  
-                                                            <label style="font-size:14px;" class="mb-2" style="font-size:14px;">Logo</label>                                                  
-                                                            <div class="input-group" data-toggle="aizuploader" data-type="image">
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                    <div class="col-6">
+                                        <div class="card p-5" style="border-radius:20px;">
+                                            <div class="content">
+                                                
+                                                    @if($widget->settings == null)
+                                                        <div class="col-12">
+                                                            <label for="whatsapp_number" class="form-label" style="font-size:14px;">Whatsapp Number</label>
+                                                            <input type="text" class="form-control" style="font-size:14px;" name="whatsapp_number" id="whatsapp_number" required>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-group">  
+                                                                <label style="font-size:14px;" class="mb-2" style="font-size:14px;">Logo</label>                                                  
+                                                                <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                                                    <div class="input-group-prepend">
+                                                                        <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                                    </div>
+                                                                    <div class="form-control file-amount">Choose File</div>
+                                                                    <input type="hidden" id="logo" name="logo" class="selected-files" >
                                                                 </div>
-                                                                <div class="form-control file-amount">Choose File</div>
-                                                                <input type="hidden" id="logo" name="logo" class="selected-files" >
-                                                            </div>
-                                                            <div class="file-preview box sm">
-                                                            </div>
-                                                        </div> 
-                                                    </div> 
-                                                    <div class="col-12">
-                                                        <label for="address" class="form-label" style="font-size:14px;">Address</label>
-                                                        <input type="text" class="form-control" style="font-size:14px;" name="address" id="address" required>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <label for="company_email" class="form-label" style="font-size:14px;">Company Email</label>
-                                                        <input type="email" class="form-control" style="font-size:14px;" name="company_email" id="company_email" required>
-                                                    </div>
-                                                @else
-                                                    <div class="col-12">
-                                                        <label for="whatsapp_number" class="form-label" style="font-size:14px;">Whatsapp Number</label>
-                                                        <input type="text" class="form-control" style="font-size:14px;" name="whatsapp_number" value="{{ json_decode($widget->settings)[0]->whatsapp_number }}" id="whatsapp_number" required>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">  
-                                                            <label style="font-size:14px;" class="mb-2" style="font-size:14px;">Logo</label>                                                  
-                                                            <div class="input-group" data-toggle="aizuploader" data-type="image">
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                                <div class="file-preview box sm">
                                                                 </div>
-                                                                <div class="form-control file-amount">Choose File</div>
-                                                                <input type="hidden" id="logo" name="logo" value="{{ json_decode($project->settings)->logo }}" class="selected-files" >
-                                                            </div>
-                                                            <div class="file-preview box sm">
-                                                            </div>
+                                                            </div> 
                                                         </div> 
-                                                    </div> 
-                                                    <div class="col-12">
-                                                        <label for="address" class="form-label" style="font-size:14px;">Address</label>
-                                                        <input type="text" class="form-control" style="font-size:14px;" name="address" value="{{ json_decode($widget->settings)[0]->address }}" id="address" required>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <label for="company_email" class="form-label" style="font-size:14px;">Company Email</label>
-                                                        <input type="email" class="form-control" style="font-size:14px;" name="company_email" value="{{ json_decode($widget->settings)[0]->company_email }}" id="company_email" required>
-                                                    </div>
-                                                @endif                                               
-                                                                                                
-                                                <div class="col-12 mt-5">
-                                                    <input type="hidden" class="form-control" name="hidden_id" value="{{ $widget->id}}">                                                    
-                                                    <button type="submit" class="btn btn-success" style="font-size:14px;">Update</button>
-                                                </div>
+                                                    
+                                                    @else
+                                                        <div class="col-12">
+                                                            <label for="whatsapp_number" class="form-label" style="font-size:14px;">Whatsapp Number</label>
+                                                            <input type="text" class="form-control" style="font-size:14px;" name="whatsapp_number" value="{{ json_decode($widget->settings)[0]->whatsapp_number }}" id="whatsapp_number" required>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-group">  
+                                                                <label style="font-size:14px;" class="mb-2" style="font-size:14px;">Logo</label>                                                  
+                                                                <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                                                    <div class="input-group-prepend">
+                                                                        <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                                    </div>
+                                                                    <div class="form-control file-amount">Choose File</div>
+                                                                    <input type="hidden" id="logo" name="logo" value="{{ json_decode($widget->settings)[0]->logo }}" class="selected-files" >
+                                                                </div>
+                                                                <div class="file-preview box sm">
+                                                                </div>
+                                                            </div> 
+                                                        </div>                                                     
+                                                    @endif    
+                                            </div>
+                                        </div>                                    
+                                    </div>
 
-                                            </form>
-                                        </div>
-                                    </div>                                    
-                                </div>
+                                    <div class="col-6">
+                                        <div class="card p-5" style="border-radius:20px;">
+                                            <div class="content">
+                                                                                    
+
+                                                    @if($widget->settings == null)
+                                                        
+                                                        <div class="col-12">
+                                                            <label for="address" class="form-label" style="font-size:14px;">Address</label>
+                                                            <input type="text" class="form-control" style="font-size:14px;" name="address" id="address" required>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+                                                            <label for="company_email" class="form-label" style="font-size:14px;">Company Email</label>
+                                                            <input type="email" class="form-control" style="font-size:14px;" name="company_email" id="company_email" required>
+                                                        </div>
+                                                    @else
+                                                    
+                                                        <div class="col-12">
+                                                            <label for="address" class="form-label" style="font-size:14px;">Address</label>
+                                                            <input type="text" class="form-control" style="font-size:14px;" name="address" value="{{ json_decode($widget->settings)[0]->address }}" id="address" required>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+                                                            <label for="company_email" class="form-label" style="font-size:14px;">Company Email</label>
+                                                            <input type="email" class="form-control" style="font-size:14px;" name="company_email" value="{{ json_decode($widget->settings)[0]->company_email }}" id="company_email" required>
+                                                        </div>
+                                                    @endif                                               
+                                                                                                              
+                                            </div>
+                                        </div>                                    
+                                    </div>
+
+                                    <div class="col-12 mt-1">
+                                        <input type="hidden" class="form-control" name="hidden_id" value="{{ $widget->id}}">                                                    
+                                        <button type="submit" class="btn btn-success" style="font-size:14px;">Update</button>
+                                    </div>
+
+                                </form>
+
+
                             </div>
                         </div>
                         <div class="tab-pane fade" id="role" role="tabpanel"
@@ -158,12 +176,13 @@
                                 </div>
                             </div>
                             <div class="row g-0">
-                                <div class="col-6">
-                                    <div class="card p-5" style="border-radius:20px;">
-                                        <div class="content"> 
-                                            <form action="{{route('frontend.user.user_widget_ims_pro_role_management.store')}}" class="row g-4" method="post" enctype="multipart/form-data" >
-                                            {{csrf_field()}}
-                                        
+                                <form action="{{route('frontend.user.user_widget_ims_pro_role_management.store')}}" class="row g-4" method="post" enctype="multipart/form-data" >
+                                {{csrf_field()}}
+
+                                    <div class="col-6">
+                                        <div class="card p-5" style="border-radius:20px;">
+                                            <div class="content"> 
+
                                                 <div class="col-12">
                                                     <label for="name" class="form-label"  style="font-size:14px;">Name</label>
                                                     <input type="text" class="form-control" name="name" style="font-size:14px;" id="name" required>
@@ -171,12 +190,21 @@
                                                 <div class="col-12 mt-4">
                                                     <label for="email" class="form-label" style="font-size:14px;">Email</label>
                                                     <input type="email" class="form-control" name="email" style="font-size:14px;" id="email" required>
-                                                </div>
-                                                <div class="col-12 mt-4">
+                                                </div>                                                                                    
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="card p-5" style="border-radius:20px;">
+                                            <div class="content"> 
+                                                                                                 
+                                                <div class="col-12">
                                                     <label for="phone_number" class="form-label" style="font-size:14px;">Phone Number</label>
                                                     <input type="text" class="form-control" style="font-size:14px;" name="phone_number" id="phone_number" required>
                                                 </div>
-                                                    
+                                                        
                                                 <div class="col-12 mt-4">
                                                     <label for="role" class="form-label" style="font-size:14px;">Role</label>
                                                     <select id="role" class="form-select" name="role" required>
@@ -185,20 +213,20 @@
                                                         <option style="font-size:14px;" value="Agent">Agent</option>
                                                         <option style="font-size:14px;" value="Manager">Manager</option>                                                       
                                                     </select>                                                
-                                                </div>
+                                                </div>                                                                                                
 
-                                                <div class="col-12 mt-4">
-                                                    <input type="hidden" class="form-control" name="project_id" value="{{ $project->id}}">      
-                                                    <input type="hidden" class="form-control" name="widget_id" value="{{ $widget->id}}">          
-                                                    <button type="submit" class="btn btn-primary" style="font-size:14px;">Submit</button>
-                                                </div> 
-                                            </form>                                                
-
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
 
+                                    <div class="col-12 mt-4">
+                                        <input type="hidden" class="form-control" name="project_id" value="{{ $project->id}}">      
+                                        <input type="hidden" class="form-control" name="widget_id" value="{{ $widget->id}}">          
+                                        <button type="submit" class="btn btn-primary" style="font-size:14px;">Submit</button>
+                                    </div> 
+                                </form> 
+
+                            </div>
 
                             <div class="row">
                                 <div class="col">
@@ -299,7 +327,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabeldelete">Delete Category</h5>
+                    <h5 class="modal-title" id="exampleModalLabeldelete">Delete</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
