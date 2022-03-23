@@ -176,7 +176,7 @@
             <div class="inner-tab active">
                 <a href="{{ route('frontend.user.project_settings', $project_id) }}" class="tab-link">
                     <div class="icon"><i class="bi bi-gear"></i></div>
-                    <div class="text">{{App\Models\Projects::where('id',$project_id)->first()->name}} Account Settings</div>
+                    <div class="text">Widget Settings</div>
                 </a>
             </div>
             <div class="inner-tab hidden">
