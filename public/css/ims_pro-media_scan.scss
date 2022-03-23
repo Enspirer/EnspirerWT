@@ -1,0 +1,71 @@
+.qr-section {
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .content-block {
+        padding: 2rem;
+
+        .title {
+            font-size: 22px;
+            margin-bottom: 1rem;
+        }
+
+        .steps {
+            list-style: none;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+
+            li {
+                position: relative;
+                margin-bottom: 0.5rem;
+
+                .no {
+                    font-size: 18px;
+                    font-weight: 300;
+                    display: inline-block;
+                    width: 30px;
+                    text-align: right;
+                    margin-right: 6px;
+                }
+
+                .text {
+                    display: inline-block;
+                    font-size: 18px;
+                    font-weight: 300;
+                    margin: 0;
+
+                    span {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .text {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .qr-section-link {
+            font-size: 18px;
+            font-weight: 300;
+            text-decoration: none;
+            color: #44BC8E;
+        }
+    }
+
+    .qr-code {
+        img {
+            width: 100%;
+        }
+    }
+}

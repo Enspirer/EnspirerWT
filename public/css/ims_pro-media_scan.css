@@ -1,0 +1,59 @@
+.qr-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.qr-section .content-block {
+  padding: 2rem;
+}
+.qr-section .content-block .title {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+.qr-section .content-block .steps {
+  list-style: none;
+  padding-left: 3rem;
+  margin-bottom: 1.5rem;
+}
+.qr-section .content-block .steps li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.qr-section .content-block .steps li .no {
+  font-size: 18px;
+  font-weight: 300;
+  display: inline-block;
+  width: 30px;
+  text-align: right;
+  margin-right: 6px;
+}
+.qr-section .content-block .steps li .text {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+}
+.qr-section .content-block .steps li .text span {
+  font-size: 18px;
+  font-weight: 700;
+}
+.qr-section .content-block .text {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.qr-section .content-block .qr-section-link {
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #44BC8E;
+}
+.qr-section .qr-code img {
+  width: 100%;
+}/*# sourceMappingURL=ims_pro-media_scan.css.map */
