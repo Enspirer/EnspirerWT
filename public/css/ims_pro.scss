@@ -75,7 +75,7 @@
 .section-chatWindow {
 
     .chat-list-window {
-        height: 100%;
+        height: calc(100vh - 214px);
 
         .filter-section {
             display: flex;
@@ -178,97 +178,101 @@
             background-color: #fff;
             padding: 1rem 0;
             border-radius: 10px;
-            height: calc(100% - 65px);
 
-            .list-group {
-                .list-group-item {
-                    padding: 12px 16px;
+            .inner-wrapper {
+                overflow-y: scroll;
+                height: calc(100vh - 311px);
 
-                    &.active {
-                        background: linear-gradient(to right, #00AEEF, #1B3D6B);
+                .list-group {
+                    .list-group-item {
+                        padding: 12px 16px;
 
-                        .name,
-                        .contact,
-                        .active-status,
-                        .message {
-                            color: #fff !important;
+                        &.active {
+                            background: linear-gradient(to right, #00AEEF, #1B3D6B);
+
+                            .name,
+                            .contact,
+                            .active-status,
+                            .message {
+                                color: #fff !important;
+                            }
                         }
-                    }
 
-                    .list-link {
-                        text-decoration: none;
+                        .list-link {
+                            text-decoration: none;
 
-                        .header {
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            justify-content: space-between;
-
-                            .profile {
+                            .header {
                                 display: flex;
                                 flex-direction: row;
                                 align-items: center;
-                                gap: 10px;
+                                justify-content: space-between;
 
-                                .indicator {
-                                    width: 8px;
-                                    height: 8px;
-                                    border-radius: 50%;
-                                    background-color: #fff;
-                                    border: 1px solid #707070;
+                                .profile {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    gap: 10px;
 
-                                    &.active {
-                                        background-color: #33CC0D;
-                                        border-color: #33CC0D;
+                                    .indicator {
+                                        width: 8px;
+                                        height: 8px;
+                                        border-radius: 50%;
+                                        background-color: #fff;
+                                        border: 1px solid #707070;
+
+                                        &.active {
+                                            background-color: #33CC0D;
+                                            border-color: #33CC0D;
+                                        }
+                                    }
+
+                                    .image-block {
+                                        position: relative;
+
+                                        img {
+                                            width: 40px;
+                                            height: 40px;
+                                            border-radius: 50%;
+                                            object-fit: cover;
+                                        }
+
+                                        .chat-client {
+                                            position: absolute;
+                                            width: 20px;
+                                            height: 20px;
+                                            border-radius: 50%;
+                                            object-fit: cover;
+                                            bottom: 0;
+                                            right: -5px;
+                                        }
+                                    }
+
+                                    .status-block {
+                                        .name {
+                                            font-size: 16px;
+                                            font-weight: 300;
+                                            color: #464646;
+                                        }
+
+                                        .contact {
+                                            font-size: 12px;
+                                            color: #464646;
+                                        }
                                     }
                                 }
 
-                                .image-block {
-                                    position: relative;
-
-                                    img {
-                                        width: 40px;
-                                        height: 40px;
-                                        border-radius: 50%;
-                                        object-fit: cover;
-                                    }
-
-                                    .chat-client {
-                                        position: absolute;
-                                        width: 20px;
-                                        height: 20px;
-                                        border-radius: 50%;
-                                        object-fit: cover;
-                                        bottom: 0;
-                                        right: -5px;
-                                    }
-                                }
-
-                                .status-block {
-                                    .name {
-                                        font-size: 16px;
-                                        font-weight: 300;
-                                        color: #464646;
-                                    }
-
-                                    .contact {
-                                        font-size: 12px;
-                                        color: #464646;
-                                    }
+                                .active-status {
+                                    font-size: 12px;
+                                    color: #464646;
                                 }
                             }
 
-                            .active-status {
-                                font-size: 12px;
-                                color: #464646;
+                            .message {
+                                font-size: 14px;
+                                font-weight: 300;
+                                color: #707070;
+                                margin: 1rem 0;
                             }
-                        }
-
-                        .message {
-                            font-size: 14px;
-                            font-weight: 300;
-                            color: #707070;
-                            margin: 1rem 0;
                         }
                     }
                 }
@@ -281,7 +285,7 @@
         width: 100%;
         background-color: #fff;
         border-radius: 10px;
-        height: 100%;
+        height: calc(100vh - 214px);
 
         .header {
             display: flex;
@@ -336,7 +340,7 @@
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    gap: 30px;
+                    gap: 25px;
 
                     .nav-item {
                         .nav-link {
@@ -381,22 +385,26 @@
 
         .body {
             padding: 1rem 2rem;
+            position: relative;
+
+            .date {
+                position: absolute;
+                top: 1rem;
+                left: 50%;
+                transform: translate(-50%, 0);
+                font-size: 12px;
+                font-weight: 300;
+                color: #707070;
+                background-color: #F4F4F4;
+                padding: 6px 12px;
+                border-radius: 30px;
+                z-index: 1;
+            }
 
             .inner-wrapper {
                 position: relative;
-
-                .date {
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    transform: translate(-50%, 0);
-                    font-size: 12px;
-                    font-weight: 300;
-                    color: #707070;
-                    background-color: #F4F4F4;
-                    padding: 6px 12px;
-                    border-radius: 30px;
-                }
+                overflow-y: scroll;
+                height: calc(100vh - 406px);
 
                 .message-block {
                     position: relative;
@@ -508,13 +516,14 @@
         }
 
         .footer {
-            position: absolute;
-            bottom: 0;
             width: 100%;
             display: flex;
             flex-direction: row;
             gap: 10px;
             padding: 1rem;
+            background-color: #fff;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
 
             .msg-input {
                 flex: 1 1 100%;
@@ -552,10 +561,11 @@
         background-color: #fff;
         border-radius: 10px;
         padding: 1rem;
-        height: 100%;
+        height: calc(100vh - 214px);
 
         .header {
             position: relative;
+            margin-bottom: 1rem;
             border-bottom: 1px solid #ccc;
 
             .status {
@@ -618,199 +628,205 @@
             }
         }
 
-        .info-block {
-            padding: 1rem 0;
-            border-bottom: 1px solid #ccc;
+        .inner-wrapper {
+            height: calc(100vh - 450px);
+            overflow-y: scroll;
 
-            .table {
-                .icons {
-                    .bi {
-                        color: #707070;
+            .info-block {
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #ccc;
+
+                .table {
+                    .icons {
+                        .bi {
+                            color: #707070;
+                        }
                     }
-                }
 
-                .title {
-                    font-size: 14px;
-                    font-weight: 300;
-                }
-
-                .inputs {
-                    .table-input {
-                        background-color: transparent;
-                        border: none;
+                    .title {
                         font-size: 14px;
                         font-weight: 300;
-                        color: #000;
+                    }
+
+                    .inputs {
+                        .table-input {
+                            background-color: transparent;
+                            border: none;
+                            font-size: 14px;
+                            font-weight: 300;
+                            color: #000;
+                        }
                     }
                 }
-            }
 
-            .btn-add-property {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 10px;
-                padding: 5px 10px;
-                width: fit-content;
-                text-decoration: none;
+                .btn-add-property {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 5px 10px;
+                    width: fit-content;
+                    text-decoration: none;
 
-                .bi {
-                    font-size: 18px;
-                    color: #017FFA;
-                }
+                    .bi {
+                        font-size: 18px;
+                        color: #017FFA;
+                    }
 
-                .text {
-                    font-size: 14px;
-                    font-weight: 300;
-                    color: #017FFA;
-                }
-            }
-        }
-
-        .optioin-block {
-            padding: 1rem 0;
-
-            .table {
-                .icons {
-                    color: #707070;
-
-                    &.blue-icon {
+                    .text {
+                        font-size: 14px;
+                        font-weight: 300;
                         color: #017FFA;
                     }
                 }
+            }
 
-                .title {
-                    font-size: 14px;
-                    font-weight: 300;
-                    color: #707070;
+            .optioin-block {
+                padding: 1rem 0;
 
-                    .table-link {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        gap: 15px;
-                        text-decoration: none;
+                .table {
+                    .icons {
+                        color: #707070;
 
-                        .bi {
+                        &.blue-icon {
                             color: #017FFA;
                         }
-
-                        .text {
-                            font-size: 14px;
-                            font-weight: 300;
-                        }
                     }
-                }
 
-                .inputs {
+                    .title {
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #707070;
 
-                    .dropdown {
-                        .assign-dropdown {
+                        .table-link {
                             display: flex;
                             flex-direction: row;
                             align-items: center;
+                            gap: 15px;
                             text-decoration: none;
-                            gap: 10px;
-                            padding: 5px 10px;
-                            border-radius: 3px;
-                            background-color: #FEBABA;
+
+                            .bi {
+                                color: #017FFA;
+                            }
 
                             .text {
                                 font-size: 14px;
                                 font-weight: 300;
-                                color: #ae0000;
                             }
+                        }
+                    }
+
+                    .inputs {
+
+                        .dropdown {
+                            .assign-dropdown {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                                text-decoration: none;
+                                gap: 10px;
+                                padding: 5px 10px;
+                                border-radius: 3px;
+                                background-color: #FEBABA;
+
+                                .text {
+                                    font-size: 14px;
+                                    font-weight: 300;
+                                    color: #ae0000;
+                                }
+
+                                .bi {
+                                    color: #ae0000;
+                                }
+                            }
+
+                            .dropdown-menu {
+                                top: 45px !important;
+                            }
+                        }
+
+                        .table-input {
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            color: #000;
+                            font-size: 12px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    .role {
+                        position: relative;
+
+                        .btn-add-role {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 3px;
+                            background-color: #BADCFE;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
 
                             .bi {
-                                color: #ae0000;
+                                color: #017FFA;
                             }
-                        }
 
-                        .dropdown-menu {
-                            top: 45px !important;
-                        }
-                    }
+                            &:hover {
+                                .text {
+                                    display: block;
+                                }
+                            }
 
-                    .table-input {
-                        width: 100%;
-                        background-color: transparent;
-                        border: none;
-                        color: #000;
-                        font-size: 12px;
-                        font-weight: 300;
-                    }
-                }
-
-                .role {
-                    position: relative;
-
-                    .btn-add-role {
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 3px;
-                        background-color: #BADCFE;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-
-                        .bi {
-                            color: #017FFA;
-                        }
-
-                        &:hover {
                             .text {
-                                display: block;
-                            }
-                        }
-
-                        .text {
-                            font-size: 10px;
-                            font-weight: 300;
-                            color: #017FFA;
-                            background-color: #fff;
-                            padding: 6px 12px;
-                            border-radius: 30px;
-                            white-space: nowrap;
-                            position: absolute;
-                            top: -30px;
-                            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-                            display: none;
-
-                            &::after {
-                                content: "";
-                                width: 8px;
-                                height: 8px;
+                                font-size: 10px;
+                                font-weight: 300;
+                                color: #017FFA;
                                 background-color: #fff;
+                                padding: 6px 12px;
+                                border-radius: 30px;
+                                white-space: nowrap;
                                 position: absolute;
-                                bottom: -3px;
-                                left: 50%;
-                                transform: translate(-50%, 0) rotate(45deg);
+                                top: -30px;
+                                filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+                                display: none;
+
+                                &::after {
+                                    content: "";
+                                    width: 8px;
+                                    height: 8px;
+                                    background-color: #fff;
+                                    position: absolute;
+                                    bottom: -3px;
+                                    left: 50%;
+                                    transform: translate(-50%, 0) rotate(45deg);
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            .btn-report-download {
-                padding: 12px 16px;
-                border-radius: 30px;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                gap: 15px;
-                background: linear-gradient(to right, #00AEEF, #1B3D6B);
-                text-decoration: none;
+                .btn-report-download {
+                    padding: 12px 16px;
+                    border-radius: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                    background: linear-gradient(to right, #00AEEF, #1B3D6B);
+                    text-decoration: none;
 
-                .bi {
-                    font-size: 18px;
-                    color: #fff;
-                }
+                    .bi {
+                        font-size: 18px;
+                        color: #fff;
+                    }
 
-                .text {
-                    font-size: 14px;
-                    color: #fff;
+                    .text {
+                        font-size: 14px;
+                        color: #fff;
+                    }
                 }
             }
         }

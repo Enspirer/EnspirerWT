@@ -59,7 +59,7 @@
 }
 
 .section-chatWindow .chat-list-window {
-  height: 100%;
+  height: calc(100vh - 214px);
 }
 .section-chatWindow .chat-list-window .filter-section {
   display: flex;
@@ -147,57 +147,60 @@
   background-color: #fff;
   padding: 1rem 0;
   border-radius: 10px;
-  height: calc(100% - 65px);
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper {
+  overflow-y: scroll;
+  height: calc(100vh - 311px);
+}
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item {
   padding: 12px 16px;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item.active {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item.active {
   background: linear-gradient(to right, #00AEEF, #1B3D6B);
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item.active .name,
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item.active .contact,
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item.active .active-status,
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item.active .message {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item.active .name,
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item.active .contact,
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item.active .active-status,
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item.active .message {
   color: #fff !important;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link {
   text-decoration: none;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header .profile {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header .profile .indicator {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .indicator {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: #fff;
   border: 1px solid #707070;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header .profile .indicator.active {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .indicator.active {
   background-color: #33CC0D;
   border-color: #33CC0D;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header .profile .image-block {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .image-block {
   position: relative;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header .profile .image-block img {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .image-block img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header .profile .image-block .chat-client {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .image-block .chat-client {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -207,20 +210,20 @@
   bottom: 0;
   right: -5px;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header .profile .status-block .name {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .name {
   font-size: 16px;
   font-weight: 300;
   color: #464646;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header .profile .status-block .contact {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .contact {
   font-size: 12px;
   color: #464646;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .header .active-status {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .active-status {
   font-size: 12px;
   color: #464646;
 }
-.section-chatWindow .chat-list-window .chat-list .list-group .list-group-item .list-link .message {
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .message {
   font-size: 14px;
   font-weight: 300;
   color: #707070;
@@ -231,7 +234,7 @@
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
-  height: 100%;
+  height: calc(100vh - 214px);
 }
 .section-chatWindow .chat-window .header {
   display: flex;
@@ -277,7 +280,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
 }
 .section-chatWindow .chat-window .header .option-block .navbar-nav .nav-item .nav-link .bi {
   font-size: 20px;
@@ -305,13 +308,11 @@
 }
 .section-chatWindow .chat-window .body {
   padding: 1rem 2rem;
-}
-.section-chatWindow .chat-window .body .inner-wrapper {
   position: relative;
 }
-.section-chatWindow .chat-window .body .inner-wrapper .date {
+.section-chatWindow .chat-window .body .date {
   position: absolute;
-  top: 0;
+  top: 1rem;
   left: 50%;
   transform: translate(-50%, 0);
   font-size: 12px;
@@ -320,6 +321,12 @@
   background-color: #F4F4F4;
   padding: 6px 12px;
   border-radius: 30px;
+  z-index: 1;
+}
+.section-chatWindow .chat-window .body .inner-wrapper {
+  position: relative;
+  overflow-y: scroll;
+  height: calc(100vh - 406px);
 }
 .section-chatWindow .chat-window .body .inner-wrapper .message-block {
   position: relative;
@@ -400,13 +407,14 @@
   margin-left: 20px;
 }
 .section-chatWindow .chat-window .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: 10px;
   padding: 1rem;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .section-chatWindow .chat-window .footer .msg-input {
   flex: 1 1 100%;
@@ -439,10 +447,11 @@
   background-color: #fff;
   border-radius: 10px;
   padding: 1rem;
-  height: 100%;
+  height: calc(100vh - 214px);
 }
 .section-chatWindow .info-window .header {
   position: relative;
+  margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
 }
 .section-chatWindow .info-window .header .status {
@@ -498,25 +507,29 @@
 .section-chatWindow .info-window .header .chat-client .text.green {
   color: #00BF4A;
 }
-.section-chatWindow .info-window .info-block {
-  padding: 1rem 0;
+.section-chatWindow .info-window .inner-wrapper {
+  height: calc(100vh - 450px);
+  overflow-y: scroll;
+}
+.section-chatWindow .info-window .inner-wrapper .info-block {
+  padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
 }
-.section-chatWindow .info-window .info-block .table .icons .bi {
+.section-chatWindow .info-window .inner-wrapper .info-block .table .icons .bi {
   color: #707070;
 }
-.section-chatWindow .info-window .info-block .table .title {
+.section-chatWindow .info-window .inner-wrapper .info-block .table .title {
   font-size: 14px;
   font-weight: 300;
 }
-.section-chatWindow .info-window .info-block .table .inputs .table-input {
+.section-chatWindow .info-window .inner-wrapper .info-block .table .inputs .table-input {
   background-color: transparent;
   border: none;
   font-size: 14px;
   font-weight: 300;
   color: #000;
 }
-.section-chatWindow .info-window .info-block .btn-add-property {
+.section-chatWindow .info-window .inner-wrapper .info-block .btn-add-property {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -527,65 +540,66 @@
   width: fit-content;
   text-decoration: none;
 }
-.section-chatWindow .info-window .info-block .btn-add-property .bi {
+.section-chatWindow .info-window .inner-wrapper .info-block .btn-add-property .bi {
   font-size: 18px;
   color: #017FFA;
 }
-.section-chatWindow .info-window .info-block .btn-add-property .text {
+.section-chatWindow .info-window .inner-wrapper .info-block .btn-add-property .text {
   font-size: 14px;
   font-weight: 300;
   color: #017FFA;
 }
-.section-chatWindow .info-window .optioin-block {
+.section-chatWindow .info-window .inner-wrapper .optioin-block {
   padding: 1rem 0;
 }
-.section-chatWindow .info-window .optioin-block .table .icons {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .icons {
   color: #707070;
 }
-.section-chatWindow .info-window .optioin-block .table .icons.blue-icon {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .icons.blue-icon {
   color: #017FFA;
 }
-.section-chatWindow .info-window .optioin-block .table .title {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .title {
   font-size: 14px;
   font-weight: 300;
   color: #707070;
 }
-.section-chatWindow .info-window .optioin-block .table .title .table-link {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .title .table-link {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 15px;
   text-decoration: none;
 }
-.section-chatWindow .info-window .optioin-block .table .title .table-link .bi {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .title .table-link .bi {
   color: #017FFA;
 }
-.section-chatWindow .info-window .optioin-block .table .title .table-link .text {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .title .table-link .text {
   font-size: 14px;
   font-weight: 300;
 }
-.section-chatWindow .info-window .optioin-block .table .inputs .dropdown .assign-dropdown {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .inputs .dropdown .assign-dropdown {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   text-decoration: none;
   gap: 10px;
   padding: 5px 10px;
   border-radius: 3px;
   background-color: #FEBABA;
 }
-.section-chatWindow .info-window .optioin-block .table .inputs .dropdown .assign-dropdown .text {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .inputs .dropdown .assign-dropdown .text {
   font-size: 14px;
   font-weight: 300;
   color: #ae0000;
 }
-.section-chatWindow .info-window .optioin-block .table .inputs .dropdown .assign-dropdown .bi {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .inputs .dropdown .assign-dropdown .bi {
   color: #ae0000;
 }
-.section-chatWindow .info-window .optioin-block .table .inputs .dropdown .dropdown-menu {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .inputs .dropdown .dropdown-menu {
   top: 45px !important;
 }
-.section-chatWindow .info-window .optioin-block .table .inputs .table-input {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .inputs .table-input {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -593,10 +607,10 @@
   font-size: 12px;
   font-weight: 300;
 }
-.section-chatWindow .info-window .optioin-block .table .role {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .role {
   position: relative;
 }
-.section-chatWindow .info-window .optioin-block .table .role .btn-add-role {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .role .btn-add-role {
   width: 30px;
   height: 30px;
   border-radius: 3px;
@@ -606,13 +620,13 @@
   justify-content: center;
   align-items: center;
 }
-.section-chatWindow .info-window .optioin-block .table .role .btn-add-role .bi {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .role .btn-add-role .bi {
   color: #017FFA;
 }
-.section-chatWindow .info-window .optioin-block .table .role .btn-add-role:hover .text {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .role .btn-add-role:hover .text {
   display: block;
 }
-.section-chatWindow .info-window .optioin-block .table .role .btn-add-role .text {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .role .btn-add-role .text {
   font-size: 10px;
   font-weight: 300;
   color: #017FFA;
@@ -625,7 +639,7 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
   display: none;
 }
-.section-chatWindow .info-window .optioin-block .table .role .btn-add-role .text::after {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .table .role .btn-add-role .text::after {
   content: "";
   width: 8px;
   height: 8px;
@@ -635,7 +649,7 @@
   left: 50%;
   transform: translate(-50%, 0) rotate(45deg);
 }
-.section-chatWindow .info-window .optioin-block .btn-report-download {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .btn-report-download {
   padding: 12px 16px;
   border-radius: 30px;
   display: flex;
@@ -646,11 +660,11 @@
   background: linear-gradient(to right, #00AEEF, #1B3D6B);
   text-decoration: none;
 }
-.section-chatWindow .info-window .optioin-block .btn-report-download .bi {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .btn-report-download .bi {
   font-size: 18px;
   color: #fff;
 }
-.section-chatWindow .info-window .optioin-block .btn-report-download .text {
+.section-chatWindow .info-window .inner-wrapper .optioin-block .btn-report-download .text {
   font-size: 14px;
   color: #fff;
 }/*# sourceMappingURL=ims_pro.css.map */

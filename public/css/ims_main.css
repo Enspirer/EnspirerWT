@@ -726,13 +726,7 @@
     min-height: calc(100vh - 82px);
     width: 100%;
     background-color: #F5F6F8;
-    padding: 0 calc(1.2875rem + 4.24286vw) calc(1.2875rem + 4.24286vw) calc(1.2875rem + 4.24286vw);
-}
-
-@media (min-width: 1400px) {
-    .ims__section .ims__body-container {
-        padding: 0 5rem 5rem 5rem;
-    }
+    padding: 0 4rem 4rem 4rem;
 }
 
 .ims__section .ims__body-container .ims__inner-container .coversation-section .admin--section,
