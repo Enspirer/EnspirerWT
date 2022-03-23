@@ -38,96 +38,100 @@
                                 <div class="section-chatWindow">
                                     <div class="row g-4">
                                         <div class="col-3">
-                                            <div class="filter-section">
-                                                <div class="search-input">
-                                                    <i class="bi bi-search"></i>
-                                                    <input type="search" placeholder="Search Chat">
-                                                </div>
-                                                <div class="filter dropdown">
-                                                    <a class="filter-dropdown imsPro-dropdown" href="#" role="button" id="filterDrop" data-bs-toggle="dropdown"
-                                                        aria-expanded="false">
-                                                        <i class="bi bi-funnel"></i>
-                                                    </a>
+                                            <div class="chat-list-window">
+                                                <div class="filter-section">
+                                                    <div class="search-input">
+                                                        <i class="bi bi-search"></i>
+                                                        <input type="search" placeholder="Search Chat">
+                                                    </div>
+                                                    <div class="filter dropdown">
+                                                        <a class="filter-dropdown imsPro-dropdown" href="#" role="button" id="filterDrop" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="bi bi-funnel"></i>
+                                                        </a>
 
-                                                    <ul class="dropdown-menu" aria-labelledby="filterDrop">
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">All Chat</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Active Chat</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item active" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Unassigned</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Last 24 Hours</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Assigned to me</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Favorite only</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">New</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Open</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Pending</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Closed</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Spam</div>
-                                                            </a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
-                                                                <div class="text">Blocked Chats</div>
-                                                            </a></li>
+                                                        <ul class="dropdown-menu" aria-labelledby="filterDrop">
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">All Chat</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Active Chat</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item active" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Unassigned</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Last 24 Hours</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Assigned to me</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Favorite only</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">New</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Open</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Pending</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Closed</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Spam</div>
+                                                                </a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>
+                                                                    <div class="text">Blocked Chats</div>
+                                                                </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-list">
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item active">
+                                                            <a href="#" class="list-link">
+                                                                <div class="header">
+                                                                    <div class="profile">
+                                                                        <div class="indicator active"></div>
+                                                                        <div class="image-block">
+                                                                            <img src="{{url('images/test.png')}}" alt="">
+                                                                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                        </div>
+                                                                        <div class="status-block">
+                                                                            <div class="name">Suranga Dinesh</div>
+                                                                            <div class="contact">(+94) 77 755 4571</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="active-status">5m</div>
+                                                                </div>
+                                                                <div class="message">Hi, will this item be shipped today ?</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <a href="#" class="list-link">
+                                                                <div class="header">
+                                                                    <div class="profile">
+                                                                        <div class="indicator"></div>
+                                                                        <div class="image-block">
+                                                                            <img src="{{url('images/test.png')}}" alt="">
+                                                                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                        </div>
+                                                                        <div class="status-block">
+                                                                            <div class="name">Suranga Dinesh</div>
+                                                                            <div class="contact">(+94) 77 755 4571</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="active-status">5m</div>
+                                                                </div>
+                                                                <div class="message">Hi, will this item be shipped today ?</div>
+                                                            </a>
+                                                        </li>
                                                     </ul>
                                                 </div>
-                                            </div>
-                                            <div class="chat-list">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item active">
-                                                        <a href="#" class="list-link">
-                                                            <div class="header">
-                                                                <div class="profile">
-                                                                    <div class="indicator active"></div>
-                                                                    <div class="image-block">
-                                                                        <img src="{{url('images/test.png')}}" alt="">
-                                                                    </div>
-                                                                    <div class="status-block">
-                                                                        <div class="name">Suranga Dinesh</div>
-                                                                        <div class="contact">(+94) 77 755 4571</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="active-status">5m</div>
-                                                            </div>
-                                                            <div class="message">Hi, will this item be shipped today ?</div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="#" class="list-link">
-                                                            <div class="header">
-                                                                <div class="profile">
-                                                                    <div class="indicator"></div>
-                                                                    <div class="image-block">
-                                                                        <img src="{{url('images/test.png')}}" alt="">
-                                                                    </div>
-                                                                    <div class="status-block">
-                                                                        <div class="name">Suranga Dinesh</div>
-                                                                        <div class="contact">(+94) 77 755 4571</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="active-status">5m</div>
-                                                            </div>
-                                                            <div class="message">Hi, will this item be shipped today ?</div>
-                                                        </a>
-                                                    </li>
-                                                </ul>
                                             </div>
                                         </div>
                                         <div class="col-6">
@@ -271,11 +275,132 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="footer"></div>
+                                                <div class="footer">
+                                                    <input type="text" class="msg-input" placeholder="Type your message here...">
+                                                    <a href="#" class="btn-send"><i class="bi bi-send-fill"></i></a>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-3"></div>
-                                    </div>
+                                        <div class="col-3">
+                                            <div class="info-window">
+                                                <div class="header">
+                                                    <div class="status">In Progress</div>
+                                                    <div class="image-block">
+                                                        <img src="{{url('images/test.png')}}" alt="">
+                                                    </div>
+                                                    <div class="name">Suranga Dinesh</div>
+                                                    <div class="chat-client">
+                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                        <div class="text green">WhatsApp</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-block">
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="icons"><i class="bi bi-briefcase-fill"></i></td>
+                                                                <td class="title">Company</td>
+                                                                <td class="inputs"><input class="table-input" type="text" placeholder="Set a company ..."></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="icons"><i class="bi bi-person-fill"></i></td>
+                                                                <td class="title">Role</td>
+                                                                <td class="inputs"><input class="table-input" type="text" placeholder="Set a role ..."></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="icons"><i class="bi bi-telephone-fill"></i></td>
+                                                                <td class="title">Phone</td>
+                                                                <td class="inputs"><input class="table-input" type="text" value="(+94) 77 755 4571" disabled readonly></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="icons"><span class="bi">&commat;</span></td>
+                                                                <td class="title">Email</td>
+                                                                <td class="inputs"><input class="table-input" type="text" value="example@gmail.com" disabled readonly></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="icons"><i class="bi bi-tags-fill"></i></td>
+                                                                <td class="title">Tags</td>
+                                                                <td class="inputs"><input class="table-input" type="text" placeholder="Set a tags ..."></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <a href="#" class="btn-add-property">
+                                                        <i class="bi bi-plus-lg"></i>
+                                                        <div class="text">Add a property</div>
+                                                    </a>
+                                                </div>
+                                                <div class="optioin-block">
+                                                    <table class="table table-borderless align-middle">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="icons"><i class="bi bi-people-fill"></i></td>
+                                                                <td class="title">Responsible</td>
+                                                                <td class="inputs">
+                                                                    <div class="dropdown">
+                                                                        <a class="assign-dropdown" href="#" role="button" id="assignDrop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                            <div class="text">Not assigned</div>
+                                                                            <i class="bi bi-chevron-down"></i>
+                                                                        </a>
+
+                                                                        <ul class="dropdown-menu" aria-labelledby="assignDrop">
+                                                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="role">
+                                                                    <a href="#" class="btn-add-role">
+                                                                        <i class="bi bi-plus-lg"></i>
+                                                                        <div class="text">Add Role</div>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="icons"><i class="bi bi-link-45deg"></i></td>
+                                                                <td class="title" colspan="3">Chat URL</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="icons"></i></td>
+                                                                <td class="inputs" colspan="3"><input class="table-input" type="text" value="https://app.timelines.ai/chat/174548/messages/" disabled readonly></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="icons blue-icon"><i class="bi bi-bookmark-fill"></i></td>
+                                                                <td class="title" colspan="3">
+                                                                    <a href="#" class="table-link">
+                                                                        <div class="text">Bookmarked Messages</div>
+                                                                        <i class="bi bi-chevron-right"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="icons blue-icon"><i class="bi bi-easel2-fill"></i></td>
+                                                                <td class="title" colspan="3">
+                                                                    <a href="#" class="table-link">
+                                                                        <div class="text">Media, Links and Docs</div>
+                                                                        <i class="bi bi-chevron-right"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="icons blue-icon"><i class="bi bi-share-fill"></i></td>
+                                                                <td class="title" colspan="3">
+                                                                    <a href="#" class="table-link">
+                                                                        <div class="text">Sharing Links</div>
+                                                                        <i class="bi bi-chevron-right"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <a href="#" class="btn-report-download">
+                                                        <i class="bi bi-download"></i>
+                                                        <div class="text">Download Report File</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>                                   
+                                    </div>                                   
                                 </div>
                                 
                             </div>
