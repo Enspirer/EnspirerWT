@@ -1,6 +1,4 @@
 .dropdown {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -16,8 +14,6 @@
   left: unset !important;
   right: 50% !important;
   transform: translate(50%, 0) !important;
-  min-width: -webkit-max-content !important;
-  min-width: -moz-max-content !important;
   min-width: max-content !important;
 }
 .dropdown-menu::before {
@@ -88,12 +84,6 @@
   border-radius: 5px;
   padding: 0.5rem 0.5rem 0.5rem 3rem;
   height: 45px;
-}
-.section-chatWindow .chat-list-window .filter-section .search-input input::-moz-placeholder {
-  color: #B4B7C6;
-}
-.section-chatWindow .chat-list-window .filter-section .search-input input:-ms-input-placeholder {
-  color: #B4B7C6;
 }
 .section-chatWindow .chat-list-window .filter-section .search-input input::placeholder {
   color: #B4B7C6;
@@ -216,16 +206,14 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .image-block .chat-client {
   position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   bottom: 0;
   right: -5px;
 }
@@ -283,8 +271,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-chatWindow .chat-window .header .profile-block .status-block .name {
   font-size: 22px;
@@ -345,6 +332,7 @@
 .section-chatWindow .chat-window .body .inner-wrapper {
   position: relative;
   overflow-y: scroll;
+  padding: 0.5rem;
   height: calc(100vh - 406px);
   scrollbar-color: #ccc transparent;
   scrollbar-width: thin;
@@ -376,8 +364,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-chatWindow .chat-window .body .inner-wrapper .message-block .message {
   position: relative;
@@ -429,6 +416,7 @@
 .section-chatWindow .chat-window .body .inner-wrapper .message-block .label {
   position: absolute;
   bottom: -25px;
+  line-height: 1;
 }
 .section-chatWindow .chat-window .body .inner-wrapper .message-block .label span {
   font-size: 12px;
@@ -436,7 +424,7 @@
   color: #A4A6AA;
 }
 .section-chatWindow .chat-window .body .inner-wrapper .message-block .label .time {
-  margin-left: 20px;
+  margin-left: 5px;
 }
 .section-chatWindow .chat-window .footer {
   width: 100%;
@@ -507,8 +495,7 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-chatWindow .info-window .header .name {
   font-size: 22px;
@@ -528,8 +515,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-chatWindow .info-window .header .chat-client .text {
   font-size: 14px;
@@ -579,8 +565,6 @@
   align-items: center;
   gap: 10px;
   padding: 5px 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   text-decoration: none;
 }
@@ -725,4 +709,6 @@
 .section-chatWindow .info-window .inner-wrapper .optioin-block .btn-report-download .text {
   font-size: 14px;
   color: #fff;
-}/*# sourceMappingURL=ims_pro.css.map */
+}
+
+/*# sourceMappingURL=ims_pro.css.map */

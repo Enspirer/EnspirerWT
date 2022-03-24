@@ -642,6 +642,29 @@
     gap: 1rem;
 }
 
+.btn-status-report {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #017FFA;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.btn-status-report .bi {
+    font-size: 18px;
+    color: #017FFA;
+}
+
+.btn-status-report .text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #017FFA;
+}
+
 .ims__section .ims__control-panel .ims__data-table {
     margin: 1rem 0;
     max-height: 70vh;
@@ -1893,6 +1916,266 @@
     width: fit-content;
     margin: 8px auto 0;
     font-size: 12px;
+}
+
+/* Modal */
+
+.get_widget_Modal .modal-dialog {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    max-width: 800px;
+    min-width: 650px;
+    width: 100%;
+}
+
+.get_widget_Modal .modal-dialog .modal-content {
+    position: relative;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-header {
+    background: linear-gradient(to right, #00AEEF, #017FFA);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    border: none;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-header .bi-download {
+    font-size: 30px;
+    color: #fff;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-header .text {
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-header img {
+    width: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-header .modal-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-header .btn-close-modal {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    right: -15px;
+    top: -15px;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-header .btn-close-modal .bi {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body {
+    padding: 1.5rem;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-title {
+    font-size: 16px;
+    margin-bottom: 0.75rem;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-select {
+    flex: 0 0 42.3%;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #464646;
+    height: 40px;
+    width: 100%;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-select:focus {
+    box-shadow: none;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-select option {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-input {
+    position: relative;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-input .bi {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #464646;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-input .form-control {
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #464646;
+    height: 40px;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-add-btn {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-add-btn .bi {
+    font-size: 18px;
+    color: #464646;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-delete-btn {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .form-row .form-delete-btn .bi {
+    font-size: 18px;
+    color: #464646;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body .text {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.42);
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-body code {
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 1.25rem;
+    line-height: 2;
+    box-shadow: inset 5px 5px 10px rgba(151, 167, 195, 0.65);
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer .button-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer .button-block .btn-save-filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer .button-block .btn-save-filter .bi {
+    font-size: 20px;
+    color: #919191;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer .button-block .btn-save-filter .text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #919191;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer .button-block .btn-cancel {
+    font-size: 14px;
+    font-weight: 300;
+    color: #919191;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer .button-block .btn-download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: #1D72E0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer .button-block .btn-download .bi {
+    font-size: 18px;
+    color: #fff;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer .button-block .btn-download .text {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.get_widget_Modal .modal-dialog .modal-content .modal-footer .modal-btn {
+    background-color: #00AEEF;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
 }
 
 /*# sourceMappingURL=ims_main.css.map */
