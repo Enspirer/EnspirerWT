@@ -365,10 +365,18 @@
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-                                                        <a href="#" class="btn-add-property">
-                                                            <i class="bi bi-plus-lg"></i>
-                                                            <div class="text">Add a property</div>
-                                                        </a>
+                                                        <div class="dropdown">
+                                                            <a class="add-property-dropdown btn-add-property" href="#" role="button" id="addPropertyDrop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="bi bi-plus-lg"></i>
+                                                                <div class="text">Add a property</div>
+                                                            </a>
+
+                                                            <ul class="dropdown-menu" aria-labelledby="addPropertyDrop">
+                                                                <li><a class="dropdown-item" href="#"><div class="text">Sample text</div></a></li>
+                                                                <li><a class="dropdown-item" href="#"><div class="text">Sample text</div></a></li>
+                                                                <li><a class="dropdown-item" href="#"><div class="text">Sample text</div></a></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="optioin-block">
                                                         <table class="table table-borderless align-middle">
