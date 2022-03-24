@@ -175,7 +175,7 @@
             @endif
             @if(App\Models\IMSProUsers::where('project_id',$project_id)->first() != null)
                 <div class="inner-tab active">
-                    <a class="tab-link" href="{{ route('frontend.user.user_widget.ims_pro_media_scan', $project_id) }}" target="_blank">
+                    <a class="tab-link" href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" target="_blank">
                         <div class="icon">
                             <img src="{{url('images/dashboard/tab_section/privacy-policy.png')}}" alt="">
                         </div>

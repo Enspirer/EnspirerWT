@@ -8,9 +8,9 @@
 
 
 <section class="ims__section">
-        @include('frontend.user.projects.includes.ims_sidebar')
+        @include('frontend.ims_pro.ims_pro_sidebar')
             <div class="ims__main-col">
-                @include('frontend.user.projects.includes.ims_navbar')
+                @include('frontend.ims_pro.ims_pro_navbar')
                 
                 <div class="row g-0">
                     <div class="col">

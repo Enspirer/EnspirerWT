@@ -27,7 +27,10 @@ use App\Http\Controllers\Frontend\TermsAndPrivacyController;
 use App\Http\Controllers\Frontend\User\VisitorStatisticsController;
 use App\Http\Controllers\Frontend\User\NotificationsController;
 use App\Http\Controllers\Frontend\User\AnalyticController;
-use App\Http\Controllers\Frontend\User\IMSProController;
+use App\Http\Controllers\Frontend\User\IMSProSettingsController;
+use App\Http\Controllers\Frontend\IMSProController;
+use App\Http\Controllers\Frontend\IMSLoginController;
+
 
 
 
@@ -66,6 +69,22 @@ Route::get('privacy-policy',[TermsAndPrivacyController::class, 'privacy_policy']
 
 Route::get('generatePDF/{id}',[IMSController::class, 'generatePDF'])->name('generatePDF');
 Route::get('analytics_generatePDF',[IMSController::class, 'analytics_generatePDF'])->name('analytics_generatePDF');
+
+
+
+
+Route::get('ims_login_page', [IMSLoginController::class, 'login_page'])->name('ims_login_page');
+Route::post('ims_login_check', [IMSLoginController::class, 'ims_login_check'])->name('ims_login_check');
+Route::get('ims_pro_logout/{id}', [IMSLoginController::class, 'ims_pro_logout'])->name('ims_pro_logout');
+
+
+Route::get('user_widget/ims_pro_media_scan/{id}', [IMSProController::class, 'ims_pro_media_scan'])->name('user_widget.ims_pro_media_scan');
+Route::get('user_widget/ims_pro_index/{id}', [IMSProController::class, 'ims_pro_index'])->name('user_widget.ims_pro_index');
+Route::get('user_widget/ims_pro_chat_summary/{id}', [IMSProController::class, 'ims_pro_chat_summary'])->name('user_widget.ims_pro_chat_summary');
+Route::get('user_widget/ims_pro_inquiry_summary/{id}', [IMSProController::class, 'ims_pro_inquiry_summary'])->name('user_widget.ims_pro_inquiry_summary');
+
+
+
 
 
 /*
@@ -130,17 +149,13 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('ims/visitor_statistics/{id}', [VisitorStatisticsController::class, 'index'])->name('ims.visitor_statistics');
 
 
-        Route::get('user_widget/ims_pro_media_scan/{id}', [IMSProController::class, 'ims_pro_media_scan'])->name('user_widget.ims_pro_media_scan');
-        Route::get('user_widget/ims_pro_index/{id}', [IMSProController::class, 'ims_pro_index'])->name('user_widget.ims_pro_index');
-        Route::get('user_widget/ims_pro_chat_summary/{id}', [IMSProController::class, 'ims_pro_chat_summary'])->name('user_widget.ims_pro_chat_summary');
-        Route::get('user_widget/ims_pro_inquiry_summary/{id}', [IMSProController::class, 'ims_pro_inquiry_summary'])->name('user_widget.ims_pro_inquiry_summary');
+        
 
-
-        Route::post('user_widget_ims_pro_role_management/store', [IMSProController::class, 'user_widget_ims_pro_role_management_store'])->name('user_widget_ims_pro_role_management.store');
-        Route::get('user_widget_ims_pro_role_management/getdetails/{id}', [IMSProController::class, 'user_widget_ims_pro_role_management_details'])->name('user_widget_ims_pro_role_management.getdetails');
-        Route::get('user_widget_ims_pro_role_management/edit/{id}', [IMSProController::class, 'user_widget_ims_pro_role_management_edit'])->name('user_widget_ims_pro_role_management.edit');
-        Route::post('user_widget_ims_pro_role_management/update', [IMSProController::class, 'user_widget_ims_pro_role_management_update'])->name('user_widget_ims_pro_role_management.update');
-        Route::get('user_widget_ims_pro_role_management/delete/{id}', [IMSProController::class, 'user_widget_ims_pro_role_management_destroy'])->name('user_widget_ims_pro_role_management.destroy');
+        Route::post('user_widget_ims_pro_role_management/store', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_store'])->name('user_widget_ims_pro_role_management.store');
+        Route::get('user_widget_ims_pro_role_management/getdetails/{id}', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_details'])->name('user_widget_ims_pro_role_management.getdetails');
+        Route::get('user_widget_ims_pro_role_management/edit/{id}', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_edit'])->name('user_widget_ims_pro_role_management.edit');
+        Route::post('user_widget_ims_pro_role_management/update', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_update'])->name('user_widget_ims_pro_role_management.update');
+        Route::get('user_widget_ims_pro_role_management/delete/{id}', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_destroy'])->name('user_widget_ims_pro_role_management.destroy');
         
 
 
