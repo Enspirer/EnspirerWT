@@ -1,4 +1,7 @@
 <div class="ims__side-col">
+                <div class="ims__sideNav--toggler">
+                    <i onclick="sideNavToggle()" class="bi bi-list"></i>
+                </div>
                 <div class="ims__side-nav">
                     <div class="side-nav__header">
                         <div class="logo-block">
