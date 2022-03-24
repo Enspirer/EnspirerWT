@@ -76,7 +76,7 @@
 }
 .section-chatWindow .chat-list-window .filter-section .search-input input {
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #B4B7C6;
   border: 1px solid #fff;
@@ -218,20 +218,20 @@
   right: -5px;
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .name {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #464646;
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .contact {
-  font-size: 12px;
+  font-size: 10px;
   color: #464646;
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .active-status {
-  font-size: 12px;
+  font-size: 11px;
   color: #464646;
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .message {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #707070;
   margin: 1rem 0;
@@ -274,12 +274,12 @@
   object-fit: cover;
 }
 .section-chatWindow .chat-window .header .profile-block .status-block .name {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 300;
   color: #464646;
 }
 .section-chatWindow .chat-window .header .profile-block .status-block .contact {
-  font-size: 12px;
+  font-size: 11px;
   color: #464646;
 }
 .section-chatWindow .chat-window .header .option-block .navbar-nav {
@@ -289,7 +289,7 @@
   gap: 25px;
 }
 .section-chatWindow .chat-window .header .option-block .navbar-nav .nav-item .nav-link .bi {
-  font-size: 20px;
+  font-size: 18px;
   color: #464646;
 }
 .section-chatWindow .chat-window .header .option-block .navbar-nav .nav-item .nav-link .dropdown-menu {
@@ -321,7 +321,7 @@
   top: 1rem;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 300;
   color: #707070;
   background-color: #F4F4F4;
@@ -391,7 +391,7 @@
 }
 .section-chatWindow .chat-window .body .inner-wrapper .message-block .message .text,
 .section-chatWindow .chat-window .body .inner-wrapper .message-block .message .duration {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
 }
 .section-chatWindow .chat-window .body .inner-wrapper .message-block .message .dropdown .message-dropdown .bi {
@@ -419,7 +419,7 @@
   line-height: 1;
 }
 .section-chatWindow .chat-window .body .inner-wrapper .message-block .label span {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 300;
   color: #A4A6AA;
 }
@@ -442,7 +442,7 @@
   background-color: #EEEEEE;
   border: 1px solid #eee;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #707070;
   padding: 10px 20px;
@@ -474,11 +474,11 @@
   border-bottom: 1px solid #ccc;
 }
 .section-chatWindow .info-window .header .status {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #00BF4A;
   background-color: #C7F1BD;
-  width: 140px;
+  width: 110px;
   height: 25px;
   border-radius: 3px;
   display: flex;
@@ -498,7 +498,7 @@
   object-fit: cover;
 }
 .section-chatWindow .info-window .header .name {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 300;
   text-align: center;
   margin: 10px 0;
@@ -518,7 +518,7 @@
   object-fit: cover;
 }
 .section-chatWindow .info-window .header .chat-client .text {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
 }
 .section-chatWindow .info-window .header .chat-client .text.green {
@@ -549,13 +549,13 @@
   color: #707070;
 }
 .section-chatWindow .info-window .inner-wrapper .info-block .table .title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
 }
 .section-chatWindow .info-window .inner-wrapper .info-block .table .inputs .table-input {
   background-color: transparent;
   border: none;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #000;
 }
@@ -573,7 +573,7 @@
   color: #017FFA;
 }
 .section-chatWindow .info-window .inner-wrapper .info-block .btn-add-property .text {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #017FFA;
 }
@@ -588,7 +588,7 @@
   content: none;
 }
 .section-chatWindow .info-window .inner-wrapper .optioin-block {
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
 }
 .section-chatWindow .info-window .inner-wrapper .optioin-block .table .icons {
   color: #707070;
@@ -597,7 +597,7 @@
   color: #017FFA;
 }
 .section-chatWindow .info-window .inner-wrapper .optioin-block .table .title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #707070;
 }
@@ -612,7 +612,7 @@
   color: #017FFA;
 }
 .section-chatWindow .info-window .inner-wrapper .optioin-block .table .title .table-link .text {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
 }
 .section-chatWindow .info-window .inner-wrapper .optioin-block .table .inputs .dropdown .assign-dropdown {
@@ -627,7 +627,7 @@
   background-color: #FEBABA;
 }
 .section-chatWindow .info-window .inner-wrapper .optioin-block .table .inputs .dropdown .assign-dropdown .text {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #ae0000;
 }
