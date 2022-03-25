@@ -112,7 +112,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr class="data-row">
+                                                            <tr class="data-row" data-href="#">
                                                                 <td class="data--select data-cell">
                                                                     <input class="form-check-input"
                                                                         type="checkbox" value="">
@@ -162,7 +162,7 @@
                                                                     </a>
                                                                 </td>
                                                             </tr>                                                                
-                                                            <tr class="data-row">
+                                                            <tr class="data-row" data-href="#">
                                                                 <td class="data--select data-cell">
                                                                     <input class="form-check-input"
                                                                         type="checkbox" value="">
@@ -212,7 +212,7 @@
                                                                     </a>
                                                                 </td>
                                                             </tr>                                                                
-                                                            <tr class="data-row">
+                                                            <tr class="data-row" data-href="#">
                                                                 <td class="data--select data-cell">
                                                                     <input class="form-check-input"
                                                                         type="checkbox" value="">
@@ -375,6 +375,15 @@
         "endDate": "03/24/2022"
     }, function(start, end, label) {
     console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+    });
+</script>
+
+<script>
+    // Dara row href
+    jQuery(document).ready(function($) {
+        $(".data-row[data-href]").click(function() {
+            window.location = $(this).data("href");
+        });
     });
 </script>
 
