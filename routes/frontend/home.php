@@ -73,7 +73,7 @@ Route::get('analytics_generatePDF',[IMSController::class, 'analytics_generatePDF
 
 
 
-Route::get('ims_login_page', [IMSLoginController::class, 'login_page'])->name('ims_login_page');
+Route::get('ims_login_page/{id}', [IMSLoginController::class, 'login_page'])->name('ims_login_page');
 Route::post('ims_login_check', [IMSLoginController::class, 'ims_login_check'])->name('ims_login_check');
 Route::get('ims_pro_logout/{id}', [IMSLoginController::class, 'ims_pro_logout'])->name('ims_pro_logout');
 

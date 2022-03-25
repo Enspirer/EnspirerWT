@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+@extends('frontend.layouts.ims_login_app')
 
 @section('title', app_name() . ' | ' . __('labels.frontend.auth.login_box_title'))
 
@@ -19,7 +19,7 @@
                 @endif
                 <div class="header">
                     <div class="title">Login to your account</div>
-                    <div class="subtitle">Hello there, Welcome back</div>
+                    <div class="subtitle">{{$project->name}}</div>
                 </div>
                 <form action="{{ route('frontend.ims_login_check') }}" method="post" enctype="multipart/form-data" class="needs-validation">
                 {{ csrf_field() }}
@@ -40,6 +40,7 @@
 
                         @include('includes.partials.messages')
                     </div>
+                    <input type="hidden" name="hidden_id" value="{{ $project->id }}"/>
                     <button type="submit" class="btn-signup">Sign In</button>
                     
                 </form>

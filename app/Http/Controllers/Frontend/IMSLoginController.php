@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 use Validator;
 use Auth;
 use App\Models\IMSProUsers;
+use App\Models\Projects;
 use Illuminate\Support\Facades\Hash;
 use Cart;
 
 class IMSLoginController extends Controller
 {
   
-    public function login_page()
+    public function login_page($id)
     {
         $itemsCart = Cart::getContent();
         // dd($itemsCart);
@@ -28,15 +29,20 @@ class IMSLoginController extends Controller
             }
         }
 
-        return view('frontend.ims_pro.auth.login');
+        $project = Projects::where('id',$id)->first();
+
+        return view('frontend.ims_pro.auth.login',[
+            'project' => $project
+        ]);
     }   
 
     public function ims_login_check(Request $request) {   
 
         $email = $request->email;  
-        $password = $request->password;        
+        $password = $request->password;     
+        $hidden_project_id = $request->hidden_id;     
 
-        $user = IMSProUsers::where('email',$email)->first();  
+        $user = IMSProUsers::where('email',$email)->where('project_id',$hidden_project_id)->first();  
         // dd($user);
 
         if($user == null){           
@@ -82,7 +88,9 @@ class IMSLoginController extends Controller
     {           
         Cart::remove($id);
 
-        return redirect()->route('frontend.ims_login_page');
+        $user = IMSProUsers::where('id',$id)->first();  
+
+        return redirect()->route('frontend.ims_login_page',$user->project_id);
     }
       
 
