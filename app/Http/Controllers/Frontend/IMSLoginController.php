@@ -15,6 +15,19 @@ class IMSLoginController extends Controller
   
     public function login_page()
     {
+        $itemsCart = Cart::getContent();
+        // dd($itemsCart);
+
+        if(count($itemsCart) != 0){
+            foreach($itemsCart as $items){
+
+                $user = IMSProUsers::where('id',$items->id)->first();  
+
+                return redirect()->route('frontend.user_widget.ims_pro_media_scan',$user->project_id); 
+                break;
+            }
+        }
+
         return view('frontend.ims_pro.auth.login');
     }   
 
@@ -51,7 +64,7 @@ class IMSLoginController extends Controller
 
                 IMSProUsers::whereId($user->id)->update($update->toArray());
 
-                Cart::add($user->id, $user->name, $user->project_id, 1);
+                Cart::add($user->id, $user->name, $user->session, 1);
 
                 return redirect()->route('frontend.user_widget.ims_pro_media_scan',$user->project_id);  
             }

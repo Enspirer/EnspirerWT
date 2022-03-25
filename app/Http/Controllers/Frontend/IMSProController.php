@@ -10,11 +10,20 @@ use App\Models\IMSProUsers;
 use DataTables;
 use Modules\WidgetManager\Entities\ImsClients;
 use Illuminate\Support\Facades\Hash;
+use Cart;
 
 class IMSProController extends Controller
 {    
     public function ims_pro_media_scan($id)
     {     
+
+        $itemsCart = Cart::getContent();
+
+        if(count($itemsCart) == 0){
+            return redirect()->route('frontend.ims_login_page');  
+        }
+
+
         $project = Projects::where('id',$id)->first();  
         // dd($project);
 
@@ -26,6 +35,12 @@ class IMSProController extends Controller
 
     public function ims_pro_index($id)
     {     
+        $itemsCart = Cart::getContent();
+
+        if(count($itemsCart) == 0){
+            return redirect()->route('frontend.ims_login_page');  
+        }
+
         $project = Projects::where('id',$id)->first();           
         // dd($project->id);
 
@@ -37,6 +52,12 @@ class IMSProController extends Controller
 
     public function ims_pro_chat_summary($id)
     {     
+        $itemsCart = Cart::getContent();
+
+        if(count($itemsCart) == 0){
+            return redirect()->route('frontend.ims_login_page');  
+        }
+
         $project = Projects::where('id',$id)->first();  
 
         return view('frontend.ims_pro.ims_pro_chat_summary',[
@@ -47,6 +68,12 @@ class IMSProController extends Controller
 
     public function ims_pro_inquiry_summary($id)
     {     
+        $itemsCart = Cart::getContent();
+
+        if(count($itemsCart) == 0){
+            return redirect()->route('frontend.ims_login_page');  
+        }
+        
         $project = Projects::where('id',$id)->first();  
 
         return view('frontend.ims_pro.ims_pro_inquiry_summary',[
