@@ -8,6 +8,7 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <div class="property">
 
+                                            <a href="{{ route('frontend.user.project.chat',$project_id) }}" style="text-decoration:none;"><p class="px-4 mt-3">Go back</p></a>
 
                                          
                                                 <div class="image"></div>

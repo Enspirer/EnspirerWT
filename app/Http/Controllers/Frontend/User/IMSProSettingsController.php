@@ -47,6 +47,7 @@ class IMSProSettingsController extends Controller
         $add->widget_id=$request->widget_id;
         $add->password=$hashed_password;
         $add->status='Enabled'; 
+        $add->user_id=auth()->user()->id; 
 
         $add->save();
 

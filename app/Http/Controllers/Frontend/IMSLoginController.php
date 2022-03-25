@@ -16,6 +16,13 @@ class IMSLoginController extends Controller
   
     public function login_page($id)
     {
+        $project = Projects::where('id',$id)->first();
+
+        if($project == null){      
+            return redirect()->route('frontend.not_found');
+        }
+
+
         $itemsCart = Cart::getContent();
         // dd($itemsCart);
 
@@ -28,9 +35,7 @@ class IMSLoginController extends Controller
                 break;
             }
         }
-
-        $project = Projects::where('id',$id)->first();
-
+        
         return view('frontend.ims_pro.auth.login',[
             'project' => $project
         ]);

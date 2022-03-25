@@ -30,6 +30,7 @@ use App\Http\Controllers\Frontend\User\AnalyticController;
 use App\Http\Controllers\Frontend\User\IMSProSettingsController;
 use App\Http\Controllers\Frontend\IMSProController;
 use App\Http\Controllers\Frontend\IMSLoginController;
+use App\Http\Controllers\Frontend\NotFoundController;
 
 
 
@@ -42,6 +43,8 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact_us.store', [ContactController::class, 'store'])->name('contact_us.store');
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
+
+Route::get('not_found',[NotFoundController::class, 'index'])->name('not_found');
 
 
 Route::post('/aiz-uploader', [AizUploadController::class, 'show_uploader']);
