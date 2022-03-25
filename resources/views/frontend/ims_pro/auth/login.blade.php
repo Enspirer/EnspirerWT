@@ -46,23 +46,7 @@
 
                 
             </div>
-            <div class="slider">
-                <div class="sign-in-splide" id="signInSlider">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <img src="{{url('images/Group 413.png')}}" alt="">
-                            </li>
-                            <li class="splide__slide">
-                                <img src="{{url('images/Group 413.png')}}" alt="">
-                            </li>
-                            <li class="splide__slide">
-                                <img src="{{url('images/Group 413.png')}}" alt="">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 </section>
 
