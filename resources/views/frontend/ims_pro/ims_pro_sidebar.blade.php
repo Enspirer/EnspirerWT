@@ -30,16 +30,25 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="{{ route('frontend.user_widget.ims_pro_index', $project_id) }}" class="nav-link {{Request::segment(2)=='ims_pro_index' ? 'active' :null }}">
-                                    <div class="nav-link__block">
-                                        <i class="bi bi-chevron-down ims__hidden"></i>
-                                        <i class="bi bi-person-lines-fill"></i>
-                                        <div class="text">Admin</div>
-                                        <!-- <div class="count ims__hidden">2400</div> -->
-                                    </div>
-                                </a>
-                            </li>
+
+                            @if(count($ims_pro_user_details) != 0)
+                                @foreach($ims_pro_user_details as $ims_pro_user_detail)
+                                    @if(is_ims_pro_admin($ims_pro_user_detail->id))
+                                        <li class="nav-item">
+                                            <a href="{{ route('frontend.user_widget.ims_pro_index', $project_id) }}" class="nav-link {{Request::segment(2)=='ims_pro_index' ? 'active' :null }}">
+                                                <div class="nav-link__block">
+                                                    <i class="bi bi-chevron-down ims__hidden"></i>
+                                                    <i class="bi bi-person-lines-fill"></i>
+                                                    <div class="text">Admin</div>
+                                                    <!-- <div class="count ims__hidden">2400</div> -->
+                                                </div>
+                                            </a>
+                                        </li>
+                                    @endif
+                                    @break;
+                                @endforeach
+                            @endif
+                            
                             <li class="nav-item">
                                 <a href="{{ route('frontend.user_widget.ims_pro_chat_summary', $project_id) }}" class="nav-link {{Request::segment(2)=='ims_pro_chat_summary' ? 'active' :null }}">
                                     <div class="nav-link__block">
@@ -50,16 +59,36 @@
                                     </div>
                                 </a>
                             </li>
+
+                            @if(count($ims_pro_user_details) != 0)
+                                @foreach($ims_pro_user_details as $ims_pro_user_detail)
+                                    @if(is_ims_pro_agent($ims_pro_user_detail->id))
+                                        <li class="nav-item">
+                                            <a href="{{ route('frontend.user_widget.ims_pro_my_inquiry', $project_id) }}" class="nav-link {{Request::segment(2)=='ims_pro_my_inquiry' ? 'active' :null }}">
+                                                <div class="nav-link__block">
+                                                    <i class="bi bi-chevron-down ims__hidden"></i>
+                                                    <i class="bi bi-person-check"></i>
+                                                    <div class="text">My Inquiries</div>
+                                                    <!-- <div class="count ims__hidden">2400</div> -->
+                                                </div>
+                                            </a>
+                                        </li>
+                                    @endif
+                                    @break;
+                                @endforeach
+                            @endif
+                           
                             <li class="nav-item">
                                 <a href="{{ route('frontend.user_widget.ims_pro_inquiry_summary', $project_id) }}" class="nav-link {{Request::segment(2)=='ims_pro_inquiry_summary' ? 'active' :null }}">
                                     <div class="nav-link__block">
                                         <i class="bi bi-chevron-down ims__hidden"></i>
                                         <i class="bi bi-person-check"></i>
-                                        <div class="text">All Inquiry</div>
+                                        <div class="text">All Inquiries</div>
                                         <!-- <div class="count ims__hidden">2400</div> -->
                                     </div>
                                 </a>
-                            </li>
+                            </li>                           
+                            
 
                         </ul>
                     </div>

@@ -106,6 +106,36 @@ class IMSProController extends Controller
         ]);
     }
 
+    public function ims_pro_my_inquiry($id)
+    {     
+        $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
+
+        if(!empty( auth()->user()->id) === true ){
+            if($ims_pro_user->user_id != auth()->user()->id){
+
+                $itemsCart = Cart::getContent();
+    
+                if(count($itemsCart) == 0){
+                    return redirect()->route('frontend.ims_login_page',$id);  
+                }
+    
+            } 
+        }else{
+            $itemsCart = Cart::getContent();
+    
+            if(count($itemsCart) == 0){
+                return redirect()->route('frontend.ims_login_page',$id);  
+            }
+        } 
+        
+        $project = Projects::where('id',$id)->first();  
+
+        return view('frontend.ims_pro.ims_pro_my_inquiry',[
+            'project_id' => $project->id,
+            'project' => $project          
+        ]);
+    }
+
     public function ims_pro_inquiry_summary($id)
     {     
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
@@ -136,6 +166,8 @@ class IMSProController extends Controller
         ]);
     }
 
+
+    
   
 
     

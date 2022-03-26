@@ -85,6 +85,7 @@ Route::get('user_widget/ims_pro_media_scan/{id}', [IMSProController::class, 'ims
 Route::get('user_widget/ims_pro_index/{id}', [IMSProController::class, 'ims_pro_index'])->name('user_widget.ims_pro_index');
 Route::get('user_widget/ims_pro_chat_summary/{id}', [IMSProController::class, 'ims_pro_chat_summary'])->name('user_widget.ims_pro_chat_summary');
 Route::get('user_widget/ims_pro_inquiry_summary/{id}', [IMSProController::class, 'ims_pro_inquiry_summary'])->name('user_widget.ims_pro_inquiry_summary');
+Route::get('user_widget/ims_pro_my_inquiry/{id}', [IMSProController::class, 'ims_pro_my_inquiry'])->name('user_widget.ims_pro_my_inquiry');
 
 
 

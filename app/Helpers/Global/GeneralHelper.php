@@ -2,7 +2,8 @@
 
 use App\Models\Settings;
 use App\Models\Projects;
-use App\Models\Notification; 
+use App\Models\Notification;
+use App\Models\IMSProUsers;
 use Illuminate\Http\Request;
 
 
@@ -283,6 +284,49 @@ if (! function_exists('formatOperatingSystem')) {
             return $operatingSystems[$key];
         } else {
             return 'unknown';
+        }
+    }
+}
+
+
+if (! function_exists('is_ims_pro_admin')) {
+    /**
+     * Return the route to the "home" page depending on authentication/authorization status.
+     *
+     * @return string
+     */
+    function is_ims_pro_admin($id)
+    {
+        $is_ims_pro_admin = IMSProUsers::where('status','Enabled')
+            ->where('id',$id)
+            ->where('role','admin')
+            ->first();
+        if($is_ims_pro_admin){
+            return $is_ims_pro_admin;
+        }
+        else{
+            return null;
+        }
+    }
+}
+
+if (! function_exists('is_ims_pro_agent')) {
+    /**
+     * Return the route to the "home" page depending on authentication/authorization status.
+     *
+     * @return string
+     */
+    function is_ims_pro_agent($id)
+    {
+        $is_ims_pro_agent = IMSProUsers::where('status','Enabled')
+            ->where('id',$id)
+            ->where('role','agent')
+            ->first();
+        if($is_ims_pro_agent){
+            return $is_ims_pro_agent;
+        }
+        else{
+            return null;
         }
     }
 }
