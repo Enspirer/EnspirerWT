@@ -96,6 +96,14 @@ Breadcrumbs::for('admin.projects.widget_manager.settings', function ($trail) {
 });
 
 
+Breadcrumbs::for('admin.ims_pro_widgets.index', function ($trail) {
+    $trail->push('IMS Pro Widgets', route('admin.ims_pro_widgets.index'));
+});
+Breadcrumbs::for('admin.ims_pro_widgets.edit', function ($trail) {
+    $trail->push('IMS Pro Widgets Edit', route('admin.ims_pro_widgets.edit',1));
+});
+
+
 
 Breadcrumbs::for('admin.widget_settings_update.index', function ($trail) {
     $trail->push('Widget Settings Update', route('admin.widget_settings_update.index'));

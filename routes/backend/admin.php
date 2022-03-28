@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\HelpSupportsController;
 use App\Http\Controllers\Backend\WidgetController;
 use App\Http\Controllers\Frontend\TestController;
 use App\Http\Controllers\Backend\WidgetSettingController;
+use App\Http\Controllers\Backend\IMSProWidgetsController;
 
 
 // All route names are prefixed with 'admin.'.
@@ -94,6 +95,17 @@ Route::get('help_supports/getdetails', [HelpSupportsController::class, 'getdetai
 Route::get('help_supports/edit/{id}', [HelpSupportsController::class, 'edit'])->name('help_supports.edit');
 Route::post('help_supports/update', [HelpSupportsController::class, 'update'])->name('help_supports.update');
 Route::get('help_supports/delete/{id}', [HelpSupportsController::class, 'destroy'])->name('help_supports.destroy');
+
+
+Route::get('ims_pro_widgets', [IMSProWidgetsController::class, 'index'])->name('ims_pro_widgets.index');
+Route::get('ims_pro_widgets/getdetails', [IMSProWidgetsController::class, 'getdetails'])->name('ims_pro_widgets.getdetails');
+Route::get('ims_pro_widgets/edit/{id}', [IMSProWidgetsController::class, 'edit'])->name('ims_pro_widgets.edit');
+Route::post('ims_pro_widgets/update', [IMSProWidgetsController::class, 'update'])->name('ims_pro_widgets.update');
+Route::get('ims_pro_widgets/delete/{id}', [IMSProWidgetsController::class, 'destroy'])->name('ims_pro_widgets.destroy');
+
+
+
+
 
 Route::get('widget_settings_update', [WidgetSettingController::class, 'index'])->name('widget_settings_update.index');
 Route::post('widget_settings_update/update', [WidgetSettingController::class, 'update'])->name('widget_settings_update.update');
