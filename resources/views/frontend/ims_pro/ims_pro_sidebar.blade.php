@@ -35,7 +35,7 @@
                                 @foreach($ims_pro_user_details as $ims_pro_user_detail)
                                     @if(is_ims_pro_admin($ims_pro_user_detail->id))
                                         <li class="nav-item">
-                                            <a href="{{ route('frontend.user_widget.ims_pro_index', $project_id) }}" class="nav-link {{Request::segment(2)=='ims_pro_index' ? 'active' :null }}">
+                                            <a href="{{route('frontend.user_widget.ims_pro_index',[$project_id,'phone_number','type'])}}" class="nav-link {{Request::segment(2)=='ims_pro_index' ? 'active' :null }}">
                                                 <div class="nav-link__block">
                                                     <i class="bi bi-chevron-down ims__hidden"></i>
                                                     <i class="bi bi-person-lines-fill"></i>

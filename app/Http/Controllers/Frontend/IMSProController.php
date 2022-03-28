@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Projects;
 use App\Models\Widgets;
 use App\Models\IMSProUsers;
+use App\Models\ImsProClientMessages;
 use DataTables;
 use Modules\WidgetManager\Entities\ImsClients;
 use Illuminate\Support\Facades\Hash;
@@ -45,8 +46,9 @@ class IMSProController extends Controller
         ]);
     }
 
-    public function ims_pro_index($id)
+    public function ims_pro_index($id,$phone_number,$type)
     {     
+        // dd($phone_number);
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
 
         if(!empty( auth()->user()->id) === true ){
@@ -70,9 +72,26 @@ class IMSProController extends Controller
         $project = Projects::where('id',$id)->first();           
         // dd($project->id);
 
+        if($phone_number != 'phone_number'){
+            $solo_ims_pro_client = ImsProClientMessages::where('project_id',$id)->where('phone_number',$phone_number)->where('type',$type)->first();
+            // dd($solo_ims_pro_client);
+        }
+        else{
+            $solo_ims_pro_client = null;
+        }
+
+        // dd($solo_ims_pro_client);
+
+       
+        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->get();
+        // dd($all_ims_pro_client_messages);
+
+
         return view('frontend.ims_pro.user_widget_ims_index',[
             'project_id' => $project->id,
-            'project' => $project         
+            'project' => $project,
+            'solo_ims_pro_client' => $solo_ims_pro_client,
+            'all_ims_pro_client_messages' => $all_ims_pro_client_messages
         ]);
     }    
 
