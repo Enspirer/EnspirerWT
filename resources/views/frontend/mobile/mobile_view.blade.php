@@ -5,6 +5,8 @@
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/mobile_main.css')}}">
+<link rel="stylesheet" href="{{url('css/pulldelete.css')}}">
+<script src="{{url('js/pulldelete.js')}}"></script>
 
 <section class="section-home">
     <div class="mobile-container">
@@ -48,8 +50,10 @@
                                             <div class="title">Tallentor</div>
                                             <div class="address">https://tallentor.com/</div>
                                         </div>
+                                        <i class="bi bi-chevron-right"></i>
                                     </div>
-                                </a></li>
+                                </a>
+                            </li>
                             <li><a class="dropdown-item" href="#">
                                     <div class="property">
                                         <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
@@ -57,46 +61,18 @@
                                             <div class="title">Tallentor</div>
                                             <div class="address">https://tallentor.com/</div>
                                         </div>
+                                        <i class="bi bi-chevron-right"></i>
                                     </div>
-                                </a></li>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="filter">
-                    <div class="dropdown">
-                        <a class="filter-dropdown" href="#" role="button" id="filterDrop" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <img src="{{url('images/mobile/home/calender.png')}}" alt="">
-                        </a>
-
-                        <ul class="dropdown-menu" aria-labelledby="filterDrop">
-                            <div class="filter-form">
-                                <div class="filter-label">Sort By</div>
-                                <div class="input-groups">
-                                    <select class="filter-select">
-                                        <option disabled>Choose...</option>
-                                        <option selected>Date</option>
-                                        <option>A - Z</option>
-                                        <option>Z - A</option>
-                                    </select>
-                                    <div class="datepicker">
-                                        <div class="label">From</div>
-                                        <i class="bi bi-calendar-week"></i>
-                                        <input type="text" name="filter-date" class="filter-date-input">
-                                    </div>
-                                    <div class="datepicker">
-                                        <div class="label">To</div>
-                                        <i class="bi bi-calendar-week"></i>
-                                        <input type="text" name="filter-date" class="filter-date-input">
-                                    </div>
-                                </div>
-                                <div class="button-block">
-                                    <a href="#" class="btn-mobile btn-cancel">Cancel</a>
-                                    <a href="#" class="btn-mobile btn-apply">Apply</a>
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
+                    <a class="datepicker" href="#">
+                        <img src="{{url('images/mobile/home/calender.png')}}" alt="">
+                        <input type="text" name="date-filter" class="filter-date-input">
+                    </a>
                 </div>
             </div>
         </div>
@@ -113,32 +89,32 @@
                 <img src="{{url('images/mobile/home/radar.png')}}" alt="" class="indicator">
                 <div class="particles">
                     <div class="particle particle-1">
+                        <div class="particle-indicator indicator-1"></div>
                         <div class="particle-label">
                             <img src="{{url('images/mobile/home/RO.png')}}" alt="">
                             <div class="country">Country</div>
                         </div>
-                        <div class="particle-indicator indicator-1"></div>
                     </div>
                     <div class="particle particle-2">
+                        <div class="particle-indicator indicator-2"></div>
                         <div class="particle-label">
                             <img src="{{url('images/mobile/home/RO.png')}}" alt="">
                             <div class="country">Country</div>
                         </div>
-                        <div class="particle-indicator indicator-2"></div>
                     </div>
                     <div class="particle particle-3">
+                        <div class="particle-indicator indicator-3"></div>
                         <div class="particle-label">
                             <img src="{{url('images/mobile/home/RO.png')}}" alt="">
                             <div class="country">Country</div>
                         </div>
-                        <div class="particle-indicator indicator-3"></div>
                     </div>
                     <div class="particle particle-4">
+                        <div class="particle-indicator indicator-4"></div>
                         <div class="particle-label">
                             <img src="{{url('images/mobile/home/RO.png')}}" alt="">
                             <div class="country">Country</div>
                         </div>
-                        <div class="particle-indicator indicator-4"></div>
                     </div>
                 </div>
                 <div class="visitor-count">
@@ -234,7 +210,7 @@
                     </a>
                 </div>
                 <div class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#addProperty">
                         <i class="bi bi-plus-lg"></i>
                     </a>
                 </div>
@@ -252,6 +228,117 @@
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade addProperty-model mobile-model" id="addProperty" tabindex="-1" aria-labelledby="addPropertyLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add to</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item pull_delete active">
+                <a href="#" class="list-link">
+                    <div class="property">
+                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
+                        <div class="content">
+                            <div class="title">Tallentor</div>
+                            <div class="address">https://tallentor.com/</div>
+                        </div>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item pull_delete">
+                <a href="#" class="list-link">
+                    <div class="property">
+                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
+                        <div class="content">
+                            <div class="title">Tallentor</div>
+                            <div class="address">https://tallentor.com/</div>
+                        </div>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item pull_delete">
+                <a href="#" class="list-link">
+                    <div class="property">
+                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
+                        <div class="content">
+                            <div class="title">Tallentor</div>
+                            <div class="address">https://tallentor.com/</div>
+                        </div>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item pull_delete">
+                <a href="#" class="list-link">
+                    <div class="property">
+                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
+                        <div class="content">
+                            <div class="title">Tallentor</div>
+                            <div class="address">https://tallentor.com/</div>
+                        </div>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item pull_delete">
+                <a href="#" class="list-link">
+                    <div class="property">
+                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
+                        <div class="content">
+                            <div class="title">Tallentor</div>
+                            <div class="address">https://tallentor.com/</div>
+                        </div>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#" type="button" class="btn-mobile btn-new-project" data-bs-toggle="modal" data-bs-target="#addPropertyInput">Add new Project</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade addPropertyInput-model mobile-model" id="addPropertyInput" tabindex="-1" aria-labelledby="addPropertyInputLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add to</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="list-label">Project Name</div>
+                <input type="text" name="property-input" class="list-input">
+            </li>
+            <li class="list-group-item">
+                <div class="list-label">Project Type</div>
+                <input type="text" name="property-input" class="list-input">
+            </li>
+            <li class="list-group-item">
+                <div class="list-label">URL</div>
+                <input type="text" name="property-input" class="list-input">
+            </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#" type="button" class="btn-mobile btn-project-submit">Submit</a>
+        <a href="#" type="button" class="btn-mobile btn-cancel" data-bs-dismiss="modal">Close</a>
+      </div>
+    </div>
+  </div>
+</div>
     
 @endsection
 
@@ -259,49 +346,85 @@
 
 <script>
     // Filter Datepicker
-    $('input[name="filter-date"]').daterangepicker({
-        "singleDatePicker": true,
-        "autoApply": true,
-        "startDate": "03/15/2022",
-        "endDate": "03/21/2022",
-        "opens": "left",
-        "drops": "auto"
-    }, function (start, end, label) {
-        console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format(
-            'YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+    window.addEventListener('DOMContentLoaded', function () {
+
+        jQuery('.filter-date-input').daterangepicker({
+
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            },
+            locale: {
+                direction: "ltr",
+                format: "YYYY-MM-DD",
+                separator: " - ",
+                applyLabel: "Apply",
+                cancelLabel: "Cancel",
+                customRangeLabel: "Custom",
+                daysOfWeek: [
+                    "Su",
+                    "Mo",
+                    "Tu",
+                    "We",
+                    "Th",
+                    "Fr",
+                    "Sa"
+                ],
+                monthNames: [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ]
+            },
+            "startDate": "2022-03-22",
+            "endDate": "2022-03-28",
+            "opens": "left",
+            "linkedCalendars": false,
+            "alwaysShowCalendars": true
+        });
     });
 
     // Radar tooltips
-    const radarSection = document.querySelector('.radar-section');
-    const particle = radarSection.querySelectorAll('.particle');
+    // const radarSection = document.querySelector('.radar-section');
+    // const particle = radarSection.querySelectorAll('.particle');
 
-    particle.forEach(function (dot) {
-        dot.addEventListener("click", function () {
+    // particle.forEach(function (dot) {
+    //     dot.addEventListener("click", function () {
 
-            particle.forEach(function (label) {
-                label.classList.remove('active');
-            });
+    //         particle.forEach(function (label) {
+    //             label.classList.remove('active');
+    //         });
 
-            dot.classList.add('active');
-        })
-    });
+    //         dot.classList.add('active');
+    //     })
+    // });
 
     // Visitors List tooltip
 
-    const visitorsSection = document.querySelector('.visitors-section');
-    const indicatorTd = visitorsSection.querySelectorAll('.active-status');
-    const label = visitorsSection.querySelectorAll('.label');
+    // const visitorsSection = document.querySelector('.visitors-section');
+    // const indicatorTd = visitorsSection.querySelectorAll('.active-status');
+    // const label = visitorsSection.querySelectorAll('.label');
 
-    indicatorTd.forEach(function (ind) {
-        ind.addEventListener("click", function () {
+    // indicatorTd.forEach(function (ind) {
+    //     ind.addEventListener("click", function () {
 
-            indicatorTd.forEach(function (ind) {
-                ind.querySelector('.label').classList.remove('active');
-            });
+    //         indicatorTd.forEach(function (ind) {
+    //             ind.querySelector('.label').classList.remove('active');
+    //         });
 
-            ind.querySelector('.label').classList.add('active');
-        });
-    });
+    //         ind.querySelector('.label').classList.add('active');
+    //     });
+    // });
 
     // remove added active classes in the page
 
@@ -312,18 +435,21 @@
 
     //     console.log(e.target);
 
-    //     if (liveStatus) {
-    //         particle.forEach(function (label) {
-    //             label.classList.remove('active');
-    //         });
+    //     particle.forEach(function (label) {
+    //         label.classList.remove('active');
+    //     });
 
-    //     } else if (particles) {
-
-    //         indicatorTd.forEach(function (ind) {
-    //             ind.querySelector('.label').classList.remove('active');
-    //         });
-    //     }
+    //     indicatorTd.forEach(function (ind) {
+    //         ind.querySelector('.label').classList.remove('active');
+    //     });
     // })
+
+    // Pull Delete
+    $(function () {
+        $('.pull_delete').pulldelete(function ($dom) {
+            $dom.remove();
+        });
+    })
 </script>
 
 @endpush
