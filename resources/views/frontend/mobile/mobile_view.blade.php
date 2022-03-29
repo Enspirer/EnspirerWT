@@ -124,6 +124,21 @@
             </div>
         </div>
 
+        <div class="filter-section">
+            <a href="#" class="btn-sort">
+                <i class="bi bi-arrow-left-right"></i>
+            </a>
+            <select class="sort-select">
+                <option selected disabled>Sort By</option>
+                <option>Name</option>
+                <option>Date</option>
+                <option>A-Z</option>
+            </select>
+            <div class="start-date">14-09-2022 </div>
+            <div class="text">to</div>
+            <div class="end-date">20-09-2022</div>
+        </div>
+
         <div class="visitors-section">
             <table class="table align-middle">
                 <tbody>
@@ -197,35 +212,7 @@
             </table>
         </div>
 
-        <div class="bottom-nav">
-            <div class="navbar-nav">
-                <div class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="bi bi-house-door"></i>
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="bi bi-bar-chart"></i>
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#addProperty">
-                        <i class="bi bi-plus-lg"></i>
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="bi bi-bell"></i>
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="bi bi-gear"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+        @include('frontend.mobile.includes.bottom_nav')
     </div>
 </section>
 
