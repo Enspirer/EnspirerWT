@@ -1007,7 +1007,7 @@ class HomeController extends Controller
 
         $new_messages = ImsProClientMessages::where('phone_number',$incoming_mobile_number)
         ->where('project_id',$incoming_project_id)
-        ->where('widget_id',$incoming_widget_id)
+        ->where('wideget_id',$incoming_widget_id)
         ->where('type',$incoming_type)
         ->get();
 
