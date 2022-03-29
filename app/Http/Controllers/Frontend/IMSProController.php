@@ -119,9 +119,14 @@ class IMSProController extends Controller
 
         $project = Projects::where('id',$id)->first();  
 
+        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->get();
+        // dd($all_ims_pro_client_messages);
+
+
         return view('frontend.ims_pro.ims_pro_chat_summary',[
             'project_id' => $project->id,
-            'project' => $project          
+            'project' => $project,
+            'all_ims_pro_client_messages' => $all_ims_pro_client_messages
         ]);
     }
 

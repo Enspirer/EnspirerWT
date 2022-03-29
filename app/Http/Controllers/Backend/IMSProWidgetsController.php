@@ -34,8 +34,9 @@ class IMSProWidgetsController extends Controller
             })
             ->addColumn('action', function($data){
                 $button1 = '<a href="'.route('admin.ims_pro_widgets.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
-                $button2 = '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
-                return $button1.$button2;
+                $button2 = '<a href="'.route('admin.ims_pro_widgets.endpoint_settings',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-warning btn-sm" style="margin-right: 10px"><i class="fas fa-cogs"></i> End Point Settings </a>';
+                $button3 = '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
+                return $button1.$button2.$button3;
             })
             ->rawColumns(['action','project'])
             ->make(true);
@@ -51,6 +52,30 @@ class IMSProWidgetsController extends Controller
         return view('backend.ims_pro_widgets.edit',[
             'widget' => $widget
         ]);
+    }
+
+    public function endpoint_settings($id)
+    {
+        $widget = Widgets::where('id',$id)->first(); 
+        // dd($widget);
+
+        return view('backend.ims_pro_widgets.endpoint_settings',[
+            'widget' => $widget
+        ]);
+    }
+
+    public function endpoint_settings_update(Request $request)
+    {        
+        // dd($request);   
+     
+        $update = new Widgets;
+
+        $update->end_point_settings = $request->url;
+
+        Widgets::whereId($request->hidden_id)->update($update->toArray());
+   
+        return redirect()->route('admin.ims_pro_widgets.index')->withFlashSuccess('Updated Successfully');            
+
     }
 
     public function update(Request $request)
