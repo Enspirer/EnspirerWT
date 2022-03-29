@@ -286,34 +286,43 @@
                                                     </div>
                                                     <div class="body">
                                                         <div class="date">August 21</div>
-                                                        <div class="inner-wrapper">
-                                                            
-                                                            <div class="message-block incoming">
-                                                                <div class="image-block">
-                                                                    <img src="{{url('images/test.png')}}" alt="">
-                                                                </div>
-                                                                <div class="message">
-                                                                    <div class="text">{{$solo_ims_pro_client->message}}</div>
-                                                                </div>
-                                                                <div class="label">
-                                                                    <span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>
-                                                                    <span class="time">12 days</span>
-                                                                </div>
-                                                            </div>
+                                                        <div class="inner-wrapper" id="incoming_outgoing_chat_messages">
 
-                                                            <div class="message-block outgoing">
-                                                                <div class="image-block">
-                                                                    <img src="{{url('images/test.png')}}" alt="">
-                                                                </div>
-                                                                <div class="message">
-                                                                    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's . . .</div>
-                                                                </div>
-                                                                <div class="label">
-                                                                    <span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>
-                                                                    <span class="time">12 days</span>
-                                                                </div>
-                                                            </div>
-                                                            
+                                                            @if(count($solo_ims_pro_client_messages) != 0)
+                                                                @foreach($solo_ims_pro_client_messages as $solo_ims_pro_client_message)
+                                                                    @if($solo_ims_pro_client_message->user_id == null)
+                                                                        <div class="message-block incoming" >
+                                                                            <div class="image-block">
+                                                                                <img src="{{url('images/test.png')}}" alt="">
+                                                                            </div>
+                                                                            <div class="message">
+                                                                                <div class="text" >{{$solo_ims_pro_client_message->message}}</div>
+                                                                            </div>
+                                                                            <input type="hidden" name="incoming_mobile_number" id="incoming_mobile_number" value="{{$solo_ims_pro_client_message->phone_number}}">
+                                                                            <input type="hidden" name="incoming_type" id="incoming_type" value="{{$solo_ims_pro_client_message->type}}">
+                                                                            <input type="hidden" name="incoming_project_id" id="incoming_project_id" value="{{$solo_ims_pro_client_message->project_id}}">
+                                                                            <input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="{{$solo_ims_pro_client_message->widget_id}}">
+                                                                            <div class="label">
+                                                                                <span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>
+                                                                                <span class="time">12 days</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    @else
+                                                                        <div class="message-block outgoing">
+                                                                            <div class="image-block">
+                                                                                <img src="{{url('images/test.png')}}" alt="">
+                                                                            </div>
+                                                                            <div class="message">
+                                                                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's . . .</div>
+                                                                            </div>
+                                                                            <div class="label">
+                                                                                <span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>
+                                                                                <span class="time">12 days</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    @endif                                                           
+                                                                @endforeach
+                                                            @endif                                                           
                                                             
                                                         </div>
                                                     </div>
@@ -485,6 +494,43 @@
 
 @push('after-scripts')
 
+<script>
+ 
+    function chat_message() {  
+
+        incoming_mobile_number = $('#incoming_mobile_number').val();
+        incoming_project_id = $('#incoming_project_id').val();
+        incoming_widget_id = $('#incoming_widget_id').val();       
+        incoming_type = $('#incoming_type').val();       
+        
+        
+        $.post("{{url('/')}}/api/ims_chat", {
+                incoming_mobile_number:incoming_mobile_number,
+                incoming_project_id:incoming_project_id,
+                incoming_widget_id:incoming_widget_id,
+                incoming_type:incoming_type
+            },
+
+            function(content, status){                
+
+                var obj = JSON.parse(content);
+                // console.log(obj);
+                $('#incoming_outgoing_chat_messages').html(obj);
+
+            }     
+        );
+
+
+
+    }
+
+
+    setInterval(function(){chat_message();
+        // console.log('refresh_data');
+    }, 3000);
+
+
+</script>
 
 
 @endpush

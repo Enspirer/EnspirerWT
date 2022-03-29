@@ -79,11 +79,19 @@ class IMSProController extends Controller
         else{
             $solo_ims_pro_client = null;
         }
-
         // dd($solo_ims_pro_client);
 
+        if($phone_number != 'phone_number'){
+            $solo_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->where('phone_number',$phone_number)->where('type',$type)->get();
+            // dd($solo_ims_pro_client_messages);
+        }
+        else{
+            $solo_ims_pro_client_messages = null;
+        }
+        // dd($solo_ims_pro_client_messages);
+
        
-        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->get();
+        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->get()->unique('phone_number');
         // dd($all_ims_pro_client_messages);
 
 
@@ -91,7 +99,8 @@ class IMSProController extends Controller
             'project_id' => $project->id,
             'project' => $project,
             'solo_ims_pro_client' => $solo_ims_pro_client,
-            'all_ims_pro_client_messages' => $all_ims_pro_client_messages
+            'all_ims_pro_client_messages' => $all_ims_pro_client_messages,
+            'solo_ims_pro_client_messages' => $solo_ims_pro_client_messages
         ]);
     }    
 

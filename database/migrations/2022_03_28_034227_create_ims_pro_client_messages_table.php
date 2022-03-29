@@ -21,7 +21,7 @@ class CreateImsProClientMessagesTable extends Migration
             $table->text('email')->nullable();
             $table->text('status')->nullable();
             $table->text('project_id')->nullable();
-            $table->text('wideget_id')->nullable();
+            $table->text('widget_id')->nullable();
             $table->text('facebook_user_name')->nullable();
             $table->text('message')->nullable();
             $table->timestamps();

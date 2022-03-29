@@ -38,3 +38,10 @@ Route::post('session_rec', [HomeController::class,'session_rec'])->name('session
 
 Route::post('event', [HomeController::class,'analytics_post'])->name('analytics_post');
 
+
+Route::post('ims_chat', [HomeController::class, 'ims_chat'])->name('ims_chat');
+
+Route::post('ims_chat_insert', [HomeController::class, 'ims_chat_insert'])->name('ims_chat_insert');
+
+
+

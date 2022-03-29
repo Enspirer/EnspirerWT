@@ -7,6 +7,7 @@ use App\Models\HeatMap;
 use App\Models\SessionRecord;
 use App\Models\VisitorCount;
 use App\Models\VisitorLogs;
+use App\Models\ImsProClientMessages;
 use App\Models\Widgets;
 use App\Models\Projects;
 use Illuminate\Http\Request;
@@ -994,7 +995,85 @@ class HomeController extends Controller
 
     
 
-    
+    public function ims_chat(Request $request)
+    {     
+        // dd($request); 
+            
+        $incoming_mobile_number = $request->incoming_mobile_number;
+        $incoming_project_id = $request->incoming_project_id;
+        $incoming_widget_id = $request->incoming_widget_id;
+        $incoming_type = $request->incoming_type;
+        // dd($incoming_mobile_number);
+
+        $new_messages = ImsProClientMessages::where('phone_number',$incoming_mobile_number)
+        ->where('project_id',$incoming_project_id)
+        ->where('widget_id',$incoming_widget_id)
+        ->where('type',$incoming_type)
+        ->get();
+
+        // dd($new_messages);
+        
+        $content = null;
+
+        foreach($new_messages as $new_message){
+
+         
+            $content = $content.'<div class="message-block incoming">'.
+                '<div class="image-block">'.
+                    '<img src="{{url("images/test.png")}}" alt="">'.
+                '</div>'.
+                '<div class="message">'.
+                    '<div class="text">'.$new_message->message.'</div>'.
+                '</div>'.
+                '<input type="hidden" name="incoming_mobile_number" id="incoming_mobile_number" value="'.$new_message->phone_number.'">'.
+                '<input type="hidden" name="incoming_type" id="incoming_type" value="'.$new_message->type.'">'.
+                '<input type="hidden" name="incoming_project_id" id="incoming_project_id" value="'.$new_message->project_id.'">'.
+                '<input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="'.$new_message->widget_id.'">'.
+                '<div class="label">'.
+                    '<span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>'.
+                    '<span class="time">12 days</span>'.
+                '</div>'.
+            '</div>';
+
+        }
+
+        // dd($content);
+
+        return json_encode($content); 
+
+    }
+
+
+    public function ims_chat_insert(Request $request)
+    {     
+        $phone_number = $request->phone_number;
+        $name = $request->name;
+        $type = $type;
+        $email = $request->email;        
+        $status = $request->status;
+        $project_id = $request->project_id;
+        $widget_id = $request->widget_id;
+        $facebook_user_name = $request->facebook_user_name;
+        $message = $request->message;
+        $user_id = $request->user_id;        
+        
+
+        $add = new ImsProClientMessages;
+
+        $add->phone_number = $phone_number;
+        $add->name = $name;
+        $add->type = $type;
+        $add->email = $email;
+        $add->status = $status;
+        $add->project_id = $project_id;
+        $add->widget_id = $widget_id;
+        $add->facebook_user_name = $facebook_user_name;
+        $add->message = $message;
+        $add->user_id = $user_id;
+
+        $add->save();
+
+    }
 
     
 
