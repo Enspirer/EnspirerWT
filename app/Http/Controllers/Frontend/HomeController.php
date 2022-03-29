@@ -1066,7 +1066,7 @@ class HomeController extends Controller
         $add->email = $email;
         $add->status = $status;
         $add->project_id = $project_id;
-        $add->widget_id = $widget_id;
+        $add->wideget_id = $widget_id;
         $add->facebook_user_name = $facebook_user_name;
         $add->message = $message;
         $add->user_id = $user_id;
