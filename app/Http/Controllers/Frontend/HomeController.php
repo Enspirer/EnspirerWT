@@ -1048,7 +1048,7 @@ class HomeController extends Controller
     {     
         $phone_number = $request->phone_number;
         $name = $request->name;
-        $type = $type;
+        $type = $request->type;
         $email = $request->email;        
         $status = $request->status;
         $project_id = $request->project_id;
