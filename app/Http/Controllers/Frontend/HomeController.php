@@ -1073,6 +1073,8 @@ class HomeController extends Controller
 
         $add->save();
 
+        return 'sucess';
+
     }
 
     
