@@ -1012,6 +1012,8 @@ class HomeController extends Controller
         ->where('type',$incoming_type)
         ->get();
 
+
+
         // dd($new_messages);
         
         $content = null;
@@ -1075,12 +1077,15 @@ class HomeController extends Controller
         $widget_id = $request->widget_id;
         $facebook_user_name = $request->facebook_user_name;
         $message = $request->message;
-        $user_id = $request->user_id;        
-        
+        $user_id = $request->user_id;
+
+        preg_match_all('!\d+!', $phone_number, $matches);
+
+
 
         $add = new ImsProClientMessages;
 
-        $add->phone_number = $phone_number;
+        $add->phone_number = $matches;
         $add->name = $name;
         $add->type = $type;
         $add->email = $email;
