@@ -57,7 +57,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <a href="#" class="btn-mobile btn-signout" data-bs-dismiss="modal" aria-label="Close">
+        <a href="{{route('frontend.auth.logout')}}" class="btn-mobile btn-signout" data-bs-dismiss="modal" aria-label="Close">
             <i class="bi bi-box-arrow-right"></i>
             <div class="text">Sign Out</div>
         </a>

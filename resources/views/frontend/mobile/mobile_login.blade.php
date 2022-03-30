@@ -13,19 +13,29 @@
         </div>
         <div class="title">Welcome to Tallentor !</div>
         <div class="subtitle">Keep your data safe!</div>
-        <form action="POST" class="signup-form">
-            <div class="signup-fields">
-                <div class="label">Email</div>
-                <input type="email" class="signup-input" name="user-email" required>
-            </div>
-            <div class="signup-fields">
-                <div class="label">Password</div>
-                <input type="password" class="signup-input" name="user-password" required>
-                <i class="bi bi-eye-slash-fill"></i>
-            </div>
-            <button class="btn-mobile signup-submit">Login</button>
-            <a href="#" class="forgot-password">Forgot Password?</a>
-        </form>
+
+        {{ html()->form('POST', route('frontend.auth.login.post'))->open() }}
+            <div class="signup-form">
+                <div class="signup-fields">
+                    <div class="label">Email</div>
+                    {{ html()->email('email')
+                    ->class('form-control signup-input')
+                    ->attribute('maxlength', 191)
+                    ->required() }} 
+                </div>
+                <div class="signup-fields">
+                    <div class="label">Password</div>
+                    {{ html()->password('password')
+                    ->class('form-control signup-input')
+                    ->required() }}
+                    <i class="bi bi-eye-slash-fill"></i>
+                </div>
+                <button class="btn-mobile signup-submit">Login</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>            
+
+        {{ html()->form()->close() }}
+
         <div class="social-signup">
             <div class="devider">OR</div>
             <a href="#" class="btn-social-signup">
