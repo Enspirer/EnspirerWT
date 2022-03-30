@@ -517,6 +517,7 @@
   justify-content: space-between;
   text-decoration: none;
   padding: 8px;
+  min-height: 60px;
 }
 .section-home .mobile-container .header .content-block .properties .dropdown-menu {
   width: 100%;

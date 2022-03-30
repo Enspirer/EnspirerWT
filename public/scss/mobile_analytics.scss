@@ -87,6 +87,7 @@
                             justify-content: space-between;
                             text-decoration: none;
                             padding: 8px;
+                            min-height: 60px;
                         }
 
                         .dropdown-menu {
@@ -216,6 +217,306 @@
                         font-size: 24px;
                         color: #464646;
                         font-weight: 500;
+                    }
+                }
+            }
+
+            .analytics-chart {
+                padding: 10px;
+                background-color: #F9F9F9;
+                border-radius: 7px;
+                margin: 15px 0;
+            }
+
+            .analytic-card {
+                margin: 15px 0;
+                background-color: #F9F9F9;
+                border-radius: 10px;
+
+                .header {
+                    padding: 15px;
+                    border-bottom: 1px solid #ddd;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+
+                    .title {
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: #464646;
+                    }
+
+                    .options {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 6px;
+
+                        .input-group {
+                            margin-right: 10px;
+
+                            .form-control {
+                                font-size: 14px;
+                                font-weight: 300;
+                                color: #464646;
+                                background-color: transparent;
+                                height: 35px;
+                                border: 1px solid #ddd;
+
+                                &:focus {
+                                    box-shadow: none;
+                                    outline: none;
+                                }
+                            }
+
+                            .filter-btn {
+                                width: 35px;
+                                border: 1px solid #ddd;
+                                background-color: #ddd;
+                                border-top-right-radius: 3px !important;
+                                border-bottom-right-radius: 3px !important;
+                            }
+
+                            .dropdown-menu {
+                                .dropdown-wrapper {
+                                    .header {
+                                        padding: 3px 15px 10px;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        color: #464646;
+                                    }
+
+                                    .form-content {
+                                        padding: 10px 15px 3px;
+
+                                        .form-label {
+                                            font-size: 12px;
+                                            font-weight: 300;
+                                            color: #464646;
+                                        }
+
+                                        .form-select {
+                                            font-size: 12px;
+                                            font-weight: 300;
+                                            color: #464646;
+                                            border: 1px solid #ddd;
+                                            margin-bottom: 10px;
+
+                                            &:focus {
+                                                box-shadow: none;
+                                                outline: none;
+                                            }
+
+                                            option {
+                                                font-size: 12px;
+                                                font-weight: 300;
+                                                color: #464646;
+                                            }
+                                        }
+
+                                        .search-btn {
+                                            width: 100%;
+                                            background-color: #017FFA;
+                                            border: none;
+                                            border-radius: 3px;
+                                            color: #fff;
+                                            font-size: 12px;
+                                            font-weight: 300;
+                                            height: 28px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .report-download {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #ddd;
+                            width: 40px;
+                            height: 35px;
+                            border-radius: 3px;
+                            text-decoration: none;
+                            color: #464646;
+                        }
+                    }
+                }
+
+                .content {
+                    padding: 10px 15px;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+
+                    .row-title {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px 0;
+                        border-bottom: 1px solid #ddd;
+
+                        .title {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #464646;
+                        }
+                    }
+
+                    .row-subtitle {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px 0;
+                        margin-bottom: 5px;
+                        border-bottom: 1px solid #ddd;
+
+                        .subtitle {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #464646;
+                        }
+
+                        .status {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            .total-count {
+                                text-align: right;
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: #464646;
+                                margin-right: 25px;
+                            }
+
+                            .total-precentage {
+                                text-align: right;
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: #464646;
+                            }
+                        }
+                    }
+
+                    .row-data {
+                        padding: 10px 0;
+
+                        .row-link {
+                            text-decoration: none;
+                            display: block;
+
+                            .info-row {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 6px;
+
+                                .info {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+
+                                    .bi {
+                                        color: #464646;
+                                        font-size: 16px;
+                                        margin-right: 10px;
+                                    }
+
+                                    .text {
+                                        color: #464646;
+                                        font-size: 14px;
+                                        font-weight: 300;
+                                        width: 200px;
+                                        overflow-x: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+                                }
+
+                                .status {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+
+                                    .total-count {
+                                        text-align: right;
+                                        font-size: 14px;
+                                        font-weight: 300;
+                                        color: #464646;
+                                        margin-right: 25px;
+                                    }
+
+                                    .total-precentage {
+                                        text-align: right;
+                                        font-size: 14px;
+                                        font-weight: 300;
+                                        color: #464646;
+                                    }
+                                }
+                            }
+
+                            .row-progress {
+                                width: 100%;
+
+                                .progress {
+                                    height: 4px;
+
+                                    .progress-bar {
+                                        width: 33px;
+                                        background-color: #017FFA;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .row-footer {
+                        border-top: 1px solid #ddd;
+                        margin-top: 15px;
+                        padding: 10px 0;
+                        text-align: center;
+
+                        .row-link {
+                            font-size: 14px;
+                            color: #464646;
+                            text-decoration: none;
+                            font-weight: 300;
+                        }
+
+                        .data-nav {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .page-count {
+                                font-size: 12px;
+                                color: #464646;
+                                font-weight: 300;
+
+                                span {
+                                    font-size: 12px;
+                                    color: #464646;
+                                    font-weight: 300;
+                                }
+                            }
+
+                            .pagination {
+                                margin: 0;
+
+                                .page-item {
+                                    .page-link {
+                                        background-color: transparent;
+                                        color: #017FFA;
+                                        font-size: 12px;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

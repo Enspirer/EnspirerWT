@@ -53,4 +53,8 @@ class MobileViewController extends Controller
         return view('frontend.mobile.mobile_analytics');
     }
 
+    public function mobile_analytics_browsers() {
+        return view('frontend.mobile.sub_pages.analytics_browsers');
+    }
+
 }

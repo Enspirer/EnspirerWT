@@ -48,6 +48,8 @@ Route::get('mobile_view/mobile-settings',[MobileViewController::class, 'mobile_s
 Route::get('mobile_view/mobile-register',[MobileViewController::class, 'mobile_register'])->name('mobile_register');
 Route::get('mobile_view/mobile-login',[MobileViewController::class, 'mobile_login'])->name('mobile_login');
 Route::get('mobile_view/mobile-analytics',[MobileViewController::class, 'mobile_analytics'])->name('mobile_analytics');
+// Analytics Inner Pages
+Route::get('mobile_view/mobile-analytics/analytics-browsers',[MobileViewController::class, 'mobile_analytics_browsers'])->name('analytics_browsers');
 
 Route::get('not_found',[NotFoundController::class, 'index'])->name('not_found');
 

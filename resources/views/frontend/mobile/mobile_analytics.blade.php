@@ -6,92 +6,15 @@
 
 <link rel="stylesheet" href="{{url('css/mobile_main.css')}}">
 <link rel="stylesheet" href="{{url('css/mobile_analytics.css')}}">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.3.1/dist/echarts.js"></script>
 
 @include('frontend.mobile.includes.top_nav')
 
 <div class="section-analytics">
     <div class="mobile-container">
         <div class="inner-container">
-            <div class="dropdown analytics-dropdown">
-                <a class="analytics-dropdown-btn" href="#" role="button" id="analyticsDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-bar-chart-fill"></i>
-                    <div class="text">Overview</div>
-                    <i class="bi bi-list"></i>
-                </a>
-
-                <ul class="dropdown-menu" aria-labelledby="analyticsDrop">
-                    <li><a class="dropdown-item dropdown-cat" href="#">Overview</a></li>
-                    <li><a class="dropdown-item dropdown-cat" href="#">Behavior</a></li>
-                    <li><a class="dropdown-item" href="#">Pages</a></li>
-                    <li><a class="dropdown-item" href="#">Landing Pages</a></li>
-                    <li><a class="dropdown-item dropdown-cat" href="#">Acquisitions</a></li>
-                    <li><a class="dropdown-item" href="#">Referrers</a></li>
-                    <li><a class="dropdown-item" href="#">Search engines</a></li>
-                    <li><a class="dropdown-item" href="#">Social networks</a></li>
-                    <li><a class="dropdown-item" href="#">Campaigns</a></li>
-                    <li><a class="dropdown-item dropdown-cat" href="#">Geographic</a></li>
-                    <li><a class="dropdown-item" href="#">Continents</a></li>
-                    <li><a class="dropdown-item" href="#">Countries</a></li>
-                    <li><a class="dropdown-item" href="#">Cities</a></li>
-                    <li><a class="dropdown-item" href="#">Languages</a></li>
-                    <li><a class="dropdown-item dropdown-cat" href="#">Technology</a></li>
-                    <li><a class="dropdown-item" href="#">Operating systems</a></li>
-                    <li><a class="dropdown-item" href="#">Browsers</a></li>
-                    <li><a class="dropdown-item" href="#">Screen resolutions</a></li>
-                    <li><a class="dropdown-item" href="#">Devices</a></li>
-                    <li><a class="dropdown-item dropdown-cat" href="#">Events</a></li>
-                </ul>
-            </div>
-            <div class="header">
-                <div class="content-block">
-                    <div class="properties">
-                        <div class="dropdown">
-                            <a class="property-dropdown" href="#" role="button" id="propertyDrop"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class="property">
-                                    <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                                    <div class="content">
-                                        <div class="title">Tallentor</div>
-                                        <div class="address">https://tallentor.com/</div>
-                                    </div>
-                                </div>
-                                <img src="{{url('images/mobile/home/chevron-down.png')}}" alt="">
-                            </a>
-
-                            <ul class="dropdown-menu" aria-labelledby="propertyDrop">
-                                <li><a class="dropdown-item" href="#">
-                                        <div class="property">
-                                            <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                                            <div class="content">
-                                                <div class="title">Tallentor</div>
-                                                <div class="address">https://tallentor.com/</div>
-                                            </div>
-                                            <i class="bi bi-chevron-right"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">
-                                        <div class="property">
-                                            <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                                            <div class="content">
-                                                <div class="title">Tallentor</div>
-                                                <div class="address">https://tallentor.com/</div>
-                                            </div>
-                                            <i class="bi bi-chevron-right"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="filter">
-                        <a class="datepicker" href="#">
-                            <img src="{{url('images/mobile/home/calender.png')}}" alt="">
-                            <input type="text" name="date-filter" class="filter-date-input">
-                        </a>
-                    </div>
-                </div>
-            </div>
+            @include('frontend.mobile.includes.analytics_dropdown')
+            @include('frontend.mobile.includes.property')
             <div class="data-header">
                 <div class="data-row">
                     <div class="info-block">
@@ -111,7 +34,7 @@
                     <div class="info-block">
                         <div class="info-header">
                             <i class="bi bi-square-fill red"></i>
-                            <div class="text">Visitors</div>
+                            <div class="text">Pageviews</div>
                             <i class="bi bi-info-circle"></i>
                         </div>
                         <div class="precentage">
@@ -120,6 +43,258 @@
                         </div>
                     </div>
                     <div class="count">341</div>
+                </div>
+            </div>
+            <div class="analytics-chart">
+                <div id="analyticsChart" style="width: 100%;height:200px;"></div>
+            </div>
+            <div class="analytic-card">
+                <div class="header">
+                    <div class="title">Title</div>
+                    <div class="options">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search">
+                            <button class="filter-btn" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"><i class="bi bi-funnel-fill"></i></button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <div class="dropdown-wrapper">
+                                    <div class="header">Filters</div>
+                                    <div class="form-content">
+                                        <form action="">
+                                            <label for="dataFilter" class="form-label">Sort</label>
+                                            <select id="dataFilter" class="form-select">
+                                                <option selected>Best Profoming</option>
+                                                <option>Least Profoming</option>
+                                            </select>
+                                            <button type="button" class="search-btn">Search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        <a href="#" class="report-download">
+                            <i class="bi bi-download"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="row-title">
+                        <div class="title">Name</div>
+                        <div class="title">Visitors</div>
+                    </div>
+                    <div class="row-subtitle">
+                        <div class="subtitle">Total</div>
+                        <div class="status">
+                            <div class="total-count">67</div>
+                            <div class="total-precentage">10%</div>
+                        </div>
+                    </div>
+                    <div class="row-data">
+                        <a href="#" class="row-link">
+                            <div class="info-row">
+                                <div class="info">
+                                    <i class="bi bi-link-45deg"></i>
+                                    <div class="text">tallentor.com/</div>
+                                </div>
+                                <div class="status">
+                                    <div class="total-count">67</div>
+                                    <div class="total-precentage">10%</div>
+                                </div>
+                            </div>
+                            <div class="row-progress">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row-data">
+                        <a href="#" class="row-link">
+                            <div class="info-row">
+                                <div class="info">
+                                    <i class="bi bi-link-45deg"></i>
+                                    <div class="text">tallentor.com/</div>
+                                </div>
+                                <div class="status">
+                                    <div class="total-count">67</div>
+                                    <div class="total-precentage">10%</div>
+                                </div>
+                            </div>
+                            <div class="row-progress">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row-footer">
+                        <a href="#" class="row-link">View All</a>
+                        <div class="data-nav">
+                            <div class="page-count">Showing <span>1</span> - <span>10</span> of <span>85</span></div>
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="analytic-card">
+                <div class="header">
+                    <div class="title">Countries</div>
+                </div>
+                <div class="content">
+                    <div class="row-title">
+                        <div class="title">Name</div>
+                        <div class="title">Visitors</div>
+                    </div>
+                    <div class="row-data">
+                        <a href="#" class="row-link">
+                            <div class="info-row">
+                                <div class="info">
+                                    <i class="bi bi-link-45deg"></i>
+                                    <div class="text">tallentor.com/</div>
+                                </div>
+                                <div class="status">
+                                    <div class="total-count"></div>
+                                    <div class="total-precentage">10%</div>
+                                </div>
+                            </div>
+                            <div class="row-progress">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row-data">
+                        <a href="#" class="row-link">
+                            <div class="info-row">
+                                <div class="info">
+                                    <i class="bi bi-link-45deg"></i>
+                                    <div class="text">tallentor.com/</div>
+                                </div>
+                                <div class="status">
+                                    <div class="total-count"></div>
+                                    <div class="total-precentage">10%</div>
+                                </div>
+                            </div>
+                            <div class="row-progress">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row-footer">
+                        <a href="#" class="row-link">View All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="analytic-card">
+                <div class="header">
+                    <div class="title">Browsers</div>
+                </div>
+                <div class="content">
+                    <div class="row-title">
+                        <div class="title">Name</div>
+                        <div class="title">Visitors</div>
+                    </div>
+                    <div class="row-data">
+                        <a href="#" class="row-link">
+                            <div class="info-row">
+                                <div class="info">
+                                    <i class="bi bi-link-45deg"></i>
+                                    <div class="text">tallentor.com/</div>
+                                </div>
+                                <div class="status">
+                                    <div class="total-count"></div>
+                                    <div class="total-precentage">10%</div>
+                                </div>
+                            </div>
+                            <div class="row-progress">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row-data">
+                        <a href="#" class="row-link">
+                            <div class="info-row">
+                                <div class="info">
+                                    <i class="bi bi-link-45deg"></i>
+                                    <div class="text">tallentor.com/</div>
+                                </div>
+                                <div class="status">
+                                    <div class="total-count"></div>
+                                    <div class="total-precentage">10%</div>
+                                </div>
+                            </div>
+                            <div class="row-progress">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row-footer">
+                        <a href="#" class="row-link">View All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="analytic-card">
+                <div class="header">
+                    <div class="title">Operating Systems</div>
+                </div>
+                <div class="content">
+                    <div class="row-title">
+                        <div class="title">Name</div>
+                        <div class="title">Visitors</div>
+                    </div>
+                    <div class="row-data">
+                        <a href="#" class="row-link">
+                            <div class="info-row">
+                                <div class="info">
+                                    <i class="bi bi-link-45deg"></i>
+                                    <div class="text">tallentor.com/</div>
+                                </div>
+                                <div class="status">
+                                    <div class="total-count"></div>
+                                    <div class="total-precentage">10%</div>
+                                </div>
+                            </div>
+                            <div class="row-progress">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row-data">
+                        <a href="#" class="row-link">
+                            <div class="info-row">
+                                <div class="info">
+                                    <i class="bi bi-link-45deg"></i>
+                                    <div class="text">tallentor.com/</div>
+                                </div>
+                                <div class="status">
+                                    <div class="total-count"></div>
+                                    <div class="total-precentage">10%</div>
+                                </div>
+                            </div>
+                            <div class="row-progress">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row-footer">
+                        <a href="#" class="row-link">View All</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -181,56 +356,52 @@
             "alwaysShowCalendars": true
         });
     });
-
-    // Radar tooltips
-    // const radarSection = document.querySelector('.radar-section');
-    // const particle = radarSection.querySelectorAll('.particle');
-
-    // particle.forEach(function (dot) {
-    //     dot.addEventListener("click", function () {
-
-    //         particle.forEach(function (label) {
-    //             label.classList.remove('active');
-    //         });
-
-    //         dot.classList.add('active');
-    //     })
-    // });
-
-    // Visitors List tooltip
-
-    // const visitorsSection = document.querySelector('.visitors-section');
-    // const indicatorTd = visitorsSection.querySelectorAll('.active-status');
-    // const label = visitorsSection.querySelectorAll('.label');
-
-    // indicatorTd.forEach(function (ind) {
-    //     ind.addEventListener("click", function () {
-
-    //         indicatorTd.forEach(function (ind) {
-    //             ind.querySelector('.label').classList.remove('active');
-    //         });
-
-    //         ind.querySelector('.label').classList.add('active');
-    //     });
-    // });
-
-    // remove added active classes in the page
-
-    // window.addEventListener("click", function (e) {
-
-    //     const liveStatus = e.target.classList.contains('indicator');
-    //     const particles = e.target.classList.contains('particle-indicator');
-
-    //     console.log(e.target);
-
-    //     particle.forEach(function (label) {
-    //         label.classList.remove('active');
-    //     });
-
-    //     indicatorTd.forEach(function (ind) {
-    //         ind.querySelector('.label').classList.remove('active');
-    //     });
-    // })
 </script>
+
+<script type="text/javascript">
+      // Initialize the echarts instance based on the prepared dom
+      var myChart = echarts.init(document.getElementById('analyticsChart'));
+
+      // Specify the configuration items and data for the chart
+      var option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['Visitors', 'Pageviews']
+            },
+            color: ['#017FFA', '#FF0000'],
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                name: 'Visitors',
+                type: 'line',
+                data: [50, 148, 132, 198, 90, 230, 210]
+                },
+                {
+                name: 'Pageviews',
+                type: 'line',
+                data: [72, 36, 180, 52, 123, 148, 28]
+                }
+            ]
+        };
+
+
+      // Display the chart using the configuration items and data just specified.
+      myChart.setOption(option);
+    </script>
 
 @endpush
