@@ -179,7 +179,24 @@ class SettingsSeeder extends Seeder
             'value' => 'info@example.com', 
             'user_id' => 1,
             ]
+        ); 
+        DB::table('settings')
+        ->insert(
+            [             
+            'key' => 'default_whatsapp_server',
+            'value' => null, 
+            'user_id' => 1,
+            ]
         );  
+        DB::table('settings')
+        ->insert(
+            [             
+            'key' => 'default_wa_server_auth_status',
+            'value' => null, 
+            'user_id' => 1,
+            ]
+        );  
+        
         
     }
 }

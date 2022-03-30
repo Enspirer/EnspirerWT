@@ -301,7 +301,7 @@
                                                                             <input type="hidden" name="incoming_mobile_number" id="incoming_mobile_number" value="{{$solo_ims_pro_client_message->phone_number}}">
                                                                             <input type="hidden" name="incoming_type" id="incoming_type" value="{{$solo_ims_pro_client_message->type}}">
                                                                             <input type="hidden" name="incoming_project_id" id="incoming_project_id" value="{{$solo_ims_pro_client_message->project_id}}">
-                                                                            <input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="{{$solo_ims_pro_client_message->widget_id}}">
+                                                                            <input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="{{$solo_ims_pro_client_message->wideget_id}}">
                                                                             <div class="label">
                                                                                 <span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>
                                                                                 <span class="time">12 days</span>
@@ -313,7 +313,7 @@
                                                                                 <img src="{{url('images/test.png')}}" alt="">
                                                                             </div>
                                                                             <div class="message">
-                                                                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's . . .</div>
+                                                                                <div class="text">{{$solo_ims_pro_client_message->message}}</div>
                                                                             </div>
                                                                             <div class="label">
                                                                                 <span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>
@@ -512,7 +512,7 @@
             },
 
             function(content, status){                
-
+                // console.log(content);
                 var obj = JSON.parse(content);
                 // console.log(obj);
                 $('#incoming_outgoing_chat_messages').html(obj);

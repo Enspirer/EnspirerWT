@@ -10,6 +10,7 @@ use App\Models\VisitorLogs;
 use App\Models\ImsProClientMessages;
 use App\Models\Widgets;
 use App\Models\Projects;
+use App\Models\Settings;
 use Illuminate\Http\Request;
 use Modules\WidgetManager\Entities\ImsClients;
 use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
@@ -1017,23 +1018,42 @@ class HomeController extends Controller
 
         foreach($new_messages as $new_message){
 
-         
-            $content = $content.'<div class="message-block incoming">'.
-                '<div class="image-block">'.
-                    '<img src="{{url("images/test.png")}}" alt="">'.
-                '</div>'.
-                '<div class="message">'.
-                    '<div class="text">'.$new_message->message.'</div>'.
-                '</div>'.
-                '<input type="hidden" name="incoming_mobile_number" id="incoming_mobile_number" value="'.$new_message->phone_number.'">'.
-                '<input type="hidden" name="incoming_type" id="incoming_type" value="'.$new_message->type.'">'.
-                '<input type="hidden" name="incoming_project_id" id="incoming_project_id" value="'.$new_message->project_id.'">'.
-                '<input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="'.$new_message->widget_id.'">'.
-                '<div class="label">'.
-                    '<span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>'.
-                    '<span class="time">12 days</span>'.
-                '</div>'.
-            '</div>';
+            if($new_message->user_id == null){
+                
+                $content = $content.'<div class="message-block incoming">'.
+                    '<div class="image-block">'.
+                        '<img src="'.url("images/test.png").'" alt="">'.
+                    '</div>'.
+                    '<div class="message">'.
+                        '<div class="text">'.$new_message->message.'</div>'.
+                    '</div>'.
+                    '<input type="hidden" name="incoming_mobile_number" id="incoming_mobile_number" value="'.$new_message->phone_number.'">'.
+                    '<input type="hidden" name="incoming_type" id="incoming_type" value="'.$new_message->type.'">'.
+                    '<input type="hidden" name="incoming_project_id" id="incoming_project_id" value="'.$new_message->project_id.'">'.
+                    '<input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="'.$new_message->wideget_id.'">'.
+                    '<div class="label">'.
+                        '<span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>'.
+                        '<span class="time">12 days</span>'.
+                    '</div>'.
+                '</div>';
+            }
+            else{
+
+                $content = $content.'<div class="message-block outgoing">'.
+                    '<div class="image-block">'.
+                        '<img src="'.url("images/test.png").'" alt="">'.
+                    '</div>'.
+                    '<div class="message">'.
+                        '<div class="text">'.$new_message->message.'</div>'.
+                    '</div>'.
+                    '<div class="label">'.
+                        '<span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>'.
+                        '<span class="time">12 days</span>'.
+                    '</div>'.
+                '</div>';
+            }
+
+            
 
         }
 
@@ -1076,6 +1096,24 @@ class HomeController extends Controller
         return 'sucess';
 
     }
+
+    public function default_server_auth_status(Request $request)
+    {     
+                
+        $status = $request->status;
+               
+        Settings::where('key','default_wa_server_auth_status')->update([
+            'value' => $status,
+            'user_id' => 1
+        ]);
+        
+        return 'sucess';
+
+    }
+
+
+
+    
 
     
 

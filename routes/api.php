@@ -40,8 +40,10 @@ Route::post('event', [HomeController::class,'analytics_post'])->name('analytics_
 
 
 Route::post('ims_chat', [HomeController::class, 'ims_chat'])->name('ims_chat');
-
 Route::post('ims_chat_insert', [HomeController::class, 'ims_chat_insert'])->name('ims_chat_insert');
+
+Route::post('default_server_auth_status', [HomeController::class, 'default_server_auth_status'])->name('default_server_auth_status');
+
 
 
 

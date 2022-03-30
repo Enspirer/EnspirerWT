@@ -23,6 +23,7 @@ class SettingsController extends Controller
         $youtube = Settings::where('key','=','youtube')->first();
         $twitter = Settings::where('key','=','twitter')->first();
         $email = Settings::where('key','=','email')->first();
+        $default_whatsapp_server = Settings::where('key','=','default_whatsapp_server')->first();        
 
         return view('backend.settings.index',[
             'app_title' => $app_title,
@@ -37,6 +38,7 @@ class SettingsController extends Controller
             'youtube' => $youtube,
             'twitter' => $twitter,
             'email' => $email,
+            'default_whatsapp_server' => $default_whatsapp_server            
         ]);
     }
 
@@ -177,6 +179,27 @@ class SettingsController extends Controller
         $update->value=$request->contactus_thanks;
         
         Settings::where('key','=','contact_us_thank_you_email_note')->update($update->toArray());
+        return back()->withFlashSuccess('Updated Successfully');                
+
+    }
+
+
+    public function default_whatsapp_server()
+    {
+        $default_whatsapp_server = Settings::where('key','=','default_whatsapp_server')->first();
+
+        return view('backend.settings.default_whatsapp_server',[
+            'default_whatsapp_server' => $default_whatsapp_server
+        ]);
+    }
+
+    public function default_whatsapp_server_update(Request $request)
+    {            
+        $update = new Settings;
+
+        $update->value=$request->default_whatsapp_server;
+        
+        Settings::where('key','=','default_whatsapp_server')->update($update->toArray());
         return back()->withFlashSuccess('Updated Successfully');                
 
     }

@@ -181,7 +181,14 @@
                             <a class="nav-link {{active_class(Route::is('admin/contactus_thanks'))}}" href="{{ route('admin.contactus_thanks') }}">
                                 Contact Us Thanks Email
                             </a>
-                        </li>                   
+                        </li>     
+                        
+                        <li class="nav-item">
+                            <a class="nav-link {{active_class(Route::is('admin/default_whatsapp_server'))}}" href="{{ route('admin.default_whatsapp_server') }}">
+                                Default Whatsapp Server
+                            </a>
+                        </li> 
+
                     </ul>
                 </li>
 

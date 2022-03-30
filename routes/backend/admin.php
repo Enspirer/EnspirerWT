@@ -44,6 +44,11 @@ Route::post('terms_and_conditions_update/update', [SettingsController::class, 't
 Route::get('contactus_thanks', [SettingsController::class, 'contactus_thanks'])->name('contactus_thanks');
 Route::post('contactus_thanks_update/update', [SettingsController::class, 'contactus_thanks_update'])->name('contactus_thanks_update');
 
+Route::get('default_whatsapp_server', [SettingsController::class, 'default_whatsapp_server'])->name('default_whatsapp_server');
+Route::post('default_whatsapp_server_update/update', [SettingsController::class, 'default_whatsapp_server_update'])->name('default_whatsapp_server_update');
+
+
+
 Route::get('projects', [ProjectsController::class, 'index'])->name('projects.index');
 Route::get('projects/create', [ProjectsController::class, 'create'])->name('projects.create');
 Route::get('projects/show/{id}', [ProjectsController::class, 'show'])->name('projects.show');

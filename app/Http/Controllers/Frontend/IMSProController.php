@@ -128,7 +128,7 @@ class IMSProController extends Controller
 
         $project = Projects::where('id',$id)->first();  
 
-        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->get();
+        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->get()->unique('phone_number');
         // dd($all_ims_pro_client_messages);
 
 

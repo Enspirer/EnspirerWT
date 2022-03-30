@@ -35,6 +35,12 @@ Breadcrumbs::for('admin.contactus_thanks', function ($trail) {
     $trail->push('Contact Us Thanks Email', route('admin.contactus_thanks'));
 });
 
+Breadcrumbs::for('admin.default_whatsapp_server', function ($trail) {
+    $trail->push('Default Whatsapp Server', route('admin.default_whatsapp_server'));
+});
+
+
+
 Breadcrumbs::for('admin.projects.index', function ($trail) {
     $trail->push('Projects', route('admin.projects.index'));
 });
