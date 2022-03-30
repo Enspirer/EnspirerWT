@@ -33,7 +33,7 @@
 
 <div class="row">
     <div class="col-md-6">
-        <iframe src="{{$default_whatsapp_server->value}}" height="300">
+        <iframe src="http://{{$default_whatsapp_server->value}}" height="300">
 
         </iframe>
     </div>
