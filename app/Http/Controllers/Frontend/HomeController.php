@@ -1079,13 +1079,14 @@ class HomeController extends Controller
         $message = $request->message;
         $user_id = $request->user_id;
 
-        preg_match_all('!\d+!', $phone_number, $matches);
+
+        $outputString = preg_replace('/[^0-9]/', '', $phone_number);
 
 
 
         $add = new ImsProClientMessages;
 
-        $add->phone_number = $matches;
+        $add->phone_number = $outputString;
         $add->name = $name;
         $add->type = $type;
         $add->email = $email;
