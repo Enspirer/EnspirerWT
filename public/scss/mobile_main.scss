@@ -1323,11 +1323,21 @@
 
 // Signup Pages
 .section-signup {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
     .mobile-container {
         padding: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        min-height: auto;
 
         .image-block {
-            margin: 60px 0 20px;
+            margin: 0 0 20px;
             text-align: center;
 
             img {

@@ -37,9 +37,6 @@
                 <div class="text">Google</div>
             </a>
         </div>
-        <div class="footer">
-            <div class="text">Don't have an account? <a href="#">Register!</a></div>
-        </div>
     </div>
 </div>
     
