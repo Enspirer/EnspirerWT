@@ -1082,7 +1082,6 @@ class HomeController extends Controller
 
         $outputString = preg_replace('/[^0-9]/', '', $phone_number);
 
-        dd($outputString);
 
         $add = new ImsProClientMessages;
 
