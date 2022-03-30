@@ -1,0 +1,224 @@
+.blue {
+    color: #017FFA !important;
+}
+
+.red {
+    color: #FA0101 !important;
+}
+
+.green {
+    color: #2FA745 !important;
+}
+
+.daterangepicker {
+    top: 196px !important;
+}
+
+// Analytics Page
+.section-analytics {
+    .mobile-container {
+        .inner-container {
+            .analytics-dropdown {
+                position: relative;
+
+                .analytics-dropdown-btn {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 15px;
+                    background-color: #F9F9F9;
+                    padding: 15px 20px;
+                    border-radius: 7px;
+                    text-decoration: none;
+
+                    .bi {
+                        font-size: 18px;
+                        color: #777;
+                    }
+
+                    .text {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: #777;
+                    }
+                }
+
+                .dropdown-menu {
+                    width: 100%;
+                    height: 50vh;
+                    overflow-y: scroll;
+
+                    .dropdown-cat {
+                        font-size: 14px !important;
+                        font-weight: 400 !important;
+                        color: #464646 !important;
+                        padding-left: 15px !important;
+                        background-color: #eee;
+                        margin: 5px 0 !important;
+                    }
+
+                    .dropdown-item {
+                        padding-left: 30px;
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #464646;
+                    }
+                }
+            }
+
+            .header {
+                .content-block {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .properties {
+                        flex: 1 1 100%;
+                        border: 2px solid #F7F9FB;
+                        border-radius: 7px;
+                        margin-right: 1rem;
+
+                        .property-dropdown {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            text-decoration: none;
+                            padding: 8px;
+                        }
+
+                        .dropdown-menu {
+                            width: 100%;
+                            border: 1px solid #D7E8F9;
+                            border-radius: 7px;
+                            top: 8px !important;
+
+                            li {
+                                position: relative;
+
+                                &:not(:last-child) {
+                                    &::after {
+                                        content: "";
+                                        width: calc(100% - 95px);
+                                        height: 1px;
+                                        background-color: #e9e9e9;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 70px;
+                                    }
+                                }
+
+                                .dropdown-item {
+                                    position: relative;
+                                    margin-top: 8px;
+                                    padding-bottom: 8px;
+                                }
+                            }
+
+                            &::after {
+                                content: '';
+                                width: 12px;
+                                height: 12px;
+                                background-color: #fff;
+                                border-top: 1px solid #D7E8F9;
+                                border-left: 1px solid #D7E8F9;
+                                position: absolute;
+                                top: -7px;
+                                right: 20px;
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+
+                    .filter {
+                        position: relative;
+                        border: 2px solid #F7F9FB;
+                        border-radius: 7px;
+
+                        .datepicker {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 18px;
+
+                            .filter-date-input {
+                                position: absolute;
+                                width: 50px;
+                                height: 50px;
+                                opacity: 0;
+
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .data-header {
+                margin: 15px 0;
+                background-color: #F9F9F9;
+                padding: 15px;
+                border-radius: 7px;
+
+                .data-row {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 15px;
+
+                    &:last-child {
+                        padding-bottom: 0;
+                        padding-top: 15px;
+                        border-top: 2px solid #fff;
+                    }
+
+                    .info-block {
+
+                        .info-header {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            .bi {
+                                font-size: 14px;
+                                color: #777;
+                            }
+
+                            .text {
+                                font-size: 16px;
+                                color: #464646;
+                                margin: 0 10px;
+                            }
+                        }
+
+                        .precentage {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            .bi {
+                                font-size: 16px;
+                                margin-right: 10px;
+                            }
+
+                            .text {
+                                font-size: 14px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+
+                    .count {
+                        font-size: 24px;
+                        color: #464646;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

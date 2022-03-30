@@ -27,4 +27,8 @@ class MobileViewController extends Controller
         return view('frontend.mobile.mobile_login');
     }
 
+    public function mobile_analytics() {
+        return view('frontend.mobile.mobile_analytics');
+    }
+
 }

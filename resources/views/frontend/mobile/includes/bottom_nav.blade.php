@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{url('/mobile_view/mobile-analytics')}}" class="nav-link">
                 <i class="bi bi-bar-chart"></i>
             </a>
         </div>

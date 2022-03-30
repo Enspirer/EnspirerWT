@@ -47,6 +47,7 @@ Route::get('mobile_view/mobile-notification',[MobileViewController::class, 'mobi
 Route::get('mobile_view/mobile-settings',[MobileViewController::class, 'mobile_settings'])->name('mobile_settings');
 Route::get('mobile_view/mobile-register',[MobileViewController::class, 'mobile_register'])->name('mobile_register');
 Route::get('mobile_view/mobile-login',[MobileViewController::class, 'mobile_login'])->name('mobile_login');
+Route::get('mobile_view/mobile-analytics',[MobileViewController::class, 'mobile_analytics'])->name('mobile_analytics');
 
 Route::get('not_found',[NotFoundController::class, 'index'])->name('not_found');
 
