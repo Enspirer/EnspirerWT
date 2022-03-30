@@ -24,7 +24,12 @@ class LoginController extends Controller
      */
     public function redirectPath()
     {
-        return route(home_route());
+        if(home_route() == 'frontend.mobile_view'){
+            return route(home_route(),'project_id');
+        }
+        else{
+            return route(home_route());
+        }
     }
 
     /**
@@ -124,6 +129,11 @@ class LoginController extends Controller
         // Laravel specific logic
         $this->guard()->logout();
         $request->session()->invalidate();
+
+        
+        if(is_mobile($request->header('user-agent')) == true){                
+            return redirect()->route('frontend.mobile_login');
+        }
 
         return redirect()->route('frontend.index');
     }

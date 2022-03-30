@@ -18,9 +18,31 @@
                 <div class="navs">
                     <img src="{{url('images/mobile/home/hamburger.png')}}" alt="" data-bs-toggle="modal" data-bs-target="#mobileNav">
                 </div>
-                <div class="profile">
-                    <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
-                </div>
+                
+                @auth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="profile">
+                                <div class="profile">
+                                    <img src="{{auth()->user()->picture}}" alt="">
+                                </div>                                        
+                            </div>
+                        </a>
+                        @auth
+                            <ul class="dropdown-menu profile-dropdown-menu" aria-labelledby="profileDropdown">                                           
+                                <li>
+                                    <a class="dropdown-item" href="{{route('frontend.auth.logout')}}">
+                                                        
+                                        <div class="text">Sign Out</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        @endauth
+                    </li>
+                @endauth
+
+
+
             </div>
         </div>
 
@@ -32,41 +54,70 @@
             <div class="content-block">
                 <div class="properties">
                     <div class="dropdown">
-                        <a class="property-dropdown" href="#" role="button" id="propertyDrop"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <div class="property">
-                                <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                                <div class="content">
-                                    <div class="title">Tallentor</div>
-                                    <div class="address">https://tallentor.com/</div>
-                                </div>
-                            </div>
-                            <img src="{{url('images/mobile/home/chevron-down.png')}}" alt="">
-                        </a>
 
+                        @if(count(\App\Models\Projects::where('user_id',auth()->user()->id)->get()) == 0)
+                            <div class="image"></div>
+                            <div class="content">
+                                <h4 href="#" type="button" class="btn-mobile btn-new-project" data-bs-toggle="modal" data-bs-target="#addPropertyInput">Create Project</h4>
+                            </div>
+                            <div class="dropdown-icon">
+                                <i class="bi"></i>
+                            </div>
+                        @else
+                            @if(isset($project_id))
+                                <a class="property-dropdown" href="#" role="button" id="propertyDrop"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="property">
+                                        @if(get_seo_result($project_id)->favicon->value == null)
+                                            <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                        @else
+                                            <img src="{{get_seo_result($project_id)->favicon->value}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                        @endif
+                                        <div class="content">
+                                            <div class="title">{{\App\Models\Projects::where('id',$project_id)->first()->name}}</div>
+                                            <div class="address">{{\App\Models\Projects::where('id',$project_id)->first()->url}}</div>
+                                        </div>
+                                    </div>
+                                    <img src="{{url('images/mobile/home/chevron-down.png')}}" alt="">
+                                </a>
+                            @else
+                                <a class="property-dropdown" href="#" role="button" id="propertyDrop"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="property">
+                                       <div class="content">
+                                            <div class="title">Select Your Project</div>
+                                        </div>
+                                    </div>
+                                    <img src="{{url('images/mobile/home/chevron-down.png')}}" alt="">
+                                </a>                            
+                            @endif
+
+                        @endif
+
+                        
                         <ul class="dropdown-menu" aria-labelledby="propertyDrop">
-                            <li><a class="dropdown-item" href="#">
-                                    <div class="property">
-                                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                                        <div class="content">
-                                            <div class="title">Tallentor</div>
-                                            <div class="address">https://tallentor.com/</div>
-                                        </div>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </div>
-                                </a>
-                            </li>
-                            <li><a class="dropdown-item" href="#">
-                                    <div class="property">
-                                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                                        <div class="content">
-                                            <div class="title">Tallentor</div>
-                                            <div class="address">https://tallentor.com/</div>
-                                        </div>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </div>
-                                </a>
-                            </li>
+                            @if(count(\App\Models\Projects::where('user_id',auth()->user()->id)->get()) != 0)
+                                @foreach(\App\Models\Projects::where('user_id',auth()->user()->id)->get() as $project)
+                                    <li><a class="dropdown-item" href="{{route('frontend.mobile_view',$project->id)}}">
+                                            <div class="property">
+                                                @if(get_seo_result($project->id) != null)
+                                                    @if(get_seo_result($project->id)->favicon->value == null)
+                                                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                                    @else
+                                                        <img src="{{get_seo_result($project->id)->favicon->value}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                                    @endif
+                                                @endif
+                                                <div class="content">
+                                                    <div class="title">{{$project->name}}</div>
+                                                    <div class="address">{{$project->url}}</div>
+                                                </div>
+                                                <i class="bi bi-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            @endif
+                                    
                         </ul>
                     </div>
                 </div>
@@ -120,7 +171,9 @@
                     </div>
                 </div>
                 <div class="visitor-count">
-                    <div class="counter">04</div>
+                    @if(isset($project_id))
+                        <div class="counter">{{\App\Models\VisitorCount::where('project_id',$project_id)->count()}}</div>
+                    @endif
                     <div class="text">Live Visitors</div>
                 </div>
             </div>
@@ -144,51 +197,38 @@
         <div class="visitors-section">
             <table class="table align-middle">
                 <tbody>
-                    <tr>
-                        <td class="country-flag">
-                            <img src="{{url('images/mobile/home/RO.png')}}" alt="">
-                        </td>
-                        <td class="country-name">Country</td>
-                        <td class="active-status">
-                            <div class="indicator active"></div>
-                            <div class="label">30 min ago</div>
-                        </td>
-                        <td>
-                            <a href="#" class="btn-mobile btn-watch">
-                                <img src="{{url('images/mobile/home/watch.png')}}" alt="">
-                                <div class="text">Watch</div>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#" class="btn-mobile btn-invite">
-                                <img src="{{url('images/mobile/home/invite.png')}}" alt="">
-                                <div class="text">Invite</div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="country-flag">
-                            <img src="{{url('images/mobile/home/RO.png')}}" alt="">
-                        </td>
-                        <td class="country-name">Country</td>
-                        <td class="active-status">
-                            <div class="indicator active"></div>
-                            <div class="label">30 min ago</div>
-                        </td>
-                        <td>
-                            <a href="#" class="btn-mobile btn-watch">
-                                <img src="{{url('images/mobile/home/watch.png')}}" alt="">
-                                <div class="text">Watch</div>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#" class="btn-mobile btn-invite">
-                                <img src="{{url('images/mobile/home/invite.png')}}" alt="">
-                                <div class="text">Invite</div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
+                    @if($project_id != null)
+                        @if(count($visitors_count) != 0)
+                            @foreach($visitors_count as $visitors)
+                                <tr>
+                                    <td class="country-flag">
+                                        <img src="{{url('images/mobile/home/RO.png')}}" alt="">
+                                    </td>
+                                    <td class="country-name">{{$visitors->ip_address}}</td>
+                                    <td class="active-status">
+                                        <div class="indicator active"></div>
+                                        <div class="label">30 min ago</div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn-mobile btn-watch">
+                                            <img src="{{url('images/mobile/home/watch.png')}}" alt="">
+                                            <div class="text">Watch</div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn-mobile btn-invite">
+                                            <img src="{{url('images/mobile/home/invite.png')}}" alt="">
+                                            <div class="text">Invite</div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
+                    @endif
+
+
+
+                    <!-- <tr>
                         <td class="country-flag">
                             <img src="{{url('images/mobile/home/RO.png')}}" alt="">
                         </td>
@@ -209,7 +249,7 @@
                                 <div class="text">Invite</div>
                             </a>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
