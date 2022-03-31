@@ -24,10 +24,13 @@ class LoginController extends Controller
      */
     public function redirectPath()
     {
+
         if(home_route() == 'frontend.mobile_view'){
+            dd(home_route());
             return route(home_route(),'project_id');
         }
         else{
+            dd(home_route());
             return route(home_route());
         }
     }
