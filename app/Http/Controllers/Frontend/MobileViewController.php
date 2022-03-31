@@ -37,7 +37,7 @@ class MobileViewController extends Controller
     }
 
     public function mobile_view_armap(){
-        return redirect()->route('frontend.mobile.mobile_view','project_id');
+        return redirect()->route('frontend.mobile.mobile_login');
     }
     
     public function mobile_settings() {
