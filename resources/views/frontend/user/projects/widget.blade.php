@@ -61,6 +61,8 @@
                                                         <img src="{{url('images/instagram (1).png')}}" style="top:0rem; right:11rem; width:30px;" alt="">
                                                         <img src="{{url('images/Facebook_Messenger_logo_2020.svg (1).png')}}" style="top:0rem; right:7rem; width:30px;" alt="">
                                                         <img src="{{url('images/messenger.png')}}" alt="" class="watermark-img">
+                                                    @elseif($widgetlist->widget_type == 'IMS Pro') 
+                                                        <img src="{{url('images/ims-watermark.png')}}" alt="">
                                                     @endif
                                                 </div>
                                             </div>
@@ -370,7 +372,7 @@
                                                                     </div>
                                                                     <div class="col-4">
                                                                         <div class="whatsapp-feature-block">
-                                                                            <img src="{{url('images/social_media_icons/chat.png')}}" alt="">
+                                                                            <img src="{{url('images/social_media_icons/ims-logo.png')}}" style="width:80px;" alt="">
                                                                             <div class="title">IMS Pro</div>
                                                                             <div class="subtitle">Entertainment</div>
                                                                             <div class="star-rating">

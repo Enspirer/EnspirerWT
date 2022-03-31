@@ -237,8 +237,7 @@
                                 </div>
                             </div>
                             @include('frontend.user.projects.dialogs.widget_source')
-                        </section>
-                        
+                        </section>                        
 
                     </div>
                 </div>
