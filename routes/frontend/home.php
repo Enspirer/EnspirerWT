@@ -51,6 +51,20 @@ Route::get('mobile_view/mobile-login',[MobileViewController::class, 'mobile_logi
 Route::get('mobile_view/mobile-analytics',[MobileViewController::class, 'mobile_analytics'])->name('mobile_analytics');
 // Analytics Inner Pages
 Route::get('mobile_view/mobile-analytics/analytics-browsers',[MobileViewController::class, 'mobile_analytics_browsers'])->name('analytics_browsers');
+Route::get('mobile_view/mobile-analytics/analytics-campaigns',[MobileViewController::class, 'mobile_analytics_campaigns'])->name('analytics_campaigns');
+Route::get('mobile_view/mobile-analytics/analytics-cities',[MobileViewController::class, 'mobile_analytics_cities'])->name('analytics_cities');
+Route::get('mobile_view/mobile-analytics/analytics-continents',[MobileViewController::class, 'mobile_analytics_continents'])->name('analytics_continents');
+Route::get('mobile_view/mobile-analytics/analytics-countries',[MobileViewController::class, 'mobile_analytics_countries'])->name('analytics_countries');
+Route::get('mobile_view/mobile-analytics/analytics-devices',[MobileViewController::class, 'mobile_analytics_devices'])->name('analytics_devices');
+Route::get('mobile_view/mobile-analytics/analytics-events',[MobileViewController::class, 'mobile_analytics_events'])->name('analytics_events');
+Route::get('mobile_view/mobile-analytics/analytics-landing-pages',[MobileViewController::class, 'mobile_analytics_landing_pages'])->name('analytics_landing_pages');
+Route::get('mobile_view/mobile-analytics/analytics-languages',[MobileViewController::class, 'mobile_analytics_languages'])->name('analytics_languages');
+Route::get('mobile_view/mobile-analytics/analytics-operating-systems',[MobileViewController::class, 'mobile_analytics_operating_systems'])->name('analytics_operating_systems');
+Route::get('mobile_view/mobile-analytics/analytics-pages',[MobileViewController::class, 'mobile_analytics_pages'])->name('analytics_pages');
+Route::get('mobile_view/mobile-analytics/analytics-referrers',[MobileViewController::class, 'mobile_analytics_referrers'])->name('analytics_referrers');
+Route::get('mobile_view/mobile-analytics/analytics-screen-resolutions',[MobileViewController::class, 'mobile_analytics_screen_resolutions'])->name('analytics_screen_resolutions');
+Route::get('mobile_view/mobile-analytics/analytics-search-engines',[MobileViewController::class, 'mobile_analytics_search_engines'])->name('analytics_search_engines');
+Route::get('mobile_view/mobile-analytics/analytics-social-networks',[MobileViewController::class, 'mobile_analytics_social_networks'])->name('analytics_social_networks');
 
 Route::get('not_found',[NotFoundController::class, 'index'])->name('not_found');
 

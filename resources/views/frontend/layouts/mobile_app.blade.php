@@ -71,6 +71,57 @@
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+        <script>
+            // Filter Datepicker
+            window.addEventListener('DOMContentLoaded', function () {
+
+                jQuery('.filter-date-input').daterangepicker({
+
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    },
+                    locale: {
+                        direction: "ltr",
+                        format: "YYYY-MM-DD",
+                        separator: " - ",
+                        applyLabel: "Apply",
+                        cancelLabel: "Cancel",
+                        customRangeLabel: "Custom",
+                        daysOfWeek: [
+                            "Su",
+                            "Mo",
+                            "Tu",
+                            "We",
+                            "Th",
+                            "Fr",
+                            "Sa"
+                        ],
+                        monthNames: [
+                            "January",
+                            "February",
+                            "March",
+                            "April",
+                            "May",
+                            "June",
+                            "July",
+                            "August",
+                            "September",
+                            "October",
+                            "November",
+                            "December"
+                        ]
+                    },
+                    "startDate": "2022-03-22",
+                    "endDate": "2022-03-28",
+                    "opens": "left",
+                    "linkedCalendars": false,
+                    "alwaysShowCalendars": true
+                });
+            });
+        </script>
+
         @stack('after-scripts-slider')
                 
         @include('includes.partials.ga')
