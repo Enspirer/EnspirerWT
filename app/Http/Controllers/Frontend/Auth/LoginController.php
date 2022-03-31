@@ -26,11 +26,9 @@ class LoginController extends Controller
     {
 
         if(home_route() == 'frontend.mobile_view'){
-            dd(home_route());
             return route(home_route(),'project_id');
         }
         else{
-            dd(home_route());
             return route(home_route());
         }
     }
