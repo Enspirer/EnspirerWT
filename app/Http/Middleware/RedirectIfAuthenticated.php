@@ -20,8 +20,12 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (auth()->guard($guard)->check()) {
-            dd(home_route());
-            return redirect()->route(home_route());
+            if(is_mobile($request->header('user-agent')) == true){
+                return redirect()->route(home_route(),'project_id');
+            }else{
+                return redirect()->route(home_route());
+            }
+
         }
 
         return $next($request);
