@@ -120,9 +120,7 @@
                             @foreach($visitors_count as $visitors)
                                 <tr>
                                     <td class="country-flag">
-                                        {{$geoip = (new GeoIP(storage_path('app/geoip/GeoLite2-City.mmdb')))->city($visitors->ip_address)}};
 
-                                        {{$geoip->country->isoCode}}
                                         <img src="{{url('images/mobile/home/RO.png')}}" alt="">
                                     </td>
                                     <td class="country-name">{{$visitors->ip_address}}</td>
