@@ -56,9 +56,50 @@ class MobileViewController extends Controller
     public function mobile_analytics() {
         return view('frontend.mobile.mobile_analytics');
     }
-
     public function mobile_analytics_browsers() {
         return view('frontend.mobile.sub_pages.analytics_browsers');
+    }
+    public function mobile_analytics_campaigns() {
+        return view('frontend.mobile.sub_pages.analytics_campaigns');
+    }
+    public function mobile_analytics_cities() {
+        return view('frontend.mobile.sub_pages.analytics_cities');
+    }
+    public function mobile_analytics_continents() {
+        return view('frontend.mobile.sub_pages.analytics_continents');
+    }
+    public function mobile_analytics_countries() {
+        return view('frontend.mobile.sub_pages.analytics_countries');
+    }
+    public function mobile_analytics_devices() {
+        return view('frontend.mobile.sub_pages.analytics_devices');
+    }
+    public function mobile_analytics_events() {
+        return view('frontend.mobile.sub_pages.analytics_events');
+    }
+    public function mobile_analytics_landing_pages() {
+        return view('frontend.mobile.sub_pages.analytics_landing_pages');
+    }
+    public function mobile_analytics_languages() {
+        return view('frontend.mobile.sub_pages.analytics_languages');
+    }
+    public function mobile_analytics_operating_systems() {
+        return view('frontend.mobile.sub_pages.analytics_operating_systems');
+    }
+    public function mobile_analytics_pages() {
+        return view('frontend.mobile.sub_pages.analytics_pages');
+    }
+    public function mobile_analytics_referrers() {
+        return view('frontend.mobile.sub_pages.analytics_referrers');
+    }
+    public function mobile_analytics_screen_resolutions() {
+        return view('frontend.mobile.sub_pages.analytics_screen_resolutions');
+    }
+    public function mobile_analytics_search_engines() {
+        return view('frontend.mobile.sub_pages.analytics_search_engines');
+    }
+    public function mobile_analytics_social_networks() {
+        return view('frontend.mobile.sub_pages.analytics_social_networks');
     }
 
 }

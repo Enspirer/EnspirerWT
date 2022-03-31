@@ -6,25 +6,25 @@
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="analyticsDrop">
-                    <li><a class="dropdown-item dropdown-cat" href="#">Overview</a></li>
+                    <li><a class="dropdown-item dropdown-cat" href="{{url('/mobile_view/mobile-analytics')}}">Overview</a></li>
                     <li><a class="dropdown-item dropdown-cat" href="#">Behavior</a></li>
-                    <li><a class="dropdown-item" href="#">Pages</a></li>
-                    <li><a class="dropdown-item" href="#">Landing Pages</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-pages')}}">Pages</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-landing-pages')}}">Landing Pages</a></li>
                     <li><a class="dropdown-item dropdown-cat" href="#">Acquisitions</a></li>
-                    <li><a class="dropdown-item" href="#">Referrers</a></li>
-                    <li><a class="dropdown-item" href="#">Search engines</a></li>
-                    <li><a class="dropdown-item" href="#">Social networks</a></li>
-                    <li><a class="dropdown-item" href="#">Campaigns</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-referrers')}}">Referrers</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-search-engines')}}">Search engines</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-social-networks')}}">Social networks</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-campaigns')}}">Campaigns</a></li>
                     <li><a class="dropdown-item dropdown-cat" href="#">Geographic</a></li>
-                    <li><a class="dropdown-item" href="#">Continents</a></li>
-                    <li><a class="dropdown-item" href="#">Countries</a></li>
-                    <li><a class="dropdown-item" href="#">Cities</a></li>
-                    <li><a class="dropdown-item" href="#">Languages</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-continents')}}">Continents</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-countries')}}">Countries</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-cities')}}">Cities</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-languages')}}">Languages</a></li>
                     <li><a class="dropdown-item dropdown-cat" href="#">Technology</a></li>
-                    <li><a class="dropdown-item" href="#">Operating systems</a></li>
-                    <li><a class="dropdown-item" href="#">Browsers</a></li>
-                    <li><a class="dropdown-item" href="#">Screen resolutions</a></li>
-                    <li><a class="dropdown-item" href="#">Devices</a></li>
-                    <li><a class="dropdown-item dropdown-cat" href="#">Events</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-operating-systems')}}">Operating systems</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-browsers')}}">Browsers</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-screen-resolutions')}}">Screen resolutions</a></li>
+                    <li><a class="dropdown-item" href="{{url('/mobile_view/mobile-analytics/analytics-devices')}}">Devices</a></li>
+                    <li><a class="dropdown-item dropdown-cat" href="{{url('/mobile_view/mobile-analytics/analytics-events')}}">Events</a></li>
                 </ul>
             </div>

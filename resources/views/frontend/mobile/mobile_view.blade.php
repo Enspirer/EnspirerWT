@@ -20,7 +20,7 @@
                 </div>
                 
                 @auth
-                    <li class="nav-item dropdown">
+                    <div class="nav-item dropdown">
                         <a class="nav-link" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="profile">
                                 <div class="profile">
@@ -38,7 +38,7 @@
                                 </li>
                             </ul>
                         @endauth
-                    </li>
+                    </div>
                 @endauth
 
 
@@ -292,54 +292,6 @@
 @push('after-scripts')
 
 <script>
-    // Filter Datepicker
-    window.addEventListener('DOMContentLoaded', function () {
-
-        jQuery('.filter-date-input').daterangepicker({
-
-            ranges: {
-                'Today': [moment(), moment()],
-                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-            },
-            locale: {
-                direction: "ltr",
-                format: "YYYY-MM-DD",
-                separator: " - ",
-                applyLabel: "Apply",
-                cancelLabel: "Cancel",
-                customRangeLabel: "Custom",
-                daysOfWeek: [
-                    "Su",
-                    "Mo",
-                    "Tu",
-                    "We",
-                    "Th",
-                    "Fr",
-                    "Sa"
-                ],
-                monthNames: [
-                    "January",
-                    "February",
-                    "March",
-                    "April",
-                    "May",
-                    "June",
-                    "July",
-                    "August",
-                    "September",
-                    "October",
-                    "November",
-                    "December"
-                ]
-            },
-            "startDate": "2022-03-22",
-            "endDate": "2022-03-28",
-            "opens": "left",
-            "linkedCalendars": false,
-            "alwaysShowCalendars": true
-        });
-    });
 
     // Radar tooltips
     // const radarSection = document.querySelector('.radar-section');
