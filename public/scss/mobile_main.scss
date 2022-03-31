@@ -425,6 +425,8 @@
 }
 
 .mobile-nav {
+    z-index: 99999;
+
     .modal-dialog {
         margin: 0;
 

@@ -325,6 +325,9 @@
   padding: 10px 16px;
 }
 
+.mobile-nav {
+  z-index: 99999;
+}
 .mobile-nav .modal-dialog {
   margin: 0;
 }
