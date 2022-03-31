@@ -18,6 +18,8 @@ class CreateVisitorCountsTable extends Migration
             $table->text('project_id');
             $table->text('widget_id');
             $table->text('ip_address');
+            $table->text('country')->nullable();
+            $table->text('city')->nullable();
             $table->timestamps();
         });
     }
