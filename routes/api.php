@@ -46,4 +46,8 @@ Route::post('default_server_auth_status', [HomeController::class, 'default_serve
 
 
 
+Route::get('live_visitor_monitor_api/{project_id}', [HomeController::class, 'live_visitor_monitor_api'])->name('live_visitor_monitor_api');
+
+
+
 

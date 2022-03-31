@@ -1117,6 +1117,12 @@ class HomeController extends Controller
     }
 
 
+    public function live_visitor_monitor_api($project_id) {
+        $live_visitors = VisitorCount::where('project_id', $project_id)->get();
+        return json_encode($live_visitors);
+    }
+
+
 
     
 
