@@ -31,13 +31,22 @@
             
 </div>
 
-<div class="row">
-    <div class="col-md-6">
-        <iframe src="http://{{$default_whatsapp_server->value}}" height="300">
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <iframe src="http://{{$default_whatsapp_server->value}}" height="300">
 
-        </iframe>
-    </div>
-    <div class="col-md-6">
+                </iframe>
+            </div>
+            <div class="col-md-6">
+                <label>Connection Statues</label>
+                <div style="background-color: grey">
+                    APIS
+                </div>
+
+            </div>
+        </div>
 
     </div>
 </div>
