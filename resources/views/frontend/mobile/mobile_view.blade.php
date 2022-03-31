@@ -121,7 +121,7 @@
                                 <tr>
                                     <td class="country-flag">
 
-                                        <img src="{{url('images/mobile/home/RO.png')}}" alt="">
+                                        <img src="{{url('images/mobile/home/'.$visitors->iso_code .'.png')}}" alt="">
                                     </td>
                                     <td class="country-name">{{$visitors->ip_address}}</td>
                                     <td class="active-status">
