@@ -41,8 +41,9 @@
             </div>
             <div class="col-md-6">
                 <label>Connection Statues</label>
-                <div style="background-color: grey">
-                    APIS
+                <div style="
+    padding: 10px;background: #e4e5e6;border-radius: 7px;">
+                    {{get_settings('default_wa_server_auth_status')}}
                 </div>
 
             </div>
