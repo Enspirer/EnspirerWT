@@ -50,7 +50,12 @@ class MobileViewController extends Controller
 
     public function mobile_login() {
         // dd('dddddd');
-        return view('frontend.mobile.mobile_login');
+        if(auth()->user()){
+            return redirect()->route('frontend.mobile_view','project_id');
+        }else{
+            return view('frontend.mobile.mobile_login');
+        }
+
     }
 
     public function mobile_analytics() {
