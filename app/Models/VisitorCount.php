@@ -22,11 +22,13 @@ class VisitorCount extends Model
                 $geoip = (new GeoIP(storage_path('app/geoip/GeoLite2-City.mmdb')))->city($ip_address);
 
                 $continent = $geoip->continent->code.':'.$geoip->continent->name;
-                $country = $geoip->country->isoCode.':'.$geoip->country->name;
-                $city = $geoip->country->isoCode.':'. $geoip->city->name .(isset($geoip->mostSpecificSubdivision->isoCode) ? ', '.$geoip->mostSpecificSubdivision->isoCode : '');
+                $country = $geoip->country->name;
+                $iso_code = $geoip->country->isoCode;
+                $city = $geoip->city->name .(isset($geoip->mostSpecificSubdivision->isoCode) ? ', '.$geoip->mostSpecificSubdivision->isoCode : '');
             } catch (\Exception $e) {
                 $country = null;
                 $city = null;
+                $iso_code = null;
                 $continent = $country = $city = null;
             }
 
@@ -35,6 +37,7 @@ class VisitorCount extends Model
             $vistorDetails->widget_id = $widget_id;
             $vistorDetails->ip_address = $ip_address;
             $vistorDetails->country = $country;
+            $vistorDetails->iso_code = $iso_code;
             $vistorDetails->city = $city;
             $vistorDetails->save();
         }
