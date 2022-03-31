@@ -35,6 +35,10 @@ class MobileViewController extends Controller
     public function mobile_notification() {
         return view('frontend.mobile.mobile_notification');
     }
+
+    public function mobile_view_armap(){
+        return redirect()->route('frontend.mobile.mobile_view','project_id');
+    }
     
     public function mobile_settings() {
         return view('frontend.mobile.mobile_settings');
