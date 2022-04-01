@@ -106,9 +106,10 @@ Route::get('ims_pro_logout/{id}', [IMSLoginController::class, 'ims_pro_logout'])
 Route::get('user_widget/ims_pro_media_scan/{id}', [IMSProController::class, 'ims_pro_media_scan'])->name('user_widget.ims_pro_media_scan');
 Route::get('user_widget/ims_pro_index/{id}/{phone_number}/{type}', [IMSProController::class, 'ims_pro_index'])->name('user_widget.ims_pro_index');
 Route::get('user_widget/ims_pro_chat_summary/{id}', [IMSProController::class, 'ims_pro_chat_summary'])->name('user_widget.ims_pro_chat_summary');
-Route::get('user_widget/ims_pro_inquiry_summary/{id}', [IMSProController::class, 'ims_pro_inquiry_summary'])->name('user_widget.ims_pro_inquiry_summary');
 Route::get('user_widget/ims_pro_my_inquiry/{id}', [IMSProController::class, 'ims_pro_my_inquiry'])->name('user_widget.ims_pro_my_inquiry');
-
+Route::get('user_widget/ims_pro_inquiry_summary/{id}', [IMSProController::class, 'ims_pro_inquiry_summary'])->name('user_widget.ims_pro_inquiry_summary');
+Route::get('user_widget/ims_pro_contacts/{id}', [IMSProController::class, 'ims_pro_contacts'])->name('user_widget.ims_pro_contacts');
+Route::get('user_widget/ims_pro_broadcast/{id}', [IMSProController::class, 'ims_pro_broadcast'])->name('user_widget.ims_pro_broadcast');
 
 
 
