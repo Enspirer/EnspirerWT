@@ -286,11 +286,11 @@
         fetch('https://tallentor.com/api/live_visitor_monitor_api/1')
             .then(res => res.json())
             .then(data => {
-                const countyCode = data.iso_code.toLowerCase();
                 document.querySelector('[data-counter').textContent = data.length;
                 tBody.innerHTML = '';
 
                 data.forEach(function (data) {
+                    const countyCode = data.iso_code.toLowerCase();
                     const tRow = document.createElement('tr');
                     tRow.innerHTML =
                         `<td class="country-flag">
