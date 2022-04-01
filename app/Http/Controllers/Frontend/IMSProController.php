@@ -207,6 +207,47 @@ class IMSProController extends Controller
 
     }
 
+    public function submit_chat(Request $request){
+        $phone_number = $request->phone_number;
+        $name = $request->name;
+        $type = 'WhatsApp';
+        $email = auth()->user()->email;
+        $status = 'Pending';
+        $project_id = $request->project_id;
+        $widget_id = $request->widget_id;
+        $message = $request->message;
+        $user_id = auth()->user()->id;
+
+        $add = new ImsProClientMessages;
+
+        $add->phone_number = $phone_number;
+        $add->name = $name;
+        $add->type = $type;
+        $add->email = $email;
+        $add->status = $status;
+        $add->project_id = $project_id;
+        $add->wideget_id = $widget_id;
+        $add->message = $message;
+        $add->user_id = $user_id;
+
+        $add->save();
+
+        $client = new \GuzzleHttp\Client([
+            'verify' => false
+        ]);
+        $url = "https://206.189.102.36:3000/send-message";
+
+        $myBody['number'] = $phone_number;
+        $myBody['message'] = $message;
+        $submit_data = $client->post($url,  [
+            'form_params'=>$myBody
+        ]);
+        $response = $submit_data->getStatusCode();
+
+
+        return back();
+    }
+
 
     
   
