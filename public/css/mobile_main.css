@@ -780,6 +780,7 @@
   max-width: 65px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .section-home .mobile-container .visitors-section .table .active-status {
   position: relative;

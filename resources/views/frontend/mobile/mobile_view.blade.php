@@ -316,15 +316,15 @@
                     tBody.appendChild(tRow);
                 });
             })
+
+        // Set Interval realtimeStats function
+        setInterval(realtimeStats, 3000);
     }
 
     // Run realtimeStats function on page load
     window.addEventListener('load', function () {
         realtimeStats();
     })
-
-    // Set Interval realtimeStats function
-    setInterval(realtimeStats, 3000);
 </script>
 
 @endpush
