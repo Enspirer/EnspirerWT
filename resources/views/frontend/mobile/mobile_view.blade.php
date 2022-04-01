@@ -92,6 +92,7 @@
                     @if(isset($project_id))
                         <div class="counter">{{\App\Models\VisitorCount::where('project_id',$project_id)->count()}}</div>
                     @endif
+                    <div class="counter" data-counter></div>
                     <div class="text">Live Visitors</div>
                 </div>
             </div>
@@ -114,13 +115,12 @@
 
         <div class="visitors-section">
             <table class="table align-middle">
-                <tbody>
+                <tbody id="liveVisitors">
                     @if($project_id != null)
                         @if(count($visitors_count) != 0)
                             @foreach($visitors_count as $visitors)
                                 <tr>
                                     <td class="country-flag">
-
                                         <img src="{{url('https://flagicons.lipis.dev/flags/4x3/'.strtolower($visitors->iso_code) .'.svg')}}" alt="">
                                     </td>
                                     <td class="country-name">{{$visitors->ip_address}}</td>
@@ -144,31 +144,6 @@
                             @endforeach
                         @endif
                     @endif
-
-
-
-                    <!-- <tr>
-                        <td class="country-flag">
-                            <img src="{{url('images/mobile/home/RO.png')}}" alt="">
-                        </td>
-                        <td class="country-name">Country</td>
-                        <td class="active-status">
-                            <div class="indicator"></div>
-                            <div class="label">30 min ago</div>
-                        </td>
-                        <td>
-                            <a href="#" class="btn-mobile btn-watch">
-                                <img src="{{url('images/mobile/home/watch.png')}}" alt="">
-                                <div class="text">Watch</div>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#" class="btn-mobile btn-invite">
-                                <img src="{{url('images/mobile/home/invite.png')}}" alt="">
-                                <div class="text">Invite</div>
-                            </a>
-                        </td>
-                    </tr> -->
                 </tbody>
             </table>
         </div>
@@ -188,54 +163,6 @@
       <div class="modal-body">
         <ul class="list-group list-group-flush">
             <li class="list-group-item pull_delete active">
-                <a href="#" class="list-link">
-                    <div class="property">
-                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                        <div class="content">
-                            <div class="title">Tallentor</div>
-                            <div class="address">https://tallentor.com/</div>
-                        </div>
-                        <i class="bi bi-chevron-right"></i>
-                    </div>
-                </a>
-            </li>
-            <li class="list-group-item pull_delete">
-                <a href="#" class="list-link">
-                    <div class="property">
-                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                        <div class="content">
-                            <div class="title">Tallentor</div>
-                            <div class="address">https://tallentor.com/</div>
-                        </div>
-                        <i class="bi bi-chevron-right"></i>
-                    </div>
-                </a>
-            </li>
-            <li class="list-group-item pull_delete">
-                <a href="#" class="list-link">
-                    <div class="property">
-                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                        <div class="content">
-                            <div class="title">Tallentor</div>
-                            <div class="address">https://tallentor.com/</div>
-                        </div>
-                        <i class="bi bi-chevron-right"></i>
-                    </div>
-                </a>
-            </li>
-            <li class="list-group-item pull_delete">
-                <a href="#" class="list-link">
-                    <div class="property">
-                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                        <div class="content">
-                            <div class="title">Tallentor</div>
-                            <div class="address">https://tallentor.com/</div>
-                        </div>
-                        <i class="bi bi-chevron-right"></i>
-                    </div>
-                </a>
-            </li>
-            <li class="list-group-item pull_delete">
                 <a href="#" class="list-link">
                     <div class="property">
                         <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
@@ -350,6 +277,54 @@
             $dom.remove();
         });
     })
+</script>
+
+<script>
+    // RealtimeStats function
+    function realtimeStats() {
+        const tBody = document.getElementById('liveVisitors')
+        fetch('https://tallentor.com/api/live_visitor_monitor_api/1')
+            .then(res => res.json())
+            .then(data => {
+                const countyCode = data.iso_code.toLowerCase();
+                document.querySelector('[data-counter').textContent = data.length;
+                tBody.innerHTML = '';
+
+                data.forEach(function (data) {
+                    const tRow = document.createElement('tr');
+                    tRow.innerHTML =
+                        `<td class="country-flag">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/${countyCode}.svg">
+                    </td>
+                    <td class="country-name">${data.country}</td>
+                    <td class="active-status">
+                        <div class="indicator active"></div>
+                        <div class="label"></div>
+                    </td>
+                    <td>
+                        <a href="#" class="btn-mobile btn-watch">
+                            <i class="bi bi-play"></i>
+                            <div class="text">Watch</div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" class="btn-mobile btn-invite">
+                            <i class="bi bi-node-plus"></i>
+                            <div class="text">Invite</div>
+                        </a>
+                    </td>`
+                    tBody.appendChild(tRow);
+                });
+            })
+    }
+
+    // Run realtimeStats function on page load
+    window.addEventListener('load', function () {
+        realtimeStats();
+    })
+
+    // Set Interval realtimeStats function
+    setInterval(realtimeStats, 3000);
 </script>
 
 @endpush

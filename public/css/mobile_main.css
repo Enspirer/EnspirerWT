@@ -837,6 +837,9 @@
   color: #C4A300;
   margin-left: 6px;
 }
+.section-home .mobile-container .visitors-section .table .btn-mobile.btn-watch .bi {
+  color: #C4A300;
+}
 .section-home .mobile-container .visitors-section .table .btn-mobile.btn-invite {
   background-color: #A2E6FF;
 }
@@ -845,6 +848,9 @@
   font-weight: 300;
   color: #017FFA;
   margin-left: 6px;
+}
+.section-home .mobile-container .visitors-section .table .btn-mobile.btn-invite .bi {
+  color: #017FFA;
 }
 
 .section-notification .mobile-container .inner-container .notification-block {
