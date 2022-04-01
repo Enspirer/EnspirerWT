@@ -326,10 +326,21 @@
 
                                                         </div>
                                                     </div>
-                                                    <div class="footer">
-                                                        <input type="text" class="msg-input" placeholder="Type your message here...">
-                                                        <a href="#" class="btn-send"><i class="bi bi-send-fill"></i></a>
-                                                    </div>
+                                                    @if($solo_ims_pro_client->type == 'WhatsApp')
+                                                        <form method="post" action="{{route('frontend.user.submit_chat')}}">
+                                                            <div class="footer">
+
+                                                                    {{csrf_field()}}
+                                                                    <input type="hidden" name="phone_number" value="{{$solo_ims_pro_client->phone_number}}">
+                                                                    <input type="hidden" name="project_id" value="{{$solo_ims_pro_client->project_id}}">
+                                                                    <input type="hidden" name="widget_id" value="{{$solo_ims_pro_client->widget_id}}">
+                                                                    <input type="text" name="message" class="msg-input" placeholder="Type your message here...">
+                                                                    <button type="submit" class="btn-send"><i class="bi bi-send-fill"></i></button>
+
+                                                            </div>
+                                                        </form>
+                                                    @endif
+
                                                 </div>
                                                 @else
                                                     @include('frontend.includes.not_found',[

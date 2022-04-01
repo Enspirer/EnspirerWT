@@ -1008,7 +1008,6 @@ class HomeController extends Controller
 
         $new_messages = ImsProClientMessages::where('phone_number',$incoming_mobile_number)
         ->where('project_id',$incoming_project_id)
-        ->where('wideget_id',$incoming_widget_id)
         ->where('type',$incoming_type)
         ->get();
 
@@ -1044,10 +1043,6 @@ class HomeController extends Controller
                     '<div class="message">'.
                         '<div class="text">'.$new_message->message.'</div>'.
                     '</div>'.
-                    '<div class="label">'.
-                        '<span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>'.
-                        '<span class="time">12 days</span>'.
-                    '</div>'.
                 '</div>';
             }
 
@@ -1063,7 +1058,7 @@ class HomeController extends Controller
 
 
     public function ims_chat_insert(Request $request)
-    {     
+    {
         $phone_number = $request->phone_number;
         $name = $request->name;
         $type = $request->type;
