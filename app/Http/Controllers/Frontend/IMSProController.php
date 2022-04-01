@@ -232,17 +232,18 @@ class IMSProController extends Controller
 
         $add->save();
 
-        $client = new \GuzzleHttp\Client();
+        $client = new \GuzzleHttp\Client([
+            'verify' => false
+        ]);
         $url = "https://206.189.102.36:3000/send-message";
 
-
+        $myBody['number'] = $phone_number;
+        $myBody['message'] = $message;
         $submit_data = $client->post($url,  [
-            'number'=> '94760939990',
-            'message'=> 'sdfsdf',
+            'form_params'=>$myBody
         ]);
-        $response = $submit_data->send();
+        $response = $submit_data->getStatusCode();
 
-        dd($response);
 
         return back();
     }
