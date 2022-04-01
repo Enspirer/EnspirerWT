@@ -11,7 +11,7 @@
         @include('frontend.ims_pro.ims_pro_sidebar')
             <div class="ims__main-col">
                 @include('frontend.ims_pro.ims_pro_navbar')
-                
+
                 <div class="row g-0">
                     <div class="col">
                         <!-- Content goes here -->
@@ -20,7 +20,7 @@
                                 <div class="row g-0 mb-4">
                                     <div class="col">
                                         <ul class="breadcrumb">
-                                            
+
                                             <li class="breadcrumb-item">
                                                 <a class="breadcrumb-link">IMS Pro</a>
                                             </li>
@@ -92,9 +92,9 @@
                                                 </div>
                                                 <div class="chat-list">
                                                     <div class="inner-wrapper">
-                                                        <ul class="list-group list-group-flush">                                                            
+                                                        <ul class="list-group list-group-flush">
 
-                                                            @if(count($all_ims_pro_client_messages) != 0)                                                        
+                                                            @if(count($all_ims_pro_client_messages) != 0)
                                                                 @foreach($all_ims_pro_client_messages as $ims_pro_client_message)
                                                                     @if($solo_ims_pro_client == null)
                                                                         <li class="list-group-item">
@@ -110,8 +110,8 @@
 
                                                                                             <div class="row">
                                                                                                 <div class="col-8">
-                                                                                                    <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->name}}</div>
-                                                                                                    <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                    <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                    <div class="contact">{{$ims_pro_client_message->type}}</div>
                                                                                                 </div>
                                                                                                 <div class="col-4">
                                                                                                     <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
@@ -139,8 +139,8 @@
 
                                                                                                 <div class="row">
                                                                                                     <div class="col-8">
-                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->name}}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
                                                                                                     </div>
                                                                                                     <div class="col-4">
                                                                                                         <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
@@ -181,8 +181,8 @@
                                                                                     <div class="message" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{$ims_pro_client_message->message}}</div>
                                                                                 </a>
                                                                             </li>
-                                                                        @endif                                                 
-                                                                    @endif                                                    
+                                                                        @endif
+                                                                    @endif
                                                                 @endforeach
                                                             @else
                                                                 @include('frontend.includes.not_found',[
@@ -191,7 +191,7 @@
                                                                     'not_found_button_caption' => null
                                                                 ])
                                                             @endif
-                                                           
+
 
 
                                                             <!-- <li class="list-group-item">
@@ -213,7 +213,7 @@
                                                                     <div class="message">Hi, will this item be shipped today ?</div>
                                                                 </a>
                                                             </li> -->
-                                                            
+
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -244,7 +244,7 @@
                                                                     <a href="#" class="nav-link"><i class="bi bi-trash"></i></a>
                                                                 </li>
                                                                 <li class="nav-item">
-                                                                    <div href="#" class="nav-link dropdown">                                                              
+                                                                    <div href="#" class="nav-link dropdown">
                                                                         <a class="progress-dropdown imsPro-dropdown" href="#" role="button" id="progressDrop" data-bs-toggle="dropdown"
                                                                             aria-expanded="false">
                                                                             <i class="bi bi-journal-medical"></i>
@@ -320,10 +320,10 @@
                                                                                 <span class="time">12 days</span>
                                                                             </div>
                                                                         </div>
-                                                                    @endif                                                           
+                                                                    @endif
                                                                 @endforeach
-                                                            @endif                                                           
-                                                            
+                                                            @endif
+
                                                         </div>
                                                     </div>
                                                     <div class="footer">
@@ -475,18 +475,18 @@
                                                     'not_found_button_caption' => null
                                                 ])
                                             @endif
-                                        </div>                                   
-                                    </div>                                   
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        
+
     </section>
-    
+
 
 @endsection
 
@@ -495,15 +495,15 @@
 @push('after-scripts')
 
 <script>
- 
-    function chat_message() {  
+
+    function chat_message() {
 
         incoming_mobile_number = $('#incoming_mobile_number').val();
         incoming_project_id = $('#incoming_project_id').val();
-        incoming_widget_id = $('#incoming_widget_id').val();       
-        incoming_type = $('#incoming_type').val();       
-        
-        
+        incoming_widget_id = $('#incoming_widget_id').val();
+        incoming_type = $('#incoming_type').val();
+
+
         $.post("{{url('/')}}/api/ims_chat", {
                 incoming_mobile_number:incoming_mobile_number,
                 incoming_project_id:incoming_project_id,
@@ -511,13 +511,13 @@
                 incoming_type:incoming_type
             },
 
-            function(content, status){                
+            function(content, status){
                 // console.log(content);
                 var obj = JSON.parse(content);
                 // console.log(obj);
                 $('#incoming_outgoing_chat_messages').html(obj);
 
-            }     
+            }
         );
 
 
