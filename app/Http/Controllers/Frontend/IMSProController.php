@@ -8,6 +8,7 @@ use App\Models\Projects;
 use App\Models\Widgets;
 use App\Models\IMSProUsers;
 use App\Models\ImsProClientMessages;
+use App\Models\ImsProContacts;
 use DataTables;
 use Modules\WidgetManager\Entities\ImsClients;
 use Illuminate\Support\Facades\Hash;
@@ -169,7 +170,9 @@ class IMSProController extends Controller
         ]);
     }
 
-    public function ims_pro_inquiry_summary($id)
+    
+
+    public function ims_pro_contacts($id, Request $request)
     {     
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
 
@@ -193,11 +196,99 @@ class IMSProController extends Controller
         
         $project = Projects::where('id',$id)->first();  
 
-        return view('frontend.ims_pro.ims_pro_inquiry_summary',[
+
+        $sort_search =null;
+        $all_ims_pro_contacts = ImsProContacts::where('project_id',$id)->orderBy('id','desc');
+
+        if ($request->has('search_name')){
+            $sort_search = $request->search_name;
+            $all_ims_pro_contacts = $all_ims_pro_contacts->where('name', 'like', '%'.$sort_search.'%');
+        }
+        
+        $all_ims_pro_contacts = $all_ims_pro_contacts->get();
+        
+
+        return view('frontend.ims_pro.ims_pro_contacts',[
+            'project_id' => $project->id,
+            'project' => $project,            
+            'all_ims_pro_contacts' => $all_ims_pro_contacts
+        ]);
+    }
+
+    public function ims_pro_broadcast($id)
+    {     
+        $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
+
+        if(!empty( auth()->user()->id) === true ){
+            if($ims_pro_user->user_id != auth()->user()->id){
+
+                $itemsCart = Cart::getContent();
+    
+                if(count($itemsCart) == 0){
+                    return redirect()->route('frontend.ims_login_page',$id);  
+                }
+    
+            } 
+        }else{
+            $itemsCart = Cart::getContent();
+    
+            if(count($itemsCart) == 0){
+                return redirect()->route('frontend.ims_login_page',$id);  
+            }
+        } 
+        
+        $project = Projects::where('id',$id)->first();  
+
+        return view('frontend.ims_pro.ims_pro_broadcast',[
             'project_id' => $project->id,
             'project' => $project          
         ]);
     }
+
+    public function ims_pro_contacts_store(Request $request)
+    {        
+        // dd($request);               
+
+        $add = new ImsProContacts;
+
+        $add->name = $request->name;
+        $add->address = $request->address;                
+        $add->phone_number = $request->phone_number;        
+        $add->email = $request->email;
+        $add->project_id = $request->hidden_project_id;
+        $add->user_id = auth()->user()->id;
+
+        $add->save();
+
+        return back();          
+    }
+
+    public function ims_pro_contacts_update(Request $request)
+    {        
+        // dd($request);               
+
+        $update = new ImsProContacts;
+
+        $update->name = $request->name;
+        $update->address = $request->address;                
+        $update->phone_number = $request->phone_number;        
+        $update->email = $request->email;
+        $update->project_id = $request->hidden_project_id;
+        $update->user_id = auth()->user()->id;
+
+        ImsProContacts::whereId($request->hidden_id)->update($update->toArray());
+
+        return back();          
+    }
+
+    public function ims_pro_contacts_delete($id)
+    {
+        ImsProContacts::where('id', $id)->delete();
+        return back();
+    }
+    
+
+    
 
     public function send_message(Request $request){
         $phone_number = $request->phone_number;

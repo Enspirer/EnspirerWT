@@ -104,7 +104,7 @@
                                         </ul>
                                     </li>
                                     
-                                    
+                                    {{ get_settings('default_wa_server_auth_status') }}
 
 
                                     <li class="nav-item dropdown">
