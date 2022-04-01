@@ -167,8 +167,8 @@
 
                                                                                                 <div class="row">
                                                                                                     <div class="col-8">
-                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->name}}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
                                                                                                     </div>
                                                                                                     <div class="col-4">
                                                                                                         <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
