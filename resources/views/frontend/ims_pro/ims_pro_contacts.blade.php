@@ -40,18 +40,20 @@
                                         <div class="row g-0">
                                             <div class="col">
 
-                                                <form action="{{ route('frontend.user_widget.ims_pro_contacts', $project_id) }}" method="get" enctype="multipart/form-data">
-                                                {{csrf_field()}}
-                                                    <div class="input-group" style="width:260px">
-
-                                                        <input type="text" class="form-control" name="search_name" id="search_name" placeholder="Search Name Here" required>
-                                                        <button type="submit" class="search-btn p-1 px-3" style="border: none; background-color: #A5A5A5; color: #fff; ">
-                                                            <i class="bi bi-search" style="color: #fff;"></i>
-                                                        </button>
-                                                   
-                                                    </div>
-                                                </form>
+                                                
                                                 <div class="control-block">
+                                                    <form action="{{ route('frontend.user_widget.ims_pro_contacts', $project_id) }}" method="get" enctype="multipart/form-data">
+                                                    {{csrf_field()}}
+                                                        <div class="input-group" style="width:260px">
+
+                                                            <input type="text" class="form-control" name="search_name" id="search_name" placeholder="Search Name Here" required>
+                                                            <button type="submit" class="search-btn p-1 px-3" style="border: none; background-color: #A5A5A5; color: #fff; ">
+                                                                <i class="bi bi-search" style="color: #fff;"></i>
+                                                            </button>
+                                                    
+                                                        </div>
+                                                    </form>
+                                                    
                                                     <a href="#" class="btn-status-report" type="button" data-bs-toggle="modal" data-bs-target="#createModal">                                                       
                                                         <div class="text">Create</div>
                                                     </a>
