@@ -1033,10 +1033,6 @@ class HomeController extends Controller
                     '<input type="hidden" name="incoming_type" id="incoming_type" value="'.$new_message->type.'">'.
                     '<input type="hidden" name="incoming_project_id" id="incoming_project_id" value="'.$new_message->project_id.'">'.
                     '<input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="'.$new_message->wideget_id.'">'.
-                    '<div class="label">'.
-                        '<span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>'.
-                        '<span class="time">12 days</span>'.
-                    '</div>'.
                 '</div>';
             }
             else{
