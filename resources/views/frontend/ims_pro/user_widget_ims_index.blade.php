@@ -228,8 +228,8 @@
                                                                 <img src="{{url('images/test.png')}}" alt="">
                                                             </div>
                                                             <div class="status-block">
-                                                                <div class="name">{{$solo_ims_pro_client->name}}</div>
-                                                                <div class="contact">{{$solo_ims_pro_client->phone_number}}</div>
+                                                                <div class="name">{{$solo_ims_pro_client->phone_number}}</div>
+                                                                <div class="contact">{{$solo_ims_pro_client->type}}</div>
                                                             </div>
                                                         </div>
                                                         <div class="option-block">
