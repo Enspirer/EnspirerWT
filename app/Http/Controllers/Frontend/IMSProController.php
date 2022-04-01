@@ -199,6 +199,14 @@ class IMSProController extends Controller
         ]);
     }
 
+    public function send_message(Request $request){
+        $phone_number = $request->phone_number;
+        $message = $request->message;
+
+
+
+    }
+
 
     
   
