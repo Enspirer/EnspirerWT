@@ -29,7 +29,7 @@
                                                         class="bi bi-chevron-right"></i></a>
                                             </li>
                                             <li class="breadcrumb-item">
-                                                <a class="breadcrumb-link breadcrumb-current">Inquiry Summary</a>
+                                                <a class="breadcrumb-link breadcrumb-current">Broadcast</a>
                                             </li>
                                         </ul>
                                     </div>
