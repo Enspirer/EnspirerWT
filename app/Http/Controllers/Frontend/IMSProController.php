@@ -337,7 +337,7 @@ class IMSProController extends Controller
         $client = new \GuzzleHttp\Client(['defaults' => [
             'verify' => false
         ]]);
-        $url = "https://206.189.102.36:3000/send-message";
+        $url = "https://whatapi.tallentor.com/send-message";
 
         $myBody['number'] = $phone_number;
         $myBody['message'] = $message;
