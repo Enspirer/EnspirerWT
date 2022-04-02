@@ -337,6 +337,9 @@ class IMSProController extends Controller
             CURLOPT_POSTFIELDS => array('number' => '94777989125','message' => 'sfsdfsd'),
         ));
 
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
         $response = curl_exec($curl);
 
         curl_close($curl);
