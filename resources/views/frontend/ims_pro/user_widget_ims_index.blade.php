@@ -106,30 +106,36 @@
                                                                             <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
                                                                                 <div class="header">
                                                                                     <div class="profile">
-                                                                                        <div class="indicator active"></div>
-                                                                                        <div class="image-block">
-                                                                                            <img src="{{url('images/test.png')}}" alt="">
-                                                                                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
-                                                                                        </div>
-                                                                                        <div class="status-block">
-
-                                                                                            <div class="row">
-                                                                                                <div class="col-8">
-                                                                                                    @if(get_contact_info($ims_pro_client_message->phone_number))
-                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                    @else
-                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                    @endif
-                                                                                                </div>
-                                                                                                <div class="col-4">
-                                                                                                    <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
+                                                                                    
+                                                                                        <div class="row">
+                                                                                            <div class="col-3">
+                                                                                                <div class="indicator active"></div>
+                                                                                                <div class="image-block">
+                                                                                                    <img src="{{url('images/test.png')}}" alt="">
+                                                                                                    <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
                                                                                                 </div>
                                                                                             </div>
-
+                                                                                            <div class="col-9">
+                                                                                                <div class="status-block">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-8">
+                                                                                                            @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                                <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                                                                <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                                <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                            @else
+                                                                                                                <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                                <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                            @endif
+                                                                                                        </div>
+                                                                                                        <div class="col-4">
+                                                                                                            <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
                                                                                         </div>
+
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="message" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{$ims_pro_client_message->message}}</div>
@@ -142,29 +148,35 @@
                                                                                     <div class="header">
                                                                                         <div class="profile">
 
-                                                                                            <div class="indicator active"></div>
-                                                                                            <div class="image-block">
-                                                                                                <img src="{{url('images/test.png')}}" alt="">
-                                                                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
-                                                                                            </div>
-
-                                                                                            <div class="status-block">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-8">
-                                                                                                        @if(get_contact_info($ims_pro_client_message->phone_number))
-                                                                                                            <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
-                                                                                                            <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                        @else
-                                                                                                            <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                        @endif
+                                                                                            <div class="row">
+                                                                                                <div class="col-3">
+                                                                                                    <div class="indicator active"></div>
+                                                                                                    <div class="image-block">
+                                                                                                        <img src="{{url('images/test.png')}}" alt="">
+                                                                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
                                                                                                     </div>
-                                                                                                    <div class="col-4">
-                                                                                                        <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
+                                                                                                </div>
+                                                                                                <div class="col-9">
+                                                                                                    <div class="status-block">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-8">
+                                                                                                                @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                                    <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                                                                    <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                                    <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                                @else
+                                                                                                                    <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                                    <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                                @endif
+                                                                                                            </div>
+                                                                                                            <div class="col-4">
+                                                                                                                <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
+                                                                                                            </div>
+                                                                                                        </div>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
+
 
                                                                                         </div>
                                                                                     </div>
@@ -176,30 +188,36 @@
                                                                                 <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
                                                                                     <div class="header">
                                                                                         <div class="profile">
-                                                                                            <div class="indicator active"></div>
-                                                                                            <div class="image-block">
-                                                                                                <img src="{{url('images/test.png')}}" alt="">
-                                                                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
-                                                                                            </div>
-                                                                                            <div class="status-block">
-
-                                                                                                <div class="row">
-                                                                                                    <div class="col-8">
-                                                                                                        @if(get_contact_info($ims_pro_client_message->phone_number))
-                                                                                                            <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
-                                                                                                            <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                        @else
-                                                                                                            <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                        @endif
-                                                                                                    </div>
-                                                                                                    <div class="col-4">
-                                                                                                        <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
+                                                                                            
+                                                                                            <div class="row">
+                                                                                                <div class="col-3">
+                                                                                                    <div class="indicator active"></div>
+                                                                                                    <div class="image-block">
+                                                                                                        <img src="{{url('images/test.png')}}" alt="">
+                                                                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
                                                                                                     </div>
                                                                                                 </div>
-
-                                                                                            </div>
+                                                                                                <div class="col-9">
+                                                                                                    <div class="status-block">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-8">
+                                                                                                                @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                                    <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                                                                    <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                                    <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                                @else
+                                                                                                                    <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                                    <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                                @endif
+                                                                                                            </div>
+                                                                                                            <div class="col-4">
+                                                                                                                <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>    
+                                                                                        
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="message" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{$ims_pro_client_message->message}}</div>
