@@ -90,9 +90,8 @@
                 </div>
                 <div class="visitor-count">
                     @if(isset($project_id))
-                        <div class="counter">{{\App\Models\VisitorCount::where('project_id',$project_id)->count()}}</div>
+                        <div data-counter class="counter">{{\App\Models\VisitorCount::where('project_id',$project_id)->count()}}</div>
                     @endif
-                    <div class="counter" data-counter></div>
                     <div class="text">Live Visitors</div>
                 </div>
             </div>
@@ -115,36 +114,13 @@
 
         <div class="visitors-section">
             <table class="table align-middle">
-                <tbody id="liveVisitors">
-                    @if($project_id != null)
-                        @if(count($visitors_count) != 0)
-                            @foreach($visitors_count as $visitors)
-                                <tr>
-                                    <td class="country-flag">
-                                        <img src="{{url('https://flagicons.lipis.dev/flags/4x3/'.strtolower($visitors->iso_code) .'.svg')}}" alt="">
-                                    </td>
-                                    <td class="country-name">{{$visitors->ip_address}}</td>
-                                    <td class="active-status">
-                                        <div class="indicator active"></div>
-                                        <div class="label">30 min ago</div>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn-mobile btn-watch">
-                                            <img src="{{url('images/mobile/home/watch.png')}}" alt="">
-                                            <div class="text">Watch</div>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn-mobile btn-invite">
-                                            <img src="{{url('images/mobile/home/invite.png')}}" alt="">
-                                            <div class="text">Invite</div>
-                                        </a>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        @endif
+                @if($project_id != null)
+                    @if(count($visitors_count) != 0)
+                        @foreach($visitors_count as $visitors)
+                        <tbody id="liveVisitors"></tbody>
+                        @endforeach
                     @endif
-                </tbody>
+                @endif
             </table>
         </div>
 
@@ -292,8 +268,10 @@
                 data.forEach(function (data) {
                     const countyCode = data.iso_code.toLowerCase();
                     const tRow = document.createElement('tr');
-                    tRow.innerHTML =
-                        `<td class="country-flag">
+
+                    if (data.length != 0) {
+                        tRow.innerHTML =
+                            `<td class="country-flag">
                         <img src="https://flagicons.lipis.dev/flags/4x3/${countyCode}.svg">
                     </td>
                     <td class="country-name">${data.country}</td>
@@ -313,12 +291,17 @@
                             <div class="text">Invite</div>
                         </a>
                     </td>`
+                    } else {
+                        tRow.innerHTML =
+                            `<td colspan="5" class="country-name">There are no live visitors</td>`
+                    }
+
                     tBody.appendChild(tRow);
                 });
             })
 
         // Set Interval realtimeStats function
-        setInterval(realtimeStats, 3000);
+        setInterval(realtimeStats, 5000);
     }
 
     // Run realtimeStats function on page load
