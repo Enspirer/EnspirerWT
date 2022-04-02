@@ -40,10 +40,15 @@
                                         <div class="col-3">
                                             <div class="chat-list-window">
                                                 <div class="filter-section">
-                                                    <div class="search-input">
-                                                        <i class="bi bi-search"></i>
-                                                        <input type="search" placeholder="Search Chat">
-                                                    </div>
+
+                                                    <form action="{{route('frontend.user_widget.ims_pro_index',[$project_id,'phone_number','type'])}}" method="get" enctype="multipart/form-data">
+                                                    {{csrf_field()}}
+                                                        <div class="search-input">
+                                                            <i class="bi bi-search"></i>
+                                                            <input type="search" class="form-control" name="search_name" id="search_name" placeholder="Search Chat" required>
+                                                        </div>
+                                                    </form>
+                                                    
                                                     <div class="filter dropdown">
                                                         <a class="filter-dropdown imsPro-dropdown" href="#" role="button" id="filterDrop" data-bs-toggle="dropdown"
                                                             aria-expanded="false">
@@ -110,8 +115,14 @@
 
                                                                                             <div class="row">
                                                                                                 <div class="col-8">
-                                                                                                    <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                    <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                    @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                    @else
+                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                    @endif
                                                                                                 </div>
                                                                                                 <div class="col-4">
                                                                                                     <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
@@ -130,24 +141,31 @@
                                                                                 <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
                                                                                     <div class="header">
                                                                                         <div class="profile">
+
                                                                                             <div class="indicator active"></div>
                                                                                             <div class="image-block">
                                                                                                 <img src="{{url('images/test.png')}}" alt="">
                                                                                                 <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
                                                                                             </div>
-                                                                                            <div class="status-block">
 
+                                                                                            <div class="status-block">
                                                                                                 <div class="row">
                                                                                                     <div class="col-8">
-                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                        @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                            <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                                                            <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                        @else
+                                                                                                            <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                        @endif
                                                                                                     </div>
                                                                                                     <div class="col-4">
                                                                                                         <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
                                                                                                     </div>
                                                                                                 </div>
-
                                                                                             </div>
+
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="message" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{$ims_pro_client_message->message}}</div>
@@ -167,8 +185,14 @@
 
                                                                                                 <div class="row">
                                                                                                     <div class="col-8">
-                                                                                                        <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                        @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                            <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                                                            <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                        @else
+                                                                                                            <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                        @endif
                                                                                                     </div>
                                                                                                     <div class="col-4">
                                                                                                         <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
@@ -278,6 +302,11 @@
                                                                         </ul>
                                                                     </div>
                                                                 </li>
+                                                                @if(App\Models\ImsProContacts::where('phone_number',$solo_ims_pro_client->phone_number)->first() == null)
+                                                                    <li class="nav-item">
+                                                                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#createModal"><i class="bi bi-journal-medical"></i></a>
+                                                                    </li>
+                                                                @endif
                                                                 <li class="nav-item">
                                                                     <a href="#" class="nav-link"><i class="bi bi-three-dots-vertical"></i></a>
                                                                 </li>
@@ -386,7 +415,11 @@
                                                                     <tr>
                                                                         <td class="icons"><span class="bi">&commat;</span></td>
                                                                         <td class="title">Email</td>
-                                                                        <td class="inputs"><input class="table-input" type="text" value="{{$solo_ims_pro_client->email}}" disabled readonly></td>
+                                                                        @if($solo_ims_pro_client->email != null)
+                                                                            <td class="inputs"><input class="table-input" type="text" value="{{$solo_ims_pro_client->email}}" disabled readonly></td>
+                                                                        @else
+                                                                            <td class="inputs"><input class="table-input" type="text" value="-" disabled readonly></td>
+                                                                        @endif
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="icons"><i class="bi bi-tags-fill"></i></td>
@@ -499,11 +532,89 @@
     </section>
 
 
+    @if($solo_ims_pro_client != null)
+    <!-- Modal -->
+    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="{{route('frontend.user_widget.ims_pro_contacts_store')}}" method="post" enctype="multipart/form-data">                
+                {{csrf_field()}}
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">Add to Contacts</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <!-- <span aria-hidden="true">&times;</span> -->
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label>Address <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="address" name="address" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label>Phone Number <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="phone_number" value="{{$solo_ims_pro_client->phone_number}}" name="phone_number" required>
+                        </div>                    
+                        <div class="form-group mt-3">
+                            <label>Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                                        
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" class="form-control" id="hidden_project_id" name="hidden_project_id" value="{{$project_id}}">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-success" value="Add">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @endif
+
+
+
+    @if(\Session::has('success') )
+   
+    <div class="modal fade" id="overlay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Added Successfully</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                This Number Added To The Contacts Successfully. <a href="{{ route('frontend.user_widget.ims_pro_contacts', $project_id) }}" style="text-decoration:none">Click Here</a> ro go to Contacts Page.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+            </div>
+        </div>
+    </div>
+
+    @endif
+
 @endsection
 
 
 
 @push('after-scripts')
+
+<script>
+    $(window).on('load', function () {
+        $('#overlay').modal('show');
+    });
+    $("#close-btn").click(function () {
+        $('#overlay').modal('hide');
+    });
+</script>
+
 
 <script>
 

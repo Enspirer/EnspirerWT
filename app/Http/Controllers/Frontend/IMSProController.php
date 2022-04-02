@@ -47,7 +47,7 @@ class IMSProController extends Controller
         ]);
     }
 
-    public function ims_pro_index($id,$phone_number,$type)
+    public function ims_pro_index($id,$phone_number,$type, Request $request)
     {     
         // dd($phone_number);
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
@@ -92,7 +92,16 @@ class IMSProController extends Controller
         // dd($solo_ims_pro_client_messages);
 
        
-        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->get()->unique('phone_number');
+        $sort_search =null;
+        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->orderBy('id','desc');
+
+        if ($request->has('search_name')){
+            $sort_search = $request->search_name;
+            $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('name', 'like', '%'.$sort_search.'%');
+        }
+        $all_ims_pro_client_messages = $all_ims_pro_client_messages->get()->unique('phone_number');
+
+        // $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->orderBy('id','desc')->get()->unique('phone_number');
         // dd($all_ims_pro_client_messages);
 
 
@@ -260,7 +269,9 @@ class IMSProController extends Controller
 
         $add->save();
 
-        return back();          
+        return back()->with([
+            'success' => 'success'
+        ]);
     }
 
     public function ims_pro_contacts_update(Request $request)
