@@ -201,7 +201,7 @@
                                                                                                     <div class="status-block">
                                                                                                         <div class="row">
                                                                                                             <div class="col-8">
-                                                                                                                @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                            @if(get_contact_info($ims_pro_client_message->phone_number))
                                                                                                                     <div class="name" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
                                                                                                                     <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
                                                                                                                     <div class="contact">{{$ims_pro_client_message->type}}</div>
@@ -270,8 +270,14 @@
                                                                 <img src="{{url('images/test.png')}}" alt="">
                                                             </div>
                                                             <div class="status-block">
-                                                                <div class="name">{{$solo_ims_pro_client->phone_number}}</div>
-                                                                <div class="contact">{{$solo_ims_pro_client->type}}</div>
+                                                                @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                    <div class="name">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                    <div class="contact">{{$solo_ims_pro_client->phone_number}}</div>
+                                                                    <div class="contact">{{$solo_ims_pro_client->type}}</div>
+                                                                @else
+                                                                    <div class="name">{{$solo_ims_pro_client->phone_number}}</div>
+                                                                    <div class="contact">{{$solo_ims_pro_client->type}}</div>
+                                                                @endif                                                                
                                                             </div>
                                                         </div>
                                                         <div class="option-block">
