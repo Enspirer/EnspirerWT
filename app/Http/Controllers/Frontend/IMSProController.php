@@ -334,9 +334,9 @@ class IMSProController extends Controller
 
         $add->save();
 
-        $client = new \GuzzleHttp\Client([
+        $client = new \GuzzleHttp\Client(['defaults' => [
             'verify' => false
-        ]);
+        ]]);
         $url = "https://206.189.102.36:3000/send-message";
 
         $myBody['number'] = $phone_number;
@@ -345,6 +345,8 @@ class IMSProController extends Controller
             'form_params'=>$myBody
         ]);
         $response = $submit_data->getStatusCode();
+
+        dd($response);
 
 
         return back();
