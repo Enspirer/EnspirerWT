@@ -345,10 +345,6 @@ class IMSProController extends Controller
             'form_params'=>$myBody
         ]);
         $response = $submit_data->getStatusCode();
-
-        dd($response);
-
-
         return back();
     }
 
