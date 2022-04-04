@@ -67,7 +67,6 @@
                                                                 <th class="data-title">Messenger Channel</th>                                                                              
                                                                 <th class="data-title">Responsible</th>
                                                                 <th class="data-title">Status</th>
-                                                                <th class="data-title"></th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -125,11 +124,7 @@
                                                                                 <div class="status">Pending</div>
                                                                             </div>
                                                                         </td>
-                                                                        <td class="data--chat data-cell">
-                                                                            <a href="#" class="chat-btn">
-                                                                                <i class="bi bi-chat-dots"></i>
-                                                                            </a>
-                                                                        </td>
+                                                                      
                                                                     </tr>                                                                
                                                                 @endforeach   
                                                             @endif                                                        
