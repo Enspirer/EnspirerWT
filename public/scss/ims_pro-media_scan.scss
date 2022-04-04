@@ -69,3 +69,113 @@
         }
     }
 }
+
+.welcome-section {
+    position: relative;
+
+    .info-block {
+        text-align: center;
+
+        .title {
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+        }
+
+        .sub-title {
+            font-weight: 400;
+            color: #017FFA;
+            font-size: 28px;
+            margin-bottom: 1.5rem;
+        }
+
+        .text {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .steps-block {
+        position: relative;
+        margin: 5rem 0 2.5rem;
+        text-align: center;
+
+        .img-main {
+            max-width: 100%;
+        }
+
+        // .block {
+        //     flex: 1 1 100%;
+        //     position: relative;
+        //     text-align: center;
+
+        //     .no {
+        //         color: #D2E5F8;
+        //         font-size: 100px;
+        //         font-weight: 500;
+        //         line-height: 1;
+        //     }
+
+        //     .img-rocket,
+        //     .img-arrow,
+        //     .img-back,
+        //     .img-connect {
+        //         position: absolute;
+        //     }
+
+        //     .img-main {
+        //         position: relative;
+        //         z-index: 1;
+        //     }
+
+        //     .text {
+        //         font-size: 16px;
+        //         font-weight: 300;
+        //         margin-top: 1rem;
+
+        //         span {
+        //             color: #017FFA;
+        //         }
+        //     }
+        // }
+
+        // .block-1 {
+        //     .img-arrow {
+        //         left: 50px;
+        //     }
+
+        //     .img-rocket {
+        //         right: 0;
+        //         bottom: 0;
+        //     }
+
+        //     .img-connect {
+        //         right: -50px;
+        //         top: 40%;
+        //         z-index: 1;
+        //     }
+        // }
+
+        // .block-2 {
+        //     .img-back {
+        //         z-index: 0;
+        //         top: 0;
+        //         left: 0;
+        //     }
+        // }
+
+        // .block-3 {
+
+        //     .img-rocket {
+        //         top: 0;
+        //         left: 0;
+        //     }
+
+        //     .img-connect {
+        //         left: -60px;
+        //         top: 40%;
+        //         z-index: 0;
+        //     }
+        // }
+    }
+}
