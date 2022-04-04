@@ -68,12 +68,14 @@
                     <div class="text">Widget Settings</div>
                 </a>
             </div>
-            <div class="inner-tab hidden">
-                <a href="#" class="tab-link">
-                    <div class="icon"><i class="bi bi-gear"></i></div>
-                    <div class="text">hidden</div>
-                </a>
-            </div>
+            @if(App\Models\IMSProUsers::where('project_id',$project_id)->first() == null)
+                <div class="inner-tab hidden">
+                    <a href="#" class="tab-link">
+                        <div class="icon"><i class="bi bi-gear"></i></div>
+                        <div class="text">hidden</div>
+                    </a>
+                </div>
+            @endif
             <div class="inner-tab hidden">
                 <a href="#" class="tab-link">
                     <div class="icon"><i class="bi bi-gear"></i></div>

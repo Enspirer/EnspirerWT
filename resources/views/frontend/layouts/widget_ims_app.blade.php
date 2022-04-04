@@ -127,7 +127,7 @@
             });
         </script> -->
 
-        <script>
+        <!-- <script>
             function sideNavToggle() {
                 const section = document.querySelector('.ims__section');
                 const sideCol = section.querySelector('.ims__side-col');
@@ -136,7 +136,7 @@
                 sideCol.classList.toggle('active');
                 mainCol.classList.toggle('active');
             }
-        </script>
+        </script> -->
 
         <script>
             function myFunction(x) {

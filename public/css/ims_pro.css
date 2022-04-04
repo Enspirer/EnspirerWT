@@ -70,11 +70,13 @@
   gap: 10px;
   margin-bottom: 20px;
 }
-.section-chatWindow .chat-list-window .filter-section .search-input {
+.section-chatWindow .chat-list-window .filter-section form {
   flex: 1 1 100%;
+}
+.section-chatWindow .chat-list-window .filter-section form .search-input {
   position: relative;
 }
-.section-chatWindow .chat-list-window .filter-section .search-input input {
+.section-chatWindow .chat-list-window .filter-section form .search-input input {
   width: 100%;
   font-size: 14px;
   font-weight: 300;
@@ -85,10 +87,10 @@
   padding: 0.5rem 0.5rem 0.5rem 3rem;
   height: 45px;
 }
-.section-chatWindow .chat-list-window .filter-section .search-input input::placeholder {
+.section-chatWindow .chat-list-window .filter-section form .search-input input::placeholder {
   color: #B4B7C6;
 }
-.section-chatWindow .chat-list-window .filter-section .search-input .bi {
+.section-chatWindow .chat-list-window .filter-section form .search-input .bi {
   position: absolute;
   color: #B4B7C6;
   font-size: 18px;
@@ -221,10 +223,24 @@
   font-size: 14px;
   font-weight: 300;
   color: #464646;
+  max-width: 140px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .contact {
   font-size: 10px;
   color: #464646;
+  max-width: 140px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 1399px) {
+  .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .name {
+    max-width: 80px;
+  }
+  .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .contact {
+    max-width: 80px;
+  }
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .active-status {
   font-size: 11px;
@@ -235,6 +251,11 @@
   font-weight: 300;
   color: #707070;
   margin: 1rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
 }
 .section-chatWindow .chat-window {
   position: relative;
