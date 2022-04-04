@@ -105,7 +105,7 @@
                                     </li>
                                     
                                     @if(whatsapp_server_status( $project_id )['server_type'] == 'default_server' )
-                                        <button type="submit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#get_your_number">Get Yout Own Number</button>
+                                        <button type="submit" class="btn btn-success btn-get-number" data-bs-toggle="modal" data-bs-target="#get_your_number">Add your own number</button>
                                     @endif
 
 

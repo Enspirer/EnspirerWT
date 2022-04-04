@@ -70,11 +70,14 @@
     }
 }
 
-.welcome-section {
+.welcome-block {
     position: relative;
 
     .info-block {
         text-align: center;
+        max-width: 700px;
+        width: 100%;
+        margin: auto;
 
         .title {
             font-weight: 400;
@@ -91,7 +94,37 @@
         .text {
             font-size: 16px;
             font-weight: 300;
-            margin-bottom: 0.5rem;
+            line-height: 2;
+        }
+
+        .btn-inquire {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background: linear-gradient(to right, #00AEEF, #1B3D6B);
+            width: fit-content;
+            margin: 2.5rem auto;
+            padding: 0.75em 1.5em;
+            border-radius: 5px;
+
+            .text {
+                font-size: 12px;
+                margin-right: .5em;
+                color: #fff;
+            }
+
+            .bi {
+                font-size: 14px;
+                color: #fff;
+            }
+        }
+    }
+
+    &.section-broadcast {
+        .steps-block {
+            margin: 2.5rem 0;
         }
     }
 
@@ -103,79 +136,5 @@
         .img-main {
             max-width: 100%;
         }
-
-        // .block {
-        //     flex: 1 1 100%;
-        //     position: relative;
-        //     text-align: center;
-
-        //     .no {
-        //         color: #D2E5F8;
-        //         font-size: 100px;
-        //         font-weight: 500;
-        //         line-height: 1;
-        //     }
-
-        //     .img-rocket,
-        //     .img-arrow,
-        //     .img-back,
-        //     .img-connect {
-        //         position: absolute;
-        //     }
-
-        //     .img-main {
-        //         position: relative;
-        //         z-index: 1;
-        //     }
-
-        //     .text {
-        //         font-size: 16px;
-        //         font-weight: 300;
-        //         margin-top: 1rem;
-
-        //         span {
-        //             color: #017FFA;
-        //         }
-        //     }
-        // }
-
-        // .block-1 {
-        //     .img-arrow {
-        //         left: 50px;
-        //     }
-
-        //     .img-rocket {
-        //         right: 0;
-        //         bottom: 0;
-        //     }
-
-        //     .img-connect {
-        //         right: -50px;
-        //         top: 40%;
-        //         z-index: 1;
-        //     }
-        // }
-
-        // .block-2 {
-        //     .img-back {
-        //         z-index: 0;
-        //         top: 0;
-        //         left: 0;
-        //     }
-        // }
-
-        // .block-3 {
-
-        //     .img-rocket {
-        //         top: 0;
-        //         left: 0;
-        //     }
-
-        //     .img-connect {
-        //         left: -60px;
-        //         top: 40%;
-        //         z-index: 0;
-        //     }
-        // }
     }
 }

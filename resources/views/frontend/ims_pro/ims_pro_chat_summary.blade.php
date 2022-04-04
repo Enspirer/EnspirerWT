@@ -9,7 +9,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
+<link rel="stylesheet" href="{{url('css/ims_pro-media_scan.css')}}">
 
 <section class="ims__section">
         @include('frontend.ims_pro.ims_pro_sidebar')
@@ -40,7 +40,7 @@
                                 </div>
                                 
                                 @if(whatsapp_server_status( $project_id )['server_type'] == 'default_server' )
-                                    @include('frontend.ims_pro.includes.ims_default_server')
+                                    @include('frontend.ims_pro.includes.ims_inquiry_summery_default_server')
                                 @else
                                     @include('frontend.ims_pro.includes.ims_chat_summary')
                                 @endif
