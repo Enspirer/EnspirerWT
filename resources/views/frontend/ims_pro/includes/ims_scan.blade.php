@@ -1,3 +1,4 @@
+@if(whatsapp_server_status($project_id)['connection_status'] != 'Authenticated')
     <div class="row g-0">
         <div class="qr-section">
             <div class="content-block">
@@ -11,9 +12,19 @@
                 <a href="#" class="qr-section-link">Need help to get started ?</a>
             </div>
             <div class="qr-code">
-               <iframe src="https://{{whatsapp_server_status( $project_id )['server_endpoint']}}" height="300px">
+                   <iframe src="https://{{whatsapp_server_status( $project_id )['server_endpoint']}}" height="300px">
 
-               </iframe>
+                   </iframe>
             </div>
         </div>
     </div>
+@else
+    <div class="row g-0">
+        <div class="qr-section">
+            <div class="content-block">
+                <div class="title">WhatsApp Authenticated </div>
+                <a href="#" class="qr-section-link">Need help to get started ?</a>
+            </div>
+        </div>
+    </div>
+@endif
