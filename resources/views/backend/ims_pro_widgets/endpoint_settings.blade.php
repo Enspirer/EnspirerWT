@@ -15,6 +15,7 @@
                             <div class="form-group">
                                 <label>URL: <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" value="{{ $widget->end_point_settings }}" name="url" id="url" required>
+                                <p class="mt-4">Connection Status: {{ $widget->connection_status }}</p>
                             </div>
                         </div>
                                           

@@ -85,6 +85,7 @@ class IMSProWidgetsController extends Controller
         $update = new Widgets;
 
         $update->end_point_settings = null;
+        $update->connection_status = null;
 
         Widgets::whereId($id)->update($update->toArray());
    

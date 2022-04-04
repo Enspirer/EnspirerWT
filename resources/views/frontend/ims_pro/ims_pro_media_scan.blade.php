@@ -35,58 +35,13 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="row g-0">
-                                    <div class="qr-section">
-                                        <div class="content-block">
-                                            <div class="title">Scan the QR-code to connect your Whatsapp number</div>
-                                            <ul class="steps">
-                                                <li><span class="no">01.</span><div class="text">Open WhatsApp on your phone</div></li>
-                                                <li><span class="no">02.</span><div class="text">Tap <span>Menu</span> or <span>Settings</span> and select <span>Linked Devices</span></div></li>
-                                                <li><span class="no">03.</span><div class="text">Point your phone to this screen to capture the code</div></li>
-                                            </ul>
-                                            <div class="text">If you have Whatsapp MultiDevice enabled, please generate <a href="#" class="qr-section-link">Whatsapp Multidevice QR code here</a> instead.</div>
-                                            <a href="#" class="qr-section-link">Need help to get started ?</a>
-                                        </div>
-                                        <div class="qr-code">
-                                            <img src="{{url('images/ims-pro/qr-codes/code-0001.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                </div> -->
-
-                                <div class="row g-0">
-                                    <div class="welcome-section">
-                                        <div class="info-block">
-                                            <h2 class="title">Good Morning, Kasun !</h2>
-                                            <h2 class="sub-title">How to connect your own number ?</h2>
-                                            <div class="text">You must send the WhatsApp Message from your registered number +94775037754</div>
-                                            <div class="text">Please use this keyword: #5bMXv to receive messages from other numbers</div>
-                                        </div>
-                                        <div class="steps-block">
-                                            <!-- <div class="block block-1">
-                                                <div class="no">1</div>
-                                                <img src="{{url('images/dashboard/ims_pro/rocket-left.png')}}" alt="" class="img-rocket">
-                                                <img src="{{url('images/dashboard/ims_pro/arrow.png')}}" alt="" class="img-arrow">
-                                                <img src="{{url('images/dashboard/ims_pro/connect.png')}}" alt="" class="img-connect">
-                                                <img src="{{url('images/dashboard/ims_pro/main-1.png')}}" alt="" class="img-main">
-                                                <div class="text">Click "<span>+ Add your own number</span>" button</div>
-                                            </div>
-                                            <div class="block block-2">
-                                                <div class="no">2</div>
-                                            <img src="{{url('images/dashboard/ims_pro/main-2-background.png')}}" alt="" class="img-back">
-                                            <img src="{{url('images/dashboard/ims_pro/main-2.png')}}" alt="" class="img-main">
-                                                <div class="text">Select your Price Plan here</div>
-                                            </div>
-                                            <div class="block block-3">
-                                                <div class="no">3</div>
-                                                <img src="{{url('images/dashboard/ims_pro/rocket-right.png')}}" alt="" class="img-rocket">
-                                                <img src="{{url('images/dashboard/ims_pro/connect.png')}}" alt="" class="img-connect">
-                                                <img src="{{url('images/dashboard/ims_pro/main-3.png')}}" alt="" class="img-main">
-                                                <div class="text">Drop your inquiry for us</div>
-                                            </div> -->
-                                            <img src="{{url('images/dashboard/ims_pro/steps.png')}}" alt="" class="img-main">
-                                        </div>
-                                    </div>
-                                </div>
+                               
+                                @if(whatsapp_server_status( $project_id )['server_type'] == 'default_server' )
+                                    @include('frontend.ims_pro.includes.ims_number')
+                                @else
+                                    @include('frontend.ims_pro.includes.ims_scan')
+                                @endif
+                                
                                 
                             </div>
                         </div>
