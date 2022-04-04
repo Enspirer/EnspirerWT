@@ -104,7 +104,18 @@
                                         </ul>
                                     </li>
                                     
-                                    {{ get_settings('default_wa_server_auth_status') }}
+                                    @if(whatsapp_server_status( $project_id )['server_type'] == 'default_server' )
+                                        <button type="submit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#get_your_number">Get Yout Own Number</button>
+                                    @endif
+
+
+                                    @if(whatsapp_server_status( $project_id )['connection_status'] != null )
+
+                                        {{ whatsapp_server_status( $project_id )['connection_status'] }}
+
+                                    @endif
+
+                                    
 
 
                                     <li class="nav-item dropdown">
@@ -278,3 +289,24 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="get_your_number" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+                </div>
+            </div>
+        </div>
+

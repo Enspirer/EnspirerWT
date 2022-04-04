@@ -78,6 +78,24 @@ class IMSProWidgetsController extends Controller
 
     }
 
+    public function endpoint_settings_update_null(Request $request, $id)
+    {        
+        // dd($request);   
+     
+        $update = new Widgets;
+
+        $update->end_point_settings = null;
+
+        Widgets::whereId($id)->update($update->toArray());
+   
+        return back()->withFlashSuccess('Disabled Successfully');            
+
+    }
+
+
+
+    
+
     public function update(Request $request)
     {        
         // dd($request);                         

@@ -22,7 +22,15 @@
                 </div>
 
                 <input type="hidden" name="hidden_id" value="{{ $widget->id }}" />
-                <button type="submit" class="btn btn-success pull-right">Update</button><br>
+
+                <div class="row">
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-success pull-right">Update</button><br>
+                    </div>
+                    <div class="col-1">
+                        <a href="{{route('admin.ims_pro_widgets.endpoint_settings_update_null',$widget->id)}}" class="btn btn-danger pull-right">Disabled</a><br>
+                    </div>
+                </div>
 
             </div><br>            
                         

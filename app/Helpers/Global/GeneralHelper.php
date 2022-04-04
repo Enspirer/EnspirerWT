@@ -2,6 +2,7 @@
 
 use App\Models\Settings;
 use App\Models\Projects;
+use App\Models\Widgets;
 use App\Models\Notification;
 use App\Models\IMSProUsers;
 use App\Models\ImsProContacts;
@@ -366,6 +367,58 @@ if (! function_exists('get_contact_info')) {
         }else{
             return $contact_info->name;
         }
+
+    }
+}
+
+
+if (! function_exists('whatsapp_server_status')) {
+    /**
+     * Return the route to the "home" page depending on authentication/authorization status.
+     *
+     * @return string
+     */
+    function whatsapp_server_status($project_id)
+    {       
+
+        $widget_ims_pro = Widgets::where('project_id',$project_id)->where('widget_type','IMS Pro')->first();
+
+        if($widget_ims_pro != null){
+
+            if($widget_ims_pro->end_point_settings != null){
+                return [
+                    'server_endpoint' => $widget_ims_pro->end_point_settings,
+                    'connection_status' => $widget_ims_pro->connection_status,
+                    'server_type' => 'dedicated_server'
+                ];
+            }
+            else{
+
+                $settings_server = get_settings('default_whatsapp_server');
+                $settings_status = get_settings('default_wa_server_auth_status');
+
+                if($settings_server == null ){
+                    return [
+                        'server_endpoint' => null,
+                        'connection_status' => null,
+                        'server_type' => 'default_server'
+                    ];
+                }
+                else{
+                    return [
+                        'server_endpoint' => $settings_server,
+                        'connection_status' => $settings_status,
+                        'server_type' => 'default_server'
+                    ];
+                }
+
+            }
+            
+        }
+        else{
+            return 'IMS Pro Not Activated';
+        }
+
 
     }
 }
