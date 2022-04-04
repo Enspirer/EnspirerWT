@@ -299,19 +299,19 @@
 
                                                         </div>
                                                     </div>
+
                                                     @if($solo_ims_pro_client->type == 'WhatsApp')
-                                                        <form method="post" action="{{route('frontend.user.submit_chat')}}">
-                                                            <div class="footer">
+                                                        <div class="footer">
 
-                                                                    {{csrf_field()}}
-                                                                    <input type="hidden" name="phone_number" value="{{$solo_ims_pro_client->phone_number}}">
-                                                                    <input type="hidden" name="project_id" value="{{$solo_ims_pro_client->project_id}}">
-                                                                    <input type="hidden" name="widget_id" value="{{$solo_ims_pro_client->widget_id}}">
-                                                                    <input type="text" name="message" class="msg-input" placeholder="Type your message here...">
-                                                                    <button type="submit" class="btn-send"><i class="bi bi-send-fill"></i></button>
+                                                            <input type="hidden" name="phone_number" id="phone_number" value="{{$solo_ims_pro_client->phone_number}}">
+                                                            <input type="hidden" name="project_id" id="project_id" value="{{$solo_ims_pro_client->project_id}}">
+                                                            <input type="hidden" name="widget_id" id="widget_id" value="{{$solo_ims_pro_client->wideget_id}}">
+                                                            <input type="hidden" name="hidden_user_email" id="hidden_user_email" value="{{auth()->user()->email}}">
+                                                            <input type="hidden" name="hidden_user_id" id="hidden_user_id" value="{{auth()->user()->id}}">
+                                                            <input type="text" name="message" id="message" class="msg-input" placeholder="Type your message here...">
+                                                            <button type="submit" onClick="submit_chat()" class="btn-send"><i class="bi bi-send-fill"></i></button>
 
-                                                            </div>
-                                                        </form>
+                                                        </div>
                                                     @endif
 
                                                 </div>
@@ -466,3 +466,4 @@
                                         </div>
                                     </div>
                                 </div>
+                                

@@ -209,7 +209,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('user_widget/project_settings/{id}', [ProjectController::class, 'project_settings'])->name('project_settings');
         Route::post('user_widget/project_settings/update', [ProjectController::class, 'project_settings_update'])->name('user_widget.project_settings_update');
 
-        Route::post('img_pro/submit-chat', [IMSProController::class, 'submit_chat'])->name('submit_chat');
+        // Route::post('img_pro/submit-chat', [IMSProController::class, 'submit_chat'])->name('submit_chat');
 
 
 

@@ -170,6 +170,35 @@
     }, 3000);
 
 
+
+
+    function submit_chat()
+    {       
+        phone_number = $('#phone_number').val();
+        project_id = $('#project_id').val();
+        widget_id = $('#widget_id').val();
+        message = $('#message').val();   
+        hidden_user_email = $('#hidden_user_email').val();   
+        hidden_user_id = $('#hidden_user_id').val();   
+
+        $.post("{{url('/')}}/api/submit_chat",
+            {                
+                phone_number: phone_number,
+                project_id: project_id,
+                widget_id: widget_id,
+                message: message,
+                hidden_user_email: hidden_user_email,
+                hidden_user_id: hidden_user_id
+            },
+        );
+
+    }
+
+    $('.btn-send').click(function(){
+        $('#message').val('');
+    });
+
+
 </script>
 
 
