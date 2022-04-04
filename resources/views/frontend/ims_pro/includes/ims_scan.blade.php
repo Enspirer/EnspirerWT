@@ -11,6 +11,7 @@
                 <a href="#" class="qr-section-link">Need help to get started ?</a>
             </div>
             <div class="qr-code">
+               {{dd(whatsapp_server_status( $project_id )['server_type'])}}
                 <img src="{{url('images/ims-pro/qr-codes/code-0001.png')}}" alt="">
             </div>
         </div>
