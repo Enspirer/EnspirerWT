@@ -165,6 +165,17 @@
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item {
   padding: 12px 16px;
+  border: none;
+}
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item.active {
   background: linear-gradient(to right, #00AEEF, #1B3D6B);
@@ -174,6 +185,9 @@
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item.active .active-status,
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item.active .message {
   color: #fff !important;
+}
+.section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item.active::after {
+  content: none;
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link {
   text-decoration: none;
@@ -221,7 +235,7 @@
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .name {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: #464646;
   max-width: 140px;
   overflow-x: hidden;
@@ -730,6 +744,17 @@
 .section-chatWindow .info-window .inner-wrapper .optioin-block .btn-report-download .text {
   font-size: 14px;
   color: #fff;
+}
+
+.not-found-window {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=ims_pro.css.map */
