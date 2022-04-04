@@ -240,6 +240,7 @@
   max-width: 140px;
   overflow-x: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .contact {
   font-size: 10px;
@@ -247,6 +248,7 @@
   max-width: 140px;
   overflow-x: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 @media screen and (max-width: 1399px) {
   .section-chatWindow .chat-list-window .chat-list .inner-wrapper .list-group .list-group-item .list-link .header .profile .status-block .name {

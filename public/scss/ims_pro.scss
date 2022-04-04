@@ -295,6 +295,7 @@
                                             max-width: 140px;
                                             overflow-x: hidden;
                                             text-overflow: ellipsis;
+                                            white-space: nowrap;
                                         }
 
                                         .contact {
@@ -303,6 +304,7 @@
                                             max-width: 140px;
                                             overflow-x: hidden;
                                             text-overflow: ellipsis;
+                                            white-space: nowrap;
                                         }
 
                                         @media screen and (max-width: 1399px) {
