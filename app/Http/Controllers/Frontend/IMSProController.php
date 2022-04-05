@@ -378,6 +378,8 @@ class IMSProController extends Controller
             $url = "https://".whatsapp_server_status($project_id)['server_endpoint']."/send-message";
         }
 
+        dd($url);
+
 
         // $url = "https://whatapi.tallentor.com/send-message";
 
