@@ -760,7 +760,7 @@
 }
 
 .modal-get-number .modal-dialog {
-  max-width: 900px;
+  max-width: 1200px;
 }
 .modal-get-number .modal-dialog .modal-content {
   background-color: #fff;
@@ -806,6 +806,12 @@
 .modal-get-number .modal-dialog .modal-content .modal-header .navigation .navigation-btn.selected .text {
   color: #4884FA;
 }
+.modal-get-number .modal-dialog .modal-content .modal-header .navigation .navigation-btn.active .bi.circle {
+  display: none;
+}
+.modal-get-number .modal-dialog .modal-content .modal-header .navigation .navigation-btn.active .bi.circle-fill {
+  display: block;
+}
 .modal-get-number .modal-dialog .modal-content .modal-header .navigation .navigation-btn .bi,
 .modal-get-number .modal-dialog .modal-content .modal-header .navigation .navigation-btn .text {
   font-size: 12px;
@@ -823,6 +829,17 @@
 }
 .modal-get-number .modal-dialog .modal-content .modal-body .content {
   background-color: #F4F8FF;
+  height: 570px;
+  display: flex;
+  flex-direction: row;
+}
+.modal-get-number .modal-dialog .modal-content .modal-body .content .content-block {
+  display: none;
+}
+.modal-get-number .modal-dialog .modal-content .modal-body .content .content-block.active {
+  display: block;
+}
+.modal-get-number .modal-dialog .modal-content .modal-body .content .content-block.plan-block {
   padding: 20px;
 }
 .modal-get-number .modal-dialog .modal-content .modal-body .content .content-block .title {
@@ -841,7 +858,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 25px;
-  margin: 45px 0 30px;
+  margin: 75px 0 30px;
 }
 .modal-get-number .modal-dialog .modal-content .modal-body .content .content-block .subscriptions .subcriptioin-block {
   width: 200px;
@@ -922,7 +939,11 @@
   background-color: transparent;
   padding-left: 0;
   border: 0;
+  border-radius: 0;
   border-bottom: 1px solid #E6EBF4;
+}
+.modal-get-number .modal-dialog .modal-content .modal-body .content .content-block .card-details-form .form-control.invalid {
+  border-bottom: 1px solid #ff5b5b;
 }
 .modal-get-number .modal-dialog .modal-content .modal-body .content .content-block .card-details-form .form-control::placeholder {
   font-size: 13px;
@@ -947,6 +968,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 570px;
 }
 .modal-get-number .modal-dialog .modal-content .modal-body .content .content-block .image-block .modal-image {
   width: 100%;

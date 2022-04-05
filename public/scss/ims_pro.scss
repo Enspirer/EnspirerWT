@@ -959,7 +959,7 @@
 
 .modal-get-number {
     .modal-dialog {
-        max-width: 900px;
+        max-width: 1200px;
 
         .modal-content {
             background-color: #fff;
@@ -1008,6 +1008,19 @@
                             }
                         }
 
+                        &.active {
+
+                            .bi {
+                                &.circle {
+                                    display: none;
+                                }
+
+                                &.circle-fill {
+                                    display: block;
+                                }
+                            }
+                        }
+
                         .bi,
                         .text {
                             font-size: 12px;
@@ -1031,9 +1044,21 @@
 
                 .content {
                     background-color: #F4F8FF;
-                    padding: 20px;
+                    height: 570px;
+                    display: flex;
+                    flex-direction: row;
 
                     .content-block {
+                        display: none;
+
+                        &.active {
+                            display: block;
+                        }
+
+                        &.plan-block {
+                            padding: 20px;
+                        }
+
                         .title {
                             font-size: 28px;
                             font-weight: 400;
@@ -1052,7 +1077,7 @@
                             flex-direction: row;
                             justify-content: center;
                             gap: 25px;
-                            margin: 45px 0 30px;
+                            margin: 75px 0 30px;
 
                             .subcriptioin-block {
                                 width: 200px;
@@ -1145,7 +1170,12 @@
                                 background-color: transparent;
                                 padding-left: 0;
                                 border: 0;
+                                border-radius: 0;
                                 border-bottom: 1px solid #E6EBF4;
+
+                                &.invalid {
+                                    border-bottom: 1px solid #ff5b5b;
+                                }
 
                                 &::placeholder {
                                     font-size: 13px;
@@ -1175,6 +1205,7 @@
                             justify-content: center;
                             align-items: center;
                             position: relative;
+                            height: 570px;
 
                             .modal-image {
                                 width: 100%;

@@ -300,7 +300,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <div class="brand">Tallentor - IMS</div>
-                        <div class="navigation">
+                        <div id="modalNav" class="navigation">
                             <div class="navigation-btn selected">
                                 <i class="bi circle bi-circle"></i>
                                 <i class="bi circle-fill bi-check-circle-fill"></i>
@@ -320,7 +320,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="content p-0">
-                            <!-- <div class="content-block plan-block animate__animated animate__fadeIn">
+                            <div id="planBlock" class="content-block plan-block active animate__animated animate__fadeIn">
                                 <h2 class="title">Choose your Monthly plan</h2>
                                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ut autem iusto maiores eaque voluptate temporibus odio in repellat incidunt?</p>
                                 <div class="subscriptions">
@@ -328,27 +328,51 @@
                                         <img src="{{url('images/dashboard/ims_pro/basic-sub.png')}}" alt="" class="sub-img">
                                         <div class="title">Basic</div>
                                         <div class="discount">20% Savings</div>
-                                        <div class="fee"><span>FREE</span> / month</div>
-                                        <button type="button" class="btn-sub">Start with Basic</button>
+                                        <div class="fee"><span>FREE</span> / month</div>                                        
+                                        <button type="button" class="btn-sub">Start with Basic
+                                            <input type="hidden" class="sub-input" name="basic">
+                                        </button>
                                     </div>
-                                    <div class="subcriptioin-block standard-block">
+                                    <div class="subcriptioin-block plus-block">
                                         <img src="{{url('images/dashboard/ims_pro/standard-sub.png')}}" alt="" class="sub-img">
-                                        <div class="title">Standard</div>
+                                        <div class="title">Plus</div>
                                         <div class="discount">20% Savings</div>
-                                        <div class="fee">LKR <span>2500</span> .00 / month</div>
-                                        <button type="button" class="btn-sub">Start with Standard</button>
+                                        <div class="fee">LKR <span>2500</span> .00 / month</div>                                        
+                                        <button type="button" class="btn-sub">Start with Plus
+                                            <input type="hidden" class="sub-input" name="plus">
+                                        </button>
+                                    </div>
+                                    <div class="subcriptioin-block executive-block">
+                                        <img src="{{url('images/dashboard/ims_pro/premium-sub.png')}}" alt="" class="sub-img">
+                                        <div class="title">Executive</div>
+                                        <div class="discount">20% Savings</div>
+                                        <div class="fee">LKR <span>5000</span> .00 / month</div>                                        
+                                        <button type="button" class="btn-sub">Start with Executive
+                                            <input type="hidden" class="sub-input" name="executive">
+                                        </button>
+                                    </div>
+                                    <div class="subcriptioin-block professional-block">
+                                        <img src="{{url('images/dashboard/ims_pro/premium-sub.png')}}" alt="" class="sub-img">
+                                        <div class="title">Professional</div>
+                                        <div class="discount">20% Savings</div>
+                                        <div class="fee">LKR <span>5000</span> .00 / month</div>                                        
+                                        <button type="button" class="btn-sub">Start with Professional
+                                            <input type="hidden" class="sub-input" name="professional">
+                                        </button>
                                     </div>
                                     <div class="subcriptioin-block premium-block">
                                         <img src="{{url('images/dashboard/ims_pro/premium-sub.png')}}" alt="" class="sub-img">
                                         <div class="title">Premium</div>
                                         <div class="discount">20% Savings</div>
-                                        <div class="fee">LKR <span>5000</span> .00 / month</div>
-                                        <button type="button" class="btn-sub">Start with Premium</button>
+                                        <div class="fee">LKR <span>5000</span> .00 / month</div>                                        
+                                        <button type="button" class="btn-sub">Start with Premium
+                                            <input type="hidden" class="sub-input" name="premium">
+                                        </button>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
 
-                            <!-- <div class="content-block billing-block animate__animated animate__fadeIn">
+                            <div id="billingBlock" class="content-block billing-block animate__animated">
                                 <div class="row g-0">
                                     <div class="col-6 p-4">
                                         <h2 class="title">Billing info</h2>
@@ -356,23 +380,23 @@
                                         <form class="row g-3 card-details-form">
                                             <div class="col-12">
                                                 <label class="form-label">Bank Name</label>
-                                                <input type="text" class="form-control" placeholder='Peoples Bank'>
+                                                <input type="text" id="bankInput" class="form-control" placeholder='Peoples Bank'>
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Card Holder</label>
-                                                <input type="text" class="form-control" placeholder='Kamal Kumarasiri'>
+                                                <input type="text" id="cardHolderInput" class="form-control" placeholder='Kamal Kumarasiri'>
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Card Number</label>
-                                                <input type="number" class="form-control" placeholder='0225 9995 8888 0001'>
+                                                <input type="number" id="cardNumberInput" class="form-control" placeholder='0225 9995 8888 0001'>
                                             </div>
-                                            <div class="col-8">
+                                            <div class="col-6">
                                                 <label class="form-label">Expiration date</label>
-                                                <input type="month" class="form-control" placeholder='07/21'>
+                                                <input type="number" id="expDateInput" class="form-control" placeholder='07/21'>
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-6">
                                                 <label class="form-label">CVV</label>
-                                                <input type="number" class="form-control" placeholder='678'>
+                                                <input type="number" id="cvvInput" class="form-control" placeholder='678'>
                                             </div>
                                             <div class="col-12">
                                                 <div class="alert">
@@ -385,52 +409,12 @@
                                     <div class="col-6 p-4 image-block">
                                         <img src="{{url('images/dashboard/ims_pro/modal-image.png')}}" alt="" class="modal-image">
                                         <div class="button-block">
-                                            <button type="button" class="modal-btn btn-prev">
+                                            <button type="button" class="modal-btn billing-btn-prev btn-prev">
                                                 <i class="bi bi-arrow-left-short"></i>
                                                 <div class="text">Previous step</div>
                                             </button>
-                                            <button type="button" class="modal-btn btn-next">
+                                            <button type="button" class="modal-btn billing-btn-next btn-next">
                                                 <div class="text">Next step</div>
-                                                <i class="bi bi-arrow-right-short"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <div class="content-block billing-block animate__animated animate__fadeIn">
-                                <div class="row g-0">
-                                    <div class="col-6 p-4">
-                                        <h2 class="title">Drop Your Message</h2>
-                                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ut autem iusto maiores.</p>
-                                        <form class="row g-3 card-details-form">
-                                            <div class="col-12">
-                                                <label class="form-label">Your name</label>
-                                                <input type="text" class="form-control" placeholder='Kamal Kumarasiri'>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="form-label">Email</label>
-                                                <input type="email" class="form-control" placeholder='example@gmail.com'>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="form-label">Mobile Number</label>
-                                                <input type="tel" class="form-control" placeholder='+94 875 42 1547'>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="form-label">Your Message</label>
-                                                <textarea class="form-control" rows="4"></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-6 p-4 image-block">
-                                        <img src="{{url('images/dashboard/ims_pro/modal-image.png')}}" alt="" class="modal-image">
-                                        <div class="button-block">
-                                            <button type="button" class="modal-btn btn-prev">
-                                                <i class="bi bi-arrow-left-short"></i>
-                                                <div class="text">Previous step</div>
-                                            </button>
-                                            <button type="submit" class="modal-btn btn-next">
-                                                <div class="text">Submit</div>
                                                 <i class="bi bi-arrow-right-short"></i>
                                             </button>
                                         </div>
@@ -438,9 +422,209 @@
                                 </div>
                             </div>
 
+                            <div id="inquiryBlock" class="content-block inquiry-block animate__animated">
+                                <div class="row g-0">
+                                    <div class="col-6 p-4">
+                                        <h2 class="title">Drop Your Message</h2>
+                                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ut autem iusto maiores.</p>
+                                        <form class="row g-3 card-details-form">
+                                            <div class="col-12">
+                                                <label class="form-label">Your name</label>
+                                                <input type="text" id="nameInput" class="form-control" placeholder='Kamal Kumarasiri'>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Email</label>
+                                                <input type="email" id="emailInput" class="form-control" placeholder='example@gmail.com'>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Mobile Number</label>
+                                                <input type="tel" id="telInput" class="form-control" placeholder='+94 875 42 1547'>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Your Message</label>
+                                                <textarea class="form-control" id="msgInput" rows="4"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-6 p-4 image-block">
+                                        <img src="{{url('images/dashboard/ims_pro/modal-image.png')}}" alt="" class="modal-image">
+                                        <div class="button-block">
+                                            <button type="button" class="modal-btn inquiry-btn-prev btn-prev">
+                                                <i class="bi bi-arrow-left-short"></i>
+                                                <div class="text">Previous step</div>
+                                            </button>
+                                            <button type="submit" class="modal-btn inquiry-btn-next btn-next">
+                                                <div class="text">Submit</div>
+                                                <i class="bi bi-arrow-right-short"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+<script>
+const planBlock = document.getElementById('planBlock')
+const billingBlock = document.getElementById('billingBlock')
+const inquiryBlock = document.getElementById('inquiryBlock')
+const btnSub = planBlock.querySelectorAll('.btn-sub')
+const modalNav = document.getElementById('modalNav')
+const billingBtnPrv = document.querySelector('.billing-btn-prev')
+const billingBtnNxt = document.querySelector('.billing-btn-next')
+const inquiryBtnPrv = document.querySelector('.inquiry-btn-prev')
+const inquiryBtnNxt = document.querySelector('.inquiry-btn-next')
+
+const cardHolderInput = document.getElementById('cardHolderInput')
+const cardNumberInput = document.getElementById('cardNumberInput')
+const expDateInput = document.getElementById('expDateInput')
+const cvvInput = document.getElementById('cvvInput')
+const nameInput = document.getElementById('nameInput')
+const emailInput = document.getElementById('emailInput')
+const telInput = document.getElementById('telInput')
+const msgInput = document.getElementById('msgInput')
+
+const regexName = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/g;
+const regexCardNo = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/g;
+const regexExpDate = /((\d{2}(\/)?\d{2})|(\d[0-9]{4})|(\d[^0]+))/g;
+const regexCvv = /\d{3}/g;
+const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+const regexTel = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
+
+btnSub.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        btnSub.forEach(function (emp) {
+            emp.querySelector('.sub-input').classList.remove('active')
+        })
+        btn.querySelector('.sub-input').classList.add('active')
+        console.log(btn.querySelector('.sub-input.active').getAttribute('name'))
+        modalNav.querySelector('.navigation-btn:nth-child(1)').classList.add('active')
+        modalNav.querySelector('.navigation-btn:nth-child(2)').classList.add('selected')
+        planBlock.classList.add('animate__fadeOut')
+        planBlock.classList.remove('active', 'animate__fadeIn')
+        billingBlock.classList.add('active', 'animate__fadeIn')
+        billingBlock.classList.remove('animate__fadeOut')
+    })
+})
+
+billingBtnPrv.addEventListener('click', function () {
+    billingBlock.classList.add('animate__fadeOut')
+    billingBlock.classList.remove('active', 'animate__fadeIn')
+    planBlock.classList.remove('animate__fadeOut')
+    planBlock.classList.add('active', 'animate__fadeIn')
+})
+
+inquiryBtnPrv.addEventListener('click', function () {
+    inquiryBlock.classList.add('animate__fadeOut')
+    inquiryBlock.classList.remove('active', 'animate__fadeIn')
+    billingBlock.classList.remove('animate__fadeOut')
+    billingBlock.classList.add('active', 'animate__fadeIn')
+})
+
+// Form validation
+
+let cardHolderValidation;
+let cardNumberValidation;
+let expDateValidation;
+let cvvValidation;
+let nameValidation;
+let emailValidation;
+let telValidation;
+let msgValidation;
+
+cardHolderInput.addEventListener('change', function () {
+    cardHolderValidation = regexName.test(this.value);
+
+    if (cardHolderValidation) {
+        return;
+    } else {
+        this.classList.add('invalid')
+    }
+})
+
+cardNumberInput.addEventListener('change', function () {
+    cardNumberValidation = regexCardNo.test(this.value);
+
+    if (cardNumberValidation) {
+        return;
+    } else {
+        this.classList.add('invalid')
+    }
+})
+
+expDateInput.addEventListener('change', function () {
+    expDateValidation = regexExpDate.test(this.value);
+
+    if (expDateValidation) {
+        return;
+    } else {
+        this.classList.add('invalid')
+    }
+})
+
+cvvInput.addEventListener('change', function () {
+    cvvValidation = regexCvv.test(this.value);
+
+    if (cvvValidation) {
+        return;
+    } else {
+        this.classList.add('invalid')
+    }
+})
+
+nameInput.addEventListener('change', function () {
+    nameValidation = regexName.test(this.value);
+
+    if (nameValidation) {
+        return;
+    } else {
+        this.classList.add('invalid')
+    }
+})
+
+emailInput.addEventListener('change', function () {
+    emailValidation = regexEmail.test(this.value);
+
+    if (emailValidation) {
+        return;
+    } else {
+        this.classList.add('invalid')
+    }
+})
+
+telInput.addEventListener('change', function () {
+    telValidation = regexTel.test(this.value);
+
+    if (telValidation) {
+        return;
+    } else {
+        this.classList.add('invalid')
+    }
+})
+
+msgInput.addEventListener('change', function () {
+    msgValidation = regexName.test(this.value);
+
+    if (msgValidation) {
+        return;
+    } else {
+        this.classList.add('invalid')
+    }
+})
+
+// cardHolderValidation && cardNumberValidation && expDateValidation && cvvValidation && nameValidation && emailValidation && telValidation && msgValidation
+
+if(cardHolderValidation && cardNumberValidation && expDateValidation && cvvValidation) {
+    billingBtnNxt.addEventListener('click', function () {
+        billingBlock.classList.add('animate__fadeOut')
+        billingBlock.classList.remove('active')
+        inquiryBlock.classList.add('active', 'animate__fadeIn')
+        inquiryBlock.classList.remove('animate__fadeOut')
+        modalNav.querySelector('.navigation-btn:nth-child(2)').classList.add('active')
+        modalNav.querySelector('.navigation-btn:nth-child(3)').classList.add('selected')
+    })
+}
+</script>
