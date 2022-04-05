@@ -370,7 +370,15 @@ class IMSProController extends Controller
         $client = new \GuzzleHttp\Client(['defaults' => [
             'verify' => false
         ]]);
-        $url = "https://whatapi.tallentor.com/send-message";
+
+        if(whatsapp_server_status($project_id)['server_type'] == 'default_server' ){
+            $url = "https://".whatsapp_server_status($project_id)['server_endpoint']."/send-message";
+        }
+        else{
+            $url = "https://".whatsapp_server_status($project_id)['server_endpoint']."/send-message";
+        }
+
+        // $url = "https://whatapi.tallentor.com/send-message";
 
         $myBody['number'] = $phone_number;
         $myBody['message'] = $message;
