@@ -147,7 +147,7 @@
                                                                     @endif
                                                                 @endforeach
                                                             @else
-                                                                @include('frontend.includes.not_found',[
+                                                                @include('frontend.includes.not_found_chat',[
                                                                     'not_found_title' => 'Chats Not Found',
                                                                     'not_found_description' => null,
                                                                     'not_found_button_caption' => null
@@ -316,7 +316,7 @@
 
                                                 </div>
                                                 @else
-                                                    @include('frontend.includes.not_found',[
+                                                    @include('frontend.includes.not_found_chat',[
                                                         'not_found_title' => 'Chats Details Not Found',
                                                         'not_found_description' => null,
                                                         'not_found_button_caption' => null
@@ -457,7 +457,7 @@
                                                     </div>
                                                 </div>
                                             @else
-                                                @include('frontend.includes.not_found',[
+                                                @include('frontend.includes.not_found_chat',[
                                                     'not_found_title' => 'Chats Details Not Found',
                                                     'not_found_description' => null,
                                                     'not_found_button_caption' => null
