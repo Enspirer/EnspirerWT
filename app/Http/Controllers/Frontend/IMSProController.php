@@ -122,8 +122,8 @@ class IMSProController extends Controller
         // dd($phone_number);
 
 
-        $widegt_for_ims = Widgets::where('project_id',$id)->where('widget_type','IMS Pro')->first();
-        $ims_pro_users = IMSProUsers::where('project_id',$id)->where('widget_id',$widegt_for_ims->id)->get();
+        // $widegt_for_ims = Widgets::where('project_id',$id)->where('widget_type','IMS Pro')->first();
+        $ims_pro_users = IMSProUsers::where('project_id',$id)->get();
 
 
         return view('frontend.ims_pro.user_widget_ims_index',[
