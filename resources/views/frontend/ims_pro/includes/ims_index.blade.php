@@ -69,7 +69,9 @@
                                                                             <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
                                                                                 <div class="header">
                                                                                     <div class="profile">
-                                                                                        <div class="indicator active"></div>
+                                                                                        @if($ims_pro_client_message->is_read == 'Pending')
+                                                                                            <div class="indicator active"></div>
+                                                                                        @endif
                                                                                         <div class="image-block">
                                                                                             <img src="{{url('images/test.png')}}" alt="">
                                                                                             <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
@@ -96,7 +98,9 @@
                                                                                 <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
                                                                                     <div class="header">
                                                                                         <div class="profile">
-                                                                                            <div class="indicator active"></div>
+                                                                                            @if($solo_ims_pro_client->is_read == 'Pending')
+                                                                                                <div class="indicator active"></div>
+                                                                                            @endif
                                                                                             <div class="image-block">
                                                                                                 <img src="{{url('images/test.png')}}" alt="">
                                                                                                 <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
@@ -122,7 +126,9 @@
                                                                                 <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
                                                                                     <div class="header">
                                                                                         <div class="profile">
-                                                                                            <div class="indicator active"></div>
+                                                                                            @if($solo_ims_pro_client->is_read == 'Pending')
+                                                                                                <div class="indicator active"></div>
+                                                                                            @endif
                                                                                             <div class="image-block">
                                                                                                 <img src="{{url('images/test.png')}}" alt="">
                                                                                                 <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
@@ -281,18 +287,28 @@
                                                                             {{--</div>--}}
                                                                         </div>
                                                                     @else
-                                                                        <div class="message-block outgoing">
-                                                                            <div class="image-block">
-                                                                                <img src="{{url('images/test.png')}}" alt="">
+                                                                        @if($solo_ims_pro_client_message->core_type != 'assign')
+                                                                            <div class="message-block outgoing">
+                                                                                <div class="image-block">
+                                                                                    <img src="{{url('images/test.png')}}" alt="">
+                                                                                </div>
+                                                                                <div class="message">
+                                                                                    <div class="text">{{$solo_ims_pro_client_message->message}}</div>
+                                                                                </div>
+                                                                                {{--<div class="label">--}}
+                                                                                    {{--<span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>--}}
+                                                                                    {{--<span class="time">12 days</span>--}}
+                                                                                {{--</div>--}}
                                                                             </div>
-                                                                            <div class="message">
-                                                                                <div class="text">{{$solo_ims_pro_client_message->message}}</div>
+                                                                        @else
+
+                                                                            <div class="message-block incoming">                                                                             
+                                                                                <div class="label">
+                                                                                    <span class="text">{{$solo_ims_pro_client_message->message}}</span>
+                                                                                    <!-- <span class="time">12 days</span> -->
+                                                                                </div>
                                                                             </div>
-                                                                            {{--<div class="label">--}}
-                                                                                {{--<span class="text">Called from Suranga Dinesh to (+94) 77 755 4571</span>--}}
-                                                                                {{--<span class="time">12 days</span>--}}
-                                                                            {{--</div>--}}
-                                                                        </div>
+                                                                        @endif
                                                                     @endif
                                                                 @endforeach
                                                             @endif
@@ -306,8 +322,27 @@
                                                             <input type="hidden" name="phone_number" id="phone_number" value="{{$solo_ims_pro_client->phone_number}}">
                                                             <input type="hidden" name="project_id" id="project_id" value="{{$solo_ims_pro_client->project_id}}">
                                                             <input type="hidden" name="widget_id" id="widget_id" value="{{$solo_ims_pro_client->wideget_id}}">
-                                                            <input type="hidden" name="hidden_user_email" id="hidden_user_email" value="{{auth()->user()->email}}">
-                                                            <input type="hidden" name="hidden_user_id" id="hidden_user_id" value="{{auth()->user()->id}}">
+                                                            @auth
+                                                                <input type="hidden" name="hidden_user_email" id="hidden_user_email" value="{{auth()->user()->email}}">
+                                                                <input type="hidden" name="hidden_user_id" id="hidden_user_id" value="{{auth()->user()->id}}">
+                                                                <input type="hidden" name="hidden_user_type" id="hidden_user_type" value="admin_user">
+                                                            @else
+                                                                @if(count($ims_pro_user_details) != 0)
+                                                                    @foreach($ims_pro_user_details as $ims_pro_user_detail)  
+                                                                        <input type="hidden" name="hidden_user_email" id="hidden_user_email" value="{{App\Models\IMSProUsers::where('id',$ims_pro_user_detail->id)->first()->email}}">
+                                                                        <input type="hidden" name="hidden_user_id" id="hidden_user_id" value="{{$ims_pro_user_detail->id}}">
+                                                                        @if(App\Models\IMSProUsers::where('id',$ims_pro_user_detail->id)->first()->role == 'Admin')
+                                                                            <input type="hidden" name="hidden_user_type" id="hidden_user_type" value="admin_user">
+                                                                        @else
+                                                                            <input type="hidden" name="hidden_user_type" id="hidden_user_type" value="sub_user">
+                                                                        @endif
+
+                                                                        @break;
+                                                                    @endforeach
+                                                                @endif
+                                                            @endauth
+
+                                                            <input type="hidden" name="core_type" id="core_type" value="message">
                                                             <input type="text" name="message" id="message" class="msg-input" placeholder="Type your message here...">
                                                             <button type="submit" onClick="submit_chat()" class="btn-send"><i class="bi bi-send-fill"></i></button>
 
@@ -392,16 +427,26 @@
                                                                         <td class="icons"><i class="bi bi-people-fill"></i></td>
                                                                         <td class="title">Responsible</td>
                                                                         <td class="inputs">
-                                                                            <div class="dropdown">
-                                                                                <a class="assign-dropdown" href="#" role="button" id="assignDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                                    <div class="text">Not assigned</div>
+                                                                            <div class="dropdown" id="assignDrop">
+                                                                                <a class="assign-dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                    @if($solo_ims_pro_assigned != null)
+                                                                                        <div class="text responsible">{{$solo_ims_pro_assigned->name}}</div>
+                                                                                    @else
+                                                                                        <div class="text responsible">Not assigned</div>
+                                                                                    @endif
+
                                                                                     <i class="bi bi-chevron-down"></i>
                                                                                 </a>
 
                                                                                 <ul class="dropdown-menu" aria-labelledby="assignDrop">
-                                                                                    <li><a class="dropdown-item" href="#"><div class="text">Sample Text</div></a></li>
-                                                                                    <li><a class="dropdown-item" href="#"><div class="text">Sample Text</div></a></li>
-                                                                                    <li><a class="dropdown-item" href="#"><div class="text">Sample Text</div></a></li>
+                                                                                    <input type="hidden" name="ims_pro_phone_number" id="ims_pro_phone_number" value="{{$solo_ims_pro_client->phone_number}}">
+                                                                                    <input type="hidden" name="ims_pro_project_id" id="ims_pro_project_id" value="{{$solo_ims_pro_client->project_id}}">
+                                                                                    <input type="hidden" name="ims_pro_widget_id" id="ims_pro_widget_id" value="{{$solo_ims_pro_client->wideget_id}}">
+                                                                                    @if(count($ims_pro_users) != 0)
+                                                                                        @foreach($ims_pro_users as $ims_pro_user)
+                                                                                            <li><a class="dropdown-item" id="{{$ims_pro_user->id}}" href="#"><div class="text">{{$ims_pro_user->name}}</div></a></li>
+                                                                                        @endforeach
+                                                                                    @endif                                                                                    
                                                                                 </ul>
                                                                             </div>
                                                                         </td>

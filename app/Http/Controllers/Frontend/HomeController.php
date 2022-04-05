@@ -1035,19 +1035,33 @@ class HomeController extends Controller
                 '</div>';
             }
             else{
+                if($new_message->core_type != 'assign'){
+                    $content = $content.'<div class="message-block outgoing">'.
+                        '<div class="image-block">'.
+                            '<img src="'.url("images/test.png").'" alt="">'.
+                        '</div>'.
+                        '<div class="message">'.
+                            '<div class="text">'.$new_message->message.'</div>'.
+                        '</div>'.
+                    '</div>';
 
-                $content = $content.'<div class="message-block outgoing">'.
-                    '<div class="image-block">'.
-                        '<img src="'.url("images/test.png").'" alt="">'.
-                    '</div>'.
-                    '<div class="message">'.
-                        '<div class="text">'.$new_message->message.'</div>'.
-                    '</div>'.
-                '</div>';
-            }
+                }
+                else{
+                    $content = $content.'<div class="message-block incoming">'.                                                                         
+                        '<div class="label">'.
+                            '<span class="text">'.$new_message->message.'</span>'.
+                        '</div>'.
+                    '</div>';
+                }
 
-            
+            }           
 
+        }
+
+        if($incoming_mobile_number != 'phone_number'){
+            $update = new ImsProClientMessages;
+            $update->is_read = 'read';    
+            ImsProClientMessages::where('phone_number',$incoming_mobile_number)->where('project_id',$incoming_project_id)->where('type',$incoming_type)->update($update->toArray());
         }
 
         // dd($content);
@@ -1064,6 +1078,7 @@ class HomeController extends Controller
         $type = $request->type;
         $email = $request->email;        
         $status = $request->status;
+        $is_read = $request->is_read;
         $project_id = $request->project_id;
         $widget_id = $request->widget_id;
         $facebook_user_name = $request->facebook_user_name;
@@ -1081,6 +1096,7 @@ class HomeController extends Controller
         $add->type = $type;
         $add->email = $email;
         $add->status = $status;
+        $add->is_read = $is_read;
         $add->project_id = $project_id;
         $add->wideget_id = $widget_id;
         $add->facebook_user_name = $facebook_user_name;

@@ -83,6 +83,15 @@ class IMSProController extends Controller
         // dd($solo_ims_pro_client);
 
         if($phone_number != 'phone_number'){
+            $solo_ims_pro_assigned = ImsProClientMessages::where('project_id',$id)->where('phone_number',$phone_number)->where('type',$type)->where('core_type','assign')->latest()->first();
+            // dd($solo_ims_pro_assigned);
+        }
+        else{
+            $solo_ims_pro_assigned = null;
+        }
+        // dd($solo_ims_pro_assigned);
+
+        if($phone_number != 'phone_number'){
             $solo_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->where('phone_number',$phone_number)->where('type',$type)->get();
             // dd($solo_ims_pro_client_messages);
         }
@@ -100,9 +109,21 @@ class IMSProController extends Controller
             $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('name', 'like', '%'.$sort_search.'%');
         }
         $all_ims_pro_client_messages = $all_ims_pro_client_messages->get()->unique('phone_number');
-
-        // $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->orderBy('id','desc')->get()->unique('phone_number');
         // dd($all_ims_pro_client_messages);
+
+        // dd($phone_number);
+
+        if($phone_number != 'phone_number'){
+            $update = new ImsProClientMessages;
+            $update->is_read = 'read';    
+            ImsProClientMessages::where('phone_number',$phone_number)->where('project_id',$id)->where('type',$type)->update($update->toArray());
+        }
+
+        // dd($phone_number);
+
+
+        $widegt_for_ims = Widgets::where('project_id',$id)->where('widget_type','IMS Pro')->first();
+        $ims_pro_users = IMSProUsers::where('project_id',$id)->where('widget_id',$widegt_for_ims->id)->get();
 
 
         return view('frontend.ims_pro.user_widget_ims_index',[
@@ -110,7 +131,9 @@ class IMSProController extends Controller
             'project' => $project,
             'solo_ims_pro_client' => $solo_ims_pro_client,
             'all_ims_pro_client_messages' => $all_ims_pro_client_messages,
-            'solo_ims_pro_client_messages' => $solo_ims_pro_client_messages
+            'solo_ims_pro_client_messages' => $solo_ims_pro_client_messages,
+            'ims_pro_users' => $ims_pro_users,
+            'solo_ims_pro_assigned' => $solo_ims_pro_assigned
         ]);
     }    
 
@@ -316,10 +339,14 @@ class IMSProController extends Controller
         $type = 'WhatsApp';
         $email = $request->hidden_user_email;
         $status = 'Pending';
+        $is_read = 'Pending';
         $project_id = $request->project_id;
         $widget_id = $request->widget_id;
         $message = $request->message;
         $user_id = $request->hidden_user_id;
+        $core_type = $request->core_type;
+        $hidden_user_type = $request->hidden_user_type;
+        
 
         $add = new ImsProClientMessages;
 
@@ -328,10 +355,14 @@ class IMSProController extends Controller
         $add->type = $type;
         $add->email = $email;
         $add->status = $status;
+        $add->is_read = $is_read;
         $add->project_id = $project_id;
         $add->wideget_id = $widget_id;
         $add->message = $message;
         $add->user_id = $user_id;
+        $add->core_type = $core_type;
+        $add->user_type = $hidden_user_type;
+        
 
         $add->save();
 
@@ -348,6 +379,41 @@ class IMSProController extends Controller
         ]);
         $response = $submit_data->getStatusCode();
         return back();
+    }
+
+    public function responsible_ims_pro(Request $request){
+        // dd($request);        
+
+        $ims_pro_user = IMSProUsers::where('id',$request->ims_pro_user)->first();      
+
+        $name = $ims_pro_user->name;
+        $type = 'WhatsApp';
+        $email = $ims_pro_user->email;
+        $status = 'Pending';
+        $is_read = 'Pending';
+        $message = $ims_pro_user->name.' Assigned to the chat';
+        $user_id = $ims_pro_user->id;
+        $core_type = 'assign';       
+        $ims_pro_phone_number = $request->ims_pro_phone_number;
+        $ims_pro_project_id = $request->ims_pro_project_id;
+        $ims_pro_widget_id = $request->ims_pro_widget_id; 
+
+        $add = new ImsProClientMessages;
+
+        $add->phone_number = $ims_pro_phone_number;
+        $add->name = $name;
+        $add->type = $type;
+        $add->email = $email;
+        $add->status = $status;
+        $add->is_read = $is_read;
+        $add->project_id = $ims_pro_project_id;
+        $add->wideget_id = $ims_pro_widget_id;
+        $add->message = $message;
+        $add->user_id = $user_id;
+        $add->core_type = $core_type;
+
+        $add->save();
+
     }
 
 

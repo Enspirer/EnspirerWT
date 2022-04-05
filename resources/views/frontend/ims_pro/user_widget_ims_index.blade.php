@@ -180,7 +180,9 @@
         widget_id = $('#widget_id').val();
         message = $('#message').val();   
         hidden_user_email = $('#hidden_user_email').val();   
-        hidden_user_id = $('#hidden_user_id').val();   
+        hidden_user_id = $('#hidden_user_id').val();
+        core_type = $('#core_type').val();
+        hidden_user_type = $('#hidden_user_type').val();           
 
         $.post("{{url('/')}}/api/submit_chat",
             {                
@@ -189,7 +191,9 @@
                 widget_id: widget_id,
                 message: message,
                 hidden_user_email: hidden_user_email,
-                hidden_user_id: hidden_user_id
+                hidden_user_id: hidden_user_id,
+                core_type: core_type,             
+                hidden_user_type: hidden_user_type             
             },
         );
 
@@ -198,6 +202,51 @@
     $('.btn-send').click(function(){
         $('#message').val('');
     });
+
+
+
+    const assignDrop = document.getElementById('assignDrop')
+    const dropdownItem = assignDrop.querySelectorAll('.dropdown-item')
+    const responsible = assignDrop.querySelector('.responsible')
+    let ims_pro_user;
+    let ims_pro_phone_number;
+    let ims_pro_project_id;
+    let ims_pro_widget_id;
+
+    dropdownItem.forEach(function(drop) {
+        drop.addEventListener('click', function(){
+            const role = drop.textContent;
+            ims_pro_user = drop.getAttribute('id');
+            responsible.innerHTML = role;
+            const get_ims_pro_phone_number = document.getElementById('ims_pro_phone_number')
+            const get_ims_pro_project_id = document.getElementById('ims_pro_project_id')
+            const get_ims_pro_widget_id = document.getElementById('ims_pro_widget_id')
+
+            ims_pro_phone_number = get_ims_pro_phone_number.value;
+            ims_pro_project_id = get_ims_pro_project_id.value;
+            ims_pro_widget_id = get_ims_pro_widget_id.value;
+
+            responsible_ims_pro();
+        })
+    })
+
+    function responsible_ims_pro()
+    {       
+        // console.log(ims_pro_phone_number);
+        // console.log(ims_pro_project_id);
+        // console.log(ims_pro_widget_id);
+        // console.log(ims_pro_user);               
+
+        $.post("{{url('/')}}/api/responsible_ims_pro",
+            {                
+                ims_pro_user: ims_pro_user,
+                ims_pro_phone_number: ims_pro_phone_number,
+                ims_pro_project_id: ims_pro_project_id,
+                ims_pro_widget_id: ims_pro_widget_id                        
+            },
+        );
+
+    }
 
 
 </script>
