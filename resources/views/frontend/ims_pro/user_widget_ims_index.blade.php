@@ -5,6 +5,7 @@
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/ims_pro.css')}}">
+<link rel="stylesheet" href="{{url('css/ims_pro-media_scan.css')}}">
 
 
 <section class="ims__section">

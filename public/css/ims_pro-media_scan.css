@@ -58,33 +58,60 @@
   width: 100%;
 }
 
-.welcome-section {
+.welcome-block {
   position: relative;
 }
-.welcome-section .info-block {
+.welcome-block .info-block {
   text-align: center;
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
 }
-.welcome-section .info-block .title {
+.welcome-block .info-block .title {
   font-weight: 400;
   margin-bottom: 2.5rem;
 }
-.welcome-section .info-block .sub-title {
+.welcome-block .info-block .sub-title {
   font-weight: 400;
   color: #017FFA;
   font-size: 28px;
   margin-bottom: 1.5rem;
 }
-.welcome-section .info-block .text {
+.welcome-block .info-block .text {
   font-size: 16px;
   font-weight: 300;
-  margin-bottom: 0.5rem;
+  line-height: 2;
 }
-.welcome-section .steps-block {
+.welcome-block .info-block .btn-inquire {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: linear-gradient(to right, #00AEEF, #1B3D6B);
+  width: fit-content;
+  margin: 2.5rem auto;
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+}
+.welcome-block .info-block .btn-inquire .text {
+  font-size: 12px;
+  margin-right: 0.5em;
+  color: #fff;
+}
+.welcome-block .info-block .btn-inquire .bi {
+  font-size: 14px;
+  color: #fff;
+}
+.welcome-block.section-broadcast .steps-block {
+  margin: 2.5rem 0;
+}
+.welcome-block .steps-block {
   position: relative;
   margin: 5rem 0 2.5rem;
   text-align: center;
 }
-.welcome-section .steps-block .img-main {
+.welcome-block .steps-block .img-main {
   max-width: 100%;
 }
 

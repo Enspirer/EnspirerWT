@@ -423,6 +423,24 @@
     gap: 1rem;
 }
 
+.ims__section .ims__navbar .profile-block .navbar-nav .btn-get-number {
+    background: linear-gradient(to right, #00AEEF, #1B3D6B);
+    border: none;
+    outline: none;
+    font-size: 12px;
+    padding: 1em 2em;
+    position: relative;
+    color: #fff;
+}
+
+.ims__section .ims__navbar .profile-block .navbar-nav .btn-get-number::before {
+    content: '+';
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    margin-right: .5em;
+}
+
 .ims__section .ims__navbar .profile-block .navbar-nav .nav-item .nav-link {
     padding: 0.5rem 1rem;
 }
