@@ -11,6 +11,7 @@ use App\Models\ImsProClientMessages;
 use App\Models\Widgets;
 use App\Models\Projects;
 use App\Models\Settings;
+use App\Models\Inquiries_Status;
 use Illuminate\Http\Request;
 use Modules\WidgetManager\Entities\ImsClients;
 use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
@@ -1104,6 +1105,22 @@ class HomeController extends Controller
         $add->user_id = $user_id;
 
         $add->save();
+
+
+        $inquiries_status = Inquiries_Status::where('project_id',$project_id)->where('phone_number',$phone_number)->first();
+        
+        if($inquiries_status == null){
+
+            $add = new Inquiries_Status;
+
+            $add->phone_number = $outputString;
+            $add->email = $email;
+            $add->status = $status;
+            $add->project_id = $project_id;
+            $add->wideget_id = $widget_id;
+    
+            $add->save();
+        }
 
         return 'sucess';
 
