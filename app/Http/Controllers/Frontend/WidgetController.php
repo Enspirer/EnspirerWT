@@ -52,10 +52,28 @@ class WidgetController extends Controller
         }elseif($request->widget_type == 'Analytics'){
             $add->category = 'Analytics';
         }elseif($request->widget_type == 'IMS Pro'){
-            $add->category = 'Widgets';
+            $add->category = 'Widgets Plus';
         }
 
         $add->save();
+
+
+        $project = Projects::where('id',$add->project_id)->first();
+
+        $update = new Projects;
+
+        $update->package_available_days = 30;
+        if($request->widget_type == 'Whatsapp Chat'){
+            $update->selected_package = 'Whatsapp Widget + IMS Lite';
+        }
+        elseif($request->widget_type == 'All-in-One Chat'){
+            $update->selected_package = 'All In One Widget + IMS Lite';
+        }
+        $update->package_starting_date = $add->created_at;
+        $update->package_type = 'Free';
+
+        Projects::whereId($project->id)->update($update->toArray());
+
 
         if($request->widget_type == 'Whatsapp Chat'){
             return redirect()->route('frontend.user.user_widget.settings', $add->id);

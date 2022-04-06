@@ -146,8 +146,16 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         Route::get('project_details/{id}/seo',[SEOController::class, 'seo'])->name('project.seo');
         Route::get('project_details/{id}/security',[SecurityController::class, 'security'])->name('project.security');
-        Route::get('project_details/{id}/widget',[ChatController::class, 'widget'])->name('project.chat');
         Route::get('project_details/{id}/analytics',[AnalyticsController::class, 'analytics'])->name('project.analytics');
+
+        Route::get('project_details/{id}/widget',[ChatController::class, 'widget'])->name('project.chat');
+        Route::get('project_details/{id}/widget_plus',[ChatController::class, 'widget_plus'])->name('project.widget_plus');
+        Route::get('project_details/{id}/optimizer',[ChatController::class, 'optimizer'])->name('project.optimizer');
+        Route::get('project_details/{id}/optimizer_plus',[ChatController::class, 'optimizer_plus'])->name('project.optimizer_plus');
+
+
+
+
 
         Route::post('user_projects/store', [DashboardController::class, 'user_projects_store'])->name('user_projects.store');
 

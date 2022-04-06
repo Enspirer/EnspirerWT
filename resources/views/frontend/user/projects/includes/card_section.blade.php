@@ -7,25 +7,24 @@
                 <h2 class="stats">{{count(App\Models\Widgets::where('project_id',$project_id)->where('status','Enabled')->get())}}<span>Widgets</span></h2>
             </a>
         </div>
-        <div class="card {{Request::segment(3)=='analytics' ? 'active' :null }}">
-            <a href="{{route('frontend.user.project.analytics',$project_id)}}" class="card-link">
+        <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
+            <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link">
                 <div class="icon"><i class="bi bi-activity"></i></div>
-                <div class="title">Analytics Center</div>
+                <div class="title">Widgets Plus</div>
                 <h2 class="stats">05<span>Alerts</span></h2>
             </a>
         </div>
-        <div class="card {{Request::segment(3)=='seo' ? 'active' :null }}">
-            <a href="{{route('frontend.user.project.seo',$project_id)}}" class="card-link">
+        <div class="card {{Request::segment(3)=='optimizer' ? 'active' :null }}">
+            <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
                 <div class="icon"><i class="bi bi-clock-history"></i></div>
-                <div class="title">Realtime</div>
+                <div class="title">Optimizer</div>
                 <h2 class="stats">03<span>Visitors</span></h2>
             </a>
         </div>
-        <div class="card disable {{Request::segment(3)=='security' ? 'active' :null }}">
-            <a class="card-link">
-            <!-- <a href="#" class="card-link"> -->
+        <div class="card {{Request::segment(3)=='optimizer_plus' ? 'active' :null }}">
+            <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
                 <div class="icon"><i class="bi bi-slack"></i></div>
-                <div class="title">Security</div>
+                <div class="title">Optimizer Plus</div>
                 <h2 class="stats">14<span>Alerts</span></h2>
             </a>
         </div>
