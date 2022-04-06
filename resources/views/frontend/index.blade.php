@@ -14,43 +14,45 @@
                         <li class="splide__slide">
                             <div class="slide-wrapper">
                                 <div class="content-block">
-                                    <h6>Upgrade your website with the most</h6>
-                                    <h2 class="title">Interactive <span>Communication tool</span></h2>
-                                    <h5 class="text">Improve user engagement &amp; <br> grow your business fast</h5>
-                                    <h5>All-in-One Chat With <span>IMS</span></h5>
-                                    <h6 class="blue-text"><span>I</span>nquiry <span>M</span>anagement <span>S</span>ystem</h6>
+                                    <h2 class="title">Widgets</h2>
+                                    <div class="caption">WhatsApp widget <br> All in one widget</div>
+                                    <div class="product">iMS <span class="blue pro-cat">Lite</span></div>
+                                    <div class="text blue">Inquiry Management System</div>
 
                                     <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
-                                    <!-- <div class="featured-icons">
-                                        <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
-                                        <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
-                                        <a href="#" class="icon"><img src="{{url('images/shield (1).png')}}" alt="featured icon"></a>
-                                        <a href="#" class="icon"><img src="{{url('images/chat (1).png')}}" alt="featured icon"></a>
-                                    </div> -->
                                 </div>
                                 <div class="image-block slide-01">
-                                    <img src="{{url('images/landing_page/home/banner_1.png')}}" alt="hero-image">
+                                    <img src="{{url('images/landing_page/home/hero-widget.png')}}" alt="hero-image">
                                 </div>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <div class="slide-wrapper">
                                 <div class="content-block">
-                                    <h6>The Smarter way to <span class="strong">Boost</span> your </h6>
-                                    <h2 class="title">Website <br> Performance</h2>
-                                    <h5 class="text">WhatsApp Widget with <span>IMS</span></h5>
-                                    <h6 class="blue-text"><span>I</span>nquiry <span>M</span>anagement <span>S</span>ystem</h6>
+                                    <h2 class="title">Widget Plus</h2>
+                                    <div class="caption">All in one widget with <div class="product">iMS <span class="red pro-cat">Pro</span></div> <br> Whatsapp integrated</div>
+                                    <div class="product">iMS <span class="red pro-cat">Pro</span></div>
+                                    <div class="text">conversation records <br> status reports</div>
 
                                     <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
-                                    <!-- <div class="featured-icons">
-                                        <a href="#" class="icon"><img src="{{url('images/seo.png')}}" alt="featured icon"></a>
-                                        <a href="#" class="icon"><img src="{{url('images/analytics.png')}}" alt="featured icon"></a>
-                                        <a href="#" class="icon"><img src="{{url('images/shield (1).png')}}" alt="featured icon"></a>
-                                        <a href="#" class="icon"><img src="{{url('images/chat (1).png')}}" alt="featured icon"></a>
-                                    </div> -->
                                 </div>
                                 <div class="image-block">
-                                    <img src="{{url('images/landing_page/home/banner_2.png')}}" alt="hero-image">
+                                    <img src="{{url('images/landing_page/home/hero-widget-plus.png')}}" alt="hero-image">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slide-wrapper">
+                                <div class="content-block">
+                                    <h2 class="title">Optimizer</h2>
+                                    <div class="caption">Widget with <div class="product">iMS <span class="red pro-cat">Pro</span></div> <br> User session view <br>HeatMaps</div>
+                                    <div class="product blue">Mobile App</div>
+                                    <div class="text">Real time visitors <br> Chat invite</div>
+
+                                    <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                                </div>
+                                <div class="image-block">
+                                    <img src="{{url('images/landing_page/home/hero-optimizer.png')}}" alt="hero-image">
                                 </div>
                             </div>
                         </li>

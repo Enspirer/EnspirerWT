@@ -85,13 +85,27 @@
         <!-- Hero Slider -->
 
         <script>
-            var heroSlider = new Splide( '#heroSlider', {
+            const heroSlider = new Splide( '#heroSlider', {
                 type: 'loop',
-                autoplay: true,
+                autoplay: false,
                 arrows: false,
+                classes: {
+                        pagination: 'splide__pagination custom__pagination',
+                        page      : 'splide__pagination__page custom__pagination__page',
+                },
             }, );
             
             heroSlider.mount();
+
+            window.addEventListener('load', function () {
+                const slideWrapper = document.getElementById('heroSlider')
+                const indicator1 = slideWrapper.querySelector('li:nth-child(1) .custom__pagination__page')
+                const indicator2 = slideWrapper.querySelector('li:nth-child(2) .custom__pagination__page')
+                const indicator3 = slideWrapper.querySelector('li:nth-child(3) .custom__pagination__page')
+                indicator1.textContent = 'Widget';
+                indicator2.textContent = 'Widget Plus';
+                indicator3.textContent = 'Optimizer';
+            })
         </script>
 
         
