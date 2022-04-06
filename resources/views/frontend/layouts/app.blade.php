@@ -87,7 +87,7 @@
         <script>
             const heroSlider = new Splide( '#heroSlider', {
                 type: 'loop',
-                autoplay: false,
+                autoplay: true,
                 arrows: false,
                 classes: {
                         pagination: 'splide__pagination custom__pagination',
