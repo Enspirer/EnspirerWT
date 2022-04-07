@@ -27,20 +27,16 @@
                             </li>
                         </ul>
                         <div class="inner-wrapper">
-                            <div class="content-block">
-                                <h2 class="title"><span>All-in-One</span><br>Chat<br> for websites</h2>
-                                <p class="content">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</p>
-                                <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Pick and choose the channels</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Quick integration with IMS option</li>
-                                </ul>
-                                <a href="{{url('login')}}" class="cta-btn-border">
-                                    <span class="text">Get Started</span>
-                                    <i class="bi bi-arrow-right-short"></i>
-                                </a>
-                            </div>
+                        <div class="content-block">
+                                    <h2 class="title">Widget Plus</h2>
+                                    <div class="caption">All in one widget with <div class="product">iMS <span class="red pro-cat">Pro</span></div> <br> Whatsapp integrated</div>
+                                    <div class="product">iMS <span class="red pro-cat">Pro</span></div>
+                                    <div class="text">conversation records <br> status reports</div>
+
+                                    <a href="{{url('login')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                                </div>
                             <div class="image-block">
-                                <img src="{{url('images/landing_page/products/all_in_one_chat/hero_image.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/widget-pro-banner.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -54,10 +50,7 @@
                                     <div class="splide__track">
                                             <ul class="splide__list">
                                                 <li class="splide__slide">
-                                                    <img src="{{url('images/landing_page/products/all_in_one_chat/slide_1.png')}}" alt="">
-                                                </li>
-                                                <li class="splide__slide">
-                                                    <img src="{{url('images/landing_page/products/all_in_one_chat/slide_1.png')}}" alt="">
+                                                    <img src="{{url('images/landing_page/products/slide_1.png')}}" alt="">
                                                 </li>
                                             </ul>
                                     </div>
@@ -82,6 +75,7 @@
 
                 <section class="more-about-widget">
                     <div class="header">
+                        <div class="heading">iMS <span class="pro-cat red">Pro</span></div>
                         <h3 class="title">Manage your leads efficiently for better productivity</h3>
                     </div>
                     <div class="feature-block-section">
@@ -106,7 +100,7 @@
                                 </div>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/landing_page/products/all_in_one_chat/ims.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/ims-inquiries.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-2">
@@ -123,7 +117,7 @@
                                 <p class="content">It makes everybody's life easier with insights of the leads and funnel management</p>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/products/Group 551.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/ims-conversation.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-3">
