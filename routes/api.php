@@ -48,6 +48,7 @@ Route::post('responsible_ims_pro', [IMSProController::class, 'responsible_ims_pr
 
 
 Route::post('default_server_auth_status', [HomeController::class, 'default_server_auth_status'])->name('default_server_auth_status');
+Route::post('project_server_auth_status', [HomeController::class, 'project_server_auth_status'])->name('project_server_auth_status');
 
 
 
