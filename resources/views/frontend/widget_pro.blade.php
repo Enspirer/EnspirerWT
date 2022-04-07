@@ -14,7 +14,7 @@
 
                 <section class="hero-section">
                     <div class="container">
-                    <ul class="breadcrumb">                                            
+                        <ul class="breadcrumb">                                            
                             <li class="breadcrumb-item">
                                 <a class="breadcrumb-link">Products</a>
                             </li>
@@ -23,16 +23,16 @@
                                         class="bi bi-chevron-right"></i></a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a class="breadcrumb-link breadcrumb-current">WhatsApp Widget</a>
+                                <a class="breadcrumb-link breadcrumb-current">All-in-One Chat</a>
                             </li>
                         </ul>
                         <div class="inner-wrapper">
                             <div class="content-block">
-                                <h2 class="title"><span>WhatsApp</span><br>widget<br> for websites</h2>
-                                <p class="content">Integrate the most popular communication channel into your website and improve your customer service quality and sales conversion.</p>
+                                <h2 class="title"><span>All-in-One</span><br>Chat<br> for websites</h2>
+                                <p class="content">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</p>
                                 <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Customisable ready to use widget</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Inquiry Management System - IMS</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Pick and choose the channels</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Quick integration with IMS option</li>
                                 </ul>
                                 <a href="{{url('login')}}" class="cta-btn-border">
                                     <span class="text">Get Started</span>
@@ -40,7 +40,7 @@
                                 </a>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/products/Group 549.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/all_in_one_chat/hero_image.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -54,23 +54,22 @@
                                     <div class="splide__track">
                                             <ul class="splide__list">
                                                 <li class="splide__slide">
-                                                    <img src="{{url('images/products/Group 550.png')}}" alt="">
+                                                    <img src="{{url('images/landing_page/products/all_in_one_chat/slide_1.png')}}" alt="">
                                                 </li>
                                                 <li class="splide__slide">
-                                                    <img src="{{url('images/products/Group 552.png')}}" alt="">
+                                                    <img src="{{url('images/landing_page/products/all_in_one_chat/slide_1.png')}}" alt="">
                                                 </li>
                                             </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="content-block">
-                                <h2 class="title">WhatsApp Chat Features</h2>
+                                <h2 class="title">All-in-One Chat Features</h2>
                                 <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Customisable chat box
-                                    </li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Choose prefered position on website</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Choose bubble icon and add text</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Your own welcome message</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> The choice of multiple messenger options</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Customisable chat bow and welcome note</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Setting a chat-opening trigger</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Integration into your website with IMS</li>
                                 </ul>
                                 <a href="" class="cta-btn-border">
                                     <span class="text">Get Started</span>
@@ -107,7 +106,7 @@
                                 </div>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/landing_page/products/whatsapp_widget/ims.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/all_in_one_chat/ims.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-2">
