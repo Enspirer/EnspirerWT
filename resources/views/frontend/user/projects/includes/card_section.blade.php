@@ -180,6 +180,8 @@
     </div>
 </div> -->
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 <div class="section-cards" id="sectionCards">
     <div class="cards">
         <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
@@ -209,7 +211,31 @@
     </div>
 </div>
 
-<div class="subcription-block">
+<div class="subcription-block activated">
+    <div class="active-overlay animate__animated animate__fadeIn">
+        <div class="button-block">
+            <div class="btn-group">
+                <button type="button" class="act-btn ims-lite">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <div class="text">iMS Lite</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-gear"></i>
+                    <div class="text">Settings</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-code-slash"></i>
+                    <div class="text">Add Script</div>
+                </button>                
+            </div>
+            <div class="btn-group">
+                <button type="button" class="act-btn delete">
+                    <i class="bi bi-trash"></i>
+                    <div class="text">Delete</div>
+                </button>
+            </div>
+        </div>
+    </div>
     <div class="inner-wrapper">
         <img src="{{url('images/dashboard/subscriptions/whatsapp-water-mark.png')}}" alt="" class="water-mark">
         <div class="widget-block">
@@ -225,12 +251,36 @@
         </div>
         <a href="#" class="sub-btn">
             <i class="bi bi-plus"></i>
-            <div class="text">Activate</div>
+            <div class="text">Activated</div>
         </a>
     </div>
 </div>
 
 <div class="subcription-block">
+    <div class="active-overlay animate__animated animate__fadeIn">
+        <div class="button-block">
+            <div class="btn-group">
+                <button type="button" class="act-btn ims-lite">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <div class="text">iMS Lite</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-gear"></i>
+                    <div class="text">Settings</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-code-slash"></i>
+                    <div class="text">Add Script</div>
+                </button>                
+            </div>
+            <div class="btn-group">
+                <button type="button" class="act-btn delete">
+                    <i class="bi bi-trash"></i>
+                    <div class="text">Delete</div>
+                </button>
+            </div>
+        </div>
+    </div>
     <div class="inner-wrapper">
         <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}" alt="" class="water-mark">
         <div class="widget-block">
@@ -252,6 +302,30 @@
 </div>
 
 <div class="subcription-block">
+    <div class="active-overlay animate__animated animate__fadeIn">
+        <div class="button-block">
+            <div class="btn-group">
+                <button type="button" class="act-btn ims-lite">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <div class="text">iMS Lite</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-gear"></i>
+                    <div class="text">Settings</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-code-slash"></i>
+                    <div class="text">Add Script</div>
+                </button>                
+            </div>
+            <div class="btn-group">
+                <button type="button" class="act-btn delete">
+                    <i class="bi bi-trash"></i>
+                    <div class="text">Delete</div>
+                </button>
+            </div>
+        </div>
+    </div>
     <div class="inner-wrapper">
         <img src="{{url('images/dashboard/subscriptions/whatsapp-water-mark.png')}}" alt="" class="water-mark">
         <div class="widget-block">
@@ -273,6 +347,30 @@
 </div>
 
 <div class="subcription-block">
+    <div class="active-overlay animate__animated animate__fadeIn">
+        <div class="button-block">
+            <div class="btn-group">
+                <button type="button" class="act-btn ims-lite">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <div class="text">iMS Lite</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-gear"></i>
+                    <div class="text">Settings</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-code-slash"></i>
+                    <div class="text">Add Script</div>
+                </button>                
+            </div>
+            <div class="btn-group">
+                <button type="button" class="act-btn delete">
+                    <i class="bi bi-trash"></i>
+                    <div class="text">Delete</div>
+                </button>
+            </div>
+        </div>
+    </div>
     <div class="inner-wrapper">
         <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}" alt="" class="water-mark">
         <div class="widget-block">
@@ -294,6 +392,30 @@
 </div>
 
 <div class="subcription-block">
+    <div class="active-overlay animate__animated animate__fadeIn">
+        <div class="button-block">
+            <div class="btn-group">
+                <button type="button" class="act-btn ims-lite">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <div class="text">iMS Lite</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-gear"></i>
+                    <div class="text">Settings</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-code-slash"></i>
+                    <div class="text">Add Script</div>
+                </button>                
+            </div>
+            <div class="btn-group">
+                <button type="button" class="act-btn delete">
+                    <i class="bi bi-trash"></i>
+                    <div class="text">Delete</div>
+                </button>
+            </div>
+        </div>
+    </div>
     <div class="content-block">
         <div class="widget-block">
             <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
@@ -353,6 +475,30 @@
 </div>
 
 <div class="subcription-block">
+    <div class="active-overlay animate__animated animate__fadeIn">
+        <div class="button-block">
+            <div class="btn-group">
+                <button type="button" class="act-btn ims-lite">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <div class="text">iMS Lite</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-gear"></i>
+                    <div class="text">Settings</div>
+                </button>
+                <button type="button" class="act-btn">
+                    <i class="bi bi-code-slash"></i>
+                    <div class="text">Add Script</div>
+                </button>                
+            </div>
+            <div class="btn-group">
+                <button type="button" class="act-btn delete">
+                    <i class="bi bi-trash"></i>
+                    <div class="text">Delete</div>
+                </button>
+            </div>
+        </div>
+    </div>
     <div class="content-block">
         <div class="widget-block">
             <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">

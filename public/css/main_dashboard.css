@@ -2706,6 +2706,7 @@
     position: absolute;
     top: 50%;
     left: -25px;
+    z-index: 3;
     transform: translate(0, -50%);
 }
 
@@ -2718,6 +2719,7 @@
     position: absolute;
     top: 50%;
     right: -25px;
+    z-index: 3;
     transform: translate(0, -50%);
 }
 
@@ -2778,10 +2780,16 @@
     font-size: 16px;
     padding: 0.5em 1em;
     width: 200px;
+    height: 50px;
     border-radius: 5px;
 }
 
-.subcription-block .sub-btn.active .bi {
+.subcription-block.activated .sub-btn {
+    background-color: #44BC8E;
+    pointer-events: none;
+}
+
+.subcription-block.activated .sub-btn .bi {
     display: none;
 }
 
@@ -2859,6 +2867,84 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.subcription-block .active-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.subcription-block.activated:hover .active-overlay {
+    cursor: pointer;
+    display: block;
+}
+
+.subcription-block .active-overlay .button-block {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.subcription-block .active-overlay .button-block .btn-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.subcription-block .active-overlay .button-block .btn-group .act-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.subcription-block .active-overlay .button-block .btn-group .act-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 125px;
+    height: 45px;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    margin: 0.75em;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.subcription-block .active-overlay .button-block .btn-group .act-btn.ims-lite {
+    background-color: #00AEEF;
+    border-color: #00AEEF;
+}
+
+.subcription-block .active-overlay .button-block .btn-group .act-btn.delete {
+    background-color: #FF4E4E;
+    border-color: #FF4E4E;
+}
+
+.subcription-block .active-overlay .button-block .btn-group .act-btn .bi {
+    font-size: 18px;
+    color: #fff;
+}
+
+.subcription-block .active-overlay .button-block .btn-group .act-btn .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
 }
 
 
