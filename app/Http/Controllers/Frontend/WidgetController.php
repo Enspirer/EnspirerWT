@@ -9,6 +9,7 @@ use App\Models\Projects;
 use App\Models\ProjectType;
 use App\Models\IMSProUsers;
 use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
+use DB;
 
 class WidgetController extends Controller
 {
@@ -24,68 +25,186 @@ class WidgetController extends Controller
         $pin = mt_rand(1000000, 9999999)
             . mt_rand(1000000, 9999999)
             . $characters[rand(0, strlen($characters) - 1)];
-        $widget_key = str_shuffle($pin);               
+        $widget_key = str_shuffle($pin);   
+        
+        $widget_check = Widgets::where('project_id',$request->project_id)->where('widget_type',$request->widget_type)->first();
+        // dd($widget_check);     
 
-        $add = new Widgets;
+        if($widget_check == null){
 
-        $add->status = 'Enabled';        
-        $add->widget_type = $request->widget_type;
-        $add->widget_key = $widget_key;
-        $add->load_count = $request->load_count;
-        $add->project_id = $request->project_id;
+            $add = new Widgets;
+            $add->status = 'Enabled';        
+            $add->widget_type = $request->widget_type;
+            $add->widget_key = $widget_key;
+            $add->load_count = $request->load_count;
+            $add->project_id = $request->project_id;
+    
+            if($request->widget_type == 'Whatsapp Chat'){
+                $add->settings = $default_settings;
+            }elseif($request->widget_type == 'All-in-One Chat'){
+                $add->settings = $all_in_one;
+            }elseif($request->widget_type == 'Analytics'){
+                $add->settings = null;
+            }elseif($request->widget_type == 'IMS Pro'){
+                $add->settings = $ims_pro;
+            }
+    
+    
+            if($request->widget_type == 'Whatsapp Chat'){
+                $add->category = 'Widgets';
+            }elseif($request->widget_type == 'All-in-One Chat'){
+                $add->category = 'Widgets';
+            }elseif($request->widget_type == 'Analytics'){
+                $add->category = 'Analytics';
+            }elseif($request->widget_type == 'IMS Pro'){
+                $add->category = 'Widgets Plus';
+            }
+    
+            $add->save();
 
-        if($request->widget_type == 'Whatsapp Chat'){
-            $add->settings = $default_settings;
-        }elseif($request->widget_type == 'All-in-One Chat'){
-            $add->settings = $all_in_one;
-        }elseif($request->widget_type == 'Analytics'){
-            $add->settings = null;
-        }elseif($request->widget_type == 'IMS Pro'){
-            $add->settings = $ims_pro;
+
+            $project = Projects::where('id',$add->project_id)->first();
+
+            $update = new Projects;
+
+            $update->package_available_days = 30;           
+            if($request->widget_type == 'All-in-One Chat'){
+                $update->selected_package = 'All In One Widget + IMS Lite';
+            }
+            elseif($request->widget_type == 'IMS Pro'){
+                $update->selected_package = 'All In One Widget + IMS Pro';
+            }
+            $update->package_starting_date = $add->created_at;
+            $update->package_type = 'Free';
+
+            Projects::whereId($project->id)->update($update->toArray());
+
         }
 
+        // dd($widget_check);
+      
 
-        if($request->widget_type == 'Whatsapp Chat'){
-            $add->category = 'Widgets';
-        }elseif($request->widget_type == 'All-in-One Chat'){
-            $add->category = 'Widgets';
-        }elseif($request->widget_type == 'Analytics'){
-            $add->category = 'Analytics';
-        }elseif($request->widget_type == 'IMS Pro'){
-            $add->category = 'Widgets Plus';
+        if($request->has('widget_type_another')){
+            $widget_check_another = Widgets::where('project_id',$request->project_id)->where('widget_type',$request->widget_type_another)->first();
+            // dd($widget_check_another );
+
+            if($widget_check_another == null){
+
+
+                $add_another = new Widgets;
+                $add_another->status = 'Enabled';        
+                $add_another->widget_type = $request->widget_type_another;
+                $add_another->widget_key = $widget_key;
+                $add_another->load_count = $request->load_count;
+                $add_another->project_id = $request->project_id;
+        
+                if($request->widget_type_another == 'Whatsapp Chat'){
+                    $add_another->settings = $default_settings;
+                }elseif($request->widget_type_another == 'All-in-One Chat'){
+                    $add_another->settings = $all_in_one;
+                }elseif($request->widget_type_another == 'Analytics'){
+                    $add_another->settings = null;
+                }elseif($request->widget_type_another == 'IMS Pro'){
+                    $add_another->settings = $ims_pro;
+                }
+        
+        
+                if($request->widget_type_another == 'Whatsapp Chat'){
+                    $add_another->category = 'Widgets Plus';
+                }elseif($request->widget_type_another == 'All-in-One Chat'){
+                    $add_another->category = 'Widgets Plus';
+                }elseif($request->widget_type_another == 'Analytics'){
+                    $add_another->category = 'Analytics';
+                }elseif($request->widget_type_another == 'IMS Pro'){
+                    $add_another->category = 'Widgets Plus';
+                }
+        
+                $add_another->save();
+
+
+
+                $update = new Projects;
+                $update->package_available_days = 30;
+                if($request->widget_type_another == 'Whatsapp Chat'){
+                    $update->selected_package = 'Whatsapp Widget + IMS Pro';
+                }
+                elseif($request->widget_type_another == 'All-in-One Chat'){
+                    $update->selected_package = 'All In One Widget + IMS Pro';
+                }
+                $update->package_starting_date = $add_another->created_at;
+                $update->package_type = 'Free';
+
+                Projects::whereId($request->project_id)->update($update->toArray());
+    
+            }
+            else{
+
+                $update_another = new Widgets;
+        
+                if($request->widget_type_another == 'Whatsapp Chat'){
+                    $update_another->category = 'Widgets Plus';
+                }elseif($request->widget_type_another == 'All-in-One Chat'){
+                    $update_another->category = 'Widgets Plus';
+                }elseif($request->widget_type_another == 'Analytics'){
+                    $update_another->category = 'Analytics';
+                }elseif($request->widget_type_another == 'IMS Pro'){
+                    $update_another->category = 'Widgets Plus';
+                }
+        
+                Widgets::whereId($widget_check_another->id)->update($update_another->toArray());
+                
+                // dd($widget_check_another);
+
+                $update = new Projects;
+                $update->package_available_days = 30;
+                if($request->widget_type_another == 'All-in-One Chat'){
+                    $update->selected_package = 'All In One Widget + IMS Pro';
+                }
+                $update->package_starting_date = $widget_check_another->created_at;
+                $update->package_type = 'Free';
+
+                Projects::whereId($widget_check_another->project_id)->update($update->toArray());
+
+            }
+
+
+            
+
         }
 
-        $add->save();
+        // dd($widget_check);
 
+       
 
-        $project = Projects::where('id',$add->project_id)->first();
-
-        $update = new Projects;
-
-        $update->package_available_days = 30;
-        if($request->widget_type == 'Whatsapp Chat'){
-            $update->selected_package = 'Whatsapp Widget + IMS Lite';
+        if($widget_check != null){
+            // dd($widget_check);
+            if($request->widget_type == 'Whatsapp Chat'){
+                return redirect()->route('frontend.user.user_widget.settings', $widget_check->id);
+            }
+            elseif($request->widget_type == 'All-in-One Chat'){
+                return redirect()->route('frontend.user.user_widget.settings', $widget_check->id);
+            }
+            elseif($request->widget_type == 'Analytics'){
+                return redirect()->route('frontend.user.user_widget.settings', $widget_check->id);
+            }
+            elseif($request->widget_type == 'IMS Pro'){
+                // dd($widget_check);
+                return redirect()->route('frontend.user.user_widget.settings', $widget_check->id);
+            }
         }
-        elseif($request->widget_type == 'All-in-One Chat'){
-            $update->selected_package = 'All In One Widget + IMS Lite';
-        }
-        $update->package_starting_date = $add->created_at;
-        $update->package_type = 'Free';
-
-        Projects::whereId($project->id)->update($update->toArray());
-
-
-        if($request->widget_type == 'Whatsapp Chat'){
-            return redirect()->route('frontend.user.user_widget.settings', $add->id);
-        }
-        elseif($request->widget_type == 'All-in-One Chat'){
-            return redirect()->route('frontend.user.user_widget.settings', $add->id);
-        }
-        elseif($request->widget_type == 'Analytics'){
-            return redirect()->route('frontend.user.user_widget.settings', $add->id);
-        }
-        elseif($request->widget_type == 'IMS Pro'){
-            return redirect()->route('frontend.user.user_widget.settings', $add->id);
+        else{
+            if($request->widget_type == 'Whatsapp Chat'){
+                return redirect()->route('frontend.user.user_widget.settings', $add->id);
+            }
+            elseif($request->widget_type == 'All-in-One Chat'){
+                return redirect()->route('frontend.user.user_widget.settings', $add->id);
+            }
+            elseif($request->widget_type == 'Analytics'){
+                return redirect()->route('frontend.user.user_widget.settings', $add->id);
+            }
+            elseif($request->widget_type == 'IMS Pro'){
+                return redirect()->route('frontend.user.user_widget.settings', $add->id);
+            }
         }
 
         // return back()->with([
@@ -96,7 +215,10 @@ class WidgetController extends Controller
 
     public function user_widget_destroy($id)
     {
-        Widgets::where('id', $id)->delete(); 
+        $chech_whether_ims = Widgets::where('id',$id)->first();
+        // dd($chech_whether_ims);
+
+        DB::table('widgets')->where('project_id',$chech_whether_ims->project_id)->delete();       
 
         return back();
     }

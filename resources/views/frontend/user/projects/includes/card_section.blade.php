@@ -211,7 +211,7 @@
     </div>
 </div>
 
-<div class="subcription-block activated">
+<!-- <div class="subcription-block activated">
     <div class="active-overlay animate__animated animate__fadeIn">
         <div class="button-block">
             <div class="btn-group">
@@ -254,54 +254,11 @@
             <div class="text">Activated</div>
         </a>
     </div>
-</div>
+</div> -->
 
-<div class="subcription-block">
-    <div class="active-overlay animate__animated animate__fadeIn">
-        <div class="button-block">
-            <div class="btn-group">
-                <button type="button" class="act-btn ims-lite">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <div class="text">iMS Lite</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-gear"></i>
-                    <div class="text">Settings</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-code-slash"></i>
-                    <div class="text">Add Script</div>
-                </button>                
-            </div>
-            <div class="btn-group">
-                <button type="button" class="act-btn delete">
-                    <i class="bi bi-trash"></i>
-                    <div class="text">Delete</div>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="inner-wrapper">
-        <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}" alt="" class="water-mark">
-        <div class="widget-block">
-            <div class="title">All in one Widget</div>
-            <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}" alt="" class="widget-img">
-        </div>
-        <div class="separator">
-            <i class="bi bi-plus-lg"></i>
-        </div>
-        <div class="widget-block">
-            <div class="title">IMS <span class="pro-cat blue">Lite</span></div>
-            <img src="{{url('images/dashboard/subscriptions/ims-lite.png')}}" alt="" class="widget-img">
-        </div>
-        <a href="#" class="sub-btn">
-            <i class="bi bi-plus"></i>
-            <div class="text">Activate</div>
-        </a>
-    </div>
-</div>
 
-<div class="subcription-block">
+
+<!-- <div class="subcription-block">
     <div class="active-overlay animate__animated animate__fadeIn">
         <div class="button-block">
             <div class="btn-group">
@@ -344,54 +301,11 @@
             <div class="text">Activate</div>
         </a>
     </div>
-</div>
+</div> -->
 
-<div class="subcription-block">
-    <div class="active-overlay animate__animated animate__fadeIn">
-        <div class="button-block">
-            <div class="btn-group">
-                <button type="button" class="act-btn ims-lite">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <div class="text">iMS Lite</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-gear"></i>
-                    <div class="text">Settings</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-code-slash"></i>
-                    <div class="text">Add Script</div>
-                </button>                
-            </div>
-            <div class="btn-group">
-                <button type="button" class="act-btn delete">
-                    <i class="bi bi-trash"></i>
-                    <div class="text">Delete</div>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="inner-wrapper">
-        <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}" alt="" class="water-mark">
-        <div class="widget-block">
-            <div class="title">All in one Widget</div>
-            <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}" alt="" class="widget-img">
-        </div>
-        <div class="separator">
-            <i class="bi bi-plus-lg"></i>
-        </div>
-        <div class="widget-block">
-            <div class="title">IMS <span class="pro-cat red">Pro</span></div>
-            <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
-        </div>
-        <a href="#" class="sub-btn">
-            <i class="bi bi-plus"></i>
-            <div class="text">Activate</div>
-        </a>
-    </div>
-</div>
 
-<div class="subcription-block">
+
+<!-- <div class="subcription-block">
     <div class="active-overlay animate__animated animate__fadeIn">
         <div class="button-block">
             <div class="btn-group">
@@ -555,7 +469,7 @@
             <div class="text">Activate</div>
         </a>
     </div>
-</div>
+</div> -->
 
 <div class="modal fade dashboard-modal action-modal" id="widgetdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
     aria-hidden="true">
