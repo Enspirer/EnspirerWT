@@ -1074,6 +1074,7 @@ class HomeController extends Controller
 
     public function ims_chat_insert(Request $request)
     {
+
         $phone_number = $request->phone_number;
         $name = $request->name;
         $type = $request->type;
@@ -1099,7 +1100,7 @@ class HomeController extends Controller
         $add->status = $status;
         $add->is_read = $is_read;
         $add->project_id = $project_id;
-        $add->wideget_id = $widget_id;
+        $add->widget_id = $widget_id;
         $add->facebook_user_name = $facebook_user_name;
         $add->message = $message;
         $add->user_id = $user_id;
