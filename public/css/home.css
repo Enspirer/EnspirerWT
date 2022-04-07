@@ -56,7 +56,7 @@
 }
 
 .hero-section .slide-wrapper .content-block {
-    max-width: 350px;
+    max-width: 300px;
     width: 100%;
 }
 
@@ -109,7 +109,6 @@
 
 .hero-section .slide-wrapper .image-block {
     width: 100%;
-    max-width: 765px;
 }
 
 .hero-section .slide-wrapper .image-block img {
@@ -220,6 +219,23 @@
     background: linear-gradient(to bottom, #F5F6F8 75%, #fff 0);
 }
 
+.IMS-section .heading {
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+    color: #2d465b;
+    margin-bottom: 0.5em;
+}
+
+.IMS-section .heading .pro-cat {
+    font-size: 45px;
+    color: #fff;
+    background-color: #FF4848;
+    border-radius: 5px;
+    line-height: 1;
+    padding: 0 0.5em;
+}
+
 .IMS-section .title {
     font-weight: 700;
     text-align: center;
@@ -265,6 +281,47 @@
 
 .IMS-section .image-block img {
     width: 100%;
+}
+
+.section-optimizer {
+    background: url('../images/landing_page/home/section-optimizer-mask.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5rem 0;
+}
+
+.section-optimizer .header {
+    margin-bottom: 5rem;
+}
+
+.section-optimizer .header .title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 40px;
+    color: #2d465b;
+}
+
+.section-optimizer .header .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.section-optimizer .subcription-block {
+    background: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.section-optimizer .subcription-block::before {
+    content: none;
+}
+
+.section-optimizer .subcription-block::after {
+    content: none;
 }
 
 .SEO-section {

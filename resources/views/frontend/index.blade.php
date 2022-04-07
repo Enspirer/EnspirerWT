@@ -108,7 +108,8 @@
 
     <section class="IMS-section">
         <div class="container">
-            <h2 class="title">Inquiry Management System</h2>
+            <div class="heading">iMS <span class="pro-cat">Pro</span></div>
+            <h2 class="title">The Inquiry Management System</h2>
             <span class="text">Keep track of all inquiries with status updates & Sales Reports</span>
             <div class="card-block">
                 <div class="card">
@@ -130,6 +131,89 @@
             </div>
             <div class="image-block">
                 <img src="{{url('images/landing_page/home/ims-banner.png')}}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-optimizer">
+        <div class="header">
+            <div class="title">Tallentor Optimizer</div>
+            <div class="subtitle">Keep track of all inquiries with status updates & Sales Reports</div>
+        </div>
+        <div class="subcription-block">
+            <div class="active-overlay animate__animated animate__fadeIn">
+                <div class="button-block">
+                    <div class="btn-group">
+                        <button type="button" class="act-btn ims-lite">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <div class="text">iMS Lite</div>
+                        </button>
+                        <button type="button" class="act-btn">
+                            <i class="bi bi-gear"></i>
+                            <div class="text">Settings</div>
+                        </button>
+                        <button type="button" class="act-btn">
+                            <i class="bi bi-code-slash"></i>
+                            <div class="text">Add Script</div>
+                        </button>                
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="act-btn delete">
+                            <i class="bi bi-trash"></i>
+                            <div class="text">Delete</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="widget-block">
+                    <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
+                    <div class="content">
+                        <div class="title">Desktop</div>
+                        <ul class="options">
+                            <li class="list-item">
+                                <i class="bi green bi-check-circle-fill"></i>
+                                <div class="text">Realtime View + Invites</div>
+                            </li>
+                            <li class="list-item">
+                                <i class="bi green bi-check-circle-fill"></i>
+                                <div class="text">Analytics Center</div>
+                            </li>
+                            <li class="list-item">
+                                <i class="bi green bi-check-circle-fill"></i>
+                                <div class="text">SEO Reports</div>
+                            </li>
+                            <li class="list-item">
+                                <i class="bi green bi-check-circle-fill"></i>
+                                <div class="text">Session Recording</div>
+                            </li>
+                            <li class="list-item">
+                                <i class="bi green bi-check-circle-fill"></i>
+                                <div class="text">Heatmaps</div>
+                            </li>
+                            <li class="list-item">
+                                <i class="bi green bi-check-circle-fill"></i>
+                                <div class="text">Security</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget-block">
+                    <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
+                    <div class="content">
+                        <div class="title">Mobile</div>
+                        <ul class="options">
+                            <li class="list-item">
+                                <i class="bi green bi-check-circle-fill"></i>
+                                <div class="text">Realtime View</div>
+                            </li>
+                            <li class="list-item">
+                                <i class="bi green bi-check-circle-fill"></i>
+                                <div class="text">Visitor Invite</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

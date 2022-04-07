@@ -28,10 +28,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
         <script src="https://kit.fontawesome.com/aa4e69f91b.js" crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
         <link rel="stylesheet" href="{{url('css/main.css')}} ">
         <link rel="stylesheet" href="{{url('css/navbar.css')}} ">
         <link rel="stylesheet" href="{{url('css/home.css')}} ">
         <link rel="stylesheet" href="{{url('css/footer.css')}} ">
+        <link rel="stylesheet" href="{{url('css/card_section.css')}}">
         <!-- Hotjar Tracking Code for https://tallentor.com/ -->
 
         <script data-host="https://tallentor.com" data-dnt="false" src="https://tallentor.com/js/script_tracker.js" id="ZwSg9rf6GA" async defer></script>
