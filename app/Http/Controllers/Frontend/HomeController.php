@@ -1140,6 +1140,17 @@ class HomeController extends Controller
 
     }
 
+    public function project_server_auth_status(Request $request){
+        $projectID =  $request->project_id;
+        $status =  $request->status;
+
+        Widgets::where('project_id',$projectID)->update([
+            'connection_status' => $status
+        ]);
+
+        return 'success';
+    }
+
 
     public function live_visitor_monitor_api($project_id) {
         $live_visitors = VisitorCount::where('project_id', $project_id)->get();
