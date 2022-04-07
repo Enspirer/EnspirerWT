@@ -367,7 +367,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Activate Whatsapp Widget</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Whatsapp Widget + IMS Lite</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -396,7 +396,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Activate All In One Widget</h5>
+        <h5 class="modal-title" id="exampleModalLabel">All In One Widget + IMS Lite</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
