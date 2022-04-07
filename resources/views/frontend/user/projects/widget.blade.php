@@ -39,7 +39,7 @@
                                         <div class="btn-group">
                                             <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}" type="button" class="act-btn ims-lite">
                                                 <i class="bi bi-file-earmark-text"></i>
-                                                <div class="text">iMS Lite</div>
+                                                <div class="text">IMS Lite</div>
                                             </a>
                                             <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}" type="button" class="act-btn">
                                                 <i class="bi bi-gear"></i>
@@ -73,7 +73,7 @@
                                     </div>
                                     <a href="#" class="sub-btn">
                                         <i class="bi bi-plus"></i>
-                                        <div class="text">Activate</div>
+                                        <div class="text">Activated</div>
                                     </a>
                                 </div>
                             </div>

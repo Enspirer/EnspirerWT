@@ -37,9 +37,9 @@
                                 <div class="active-overlay animate__animated animate__fadeIn">
                                     <div class="button-block">
                                         <div class="btn-group">
-                                            <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}" type="button" class="act-btn ims-lite">
+                                            <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" type="button" class="act-btn ims-lite">
                                                 <i class="bi bi-file-earmark-text"></i>
-                                                <div class="text">iMS Lite</div>
+                                                <div class="text">IMS Pro</div>
                                             </a>
                                             <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}" type="button" class="act-btn">
                                                 <i class="bi bi-gear"></i>
@@ -75,7 +75,7 @@
                                     </div>
                                     <a href="#" class="sub-btn">
                                         <i class="bi bi-plus"></i>
-                                        <div class="text">Activate</div>
+                                        <div class="text">Activated</div>
                                     </a>
                                 </div>
                             </div>
