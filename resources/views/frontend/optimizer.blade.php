@@ -28,19 +28,15 @@
                         </ul>
                         <div class="inner-wrapper">
                             <div class="content-block">
-                                <h2 class="title"><span>All-in-One</span><br>Chat<br> for websites</h2>
-                                <p class="content">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</p>
-                                <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Pick and choose the channels</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Quick integration with IMS option</li>
-                                </ul>
-                                <a href="{{url('login')}}" class="cta-btn-border">
-                                    <span class="text">Get Started</span>
-                                    <i class="bi bi-arrow-right-short"></i>
-                                </a>
+                                <h2 class="title">Optimizer</h2>
+                                <div class="caption">Widget with <div class="product">iMS <span class="red pro-cat">Pro</span></div> <br> User session view <br>HeatMaps</div>
+                                <div class="product blue">Mobile App</div>
+                                <div class="text">Real time visitors <br> Chat invite</div>
+
+                                <a href="{{url('login')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/landing_page/products/all_in_one_chat/hero_image.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/hero-optimizer.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -54,10 +50,7 @@
                                     <div class="splide__track">
                                             <ul class="splide__list">
                                                 <li class="splide__slide">
-                                                    <img src="{{url('images/landing_page/products/all_in_one_chat/slide_1.png')}}" alt="">
-                                                </li>
-                                                <li class="splide__slide">
-                                                    <img src="{{url('images/landing_page/products/all_in_one_chat/slide_1.png')}}" alt="">
+                                                    <img src="{{url('images/landing_page/products/slide_1.png')}}" alt="">
                                                 </li>
                                             </ul>
                                     </div>
@@ -89,63 +82,77 @@
                             <img src="{{url('images/products/Path 6503.svg')}}" alt="" class="top-curve">
                             <img src="{{url('images/products/Path 6507.svg')}}" alt="" class="bottom-curve">
                         </div>
-                        <div class="feature-block block-1">
-                            <div class="content-block">
-                                <div class="subtitle-block">
-                                    <img src="{{url('images/products/Polygon 1.png')}}" alt="">
-                                    <span class="text">Convert visitors into customers</span>
-                                </div>
-                                <h2 class="title">Inquiry Management System</h2>
-                                <div class="content">
-                                    <ul>
-                                        <li><i class="bi bi-check-circle-fill"></i> Admin dashboard with user privileges management</li>
-                                        <li><i class="bi bi-check-circle-fill"></i> Assign the inquiry to relevant department</li>
-                                        <li><i class="bi bi-check-circle-fill"></i> Record of the full status of the inquiry with comments</li>
-                                        <li><i class="bi bi-check-circle-fill"></i> Analytics of the inquiry management process with reports</li>
+                        <div class="optimizer-slide-wrapper">
+                            <div id="optimizerSlide" class="splide optimizer-slide">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="{{url('images/landing_page/products/slide-imsPro.png')}}" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="{{url('images/landing_page/products/slide-heatmap.png')}}" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="{{url('images/landing_page/products/slide-sessionRec.png')}}" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="{{url('images/landing_page/products/slide-realtime.png')}}" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="{{url('images/landing_page/products/slide-allin1.png')}}" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="{{url('images/landing_page/products/slide-analytics.png')}}" alt="">
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="image-block">
-                                <img src="{{url('images/landing_page/products/all_in_one_chat/ims.png')}}" alt="">
-                            </div>
-                        </div>
-                        <div class="feature-block block-2">
-                            <div class="content-block">
-                                <div class="curves">
-                                    <img src="{{url('images/products/Path 6503.svg')}}" alt="" class="top-curve">
-                                    <img src="{{url('images/products/Path 6507.svg')}}" alt="" class="bottom-curve">
+                            <div id="optimizerThumb" class="splide optimizer-thumb">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <div class="thumb-card">
+                                                <div class="title">iMS <span class="pro-cat">Pro</span></div>
+                                                <p class="text">Giving the customer maximum flexibility to choose the</p>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="thumb-card">
+                                                <div class="title">Heatmaps</div>
+                                                <p class="text">Giving the customer maximum flexibility to choose the</p>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="thumb-card">
+                                                <div class="title">Session Records</div>
+                                                <p class="text">Giving the customer maximum flexibility to choose the</p>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="thumb-card">
+                                                <div class="title">Realtime Visitors</div>
+                                                <p class="text">Giving the customer maximum flexibility to choose the</p>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="thumb-card">
+                                                <div class="title">All in one Widget</div>
+                                                <p class="text">Giving the customer maximum flexibility to choose the</p>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="thumb-card">
+                                                <div class="title">Analytics Report</div>
+                                                <p class="text">Giving the customer maximum flexibility to choose the</p>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="subtitle-block">
-                                    <img src="{{url('images/products/Polygon 1.png')}}" alt="">
-                                    <span class="text">Never miss a valuable lead</span>
+                                <div class="splide__progress">
+                                    <div class="splide__progress__bar">
+                                    </div>
                                 </div>
-                                <h2 class="title">The tool that marketing team Loves</h2>
-                                <p class="content">It makes everybody's life easier with insights of the leads and funnel management</p>
                             </div>
-                            <div class="image-block">
-                                <img src="{{url('images/products/Group 551.png')}}" alt="">
-                            </div>
-                        </div>
-                        <div class="feature-block block-3">
-                            <!-- <div class="content-block">
-                                <div class="subtitle-block">
-                                    <img src="{{url('images/products/Polygon 1.png')}}" alt="">
-                                    <span class="text">Sub topic have to include here</span>
-                                </div>
-                                <h2 class="title">Team inbox for <br> WhatsApp</h2>
-                                <p class="content">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been
-                                    the industry's dummy text ever since the 1500s, when an unknown printer took a
-                                    galley of type
-                                    and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries, but also
-                                    the leap
-                                </p>
-                            </div>
-                            <div class="image-block">
-                                <img src="{{url('images/products/2225.png')}}" alt="">
-                            </div> -->
                         </div>
                     </div>
                 </section>
@@ -158,4 +165,32 @@
 
     
 @endsection
+
+@push('after-scripts')
+
+<script>
+var optimizerSlide = new Splide( '#optimizerSlide', {
+    type    : 'loop',
+    autoplay: true,
+    rewind : true,
+    arrows: false,
+    pagination: false,
+  } ); 
+
+var optimizerThumb = new Splide( '#optimizerThumb', {
+    type    : 'loop',
+    perPage: 4,
+    rewind : true,
+    autoplay: true,
+    arrows: false,
+    pagination: false,
+    isNavigation: true,
+  } ); 
+
+optimizerSlide.sync( optimizerThumb );
+optimizerSlide.mount();
+optimizerThumb.mount();
+</script>
+
+@endpush
 
