@@ -1144,7 +1144,7 @@ class HomeController extends Controller
         $projectID =  $request->project_id;
         $status =  $request->status;
 
-        Widgets::where('project_id',$projectID)->update([
+        Widgets::where('project_id',$projectID)->where('widget_type','IMS Pro')->update([
             'connection_status' => $status
         ]);
 
