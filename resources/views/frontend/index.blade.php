@@ -218,7 +218,7 @@
         </div>
     </section>
 
-    <section class="SEO-section">
+    <!-- <section class="SEO-section">
         <div class="container">
             <div class="header">
                 <h2 class="title">Keep your website on Top of the Game</h2>
@@ -269,7 +269,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="marketplace-section">
         <div class="container">
