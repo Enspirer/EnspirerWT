@@ -27,4 +27,11 @@ class ChatController extends Controller
             'widgetlist' => $widgetlist
         ]);
     }
+
+    public function optimizer($id)
+    {
+        return view('frontend.user.projects.optimizer',[
+            'project_id' => $id
+        ]);
+    }
 }

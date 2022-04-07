@@ -202,12 +202,12 @@
                 <div class="text">Optimizer</div>
             </a>
         </div>
-        <div class="card {{Request::segment(3)=='optimizer_plus' ? 'active' :null }}">
+        <!-- <div class="card {{Request::segment(3)=='optimizer_plus' ? 'active' :null }}">
             <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
                 <i class="bi bi-ui-checks-grid"></i>
                 <div class="text">Optimizer Plus</div>
             </a>
-        </div>
+        </div> -->
     </div>
 </div>
 
@@ -386,90 +386,9 @@
             <div class="text">Activate</div>
         </a>
     </div>
-</div>
-
-<div class="subcription-block">
-    <div class="active-overlay animate__animated animate__fadeIn">
-        <div class="button-block">
-            <div class="btn-group">
-                <button type="button" class="act-btn ims-lite">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <div class="text">iMS Lite</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-gear"></i>
-                    <div class="text">Settings</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-code-slash"></i>
-                    <div class="text">Add Script</div>
-                </button>                
-            </div>
-            <div class="btn-group">
-                <button type="button" class="act-btn delete">
-                    <i class="bi bi-trash"></i>
-                    <div class="text">Delete</div>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="content-block">
-        <div class="widget-block">
-            <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
-            <div class="content">
-                <div class="title">Desktop</div>
-                <ul class="options">
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Realtime View + Invites</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Analytics Center</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">SEO Reports</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Session Recording</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Heatmaps</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Security</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="widget-block">
-            <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
-            <div class="content">
-                <div class="title">Mobile</div>
-                <ul class="options">
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Realtime View</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Visitor Invite</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="button-block">
-        <a href="#" class="sub-btn">
-            <i class="bi bi-plus"></i>
-            <div class="text">Activate</div>
-        </a>
-    </div>
 </div> -->
+
+
 
 <div class="modal fade dashboard-modal action-modal" id="widgetdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
     aria-hidden="true">
