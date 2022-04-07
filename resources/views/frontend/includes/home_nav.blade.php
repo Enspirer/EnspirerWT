@@ -10,15 +10,18 @@
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
-                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'product-whatsapp-widget' ? 'active' : null }} {{ Request::segment(1) == 'product-all-in-one-chat' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'widget-lite' ? 'active' : null }} {{ Request::segment(1) == 'widget-pro' ? 'active' : null }} {{ Request::segment(1) == 'optimizer' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
                                 Products
                             </a>
                             <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="productNav">
-                                <li><a class="dropdown-item" href="{{url('product-whatsapp-widget')}}">
-                                    <div class="icon-block"><i class="bi bi-whatsapp"></i></div> <div class="text">WhatsApp Widget</div>
+                                <li><a class="dropdown-item" href="{{url('widget-lite')}}">
+                                    <div class="icon-block"><i class="bi bi-grid-fill"></i></div> <div class="text">Widget Lite</div>
                                 </a></li>
-                                <li><a class="dropdown-item" href="{{url('product-all-in-one-chat')}}">
-                                    <div class="icon-block"><i class="bi bi-grid-fill"></i></div> <div class="text">All-in-One Chat</div>
+                                <li><a class="dropdown-item" href="{{url('widget-pro')}}">
+                                    <div class="icon-block"><i class="bi bi-grid-fill"></i></div> <div class="text">Widget Pro</div>
+                                </a></li>
+                                <li><a class="dropdown-item" href="{{url('optimizer')}}">
+                                    <div class="icon-block"><i class="bi bi-grid-fill"></i></div> <div class="text">Optimizer</div>
                                 </a></li>
                             </ul>
                         </div>

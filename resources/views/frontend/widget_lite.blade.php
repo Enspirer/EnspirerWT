@@ -28,19 +28,15 @@
                         </ul>
                         <div class="inner-wrapper">
                             <div class="content-block">
-                                <h2 class="title"><span>WhatsApp</span><br>widget<br> for websites</h2>
-                                <p class="content">Integrate the most popular communication channel into your website and improve your customer service quality and sales conversion.</p>
-                                <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Customisable ready to use widget</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Inquiry Management System - IMS</li>
-                                </ul>
-                                <a href="{{url('login')}}" class="cta-btn-border">
-                                    <span class="text">Get Started</span>
-                                    <i class="bi bi-arrow-right-short"></i>
-                                </a>
+                                <h2 class="title">Widgets</h2>
+                                <div class="caption">WhatsApp widget <br> All in one widget</div>
+                                <div class="product">iMS <span class="blue pro-cat">Lite</span></div>
+                                <div class="text blue">Inquiry Management System</div>
+
+                                <a href="{{url('login')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/products/Group 549.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/widget-lite-banner.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -54,23 +50,19 @@
                                     <div class="splide__track">
                                             <ul class="splide__list">
                                                 <li class="splide__slide">
-                                                    <img src="{{url('images/products/Group 550.png')}}" alt="">
-                                                </li>
-                                                <li class="splide__slide">
-                                                    <img src="{{url('images/products/Group 552.png')}}" alt="">
+                                                    <img src="{{url('images/landing_page/products/slide_1.png')}}" alt="">
                                                 </li>
                                             </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="content-block">
-                                <h2 class="title">WhatsApp Chat Features</h2>
+                                <h2 class="title">All-in-One Chat Features</h2>
                                 <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Customisable chat box
-                                    </li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Choose prefered position on website</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Choose bubble icon and add text</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Your own welcome message</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> The choice of multiple messenger options</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Customisable chat bow and welcome note</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Setting a chat-opening trigger</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Integration into your website with IMS</li>
                                 </ul>
                                 <a href="" class="cta-btn-border">
                                     <span class="text">Get Started</span>
@@ -83,6 +75,7 @@
 
                 <section class="more-about-widget">
                     <div class="header">
+                        <div class="heading">iMS <span class="pro-cat blue">Lite</span></div>
                         <h3 class="title">Manage your leads efficiently for better productivity</h3>
                     </div>
                     <div class="feature-block-section">
@@ -107,7 +100,7 @@
                                 </div>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/landing_page/products/whatsapp_widget/ims.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/ims-analytics.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-2">
@@ -124,7 +117,7 @@
                                 <p class="content">It makes everybody's life easier with insights of the leads and funnel management</p>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/products/Group 551.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/ims-conversation.png')}}" alt="">
                             </div>
                         </div>
                         <div class="feature-block block-3">

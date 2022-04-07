@@ -81,8 +81,9 @@ Route::get('test_blade',[TestController::class, 'testblade'])->name('testblade')
 
 Route::get('eshop',[EShopController::class, 'index'])->name('eshop');
 Route::get('market_place',[MarketPlaceController::class, 'index'])->name('market_place');
-Route::get('product-whatsapp-widget',[ProductController::class, 'product_whatsapp_widget'])->name('product_whatsapp_widget');
-Route::get('product-all-in-one-chat',[ProductController::class, 'product_all_in_one_chat'])->name('product_all_in_one_chat');
+Route::get('widget-lite',[ProductController::class, 'widget_lite'])->name('widget_lite');
+Route::get('widget-pro',[ProductController::class, 'widget_pro'])->name('widget_pro');
+Route::get('optimizer',[ProductController::class, 'optimizer'])->name('optimizer');
 Route::get('resources',[ResourcesController::class, 'index'])->name('resources');
 Route::get('services',[ServicesController::class, 'index'])->name('services');
 Route::get('portfolio',[PortfolioController::class, 'index'])->name('portfolio');
