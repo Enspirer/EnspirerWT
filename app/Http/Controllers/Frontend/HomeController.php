@@ -354,7 +354,6 @@ class HomeController extends Controller
         $add->wideget_id = $request->widget_id;
         $add->facebook_user_name = null;
         $add->message = $request->usermessage;
-        $add->user_id = $user_id;
 
         $add->save();
 
