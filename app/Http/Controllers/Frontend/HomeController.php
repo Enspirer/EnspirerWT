@@ -339,6 +339,43 @@ class HomeController extends Controller
         $client->save();
 
 
+        $outputString = preg_replace('/[^0-9]/', '', $request->phone_number);
+
+
+        $add = new ImsProClientMessages;
+
+        $add->phone_number = $outputString;
+        $add->name = $request->username;
+        $add->type = $request->contact_via;
+        $add->email = $request->useremail;
+        $add->status = 'Pending';
+        $add->is_read = 'Pending';
+        $add->project_id = $widget->project_id;
+        $add->wideget_id = $request->widget_id;
+        $add->facebook_user_name = null;
+        $add->message = $request->usermessage;
+        $add->user_id = $user_id;
+
+        $add->save();
+
+
+        $inquiries_status = Inquiries_Status::where('project_id',$widget->project_id)->where('phone_number',$outputString)->first();
+        
+        if($inquiries_status == null){
+
+            $add = new Inquiries_Status;
+
+            $add->phone_number = $outputString;
+            $add->email = $request->useremail;
+            $add->status = 'Pending';
+            $add->project_id = $widget->project_id;
+            $add->widget_id = $request->widget_id;
+    
+            $add->save();
+        }
+
+
+
         $project = Projects::where('id',$widget->project_id)->first();
         push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'far fa-comment-dots', url('user_widget/ims/individual_inbox',$client->id), $project->user_id);
 
