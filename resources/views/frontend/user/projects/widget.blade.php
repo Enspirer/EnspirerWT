@@ -309,13 +309,11 @@
                     </div>
                     <div class="button-block">
                         <a href="#" type="button" class="widget-btn btn-fill">Buy Now</a>
-                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','IMS Pro')->first() ==
-                        null)
+                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
                         <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <input type="hidden" name="project_id" value="{{$project_id}}">
-                            <input type="hidden" name="widget_type_another" value="All-in-One Chat">
-                            <input type="hidden" name="widget_type" value="IMS Pro">
+                            <input type="hidden" name="widget_type" value="All-in-One Chat">
                             <button type="submit" class="widget-btn btn-outline">Free Trial</button>
                         </form>
                         @else

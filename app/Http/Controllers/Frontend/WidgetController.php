@@ -76,9 +76,9 @@ class WidgetController extends Controller
             }
             $update->package_starting_date = $add->created_at;
             $update->package_type = 'Free';
+            $update->expire_date = $add->created_at->addDays(30);
 
             Projects::whereId($project->id)->update($update->toArray());
-
         }
 
         // dd($widget_check);
@@ -89,7 +89,6 @@ class WidgetController extends Controller
             // dd($widget_check_another );
 
             if($widget_check_another == null){
-
 
                 $add_another = new Widgets;
                 $add_another->status = 'Enabled';        
@@ -122,7 +121,6 @@ class WidgetController extends Controller
                 $add_another->save();
 
 
-
                 $update = new Projects;
                 $update->package_available_days = 30;
                 if($request->widget_type_another == 'Whatsapp Chat'){
@@ -133,6 +131,7 @@ class WidgetController extends Controller
                 }
                 $update->package_starting_date = $add_another->created_at;
                 $update->package_type = 'Free';
+                $update->expire_date = $add_another->created_at->addDays(30);
 
                 Projects::whereId($request->project_id)->update($update->toArray());
     
@@ -162,19 +161,15 @@ class WidgetController extends Controller
                 }
                 $update->package_starting_date = $widget_check_another->created_at;
                 $update->package_type = 'Free';
+                $update->expire_date = $widget_check_another->created_at->addDays(30);
 
                 Projects::whereId($widget_check_another->project_id)->update($update->toArray());
 
-            }
-
-
-            
+            }            
 
         }
 
-        // dd($widget_check);
-
-       
+        // dd($widget_check);       
 
         if($widget_check != null){
             // dd($widget_check);
@@ -217,6 +212,18 @@ class WidgetController extends Controller
     {
         $chech_whether_ims = Widgets::where('id',$id)->first();
         // dd($chech_whether_ims);
+
+        $project = Projects::where('id',$chech_whether_ims->project_id)->first();
+
+        $update = new Projects;
+        $update->package_available_days = null;
+        $update->selected_package = null;
+        $update->package_starting_date = null;
+        $update->package_type = null;
+        $update->expire_date = null;
+
+        Projects::whereId($project->id)->update($update->toArray());
+
 
         DB::table('widgets')->where('project_id',$chech_whether_ims->project_id)->delete();       
 

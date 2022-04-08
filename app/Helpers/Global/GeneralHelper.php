@@ -7,7 +7,7 @@ use App\Models\Notification;
 use App\Models\IMSProUsers;
 use App\Models\ImsProContacts;
 use Illuminate\Http\Request;
-
+use Carbon\Carbon;
 
 if (! function_exists('app_name')) {
     /**
@@ -419,6 +419,43 @@ if (! function_exists('whatsapp_server_status')) {
             return 'IMS Pro Not Activated';
         }
 
+
+    }
+}
+
+
+if (! function_exists('get_expire_date')) {
+    /**
+     * Return the route to the "home" page depending on authentication/authorization status.
+     *
+     * @return string
+     */
+    function get_expire_date($project_id)
+    {       
+
+        $project = Projects::where('id',$project_id)->first();
+        // dd($project);
+
+        if($project->expire_date == null){
+            return [
+                'package_available_days' => null,
+                'package_starting_date' => null,
+                'expire_date' => null,
+                'remaining_days' => null
+            ];
+            
+        }else{
+
+            $remaining_days = Carbon::now()->diffInDays(Carbon::parse($project->expire_date));
+            // dd($remaining_days);
+
+            return [
+                'package_available_days' => $project->package_available_days,
+                'package_starting_date' => $project->package_starting_date,
+                'expire_date' => $project->expire_date,
+                'remaining_days' => $remaining_days
+            ];
+        }
 
     }
 }
