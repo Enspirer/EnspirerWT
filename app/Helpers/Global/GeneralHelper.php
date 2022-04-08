@@ -371,6 +371,26 @@ if (! function_exists('get_contact_info')) {
     }
 }
 
+if (! function_exists('is_wa_group')) {
+    /**
+     * Return the route to the "home" page depending on authentication/authorization status.
+     *
+     * @return string
+     */
+    function is_wa_group($phone_number)
+    {
+       if(strlen($phone_number) > 13){
+           return 'Group Message';
+       }else{
+           return $phone_number;
+       }
+
+    }
+}
+
+
+//strlen($str)
+
 
 if (! function_exists('whatsapp_server_status')) {
     /**

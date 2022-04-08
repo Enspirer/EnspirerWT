@@ -140,7 +140,7 @@
                                                                                                         <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
                                                                                                         <div class="contact">{{$ims_pro_client_message->type}}</div>
                                                                                                     @else
-                                                                                                        <div class="name">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="name">{{is_wa_group($ims_pro_client_message->phone_number)}}</div>
                                                                                                         <div class="contact">{{$ims_pro_client_message->type}}</div>
                                                                                                     @endif
                                                                                                 </div>
@@ -184,7 +184,7 @@
                                                                                                         <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
                                                                                                         <div class="contact">{{$ims_pro_client_message->type}}</div>
                                                                                                     @else
-                                                                                                        <div class="name">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="name">{{is_wa_group($ims_pro_client_message->phone_number)}}</div>
                                                                                                         <div class="contact">{{$ims_pro_client_message->type}}</div>
                                                                                                     @endif
                                                                                                 </div>
@@ -248,7 +248,7 @@
                                                                     <div class="contact">{{$solo_ims_pro_client->phone_number}}</div>
                                                                     <div class="contact">{{$solo_ims_pro_client->type}}</div>
                                                                 @else
-                                                                    <div class="name">{{$solo_ims_pro_client->phone_number}}</div>
+                                                                    <div class="name">{{is_wa_group($solo_ims_pro_client->phone_number)}}</div>
                                                                     <div class="contact">{{$solo_ims_pro_client->type}}</div>
                                                                 @endif                                                                
                                                             </div>
@@ -390,6 +390,8 @@
                                                             @endauth
 
                                                             <input type="hidden" name="core_type" id="core_type" value="message">
+
+                                                             {{--Chat Write   --}}
                                                             <input type="text" name="message" id="message" class="msg-input" placeholder="Type your message here...">
                                                             <button type="submit" onClick="submit_chat()" class="btn-send"><i class="bi bi-send-fill"></i></button>
 
