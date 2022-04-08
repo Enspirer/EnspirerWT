@@ -80,6 +80,10 @@
                                                                                                 <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
                                                                                             @elseif($ims_pro_client_message->type == 'Telegram')
                                                                                                 <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                                                            @elseif($ims_pro_client_message->type == 'Viber')
+                                                                                                <img src="{{url('images/social_media_icons/viber.png')}}" alt="" class="chat-client">
+                                                                                            @elseif($ims_pro_client_message->type == 'Line')
+                                                                                                <img src="{{url('images/social_media_icons/line.png')}}" alt="" class="chat-client">
                                                                                             @endif
                                                                                         </div>
                                                                                         <div class="status-block">
@@ -115,6 +119,10 @@
                                                                                                     <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
                                                                                                 @elseif($ims_pro_client_message->type == 'Telegram')
                                                                                                     <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                                                                @elseif($ims_pro_client_message->type == 'Viber')
+                                                                                                    <img src="{{url('images/social_media_icons/viber.png')}}" alt="" class="chat-client">
+                                                                                                @elseif($ims_pro_client_message->type == 'Line')
+                                                                                                    <img src="{{url('images/social_media_icons/line.png')}}" alt="" class="chat-client">
                                                                                                 @endif
                                                                                             </div>
                                                                                             <div class="status-block">
@@ -143,12 +151,16 @@
                                                                                             @endif
                                                                                             <div class="image-block">
                                                                                                 <img src="{{url('images/test.png')}}" alt="">
-                                                                                                    @if($ims_pro_client_message->type == 'WhatsApp')
+                                                                                                @if($ims_pro_client_message->type == 'WhatsApp')
                                                                                                     <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
                                                                                                 @elseif($ims_pro_client_message->type == 'Messenger')
                                                                                                     <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
                                                                                                 @elseif($ims_pro_client_message->type == 'Telegram')
                                                                                                     <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                                                                @elseif($ims_pro_client_message->type == 'Viber')
+                                                                                                    <img src="{{url('images/social_media_icons/viber.png')}}" alt="" class="chat-client">
+                                                                                                @elseif($ims_pro_client_message->type == 'Line')
+                                                                                                    <img src="{{url('images/social_media_icons/line.png')}}" alt="" class="chat-client">
                                                                                                 @endif
                                                                                             </div>
                                                                                             <div class="status-block">
@@ -392,6 +404,10 @@
                                                                 <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
                                                             @elseif($solo_ims_pro_client->type == 'Telegram')
                                                                 <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                                            @elseif($solo_ims_pro_client->type == 'Viber')
+                                                                <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                                                            @elseif($solo_ims_pro_client->type == 'Line')
+                                                                <img src="{{url('images/social_media_icons/line.png')}}" alt="">
                                                             @endif
                                                             <div class="text green">{{$solo_ims_pro_client->type}}</div>
                                                         </div>

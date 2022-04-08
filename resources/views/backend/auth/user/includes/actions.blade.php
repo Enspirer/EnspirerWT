@@ -63,5 +63,12 @@
                 @endif
             </div>
         </div>
+
+
+        <a href="{{ route('admin.auth.user.project_detail', $user) }}" data-toggle="tooltip" data-placement="top" title="Projects" class="btn btn-warning">
+            <i class="fas fa-list"></i>
+        </a>
+
+
     </div>
 @endif

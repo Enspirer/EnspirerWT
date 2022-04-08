@@ -117,3 +117,13 @@ Breadcrumbs::for('admin.widget_settings_update.index', function ($trail) {
 Breadcrumbs::for('admin.ims_pro_widgets.endpoint_settings', function ($trail) {
     $trail->push('End Point Settings', route('admin.ims_pro_widgets.endpoint_settings',1));
 });
+
+
+
+
+Breadcrumbs::for('admin.auth.user.project_detail', function ($trail) {
+    $trail->push('User Projects', route('admin.auth.user.project_detail',1));
+});
+Breadcrumbs::for('admin.user.widget_detail', function ($trail) {
+    $trail->push('Widgets', route('admin.user.widget_detail',1));
+});

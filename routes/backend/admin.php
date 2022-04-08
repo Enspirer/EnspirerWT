@@ -13,6 +13,8 @@ use App\Http\Controllers\Backend\WidgetController;
 use App\Http\Controllers\Frontend\TestController;
 use App\Http\Controllers\Backend\WidgetSettingController;
 use App\Http\Controllers\Backend\IMSProWidgetsController;
+use App\Http\Controllers\Backend\UserProjectController;
+
 
 
 // All route names are prefixed with 'admin.'.
@@ -112,6 +114,7 @@ Route::post('ims_pro_widgets/update', [IMSProWidgetsController::class, 'update']
 Route::get('ims_pro_widgets/delete/{id}', [IMSProWidgetsController::class, 'destroy'])->name('ims_pro_widgets.destroy');
 
 
+Route::get('widget_detail/{id}', [UserProjectController::class, 'widget_detail'])->name('user.widget_detail');
 
 
 

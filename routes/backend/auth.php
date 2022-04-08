@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\Auth\User\UserPasswordController;
 use App\Http\Controllers\Backend\Auth\User\UserSessionController;
 use App\Http\Controllers\Backend\Auth\User\UserSocialController;
 use App\Http\Controllers\Backend\Auth\User\UserStatusController;
+use App\Http\Controllers\Backend\UserProjectController;
 
 // All route names are prefixed with 'admin.auth'.
 Route::group([
@@ -33,6 +34,9 @@ Route::group([
             Route::get('edit', [UserController::class, 'edit'])->name('user.edit');
             Route::patch('/', [UserController::class, 'update'])->name('user.update');
             Route::delete('/', [UserController::class, 'destroy'])->name('user.destroy');
+
+            Route::get('project_detail', [UserProjectController::class, 'project_detail'])->name('user.project_detail');
+
 
             // Account
             Route::get('account/confirm/resend', [UserConfirmationController::class, 'sendConfirmationEmail'])->name('user.account.confirm.resend');
