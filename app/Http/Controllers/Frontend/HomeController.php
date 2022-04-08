@@ -1130,7 +1130,15 @@ class HomeController extends Controller
         $add = new ImsProClientMessages;
 
         $add->phone_number = $outputString;
-        $add->name = $name;
+
+        $getcontentDetails = get_contact_info($outputString);
+
+        if($getcontentDetails == null){
+            $add->name = $outputString;
+        }else{
+            $add->name = $getcontentDetails;
+        }
+
         $add->type = $type;
         $add->email = $email;
         $add->status = $status;
