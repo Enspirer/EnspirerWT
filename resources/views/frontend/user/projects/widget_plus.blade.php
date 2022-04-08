@@ -32,12 +32,14 @@
 
                     <section id="sectionWhatsappWidget">
 
+                        <div class="title">Tallentor Widget Pro Features</div>
+
                         @if($widgetlist != null)
                             <div class="subcription-block activated">
                                 <div class="active-overlay animate__animated animate__fadeIn">
                                     <div class="button-block">
                                         <div class="btn-group">
-                                            <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" type="button" class="act-btn ims-lite">
+                                            <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" type="button" class="act-btn ims-pro">
                                                 <i class="bi bi-file-earmark-text"></i>
                                                 <div class="text">IMS Pro</div>
                                             </a>
@@ -119,7 +121,7 @@
                                         <div class="title">IMS <span class="pro-cat red">Pro</span></div>
                                         <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
                                     </div>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#activateAllInOneModal" class="sub-btn">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#actWidgetPro" class="sub-btn">
                                         <i class="bi bi-plus"></i>
                                         <div class="text">Activate</div>
                                     </a>
@@ -140,33 +142,57 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="activateAllInOneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">All In One Widget + IMS Pro</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a type="button" class="btn btn-success">Purchase</a>
-        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','IMS Pro')->first() == null)
-            <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
-            {{csrf_field()}}
-                <input type="hidden" name="project_id" value="{{$project_id}}">
-                <input type="hidden" name="widget_type_another" value="All-in-One Chat">
-                <input type="hidden" name="widget_type" value="IMS Pro">
-                <button type="submit" class="btn btn-primary">Free Trial</button>
-            </form>
-        @else
-            <button type="submit" class="btn btn-primary" disabled>Free Trial</button>
-        @endif
-      </div>
+<div class="modal fade plan-modal executive" id="actWidgetPro" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" >Widget Explorer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="inner-wrapper">
+                    <div class="content-block">
+                        <div class="header">
+                            <div class="text-block">
+                                <div class="plan">Executive</div>
+                                <div class="fee">$ 15.00 <span>/ month</span></div>
+                            </div>
+                            <img src="{{url('images/dashboard/subscriptions/plan-icon.png')}}" alt="">
+                        </div>
+                        <div class="option-block">
+                            <ul class="options">
+                                <li class="list-item">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <div class="text">All in one Widgets</div>
+                                </li>
+                                <li class="list-item">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <div class="text">iMS <span class="pro-cat red">Pro</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="button-block">
+                        <a href="#" type="button" class="widget-btn btn-fill">Buy Now</a>
+                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','IMS Pro')->first() ==
+                        null)
+                        <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
+                            {{csrf_field()}}
+                            <input type="hidden" name="project_id" value="{{$project_id}}">
+                            <input type="hidden" name="widget_type_another" value="All-in-One Chat">
+                            <input type="hidden" name="widget_type" value="IMS Pro">
+                            <button type="submit" class="widget-btn btn-outline">Free Trial</button>
+                        </form>
+                        @else
+                        <button type="submit" class="widget-btn btn-outline" disabled>Free Trial</button>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 

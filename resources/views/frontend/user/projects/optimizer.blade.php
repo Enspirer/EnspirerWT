@@ -32,6 +32,8 @@
 
                     <section id="sectionWhatsappWidget">
 
+                        <div class="title">Tallentor Optimizer Features</div>
+
                         <div class="subcription-block">
                             <div class="active-overlay animate__animated animate__fadeIn">
                                 <div class="button-block">
@@ -108,10 +110,89 @@
                                 </div>
                             </div>
                             <div class="button-block">
-                                <a href="#" class="sub-btn">
+                                <a href="#" class="sub-btn" data-bs-toggle="modal" data-bs-target="#actOptimizer">
                                     <i class="bi bi-plus"></i>
                                     <div class="text">Activate</div>
                                 </a>
+                            </div>
+                        </div>
+
+
+                        <div class="modal fade plan-modal premium" id="actOptimizer" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" >Widget Explorer</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                            <i class="bi bi-x-lg"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="inner-wrapper">
+                                            <div class="content-block">
+                                                <div class="label">The Best</div>
+                                                <div class="header">
+                                                    <div class="text-block">
+                                                        <div class="plan">Executive</div>
+                                                        <div class="fee">$ 15.00 <span>/ month</span></div>
+                                                    </div>
+                                                    <img src="{{url('images/dashboard/subscriptions/plan-icon.png')}}" alt="">
+                                                </div>
+                                                <div class="option-block">
+                                                    <ul class="options desktop">
+                                                        <div class="device">Desktop</div>
+                                                        <li class="list-item">
+                                                            <i class="bi bi-check-circle-fill"></i>
+                                                            <div class="text">All in one Widgets</div>
+                                                        </li>
+                                                        <li class="list-item">
+                                                            <i class="bi bi-check-circle-fill"></i>
+                                                            <div class="text">Real Time Visitors</div>
+                                                        </li>
+                                                        <li class="list-item">
+                                                            <i class="bi bi-check-circle-fill"></i>
+                                                            <div class="text">Analytics Center </div>
+                                                        </li>
+                                                        <li class="list-item">
+                                                            <i class="bi bi-check-circle-fill"></i>
+                                                            <div class="text">Security</div>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="options mobile">
+                                                        <div class="device">Mobile</div>
+                                                        <li class="list-item">
+                                                            <i class="bi bi-check-circle-fill"></i>
+                                                            <div class="text">Realtime View</div>
+                                                        </li>
+                                                        <li class="list-item">
+                                                            <i class="bi bi-check-circle-fill"></i>
+                                                            <div class="text">Session View</div>
+                                                        </li>
+                                                        <li class="list-item">
+                                                            <i class="bi bi-check-circle-fill"></i>
+                                                            <div class="text">Invite Site User</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="button-block">
+                                                <a href="#" type="button" class="widget-btn btn-fill">Buy Now</a>
+                                                @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','IMS Pro')->first() ==
+                                                null)
+                                                <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
+                                                    {{csrf_field()}}
+                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                    <input type="hidden" name="widget_type_another" value="All-in-One Chat">
+                                                    <input type="hidden" name="widget_type" value="IMS Pro">
+                                                    <button type="submit" class="widget-btn btn-outline">Free Trial</button>
+                                                </form>
+                                                @else
+                                                <button type="submit" class="widget-btn btn-outline" disabled>Free Trial</button>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

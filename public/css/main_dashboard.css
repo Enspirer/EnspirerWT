@@ -716,6 +716,11 @@
     height: 0.4rem;
 }
 
+#sectionWhatsappWidget .title {
+    font-size: 22px;
+    color: #333;
+}
+
 #sectionWhatsappWidget button.btn-whatsapp {
     background-color: #00AEEF;
     border: none;

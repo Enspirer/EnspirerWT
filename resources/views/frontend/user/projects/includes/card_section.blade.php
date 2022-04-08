@@ -187,13 +187,13 @@
         <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
             <a href="{{route('frontend.user.project.chat',$project_id)}}" class="card-link">
                 <i class="bi bi-ui-checks-grid"></i>
-                <div class="text">Widget</div>
+                <div class="text">Widget Lite</div>
             </a>
         </div>
         <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
             <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link">
                 <i class="bi bi-ui-checks-grid"></i>
-                <div class="text">Widget Plus</div>
+                <div class="text">Widget Pro</div>
             </a>
         </div>
         <div class="card {{Request::segment(3)=='optimizer' ? 'active' :null }}">
