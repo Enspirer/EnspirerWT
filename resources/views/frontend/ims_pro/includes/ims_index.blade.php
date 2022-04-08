@@ -74,7 +74,13 @@
                                                                                         @endif
                                                                                         <div class="image-block">
                                                                                             <img src="{{url('images/test.png')}}" alt="">
-                                                                                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                                            @if($ims_pro_client_message->type == 'WhatsApp')
+                                                                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                                            @elseif($ims_pro_client_message->type == 'Messenger')
+                                                                                                <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
+                                                                                            @elseif($ims_pro_client_message->type == 'Telegram')
+                                                                                                <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                                                            @endif
                                                                                         </div>
                                                                                         <div class="status-block">
                                                                                             @if(get_contact_info($ims_pro_client_message->phone_number))
@@ -103,7 +109,13 @@
                                                                                             @endif
                                                                                             <div class="image-block">
                                                                                                 <img src="{{url('images/test.png')}}" alt="">
-                                                                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                                                @if($ims_pro_client_message->type == 'WhatsApp')
+                                                                                                    <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                                                @elseif($ims_pro_client_message->type == 'Messenger')
+                                                                                                    <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
+                                                                                                @elseif($ims_pro_client_message->type == 'Telegram')
+                                                                                                    <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                                                                @endif
                                                                                             </div>
                                                                                             <div class="status-block">
                                                                                                 @if(get_contact_info($ims_pro_client_message->phone_number))
@@ -131,7 +143,13 @@
                                                                                             @endif
                                                                                             <div class="image-block">
                                                                                                 <img src="{{url('images/test.png')}}" alt="">
-                                                                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                                                    @if($ims_pro_client_message->type == 'WhatsApp')
+                                                                                                    <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                                                @elseif($ims_pro_client_message->type == 'Messenger')
+                                                                                                    <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
+                                                                                                @elseif($ims_pro_client_message->type == 'Telegram')
+                                                                                                    <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                                                                @endif
                                                                                             </div>
                                                                                             <div class="status-block">
                                                                                                 @if(get_contact_info($ims_pro_client_message->phone_number))
@@ -368,8 +386,14 @@
                                                         </div>
                                                         <div class="name">{{$solo_ims_pro_client->name}}</div>
                                                         <div class="chat-client">
-                                                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
-                                                            <div class="text green">WhatsApp</div>
+                                                            @if($solo_ims_pro_client->type == 'WhatsApp')
+                                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                            @elseif($solo_ims_pro_client->type == 'Messenger')
+                                                                <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                                                            @elseif($solo_ims_pro_client->type == 'Telegram')
+                                                                <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                                            @endif
+                                                            <div class="text green">{{$solo_ims_pro_client->type}}</div>
                                                         </div>
                                                     </div>
                                                     <div class="inner-wrapper">
