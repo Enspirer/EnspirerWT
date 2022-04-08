@@ -430,7 +430,7 @@
     }
 }
 
-#sectionTabs .tabs {
+/* #sectionTabs .tabs {
     text-align: center;
     background-color: #fff;
     border-radius: 1rem;
@@ -472,7 +472,7 @@
 
 #sectionTabs .tabs .tab-info .strong-text {
     font-size: 3.5rem;
-}
+} */
 
 .ims-dashboard-btn {
     background-color: #fff;

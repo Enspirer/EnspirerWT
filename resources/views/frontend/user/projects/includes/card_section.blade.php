@@ -1,185 +1,3 @@
-<!-- <div class="section-cards" id="sectionCards">
-    <div class="cards">
-        <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
-            <a href="{{route('frontend.user.project.chat',$project_id)}}" class="card-link">
-                <div class="icon"><i class="bi bi-puzzle"></i></div>
-                <div class="title">Widgets</div>
-                <h2 class="stats">{{count(App\Models\Widgets::where('project_id',$project_id)->where('status','Enabled')->get())}}<span>Widgets</span></h2>
-            </a>
-        </div>
-        <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
-            <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link">
-                <div class="icon"><i class="bi bi-activity"></i></div>
-                <div class="title">Widgets Plus</div>
-                <h2 class="stats">05<span>Alerts</span></h2>
-            </a>
-        </div>
-        <div class="card {{Request::segment(3)=='optimizer' ? 'active' :null }}">
-            <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
-                <div class="icon"><i class="bi bi-clock-history"></i></div>
-                <div class="title">Optimizer</div>
-                <h2 class="stats">03<span>Visitors</span></h2>
-            </a>
-        </div>
-        <div class="card {{Request::segment(3)=='optimizer_plus' ? 'active' :null }}">
-            <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
-                <div class="icon"><i class="bi bi-slack"></i></div>
-                <div class="title">Optimizer Plus</div>
-                <h2 class="stats">14<span>Alerts</span></h2>
-            </a>
-        </div>
-    </div>
-    <div class="tabs">
-        <div class="tab {{Request::segment(3)=='widget' ? 'active' :null }}">
-            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Whatsapp Chat')->first() == null && App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
-                <div class="inner-tab">
-                    <a class="tab-link" data-bs-toggle="modal" data-bs-target="#widgetdisableModal">
-                        <div class="icon">
-                            <img src="{{url('images/dashboard/tab_section/privacy-policy.png')}}" alt="">
-                        </div>
-                        <div class="text">IMS Dashboard</div>
-                    </a>
-                </div>
-                @else
-                <div class="inner-tab active">
-                    <a href="{{ route('frontend.user.user_widget.ims_dashboard', $project_id) }}" target="_blank" class="tab-link">
-                        <div class="icon">
-                            <img src="{{url('images/dashboard/tab_section/privacy-policy.png')}}" alt="">
-                        </div>
-                        <div class="text">IMS Dashboard</div>
-                    </a>
-                </div>
-            @endif
-            @if(App\Models\IMSProUsers::where('project_id',$project_id)->first() != null)
-                <div class="inner-tab active">
-                    <a class="tab-link" href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" target="_blank">
-                        <div class="icon">
-                            <img src="{{url('images/dashboard/tab_section/privacy-policy.png')}}" alt="">
-                        </div>
-                        <div class="text">IMS Pro</div>
-                    </a>
-                </div>
-            @endif
-
-            <div class="inner-tab active">
-                <a href="{{ route('frontend.user.project_settings', $project_id) }}" class="tab-link">
-                    <div class="icon"><i class="bi bi-gear"></i></div>
-                    <div class="text">Widget Settings</div>
-                </a>
-            </div>
-            @if(App\Models\IMSProUsers::where('project_id',$project_id)->first() == null)
-                <div class="inner-tab hidden">
-                    <a href="#" class="tab-link">
-                        <div class="icon"><i class="bi bi-gear"></i></div>
-                        <div class="text">hidden</div>
-                    </a>
-                </div>
-            @endif
-            <div class="inner-tab hidden">
-                <a href="#" class="tab-link">
-                    <div class="icon"><i class="bi bi-gear"></i></div>
-                    <div class="text">hidden</div>
-                </a>
-            </div>
-        </div>
-        <div class="tab {{Request::segment(3)=='analytics' ? 'active' :null }}">
-            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
-            <div class="inner-tab">
-                <a class="tab-link" data-bs-toggle="modal" data-bs-target="#analyticsdisableModal">
-                    <div class="icon">
-                        <img src="{{url('images/dashboard/tab_section/statistics.png')}}" alt="">
-                    </i></div>
-                    <div class="text">Statistics</div>
-                </a>
-            </div>
-            @else
-            <div class="inner-tab active">
-                <a href="{{ route('frontend.user.user_widget.analytics.overview', $project_id) }}" target="_blank" class="tab-link">
-                    <div class="icon">
-                        <img src="{{url('images/dashboard/tab_section/statistics.png')}}" alt="">
-                    </i></div>
-                    <div class="text">Statistics</div>
-                </a>
-            </div>
-            @endif
-            <div class="inner-tab hidden">
-                <a href="#" class="tab-link">
-                    <div class="icon"></div>
-                    <div class="text"></div>
-                </a>
-            </div>
-            <div class="inner-tab hidden">
-                <a href="#" class="tab-link">
-                    <div class="icon"></div>
-                    <div class="text"></div>
-                </a>
-            </div>
-            <div class="inner-tab hidden">
-                <a href="#" class="tab-link">
-                    <div class="icon"><i class="bi bi-gear"></i></div>
-                    <div class="text">hidden</div>
-                </a>
-            </div>
-        </div>
-        <div class="tab {{Request::segment(3)=='seo' ? 'active' :null }}">
-            <div class="inner-tab">
-                <a href="#" class="tab-link">
-                    <div class="icon"><i class="bi bi-bullseye"></i></div>
-                    <div class="text">Realtime</div>
-                </a>
-            </div>
-            <div class="inner-tab active" data-bs-toggle="modal" data-bs-target="#heatmapModel" >
-                <a href="#"class="tab-link">
-                    <div class="icon">
-                        <img src="{{url('images/dashboard/tab_section/heatmap.png')}}" alt="">
-                    </div>
-                    <div class="text">Heatmaps</div>
-                </a>
-            </div>
-            <div class="inner-tab active">
-                <a href="#"class="tab-link" data-bs-toggle="modal" data-bs-target="#sessionRecordModal">
-                    <div class="icon">
-                        <img src="{{url('images/dashboard/tab_section/session-recording.png')}}" alt="">
-                    </div>
-                    <div class="text">Session Recording</div>
-                </a>
-            </div>
-            <div class="inner-tab hidden">
-                <a href="#" class="tab-link">
-                    <div class="icon"></div>
-                    <div class="text"></div>
-                </a>
-            </div>
-        </div>
-        <div class="tab {{Request::segment(3)=='security' ? 'active' :null }}">
-            <div class="inner-tab">
-                <a href="#" class="tab-link">
-                    <div class="icon"></div>
-                    <div class="text"></div>
-                </a>
-            </div>
-            <div class="inner-tab">
-                <a href="#" class="tab-link">
-                    <div class="icon"></div>
-                    <div class="text"></div>
-                </a>
-            </div>
-            <div class="inner-tab">
-                <a href="#" class="tab-link">
-                    <div class="icon"></div>
-                    <div class="text"></div>
-                </a>
-            </div>
-            <div class="inner-tab">
-                <a href="#" class="tab-link">
-                    <div class="icon"></div>
-                    <div class="text"></div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div> -->
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 <div class="section-cards" id="sectionCards">
@@ -220,7 +38,7 @@
                 <div class="text">Widget Pro</div>
             </a>
         </div>
-        <div class="card {{Request::segment(3)=='optimizer' ? 'active' :null }}">
+        <div class="card {{Request::segment(3)=='optimizer' ? 'active tab-active' :null }}">
             <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
                 <svg  class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 52.5 51.3" style="enable-background:new 0 0 52.5 51.3;" xml:space="preserve">
                     <style type="text/css">
@@ -253,6 +71,32 @@
                 <div class="text">Optimizer Plus</div>
             </a>
         </div> -->
+    </div>
+    <div class="tabs {{Request::segment(3)=='optimizer' ? 'active' :null }}">
+        <div class="tab active">
+            <a href="#" class="tab-link">
+                <div class="realtime-icon"></div>
+                <div class="text">Realtime</div>
+            </a>
+        </div>
+        <div class="tab">
+            <a href="#" class="tab-link">
+                <img src="{{url('images/dashboard/tab_section/analytics-center.png')}}" alt="">
+                <div class="text">Analytics Center</div>
+            </a>
+        </div>
+        <div class="tab">
+            <a href="#" class="tab-link">
+                <img src="{{url('images/dashboard/tab_section/seo-report.png')}}" alt="">
+                <div class="text">SEO Report</div>
+            </a>
+        </div>
+        <div class="tab">
+            <a href="#" class="tab-link">
+                <img src="{{url('images/dashboard/tab_section/security.png')}}" alt="">
+                <div class="text">Security</div>
+            </a>
+        </div>
     </div>
 </div>
 
