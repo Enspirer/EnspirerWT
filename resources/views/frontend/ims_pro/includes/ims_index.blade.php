@@ -110,81 +110,92 @@
 
                                                                     @else
                                                                         @if($ims_pro_client_message->phone_number == $solo_ims_pro_client->phone_number)
-                                                                            <li class="list-group-item active">
-                                                                                <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
-                                                                                    <div class="header">
-                                                                                        <div class="profile">
-                                                                                            @if($solo_ims_pro_client->is_read == 'Pending')
-                                                                                                <div class="indicator active"></div>
-                                                                                            @endif
-                                                                                            <div class="image-block">
-                                                                                                <img src="{{url('images/test.png')}}" alt="">
-                                                                                                @if($ims_pro_client_message->type == 'WhatsApp')
-                                                                                                    <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
-                                                                                                @elseif($ims_pro_client_message->type == 'Messenger')
-                                                                                                    <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
-                                                                                                @elseif($ims_pro_client_message->type == 'Telegram')
-                                                                                                    <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
-                                                                                                @elseif($ims_pro_client_message->type == 'Viber')
-                                                                                                    <img src="{{url('images/social_media_icons/viber.png')}}" alt="" class="chat-client">
-                                                                                                @elseif($ims_pro_client_message->type == 'Line')
-                                                                                                    <img src="{{url('images/social_media_icons/line.png')}}" alt="" class="chat-client">
+                                                                            @if($ims_pro_client_message->phone_number == "")
+
+                                                                            @else
+                                                                                <li class="list-group-item active">
+                                                                                    <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
+                                                                                        <div class="header">
+                                                                                            <div class="profile">
+                                                                                                @if($solo_ims_pro_client->is_read == 'Pending')
+                                                                                                    <div class="indicator active"></div>
                                                                                                 @endif
+                                                                                                <div class="image-block">
+                                                                                                    <img src="{{url('images/test.png')}}" alt="">
+                                                                                                    @if($ims_pro_client_message->type == 'WhatsApp')
+                                                                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                                                    @elseif($ims_pro_client_message->type == 'Messenger')
+                                                                                                        <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
+                                                                                                    @elseif($ims_pro_client_message->type == 'Telegram')
+                                                                                                        <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                                                                    @elseif($ims_pro_client_message->type == 'Viber')
+                                                                                                        <img src="{{url('images/social_media_icons/viber.png')}}" alt="" class="chat-client">
+                                                                                                    @elseif($ims_pro_client_message->type == 'Line')
+                                                                                                        <img src="{{url('images/social_media_icons/line.png')}}" alt="" class="chat-client">
+                                                                                                    @endif
+                                                                                                </div>
+                                                                                                <div class="status-block">
+                                                                                                    @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                        <div class="name">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                    @else
+                                                                                                        <div class="name">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                    @endif
+                                                                                                </div>
                                                                                             </div>
-                                                                                            <div class="status-block">
-                                                                                                @if(get_contact_info($ims_pro_client_message->phone_number))
-                                                                                                <div class="name">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
-                                                                                                <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                @else
-                                                                                                <div class="name">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                @endif
-                                                                                            </div>
+                                                                                            <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
                                                                                         </div>
-                                                                                        <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
-                                                                                    </div>
-                                                                                    <div class="message">{{$ims_pro_client_message->message}}</div>
-                                                                                </a>
-                                                                            </li>
+                                                                                        <div class="message">{{$ims_pro_client_message->message}}</div>
+                                                                                    </a>
+                                                                                </li>
+                                                                            @endif
+
                                                                         @else
-                                                                            <li class="list-group-item">
-                                                                                <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
-                                                                                    <div class="header">
-                                                                                        <div class="profile">
-                                                                                            @if($solo_ims_pro_client->is_read == 'Pending')
-                                                                                                <div class="indicator active"></div>
-                                                                                            @endif
-                                                                                            <div class="image-block">
-                                                                                                <img src="{{url('images/test.png')}}" alt="">
-                                                                                                @if($ims_pro_client_message->type == 'WhatsApp')
-                                                                                                    <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
-                                                                                                @elseif($ims_pro_client_message->type == 'Messenger')
-                                                                                                    <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
-                                                                                                @elseif($ims_pro_client_message->type == 'Telegram')
-                                                                                                    <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
-                                                                                                @elseif($ims_pro_client_message->type == 'Viber')
-                                                                                                    <img src="{{url('images/social_media_icons/viber.png')}}" alt="" class="chat-client">
-                                                                                                @elseif($ims_pro_client_message->type == 'Line')
-                                                                                                    <img src="{{url('images/social_media_icons/line.png')}}" alt="" class="chat-client">
+
+                                                                            @if($ims_pro_client_message->phone_number == "")
+
+                                                                            @else
+                                                                                <li class="list-group-item">
+                                                                                    <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
+                                                                                        <div class="header">
+                                                                                            <div class="profile">
+                                                                                                @if($solo_ims_pro_client->is_read == 'Pending')
+                                                                                                    <div class="indicator active"></div>
                                                                                                 @endif
+                                                                                                <div class="image-block">
+                                                                                                    <img src="{{url('images/test.png')}}" alt="">
+                                                                                                    @if($ims_pro_client_message->type == 'WhatsApp')
+                                                                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="chat-client">
+                                                                                                    @elseif($ims_pro_client_message->type == 'Messenger')
+                                                                                                        <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
+                                                                                                    @elseif($ims_pro_client_message->type == 'Telegram')
+                                                                                                        <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                                                                    @elseif($ims_pro_client_message->type == 'Viber')
+                                                                                                        <img src="{{url('images/social_media_icons/viber.png')}}" alt="" class="chat-client">
+                                                                                                    @elseif($ims_pro_client_message->type == 'Line')
+                                                                                                        <img src="{{url('images/social_media_icons/line.png')}}" alt="" class="chat-client">
+                                                                                                    @endif
+                                                                                                </div>
+                                                                                                <div class="status-block">
+                                                                                                    @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                        <div class="name">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                    @else
+                                                                                                        <div class="name">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                    @endif
+                                                                                                </div>
                                                                                             </div>
-                                                                                            <div class="status-block">
-                                                                                                @if(get_contact_info($ims_pro_client_message->phone_number))
-                                                                                                <div class="name">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
-                                                                                                <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                @else
-                                                                                                <div class="name">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                @endif
-                                                                                            </div>
+                                                                                            <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
                                                                                         </div>
-                                                                                        <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
-                                                                                    </div>
-                                                                                    <div class="message">{{$ims_pro_client_message->message}}</div>
-                                                                                </a>
-                                                                            </li>
+                                                                                        <div class="message">{{$ims_pro_client_message->message}}</div>
+                                                                                    </a>
+                                                                                </li>
+                                                                            @endif
+
                                                                         @endif
                                                                     @endif
                                                                 @endforeach
