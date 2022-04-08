@@ -36,9 +36,10 @@
     padding: 2rem 0;
 }
 
-.section-cards .cards .card .card-link .bi {
-    font-size: 32px;
-    color: #333;
+.section-cards .cards .card .card-link .tab-icon {
+    width: 36px;
+    stroke: #333;
+    margin-bottom: 5px;
     transition: all .3s ease;
 }
 
@@ -50,11 +51,12 @@
     transition: all .3s ease;
 }
 
-.section-cards .cards .card.active .card-link .bi,
+.section-cards .cards .card.active .card-link .tab-icon,
 .section-cards .cards .card.active .card-link .text,
-.section-cards .cards .card:hover .card-link .bi,
+.section-cards .cards .card:hover .card-link .tab-icon,
 .section-cards .cards .card:hover .card-link .text {
     color: #fff;
+    stroke: #fff;
 }
 
 /* Subscription Block */
@@ -334,7 +336,7 @@
     width: 100%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -70%) !important;
+    transform: translate(-50%, -65%) !important;
 }
 
 .plan-modal .modal-dialog .modal-content {

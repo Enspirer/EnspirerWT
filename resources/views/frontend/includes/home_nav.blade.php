@@ -15,13 +15,13 @@
                             </a>
                             <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="productNav">
                                 <li><a class="dropdown-item" href="{{url('widget-lite')}}">
-                                    <div class="icon-block"><i class="bi bi-grid-fill"></i></div> <div class="text">Widget Lite</div>
+                                    <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-widgetLite.png')}}" alt=""></div> <div class="text">Widget Lite</div>
                                 </a></li>
                                 <li><a class="dropdown-item" href="{{url('widget-pro')}}">
-                                    <div class="icon-block"><i class="bi bi-grid-fill"></i></div> <div class="text">Widget Pro</div>
+                                    <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-widgetPlus.png')}}" alt=""></div> <div class="text">Widget Pro</div>
                                 </a></li>
                                 <li><a class="dropdown-item" href="{{url('optimizer')}}">
-                                    <div class="icon-block"><i class="bi bi-grid-fill"></i></div> <div class="text">Optimizer</div>
+                                    <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-Optimizer.png')}}" alt=""></div> <div class="text">Optimizer</div>
                                 </a></li>
                             </ul>
                         </div>

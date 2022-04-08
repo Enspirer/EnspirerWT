@@ -90,9 +90,10 @@
 
         <script>
             const heroSlider = new Splide( '#heroSlider', {
-                type: 'loop',
+                type: 'fade',
                 autoplay: true,
                 arrows: false,
+                rewind: true,
                 classes: {
                         pagination: 'splide__pagination custom__pagination',
                         page      : 'splide__pagination__page custom__pagination__page',
