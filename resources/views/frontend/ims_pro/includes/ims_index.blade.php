@@ -393,7 +393,7 @@
 
                                                              {{--Chat Write   --}}
 
-                                                             @if(whatsapp_server_status( $project_id )['connection_status'] != 'Authenticated' )
+                                                             @if(whatsapp_server_status( $project_id )['connection_status'] == 'Authenticated' )
                                                                         <input type="text" name="message" id="message" class="msg-input" placeholder="Type your message here...">
                                                                         <button type="submit" onClick="submit_chat()" class="btn-send"><i class="bi bi-send-fill"></i></button>
                                                              @else
