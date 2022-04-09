@@ -73,10 +73,15 @@
                                         <div class="title">IMS <span class="pro-cat blue">Lite</span></div>
                                         <img src="{{url('images/dashboard/subscriptions/ims-lite.png')}}" alt="" class="widget-img">
                                     </div>
-                                    <a href="#" class="sub-btn">
-                                        <i class="bi bi-plus"></i>
-                                        <div class="text">Activated</div>
-                                    </a>
+                                    <div class="button-section">
+                                        <a href="#" class="sub-btn">
+                                            <i class="bi bi-plus"></i>
+                                            <div class="text">Activated</div>
+                                        </a>
+                                        <a href="#" class="sub-btn sub-btn-outline">
+                                            <div class="text">View More</div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         @else
@@ -118,10 +123,12 @@
                                         <div class="title">IMS <span class="pro-cat blue">Lite</span></div>
                                         <img src="{{url('images/dashboard/subscriptions/ims-lite.png')}}" alt="" class="widget-img">
                                     </div>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#actWidgetLite" class="sub-btn">
-                                        <i class="bi bi-plus"></i>
-                                        <div class="text">Activate</div>
-                                    </a>
+                                    <div class="button-section">
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#actWidgetLite" class="sub-btn">
+                                            <i class="bi bi-plus"></i>
+                                            <div class="text">Activate</div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         @endif
