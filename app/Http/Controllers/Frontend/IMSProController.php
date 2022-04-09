@@ -70,6 +70,34 @@ class IMSProController extends Controller
             }
         } 
 
+        $get_user = Cart::getContent();
+        // dd($get_user);
+
+        $check_assigned_user = null;
+
+        if(!empty( auth()->user()->id) === true ){
+            if($ims_pro_user->user_id == auth()->user()->id){
+                $check_assigned_user = $ims_pro_user;
+            }
+        }
+        else{
+            if(count($get_user) != 0){
+
+                if($phone_number != 'phone_number'){
+    
+                    foreach($get_user as $get_use){
+                        $check_assigned_user = ImsProClientMessages::where('project_id',$id)->where('phone_number',$phone_number)->where('core_type','assign')->where('type',$type)->where('user_id',$get_use->id)->first();
+                        // dd( $check_assigned_user);                    
+                        break;
+                    }
+                }
+                        
+            }
+        }
+        
+
+        // dd($check_assigned_user);
+
         $project = Projects::where('id',$id)->first();           
         // dd($project->id);
 
@@ -133,6 +161,7 @@ class IMSProController extends Controller
             'all_ims_pro_client_messages' => $all_ims_pro_client_messages,
             'solo_ims_pro_client_messages' => $solo_ims_pro_client_messages,
             'ims_pro_users' => $ims_pro_users,
+            'check_assigned_user' => $check_assigned_user,
             'solo_ims_pro_assigned' => $solo_ims_pro_assigned
         ]);
     }    
