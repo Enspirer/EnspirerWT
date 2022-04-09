@@ -100,7 +100,7 @@
 }
 
 .section-cards .tabs .tab.active .tab-link {
-    border: 2px solid #0086E6;
+    border: 2px solid #00AEEF;
 }
 
 .section-cards .tabs .tab .tab-link {
@@ -243,6 +243,7 @@
     justify-content: center;
     gap: 8px;
     text-decoration: none;
+    border: 2px solid #00AEEF;
     background-color: #00AEEF;
     font-size: 16px;
     padding: 0.5em 1em;
@@ -252,12 +253,23 @@
 }
 
 .subcription-block.activated .sub-btn {
-    background-color: #44BC8E;
+    background-color: #33CC0D;
+    border: 2px solid #33CC0D;
     pointer-events: none;
 }
 
 .subcription-block.activated .sub-btn .bi {
     display: none;
+}
+
+.subcription-block.activated .sub-btn.sub-btn-outline {
+    background-color: transparent;
+    border: 2px solid #33CC0D;
+    margin-top: 15px;
+}
+
+.subcription-block.activated .sub-btn.sub-btn-outline .text {
+    color: #33CC0D;
 }
 
 .subcription-block .sub-btn .bi {
@@ -702,4 +714,201 @@
 
 .plan-modal.premium .modal-dialog .modal-content .modal-body .inner-wrapper .button-block .widget-btn {
     margin: 0;
+}
+
+/* Realtime Table */
+
+.realtime-table {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.realtime-table .header {
+    margin-bottom: 2rem;
+}
+
+.realtime-table .header .title {
+    font-size: 20px !important;
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.realtime-table .header .filter-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.realtime-table .header .filter-block .filter-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.realtime-table .header .filter-block .filter-group .filter-dropdown .filter-button {
+    text-decoration: none;
+    color: #B4B7C6;
+    font-size: 14px;
+    background-color: #E8F1FB;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.realtime-table .header .filter-block .filter-group .filter-dropdown .filter-button.filter-btn {
+    width: 40px;
+    justify-content: center;
+}
+
+.realtime-table .header .filter-block .filter-group .filter-dropdown .filter-button.filter-btn .bi {
+    font-size: 18px;
+}
+
+.realtime-table .header .filter-block .filter-group .input-group .form-control {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 5px !important;
+    color: #B4B7C6;
+    font-size: 14px;
+    background-color: #E8F1FB;
+    flex: unset !important;
+    position: unset !important;
+    margin: 0;
+    padding: 0.5em 1em 0.5em 3em;
+}
+
+.realtime-table .header .filter-block .filter-group .input-group .form-control::placeholder {
+    color: #B4B7C6;
+}
+
+.realtime-table .header .filter-block .filter-group .input-group .bi {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translate(0, -50%);
+    font-size: 16px;
+    color: #B4B7C6;
+    z-index: 3;
+}
+
+.realtime-table .body .table .tbl-header .tbl-row .th-col {
+    font-size: 14px;
+    color: #333;
+}
+
+.realtime-table .body .table .tbl-header .tbl-row .th-col,
+.realtime-table .body .table .tbl-body .tbl-row .tb-col {
+    padding: 1rem .5rem;
+}
+
+.realtime-table .body .table .tbl-body {
+    border-top: none;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-flag {
+    text-align: center;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-flag img {
+    width: 25px;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-country {
+    font-size: 14px;
+    color: #333;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-status .status-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #BBEEAF;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-status .status-block .bi {
+    font-size: 10px;
+    color: #25A406;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-status .status-block .text {
+    font-size: 12px;
+    color: #25A406;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-keyEvent .event {
+    font-size: 12px;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    margin: 0.125em;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-keyEvent .event.yellow {
+    color: #A46A06 !important;
+    background-color: #EECFAF !important;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-keyEvent .event.purple {
+    color: #6C00FC !important;
+    background-color: #CAAFEE !important;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-keyEvent .event.blue {
+    color: #4884FA !important;
+    background-color: #C2D6FE !important;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-pages .pages-count {
+    color: #333;
+    background-color: #E8F1FB;
+    font-size: 12px;
+    width: fit-content;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-invite .tbl-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-invite .tbl-btn.btn-invite {
+    background-color: #CCF1FF;
+}
+
+.realtime-table .body .table .tbl-body .tbl-row .tb-col.rt-invite .tbl-btn.btn-invite .text {
+    color: #017FFA;
+    font-size: 12px;
+}
+
+/* Offline */
+.realtime-table .body .table .tbl-body .tbl-row.offline .tb-col.rt-status .status-block,
+.realtime-table .body .table .tbl-body .tbl-row.offline .tb-col.rt-status .status-block .bi,
+.realtime-table .body .table .tbl-body .tbl-row.offline .tb-col.rt-status .status-block .text,
+.realtime-table .body .table .tbl-body .tbl-row.offline .tb-col.rt-keyEvent .event,
+.realtime-table .body .table .tbl-body .tbl-row.offline .tb-col.rt-pages .pages-count,
+.realtime-table .body .table .tbl-body .tbl-row.offline .tb-col.rt-invite .tbl-btn.btn-invite {
+    pointer-events: none;
+    filter: grayscale(1);
 }
