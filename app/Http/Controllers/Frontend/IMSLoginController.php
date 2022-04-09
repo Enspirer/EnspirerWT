@@ -75,7 +75,7 @@ class IMSLoginController extends Controller
 
                 IMSProUsers::whereId($user->id)->update($update->toArray());
 
-                Cart::add($user->id, $user->name, $user->session, 1);
+                Cart::add($user->id, $user->name, $session, 1);
 
                 return redirect()->route('frontend.user_widget.ims_pro_media_scan',$user->project_id);  
             }
