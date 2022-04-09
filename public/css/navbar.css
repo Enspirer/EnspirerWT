@@ -298,6 +298,13 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.getstarted-dropdown-menu .dropdown-item:hover {
+    opacity: 1;
 }
 
 .getstarted-dropdown-menu .dropdown-item .icon-block img {

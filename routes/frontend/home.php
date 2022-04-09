@@ -32,6 +32,7 @@ use App\Http\Controllers\Frontend\IMSProController;
 use App\Http\Controllers\Frontend\IMSLoginController;
 use App\Http\Controllers\Frontend\NotFoundController;
 use App\Http\Controllers\Frontend\MobileViewController;
+use App\Http\Controllers\Frontend\PricingController;
 
 
 /*
@@ -91,6 +92,7 @@ Route::get('home_blog',[BlogController::class, 'index'])->name('home_blog');
 Route::get('solo_post/{id}',[BlogController::class, 'solo_post'])->name('solo_post');
 Route::get('terms-condition',[TermsAndPrivacyController::class, 'terms_condition'])->name('terms_condition');
 Route::get('privacy-policy',[TermsAndPrivacyController::class, 'privacy_policy'])->name('privacy_policy');
+Route::get('pricing',[PricingController::class, 'pricing'])->name('pricing');
 
 
 Route::get('generatePDF/{id}',[IMSController::class, 'generatePDF'])->name('generatePDF');
