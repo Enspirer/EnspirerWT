@@ -515,7 +515,7 @@
 
 
                                     <div class="col-12 mt-4 mb-5">
-                                        <input type="hidden" class="form-control" name="project_id" value="{{ $project->id}}">      
+                                        <input type="hidden" class="form-control" name="project_id" value="{{ $project_id}}">      
                                         <input type="hidden" class="form-control" name="widget_id" value="{{ $widget->id}}">          
                                         <button type="submit" class="btn btn-primary" style="font-size:14px;">Submit</button>
                                     </div> 
