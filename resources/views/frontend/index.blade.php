@@ -441,13 +441,14 @@
                     </div>
                     <div class="body">
                         <ul class="option desktop">
+                            <div class="label">Desktop</div>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
                                 <div class="text">All in one Chat Widget</div>
                             </li>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
-                                <div class="text">iMS <span class="pro-cat">Lite</span></div>
+                                <div class="text">iMS <span class="pro-cat blue">Lite</span></div>
                             </li>
                             <li>
                                 <i class="bi bi-x-circle"></i>
@@ -475,6 +476,7 @@
                             </li>
                         </ul>
                         <ul class="option mobile">
+                            <div class="label">Mobile</div>
                             <li>
                                 <i class="bi bi-x-circle"></i>
                                 <div class="text dashed">Realtime View</div>
@@ -517,17 +519,18 @@
                     </div>
                     <div class="body">
                         <ul class="option desktop">
+                            <div class="label">Desktop</div>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
                                 <div class="text">All in one Chat Widget</div>
                             </li>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
-                                <div class="text">iMS <span class="pro-cat">Lite</span></div>
+                                <div class="text">iMS <span class="pro-cat blue">Lite</span></div>
                             </li>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
-                                <div class="text">iMS <span class="pro-cat">Pro</span></div>
+                                <div class="text">iMS <span class="pro-cat red">Pro</span></div>
                             </li>
                             <li>
                                 <i class="bi bi-x-circle"></i>
@@ -551,6 +554,7 @@
                             </li>
                         </ul>
                         <ul class="option mobile">
+                            <div class="label">Mobile</div>
                             <li>
                                 <i class="bi bi-x-circle"></i>
                                 <div class="text dashed">Realtime View</div>
@@ -594,17 +598,18 @@
                     </div>
                     <div class="body">
                         <ul class="option desktop">
+                            <div class="label">Desktop</div>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
                                 <div class="text">All in one Chat Widget</div>
                             </li>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
-                                <div class="text">iMS <span class="pro-cat">Lite</span></div>
+                                <div class="text">iMS <span class="pro-cat blue">Lite</span></div>
                             </li>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
-                                <div class="text">iMS <span class="pro-cat">Pro</span></div>
+                                <div class="text">iMS <span class="pro-cat red">Pro</span></div>
                             </li>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
@@ -628,6 +633,7 @@
                             </li>
                         </ul>
                         <ul class="option mobile">
+                            <div class="label">Mobile</div>
                             <li>
                                 <i class="bi bi-check-circle-fill"></i>
                                 <div class="text">Realtime View</div>
