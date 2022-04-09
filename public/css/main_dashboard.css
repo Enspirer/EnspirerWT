@@ -1543,7 +1543,7 @@
 
 .section-content #sectionProperties .property-block .info-blocks .block-title {
     display: block;
-    font-size: 1.1rem;
+    font-size: 16px;
     font-weight: 500;
     text-align: center;
     white-space: nowrap;
@@ -1554,6 +1554,29 @@
     font-weight: 500;
     color: #0d6efd;
     white-space: nowrap;
+}
+
+.section-content #sectionProperties .property-block .seo-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section-content #sectionProperties .property-block .seo-block img {
+    width: 60px;
+}
+
+.section-content #sectionProperties .property-block .seo-block .text-block .title {
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+}
+
+.section-content #sectionProperties .property-block .seo-block .text-block .package {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
 }
 
 .section-content #sectionProperties .property-block .seo-block .seo-result {
@@ -1591,6 +1614,52 @@
 
 .section-content #sectionProperties .property-block .analytics-block .block-content i {
     margin-right: 1rem;
+}
+
+.section-content #sectionProperties .property-block .statics-block .progress-wrapper {
+    position: relative;
+}
+
+.section-content #sectionProperties .property-block .statics-block .progress-wrapper .progress {
+    height: 4px;
+    margin: 2rem 0;
+}
+
+.section-content #sectionProperties .property-block .statics-block .progress-wrapper .progress .progress-bar {
+    width: 43%;
+    background-color: #33CC0D;
+}
+
+.section-content #sectionProperties .property-block .statics-block .progress-wrapper .lbl {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    position: absolute;
+    top: -25px;
+}
+
+.section-content #sectionProperties .property-block .statics-block .progress-wrapper .lbl.lbl-start {
+    left: 0;
+}
+
+.section-content #sectionProperties .property-block .statics-block .progress-wrapper .lbl.lbl-end {
+    right: 0;
+}
+
+.section-content #sectionProperties .property-block .statics-block .progress-wrapper .date {
+    font-size: 10px;
+    font-weight: 400;
+    color: #777;
+    position: absolute;
+    top: 10px;
+}
+
+.section-content #sectionProperties .property-block .statics-block .progress-wrapper .date.date-start {
+    left: 0;
+}
+
+.section-content #sectionProperties .property-block .statics-block .progress-wrapper .date.date-end {
+    right: 0;
 }
 
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info {

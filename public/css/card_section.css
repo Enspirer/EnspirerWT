@@ -750,6 +750,14 @@
     gap: 1rem;
 }
 
+.realtime-table .header .filter-block .filter-group .filter-dropdown .dropdown-menu {
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-top: 4px solid #017FFA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .realtime-table .header .filter-block .filter-group .filter-dropdown .filter-button {
     text-decoration: none;
     color: #B4B7C6;

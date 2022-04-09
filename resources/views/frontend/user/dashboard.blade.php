@@ -81,7 +81,7 @@
                         @else
                             @foreach($project_details as $project_detail)
 
-                                <section id="sectionProperties">
+                                <!-- <section id="sectionProperties">
                                     <div class="property-block mb-5">
                                         <div class="row g-0 p-4 border-bottom">
                                             <div class="inner-wrapper">
@@ -249,7 +249,76 @@
                                             </div>
                                         </div>
                                     </div>
+                                </section> -->
+
+                                <section id="sectionProperties">
+                                    <div class="property-block mb-5">
+                                        <div class="row g-0 p-4 border-bottom">
+                                            <div class="inner-wrapper">
+                                                <div class="col-4">
+                                                    <div class="name-block">
+                                                        <div class="property-name">
+                                                            <span class="pro-name">{{$project_detail->name}}</span>
+                                                            <span class="pro-url">{{$project_detail->url}}</span>
+                                                        </div>
+                                                        <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn btn-open"><i class="bi bi-x-diamond-fill"></i>View</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="button-block">
+                                                        <div class="form-check form-switch">
+                                                            <label class="form-check-label" for="flexSwitchCheckDefault">Email
+                                                                Notifications</label>
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                        </div>
+                                                        <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="delete btn btn-delete"
+                                                            data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i>Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-0 py-2 align-items-center">
+                                            <div class="col-xxl-4 my-3 info-blocks seo-block">
+                                                <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                <div class="text-block">
+                                                    <div class="title">Package</div>
+                                                    <div class="package">Widget Lite</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-4 my-3 info-blocks analytics-block">
+                                                <div class="block-content">
+                                                    <div class="row g-0 justify-content-evenly align-items-end">
+                                                        <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                            <span class="block-title mb-2">Realtime</span>
+                                                            <span class="sub-title">Visitors</span>
+                                                            @if(App\Models\Widgets::where('project_id',$project_detail->id)->first() != null)
+                                                            <span class="precentage up"><i class="bi bi-graph-up-arrow up"> {{ App\Models\Widgets::where('project_id',$project_detail->id)->first()->load_count }}</i></span>
+                                                            @else
+                                                            <span class="precentage up"><i class="bi bi-graph-up-arrow up"> No Details</i></span>
+                                                            @endif
+                                                        </div>
+                                                        <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                            <span class="sub-title">Pageviews</span>
+                                                            <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i>{{ count(App\Models\VisitorCount::where('project_id',$project_detail->id)->get()) }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-4 my-3 info-blocks statics-block">
+                                                <div class="progress-wrapper">
+                                                    <div class="lbl lbl-start">Start Date</div>
+                                                    <div class="lbl lbl-end">End Date</div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <div class="date date-start">2022.04.01</div>
+                                                    <div class="date date-end">2022.05.01</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </section>
+
                             @endforeach
                         @endif
 
