@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="511.158" height="735.516" viewBox="0 0 511.158 735.516">
+  <defs>
+    <filter id="Union_3" x="0" y="0" width="511.158" height="735.516" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_2312" data-name="Group 2312" transform="translate(9.519 9.514)">
+    <g transform="matrix(1, 0, 0, 1, -9.52, -9.51)" filter="url(#Union_3)">
+      <path id="Union_3-2" data-name="Union 3" d="M228.313,716.5H46.975S-.372,713.191.048,674.557s0-634.292,0-634.292S-3.447.345,48.986.109s71.933,0,71.933,0,13.821-1.619,38.371,14.442S192.8,35.142,192.8,35.142s9.966,6,29.323,5.721c8.073-.118,16.666-.137,23.938-.118,7.27-.019,15.864,0,23.935.118,19.357.28,29.319-5.721,29.319-5.721s8.959-4.522,33.512-20.592S371.205.109,371.205.109s19.49-.244,71.924,0,48.943,40.156,48.943,40.156-.42,595.659,0,634.292S445.148,716.5,445.148,716.5Z" transform="translate(9.52 9.51)" fill="#fff" stroke="#31ae0b" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
