@@ -43,9 +43,13 @@
                                                 <i class="bi bi-file-earmark-text"></i>
                                                 <div class="text">IMS Pro</div>
                                             </a>
+                                            <a href="{{ route('frontend.user.user_widget.settings', $all_in_one->id) }}" type="button" class="act-btn">
+                                                <i class="bi bi-gear"></i>
+                                                <div class="text">Widget Settings</div>
+                                            </a>
                                             <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}" type="button" class="act-btn">
                                                 <i class="bi bi-gear"></i>
-                                                <div class="text">Settings</div>
+                                                <div class="text">IMS Settings</div>
                                             </a>
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" type="button" class="act-btn">
                                                 <i class="bi bi-code-slash"></i>

@@ -94,7 +94,7 @@
                                     <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Create Your Project" id="create_project_button">
                                         <a type="button" class="nav-link add-btn bi bi-plus-square-fill" data-bs-toggle="modal" data-bs-target="#project_modal"></a>
                                     </li>
-                                    <a href="{{ route('frontend.user.project.chat',$project_id) }}" style="text-decoration:none"><h4 class="px-4 mt-3">Go back</h4></a>
+                                    <a href="{{ route('frontend.user.project.widget_plus',$project_id) }}" style="text-decoration:none"><h4 class="px-4 mt-3">Go back</h4></a>
                                 </ul>
                             </div>
                         </div>
@@ -515,7 +515,7 @@
 
 
                                     <div class="col-12 mt-4 mb-5">
-                                        <input type="hidden" class="form-control" name="project_id" value="{{ $project->id}}">      
+                                        <input type="hidden" class="form-control" name="project_id" value="{{ $project_id}}">      
                                         <input type="hidden" class="form-control" name="widget_id" value="{{ $widget->id}}">          
                                         <button type="submit" class="btn btn-primary" style="font-size:14px;">Submit</button>
                                     </div> 
