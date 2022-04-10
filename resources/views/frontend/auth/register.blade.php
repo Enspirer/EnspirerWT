@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="slider">
-                    <div class="sign-up-splide" id="signUpSlider">
+                    <div class="splide sign-up-splide" id="signUpSlider">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">

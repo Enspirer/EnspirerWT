@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="slider">
-                    <div class="sign-in-splide" id="signInSlider">
+                    <div class="splide sign-in-splide" id="signInSlider">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
