@@ -317,6 +317,7 @@
                                 <div class="text">Inquiry</div>
                             </div>
                         </div>
+                        <i class="bi bi-x-lg" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></i>
                     </div>
                     <div class="modal-body">
                         <div class="content p-0">
@@ -324,7 +325,7 @@
                                 <h2 class="title">Choose your Monthly plan</h2>
                                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ut autem iusto maiores eaque voluptate temporibus odio in repellat incidunt?</p>
                                 <div class="subscriptions">
-                                    <div class="subcriptioin-block basic-block">
+                                    <!-- <div class="subcriptioin-block basic-block">
                                         <img src="{{url('images/dashboard/ims_pro/basic-sub.png')}}" alt="" class="sub-img">
                                         <div class="title">Basic</div>
                                         <div class="discount">20% Savings</div>
@@ -368,6 +369,18 @@
                                         <button type="button" class="btn-sub">Start with Premium
                                             <input type="hidden" class="sub-input" name="premium">
                                         </button>
+                                    </div> -->
+                                    <div class="subcriptioin-block basic-block">
+                                        <img src="{{url('images/dashboard/ims_pro/basic-plan.png')}}" alt="" class="sub-image">
+                                        <input type="hidden" class="sub-input" name="basic">
+                                    </div>
+                                    <div class="subcriptioin-block executive-block">
+                                        <img src="{{url('images/dashboard/ims_pro/executive-plan.png')}}" alt="" class="sub-image">
+                                        <input type="hidden" class="sub-input" name="executive">
+                                    </div>
+                                    <div class="subcriptioin-block premium-block">
+                                        <img src="{{url('images/dashboard/ims_pro/premium-plan.png')}}" alt="" class="sub-image">
+                                        <input type="hidden" class="sub-input" name="premium">
                                     </div>
                                 </div>
                             </div>
@@ -478,6 +491,8 @@ const billingBtnNxt = document.querySelector('.billing-btn-next')
 const inquiryBtnPrv = document.querySelector('.inquiry-btn-prev')
 const inquiryBtnNxt = document.querySelector('.inquiry-btn-next')
 
+const subBlcok = planBlock.querySelectorAll('.subcriptioin-block')
+
 const cardHolderInput = document.getElementById('cardHolderInput')
 const cardNumberInput = document.getElementById('cardNumberInput')
 const expDateInput = document.getElementById('expDateInput')
@@ -487,20 +502,13 @@ const emailInput = document.getElementById('emailInput')
 const telInput = document.getElementById('telInput')
 const msgInput = document.getElementById('msgInput')
 
-const regexName = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/g;
-const regexCardNo = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/g;
-const regexExpDate = /((\d{2}(\/)?\d{2})|(\d[0-9]{4})|(\d[^0]+))/g;
-const regexCvv = /\d{3}/g;
-const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-const regexTel = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
-
-btnSub.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-        btnSub.forEach(function (emp) {
+subBlcok.forEach(function (sub) {
+    sub.addEventListener('click', function () {
+        subBlcok.forEach(function (emp) {
             emp.querySelector('.sub-input').classList.remove('active')
         })
-        btn.querySelector('.sub-input').classList.add('active')
-        console.log(btn.querySelector('.sub-input.active').getAttribute('name'))
+        sub.querySelector('.sub-input').classList.add('active')
+        console.log(sub.querySelector('.sub-input.active').getAttribute('name'))
         modalNav.querySelector('.navigation-btn:nth-child(1)').classList.add('active')
         modalNav.querySelector('.navigation-btn:nth-child(2)').classList.add('selected')
         planBlock.classList.add('animate__fadeOut')
@@ -524,107 +532,12 @@ inquiryBtnPrv.addEventListener('click', function () {
     billingBlock.classList.add('active', 'animate__fadeIn')
 })
 
-// Form validation
-
-let cardHolderValidation;
-let cardNumberValidation;
-let expDateValidation;
-let cvvValidation;
-let nameValidation;
-let emailValidation;
-let telValidation;
-let msgValidation;
-
-cardHolderInput.addEventListener('change', function () {
-    cardHolderValidation = regexName.test(this.value);
-
-    if (cardHolderValidation) {
-        return;
-    } else {
-        this.classList.add('invalid')
-    }
+billingBtnNxt.addEventListener('click', function () {
+    billingBlock.classList.add('animate__fadeOut')
+    billingBlock.classList.remove('active')
+    inquiryBlock.classList.add('active', 'animate__fadeIn')
+    inquiryBlock.classList.remove('animate__fadeOut')
+    modalNav.querySelector('.navigation-btn:nth-child(2)').classList.add('active')
+    modalNav.querySelector('.navigation-btn:nth-child(3)').classList.add('selected')
 })
-
-cardNumberInput.addEventListener('change', function () {
-    cardNumberValidation = regexCardNo.test(this.value);
-
-    if (cardNumberValidation) {
-        return;
-    } else {
-        this.classList.add('invalid')
-    }
-})
-
-expDateInput.addEventListener('change', function () {
-    expDateValidation = regexExpDate.test(this.value);
-
-    if (expDateValidation) {
-        return;
-    } else {
-        this.classList.add('invalid')
-    }
-})
-
-cvvInput.addEventListener('change', function () {
-    cvvValidation = regexCvv.test(this.value);
-
-    if (cvvValidation) {
-        return;
-    } else {
-        this.classList.add('invalid')
-    }
-})
-
-nameInput.addEventListener('change', function () {
-    nameValidation = regexName.test(this.value);
-
-    if (nameValidation) {
-        return;
-    } else {
-        this.classList.add('invalid')
-    }
-})
-
-emailInput.addEventListener('change', function () {
-    emailValidation = regexEmail.test(this.value);
-
-    if (emailValidation) {
-        return;
-    } else {
-        this.classList.add('invalid')
-    }
-})
-
-telInput.addEventListener('change', function () {
-    telValidation = regexTel.test(this.value);
-
-    if (telValidation) {
-        return;
-    } else {
-        this.classList.add('invalid')
-    }
-})
-
-msgInput.addEventListener('change', function () {
-    msgValidation = regexName.test(this.value);
-
-    if (msgValidation) {
-        return;
-    } else {
-        this.classList.add('invalid')
-    }
-})
-
-// cardHolderValidation && cardNumberValidation && expDateValidation && cvvValidation && nameValidation && emailValidation && telValidation && msgValidation
-
-if(cardHolderValidation && cardNumberValidation && expDateValidation && cvvValidation) {
-    billingBtnNxt.addEventListener('click', function () {
-        billingBlock.classList.add('animate__fadeOut')
-        billingBlock.classList.remove('active')
-        inquiryBlock.classList.add('active', 'animate__fadeIn')
-        inquiryBlock.classList.remove('animate__fadeOut')
-        modalNav.querySelector('.navigation-btn:nth-child(2)').classList.add('active')
-        modalNav.querySelector('.navigation-btn:nth-child(3)').classList.add('selected')
-    })
-}
 </script>
