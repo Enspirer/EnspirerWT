@@ -72,15 +72,15 @@
             </a>
         </div> -->
     </div>
-    <div class="tabs {{Request::segment(3)=='optimizer' ? 'active' :null }}">
-        <div class="tab active">
+    <div class="tabs {{Request::segment(3)=='optimizer' ? 'active' :null }} {{Request::segment(3)=='analytics' ? 'active' :null }}">
+        <div class="tab {{Request::segment(3)=='optimizer' ? 'active' :null }}">
             <a href="#" class="tab-link">
                 <div class="realtime-icon"></div>
                 <div class="text">Realtime</div>
             </a>
         </div>
-        <div class="tab">
-            <a href="#" class="tab-link">
+        <div class="tab {{Request::segment(3)=='analytics' ? 'active' :null }}">
+            <a href="{{ route('frontend.user.project.analytics',$project_id) }}" class="tab-link">
                 <img src="{{url('images/dashboard/tab_section/analytics-center.png')}}" alt="">
                 <div class="text">Analytics Center</div>
             </a>
