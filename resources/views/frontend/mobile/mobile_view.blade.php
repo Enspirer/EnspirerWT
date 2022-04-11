@@ -301,7 +301,7 @@
             })
 
         // Set Interval realtimeStats function
-        setInterval(realtimeStats, 5000);
+        setTimeout(realtimeStats, 5000);
     }
 
     // Run realtimeStats function on page load
