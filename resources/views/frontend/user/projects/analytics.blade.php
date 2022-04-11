@@ -30,9 +30,12 @@
                             @include('frontend.user.projects.includes.card_section')
                         </section>
 
+
                         
 
-                        <section id="sectionWhatsappWidget">
+                        
+
+                        <!-- <section id="sectionWhatsappWidget">
                             @if(count(App\Models\Widgets::where('project_id',$project_id)->where('category','Analytics')->get()) != 0)
                                 <div class="block-2 mb-5">
                                     <div class="row g-0 mb-4">
@@ -168,8 +171,8 @@
                                     </div>
                                 </div>
                             </div>
+                            
 
-                            <!-- Modal -->
                             <div class="modal fade widget-explorer" id="createAnalyticsModal" tabindex="-1"
                                 aria-labelledby="createWidgetModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -237,7 +240,7 @@
                                 </div>
                             </div>
                             @include('frontend.user.projects.dialogs.widget_source')
-                        </section>                        
+                        </section>                         -->
 
                     </div>
                 </div>

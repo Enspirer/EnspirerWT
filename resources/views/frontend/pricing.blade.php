@@ -180,7 +180,7 @@
                 </div>
             </div>
             <div class="pricing-card premium-card">
-                <div class="special">Special</div>
+                <div class="special">Popular</div>
                 <div class="header">
                     <img src="{{url('images/landing_page/pricing_section/standard_icon.png')}}" alt="">
                     <div class="text-block">
