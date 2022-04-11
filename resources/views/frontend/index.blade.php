@@ -138,6 +138,16 @@
             <div class="image-block">
                 <img src="{{url('images/landing_page/home/ims-banner.png')}}" alt="">
             </div>
+            <div class="button-block">
+                <a href="#" class="cta-btn-border">
+                    <span class="text">Request Demo</span>
+                    <i class="bi bi-arrow-right-short"></i>
+                </a>
+                <a href="#" class="cta-btn-fill">
+                    <span class="text">Buy Now</span>
+                    <i class="bi bi-arrow-right-short"></i>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -221,6 +231,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="button-block">
+            <a href="#" class="cta-btn-border">
+                <span class="text">Request Demo</span>
+                <i class="bi bi-arrow-right-short"></i>
+            </a>
+            <a href="#" class="cta-btn-fill">
+                <span class="text">Buy Now</span>
+                <i class="bi bi-arrow-right-short"></i>
+            </a>
         </div>
     </section>
 
@@ -418,9 +438,9 @@
                     </div>
                 </div>
             </div>
-            <div class="footer">
+            <!-- <div class="footer">
                 <a href="{{url('contact')}}" class="cta-btn-fill"><span class="text">Talk to Our Team</span> <i class="bi bi-arrow-right-short"></i></a>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -468,6 +488,12 @@
                         </div>
                     </div>
                 @endif
+            </div>
+            <div class="button-block">
+                <a href="#" class="cta-btn-border">
+                    <span class="text">View More</span>
+                    <i class="bi bi-arrow-right-short"></i>
+                </a>
             </div>
         </div>
     </section>

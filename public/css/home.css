@@ -216,8 +216,7 @@
 .IMS-section {
     position: relative;
     padding: 3rem 0;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, #F5F6F8), color-stop(0, #fff));
-    background: linear-gradient(to bottom, #F5F6F8 75%, #fff 0);
+    background-color: #fff;
 }
 
 .IMS-section .heading {
@@ -284,13 +283,26 @@
     width: 100%;
 }
 
+.IMS-section .button-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.IMS-section .button-block a {
+    width: 215px;
+}
+
 .section-optimizer {
     background: url('../images/landing_page/home/section-optimizer-mask.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 5rem 0;
-    margin: 5rem 0;
+    margin: 5rem 0 0;
 }
 
 .section-optimizer .header {
@@ -324,6 +336,19 @@
 
 .section-optimizer .subcription-block::after {
     content: none;
+}
+
+.section-optimizer .button-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.section-optimizer .button-block a {
+    width: 215px;
 }
 
 .SEO-section {
@@ -841,6 +866,18 @@
     font-size: 14px;
 }
 
+.news-section .button-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.news-section .button-block a {
+    width: 215px;
+}
+
 @media screen and (max-width: 1399px) {
     .feature-section .body {
         flex-direction: column;
@@ -1036,6 +1073,14 @@
         flex-direction: column !important;
         align-items: center !important;
     }
+
+    .section-optimizer .button-block a {
+        margin: 0;
+    }
+
+    .IMS-section .button-block a {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 574px) {
@@ -1047,6 +1092,17 @@
     .IMS-section .card-block .card img {
         width: 70px;
     }
-}
 
-/*# sourceMappingURL=home.css.map */
+    .section-optimizer .button-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .IMS-section .button-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /*# sourceMappingURL=home.css.map */

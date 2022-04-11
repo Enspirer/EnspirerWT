@@ -28,20 +28,24 @@
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
-                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'market_place' ? 'active' : null }} {{ Request::segment(1) == 'portfolio' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
-                                Drop
+                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'market_place' ? 'active' : null }} {{ Request::segment(1) == 'portfolio' ? 'active' : null }} {{ Request::segment(1) == 'services' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
                             </a>
                             <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="productNav">
                                 <li>
                                     <a class="dropdown-item" href="{{url('market_place')}}">Marketplace</a>
                                 </li>
-                                <li><a class="dropdown-item" href="{{url('portfolio')}}">Portfolio</a>
+                                <li>
+                                    <a class="dropdown-item" href="{{url('portfolio')}}">Portfolio</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url('services')}}">Expert Center</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="{{url('services')}}" class="nav-link {{ Request::segment(1) == 'services' ? 'active' : null }}">Services</a>
+                        <a href="{{url('eshop')}}" class="nav-link {{ Request::segment(1) == 'eshop' ? 'active' : null }}">eShop</a>
                     </li>
                     <li class="nav-item mobile-none">
                         <a href="{{url('/')}}" class="nav-link brand-link">
@@ -51,10 +55,25 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{url('eshop')}}" class="nav-link {{ Request::segment(1) == 'eshop' ? 'active' : null }}">eShop</a>
+                        <a href="{{url('pricing')}}" class="nav-link {{ Request::segment(1) == 'pricing' ? 'active' : null }}">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{url('pricing')}}" class="nav-link {{ Request::segment(1) == 'pricing' ? 'active' : null }}">Pricing</a>
+                        <div class="dropdown">
+                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'market_place' ? 'active' : null }} {{ Request::segment(1) == 'portfolio' ? 'active' : null }} {{ Request::segment(1) == 'services' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
+                                Media
+                            </a>
+                            <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="productNav">
+                                <li>
+                                    <a class="dropdown-item" href="#">Latest News</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Promotions</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="{{url('contact')}}" class="nav-link {{ Request::segment(1) == 'contact' ? 'active' : null }}">Contact Us</a>
