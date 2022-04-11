@@ -178,7 +178,7 @@ class IMSProController extends Controller
                                 $sort_search = $request->search_name;
                                 $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('name', 'like', '%'.$sort_search.'%');
                             }
-                            $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('phone_number',$check_assigned_user->phone_number)->get()->unique('phone_number');
+                            $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('user_id',$get_use->id)->get()->unique('phone_number');
                         }
                         else{
                             
