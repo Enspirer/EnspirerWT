@@ -276,6 +276,44 @@ class AnalyticsController extends Controller
         return $possibleDateResults;
     }
 
+    private function getTraffic($website, $range, $type)
+    {
+        // If the date range is for a single day
+        if ($range['unit'] == 'hour') {
+            $rows = State::where([['website_id', '=', $website->id], ['name', '=', $type . '_hours']])
+                ->whereBetween('date', [$range['from'], $range['to']])
+                ->orderBy('date', 'asc')
+                ->get();
+
+            $output = ['00' => 0, '01' => 0, '02' => 0, '03' => 0, '04' => 0, '05' => 0, '06' => 0, '07' => 0, '08' => 0, '09' => 0, '10' => 0, '11' => 0, '12' => 0, '13' => 0, '14' => 0, '15' => 0, '16' => 0, '17' => 0, '18' => 0, '19' => 0, '20' => 0, '21' => 0, '22' => 0, '23' => 0];
+
+            // Map the values to each date
+            foreach ($rows as $row) {
+                $output[$row->value] = $row->count;
+            }
+        } else {
+            $rows = State::select([
+                DB::raw("date_format(`date`, '". str_replace(['Y', 'm', 'd'], ['%Y', '%m', '%d'], $range['format'])."') as `date_result`, SUM(`count`) as `aggregate`")
+            ])
+                ->where([['website_id', '=', $website->id], ['name', '=', $type]])
+                ->whereBetween('date', [$range['from'], $range['to']])
+                ->groupBy('date_result')
+                ->orderBy('date_result', 'asc')
+                ->get();
+
+            $rangeMap = $this->calcAllDates(Carbon::createFromFormat('Y-m-d', $range['from'])->format($range['format']), Carbon::createFromFormat('Y-m-d', $range['to'])->format($range['format']), $range['unit'], $range['format'], 0);
+
+            // Remap the result set, and format the array
+            $collection = $rows->mapWithKeys(function ($result) use($range) {
+                return [strval($range['unit'] == 'year' ? $result->date_result : Carbon::parse($result->date_result)->format($range['format'])) => $result->aggregate];
+            })->all();
+
+            // Merge the results with the pre-calculated possible time ranges
+            $output = array_replace($rangeMap, $collection);
+        }
+        return $output;
+    }
+
     public function analytics(Request $request,$id)
     {
         $project = Projects::where('id',$id)->first();

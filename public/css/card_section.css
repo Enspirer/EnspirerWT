@@ -723,6 +723,7 @@
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    margin: 3rem 0;
 }
 
 .realtime-table .header {
@@ -923,6 +924,10 @@
 
 
 /* Analytics Nav */
+.analytics-nav {
+    margin: 3rem 0;
+}
+
 .analytics-nav .navbar-nav {
     display: flex;
     flex-direction: row;
@@ -981,8 +986,8 @@
 }
 
 .analytics-nav .navbar-nav .nav-item .analytics-dropMenu {
-    /* width: 100%;
-    transform: translate(0, auto) !important; */
+    width: 85%;
+    /* transform: translate(0, auto) !important; */
     padding: 0.5rem 0 !important;
     border-right: none;
     border-bottom: none;

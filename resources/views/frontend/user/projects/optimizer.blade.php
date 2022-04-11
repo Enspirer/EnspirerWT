@@ -35,89 +35,6 @@
 
                         <div class="title">Tallentor Optimizer Features</div>
 
-                        <div class="subcription-block">
-                            <div class="active-overlay animate__animated animate__fadeIn">
-                                <div class="button-block">
-                                    <div class="btn-group">
-                                        <button type="button" class="act-btn ims-lite">
-                                            <i class="bi bi-file-earmark-text"></i>
-                                            <div class="text">iMS Lite</div>
-                                        </button>
-                                        <button type="button" class="act-btn">
-                                            <i class="bi bi-gear"></i>
-                                            <div class="text">Settings</div>
-                                        </button>
-                                        <button type="button" class="act-btn">
-                                            <i class="bi bi-code-slash"></i>
-                                            <div class="text">Add Script</div>
-                                        </button>                
-                                    </div>
-                                    <div class="btn-group">
-                                        <button type="button" class="act-btn delete">
-                                            <i class="bi bi-trash"></i>
-                                            <div class="text">Delete</div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-block">
-                                <div class="widget-block">
-                                    <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
-                                    <div class="content">
-                                        <div class="title">Desktop</div>
-                                        <ul class="options">
-                                            <li class="list-item">
-                                                <i class="bi green bi-check-circle-fill"></i>
-                                                <div class="text">Realtime View + Invites</div>
-                                            </li>
-                                            <li class="list-item">
-                                                <i class="bi green bi-check-circle-fill"></i>
-                                                <div class="text">Analytics Center</div>
-                                            </li>
-                                            <li class="list-item">
-                                                <i class="bi green bi-check-circle-fill"></i>
-                                                <div class="text">SEO Reports</div>
-                                            </li>
-                                            <li class="list-item">
-                                                <i class="bi green bi-check-circle-fill"></i>
-                                                <div class="text">Session Recording</div>
-                                            </li>
-                                            <li class="list-item">
-                                                <i class="bi green bi-check-circle-fill"></i>
-                                                <div class="text">Heatmaps</div>
-                                            </li>
-                                            <li class="list-item">
-                                                <i class="bi green bi-check-circle-fill"></i>
-                                                <div class="text">Security</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="widget-block">
-                                    <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
-                                    <div class="content">
-                                        <div class="title">Mobile</div>
-                                        <ul class="options">
-                                            <li class="list-item">
-                                                <i class="bi green bi-check-circle-fill"></i>
-                                                <div class="text">Realtime View</div>
-                                            </li>
-                                            <li class="list-item">
-                                                <i class="bi green bi-check-circle-fill"></i>
-                                                <div class="text">Visitor Invite</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-block">
-                                <a href="#" class="sub-btn" data-bs-toggle="modal" data-bs-target="#actOptimizer">
-                                    <i class="bi bi-plus"></i>
-                                    <div class="text">Activate</div>
-                                </a>
-                            </div>
-                        </div>
-
                         <div class="realtime-table">
                             <div class="header">
                                 <div class="title">Realtime View</div>
@@ -241,82 +158,87 @@
                             </div>
                         </div>
 
-                        <div class="analytics-nav my-5">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a href="#" class="nav-link">
-                                        <div class="text-block">
-                                            <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" alt="">
-                                            <div class="text">Overview</div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link" role="button" id="behavDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div class="text-block">
-                                            <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" alt="">
-                                            <div class="text">Behavior</div>
-                                        </div>
-                                        <i class="bi bi-chevron-down"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu analytics-dropMenu" aria-labelledby="behavDrop">
-                                        <li><a class="dropdown-item" href="#">Pages</a></li>
-                                        <li><a class="dropdown-item" href="#">Landing Pages</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link" role="button" id="acqDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div class="text-block">
-                                            <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" alt="">
-                                            <div class="text">Acquisitions</div>
-                                        </div>
-                                        <i class="bi bi-chevron-down"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu analytics-dropMenu" aria-labelledby="acqDrop">
-                                        <li><a class="dropdown-item" href="#">Referrers</a></li>
-                                        <li><a class="dropdown-item" href="#">Search engines</a></li>
-                                        <li><a class="dropdown-item" href="#">Social networks</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Campaigns</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link" role="button" id="geoDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div class="text-block">
-                                            <img src="{{url('images/dashboard/ims_pro/nav-geographic.png')}}" alt="">
-                                            <div class="text">Geographic </div>
-                                        </div>
-                                        <i class="bi bi-chevron-down"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu analytics-dropMenu" aria-labelledby="geoDrop">
-                                        <li><a class="dropdown-item" href="#">Continents</a></li>
-                                        <li><a class="dropdown-item" href="#">Countries</a></li>
-                                        <li><a class="dropdown-item" href="#">Cities</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Languages</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link" role="button" id="techDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div class="text-block">
-                                            <img src="{{url('images/dashboard/ims_pro/nav-technology.png')}}" alt="">
-                                            <div class="text">Technology</div>
-                                        </div>
-                                        <i class="bi bi-chevron-down"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu analytics-dropMenu" aria-labelledby="techDrop">
-                                        <li><a class="dropdown-item" href="#">Operating systems</a></li>
-                                        <li><a class="dropdown-item" href="#">Browsers</a></li>
-                                        <li><a class="dropdown-item" href="#">Screen resolutions</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Devices</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <div class="subcription-block">
+                            <div class="active-overlay animate__animated animate__fadeIn">
+                                <div class="button-block">
+                                    <div class="btn-group">
+                                        <button type="button" class="act-btn ims-lite">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                            <div class="text">iMS Lite</div>
+                                        </button>
+                                        <button type="button" class="act-btn">
+                                            <i class="bi bi-gear"></i>
+                                            <div class="text">Settings</div>
+                                        </button>
+                                        <button type="button" class="act-btn">
+                                            <i class="bi bi-code-slash"></i>
+                                            <div class="text">Add Script</div>
+                                        </button>                
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="act-btn delete">
+                                            <i class="bi bi-trash"></i>
+                                            <div class="text">Delete</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-block">
+                                <div class="widget-block">
+                                    <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
+                                    <div class="content">
+                                        <div class="title">Desktop</div>
+                                        <ul class="options">
+                                            <li class="list-item">
+                                                <i class="bi green bi-check-circle-fill"></i>
+                                                <div class="text">Realtime View + Invites</div>
+                                            </li>
+                                            <li class="list-item">
+                                                <i class="bi green bi-check-circle-fill"></i>
+                                                <div class="text">Analytics Center</div>
+                                            </li>
+                                            <li class="list-item">
+                                                <i class="bi green bi-check-circle-fill"></i>
+                                                <div class="text">SEO Reports</div>
+                                            </li>
+                                            <li class="list-item">
+                                                <i class="bi green bi-check-circle-fill"></i>
+                                                <div class="text">Session Recording</div>
+                                            </li>
+                                            <li class="list-item">
+                                                <i class="bi green bi-check-circle-fill"></i>
+                                                <div class="text">Heatmaps</div>
+                                            </li>
+                                            <li class="list-item">
+                                                <i class="bi green bi-check-circle-fill"></i>
+                                                <div class="text">Security</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="widget-block">
+                                    <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
+                                    <div class="content">
+                                        <div class="title">Mobile</div>
+                                        <ul class="options">
+                                            <li class="list-item">
+                                                <i class="bi green bi-check-circle-fill"></i>
+                                                <div class="text">Realtime View</div>
+                                            </li>
+                                            <li class="list-item">
+                                                <i class="bi green bi-check-circle-fill"></i>
+                                                <div class="text">Visitor Invite</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-block">
+                                <a href="#" class="sub-btn" data-bs-toggle="modal" data-bs-target="#actOptimizer">
+                                    <i class="bi bi-plus"></i>
+                                    <div class="text">Activate</div>
+                                </a>
+                            </div>
                         </div>
 
                         @include('frontend.user.projects.dialogs.widget_source')

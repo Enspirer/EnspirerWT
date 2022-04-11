@@ -151,29 +151,26 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('project_details/{id}/security',[SecurityController::class, 'security'])->name('project.security');
 
         // Analytics
-        Route::get('project_details/{id}/analytics',[AnalyticsController::class, 'analytics'])->name('project.analytics');
-        Route::get('project_details/{id}/analytics/page',[AnalyticsController::class, 'analyticsPages'])->name('projects.analytics.page');
-        Route::get('project_details/{id}/analytics/landing-page',[AnalyticsController::class, 'analyticsLandingPages'])->name('projects.analytics.landing_page');
-        Route::get('project_details/{id}/analytics/referrers',[AnalyticsController::class, 'analyticsReferrers'])->name('projects.analytics.referrers');
-        Route::get('project_details/{id}/analytics/search-engines',[AnalyticsController::class, 'analyticsSearchEngines'])->name('projects.analytics.search_engines');
-        Route::get('project_details/{id}/analytics/social-networks',[AnalyticsController::class, 'analyticsSocialNetworks'])->name('projects.analytics.social_networks');
-        Route::get('project_details/{id}/analytics/campaigns',[AnalyticsController::class, 'analyticsCampaigns'])->name('projects.analytics.campaigns');
-        Route::get('project_details/{id}/analytics/continents',[AnalyticsController::class, 'analyticsContinents'])->name('projects.analytics.continents');
-        Route::get('project_details/{id}/analytics/countries',[AnalyticsController::class, 'analyticsCountries'])->name('projects.analytics.countries');
-        Route::get('project_details/{id}/analytics/cities',[AnalyticsController::class, 'analyticsCities'])->name('projects.analytics.cities');
-        Route::get('project_details/{id}/analytics/languages',[AnalyticsController::class, 'analyticsLanguages'])->name('projects.analytics.languages');
-        Route::get('project_details/{id}/analytics/operating-systems',[AnalyticsController::class, 'analyticsOperatingSystems'])->name('projects.analytics.operating_systems');
-        Route::get('project_details/{id}/analytics/browsers',[AnalyticsController::class, 'analyticsBrowsers'])->name('projects.analytics.browsers');
-        Route::get('project_details/{id}/analytics/screen-resolutions',[AnalyticsController::class, 'analyticsScreenResolutions'])->name('projects.analytics.screen_resolutions');
-        Route::get('project_details/{id}/analytics/devices',[AnalyticsController::class, 'analyticsDevices'])->name('projects.analytics.devices');
+        Route::get('project_details/{id}/optimizer/analytics',[AnalyticsController::class, 'analytics'])->name('project.analytics');
+        Route::get('project_details/{id}/optimizer/analytics/page',[AnalyticsController::class, 'analyticsPages'])->name('projects.analytics.page');
+        Route::get('project_details/{id}/optimizer/analytics/landing-page',[AnalyticsController::class, 'analyticsLandingPages'])->name('projects.analytics.landing_page');
+        Route::get('project_details/{id}/optimizer/analytics/referrers',[AnalyticsController::class, 'analyticsReferrers'])->name('projects.analytics.referrers');
+        Route::get('project_details/{id}/optimizer/analytics/search-engines',[AnalyticsController::class, 'analyticsSearchEngines'])->name('projects.analytics.search_engines');
+        Route::get('project_details/{id}/optimizer/analytics/social-networks',[AnalyticsController::class, 'analyticsSocialNetworks'])->name('projects.analytics.social_networks');
+        Route::get('project_details/{id}/optimizer/analytics/campaigns',[AnalyticsController::class, 'analyticsCampaigns'])->name('projects.analytics.campaigns');
+        Route::get('project_details/{id}/optimizer/analytics/continents',[AnalyticsController::class, 'analyticsContinents'])->name('projects.analytics.continents');
+        Route::get('project_details/{id}/optimizer/analytics/countries',[AnalyticsController::class, 'analyticsCountries'])->name('projects.analytics.countries');
+        Route::get('project_details/{id}/optimizer/analytics/cities',[AnalyticsController::class, 'analyticsCities'])->name('projects.analytics.cities');
+        Route::get('project_details/{id}/optimizer/analytics/languages',[AnalyticsController::class, 'analyticsLanguages'])->name('projects.analytics.languages');
+        Route::get('project_details/{id}/optimizer/analytics/operating-systems',[AnalyticsController::class, 'analyticsOperatingSystems'])->name('projects.analytics.operating_systems');
+        Route::get('project_details/{id}/optimizer/analytics/browsers',[AnalyticsController::class, 'analyticsBrowsers'])->name('projects.analytics.browsers');
+        Route::get('project_details/{id}/optimizer/analytics/screen-resolutions',[AnalyticsController::class, 'analyticsScreenResolutions'])->name('projects.analytics.screen_resolutions');
+        Route::get('project_details/{id}/optimizer/analytics/devices',[AnalyticsController::class, 'analyticsDevices'])->name('projects.analytics.devices');
 
         Route::get('project_details/{id}/widget',[ChatController::class, 'widget'])->name('project.chat');
         Route::get('project_details/{id}/widget_plus',[ChatController::class, 'widget_plus'])->name('project.widget_plus');
-        Route::get('project_details/{id}/optimizer',[ChatController::class, 'optimizer'])->name('project.optimizer');
+        Route::get('project_details/{id}/optimizer/realtime',[ChatController::class, 'optimizer'])->name('project.optimizer');
         Route::get('project_details/{id}/optimizer_plus',[ChatController::class, 'optimizer_plus'])->name('project.optimizer_plus');
-
-
-
 
 
         Route::post('user_projects/store', [DashboardController::class, 'user_projects_store'])->name('user_projects.store');

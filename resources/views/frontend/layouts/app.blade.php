@@ -108,7 +108,7 @@
                 const indicator2 = slideWrapper.querySelector('li:nth-child(2) .custom__pagination__page')
                 const indicator3 = slideWrapper.querySelector('li:nth-child(3) .custom__pagination__page')
                 indicator1.textContent = 'Widget Lite';
-                indicator2.textContent = 'Widget Plus';
+                indicator2.textContent = 'Widget Pro';
                 indicator3.textContent = 'Optimizer';
             })
         </script>
