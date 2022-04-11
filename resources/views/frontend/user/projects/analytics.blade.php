@@ -32,6 +32,48 @@
 
                     @include('frontend.user.projects.includes.analytics_nav')
 
+                    <div class="graph-section">
+                        <div class="header">
+                            <div class="title">Overview</div>
+                            <div class="date">3 days ago</div>
+                        </div>
+                        <div class="body">
+                            <div class="graph">
+                                <div id="analyticsGraph" style="width: 800px;height:400px;margin:auto;"></div>
+                            </div>
+                            <div class="stats">
+                                <div class="stats-block">
+                                    <div class="content">
+                                        <div class="header">
+                                            <i class="bi blue bi-square-fill"></i>
+                                            <div class="text">Visitors</div>
+                                            <i class="bi bi-info-circle"></i>
+                                        </div>
+                                        <div class="precent">
+                                            <i class="bi blue bi-arrow-up-right"></i>
+                                            <div class="text blue">86.4%</div>
+                                        </div>
+                                    </div>
+                                    <div class="info">15</div>
+                                </div>
+                                <div class="stats-block">
+                                    <div class="content">
+                                        <div class="header">
+                                            <i class="bi red bi-square-fill"></i>
+                                            <div class="text">Pageviews</div>
+                                            <i class="bi bi-info-circle"></i>
+                                        </div>
+                                        <div class="precent">
+                                            <i class="bi red bi-arrow-down-right"></i>
+                                            <div class="text red">48.2%</div>
+                                        </div>
+                                    </div>
+                                    <div class="info">15</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row g-4 mb-4">
                         <div class="col-6">                                    
                             <div class="data-chart data-chart-feature">
@@ -577,6 +619,55 @@
 
 
 @push('after-scripts')
+
+<script type="text/javascript">
+    // Initialize the echarts instance based on the prepared dom
+    var myChart = echarts.init(document.getElementById('analyticsGraph'));
+
+    // Specify the configuration items and data for the chart
+    option = {
+    tooltip: {
+        trigger: 'axis'
+    },
+    color: [
+    '#f00',
+    '#017FFA',
+    ],
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+        name: 'Pageviews',
+        type: 'line',
+        stack: 'Total',
+        areaStyle: {},
+        data: [120, 132, 101, 134, 90, 230, 210,124,210,130,120,160,]
+        },
+        {
+        name: 'Visitors',
+        type: 'line',
+        stack: 'Total',
+        areaStyle: {},
+        data: [220, 182, 191, 234, 290, 330, 310,148,200,120,150,164,]
+        }
+    ]
+    };
+
+    // Display the chart using the configuration items and data just specified.
+    myChart.setOption(option);
+</script>
 
 @endpush
 

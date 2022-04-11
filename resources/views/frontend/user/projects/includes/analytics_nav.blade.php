@@ -282,7 +282,7 @@
 
 <div class="analytics-nav">
     <ul class="navbar-nav">
-        <li class="nav-item active">
+        <li class="nav-item {{Request::segment(5)=='overview' ? 'active' :null }}">
             <a href="{{route('frontend.user.project.analytics',$project_id)}}" class="nav-link">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" alt="">
@@ -290,7 +290,7 @@
                 </div>
             </a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown {{Request::segment(5)=='behavior' ? 'active' :null }}">
             <a href="#" class="nav-link" role="button" id="behavDrop" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" alt="">
@@ -304,7 +304,7 @@
                 <li><a class="dropdown-item" href="{{route('frontend.user.projects.analytics.landing_page',$project_id)}}">Landing Pages</a></li>
             </ul>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown {{Request::segment(5)=='acquisitions' ? 'active' :null }}">
             <a href="#" class="nav-link" role="button" id="acqDrop" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" alt="">
@@ -321,11 +321,11 @@
                 <li><a class="dropdown-item" href="{{route('frontend.user.projects.analytics.campaigns',$project_id)}}">Campaigns</a></li>
             </ul>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown {{Request::segment(5)=='geographic' ? 'active' :null }}">
             <a href="#" class="nav-link" role="button" id="geoDrop" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-geographic.png')}}" alt="">
-                    <div class="text">Geographic </div>
+                    <div class="text">Geographic</div>
                 </div>
                 <i class="bi bi-chevron-down"></i>
             </a>
@@ -338,7 +338,7 @@
                 <li><a class="dropdown-item" href="{{route('frontend.user.projects.analytics.languages',$project_id)}}">Languages</a></li>
             </ul>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown {{Request::segment(5)=='technology' ? 'active' :null }}">
             <a href="#" class="nav-link" role="button" id="techDrop" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-technology.png')}}" alt="">

@@ -474,3 +474,98 @@
     font-weight: 500;
     color: #757575;
 }
+
+/* Graph */
+
+.graph-section {
+    margin: 3rem 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+}
+
+.graph-section .header {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.graph-section .header .title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.graph-section .header .date {
+    font-size: 12px;
+    color: #999;
+}
+
+.graph-section .body {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.graph-section .body .graph {
+    flex: 0 0 75%;
+}
+
+.graph-section .body .stats {
+    flex: 0 0 25%;
+}
+
+.graph-section .body .stats .stats-block {
+    background-color: #F7FBFF;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.graph-section .body .stats .stats-block .content .blue {
+    color: #017FFA;
+}
+
+.graph-section .body .stats .stats-block .content .red {
+    color: #f00;
+}
+
+.graph-section .body .stats .stats-block .content .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.graph-section .body .stats .stats-block .content .header .bi {
+    font-size: 14px;
+    color: #999;
+}
+
+.graph-section .body .stats .stats-block .content .header .text {
+    font-size: 14px;
+    color: #333;
+}
+
+.graph-section .body .stats .stats-block .content .precent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.graph-section .body .stats .stats-block .info {
+    font-size: 22px;
+}
