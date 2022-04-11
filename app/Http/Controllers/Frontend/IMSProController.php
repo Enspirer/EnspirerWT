@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Projects;
 use App\Models\Widgets;
 use App\Models\IMSProUsers;
+use App\Models\Inquiries_Status;
 use App\Models\ImsProClientMessages;
 use App\Models\ImsProContacts;
 use DataTables;
@@ -70,30 +71,30 @@ class IMSProController extends Controller
             }
         } 
 
-        $get_user = Cart::getContent();
-        // dd($get_user);
+        // $get_user = Cart::getContent();
+        // // dd($get_user);
 
         $check_assigned_user = null;
 
-        if(!empty( auth()->user()->id) === true ){
-            if($ims_pro_user->user_id == auth()->user()->id){
-                $check_assigned_user = $ims_pro_user;
-            }
-        }
-        else{
-            if(count($get_user) != 0){
+        // if(!empty( auth()->user()->id) === true ){
+        //     if($ims_pro_user->user_id == auth()->user()->id){
+        //         $check_assigned_user = $ims_pro_user;
+        //     }
+        // }
+        // else{
+        //     if(count($get_user) != 0){
 
-                if($phone_number != 'phone_number'){
+        //         if($phone_number != 'phone_number'){
     
-                    foreach($get_user as $get_use){
-                        $check_assigned_user = ImsProClientMessages::where('project_id',$id)->where('phone_number',$phone_number)->where('core_type','assign')->where('type',$type)->where('user_id',$get_use->id)->first();
-                        // dd( $check_assigned_user);                    
-                        break;
-                    }
-                }
+        //             foreach($get_user as $get_use){
+        //                 $check_assigned_user = ImsProClientMessages::where('project_id',$id)->where('phone_number',$phone_number)->where('core_type','assign')->where('type',$type)->where('user_id',$get_use->id)->first();
+        //                 // dd( $check_assigned_user);                    
+        //                 break;
+        //             }
+        //         }
                         
-            }
-        }
+        //     }
+        // }
         
 
         // dd($check_assigned_user);
@@ -130,13 +131,75 @@ class IMSProController extends Controller
 
        
         $sort_search =null;
-        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->orderBy('id','desc');
+        $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->orderBy('id','desc');       
 
-        if ($request->has('search_name')){
-            $sort_search = $request->search_name;
-            $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('name', 'like', '%'.$sort_search.'%');
+        if(!empty( auth()->user()->id) === true ){
+
+            if($ims_pro_user->user_id == auth()->user()->id){
+                if ($request->has('search_name')){
+                    $sort_search = $request->search_name;
+                    $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('name', 'like', '%'.$sort_search.'%');
+                }
+                $all_ims_pro_client_messages = $all_ims_pro_client_messages->get()->unique('phone_number');
+            }
+            else{
+                $all_ims_pro_client_messages = null;
+            }
+            
         }
-        $all_ims_pro_client_messages = $all_ims_pro_client_messages->get()->unique('phone_number');
+        else{
+
+            $get_user = Cart::getContent();
+            // dd($get_user);
+
+            if(count($get_user) != 0){    
+                foreach($get_user as $get_use){
+
+                    $ims_pro_user_checking = IMSProUsers::where('id',$get_use->id)->first();
+                    // dd($ims_pro_user_checking);
+
+
+                    if($ims_pro_user_checking->role == 'Admin'){
+                    // dd($ims_pro_user_checking);
+
+                        if ($request->has('search_name')){
+                            $sort_search = $request->search_name;
+                            $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('name', 'like', '%'.$sort_search.'%');
+                        }
+                        $all_ims_pro_client_messages = $all_ims_pro_client_messages->get()->unique('phone_number');
+
+                    }
+                    else{
+                        $check_assigned_user = ImsProClientMessages::where('project_id',$id)->where('core_type','assign')->where('user_id',$get_use->id)->first();
+                        // dd($check_assigned_user);
+
+                        if($check_assigned_user){
+                            if ($request->has('search_name')){
+                                $sort_search = $request->search_name;
+                                $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('name', 'like', '%'.$sort_search.'%');
+                            }
+                            $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('phone_number',$check_assigned_user->phone_number)->get()->unique('phone_number');
+                        }
+                        else{
+                            
+                            $all_ims_pro_client_messages = null;
+                        }
+                    }
+                    
+
+                    // $check_assigned_user = ImsProClientMessages::where('project_id',$id)->where('phone_number',$phone_number)->where('core_type','assign')->where('type',$type)->where('user_id',$get_use->id)->first();
+                    // dd( $check_assigned_user);     
+                    
+                    
+                    
+                    break;
+                }       
+            }
+        }
+
+
+
+        
         // dd($all_ims_pro_client_messages);
 
         // dd($phone_number);
@@ -165,6 +228,8 @@ class IMSProController extends Controller
             'solo_ims_pro_assigned' => $solo_ims_pro_assigned
         ]);
     }    
+
+    
 
     public function ims_pro_chat_summary($id)
     {     
@@ -456,6 +521,42 @@ class IMSProController extends Controller
         $add->core_type = $core_type;
 
         $add->save();
+
+
+        $inquiries_status = Inquiries_Status::where('project_id',$ims_pro_project_id)->where('phone_number',$ims_pro_phone_number)->first();
+        
+        if($inquiries_status == null){
+
+            $add = new Inquiries_Status;
+
+            $add->phone_number = $ims_pro_phone_number;
+            $add->email = $email;
+            $add->assign_user = $name;
+            $add->assign_user_type = $type;
+            $add->bookmarked_messages = $message;
+            $add->status = 'Pending';
+            $add->role = $ims_pro_user->role;
+            $add->project_id = $ims_pro_project_id;
+            $add->widget_id = $ims_pro_widget_id;
+    
+            $add->save();
+        }
+        else{
+
+            $update = new Inquiries_Status;
+
+            $update->phone_number = $ims_pro_phone_number;
+            $update->email = $email;
+            $update->assign_user = $name;
+            $update->assign_user_type = $type;
+            $update->bookmarked_messages = $message;
+            $update->status = 'Pending';
+            $update->role = $ims_pro_user->role;
+            $update->project_id = $ims_pro_project_id;
+            $update->widget_id = $ims_pro_widget_id;
+
+            Inquiries_Status::whereId($inquiries_status->id)->update($update->toArray());
+        }
 
     }
 

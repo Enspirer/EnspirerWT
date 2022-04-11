@@ -62,6 +62,9 @@
                                                     <div class="inner-wrapper">
                                                         <ul class="list-group list-group-flush">
 
+                                                        
+
+                                                            @if($all_ims_pro_client_messages != null)
                                                             @if(count($all_ims_pro_client_messages) != 0)
                                                                 @foreach($all_ims_pro_client_messages as $ims_pro_client_message)
                                                                     @if($solo_ims_pro_client == null)
@@ -113,7 +116,6 @@
                                                                             @if($ims_pro_client_message->phone_number == "")
 
                                                                             @else
-                                                                                @if($check_assigned_user != null)
                                                                                     <li class="list-group-item active">
                                                                                         <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
                                                                                             <div class="header">
@@ -151,7 +153,6 @@
                                                                                             <div class="message">{{$ims_pro_client_message->message}}</div>
                                                                                         </a>
                                                                                     </li>
-                                                                                @endif
                                                                             @endif
 
                                                                         @else
@@ -159,7 +160,6 @@
                                                                             @if($ims_pro_client_message->phone_number == "")
 
                                                                             @else
-                                                                                @if($check_assigned_user != null)
                                                                                     <li class="list-group-item">
                                                                                         <a href="{{route('frontend.user_widget.ims_pro_index',[$ims_pro_client_message->project_id,$ims_pro_client_message->phone_number,$ims_pro_client_message->type])}}" class="list-link">
                                                                                             <div class="header">
@@ -197,7 +197,6 @@
                                                                                             <div class="message">{{$ims_pro_client_message->message}}</div>
                                                                                         </a>
                                                                                     </li>
-                                                                                @endif
                                                                             @endif
 
                                                                         @endif
@@ -210,6 +209,8 @@
                                                                     'not_found_button_caption' => null
                                                                 ])
                                                             @endif
+                                                            @endif
+
 
 
 
@@ -240,7 +241,6 @@
                                         </div>
                                         <div class="col-5">
                                             @if($solo_ims_pro_client != null)
-                                                @if($check_assigned_user != null)
                                                     <div class="chat-window">
                                                         <div class="header">
                                                             <div class="profile-block">
@@ -410,7 +410,6 @@
                                                         @endif
 
                                                     </div>
-                                                @endif
                                             @else
                                                 @include('frontend.includes.not_found_chat',[
                                                     'not_found_title' => 'Chats Details Not Found',
@@ -421,7 +420,6 @@
                                         </div>
                                         <div class="col-4">
                                             @if($solo_ims_pro_client != null)
-                                                @if($check_assigned_user != null)
                                                     <div class="info-window">
                                                         <div class="header">
                                                             <div class="status">In Progress</div>
@@ -573,7 +571,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                @endif
                                             @else
                                                 @include('frontend.includes.not_found_chat',[
                                                     'not_found_title' => 'Chats Details Not Found',
