@@ -21,6 +21,11 @@ class AnalyticsController extends Controller
         return ['www.google.com', 'www.google.com', 'www.google.ad', 'www.google.ae', 'www.google.com.af', 'www.google.com.ag', 'www.google.com.ai', 'www.google.al', 'www.google.am', 'www.google.co.ao', 'www.google.com.ar', 'www.google.as', 'www.google.at', 'www.google.com.au', 'www.google.az', 'www.google.ba', 'www.google.com.bd', 'www.google.be', 'www.google.bf', 'www.google.bg', 'www.google.com.bh', 'www.google.bi', 'www.google.bj', 'www.google.com.bn', 'www.google.com.bo', 'www.google.com.br', 'www.google.bs', 'www.google.bt', 'www.google.co.bw', 'www.google.by', 'www.google.com.bz', 'www.google.ca', 'www.google.cd', 'www.google.cf', 'www.google.cg', 'www.google.ch', 'www.google.ci', 'www.google.co.ck', 'www.google.cl', 'www.google.cm', 'www.google.cn', 'www.google.com.co', 'www.google.co.cr', 'www.google.com.cu', 'www.google.cv', 'www.google.com.cy', 'www.google.cz', 'www.google.de', 'www.google.dj', 'www.google.dk', 'www.google.dm', 'www.google.com.do', 'www.google.dz', 'www.google.com.ec', 'www.google.ee', 'www.google.com.eg', 'www.google.es', 'www.google.com.et', 'www.google.fi', 'www.google.com.fj', 'www.google.fm', 'www.google.fr', 'www.google.ga', 'www.google.ge', 'www.google.gg', 'www.google.com.gh', 'www.google.com.gi', 'www.google.gl', 'www.google.gm', 'www.google.gr', 'www.google.com.gt', 'www.google.gy', 'www.google.com.hk', 'www.google.hn', 'www.google.hr', 'www.google.ht', 'www.google.hu', 'www.google.co.id', 'www.google.ie', 'www.google.co.il', 'www.google.im', 'www.google.co.in', 'www.google.iq', 'www.google.is', 'www.google.it', 'www.google.je', 'www.google.com.jm', 'www.google.jo', 'www.google.co.jp', 'www.google.co.ke', 'www.google.com.kh', 'www.google.ki', 'www.google.kg', 'www.google.co.kr', 'www.google.com.kw', 'www.google.kz', 'www.google.la', 'www.google.com.lb', 'www.google.li', 'www.google.lk', 'www.google.co.ls', 'www.google.lt', 'www.google.lu', 'www.google.lv', 'www.google.com.ly', 'www.google.co.ma', 'www.google.md', 'www.google.me', 'www.google.mg', 'www.google.mk', 'www.google.ml', 'www.google.com.mm', 'www.google.mn', 'www.google.ms', 'www.google.com.mt', 'www.google.mu', 'www.google.mv', 'www.google.mw', 'www.google.com.mx', 'www.google.com.my', 'www.google.co.mz', 'www.google.com.na', 'www.google.com.ng', 'www.google.com.ni', 'www.google.ne', 'www.google.nl', 'www.google.no', 'www.google.com.np', 'www.google.nr', 'www.google.nu', 'www.google.co.nz', 'www.google.com.om', 'www.google.com.pa', 'www.google.com.pe', 'www.google.com.pg', 'www.google.com.ph', 'www.google.com.pk', 'www.google.pl', 'www.google.pn', 'www.google.com.pr', 'www.google.ps', 'www.google.pt', 'www.google.com.py', 'www.google.com.qa', 'www.google.ro', 'www.google.ru', 'www.google.rw', 'www.google.com.sa', 'www.google.com.sb', 'www.google.sc', 'www.google.se', 'www.google.com.sg', 'www.google.sh', 'www.google.si', 'www.google.sk', 'www.google.com.sl', 'www.google.sn', 'www.google.so', 'www.google.sm', 'www.google.sr', 'www.google.st', 'www.google.com.sv', 'www.google.td', 'www.google.tg', 'www.google.co.th', 'www.google.com.tj', 'www.google.tl', 'www.google.tm', 'www.google.tn', 'www.google.to', 'www.google.com.tr', 'www.google.tt', 'www.google.com.tw', 'www.google.co.tz', 'www.google.com.ua', 'www.google.co.ug', 'www.google.co.uk', 'www.google.com.uy', 'www.google.co.uz', 'www.google.com.vc', 'www.google.co.ve', 'www.google.vg', 'www.google.co.vi', 'www.google.com.vn', 'www.google.vu', 'www.google.ws', 'www.google.rs', 'www.google.co.za', 'www.google.co.zm', 'www.google.co.zw', 'www.google.cat', 'www.bing.com', 'search.yahoo.com', 'uk.search.yahoo.com', 'de.search.yahoo.com', 'fr.search.yahoo.com', 'es.search.yahoo.com', 'search.aol.co.uk', 'search.aol.com', 'duckduckgo.com', 'www.baidu.com', 'yandex.ru', 'www.ecosia.org', 'search.lycos.com'];
     }
 
+    private function getSocialNetworksList()
+    {
+        return ['l.facebook.com', 't.co', 'l.instagram.com', 'out.reddit.com', 'www.youtube.com', 'away.vk.com', 't.umblr.com', 'www.pinterest.com'];
+    }
+
     private function range()
     {
         try {
@@ -396,86 +401,1531 @@ class AnalyticsController extends Controller
     }
 
     public function analyticsPages($id){
+
+        $project = Projects::where('id',$id)->first();
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer'], ['value', '<>', $website->url], ['value', '<>', '']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+
+
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
         return view('frontend.user.projects.analytics.page',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total
         ]);
     }
 
-    public function analyticsLandingPages($id){
+    public function analyticsLandingPages(Request $request, $id){
+
+        $project = Projects::where('id',$id)->first();
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer'], ['value', '<>', $website->url], ['value', '<>', '']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'landing_page']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $landingPages = $this->getLandingPages($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getLandingPages($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getLandingPages($website, $range, null, ['count', 'asc'])
+            ->first();
         return view('frontend.user.projects.analytics.landing_page',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'landingPages'=>$landingPages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total
         ]);
     }
 
     public function analyticsReferrers($id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+        $range = $this->range();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer'], ['value', '<>', $website->url], ['value', '<>', '']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
         return view('frontend.user.projects.analytics.referrers',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total
         ]);
     }
 
-    public function analyticsSearchEngines($id){
+    public function analyticsSearchEngines(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSearchEnginesList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'page']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
         return view('frontend.user.projects.analytics.search_engines',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'searchEngines' => $searchEngines
         ]);
     }
 
-    public function analyticsSocialNetworks($id){
+    public function analyticsSocialNetworks(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $socialNetworks = $this->getSocialNetworks($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getSocialNetworks($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getSocialNetworks($website, $range, null, ['count', 'asc'])
+            ->first();
+
         return view('frontend.user.projects.analytics.social_networks',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'socialNetworks' => $socialNetworks
         ]);
     }
 
-    public function analyticsCampaigns($id){
+    public function analyticsCampaigns(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $campaigns = $this->getCampaigns($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getCampaigns($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getCampaigns($website, $range, null, ['count', 'asc'])
+            ->first();
+
         return view('frontend.user.projects.analytics.campaigns',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'campaigns' => $campaigns
         ]);
     }
 
-    public function analyticsContinents($id){
+    public function analyticsContinents(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $continents = $this->getContinents($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getContinents($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getContinents($website, $range, null, ['count', 'asc'])
+            ->first();
+
         return view('frontend.user.projects.analytics.continents',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'continents' => $continents
         ]);
     }
 
-    public function analyticsCountries($id){
+    public function analyticsCountries(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $countries = $this->getCountries($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getCountries($website, $range, null, ['count', 'asc'])
+            ->first();
+
         return view('frontend.user.projects.analytics.countries',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'countries' => $countries
         ]);
     }
 
-    public function analyticsCities($id){
+    public function analyticsCities(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $cities = $this->getCities($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getCities($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getCities($website, $range, null, ['count', 'asc'])
+            ->first();
+
+
         return view('frontend.user.projects.analytics.cities',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'cities' => $cities
         ]);
     }
 
-    public function analyticsLanguages($id){
+    public function analyticsLanguages(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $languages = $this->getLanguages($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getLanguages($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getLanguages($website, $range, null, ['count', 'asc'])
+            ->first();
+
         return view('frontend.user.projects.analytics.languages',[
-            'project_id' => $id
+             'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'operatingSystems' => $operatingSystems,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'languages' => $languages
         ]);
     }
 
-    public function analyticsOperatingSystems($id){
+    public function analyticsOperatingSystems(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getOperatingSystems($website, $range, null, ['count', 'asc'])
+            ->first();
+
+
         return view('frontend.user.projects.analytics.operating_systems',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'operatingSystems' => $operatingSystems
         ]);
     }
 
-    public function analyticsBrowsers($id){
+    public function analyticsBrowsers(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $browsers = $this->getBrowsers($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getBrowsers($website, $range, null, ['count', 'asc'])
+            ->first();
+
         return view('frontend.user.projects.analytics.browsers',[
-            'project_id' => $id
+             'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'operatingSystems' => $operatingSystems
         ]);
     }
 
-    public function analyticsScreenResolutions($id){
+    public function analyticsScreenResolutions(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $screenResolutions = $this->getScreenResolutions($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getScreenResolutions($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getScreenResolutions($website, $range, null, ['count', 'asc'])
+            ->first();
+
         return view('frontend.user.projects.analytics.screen_resolutions',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'screenResolutions' => $screenResolutions
         ]);
     }
 
-    public function analyticsDevices($id){
+    public function analyticsDevices(Request $request,$id){
+
+        $project = Projects::where('id',$id)->first();           
+        $ims_client = ImsClients::where('project_id',$project->id)->get();
+        // dd($project->id);
+
+        $website = Projects::where('url', $project->url)->firstOrFail();
+
+
+        $range = $this->range();
+        $search = $request->input('search');
+        if ($request->input('sort') == 'min') {
+            $sort = ['count', 'asc', 'min'];
+        } else {
+            $sort = ['count', 'desc', 'max'];
+        }
+        $websites = $this->getSocialNetworksList();
+
+        $visitorsMap = $this->getTraffic($website, $range, 'visitors');
+        $pageviewsMap = $this->getTraffic($website, $range, 'pageviews');
+
+        $totalVisitors = $totalPageviews = 0;
+        foreach ($visitorsMap as $key => $value) {
+            $totalVisitors = $totalVisitors + $value;
+        }
+
+        foreach ($pageviewsMap as $key => $value) {
+            $totalPageviews = $totalPageviews + $value;
+        }
+
+
+        $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+
+        $totalPageviewsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'pageviews']])
+            ->whereBetween('date', [$range['from_old'], $range['to_old']])
+            ->sum('count');
+
+        $total = State::selectRaw('SUM(`count`) as `count`')
+            ->where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereIn('value', $websites)
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->first();
+
+        $searchEngines = $this->getSearchEngines($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+            
+
+        $pages = $this->getPages($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $totalReferrers = State::where([['website_id', '=', $website->id], ['name', '=', 'referrer']])
+            ->whereBetween('date', [$range['from'], $range['to']])
+            ->sum('count');
+
+        $referrers = $this->getReferrers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $countries = $this->getCountries($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $browsers = $this->getBrowsers($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $operatingSystems = $this->getOperatingSystems($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+        $events = $this->getEvents($website, $range, null, ['count', 'desc'])
+            ->limit(5)
+            ->get();
+
+
+        $devices = $this->getDevices($website, $range, $search, $sort)
+            ->paginate(config('settings.paginate'))
+            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
+
+        $first = $this->getDevices($website, $range, null, ['count', 'desc'])
+            ->first();
+
+        $last = $this->getDevices($website, $range, null, ['count', 'asc'])
+            ->first();
+
+
         return view('frontend.user.projects.analytics.devices',[
-            'project_id' => $id
+            'view' => 'overview',
+            'project_id' => $project->id,
+            'ims_client' => $ims_client,
+            'website' => $website,
+            'range' => $range,
+            'referrers' => $referrers,
+            'pages' => $pages,
+            'visitorsMap' => $visitorsMap,
+            'pageviewsMap' => $pageviewsMap,
+            'countries' => $countries,
+            'browsers' => $browsers,
+            'events' => $events,
+            'totalVisitors' => $totalVisitors,
+            'totalPageviews' => $totalPageviews,
+            'totalVisitorsOld' => $totalVisitorsOld,
+            'totalPageviewsOld' => $totalPageviewsOld,
+            'totalReferrers' => $totalReferrers,
+            'total' => $total,
+            'devices' => $devices
         ]);
     }
 }
