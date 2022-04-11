@@ -115,4 +115,33 @@
   max-width: 100%;
 }
 
+.section-setupProcess {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin: 3rem 0;
+}
+.section-setupProcess .activation-info {
+  font-size: 16px;
+  font-weight: 300;
+}
+.section-setupProcess .title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #017FFA;
+  margin: 2rem 0;
+}
+.section-setupProcess .process-img {
+  max-width: 100%;
+  width: 800px;
+  margin: auto;
+  display: block;
+}
+.section-setupProcess .text {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 3rem 0 1rem;
+}
+
 /*# sourceMappingURL=ims_pro-media_scan.css.map */
