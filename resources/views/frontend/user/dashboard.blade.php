@@ -279,10 +279,18 @@
                                         </div>
                                         <div class="row g-0 py-2 align-items-center">
                                             <div class="col-xxl-4 my-3 info-blocks seo-block">
-                                                <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                @if($project_detail->selected_package == 'All In One Widget + IMS Lite')
+                                                    <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                @elseif($project_detail->selected_package == 'All In One Widget + IMS Pro')
+                                                    <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                @endif
                                                 <div class="text-block">
                                                     <div class="title">Package</div>
-                                                    <div class="package">Widget Lite</div>
+                                                    @if($project_detail->selected_package != null)
+                                                        <div class="package">{{$project_detail->selected_package}}</div>
+                                                    @else
+                                                        <div class="package">Not Selected</div>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-xxl-4 my-3 info-blocks analytics-block">
@@ -291,29 +299,37 @@
                                                         <div class="col-sm-auto col-8 my-sm-0 my-2">
                                                             <span class="block-title mb-2">Realtime</span>
                                                             <span class="sub-title">Visitors</span>
-                                                            @if(App\Models\Widgets::where('project_id',$project_detail->id)->first() != null)
-                                                            <span class="precentage up"><i class="bi bi-graph-up-arrow up"> {{ App\Models\Widgets::where('project_id',$project_detail->id)->first()->load_count }}</i></span>
-                                                            @else
-                                                            <span class="precentage up"><i class="bi bi-graph-up-arrow up"> No Details</i></span>
-                                                            @endif
+                                                            <span class="precentage up"><i class="bi bi-graph-up-arrow up"> {{ count(App\Models\VisitorCount::where('project_id',$project_detail->id)->get()) }}</i></span>
+                                                           
                                                         </div>
                                                         <div class="col-sm-auto col-8 my-sm-0 my-2">
                                                             <span class="sub-title">Pageviews</span>
-                                                            <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i>{{ count(App\Models\VisitorCount::where('project_id',$project_detail->id)->get()) }}</span>
+                                                            @if(App\Models\Widgets::where('project_id',$project_detail->id)->first() != null)
+                                                             <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i> {{ App\Models\Widgets::where('project_id',$project_detail->id)->first()->load_count }}</span>
+                                                            @else
+                                                             <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i> No Details</span>
+                                                            @endif
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-xxl-4 my-3 info-blocks statics-block">
-                                                <div class="progress-wrapper">
-                                                    <div class="lbl lbl-start">Start Date</div>
-                                                    <div class="lbl lbl-end">End Date</div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                                @if($project_detail->package_starting_date != null)
+                                                    <div class="progress-wrapper">
+                                                        <div class="lbl lbl-start">Start Date</div>
+                                                        <div class="lbl lbl-end">End Date</div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuemin="0" style="width: {{get_expire_date($project_detail->id)['remaining_days'] / 30 * 100}}%;" aria-valuemax="30"></div>
+                                                        </div>
+                                                        <div class="date date-start">{{$project_detail->package_starting_date}}</div>
+                                                        <div class="date date-end">{{$project_detail->expire_date}}</div>
                                                     </div>
-                                                    <div class="date date-start">2022.04.01</div>
-                                                    <div class="date date-end">2022.05.01</div>
-                                                </div>
+                                                @else
+                                                    <div class="progress-wrapper">
+                                                        <div class="lbl lbl-start">Not Selected</div>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
