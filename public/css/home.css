@@ -776,6 +776,8 @@
 
 .news-section .inner-wrapper .card .image-block img {
     width: 100%;
+    height: 254px;
+    object-fit: cover;
 }
 
 .news-section .inner-wrapper .card .content-block {
@@ -815,6 +817,11 @@
     font-size: 16px;
     font-weight: 300;
     margin-bottom: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .news-section .inner-wrapper .card .content-block .footer {

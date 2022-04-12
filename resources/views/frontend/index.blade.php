@@ -455,14 +455,14 @@
                     @foreach($posts as $key => $post)
                         <div class="card">
                             <div class="image-block">
-                                <img src="{{uploaded_asset($post->feature_image)}}" style="height:254px; width:100%; object-fit:cover;" alt="">
+                                <img src="{{uploaded_asset($post->feature_image)}}" alt="">
                             </div>
                             <div class="content-block">
                                 <div class="header">
                                     <img src="{{uploaded_asset(Modules\Blog\Entities\Category::where('id',$post->category)->first()->image)}}" alt="">
                                     <div class="title">{{$post->title}}</div>
                                 </div>
-                                <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{!! $post->description !!}</div>
+                                <div class="text">{!! $post->description !!}</div>
                                 <div class="footer">
                                     <a href="{{route('frontend.solo_post',$post->id)}}" class="btn-view">View More</a>
                                 </div>
@@ -474,14 +474,14 @@
                 @if($featured_post != null)
                     <div class="card">
                         <div class="image-block">
-                            <img src="{{uploaded_asset($featured_post->feature_image)}}" style="height:254px; width:100%; object-fit:cover;" alt="">
+                            <img src="{{uploaded_asset($featured_post->feature_image)}}" alt="">
                         </div>
                         <div class="content-block">
                             <div class="header">
                                 <img src="{{uploaded_asset(Modules\Blog\Entities\Category::where('id',$featured_post->category)->first()->image)}}" alt="">
                                 <div class="title">{{$featured_post->title}}</div>
                             </div>
-                            <div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{!! $featured_post->description !!}</div>
+                            <div class="text">{!! $featured_post->description !!}</div>
                             <div class="footer">
                                 <a href="{{route('frontend.solo_post',$featured_post->id)}}" class="btn-view">View More</a>
                             </div>

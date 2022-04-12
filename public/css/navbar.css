@@ -343,9 +343,9 @@
 }
 
 .getstarted-dropdown-menu .dropdown-item .text {
-    color: #9E9E9E;
-    font-weight: 300;
+    color: #000;
     font-size: 14px;
+    opacity: 0.75;
 }
 
 .getstarted-dropdown-menu .dropdown-item:hover {

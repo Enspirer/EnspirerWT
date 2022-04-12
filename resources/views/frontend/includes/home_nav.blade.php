@@ -41,9 +41,6 @@
                                 <li>
                                     <a class="dropdown-item" href="{{url('services/expert-center')}}">Expert Center</a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="{{url('services/services')}}">services</a>
-                                </li>
                             </ul>
                         </div>
                     </li>
