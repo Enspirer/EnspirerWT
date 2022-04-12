@@ -974,6 +974,8 @@ function myTimer() {
        if (oretesx.chat_invite == 1){
            console.log('function_trigeer_done');
            allin1toggle();
+           var audio = new Audio('{{url('blackberrychat.mp3')}}');
+           audio.play();
        }
 
    }
