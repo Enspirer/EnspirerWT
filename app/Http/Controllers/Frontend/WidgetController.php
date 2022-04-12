@@ -322,7 +322,7 @@ class WidgetController extends Controller
                     '</td>'.
                     '<td class="tb-col rt-invite">'.
                         '<form action="'.url("user_optimizer/realtime_invite").'" method="post" enctype="multipart/form-data">'.
-                        '<input type="hidden" name="_token" value="jcoGhANTVGkdk88Z3pdYKxjja60rHzWPnAvQ9hTW">'.
+                        csrf_field.                      
                             '<input type="hidden" name="project_id" value="'.$visitors->project_id.'">'.
                             '<input type="hidden" name="visitors_id" value="'.$visitors->id.'">'.
                             '<button type="submit" style="border: none;" class="tbl-btn btn-invite">'.
