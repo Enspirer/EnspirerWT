@@ -187,7 +187,6 @@
                                                 <div class="title">Visitors</div>
                                             </div>
                                             @foreach($countries as $country)
-                                            {{dd($country)}}
                                                 <div class="row-data">
                                                     <div class="row-info">
                                                         <div class="info">
