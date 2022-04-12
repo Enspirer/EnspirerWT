@@ -54,7 +54,7 @@
                                             <div class="text blue">86.4%</div>
                                         </div>
                                     </div>
-                                    <div class="info">15</div>
+                                    <div class="info">{{ count(App\Models\VisitorCount::where('project_id',$project_id)->get()) }}</div>
                                 </div>
                                 <div class="stats-block">
                                     <div class="content">
@@ -187,10 +187,11 @@
                                                 <div class="title">Visitors</div>
                                             </div>
                                             @foreach($countries as $country)
+                                            {{dd($country)}}
                                                 <div class="row-data">
                                                     <div class="row-info">
                                                         <div class="info">
-                                                            <div class="icon-primary"><img src="{{ asset('/images/icons/countries/'. formatFlag($country->value)) }}.svg" class="width-4 height-4"></div>
+                                                            <div class="icon-primary"><img src="https://flagcdn.com/w40/{{strtolower($country->value)}}.png" class="width-4 height-4"></div>
                                                             <div class="text">
                                                                 @if(!empty(explode(':', $country->value)[1]))
                                                                     <a href="" class="text-body">{{ explode(':', $country->value)[1] }}</a>
