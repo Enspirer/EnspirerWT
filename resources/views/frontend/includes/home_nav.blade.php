@@ -10,17 +10,17 @@
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
-                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'widget-lite' ? 'active' : null }} {{ Request::segment(1) == 'widget-pro' ? 'active' : null }} {{ Request::segment(1) == 'optimizer' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'products' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
                                 Products
                             </a>
                             <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="productNav">
-                                <li><a class="dropdown-item" href="{{url('widget-lite')}}">
+                                <li><a class="dropdown-item" href="{{url('products/widget-lite')}}">
                                     <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-widgetLite.png')}}" alt=""></div> <div class="text">Widget Lite</div>
                                 </a></li>
-                                <li><a class="dropdown-item" href="{{url('widget-pro')}}">
+                                <li><a class="dropdown-item" href="{{url('products/widget-pro')}}">
                                     <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-widgetPlus.png')}}" alt=""></div> <div class="text">Widget Pro</div>
                                 </a></li>
-                                <li><a class="dropdown-item" href="{{url('optimizer')}}">
+                                <li><a class="dropdown-item" href="{{url('products/optimizer')}}">
                                     <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-Optimizer.png')}}" alt=""></div> <div class="text">Optimizer</div>
                                 </a></li>
                             </ul>
@@ -28,18 +28,21 @@
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
-                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'market_place' ? 'active' : null }} {{ Request::segment(1) == 'portfolio' ? 'active' : null }} {{ Request::segment(1) == 'services' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'services' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="productNav">
                                 <li>
-                                    <a class="dropdown-item" href="{{url('market_place')}}">Marketplace</a>
+                                    <a class="dropdown-item" href="{{url('services/marketplace')}}">Marketplace</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="{{url('portfolio')}}">Portfolio</a>
+                                    <a class="dropdown-item" href="{{url('services/portfolio')}}">Portfolio</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="{{url('services')}}">Expert Center</a>
+                                    <a class="dropdown-item" href="{{url('services/expert-center')}}">Expert Center</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url('services/services')}}">services</a>
                                 </li>
                             </ul>
                         </div>
@@ -59,18 +62,18 @@
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
-                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'market_place' ? 'active' : null }} {{ Request::segment(1) == 'portfolio' ? 'active' : null }} {{ Request::segment(1) == 'services' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="btn nav-link dropdown-toggle {{ Request::segment(1) == 'media' ? 'active' : null }}" href="#" role="button" id="productNav" data-bs-toggle="dropdown" aria-expanded="false">
                                 Media
                             </a>
                             <ul class="dropdown-menu getstarted-dropdown-menu" aria-labelledby="productNav">
                                 <li>
-                                    <a class="dropdown-item" href="#">Latest News</a>
+                                    <a class="dropdown-item" href="{{url('media/latest-news')}}">Latest News</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Promotions</a>
+                                    <a class="dropdown-item" href="{{url('media/promotions')}}">Promotions</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Blog</a>
+                                    <a class="dropdown-item" href="{{url('media/home-blog')}}">Blog</a>
                                 </li>
                             </ul>
                         </div>
