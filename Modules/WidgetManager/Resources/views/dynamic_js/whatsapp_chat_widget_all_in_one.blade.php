@@ -973,6 +973,7 @@ function myTimer() {
        const oretesx = JSON.parse(xhttp.responseText);
        if (oretesx.chat_invite == 1){
            console.log('function_trigeer_done');
+           allin1toggle();
        }
 
    }
