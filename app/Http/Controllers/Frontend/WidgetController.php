@@ -277,6 +277,8 @@ class WidgetController extends Controller
 
         Projects::whereId($id)->update($update->toArray());
 
+        DB::table('widgets')->where('project_id',$id)->delete();       
+
         return back();
     }
 
@@ -293,9 +295,7 @@ class WidgetController extends Controller
         
         $content = null;
 
-        foreach($visitors_count as $visitors){
-
-                   
+        foreach($visitors_count as $visitors){                   
 
             $content = $content.'<tr class="tbl-row">'.
                 '<td class="tb-col rt-flag">'.

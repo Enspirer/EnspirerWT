@@ -37,12 +37,18 @@ class ChatController extends Controller
     {
         $project_optimizer = Projects::where('id',$id)->where('selected_package','Optimizer')->first();
         // dd($project_optimizer);
+
+        $all_in_one = Widgets::where('project_id',$id)->where('widget_type','All-in-One Chat')->first();
+        $widgetlist = Widgets::where('project_id',$id)->where('widget_type','IMS Pro')->first();
+
         $visitors_count = VisitorCount::where('project_id',$id)->get();
 
         return view('frontend.user.projects.optimizer',[
             'project_id' => $id,
             'project_optimizer' => $project_optimizer,
-            'visitors_count' => $visitors_count
+            'visitors_count' => $visitors_count,
+            'all_in_one' => $all_in_one,
+            'widgetlist' => $widgetlist
         ]);
     }
 }

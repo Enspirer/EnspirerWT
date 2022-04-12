@@ -177,18 +177,22 @@
                                 <div class="active-overlay animate__animated animate__fadeIn">
                                     <div class="button-block">
                                         <div class="btn-group">
-                                            <button type="button" class="act-btn ims-lite">
+                                            <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" type="button" class="act-btn ims-pro">
                                                 <i class="bi bi-file-earmark-text"></i>
-                                                <div class="text">IMS Lite</div>
-                                            </button>
-                                            <button type="button" class="act-btn">
+                                                <div class="text">IMS Pro</div>
+                                            </a>
+                                            <a href="{{ route('frontend.user.user_widget.settings', $all_in_one->id) }}" type="button" class="act-btn">
                                                 <i class="bi bi-gear"></i>
-                                                <div class="text">Settings</div>
-                                            </button>
-                                            <button type="button" class="act-btn">
+                                                <div class="text">Widget Settings</div>
+                                            </a>
+                                            <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}" type="button" class="act-btn">
+                                                <i class="bi bi-gear"></i>
+                                                <div class="text">IMS Settings</div>
+                                            </a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" type="button" class="act-btn">
                                                 <i class="bi bi-code-slash"></i>
                                                 <div class="text">Add Script</div>
-                                            </button>                
+                                            </a>                
                                         </div>
                                         <div class="btn-group">
                                             <a href="{{ route('frontend.user.user_optimizer.destroy', $project_optimizer->id) }}" data-bs-toggle="modal" data-bs-target="#deleteFavorite" type="button" class="act-btn delete">
@@ -251,7 +255,7 @@
                                 <div class="button-block">
                                     <a href="#" class="sub-btn" data-bs-toggle="modal" data-bs-target="#actOptimizer">
                                         <i class="bi bi-plus"></i>
-                                        <div class="text">Activate</div>
+                                        <div class="text">Activated</div>
                                     </a>
                                 </div>
                             </div>
