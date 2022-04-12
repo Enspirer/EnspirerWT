@@ -971,7 +971,10 @@ function myTimer() {
  xhttp.onreadystatechange = function() {
    if (this.readyState == 4 && this.status == 200) {
        const oretesx = JSON.parse(xhttp.responseText);
-       console.log(oretesx);
+       if (oretesx.chat_invite == 1){
+           console.log('function_trigeer_done');
+       }
+
    }
  };
  xhttp.open("POST", "{{url('api/log_checker')}}", true);
