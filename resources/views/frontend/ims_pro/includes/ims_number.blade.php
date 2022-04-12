@@ -12,12 +12,12 @@
         {{--</div>--}}
     {{--</div>--}}
 
-    {{--<div class="row g-o">--}}
-        {{--<div class="section-setupProcess">--}}
-            {{--<div class="activation-info">Estimated Activation end date : Apr 14</div>--}}
-            {{--<div class="title">Give Us to 24 hours to setup</div>--}}
-            {{--<img src="{{url('images/dashboard/ims_pro/setup-process.png')}}" alt="" class="process-img">--}}
-            {{--<div class="text">Thank you for your request to activate your own number, this process may take up to 24 hours to set up. our team will notify when the account is active.</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
+    <div class="row g-o">
+        <div class="section-setupProcess">
+            <div class="activation-info">Estimated Activation end date : Apr 14</div>
+            <div class="title">Give Us to 24 hours to setup</div>
+            <img src="{{url('images/dashboard/ims_pro/setup-process.png')}}" alt="" class="process-img">
+            <div class="text">Thank you for your request to activate your own number, this process may take up to 24 hours to set up. our team will notify when the account is active.</div>
+        </div>
+    </div>
 
