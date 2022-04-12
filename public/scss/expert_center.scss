@@ -1,0 +1,291 @@
+.hero-section {
+    background: url('../images/landing_page/expert_center/expert-background-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 7rem 0 3rem;
+
+    .inner-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .content-block {
+            flex: 0 0 25%;
+
+            .title-light {
+                font-size: 36px;
+                font-weight: 200;
+                color: #333;
+            }
+
+            .title {
+                font-size: 36px;
+                font-weight: 400;
+                color: #333;
+                margin-bottom: 1.5rem;
+            }
+
+            .text {
+                font-size: 16px;
+                font-weight: 300;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .image-block {
+            flex: 0 0 75%;
+            text-align: right;
+
+            img {
+                width: 100%;
+                max-width: 600px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+.section-steps {
+    padding: 3rem 0;
+    background: url('../images/landing_page/expert_center/expert-background-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 3rem;
+    }
+
+    .card-body {
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &.mobile {
+            display: none;
+        }
+
+        .cards {
+
+            &.cardsR {
+                padding-top: 40px;
+            }
+
+            .card {
+                margin: 20px;
+                background-color: #E3E3E3;
+                border-radius: 10px;
+                padding: 15px;
+                border: none;
+                width: 100%;
+                max-width: 300px;
+                position: relative;
+                overflow: hidden;
+
+                &.active {
+                    background-color: #00AEEF;
+
+                    .number {
+                        color: rgba(255, 255, 255, 0.4);
+                    }
+
+                    .title {
+                        color: #fff;
+                    }
+
+                    .text {
+                        color: rgba(255, 255, 255, 0.75);
+                    }
+
+                    .card-btn {
+                        color: rgba(255, 255, 255, 0.75);
+                        border: 1px solid rgba(255, 255, 255, 0.75);
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    position: absolute;
+                    top: -100px;
+                    right: -75px;
+                }
+
+                .number {
+                    font-size: 40px;
+                    font-weight: 700;
+                    color: #999;
+                    line-height: 1;
+                }
+
+                .title {
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-align: left;
+                    color: #555;
+                    margin: 0.5em 0;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .text {
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: #555;
+                    margin-bottom: 0.75em;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .card-btn {
+                    text-decoration: none;
+                    color: #555;
+                    font-size: 12px;
+                    font-weight: 300;
+                    border: 1px solid #999;
+                    width: fit-content;
+                    padding: 0.25em 1em;
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+
+        .indicator {
+            padding: 20px 0;
+
+            .progressV {
+                height: 100%;
+                width: 4px;
+                border-radius: 10px;
+                background-color: #eee;
+                margin: 0 15px;
+
+                .progressBarV {
+                    height: 25%;
+                    background-color: #00AEEF;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .button-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hero-section {
+
+        .inner-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .image-block {
+                text-align: center;
+
+                img {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+
+    .section-steps {
+        .card-body {
+
+            .cards {
+                .card {
+                    max-width: 280px !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .hero-section {
+
+        .inner-wrapper {
+
+            .content-block {
+                text-align: center;
+            }
+
+            .image-block {
+                text-align: center;
+
+                img {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+
+    .section-steps {
+        .card-body {
+
+            &.desktop {
+                display: none;
+            }
+
+            &.mobile {
+                display: flex !important;
+
+                .indicator {
+
+                    .progressV {
+
+                        .progressBarV {
+                            height: 12.5%;
+                        }
+                    }
+                }
+            }
+
+            .cards {
+                .card {
+                    max-width: 300px !important;
+                }
+            }
+        }
+
+        .button-block {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                width: 210px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .section-steps {
+        .card-body {
+
+            .cards {
+                .card {
+                    max-width: 260px !important;
+                }
+            }
+        }
+    }
+}
