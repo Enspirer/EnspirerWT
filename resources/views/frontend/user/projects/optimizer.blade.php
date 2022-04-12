@@ -122,10 +122,23 @@
                                                             <div class="pages-count">10</div>
                                                         </td>
                                                         <td class="tb-col rt-invite">
-                                                            <a href="#" class="tbl-btn btn-invite">
-                                                                <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
-                                                                <div class="text">Invite</div>
-                                                            </a>
+                                                            @if($visitors->chat_invite == null)
+                                                                <form action="{{route('frontend.user.user_optimizer.realtime_invite')}}" method="post" enctype="multipart/form-data">
+                                                                    {{csrf_field()}}
+
+                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                                    <input type="hidden" name="visitors_id" value="{{$visitors->id}}">
+                                                                    <button type="submit" style="border: none;" class="tbl-btn btn-invite">
+                                                                        <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
+                                                                        <div class="text">Invite</div>
+                                                                    </button>
+                                                                </form>
+                                                            @else
+                                                                <button type="submit" style="border: none;" class="tbl-btn btn-invite" disabled>
+                                                                    <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
+                                                                    <div class="text">Invited</div>
+                                                                </button>                                                            
+                                                            @endif
                                                         </td>
                                                         <input type="hidden" name="visitor_project_id" id="visitor_project_id" value="{{$visitors->project_id}}">
                                                     </tr>
