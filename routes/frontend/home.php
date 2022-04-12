@@ -178,6 +178,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         
         Route::post('user_widget/store', [WidgetController::class, 'user_widget_store'])->name('user_widget.store');
         Route::get('user_widget/delete/{id}', [WidgetController::class, 'user_widget_destroy'])->name('user_widget.destroy');
+        Route::post('user_optimizer/store', [WidgetController::class, 'user_optimizer_store'])->name('user_optimizer.store');
+        Route::get('user_optimizer/delete/{id}', [WidgetController::class, 'user_optimizer_destroy'])->name('user_optimizer.destroy');
         Route::get('user_widget/settings/{id}', [WidgetController::class, 'user_widget_settings'])->name('user_widget.settings');
         Route::get('user_whatsapp_chat_preview/{widget_id}', [WidgetController::class, 'user_whatsapp_chat_preview'])->name('user_whatsapp_chat_preview');
         Route::post('user_widget/update', [WidgetController::class, 'user_widget_update'])->name('user_widget.update');

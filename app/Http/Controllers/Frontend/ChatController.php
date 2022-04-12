@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Widgets;
+use App\Models\Projects;
+use App\Models\VisitorCount;
+
 
 class ChatController extends Controller
 {
@@ -32,8 +35,14 @@ class ChatController extends Controller
 
     public function optimizer($id)
     {
+        $project_optimizer = Projects::where('id',$id)->where('selected_package','Optimizer')->first();
+        // dd($project_optimizer);
+        $visitors_count = VisitorCount::where('project_id',$id)->get();
+
         return view('frontend.user.projects.optimizer',[
-            'project_id' => $id
+            'project_id' => $id,
+            'project_optimizer' => $project_optimizer,
+            'visitors_count' => $visitors_count
         ]);
     }
 }

@@ -10,6 +10,8 @@ use App\Models\ProjectType;
 use App\Models\IMSProUsers;
 use Modules\WidgetManager\Entities\WhatsappChatWidgetTemplate;
 use DB;
+use Carbon\Carbon;
+use App\Models\VisitorCount;
 
 class WidgetController extends Controller
 {
@@ -229,6 +231,113 @@ class WidgetController extends Controller
 
         return back();
     }
+
+
+    // **************************************optimizer***********************************************
+
+    public function user_optimizer_store(Request $request)
+    {        
+        // dd($request);
+        
+        // get the current time
+        $current = Carbon::now();
+        // dd($current);
+
+
+        $update = new Projects;
+        $update->package_available_days = 30;           
+        $update->selected_package = 'Optimizer';
+        $update->package_starting_date = $current;
+        $update->package_type = 'Free';
+        $update->expire_date = null;
+
+        Projects::whereId($request->project_id)->update($update->toArray());
+
+        $project = Projects::where('id',$request->project_id)->first();
+        $update_expire = new Projects;
+        $update_expire->expire_date = $project->updated_at->addDays(30);
+        Projects::whereId($request->project_id)->update($update_expire->toArray());  
+
+        return back();
+
+        // return back()->with([
+        //     'success' => 'success'
+        // ]);    
+                    
+    }
+
+    public function user_optimizer_destroy($id)
+    {
+        $update = new Projects;
+        $update->package_available_days = null;
+        $update->selected_package = null;
+        $update->package_starting_date = null;
+        $update->package_type = null;
+        $update->expire_date = null;
+
+        Projects::whereId($id)->update($update->toArray());
+
+        return back();
+    }
+
+
+    public function optimizer_realtime_view(Request $request)
+    {     
+        // dd($request); 
+            
+        $visitor_project_id = $request->visitor_project_id;
+        // dd($visitor_project_id);
+
+        $visitors_count = VisitorCount::where('project_id',$visitor_project_id)->get();
+        // dd($visitors_count);
+        
+        $content = null;
+
+        foreach($visitors_count as $visitors){
+
+                   
+
+            $content = $content.'<tr class="tbl-row">'.
+                '<td class="tb-col rt-flag">'.
+                    '<img src="https://flagcdn.com/w40/'.strtolower($visitors->iso_code).'.png" alt="">'.
+                '</td>'.
+                '<td class="tb-col rt-country">'.
+                    $visitors->ip_address.'
+                </td>'.
+                '<td class="tb-col rt-status">'.
+                    '<div class="status-block">'.
+                        '<i class="bi bi-circle-fill"></i>'.
+                        '<div class="text">Online</div>'.
+                    '</div>'.
+                '</td>'.
+                '<td class="tb-col rt-keyEvent">'.
+                    '<span class="event yellow">Product Viewed</span>'.
+                    '<span class="event blue">Cart Viewed</span>'.
+                    '<span class="event purple">Top CTA</span>'.
+                '</td>'.
+                '<td class="tb-col rt-pages">'.
+                    '<div class="pages-count">10</div>'.
+                '</td>'.
+                '<td class="tb-col rt-invite">'.
+                    '<a href="#" class="tbl-btn btn-invite">'.
+                        '<img src="'.url("images/dashboard/optimizer/invite-icon.png").'" alt="">'.
+                        '<div class="text">Invite</div>'.
+                    '</a>'.
+                '</td>'.
+                '<input type="hidden" name="visitor_project_id" id="visitor_project_id" value="'.$visitors->project_id.'">'.
+            '</tr>';
+
+        }
+
+        // dd($content);
+
+        return json_encode($content); 
+
+    }
+
+
+
+
 
     public function user_widget_settings($id)
     {

@@ -283,6 +283,8 @@
                                                     <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
                                                 @elseif($project_detail->selected_package == 'All In One Widget + IMS Pro')
                                                     <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                @elseif($project_detail->selected_package == 'Optimizer')
+                                                    <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
                                                 @endif
                                                 <div class="text-block">
                                                     <div class="title">Package</div>

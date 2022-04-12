@@ -72,32 +72,34 @@
             </a>
         </div> -->
     </div>
-    <div class="tabs {{Request::segment(3)=='optimizer' ? 'active' :null }}">
-        <div class="tab {{Request::segment(4)=='realtime' ? 'active' :null }}">
-            <a href="{{ route('frontend.user.project.optimizer',$project_id) }}" class="tab-link">
-                <div class="realtime-icon"></div>
-                <div class="text">Realtime</div>
-            </a>
+    @if(App\Models\Projects::where('id',$project_id)->where('selected_package','Optimizer')->first() != null)
+        <div class="tabs {{Request::segment(3)=='optimizer' ? 'active' :null }}">
+            <div class="tab {{Request::segment(4)=='realtime' ? 'active' :null }}">
+                <a href="{{ route('frontend.user.project.optimizer',$project_id) }}" class="tab-link">
+                    <div class="realtime-icon"></div>
+                    <div class="text">Realtime</div>
+                </a>
+            </div>
+            <div class="tab {{Request::segment(4)=='analytics' ? 'active' :null }}">
+                <a href="{{ route('frontend.user.project.analytics',$project_id) }}" class="tab-link">
+                    <img src="{{url('images/dashboard/tab_section/analytics-center.png')}}" alt="">
+                    <div class="text">Analytics Center</div>
+                </a>
+            </div>
+            <div class="tab">
+                <a href="#" class="tab-link">
+                    <img src="{{url('images/dashboard/tab_section/seo-report.png')}}" alt="">
+                    <div class="text">SEO Report</div>
+                </a>
+            </div>
+            <div class="tab">
+                <a href="#" class="tab-link">
+                    <img src="{{url('images/dashboard/tab_section/security.png')}}" alt="">
+                    <div class="text">Security</div>
+                </a>
+            </div>
         </div>
-        <div class="tab {{Request::segment(4)=='analytics' ? 'active' :null }}">
-            <a href="{{ route('frontend.user.project.analytics',$project_id) }}" class="tab-link">
-                <img src="{{url('images/dashboard/tab_section/analytics-center.png')}}" alt="">
-                <div class="text">Analytics Center</div>
-            </a>
-        </div>
-        <div class="tab">
-            <a href="#" class="tab-link">
-                <img src="{{url('images/dashboard/tab_section/seo-report.png')}}" alt="">
-                <div class="text">SEO Report</div>
-            </a>
-        </div>
-        <div class="tab">
-            <a href="#" class="tab-link">
-                <img src="{{url('images/dashboard/tab_section/security.png')}}" alt="">
-                <div class="text">Security</div>
-            </a>
-        </div>
-    </div>
+    @endif
 </div>
 
 <!-- <div class="subcription-block activated">

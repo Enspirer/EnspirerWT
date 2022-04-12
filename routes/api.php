@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\IMSController;
 use App\Http\Controllers\Frontend\IMSProController;
+use App\Http\Controllers\Frontend\WidgetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,8 @@ Route::post('project_server_auth_status', [HomeController::class, 'project_serve
 
 Route::get('live_visitor_monitor_api/{project_id}', [HomeController::class, 'live_visitor_monitor_api'])->name('live_visitor_monitor_api');
 
+
+Route::post('optimizer_realtime_view', [WidgetController::class, 'optimizer_realtime_view'])->name('optimizer_realtime_view');
 
 
 
