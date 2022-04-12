@@ -39,7 +39,7 @@
                                     <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Partners</a></li>
-                                    <li class="nav-item"><a href="{{url('home_blog')}}" class="nav-link">Blog</a></li>
+                                    <li class="nav-item"><a href="{{url('media/home-blog')}}" class="nav-link">Blog</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Help center</a></li>
                                     <li class="nav-item"><a href="{{url('terms-condition')}}" class="nav-link">Terms of Service</a></li>
                                     <li class="nav-item"><a href="{{url('privacy-policy')}}" class="nav-link">Privacy Policy</a></li>

@@ -171,7 +171,7 @@
 <script>
 var optimizerSlide = new Splide( '#optimizerSlide', {
     type    : 'loop',
-    autoplay: false,
+    autoplay: true,
     rewind : true,
     arrows: false,
     pagination: false,
@@ -181,7 +181,7 @@ var optimizerThumb = new Splide( '#optimizerThumb', {
     type    : 'loop',
     perPage: 4,
     rewind : true,
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     pagination: false,
     isNavigation: true,

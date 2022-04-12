@@ -429,9 +429,19 @@ class HomeController extends Controller
 
     public function log_checker(Request $request)
     {
+        // dd($request->widget_id);
 
-       $visitorLogs = VisitorLogs::visitor_update($request->ip(),$request->widget_id,$request->current_url);
-       VisitorCount::visitor_update($request->widget_id,$request->ip());
+        $visitorLogs = VisitorLogs::visitor_update($request->ip(),$request->widget_id,$request->current_url);
+        VisitorCount::visitor_update($request->widget_id,$request->ip());
+
+        $visitor_check = VisitorCount::where('ip_address',$request->ip())->where('chat_invite',1)->first();
+
+        if($visitor_check == null){
+            return null;
+        }else{
+            return $visitor_check;
+        }
+        
     }
 
 

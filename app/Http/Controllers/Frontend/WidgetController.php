@@ -297,35 +297,77 @@ class WidgetController extends Controller
 
         foreach($visitors_count as $visitors){                   
 
-            $content = $content.'<tr class="tbl-row">'.
-                '<td class="tb-col rt-flag">'.
-                    '<img src="https://flagcdn.com/w40/'.strtolower($visitors->iso_code).'.png" alt="">'.
-                '</td>'.
-                '<td class="tb-col rt-country">'.
-                    $visitors->ip_address.'
-                </td>'.
-                '<td class="tb-col rt-status">'.
-                    '<div class="status-block">'.
-                        '<i class="bi bi-circle-fill"></i>'.
-                        '<div class="text">Online</div>'.
-                    '</div>'.
-                '</td>'.
-                '<td class="tb-col rt-keyEvent">'.
-                    '<span class="event yellow">Product Viewed</span>'.
-                    '<span class="event blue">Cart Viewed</span>'.
-                    '<span class="event purple">Top CTA</span>'.
-                '</td>'.
-                '<td class="tb-col rt-pages">'.
-                    '<div class="pages-count">10</div>'.
-                '</td>'.
-                '<td class="tb-col rt-invite">'.
-                    '<a href="#" class="tbl-btn btn-invite">'.
-                        '<img src="'.url("images/dashboard/optimizer/invite-icon.png").'" alt="">'.
-                        '<div class="text">Invite</div>'.
-                    '</a>'.
-                '</td>'.
-                '<input type="hidden" name="visitor_project_id" id="visitor_project_id" value="'.$visitors->project_id.'">'.
-            '</tr>';
+            if($visitors->chat_invite == null){
+
+                $content = $content.'<tr class="tbl-row">'.
+                    '<td class="tb-col rt-flag">'.
+                        '<img src="https://flagcdn.com/w40/'.strtolower($visitors->iso_code).'.png" alt="">'.
+                    '</td>'.
+                    '<td class="tb-col rt-country">'.
+                        $visitors->ip_address.'
+                    </td>'.
+                    '<td class="tb-col rt-status">'.
+                        '<div class="status-block">'.
+                            '<i class="bi bi-circle-fill"></i>'.
+                            '<div class="text">Online</div>'.
+                        '</div>'.
+                    '</td>'.
+                    '<td class="tb-col rt-keyEvent">'.
+                        '<span class="event yellow">Product Viewed</span>'.
+                        '<span class="event blue">Cart Viewed</span>'.
+                        '<span class="event purple">Top CTA</span>'.
+                    '</td>'.
+                    '<td class="tb-col rt-pages">'.
+                        '<div class="pages-count">10</div>'.
+                    '</td>'.
+                    '<td class="tb-col rt-invite">'.
+                        '<form action="'.url("user_optimizer/realtime_invite").'" method="post" enctype="multipart/form-data">'.
+                        csrf_field.                      
+                            '<input type="hidden" name="project_id" value="'.$visitors->project_id.'">'.
+                            '<input type="hidden" name="visitors_id" value="'.$visitors->id.'">'.
+                            '<button type="submit" style="border: none;" class="tbl-btn btn-invite">'.
+                                '<img src="'.url("images/dashboard/optimizer/invite-icon.png").'" alt="">'.
+                                '<div class="text">Invite</div>'.
+                            '</button>'.
+                        '</form>'.
+                    '</td>'.
+                    '<input type="hidden" name="visitor_project_id" id="visitor_project_id" value="'.$visitors->project_id.'">'.
+                '</tr>';
+
+            }
+            else{
+                $content = $content.'<tr class="tbl-row">'.
+                    '<td class="tb-col rt-flag">'.
+                        '<img src="https://flagcdn.com/w40/'.strtolower($visitors->iso_code).'.png" alt="">'.
+                    '</td>'.
+                    '<td class="tb-col rt-country">'.
+                        $visitors->ip_address.'
+                    </td>'.
+                    '<td class="tb-col rt-status">'.
+                        '<div class="status-block">'.
+                            '<i class="bi bi-circle-fill"></i>'.
+                            '<div class="text">Online</div>'.
+                        '</div>'.
+                    '</td>'.
+                    '<td class="tb-col rt-keyEvent">'.
+                        '<span class="event yellow">Product Viewed</span>'.
+                        '<span class="event blue">Cart Viewed</span>'.
+                        '<span class="event purple">Top CTA</span>'.
+                    '</td>'.
+                    '<td class="tb-col rt-pages">'.
+                        '<div class="pages-count">10</div>'.
+                    '</td>'.
+                    '<td class="tb-col rt-invite">'.
+                        '<button type="submit" style="border: none;" class="tbl-btn btn-invite" disabled>'.
+                            '<img src="'.url("images/dashboard/optimizer/invite-icon.png").'" alt="">'.
+                            '<div class="text">Invited</div>'.
+                        '</button>'.
+                    '</td>'.
+                    '<input type="hidden" name="visitor_project_id" id="visitor_project_id" value="'.$visitors->project_id.'">'.
+                '</tr>';
+
+            }
+            
 
         }
 
@@ -333,6 +375,20 @@ class WidgetController extends Controller
 
         return json_encode($content); 
 
+    }
+
+    public function realtime_invite(Request $request)
+    {        
+        // dd($request);
+       
+        $update = new VisitorCount;
+
+        $update->chat_invite = 1; 
+
+        VisitorCount::whereId($request->visitors_id)->update($update->toArray());
+
+        return back();      
+                    
     }
 
 
