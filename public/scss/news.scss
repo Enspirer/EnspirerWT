@@ -165,6 +165,50 @@
     }
 }
 
+// single news section 
+.section-singleNews {
+    margin-top: 100px;
+    padding: 3rem 0;
+
+    .inner-wrapper {
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .feature-img {
+            width: 100%;
+            max-width: 600px;
+            object-fit: cover;
+            object-position: center;
+            float: left;
+            margin: 0 3rem 3rem 0;
+        }
+
+        .content-block {
+            .title-light {
+                font-size: 36px;
+                font-weight: 200;
+                color: #333;
+            }
+
+            .title {
+                font-size: 36px;
+                font-weight: 400;
+                color: #333;
+                margin-bottom: 1.5rem;
+            }
+
+            .text {
+                font-size: 16px;
+                font-weight: 300;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1349px) {
     .section-news {
 

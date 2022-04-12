@@ -21,7 +21,7 @@
 					<h2 class="title-light">Introducing</h2>
 					<h2 class="title">All in one widgets</h2>
 					<div class="text">When you use an application on your mobile phone or smart devices the application connects to the Internet and sends When you use an …</div>
-					<a href="#" class="cta-btn-border">
+					<a href="{{url('media/latest-news/single-news')}}" class="cta-btn-border">
 						<span class="text">Read Story</span>
 						<i class="bi bi-arrow-right-short"></i>
 					</a>

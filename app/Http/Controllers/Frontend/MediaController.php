@@ -14,4 +14,8 @@ class MediaController extends Controller
     public function promotions() {
         return view('frontend.promotions');
     }
+
+    public function singleNews() {
+        return view('frontend.single_news');
+    }
 }
