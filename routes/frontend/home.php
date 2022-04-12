@@ -33,6 +33,7 @@ use App\Http\Controllers\Frontend\IMSLoginController;
 use App\Http\Controllers\Frontend\NotFoundController;
 use App\Http\Controllers\Frontend\MobileViewController;
 use App\Http\Controllers\Frontend\PricingController;
+use App\Http\Controllers\Frontend\MediaController;
 
 
 /*
@@ -81,14 +82,17 @@ Route::get('static/{id}/mpaclic.js',[TestController::class, 'index'])->name('res
 Route::get('test_blade',[TestController::class, 'testblade'])->name('testblade');
 
 Route::get('eshop',[EShopController::class, 'index'])->name('eshop');
-Route::get('market_place',[MarketPlaceController::class, 'index'])->name('market_place');
-Route::get('widget-lite',[ProductController::class, 'widget_lite'])->name('widget_lite');
-Route::get('widget-pro',[ProductController::class, 'widget_pro'])->name('widget_pro');
-Route::get('optimizer',[ProductController::class, 'optimizer'])->name('optimizer');
+Route::get('products/widget-lite',[ProductController::class, 'widget_lite'])->name('widget_lite');
+Route::get('products/widget-pro',[ProductController::class, 'widget_pro'])->name('widget_pro');
+Route::get('products/optimizer',[ProductController::class, 'optimizer'])->name('optimizer');
 Route::get('resources',[ResourcesController::class, 'index'])->name('resources');
-Route::get('services',[ServicesController::class, 'index'])->name('services');
-Route::get('portfolio',[PortfolioController::class, 'index'])->name('portfolio');
-Route::get('home_blog',[BlogController::class, 'index'])->name('home_blog');
+Route::get('services/marketplace',[ServicesController::class, 'marketplace'])->name('marketplace');
+Route::get('services/portfolio',[ServicesController::class, 'portfolio'])->name('portfolio');
+Route::get('services/expert-center',[ServicesController::class, 'expertCenter'])->name('expert_center');
+Route::get('services/services',[ServicesController::class, 'services'])->name('services');
+Route::get('media/latest-news',[MediaController::class, 'news'])->name('latest_news');
+Route::get('media/promotions',[MediaController::class, 'promotions'])->name('promotions');
+Route::get('media/home-blog',[BlogController::class, 'index'])->name('home_blog');
 Route::get('solo_post/{id}',[BlogController::class, 'solo_post'])->name('solo_post');
 Route::get('terms-condition',[TermsAndPrivacyController::class, 'terms_condition'])->name('terms_condition');
 Route::get('privacy-policy',[TermsAndPrivacyController::class, 'privacy_policy'])->name('privacy_policy');
