@@ -707,6 +707,8 @@
     function optimizer_realtime_view() {
 
         visitor_project_id = $('#visitor_proj').val();
+        console.log('contratic_apis_visitor');
+        console.log(visitor_project_id);
         // incoming_widget_id = $('#incoming_widget_id').val();
 
 
