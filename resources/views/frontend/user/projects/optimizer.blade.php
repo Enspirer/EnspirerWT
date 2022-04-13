@@ -98,8 +98,9 @@
                                                     <td class="th-col"></td>
                                                 </tr>
                                             </thead>
-                                            <tbody class="tbl-body" id="visitors_record">
                                             <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
+
+                                            <tbody class="tbl-body" id="visitors_record">
 
                                             @foreach($visitors_count as $visitors)
                                                     <tr class="tbl-row">
