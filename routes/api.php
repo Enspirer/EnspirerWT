@@ -59,4 +59,5 @@ Route::get('live_visitor_monitor_api/{project_id}', [HomeController::class, 'liv
 Route::post('optimizer_realtime_view', [WidgetController::class, 'optimizer_realtime_view'])->name('optimizer_realtime_view');
 
 
+Route::post('user_optimizer/realtime_invite', [WidgetController::class, 'realtime_invite'])->name('user_optimizer.realtime_invite');
 

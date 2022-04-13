@@ -190,7 +190,6 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::post('user_widget/update', [WidgetController::class, 'user_widget_update'])->name('user_widget.update');
         Route::post('user_widget_ims_pro_settings/update', [WidgetController::class, 'user_widget_ims_pro_settings_update'])->name('user_widget_ims_pro_settings.update');
 
-        Route::post('user_optimizer/realtime_invite', [WidgetController::class, 'realtime_invite'])->name('user_optimizer.realtime_invite');
 
         
 
