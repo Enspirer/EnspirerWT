@@ -30,6 +30,8 @@
 .section-news .splide__slide .feature-block .content-block {
   width: 100%;
   max-width: 500px;
+  position: relative;
+  z-index: 2;
 }
 .section-news .splide__slide .feature-block .content-block .title-light {
   font-size: 36px;
