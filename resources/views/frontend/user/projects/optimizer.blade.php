@@ -123,7 +123,7 @@
                                                         </td>
                                                         <td class="tb-col rt-invite">
                                                             @if($visitors->chat_invite == null)
-                                                                <form action="{{route('frontend.user.user_optimizer.realtime_invite')}}" method="post" enctype="multipart/form-data">
+                                                                <form action="{{route('user_optimizer.realtime_invite')}}" method="post" enctype="multipart/form-data">
                                                                     {{csrf_field()}}
 
                                                                     <input type="hidden" name="project_id" value="{{$project_id}}">
