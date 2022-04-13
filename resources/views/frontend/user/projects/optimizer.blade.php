@@ -99,7 +99,9 @@
                                                 </tr>
                                             </thead>
                                             <tbody class="tbl-body" id="visitors_record">
-                                                @foreach($visitors_count as $visitors)
+                                            <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
+
+                                            @foreach($visitors_count as $visitors)
                                                     <tr class="tbl-row">
                                                         <td class="tb-col rt-flag">
                                                             <img src="https://flagcdn.com/w40/{{strtolower($visitors->iso_code)}}.png" alt="">
@@ -143,7 +145,6 @@
                                                         <input type="hidden" name="visitor_project_id" id="visitor_project_id" value="{{$visitors->project_id}}">
                                                     </tr>
                                                 @endforeach
-                                              
                                                 <!-- <tr class="tbl-row offline">
                                                     <td class="tb-col rt-flag">
                                                         <img src="https://flagicons.lipis.dev/flags/4x3/sg.svg" alt="">
@@ -705,7 +706,7 @@
 
     function optimizer_realtime_view() {
 
-        visitor_project_id = $('#visitor_project_id').val();
+        visitor_project_id = $('#visitor_proj').val();
         // incoming_widget_id = $('#incoming_widget_id').val();
 
 
