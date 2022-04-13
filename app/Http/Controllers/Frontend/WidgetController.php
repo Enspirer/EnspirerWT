@@ -285,7 +285,7 @@ class WidgetController extends Controller
 
     public function optimizer_realtime_view(Request $request)
     {     
-        // dd($request); 
+         dd($request);
             
         $visitor_project_id = $request->visitor_project_id;
         // dd($visitor_project_id);
@@ -371,7 +371,6 @@ class WidgetController extends Controller
 
         }
 
-        // dd($content);
 
         return json_encode($content); 
 
