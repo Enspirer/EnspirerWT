@@ -287,7 +287,7 @@ class WidgetController extends Controller
     {     
 
         $visitor_project_id = $request->visitor_proj;
-        // dd($visitor_project_id);
+         dd($visitor_project_id);
 
         $visitors_count = VisitorCount::where('project_id',$visitor_project_id)->get();
         // dd($visitors_count);
