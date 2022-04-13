@@ -285,8 +285,7 @@ class WidgetController extends Controller
 
     public function optimizer_realtime_view(Request $request)
     {     
-         dd($request);
-            
+
         $visitor_project_id = $request->visitor_project_id;
         // dd($visitor_project_id);
 
