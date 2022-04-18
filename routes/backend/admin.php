@@ -110,6 +110,10 @@ Route::get('ims_pro_widgets/edit/{id}', [IMSProWidgetsController::class, 'edit']
 Route::get('ims_pro_widgets/endpoint_settings/{id}', [IMSProWidgetsController::class, 'endpoint_settings'])->name('ims_pro_widgets.endpoint_settings');
 Route::post('ims_pro_widgets/endpoint_settings_update', [IMSProWidgetsController::class, 'endpoint_settings_update'])->name('ims_pro_widgets.endpoint_settings_update');
 Route::get('ims_pro_widgets/endpoint_settings_update_null/{id}', [IMSProWidgetsController::class, 'endpoint_settings_update_null'])->name('ims_pro_widgets.endpoint_settings_update_null');
+
+Route::get('ims_pro_widgets/all_inquiries/{id}', [IMSProWidgetsController::class, 'all_inquiries'])->name('ims_pro_widgets.all_inquiries');
+Route::get('ims_pro_widgets/all_inquiries_getdetails/{id}', [IMSProWidgetsController::class, 'all_inquiries_getdetails'])->name('ims_pro_widgets.all_inquiries_getdetails');
+
 Route::post('ims_pro_widgets/update', [IMSProWidgetsController::class, 'update'])->name('ims_pro_widgets.update');
 Route::get('ims_pro_widgets/delete/{id}', [IMSProWidgetsController::class, 'destroy'])->name('ims_pro_widgets.destroy');
 

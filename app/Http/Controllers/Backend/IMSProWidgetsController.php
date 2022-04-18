@@ -8,6 +8,7 @@ use DataTables;
 use App\Models\IMSProUsers;
 use App\Models\Projects;
 use App\Models\Widgets;
+use App\Models\Inquiries_Status;
 
 class IMSProWidgetsController extends Controller
 {
@@ -58,9 +59,12 @@ class IMSProWidgetsController extends Controller
     {
         $widget = Widgets::where('id',$id)->first(); 
         // dd($widget);
+        $project = Projects::where('id',$widget->project_id)->first();
+        // dd($project);
 
         return view('backend.ims_pro_widgets.endpoint_settings',[
-            'widget' => $widget
+            'widget' => $widget,
+            'project' => $project
         ]);
     }
 
@@ -71,6 +75,7 @@ class IMSProWidgetsController extends Controller
         $update = new Widgets;
 
         $update->end_point_settings = $request->url;
+        $update->connection_status = $request->connection_status;        
 
         Widgets::whereId($request->hidden_id)->update($update->toArray());
    
@@ -92,9 +97,6 @@ class IMSProWidgetsController extends Controller
         return back()->withFlashSuccess('Disabled Successfully');            
 
     }
-
-
-
     
 
     public function update(Request $request)
@@ -133,6 +135,34 @@ class IMSProWidgetsController extends Controller
     public function destroy($id)
     {
         Widgets::where('id', $id)->delete(); 
+    }
+
+
+
+    public function all_inquiries($id)
+    {
+        $widget = Widgets::where('id',$id)->first(); 
+        // dd($widget);
+        $project = Projects::where('id',$widget->project_id)->first();
+        // dd($project);
+        $all_inquiries = Inquiries_Status::where('widget_id',$id)->get();        
+
+        return view('backend.ims_pro_widgets.all_inquiries',[
+            'widget' => $widget,
+            'project' => $project,
+            'all_inquiries' => $all_inquiries
+        ]);
+    }
+
+    public function all_inquiries_getdetails(Request $request, $id)
+    {       
+        $data = Inquiries_Status::where('widget_id',$id)->get();
+        // dd($data);
+        return DataTables::of($data)           
+            
+        ->make(true);
+        
+        return back();
     }
 
 

@@ -10,12 +10,17 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
+
+                        <h5 class="mb-4 p-3">{{$project->name}}</h5>  
                         
                         <div class="col-12">
                             <div class="form-group">
                                 <label>URL: <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" value="{{ $widget->end_point_settings }}" name="url" id="url" required>
-                                <p class="mt-4">Connection Status: {{ $widget->connection_status }}</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Connection Status: <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" value="{{ $widget->connection_status }}" name="connection_status" id="connection_status" required>
                             </div>
                         </div>
                                           
@@ -26,10 +31,10 @@
 
                 <div class="row">
                     <div class="col-1">
-                        <button type="submit" class="btn btn-success pull-right">Update</button><br>
+                        <a href="{{route('admin.ims_pro_widgets.endpoint_settings_update_null',$widget->id)}}" class="btn btn-danger pull-right">Disabled</a><br>
                     </div>
                     <div class="col-1">
-                        <a href="{{route('admin.ims_pro_widgets.endpoint_settings_update_null',$widget->id)}}" class="btn btn-danger pull-right">Disabled</a><br>
+                        <button type="submit" class="btn btn-success pull-right">Update</button><br>
                     </div>
                 </div>
 

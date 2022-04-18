@@ -117,7 +117,9 @@ Breadcrumbs::for('admin.widget_settings_update.index', function ($trail) {
 Breadcrumbs::for('admin.ims_pro_widgets.endpoint_settings', function ($trail) {
     $trail->push('End Point Settings', route('admin.ims_pro_widgets.endpoint_settings',1));
 });
-
+Breadcrumbs::for('admin.ims_pro_widgets.all_inquiries', function ($trail) {
+    $trail->push('All Inquiries', route('admin.ims_pro_widgets.all_inquiries',1));
+});
 
 
 

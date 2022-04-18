@@ -27,9 +27,12 @@ class UserProjectController extends Controller
         
         $widget_detail = Widgets::where('project_id',$id)->orderBy('id','desc')->get();
         // dd($widget_detail);
+        $project = Projects::where('id',$id)->first();
+
 
         return view('backend.user_projects.widgets',[
-            'widget_detail' => $widget_detail
+            'widget_detail' => $widget_detail,
+            'project' => $project
         ]);
 
     }

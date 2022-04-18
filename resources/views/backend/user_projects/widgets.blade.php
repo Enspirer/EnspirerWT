@@ -47,7 +47,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body">                            
+                        <div class="card-body">  
+
+                            <h5 class="mb-4">{{$project->name}}</h5>                          
                           
                             @if(count($widget_detail) == 0)
                                 @include('frontend.includes.not_found',[
@@ -63,6 +65,8 @@
                                             <th>Widget Type</th>
                                             <th>Category</th>
                                             <th>Widget Key</th>
+                                            <th width="15%"></th>
+                                            <th width="15%"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -72,7 +76,11 @@
                                                 <td>{{$widget->id}}</td>
                                                 <td>{{$widget->widget_type}}</td>
                                                 <td>{{$widget->category}}</td>
-                                                <td>{{$widget->widget_key}}</td>                                                
+                                                <td>{{$widget->widget_key}}</td>
+                                                @if($widget->widget_type == 'IMS Pro')                                           
+                                                    <td><a href="{{route('admin.ims_pro_widgets.endpoint_settings',$widget->id)}}" class="btn btn-success">Server Settings</a></td>                                                
+                                                    <td><a href="{{route('admin.ims_pro_widgets.all_inquiries',$widget->id)}}" class="btn btn-info">Inquiries</a></td>
+                                                @endif                                      
                                             </tr>
                                
                                         @endforeach
