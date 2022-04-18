@@ -119,12 +119,6 @@
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <a href="{{url('/widget-lite')}}">
-                                <div class="text">iMS <span class="pro-cat blue">Lite</span><i class="bi bi-question-circle"></i></div>
-                            </a>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
                             <a href="{{url('/widget-pro')}}">
                                 <div class="text">iMS <span class="pro-cat red">Pro</span><i class="bi bi-question-circle"></i></div>
                             </a>
@@ -200,12 +194,6 @@
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
                             <div class="text">All in one Chat Widget</div>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <a href="{{url('/widget-lite')}}">
-                                <div class="text">iMS <span class="pro-cat blue">Lite</span><i class="bi bi-question-circle"></i></div>
-                            </a>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>

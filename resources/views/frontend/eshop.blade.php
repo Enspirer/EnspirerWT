@@ -11,17 +11,17 @@
 <section class="hero-section">
         <div class="container">
             <div class="content">
-                <h2 class="title"><span>READY-TO-GO</span><br>
-                Solutions built to the highest industrial standards</h2>
-                <p class="text">Flexibility of customisation for your specific requirements, with premium technical support</p>
-                <div class="button-block">
-                    <a href="#" class="cta-btn-border"><span class="text">See Portfolio</span><i class="bi bi-arrow-right-short"></i></a>
-                    <a href="#" class="cta-btn-fill"><span class="text">Contact Us</span><i class="bi bi-arrow-right-short"></i></a>
+                <div class="content-block">
+                    <h2 class="title"><span>READY-TO-GO</span><br>
+                    Solutions built to the highest industrial standards</h2>
+                    <p class="text">Flexibility of customisation for your specific requirements, with premium technical support</p>
+                    <div class="button-block">
+                        <a href="#" class="cta-btn-border"><span class="text">See Portfolio</span><i class="bi bi-arrow-right-short"></i></a>
+                        <a href="#" class="cta-btn-fill"><span class="text">Contact Us</span><i class="bi bi-arrow-right-short"></i></a>
+                    </div>
                 </div>
                 <div class="image-block">
-                    <img src="{{url('images/eShop/f3d0c857aaf69810618821c2a799adb5.png')}}" alt="" class="img-1">
-                    <img src="{{url('images/eShop/food_landing_page_header_4x.png')}}" alt="" class="img-2">
-                    <img src="{{url('images/eShop/ec5929bdd46c2af2341fa16b551348c3.png')}}" alt="" class="img-3">
+                    <img src="{{url('images/landing_page/eShop/hero-banner.png')}}" alt="">
                 </div>
             </div>
         </div>

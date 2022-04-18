@@ -27,14 +27,14 @@
                             </li>
                         </ul>
                         <div class="inner-wrapper">
-                        <div class="content-block">
-                                    <h2 class="title">Widget Plus</h2>
-                                    <div class="caption">All in one widget with <div class="product">iMS <span class="red pro-cat">Pro</span></div> <br> Whatsapp integrated</div>
-                                    <div class="product">iMS <span class="red pro-cat">Pro</span></div>
-                                    <div class="text">conversation records <br> status reports</div>
+                            <div class="content-block">
+                                <h2 class="title">Widget <span>Pro</span></h2>
+                                <div class="caption">All in one widget with <div class="product">iMS <span class="red pro-cat">Pro</span></div> <br> Whatsapp integrated</div>
+                                <div class="product">iMS <span class="red pro-cat">Pro</span></div>
+                                <div class="text">conversation records <br> status reports</div>
 
-                                    <a href="{{url('login')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
-                                </div>
+                                <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                            </div>
                             <div class="image-block">
                                 <img src="{{url('images/landing_page/products/widget-pro-banner.png')}}" alt="">
                             </div>

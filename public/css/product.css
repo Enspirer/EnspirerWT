@@ -71,6 +71,11 @@
     margin-bottom: 1.5rem;
 }
 
+.hero-section .inner-wrapper .content-block .title span {
+    color: #A2A19F;
+    font-size: 40px;
+}
+
 .hero-section .inner-wrapper .content-block .caption {
     font-size: 18px;
     font-weight: 300;

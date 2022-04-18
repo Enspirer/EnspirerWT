@@ -33,7 +33,7 @@
                                 <div class="product blue">Mobile App</div>
                                 <div class="text">Real time visitors <br> Chat invite</div>
 
-                                <a href="{{url('login')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                                <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                             </div>
                             <div class="image-block">
                                 <img src="{{url('images/landing_page/products/hero-optimizer.png')}}" alt="">

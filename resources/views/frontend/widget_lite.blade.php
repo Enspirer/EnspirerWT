@@ -28,12 +28,12 @@
                         </ul>
                         <div class="inner-wrapper">
                             <div class="content-block">
-                                <h2 class="title">Widgets</h2>
+                                <h2 class="title">Widget <span>Lite</span></h2>
                                 <div class="caption">WhatsApp widget <br> All in one widget</div>
                                 <div class="product">iMS <span class="blue pro-cat">Lite</span></div>
                                 <div class="text blue">Inquiry Management System</div>
 
-                                <a href="{{url('login')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                                <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                             </div>
                             <div class="image-block">
                                 <img src="{{url('images/landing_page/products/widget-lite-banner.png')}}" alt="">

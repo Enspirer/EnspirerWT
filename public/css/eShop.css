@@ -83,25 +83,22 @@
 }
 
 .hero-section {
-    min-height: 100vh;
     position: relative;
-    background-image: url("{{url('.../images/eShop/Group523.png')}}"),
-    -webkit-gradient(linear, left top, left bottom, from(#fff), to(#F6FBFF));
-    background-image: url("{{url('.../images/eShop/Group523.png')}}"),
-    linear-gradient(to bottom, #fff, #F6FBFF);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #FFFFFF, #F6FBFF);
+    /* background-position: center;
+    background-repeat: no-repeat; */
     padding: 10rem 0 5rem;
 }
 
 .hero-section .content {
-    position: absolute;
-    left: 48%;
-    top: 20%;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    width: 42rem;
-    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-section .content .content-block {
+    flex: 1 1 100%;
 }
 
 .hero-section .content .title {
@@ -131,29 +128,12 @@
 }
 
 .hero-section .content .image-block {
+    flex: 1 1 100%;
     position: relative;
 }
 
-.hero-section .content .image-block .img-1 {
-    position: absolute;
-    width: 20rem;
-    top: 5rem;
-    left: 12rem;
-    z-index: 1;
-}
-
-.hero-section .content .image-block .img-2 {
-    position: absolute;
-    width: 16rem;
-    top: 4rem;
-    left: 4rem;
-}
-
-.hero-section .content .image-block .img-3 {
-    position: absolute;
-    width: 16rem;
-    top: 10rem;
-    left: 23rem;
+.hero-section .content .image-block img {
+    width: 100%;
 }
 
 .services-section {
@@ -539,14 +519,25 @@
 
 @media screen and (max-width: 991px) {
     .hero-section .content {
-        top: 15%;
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
 
 
 @media screen and (max-width: 767px) {
+    .hero-section {
+        padding: 5rem 0 5rem;
+    }
+
+    .hero-section .content .title,
+    .hero-section .content .title span {
+        font-size: 28px;
+    }
+
     .hero-section .content {
         width: 90%;
+        margin: auto;
     }
 
     .hero-section .content .button-block {
@@ -566,11 +557,6 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-    }
-
-    .hero-section .content .image-block img {
-        position: unset !important;
-        width: 150px !important;
     }
 
     .services-section .services-slider .services-card {

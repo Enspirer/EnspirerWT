@@ -13,6 +13,7 @@
     height: 100vh;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#F6FBFF));
     background-image: linear-gradient(to bottom, #fff, #F6FBFF);
+    padding: 0;
 }
 
 .hero-section .container {
