@@ -807,6 +807,10 @@ const stopNotifier = function () {
     parent.document.title = oldTitle;
 }
 
+const playAudio = function () {
+    var audio = new Audio('{{url('blackberrychat.mp3')}}');
+    audio.playAudio();
+}
 
 window.addEventListener("load", function () {
     window.addEventListener("scroll", function () {
@@ -841,8 +845,7 @@ screenSize.addListener(mobileChat);
                     document.querySelector('#allin1widget').classList.add("allin1view");
                     document.getElementById("allin1widtoggler").classList.add("allin1view");
                     allin1msgPopTimeout();
-                    var audio = new Audio('{{url('blackberrychat.mp3')}}');
-                    audio.play();
+                    playAudio();
                 }, {{$widget_meta->pop_up_opening_time}}
             );
         }
@@ -865,8 +868,7 @@ screenSize.addListener(mobileChat);
                     document.querySelector('#allin1widget').classList.add("allin1view");
                     document.getElementById("allin1widtoggler").classList.add("allin1view");
                     allin1msgPopTimeout();
-                    var audio = new Audio('{{url('blackberrychat.mp3')}}');
-                    audio.play();
+                    playAudio();
                 }, 2000
             );
         }
@@ -974,8 +976,7 @@ function myTimer() {
           if (oretesx.chat_invite == 1){
               console.log('function_trigeer_done');
               allin1toggle();
-              var audio = new Audio('{{url('blackberrychat.mp3')}}');
-              audio.play();
+              playAudio();
           } else {
               return;
           }
