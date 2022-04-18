@@ -812,6 +812,10 @@ const playAudio = function () {
     audio.play();
 }
 
+window.addEventListener('load', function(){
+    setTimeout(playAudio, 1000);
+});
+
 window.addEventListener("load", function () {
     window.addEventListener("scroll", function () {
         const toggler = document.getElementById("allin1widtoggler");
