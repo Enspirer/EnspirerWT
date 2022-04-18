@@ -259,7 +259,7 @@
     // RealtimeStats function
     function realtimeStats() {
         const tBody = document.getElementById('liveVisitors')
-        fetch('https://tallentor.com/api/live_visitor_monitor_api/1')
+        fetch('http://127.0.0.1:8000/api/live_visitor_monitor_api/14')
             .then(res => res.json())
             .then(data => {
                 document.querySelector('[data-counter').textContent = data.length;
@@ -269,28 +269,58 @@
                     const countyCode = data.iso_code.toLowerCase();
                     const tRow = document.createElement('tr');
 
-                    if (data.length != 0) {
-                        tRow.innerHTML =
-                            `<td class="country-flag">
-                        <img src="https://flagicons.lipis.dev/flags/4x3/${countyCode}.svg">
-                    </td>
-                    <td class="country-name">${data.country}</td>
-                    <td class="active-status">
-                        <div class="indicator active"></div>
-                        <div class="label"></div>
-                    </td>
-                    <td>
-                        <a href="#" class="btn-mobile btn-watch">
-                            <i class="bi bi-play"></i>
-                            <div class="text">Watch</div>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#" class="btn-mobile btn-invite">
-                            <i class="bi bi-node-plus"></i>
-                            <div class="text">Invite</div>
-                        </a>
-                    </td>`
+                        if (data.length != 0) {
+                            if(data.chat_invite == null){                            
+                                    tRow.innerHTML =
+                                        `<td class="country-flag">
+                                    <img src="https://flagicons.lipis.dev/flags/4x3/${countyCode}.svg">
+                                </td>
+                                <td class="country-name">${data.country}</td>
+                                <td class="active-status">
+                                    <div class="indicator active"></div>
+                                    <div class="label"></div>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn-mobile btn-watch">
+                                        <i class="bi bi-play"></i>
+                                        <div class="text">Watch</div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <form action="{{route('user_optimizer.realtime_invite')}}" method="post" enctype="multipart/form-data">
+                                        {{csrf_field()}}
+                                        <input type="hidden" name="project_id" value="${data.project_id}">
+                                        <input type="hidden" name="visitors_id" value="${data.id}">
+                                        <button type="submit" style="border: none;" class="btn-mobile btn-invite">
+                                            <i class="bi bi-node-plus"></i>
+                                            <div class="text">Invite</div>
+                                        </button>
+                                    </form>
+                                </td>`
+                            }
+                            else{
+                                tRow.innerHTML =
+                                        `<td class="country-flag">
+                                    <img src="https://flagicons.lipis.dev/flags/4x3/${countyCode}.svg">
+                                </td>
+                                <td class="country-name">${data.country}</td>
+                                <td class="active-status">
+                                    <div class="indicator active"></div>
+                                    <div class="label"></div>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn-mobile btn-watch">
+                                        <i class="bi bi-play"></i>
+                                        <div class="text">Watch</div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <button type="submit" style="border: none;" class="btn-mobile btn-invite" disabled>
+                                        <i class="bi bi-node-plus"></i>
+                                        <div class="text">Invited</div>
+                                    </button>
+                                </td>`
+                            }
                     } else {
                         tRow.innerHTML =
                             `<td colspan="5" class="country-name">There are no live visitors</td>`
