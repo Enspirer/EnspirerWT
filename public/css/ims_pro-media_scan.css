@@ -144,4 +144,127 @@
   margin: 3rem 0 1rem;
 }
 
+.section-chatStats {
+  margin: 3rem 0;
+}
+.section-chatStats .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.section-chatStats .header .button-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.section-chatStats .header .button-block .form-control {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+}
+.section-chatStats .header .button-block .chat-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #44bc8e;
+  font-size: 14px;
+  font-weight: 400;
+  width: 200px;
+  text-align: center;
+  padding: 0.75em 1em;
+  border-radius: 5px;
+}
+.section-chatStats .header .button-block .chat-btn:hover {
+  color: #44bc8e;
+}
+.section-chatStats .body .card-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.section-chatStats .body .card {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #00742b, #1db758);
+  margin: 0;
+}
+.section-chatStats .body .card.card-messenger {
+  background: linear-gradient(45deg, #148aff, #bc3cd5, #ff6767);
+}
+.section-chatStats .body .card.card-messenger .content-block .label {
+  background-color: #f76fd8;
+}
+.section-chatStats .body .card.card-line {
+  background: linear-gradient(45deg, #097e0e, #4caf50);
+}
+.section-chatStats .body .card.card-line .content-block .label {
+  background-color: #5ac45f;
+}
+.section-chatStats .body .card.card-telegram {
+  background: linear-gradient(45deg, #000329, #00aeef);
+}
+.section-chatStats .body .card.card-telegram .content-block .label {
+  background-color: #2697ce;
+}
+.section-chatStats .body .card.card-tawkto {
+  background: linear-gradient(45deg, #29b24b, #038b37);
+}
+.section-chatStats .body .card.card-tawkto .content-block .label {
+  background-color: #2fb760;
+}
+.section-chatStats .body .card.card-viber {
+  background: linear-gradient(45deg, #341091, #a87ff3);
+}
+.section-chatStats .body .card.card-viber .content-block .label {
+  background-color: #a57ef6;
+}
+.section-chatStats .body .card .image-block {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.section-chatStats .body .card .image-block img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+.section-chatStats .body .card .content-block {
+  text-align: right;
+}
+.section-chatStats .body .card .content-block .label {
+  background-color: #29c464;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 0.3em 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.section-chatStats .body .card .content-block .count {
+  font-size: 40px;
+  color: #fff;
+  line-height: 1;
+}
+.section-chatStats .body .card .content-block .media {
+  font-size: 20px;
+  color: #fff;
+}
+
 /*# sourceMappingURL=ims_pro-media_scan.css.map */
