@@ -85,6 +85,11 @@ class WidgetController extends Controller
 
         // dd($widget_check);
       
+        $characters_two = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $pin_two = mt_rand(1000000, 9999999)
+            . mt_rand(1000000, 9999999)
+            . $characters_two[rand(0, strlen($characters_two) - 1)];
+        $widget_key_two = str_shuffle($pin_two); 
 
         if($request->has('widget_type_another')){
             $widget_check_another = Widgets::where('project_id',$request->project_id)->where('widget_type',$request->widget_type_another)->first();
@@ -95,7 +100,7 @@ class WidgetController extends Controller
                 $add_another = new Widgets;
                 $add_another->status = 'Enabled';        
                 $add_another->widget_type = $request->widget_type_another;
-                $add_another->widget_key = $widget_key;
+                $add_another->widget_key = $widget_key_two;
                 $add_another->load_count = $request->load_count;
                 $add_another->project_id = $request->project_id;
         
@@ -243,7 +248,6 @@ class WidgetController extends Controller
         $current = Carbon::now();
         // dd($current);
 
-
         $update = new Projects;
         $update->package_available_days = 30;           
         $update->selected_package = 'Optimizer';
@@ -258,11 +262,68 @@ class WidgetController extends Controller
         $update_expire->expire_date = $project->updated_at->addDays(30);
         Projects::whereId($request->project_id)->update($update_expire->toArray());  
 
-        return back();
 
-        // return back()->with([
-        //     'success' => 'success'
-        // ]);    
+        $optimizer_widget_ims_pro = Widgets::where('project_id',$request->project_id)->where('widget_type','IMS Pro')->first();
+        $optimizer_widget_all_in_one = Widgets::where('project_id',$request->project_id)->where('widget_type','All-in-One Chat')->first();
+
+        $all_in_one = '[{"whatsapp_details":[null],"fb_details":[null],"telegram_details":[null],"line_details":[null],"viber_details":[null],"tawk_details":[null],"template_layout":"1","whatsapp_number":"079147258369","default_icon":"on","bubble_icon":"envelope-fill","chat_header":"Header All in One","caption":"Typically replies within an hour","image":"3","agent_name":"Yasiru","welcome_message":"Welcome Message! All In One","btn_text":"Start Chat With:","start_chat":"on","show_icon":"on","position":"Floating Bubble","alignment":"right","where_display_chat":"Specific Pages","specific_time_selector":"on","device":["desktop"],"visitors":"all_visitors","date_time":["thursday","friday"],"start_time":"05:20PM","end_time":"08:30PM","timezone":"Asia\/Calcutta","auto_trigger":"on","pop_up_opening_time":"4000","message_auto_reply_time":"6000","scroll_position":"right","exit_internet":"on","notification":["bubble_notification_bage","show_notification_in_tab_tile"],"bubble_background_color":"#055147","bubble_icon_color":"#bfc0bf","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right","custom_css":"No"}]';
+        $ims_pro = '[{"whatsapp_number":"0700000000","logo":null,"address":"main street","company_email":"company@company.com"}]';
+
+
+        $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $pin = mt_rand(1000000, 9999999)
+            . mt_rand(1000000, 9999999)
+            . $characters[rand(0, strlen($characters) - 1)];
+        $widget_key = str_shuffle($pin); 
+
+        if($optimizer_widget_ims_pro == null){
+
+            $add = new Widgets;
+            $add->status = 'Enabled';        
+            $add->widget_type = 'IMS Pro';
+            $add->widget_key = $widget_key;
+            $add->load_count = null;
+            $add->project_id = $request->project_id;
+            $add->settings = $ims_pro;
+            $add->category = 'Widgets Plus';
+    
+            $add->save();
+
+        }
+
+        $characters_two = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $pin_two = mt_rand(1000000, 9999999)
+            . mt_rand(1000000, 9999999)
+            . $characters_two[rand(0, strlen($characters_two) - 1)];
+        $widget_key_two = str_shuffle($pin_two); 
+
+        if($optimizer_widget_all_in_one == null){
+
+            $add_another = new Widgets;
+            $add_another->status = 'Enabled';        
+            $add_another->widget_type = 'All-in-One Chat';
+            $add_another->widget_key = $widget_key_two;
+            $add_another->load_count = null;
+            $add_another->project_id = $request->project_id;    
+            $add_another->settings = $all_in_one;
+            $add_another->category = 'Widgets Plus';
+    
+            $add_another->save();            
+
+        }
+        else{
+
+            $update_another = new Widgets;
+            $update_another->category = 'Widgets Plus';
+    
+            Widgets::whereId($optimizer_widget_all_in_one->id)->update($update_another->toArray());
+            
+        }    
+
+     
+        return back()->with([
+            'success' => 'success'
+        ]);    
                     
     }
 

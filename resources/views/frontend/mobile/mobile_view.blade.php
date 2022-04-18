@@ -190,6 +190,7 @@
     </div>
   </div>
 </div>
+
     
 @endsection
 
@@ -255,11 +256,12 @@
     })
 </script>
 
+
 <script>
     // RealtimeStats function
     function realtimeStats() {
         const tBody = document.getElementById('liveVisitors')
-        fetch('https://tallentor.com/api/live_visitor_monitor_api/1')
+        fetch('{{URL::to('/api/live_visitor_monitor_api',$project_id)}}')
             .then(res => res.json())
             .then(data => {
                 document.querySelector('[data-counter').textContent = data.length;
