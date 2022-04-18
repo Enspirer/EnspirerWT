@@ -809,7 +809,7 @@ const stopNotifier = function () {
 
 const playAudio = function () {
     var audio = new Audio('{{url('blackberrychat.mp3')}}');
-    audio.playAudio();
+    audio.play();
 }
 
 window.addEventListener("load", function () {
