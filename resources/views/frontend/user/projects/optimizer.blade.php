@@ -721,11 +721,11 @@
                 // console.log(content);
                 var obj = JSON.parse(content);
                 // console.log(obj);
-                if(obj == null){
+                if(obj != null){
                     $('#visitors_record').html(obj);
                 }
                 else{
-                    $('#visitors_record').html('<tr class="tbl-row"><td class="tb-col rt-keyEvent"><h2 class="text-center mt-4 p-5 ms-5">Realtime Data...</h2></td></tr>');
+                    $('#visitors_record').html('<tr class="tbl-row"><td class="tb-col rt-keyEvent"><h2 class="text-center mt-4 p-5 ms-5" style="margin-left:150px;">Realtime Data...</h2></td></tr>');
                 }
 
             }
