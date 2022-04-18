@@ -259,7 +259,7 @@
     // RealtimeStats function
     function realtimeStats() {
         const tBody = document.getElementById('liveVisitors')
-        fetch('http://127.0.0.1:8000/api/live_visitor_monitor_api/14')
+        fetch('https://tallentor.com/api/live_visitor_monitor_api/1')
             .then(res => res.json())
             .then(data => {
                 document.querySelector('[data-counter').textContent = data.length;
