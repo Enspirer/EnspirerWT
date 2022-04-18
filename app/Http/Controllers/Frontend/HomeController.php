@@ -40,7 +40,6 @@ class HomeController extends Controller
             ->where('projects.url', '=', $page['scheme'].'://'.$page['non_www_host'].'/' ?? null)
             ->first();
 
-        dd($website);
 
     
 
