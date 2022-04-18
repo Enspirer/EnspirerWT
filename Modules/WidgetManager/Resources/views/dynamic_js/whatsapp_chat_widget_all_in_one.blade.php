@@ -965,26 +965,30 @@ document.cookie = "tallentor_widget=982SHEKKSMLA";
 setInterval(myTimer, 10000);
 
 function myTimer() {
- const widget_id = '{{$widget_id}}';
- const current_url = window.location.href;
- var xhttp = new XMLHttpRequest();
- xhttp.onreadystatechange = function() {
-   if (this.readyState == 4 && this.status == 200) {
-       const oretesx = JSON.parse(xhttp.responseText);
-       if (oretesx.chat_invite == 1){
-           console.log('function_trigeer_done');
-           allin1toggle();
-           var audio = new Audio('{{url('blackberrychat.mp3')}}');
-           audio.play();
-       }
-
+    const widget_id = '{{$widget_id}}';
+    const current_url = window.location.href;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          const oretesx = JSON.parse(xhttp.responseText);
+          if (oretesx.chat_invite == 1){
+              console.log('function_trigeer_done');
+              allin1toggle();
+              var audio = new Audio('{{url('blackberrychat.mp3')}}');
+              audio.play();
+          } else {
+              return;
+          }
+   
+      } else {
+        return;
+    }
+    };
+    xhttp.open("POST", "{{url('api/log_checker')}}", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("widget_id=" + widget_id + "&current_url=" + current_url);
+   
    }
- };
- xhttp.open("POST", "{{url('api/log_checker')}}", true);
- xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
- xhttp.send("widget_id=" + widget_id + "&current_url=" + current_url);
-
-}
 
 
 function printMousePos(event) {
