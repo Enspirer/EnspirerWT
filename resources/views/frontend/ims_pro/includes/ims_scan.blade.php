@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{url('css/ims_pro-media_scan.css')}}">
+
 @if(whatsapp_server_status($project_id)['connection_status'] != 'Authenticated')
     <div class="row g-0">
         <div class="qr-section">
@@ -19,11 +21,81 @@
         </div>
     </div>
 @else
-    <div class="row g-0">
-        <div class="qr-section">
-            <div class="content-block">
-                <div class="title">WhatsApp Authenticated </div>
-                <a href="#" class="qr-section-link">Need help to get started ?</a>
+<div class="row g-0">
+        <div class="section-chatStats">
+            <div class="header">
+                <div class="text-block">
+                    <h2 class="title">Good Morning, John</h2>
+                    <div class="text">Here's your websites situation for today</div>
+                </div>
+                <div class="button-block">
+                    <input type="date" class="form-control" value="2022-04-18">
+                    <a href="#" class="chat-btn">Unread Chat</a>
+                </div>
+            </div>
+            <div class="body">
+                <div class="card-section">
+                    <div class="card card-whatsapp">
+                        <div class="image-block">
+                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                        </div>
+                        <div class="content-block">
+                            <div class="label">Unread Chat</div>
+                            <div class="count">102</div>
+                            <div class="media">WhatsApp</div>
+                        </div>
+                    </div>
+                    <div class="card card-messenger">
+                        <div class="image-block">
+                            <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                        </div>
+                        <div class="content-block">
+                            <div class="label">Unread Chat</div>
+                            <div class="count">102</div>
+                            <div class="media">Messenger</div>
+                        </div>
+                    </div>
+                    <div class="card card-line">
+                        <div class="image-block">
+                            <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                        </div>
+                        <div class="content-block">
+                            <div class="label">Unread Chat</div>
+                            <div class="count">102</div>
+                            <div class="media">Line</div>
+                        </div>
+                    </div>
+                    <div class="card card-telegram">
+                        <div class="image-block">
+                            <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                        </div>
+                        <div class="content-block">
+                            <div class="label">Unread Chat</div>
+                            <div class="count">102</div>
+                            <div class="media">Telegram</div>
+                        </div>
+                    </div>
+                    <div class="card card-tawkto">
+                        <div class="image-block">
+                            <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
+                        </div>
+                        <div class="content-block">
+                            <div class="label">Unread Chat</div>
+                            <div class="count">102</div>
+                            <div class="media">Tawk.To</div>
+                        </div>
+                    </div>
+                    <div class="card card-viber">
+                        <div class="image-block">
+                            <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                        </div>
+                        <div class="content-block">
+                            <div class="label">Unread Chat</div>
+                            <div class="count">102</div>
+                            <div class="media">Viber</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
