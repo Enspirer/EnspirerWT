@@ -380,7 +380,7 @@ class WidgetController extends Controller
                         '<div class="pages-count">10</div>'.
                     '</td>'.
                     '<td class="tb-col rt-invite">'.
-                        '<form action="'.url("user_optimizer/realtime_invite").'" method="post" enctype="multipart/form-data">'.
+                        '<form action="'.url("api/user_optimizer/realtime_invite").'" method="post" enctype="multipart/form-data">'.
                         csrf_field().
                             '<input type="hidden" name="project_id" value="'.$visitors->project_id.'">'.
                             '<input type="hidden" name="visitors_id" value="'.$visitors->id.'">'.
