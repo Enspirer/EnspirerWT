@@ -721,7 +721,12 @@
                 // console.log(content);
                 var obj = JSON.parse(content);
                 // console.log(obj);
-                $('#visitors_record').html(obj);
+                if(obj != null){
+                    $('#visitors_record').html(obj);
+                }
+                else{
+                    $('#visitors_record').html('Loading Realtime Data...');
+                }
 
             }
         );
