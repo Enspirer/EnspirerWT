@@ -364,7 +364,7 @@
                                 <div class="option-card">
                                     <a href="#">
                                         <div class="image-block">
-                                            <img src="{{url('images/f3d0c857aaf69810618821c2a799adb5.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/marketplace/programming/basic_website.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
                                             Basic Website
@@ -376,7 +376,7 @@
                                 <div class="option-card">
                                     <a href="#">
                                         <div class="image-block">
-                                            <img src="{{url('images/f3d0c857aaf69810618821c2a799adb5.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/marketplace/programming/dynamic_website.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
                                             Dynamic Website
@@ -388,7 +388,7 @@
                                 <div class="option-card">
                                     <a href="#">
                                         <div class="image-block">
-                                            <img src="{{url('images/f3d0c857aaf69810618821c2a799adb5.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/marketplace/programming/e_commerce_website.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
                                             E-commerce Website
@@ -400,10 +400,106 @@
                                 <div class="option-card">
                                     <a href="#">
                                         <div class="image-block">
-                                            <img src="{{url('images/f3d0c857aaf69810618821c2a799adb5.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/marketplace/programming/wordpress_website.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
                                             WordPress Website
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/programming/landing_page.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Landing Page Design
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/programming/web_banner.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Web Banners
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/programming/icon_pack.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Icon Pack Design
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/programming/wireframes.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Website Wireframes
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/programming/erp.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            ERP Solutions
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/programming/pms.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            PMS Solutions
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/programming/payroll_management.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Payroll Management 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/programming/pos.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            POS System 
                                         </div>
                                     </a>
                                 </div>
@@ -417,10 +513,10 @@
                                 <div class="option-card">
                                     <a href="#">
                                         <div class="image-block">
-                                            <img src="images/ec5929bdd46c2af2341fa16b551348c3.png" alt="">
+                                            <img src="{{url('images/landing_page/marketplace/digital_marketing/social_media_marketing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            Basic Website
+                                            Social Media Marketing
                                         </div>
                                     </a>
                                 </div>
@@ -429,10 +525,10 @@
                                 <div class="option-card">
                                     <a href="#">
                                         <div class="image-block">
-                                            <img src="images/ec5929bdd46c2af2341fa16b551348c3.png" alt="">
+                                            <img src="{{url('images/landing_page/marketplace/digital_marketing/seo.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            Dynamic Website
+                                            Search Engine Optimization
                                         </div>
                                     </a>
                                 </div>
@@ -441,10 +537,10 @@
                                 <div class="option-card">
                                     <a href="#">
                                         <div class="image-block">
-                                            <img src="images/ec5929bdd46c2af2341fa16b551348c3.png" alt="">
+                                            <img src="{{url('images/landing_page/marketplace/digital_marketing/sem.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            E-commerce Website
+                                            Search Engine Marketing
                                         </div>
                                     </a>
                                 </div>
@@ -453,10 +549,10 @@
                                 <div class="option-card">
                                     <a href="#">
                                         <div class="image-block">
-                                            <img src="images/ec5929bdd46c2af2341fa16b551348c3.png" alt="">
+                                            <img src="{{url('images/landing_page/marketplace/digital_marketing/video_marketing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            WordPress Website
+                                            Video Marketing
                                         </div>
                                     </a>
                                 </div>
@@ -464,12 +560,659 @@
                         </div>
                     </div>
 
-                    <div id="categoryBlock3" class="category-options"></div>
-                    <div id="categoryBlock4" class="category-options"></div>
-                    <div id="categoryBlock5" class="category-options"></div>
-                    <div id="categoryBlock6" class="category-options"></div>
-                    <div id="categoryBlock7" class="category-options"></div>
-                    <div id="categoryBlock8" class="category-options"></div>
+                    <div id="categoryBlock3" class="category-options">
+                        <div class="row g-4 row-cols-lg-3 row-cols-2">
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/graphic_design/logo_design.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Logo Design
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/graphic_design/branding.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Company Branding 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/graphic_design/stationery.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Company Stationery
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/graphic_design/package_design.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Package Design
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/graphic_design/brochure_design.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Brochure Design
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/graphic_design/flyer_design.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Flyer Design
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/graphic_design/web_design.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Website Design
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/graphic_design/app_ui.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            App UI Design
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="categoryBlock4" class="category-options">
+                        <div class="row g-4 row-cols-lg-3 row-cols-2">
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/art_craft/painting.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Paintings
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/art_craft/masks.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Masks
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/art_craft/wall_arts.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Wall Arts
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/art_craft/wall_poster.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Canvas Wall Poster
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/art_craft/handicrafts.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Wooden Handicrafts
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/art_craft/batik.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Batik Wall Hangings
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="categoryBlock5" class="category-options">
+                        <div class="row g-4 row-cols-lg-3 row-cols-2">
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/content_writing.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Content Writing
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/copywriting.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Copy Writing
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/translation.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Translation
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/legal_writing.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Legal Writing
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/contract.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Contract  & Proposals
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/ghostwriting.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Ghostwriting
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/speechwriting.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Speechwriting 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/technical_writing.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Technical writing
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/scriptwriting.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Scriptwriting 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/writing_translation/sm_copy.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Social media copy
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="categoryBlock6" class="category-options">
+                        <div class="row g-4 row-cols-lg-3 row-cols-2">
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/company_profile.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Digital Company profiles
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/audio_visuals.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Audio Visuals
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/smv.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Social Media Videos
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/video_editing.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Video Editing 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/360_business.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Google 360 Business View
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/photography.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Local photography
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/drone_videography.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Drone Videography
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/product_photograpy.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Product Photography 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/photo_retouching.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Photo Retouching
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/video_photography/product_explainer.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Product Explainer Videos
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="categoryBlock7" class="category-options">
+                        <div class="row g-4 row-cols-lg-3 row-cols-2">
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/music_audio/voice_over.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Voice Over
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/music_audio/audio_tracks.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Audio Tracks
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/music_audio/music_lessons.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Online Music Lessons
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/music_audio/song_writing.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Song writers
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/music_audio/intros.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Jingles & Intros
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/music_audio/ads_production.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Audio Ads Productions
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/music_audio/singers.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Singers & Vocalists
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="categoryBlock8" class="category-options">
+                        <div class="row g-4 row-cols-lg-3 row-cols-2">
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/tele_sales.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Tele Sales Executive
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/marketing_consultant.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Marketing Consultant
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/accounts_assistant.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Accounts Assistant
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/tax_consultant.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Tax Consultanting
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/market_research.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Market Research
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/legal_consultant.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Legal Consulting
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/virtual_assistant.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Virtual Assistant
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/business_docs.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Business Documents
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/financial_consulting.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Financial Consulting
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/real_state.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Real Estate Agent
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="option-card">
+                                    <a href="#">
+                                        <div class="image-block">
+                                            <img src="{{url('images/landing_page/marketplace/business_sales/project_management.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            Project Management
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row g-0">
                     <div class="section-project-form">
