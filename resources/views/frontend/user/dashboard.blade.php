@@ -34,24 +34,20 @@
                                             <h2 class="title">{{$greetings}}, {{auth()->user()->first_name}}</h2>
                                             <span class="sub-title">Here's your websites situation for today</span>
                                         </div>
-                                        <div class="col-auto my-xxl-0 my-4">
+                                        <!-- <div class="col-auto my-xxl-0 my-4">
                                             <div class="row gy-0 gx-3 justify-content-end flex-sm-nowrap">
                                                 <div class="col-12 col-sm-auto my-sm-0 my-2">
                                                     <div class="input-group">
                                                         <label for="datePicker" class="form-label">
-                                                            <!-- <i class="bi bi-calendar3"></i>
-                                                            <span>{{date('d')}} {{date('m')}} {{date('Y')}}</span>
-                                                            <i class="bi bi-chevron-down"></i>  -->
                                                             <input type="date" class="form-control" value="{{date('Y')}}-{{date('m')}}-{{date('d')}}">
                                                         </label>
-                                                        <!-- <input type="date" class="form-control" id="datePicker"> -->
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-sm-auto my-sm-0 my-2">
                                                     <button data-bs-toggle="modal" data-bs-target="#optimizeModal" class="btn btn-optimize">Optimize</button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>

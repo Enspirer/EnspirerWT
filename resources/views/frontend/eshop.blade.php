@@ -16,8 +16,8 @@
                     Solutions built to the highest industrial standards</h2>
                     <p class="text">Flexibility of customisation for your specific requirements, with premium technical support</p>
                     <div class="button-block">
-                        <a href="#" class="cta-btn-border"><span class="text">See Portfolio</span><i class="bi bi-arrow-right-short"></i></a>
-                        <a href="#" class="cta-btn-fill"><span class="text">Contact Us</span><i class="bi bi-arrow-right-short"></i></a>
+                        <a href="{{url('/services/portfolio')}}" class="cta-btn-border"><span class="text">See Portfolio</span><i class="bi bi-arrow-right-short"></i></a>
+                        <a href="{{url('/contact')}}" class="cta-btn-fill"><span class="text">Contact Us</span><i class="bi bi-arrow-right-short"></i></a>
                     </div>
                 </div>
                 <div class="image-block">

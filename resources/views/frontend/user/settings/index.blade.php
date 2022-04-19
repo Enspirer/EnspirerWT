@@ -47,7 +47,7 @@
                             </div>
                             <i class="bi bi-chevron-right"></i>
                         </button>
-                        <button class="nav-link" id="choose-plan-tab" data-bs-toggle="pill"
+                        <!-- <button class="nav-link" id="choose-plan-tab" data-bs-toggle="pill"
                             data-bs-target="#choose-plan" type="button" role="tab" aria-controls="choose-plan"
                             aria-selected="false">
                             <div class="inner-wrapper">
@@ -55,7 +55,7 @@
                                 <div class="text">Choose Plan</div>
                             </div>
                             <i class="bi bi-chevron-right"></i>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div class="content-block">
@@ -478,7 +478,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="choose-plan" role="tabpanel" aria-labelledby="choose-plan-tab">
+                        <!-- <div class="tab-pane fade" id="choose-plan" role="tabpanel" aria-labelledby="choose-plan-tab">
                             <div class="row g-0">
                                 <div class="col">
                                     <div class="title">Choose Plan</div>
@@ -637,7 +637,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
