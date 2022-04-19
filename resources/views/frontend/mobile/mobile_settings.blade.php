@@ -13,43 +13,62 @@
         <div class="inner-container">
             <div class="profile">
                 <div class="image-block">
-                    <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
+                    <img src="{{auth()->user()->picture}}" alt="">
                     <i class="bi bi-pencil-fill"></i>
                 </div>
                 <div class="status-block">
-                    <div class="name">Amal Perera</div>
+                    <div class="name">{{auth()->user()->first_name}} {{auth()->user()->last_name}}</div>
                     <div class="active-status active">Active Status</div>
                 </div>
             </div>
-            <div class="edit-profile">
-                <div class="data-field">
-                    <div class="input-field">
-                        <label class="label">Display Name</label>
-                        <input type="text" name="display-name" class="data-input" value="Amal Perera" readonly>
+
+            @if(session()->has('error_pw'))
+                <div class="alert alert-danger">
+                    {{ session()->get('error_pw') }}
+                </div>
+            @endif
+            @if(session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
+
+            <form action="{{ route('frontend.mobile_view.setting_update') }}" method="post" enctype="multipart/form-data">
+            {{csrf_field()}}
+                <div class="edit-profile">
+                    <div class="data-field">
+                        <div class="input-field">
+                            <label class="label">Display Name</label>
+                            <input type="text" name="first_name" class="data-input" value="{{auth()->user()->first_name}}" readonly required>
+                        </div>
+                        <div class="btn-field">
+                            <a href="#" class="btn-mobile" onclick="editInput('first_name'),confirm(this)">Edit</a>
+                        </div>
                     </div>
-                    <div class="btn-field">
-                        <a href="#" class="btn-mobile" onclick="editInput('display-name'),confirm(this)">Edit</a>
+                    <div class="data-field">
+                        <div class="input-field">
+                            <label class="label">Email</label>
+                            <input type="email" name="email" class="data-input" value="{{auth()->user()->email}}" readonly required>
+                        </div>
+                        <div class="btn-field">
+                            <a href="#" class="btn-mobile" onclick="editInput('email'),confirm(this)">Edit</a>
+                        </div>
+                    </div>
+                    <div class="data-field">
+                        <div class="input-field">
+                            <label class="label">Password</label>
+                            <input type="password" name="password" class="data-input" readonly>
+                        </div>
+                        <div class="btn-field">
+                            <a href="#" class="btn-mobile" onclick="editInput('password'),confirm(this)">Edit</a>
+                        </div>
                     </div>
                 </div>
-                <div class="data-field">
-                    <div class="input-field">
-                        <label class="label">Email</label>
-                        <input type="email" name="email" class="data-input" value="example@gmail.com" readonly>
-                    </div>
-                    <div class="btn-field">
-                        <a href="#" class="btn-mobile" onclick="editInput('email'),confirm(this)">Edit</a>
-                    </div>
-                </div>
-                <div class="data-field">
-                    <div class="input-field">
-                        <label class="label">Password</label>
-                        <input type="password" name="password" class="data-input" value="password" readonly>
-                    </div>
-                    <div class="btn-field">
-                        <a href="#" class="btn-mobile" onclick="editInput('password'),confirm(this)">Edit</a>
-                    </div>
-                </div>
-            </div>
+                <input type="hidden" name="hidden_id" class="data-input" value="{{auth()->user()->id}}">
+                <button type="submit" class="btn btn-success col-12 mb-4">Update</button>
+            </form>
+
+
             <div class="subscription-block">
                 <div class="header">
                     <div class="header-block">
@@ -67,10 +86,13 @@
                     </a>
                 </div>
             </div>
-            <a href="#" class="btn-mobile btn-signout">Sign Out</a>
+            <a href="{{route('frontend.auth.logout')}}" class="btn-mobile btn-signout">Sign Out</a>
         </div>
     </div>
 </div>
+
+
+
 
 @include('frontend.mobile.includes.bottom_nav')
     

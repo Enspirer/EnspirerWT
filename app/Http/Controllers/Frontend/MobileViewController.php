@@ -5,12 +5,16 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\VisitorCount;
+use App\Models\Projects;
+use Illuminate\Support\Facades\Hash;
+use DB;
 
 class MobileViewController extends Controller
 {
     public function index($id, Request $request) {
         // dd($request);
 
+        $projects = Projects::where('user_id',auth()->user()->id)->orderby('id','desc')->get();
         
         if($id != 'project_id'){
 
@@ -18,22 +22,28 @@ class MobileViewController extends Controller
 
             return view('frontend.mobile.mobile_view',[
                 'visitors_count' => $visitors_count,
-                'project_id' => $id
+                'project_id' => $id,
+                'projects' => $projects
             ]);
 
         }
         else{
             return view('frontend.mobile.mobile_view',[
                 'visitors_count' => null,
-                'project_id' => null
+                'project_id' => null,
+                'projects' => $projects
             ]);
         }
-
 
     }
 
     public function mobile_notification() {
-        return view('frontend.mobile.mobile_notification');
+
+        $projects = Projects::where('user_id',auth()->user()->id)->orderby('id','desc')->get();
+
+        return view('frontend.mobile.mobile_notification',[
+            'projects' => $projects
+        ]);
     }
 
     public function mobile_view_armap(){
@@ -41,7 +51,12 @@ class MobileViewController extends Controller
     }
     
     public function mobile_settings() {
-        return view('frontend.mobile.mobile_settings');
+
+        $projects = Projects::where('user_id',auth()->user()->id)->orderby('id','desc')->get();
+
+        return view('frontend.mobile.mobile_settings',[
+            'projects' => $projects
+        ]);
     }
 
     public function mobile_register() {
@@ -105,6 +120,44 @@ class MobileViewController extends Controller
     }
     public function mobile_analytics_social_networks() {
         return view('frontend.mobile.sub_pages.analytics_social_networks');
+    }
+
+
+
+
+    public function setting_update(Request $request) 
+    {
+        // dd($request);
+            
+        $first_name = request('first_name');
+        $email = request('email');
+        $pw = request('password');
+
+        if($pw == null){
+            $password = auth()->user()->password;
+        }
+        else{
+            $password_count = strlen($pw);
+            if($password_count < 8){
+                return back()->with([
+                    'error_pw' => 'The password must be at least 8 characters.'
+                ]);             
+            }
+            $password = Hash::make($pw);        
+        }
+
+        $users = DB::table('users') ->where('id', '=', request('hidden_id'))->update(
+            [
+                'first_name' => $first_name,
+                'email' => $email,
+                'password' => $password
+            ]
+        );
+
+        return back()->with([
+            'success' => 'Updated Successfully.'
+        ]); 
+
     }
 
 }

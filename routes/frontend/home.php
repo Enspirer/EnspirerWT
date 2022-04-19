@@ -45,6 +45,7 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact_us.store', [ContactController::class, 'store'])->name('contact_us.store');
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 Route::get('mobile_view',[MobileViewController::class,'mobile_view_armap'])->name('mobile_view_armap');
+Route::post('mobile_view/setting_update',[MobileViewController::class,'setting_update'])->name('mobile_view.setting_update');
 Route::get('mobile_view/home_page/{id}',[MobileViewController::class, 'index'])->name('mobile_view');
 Route::get('mobile_view/mobile-notification',[MobileViewController::class, 'mobile_notification'])->name('mobile_notification');
 Route::get('mobile_view/mobile-settings',[MobileViewController::class, 'mobile_settings'])->name('mobile_settings');

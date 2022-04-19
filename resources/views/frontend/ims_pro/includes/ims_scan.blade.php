@@ -25,7 +25,18 @@
         <div class="section-chatStats">
             <div class="header">
                 <div class="text-block">
-                    <h2 class="title">Good Morning, John</h2>
+                    <h2 class="title">Good Morning, 
+                        @auth
+                            {{auth()->user()->first_name}} {{auth()->user()->last_name}}
+                        @else
+                            @if(count($ims_pro_user_details) != 0)
+                                @foreach($ims_pro_user_details as $ims_pro_user_detail)  
+                                    {{$ims_pro_user_detail->name}}
+                                    @break;
+                                @endforeach
+                            @endif
+                        @endauth
+                    </h2>
                     <div class="text">Here's your websites situation for today</div>
                 </div>
                 <div class="button-block">
@@ -41,7 +52,16 @@
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
-                            <div class="count">102</div>
+                            @if(!empty( auth()->user()->id) === true )
+                                <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','WhatsApp')->where('user_id',auth()->user()->id)->get()) }}</div>
+                            @else
+                                @if(count($ims_pro_user_details) != 0)
+                                    @foreach($ims_pro_user_details as $ims_pro_user_detail) 
+                                        <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','WhatsApp')->where('user_id',$ims_pro_user_detail->id)->get()) }}</div>
+                                        @break;
+                                    @endforeach
+                                @endif
+                            @endif
                             <div class="media">WhatsApp</div>
                         </div>
                     </div>
@@ -51,7 +71,16 @@
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
-                            <div class="count">102</div>
+                            @if(!empty( auth()->user()->id) === true )
+                                <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Messenger')->where('user_id',auth()->user()->id)->get()) }}</div>
+                            @else
+                                @if(count($ims_pro_user_details) != 0)
+                                    @foreach($ims_pro_user_details as $ims_pro_user_detail) 
+                                        <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Messenger')->where('user_id',$ims_pro_user_detail->id)->get()) }}</div>
+                                        @break;
+                                    @endforeach
+                                @endif
+                            @endif
                             <div class="media">Messenger</div>
                         </div>
                     </div>
@@ -61,7 +90,16 @@
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
-                            <div class="count">102</div>
+                            @if(!empty( auth()->user()->id) === true )
+                                <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Line')->where('user_id',auth()->user()->id)->get()) }}</div>
+                            @else
+                                @if(count($ims_pro_user_details) != 0)
+                                    @foreach($ims_pro_user_details as $ims_pro_user_detail) 
+                                        <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Line')->where('user_id',$ims_pro_user_detail->id)->get()) }}</div>
+                                        @break;
+                                    @endforeach
+                                @endif
+                            @endif
                             <div class="media">Line</div>
                         </div>
                     </div>
@@ -71,7 +109,16 @@
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
-                            <div class="count">102</div>
+                            @if(!empty( auth()->user()->id) === true )
+                                <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Tawk.To')->where('user_id',auth()->user()->id)->get()) }}</div>
+                            @else
+                                @if(count($ims_pro_user_details) != 0)
+                                    @foreach($ims_pro_user_details as $ims_pro_user_detail) 
+                                        <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Tawk.To')->where('user_id',$ims_pro_user_detail->id)->get()) }}</div>
+                                        @break;
+                                    @endforeach
+                                @endif
+                            @endif
                             <div class="media">Telegram</div>
                         </div>
                     </div>
@@ -81,7 +128,16 @@
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
-                            <div class="count">102</div>
+                            @if(!empty( auth()->user()->id) === true )
+                                <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Messenger')->where('user_id',auth()->user()->id)->get()) }}</div>
+                            @else
+                                @if(count($ims_pro_user_details) != 0)
+                                    @foreach($ims_pro_user_details as $ims_pro_user_detail) 
+                                        <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Messenger')->where('user_id',$ims_pro_user_detail->id)->get()) }}</div>
+                                        @break;
+                                    @endforeach
+                                @endif
+                            @endif
                             <div class="media">Tawk.To</div>
                         </div>
                     </div>
@@ -91,7 +147,16 @@
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
-                            <div class="count">102</div>
+                            @if(!empty( auth()->user()->id) === true )
+                                <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Viber')->where('user_id',auth()->user()->id)->get()) }}</div>
+                            @else
+                                @if(count($ims_pro_user_details) != 0)
+                                    @foreach($ims_pro_user_details as $ims_pro_user_detail) 
+                                        <div class="count">{{ count(App\Models\ImsProClientMessages::where('project_id',$project_id)->where('type','Viber')->where('user_id',$ims_pro_user_detail->id)->get()) }}</div>
+                                        @break;
+                                    @endforeach
+                                @endif
+                            @endif
                             <div class="media">Viber</div>
                         </div>
                     </div>

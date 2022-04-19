@@ -128,68 +128,7 @@
     </div>
 </section>
 
-<!-- Modal: Add Button -->
-<div class="modal fade addProperty-model mobile-model" id="addProperty" tabindex="-1" aria-labelledby="addPropertyLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Add to</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item pull_delete active">
-                <a href="#" class="list-link">
-                    <div class="property">
-                        <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image">
-                        <div class="content">
-                            <div class="title">Tallentor</div>
-                            <div class="address">https://tallentor.com/</div>
-                        </div>
-                        <i class="bi bi-chevron-right"></i>
-                    </div>
-                </a>
-            </li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <a href="#" type="button" class="btn-mobile btn-new-project" data-bs-toggle="modal" data-bs-target="#addPropertyInput">Add new Project</a>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Modal: Add Property -->
-<div class="modal fade addPropertyInput-model mobile-model" id="addPropertyInput" tabindex="-1" aria-labelledby="addPropertyInputLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Add to</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                <div class="list-label">Project Name</div>
-                <input type="text" name="property-input" class="list-input">
-            </li>
-            <li class="list-group-item">
-                <div class="list-label">Project Type</div>
-                <input type="text" name="property-input" class="list-input">
-            </li>
-            <li class="list-group-item">
-                <div class="list-label">URL</div>
-                <input type="text" name="property-input" class="list-input">
-            </li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <a href="#" type="button" class="btn-mobile btn-project-submit">Submit</a>
-        <a href="#" type="button" class="btn-mobile btn-cancel" data-bs-dismiss="modal">Close</a>
-      </div>
-    </div>
-  </div>
-</div>
 
     
 @endsection
