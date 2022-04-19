@@ -89,11 +89,9 @@
                                                         },
                                                         applyData: 'clicks',
                                                         values: {
-                                                            @if(count($countriesChart) != 0)
-                                                                @foreach($countriesChart as $country)
-                                                                '{{ (explode(':', $country->value)[0]) ?? '' }}': {clicks: {{ $country->count }}, country: '{{ (explode(':', $country->value)[1]) ?? '' }}'},
-                                                                @endforeach
-                                                            @endif
+                                                            @foreach($countriesChart as $country)
+                                                            '{{ (explode(':', $country->value)[0]) ?? '' }}': {clicks: {{ $country->count }}, country: '{{ (explode(':', $country->value)[1]) ?? '' }}'},
+                                                            @endforeach
                                                         }
                                                     },
                                                     colorMin: '#c5dbff',
@@ -130,8 +128,8 @@
                                                             <div class="icon-secondary"><a href="#"><i class="bi bi-box-arrow-up-right"></i></a></div>
                                                         </div>
                                                         <div class="count">
-                                                            <div class="total-count">{{ number_format($country->count, 0, __('.'), __(',')) }}</div>
-                                                            <div class="total-precentage">{{ number_format((($country->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                            <div class="total-count">{{ number_format($country->count(), 0, __('.'), __(',')) }}</div>
+                                                            <div class="total-precentage">{{ number_format((($country->count / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
                                                         </div>
                                                     </div>
                                                     <div class="row-progress">
