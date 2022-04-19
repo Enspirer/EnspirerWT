@@ -631,7 +631,7 @@
                 </code>
             </div>
             <div class="modal-footer">
-                <a href="{{route('frontend.user.project.chat',$project_id)}}" class="modal-btn">I have installed the code</a>
+                <a href="#" class="modal-btn">I have installed the code</a>
             </div>
         </div>
     </div>
