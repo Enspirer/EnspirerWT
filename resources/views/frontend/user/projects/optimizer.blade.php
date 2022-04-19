@@ -39,7 +39,7 @@
                             <div class="realtime-table">
                                 <div class="header">
                                     <div class="title">Realtime View</div>
-                                    <div class="filter-block">
+                                    <!-- <div class="filter-block">
                                         <div class="filter-group">
                                             <div class="dropdown filter-dropdown status-drop">
                                                 <a class="filter-button status-btn" href="#" role="button" id="statusDrop" data-bs-toggle="dropdown" aria-expanded="false">
@@ -83,7 +83,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="body">
                                     @if(count($visitors_count) != 0)
@@ -208,7 +208,7 @@
                                                 <i class="bi bi-code-slash"></i>
                                                 <div class="text">Add Widget Script</div>
                                             </a>                
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" type="button" class="act-btn">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#analyticsModal" type="button" class="act-btn">
                                                 <i class="bi bi-code-slash"></i>
                                                 <div class="text">Add Analytics Script</div>
                                             </a>                
@@ -612,6 +612,30 @@
     </div>
 </div>
 @endforeach
+
+<div class="modal fade get_widget_Modal" id="analyticsModal" tabindex="-1" role="dialog" aria-labelledby="get_widget_Lable" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="{{url('images/Group 389.png')}}" alt="">
+                <h5 class="modal-title" id="get_widget_Lable">Get analytics of your Website</h5>
+                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
+                <code>
+                    &lt;div id="{{$widgetlist->widget_key}}"&gt;&lt;/div&gt; <br>
+                    &lt;script src="{{url('')}}/whatsapp_widget/{{$widgetlist->id}}/tallentorw.js"&gt;&lt;/script&gt;
+                </code>
+            </div>
+            <div class="modal-footer">
+                <a href="{{route('frontend.user.project.chat',$project_id)}}" class="modal-btn">I have installed the code</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="modal fade dashboard-modal delete-modal" id="deleteFavorite" tabindex="-1" aria-labelledby="deleteFavoriteLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
