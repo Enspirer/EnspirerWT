@@ -143,6 +143,10 @@
                             <i class="bi bi-x-circle"></i>
                             <div class="text dashed">Heatmaps</div>
                         </li>
+                        <li style="visibility:hidden">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <div class="text">Heatmaps</div>
+                        </li>
                     </ul>
                     <ul class="option mobile">
                         <div class="label">Mobile</div>
@@ -218,6 +222,10 @@
                             <div class="text">SEO Report</div>
                         </li>
                         <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <div class="text">Heatmaps</div>
+                        </li>
+                        <li style="visibility:hidden">
                             <i class="bi bi-check-circle-fill"></i>
                             <div class="text">Heatmaps</div>
                         </li>

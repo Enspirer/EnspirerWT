@@ -30,7 +30,7 @@
                             <div class="content-block">
                                 <h2 class="title">Widget <span>Pro</span></h2>
                                 <div class="caption">All in one widget with <div class="product">iMS <span class="red pro-cat">Pro</span></div> <br> Whatsapp integrated</div>
-                                <div class="product">iMS <span class="red pro-cat">Pro</span></div>
+                                <div class="product">iMS <span class="pro-cat red">Pro</span></div>
                                 <div class="text">conversation records <br> status reports</div>
 
                                 <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
