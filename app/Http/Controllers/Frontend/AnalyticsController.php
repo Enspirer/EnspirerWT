@@ -1211,6 +1211,8 @@ class AnalyticsController extends Controller
             ->limit(5)
             ->get();
 
+        $countriesChart = $this->getCountries($website, $range, $search, $sort)
+            ->get();
 
         $countries = $this->getCountries($website, $range, $search, $sort)
             ->paginate(config('settings.paginate'))
@@ -1241,7 +1243,8 @@ class AnalyticsController extends Controller
             'totalPageviewsOld' => $totalPageviewsOld,
             'totalReferrers' => $totalReferrers,
             'total' => $total,
-            'countries' => $countries
+            'countries' => $countries,
+            'countriesChart' => $countriesChart
         ]);
     }
 
