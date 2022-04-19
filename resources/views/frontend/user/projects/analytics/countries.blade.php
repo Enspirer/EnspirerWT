@@ -109,8 +109,8 @@
                                             <div class="row-subtitle">
                                                 <div class="subtitle">Total</div>
                                                 <div class="status">
-                                                    <div class="total-count">{{ number_format($total->count, 0, __('.'), __(',')) }}</div>
-                                                    <div class="total-precentage">{{ number_format((($total->count / $total->count) * 100), 1, __('.'), __(',')) }}%</div>
+                                                    <div class="total-count">{{ number_format($total->count(), 0, __('.'), __(',')) }}</div>
+                                                    <div class="total-precentage">{{ number_format((($total->count() / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
                                                 </div>
                                             </div>
                                             @foreach($countries as $country)
@@ -129,7 +129,7 @@
                                                         </div>
                                                         <div class="count">
                                                             <div class="total-count">{{ number_format($country->count(), 0, __('.'), __(',')) }}</div>
-                                                            <div class="total-precentage">{{ number_format((($country->count / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
+                                                            <div class="total-precentage">{{ number_format((($country->count() / $total->count()) * 100), 1, __('.'), __(',')) }}%</div>
                                                         </div>
                                                     </div>
                                                     <div class="row-progress">
