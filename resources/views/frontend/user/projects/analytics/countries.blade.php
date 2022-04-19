@@ -89,9 +89,11 @@
                                                         },
                                                         applyData: 'clicks',
                                                         values: {
-                                                            @foreach($countriesChart as $country)
-                                                            '{{ (explode(':', $country->value)[0]) ?? '' }}': {clicks: {{ $country->count }}, country: '{{ (explode(':', $country->value)[1]) ?? '' }}'},
-                                                            @endforeach
+                                                            @if(count($countriesChart) != 0)
+                                                                @foreach($countriesChart as $country)
+                                                                '{{ (explode(':', $country->value)[0]) ?? '' }}': {clicks: {{ $country->count }}, country: '{{ (explode(':', $country->value)[1]) ?? '' }}'},
+                                                                @endforeach
+                                                            @endif
                                                         }
                                                     },
                                                     colorMin: '#c5dbff',

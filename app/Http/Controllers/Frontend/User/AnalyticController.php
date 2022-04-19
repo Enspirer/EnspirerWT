@@ -1202,17 +1202,7 @@ class AnalyticController extends Controller
             ->get();
 
 
-        $countries = $this->getCountries($website, $range, $search, $sort)
-            ->paginate(config('settings.paginate'))
-            ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
-
-        $first = $this->getCountries($website, $range, null, ['count', 'desc'])
-            ->first();
-
-        $last = $this->getCountries($website, $range, null, ['count', 'asc'])
-            ->first();
-
-            $countriesChart = $this->getCountries($website, $range, $search, $sort)
+        $countriesChart = $this->getCountries($website, $range, $search, $sort)
             ->get();
 
         $countries = $this->getCountries($website, $range, $search, $sort)
@@ -1224,7 +1214,9 @@ class AnalyticController extends Controller
 
         $last = $this->getCountries($website, $range, null, ['count', 'asc'])
             ->first();
-            
+
+        
+
         return view('frontend.user.projects.analytics.countries',[
             'view' => 'overview',
             'project_id' => $project->id,

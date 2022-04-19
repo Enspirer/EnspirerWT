@@ -1213,6 +1213,7 @@ class AnalyticsController extends Controller
 
         $countriesChart = $this->getCountries($website, $range, $search, $sort)
             ->get();
+        // dd($countriesChart);
 
         $countries = $this->getCountries($website, $range, $search, $sort)
             ->paginate(config('settings.paginate'))
