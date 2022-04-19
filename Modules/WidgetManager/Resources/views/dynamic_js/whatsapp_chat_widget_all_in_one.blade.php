@@ -863,14 +863,12 @@ screenSize.addListener(mobileChat);
         if(screenSize.matches) {
             return;
         } else {
-            setTimeout(
-                function allin1chatPopTimeout() {
-                    document.querySelector('#allin1widget').classList.add("allin1view");
-                    document.getElementById("allin1widtoggler").classList.add("allin1view");
-                    allin1msgPopTimeout();
-                    /* playAudio(); */
-                }, 2000
-            );
+            function allin1chatPopTimeout() {
+                document.querySelector('#allin1widget').classList.add("allin1view");
+                document.getElementById("allin1widtoggler").classList.add("allin1view");
+                allin1msgPopTimeout();
+                /* playAudio(); */
+            }
         }
     }
 @endif
