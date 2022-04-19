@@ -14,6 +14,7 @@ use App\Http\Controllers\Frontend\TestController;
 use App\Http\Controllers\Backend\WidgetSettingController;
 use App\Http\Controllers\Backend\IMSProWidgetsController;
 use App\Http\Controllers\Backend\UserProjectController;
+use App\Http\Controllers\Backend\PushNotificationController;
 
 
 
@@ -48,6 +49,8 @@ Route::post('contactus_thanks_update/update', [SettingsController::class, 'conta
 
 Route::get('default_whatsapp_server', [SettingsController::class, 'default_whatsapp_server'])->name('default_whatsapp_server');
 Route::post('default_whatsapp_server_update/update', [SettingsController::class, 'default_whatsapp_server_update'])->name('default_whatsapp_server_update');
+
+Route::post('push_notification', [PushNotificationController::class, 'push_notification'])->name('push_notification');
 
 
 
