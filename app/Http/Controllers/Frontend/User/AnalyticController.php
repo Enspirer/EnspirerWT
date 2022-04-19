@@ -1153,7 +1153,6 @@ class AnalyticController extends Controller
             $totalPageviews = $totalPageviews + $value;
         }
 
-
         $totalVisitorsOld = State::where([['website_id', '=', $website->id], ['name', '=', 'visitors']])
             ->whereBetween('date', [$range['from_old'], $range['to_old']])
             ->sum('count');
@@ -1203,6 +1202,9 @@ class AnalyticController extends Controller
             ->get();
 
 
+        $countriesChart = $this->getCountries($website, $range, $search, $sort)
+            ->get();
+
         $countries = $this->getCountries($website, $range, $search, $sort)
             ->paginate(config('settings.paginate'))
             ->appends(['search' => $search, 'sort' => $sort[2], 'from' => $range['from'], 'to' => $range['to']]);
@@ -1212,6 +1214,8 @@ class AnalyticController extends Controller
 
         $last = $this->getCountries($website, $range, null, ['count', 'asc'])
             ->first();
+
+        
 
         return view('frontend.user.projects.analytics.countries',[
             'view' => 'overview',
@@ -1232,7 +1236,8 @@ class AnalyticController extends Controller
             'totalPageviewsOld' => $totalPageviewsOld,
             'totalReferrers' => $totalReferrers,
             'total' => $total,
-            'countries' => $countries
+            'countries' => $countries,
+            'countriesChart' => $countriesChart
         ]);
     }
     
