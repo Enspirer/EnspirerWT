@@ -206,7 +206,11 @@
                                             </a>
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" type="button" class="act-btn">
                                                 <i class="bi bi-code-slash"></i>
-                                                <div class="text">Add Script</div>
+                                                <div class="text">Add Widget Script</div>
+                                            </a>                
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" type="button" class="act-btn">
+                                                <i class="bi bi-code-slash"></i>
+                                                <div class="text">Add Analytics Script</div>
                                             </a>                
                                         </div>
                                         <div class="btn-group">
