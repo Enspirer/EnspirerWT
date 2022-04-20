@@ -25,7 +25,7 @@
                         </div>
                         <div class="content">
                             <div class="icon-block">
-                                <i class="bi bi-slack"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/programming.png')}}" alt="">
                             </div>
                             <div class="title">Programming &
                                 Development</div>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="content">
                             <div class="icon-block">
-                                <i class="bi bi-slack"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/digital_marketing.png')}}" alt="">
                             </div>
                             <div class="title">Digital Marketing</div>
                             <div class="resources">3,394
@@ -64,7 +64,7 @@
                         </div>
                         <div class="content">
                             <div class="icon-block">
-                                <i class="bi bi-slack"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/graphic_design.png')}}" alt="">
                             </div>
                             <div class="title">Graphic Designing</div>
                             <div class="resources">3,394
@@ -83,7 +83,7 @@
                         </div>
                         <div class="content">
                             <div class="icon-block">
-                                <i class="bi bi-slack"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/art_craft.png')}}" alt="">
                             </div>
                             <div class="title">Art & Craft</div>
                             <div class="resources">3,394
@@ -102,7 +102,7 @@
                         </div>
                         <div class="content">
                             <div class="icon-block">
-                                <i class="bi bi-slack"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/translate.png')}}" alt="">
                             </div>
                             <div class="title">Writing & Translation</div>
                             <div class="resources">3,394
@@ -121,7 +121,7 @@
                         </div>
                         <div class="content">
                             <div class="icon-block">
-                                <i class="bi bi-slack"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/video.png')}}" alt="">
                             </div>
                             <div class="title">Video & Photography</div>
                             <div class="resources">3,394
@@ -140,7 +140,7 @@
                         </div>
                         <div class="content">
                             <div class="icon-block">
-                                <i class="bi bi-slack"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/music.png')}}" alt="">
                             </div>
                             <div class="title">Music & Audio</div>
                             <div class="resources">3,394
@@ -159,7 +159,7 @@
                         </div>
                         <div class="content">
                             <div class="icon-block">
-                                <i class="bi bi-slack"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/business.png')}}" alt="">
                             </div>
                             <div class="title">Business & Sales</div>
                             <div class="resources">3,394
@@ -185,7 +185,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="#" id="categoryNav1" class="nav-link" onclick="optionBlocks('1')">
-                                <i class="bi bi-slack active-hide"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/programming.png')}}" alt="">
                                 <span class="active-hide">Programming &
                                     Development</span>
                                 <div class="card blue-overlay">
@@ -195,7 +195,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="icon-block">
-                                            <i class="bi bi-slack"></i>
+                                            <img src="{{url('images/landing_page/marketplace/icons/programming.png')}}" alt="">
                                         </div>
                                         <div class="title">Programming &
                                             Development</div>
@@ -208,7 +208,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" id="categoryNav2" class="nav-link" onclick="optionBlocks('2')">
-                                <i class="bi bi-slack active-hide"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/digital_marketing.png')}}" alt="">
                                 <span class="active-hide">Digital Marketing</span>
                                 <div class="card green-overlay">
                                     <div class="overlay">
@@ -217,7 +217,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="icon-block">
-                                            <i class="bi bi-slack"></i>
+                                            <img src="{{url('images/landing_page/marketplace/icons/digital_marketing.png')}}" alt="">
                                         </div>
                                         <div class="title">Digital Marketing</div>
                                         <div class="resources">3,394
@@ -229,7 +229,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" id="categoryNav3" class="nav-link" onclick="optionBlocks('3')">
-                                <i class="bi bi-slack active-hide"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/graphic_design.png')}}" alt="">
                                 <span class="active-hide">Graphic Designing</span>
                                 <div class="card yellow-overlay">
                                     <div class="overlay">
@@ -238,7 +238,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="icon-block">
-                                            <i class="bi bi-slack"></i>
+                                            <img src="{{url('images/landing_page/marketplace/icons/graphic_design.png')}}" alt="">
                                         </div>
                                         <div class="title">Graphic Designing</div>
                                         <div class="resources">3,394
@@ -250,7 +250,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" id="categoryNav4" class="nav-link" onclick="optionBlocks('4')">
-                                <i class="bi bi-slack active-hide"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/art_craft.png')}}" alt="">
                                 <span class="active-hide">Art & Craft</span>
                                 <div class="card red-overlay">
                                     <div class="overlay">
@@ -259,7 +259,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="icon-block">
-                                            <i class="bi bi-slack"></i>
+                                            <img src="{{url('images/landing_page/marketplace/icons/art_craft.png')}}" alt="">
                                         </div>
                                         <div class="title">Art & Craft</div>
                                         <div class="resources">3,394
@@ -271,7 +271,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" id="categoryNav5" class="nav-link" onclick="optionBlocks('5')">
-                                <i class="bi bi-slack active-hide"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/translate.png')}}" alt="">
                                 <span class="active-hide">Writing & Translation</span>
                                 <div class="card yellow-overlay">
                                     <div class="overlay">
@@ -280,7 +280,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="icon-block">
-                                            <i class="bi bi-slack"></i>
+                                            <img src="{{url('images/landing_page/marketplace/icons/translate.png')}}" alt="">
                                         </div>
                                         <div class="title">Writing & Translation</div>
                                         <div class="resources">3,394
@@ -292,7 +292,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" id="categoryNav6" class="nav-link" onclick="optionBlocks('6')">
-                                <i class="bi bi-slack active-hide"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/video.png')}}" alt="">
                                 <span class="active-hide">Video & Photography</span>
                                 <div class="card red-overlay">
                                     <div class="overlay">
@@ -301,7 +301,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="icon-block">
-                                            <i class="bi bi-slack"></i>
+                                            <img src="{{url('images/landing_page/marketplace/icons/video.png')}}" alt="">
                                         </div>
                                         <div class="title">Video & Photography</div>
                                         <div class="resources">3,394
@@ -313,7 +313,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" id="categoryNav7" class="nav-link" onclick="optionBlocks('7')">
-                                <i class="bi bi-slack active-hide"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/music.png')}}" alt="">
                                 <span class="active-hide">Music & Audio</span>
                                 <div class="card green-overlay">
                                     <div class="overlay">
@@ -322,7 +322,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="icon-block">
-                                            <i class="bi bi-slack"></i>
+                                            <img src="{{url('images/landing_page/marketplace/icons/music.png')}}" alt="">
                                         </div>
                                         <div class="title">Music & Audio</div>
                                         <div class="resources">3,394
@@ -334,7 +334,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" id="categoryNav8" class="nav-link" onclick="optionBlocks('8')">
-                                <i class="bi bi-slack active-hide"></i>
+                                <img src="{{url('images/landing_page/marketplace/icons/business.png')}}" alt="">
                                 <span class="active-hide">Business & Sales</span>
                                 <div class="card blue-overlay">
                                     <div class="overlay">
@@ -343,7 +343,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="icon-block">
-                                            <i class="bi bi-slack"></i>
+                                            <img src="{{url('images/landing_page/marketplace/icons/business.png')}}" alt="">
                                         </div>
                                         <div class="title">Business & Sales</div>
                                         <div class="resources">3,394
@@ -362,8 +362,11 @@
                         <div class="row g-4 row-cols-lg-3 row-cols-2">
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/basic_website.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -374,8 +377,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/dynamic_website.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -386,8 +392,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/e_commerce_website.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -398,8 +407,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/wordpress_website.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -410,8 +422,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/landing_page.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -422,8 +437,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/web_banner.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -434,8 +452,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/icon_pack.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -446,8 +467,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/wireframes.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -458,8 +482,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/erp.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -470,8 +497,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/pms.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -482,8 +512,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/payroll_management.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -494,8 +527,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/programming/pos.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -511,8 +547,11 @@
                         <div class="row g-4 row-cols-lg-3">
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/digital_marketing/social_media_marketing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -523,8 +562,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/digital_marketing/seo.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -535,8 +577,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/digital_marketing/sem.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -547,8 +592,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/digital_marketing/video_marketing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -564,8 +612,11 @@
                         <div class="row g-4 row-cols-lg-3 row-cols-2">
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/graphic_design/logo_design.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -576,8 +627,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/graphic_design/branding.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -588,8 +642,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/graphic_design/stationery.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -600,8 +657,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/graphic_design/package_design.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -612,8 +672,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/graphic_design/brochure_design.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -624,8 +687,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/graphic_design/flyer_design.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -636,8 +702,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/graphic_design/web_design.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -648,8 +717,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/graphic_design/app_ui.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -665,8 +737,11 @@
                         <div class="row g-4 row-cols-lg-3 row-cols-2">
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/art_craft/painting.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -677,8 +752,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/art_craft/masks.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -689,8 +767,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/art_craft/wall_arts.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -701,8 +782,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/art_craft/wall_poster.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -713,8 +797,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/art_craft/handicrafts.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -725,8 +812,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/art_craft/batik.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -742,8 +832,11 @@
                         <div class="row g-4 row-cols-lg-3 row-cols-2">
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/content_writing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -754,8 +847,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/copywriting.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -766,8 +862,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/translation.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -778,8 +877,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/legal_writing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -790,8 +892,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/contract.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -802,8 +907,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/ghostwriting.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -814,8 +922,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/speechwriting.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -826,8 +937,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/technical_writing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -838,8 +952,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/scriptwriting.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -850,8 +967,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/sm_copy.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -867,8 +987,11 @@
                         <div class="row g-4 row-cols-lg-3 row-cols-2">
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/company_profile.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -879,8 +1002,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/audio_visuals.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -891,8 +1017,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/smv.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -903,8 +1032,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/video_editing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -915,8 +1047,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/360_business.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -927,8 +1062,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/photography.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -939,8 +1077,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/drone_videography.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -951,8 +1092,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/product_photograpy.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -963,8 +1107,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/photo_retouching.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -975,8 +1122,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/video_photography/product_explainer.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -992,8 +1142,11 @@
                         <div class="row g-4 row-cols-lg-3 row-cols-2">
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/music_audio/voice_over.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1004,8 +1157,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/music_audio/audio_tracks.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1016,8 +1172,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/music_audio/music_lessons.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1028,8 +1187,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/music_audio/song_writing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1040,8 +1202,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/music_audio/intros.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1052,8 +1217,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/music_audio/ads_production.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1064,8 +1232,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/music_audio/singers.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1081,8 +1252,11 @@
                         <div class="row g-4 row-cols-lg-3 row-cols-2">
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/tele_sales.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1093,8 +1267,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/marketing_consultant.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1105,8 +1282,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/accounts_assistant.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1117,8 +1297,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/tax_consultant.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1129,8 +1312,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/market_research.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1141,8 +1327,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/legal_consultant.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1153,8 +1342,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/virtual_assistant.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1165,8 +1357,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/business_docs.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1177,8 +1372,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/financial_consulting.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1189,8 +1387,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/real_state.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1201,8 +1402,11 @@
                             </div>
                             <div class="col">
                                 <div class="option-card">
-                                    <a href="#">
+                                    <a href="{{url('/contact')}}">
                                         <div class="image-block">
+                                            <div class="overlay">
+                                                <div class="overlay-btn">Contact</div>
+                                            </div>
                                             <img src="{{url('images/landing_page/marketplace/business_sales/project_management.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
@@ -1392,14 +1596,14 @@ function optionBlocks(id) {
     document.getElementById("categoryBlock" + id).classList.add("active");
 }
 
-optCard.forEach(function (option) {
-    option.addEventListener("click", function () {
-        catOptions.forEach(function (cat) {
-            cat.classList.remove("active");
-        });
-        projectForm.classList.add("active");
-    });
-});
+// optCard.forEach(function (option) {
+//     option.addEventListener("click", function () {
+//         catOptions.forEach(function (cat) {
+//             cat.classList.remove("active");
+//         });
+//         projectForm.classList.add("active");
+//     });
+// });
 </script>
 
 @endpush
