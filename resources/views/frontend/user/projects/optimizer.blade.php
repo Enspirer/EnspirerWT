@@ -607,7 +607,7 @@
         </div>
     </div>
 </div>
-@endforeach
+
 
 <div class="modal fade get_widget_Modal" id="analyticsModal" tabindex="-1" role="dialog" aria-labelledby="get_widget_Lable" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -616,7 +616,7 @@
                 <img src="{{url('images/Group 389.png')}}" alt="">
                 <h5 class="modal-title" id="get_widget_Lable">Get analytics of your Website</h5>
                 <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
-                <i class="bi bi-x-lg"></i>
+                    <i class="bi bi-x-lg"></i>
                 </button>
             </div>
             <div class="modal-body">
@@ -632,6 +632,8 @@
         </div>
     </div>
 </div>
+@endforeach
+
 
 <div class="modal fade dashboard-modal delete-modal" id="deleteFavorite" tabindex="-1" aria-labelledby="deleteFavoriteLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
