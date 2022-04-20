@@ -22,6 +22,8 @@ use DB;
 use WhichBrowser\Parser as UserAgent;
 use Carbon\Carbon;
 use GeoIp2\Database\Reader as GeoIP;
+
+
 /**
  * Class HomeController.
  */
@@ -1215,6 +1217,16 @@ class HomeController extends Controller
 
 
 
+    public function selected_conversation(Request $request)
+    {       
+        if ($request->input('ids')) {
+            $entries = ImsProClientMessages::whereIn('id', $request->input('ids'))->get()->unique('phone_number');
+
+            foreach ($entries as $entry) {
+                $entry->delete();
+            }
+        }
+    }
     
 
     
