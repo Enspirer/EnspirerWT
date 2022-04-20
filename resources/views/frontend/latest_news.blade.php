@@ -11,25 +11,41 @@
 <section class="splide section-news" id="newsSlider">
   <div class="splide__track">
 	<ul class="splide__list">
-		<li class="splide__slide">
-			<div class="feature-block">
-				<div class="image-block">
-					<div class="label">Latest News</div>
-					<img src="{{url('images/landing_page/news/feature-img-1.png')}}" alt="" class="feature-img">
+		
+		@if(count($posts) == 0 || $posts == null)
+			<li class="splide__slide">
+				<div class="feature-block">
+					@include('frontend.includes.not_found',[
+						'not_found_title' => 'Data not found',
+						'not_found_description' => null,
+						'not_found_button_caption' => null
+					])
 				</div>
-				<div class="content-block">
-					<h2 class="title-light">Introducing</h2>
-					<h2 class="title">All in one widgets</h2>
-					<div class="text">When you use an application on your mobile phone or smart devices the application connects to the Internet and sends When you use an …</div>
-					<a href="{{url('media/latest-news/single-news')}}" class="cta-btn-border">
-						<span class="text">Read Story</span>
-						<i class="bi bi-arrow-right-short"></i>
-					</a>
-				</div>
-				<span class="count">01</span>
-			</div>
-		</li>
-		<li class="splide__slide">
+			</li>
+        @else
+			@foreach($posts as $key => $post)
+				<li class="splide__slide">
+					<div class="feature-block">
+						<div class="image-block">
+							<!-- <div class="label">Latest News</div> -->
+							<img src="{{uploaded_asset($post->feature_image)}}" alt="" class="feature-img">
+						</div>
+						<div class="content-block">
+							<!-- <h2 class="title-light">Introducing</h2> -->
+							<h2 class="title">{{$post->title}}</h2>
+							<div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;">{!!$post->description!!}</div>
+							<a href="{{route('frontend.single_news',$post->id)}}" class="cta-btn-border">
+								<span class="text">Read Story</span>
+								<i class="bi bi-arrow-right-short"></i>
+							</a>
+						</div>
+						<span class="count">{{$key + 1}}</span>
+					</div>
+				</li>
+			@endforeach
+		@endif
+
+		<!-- <li class="splide__slide">
 			<div class="feature-block">
 				<div class="image-block">
 					<img src="{{url('images/landing_page/news/feature-img-2.png')}}" alt="" class="feature-img">
@@ -62,7 +78,9 @@
 				</div>
 				<span class="count">03</span>
 			</div>
-		</li>
+		</li> -->
+
+
 		<li class="splide__slide">
 			<div class="feature-block">
 				<div class="allNews-section">
@@ -70,21 +88,32 @@
 					<div class="splide news-slider" role="group" id="allNewsSlider">
 						<div class="splide__track">
 							<ul class="splide__list">
-								<li class="splide__slide">
-									<div class="news-card">
-										<div class="image-block">
-											<img src="{{url('images/landing_page/news/feature-img-2.png')}}" alt="" class="feature-img">
-										</div>
-										<div class="content-block">
-											<div class="title">Introducing WhatsApp widget</div>
-											<div class="text">When you use an application on your mobile phone or smart devices the application connects to the Internet</div>
-											<div class="footer">
-												<a href="#" class="btn-viewMore">View More</a>
+
+								@if(count($all_posts) == 0 || $all_posts == null)								
+									@include('frontend.includes.not_found',[
+										'not_found_title' => 'Data not found',
+										'not_found_description' => null,
+										'not_found_button_caption' => null
+									])
+								@else
+									@foreach($all_posts as $all_post)
+										<li class="splide__slide">
+											<div class="news-card">
+												<div class="image-block">
+													<img src="{{uploaded_asset($all_post->feature_image)}}" alt="" class="feature-img">
+												</div>
+												<div class="content-block">
+													<div class="title">{{$post->title}}</div>
+													<div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;">{!!$post->description!!}</div>
+													<div class="footer">
+														<a href="{{route('frontend.single_news',$all_post->id)}}" class="btn-viewMore">View More</a>
+													</div>
+												</div>
 											</div>
-										</div>
-									</div>
-								</li>
-								<li class="splide__slide">
+										</li>
+									@endforeach
+								@endif
+								<!-- <li class="splide__slide">
 									<div class="news-card">
 										<div class="image-block">
 											<img src="{{url('images/landing_page/news/feature-img-1.png')}}" alt="" class="feature-img">
@@ -125,7 +154,7 @@
 											</div>
 										</div>
 									</div>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 					</div>

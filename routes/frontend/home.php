@@ -92,7 +92,7 @@ Route::get('services/portfolio',[ServicesController::class, 'portfolio'])->name(
 Route::get('services/expert-center',[ServicesController::class, 'expertCenter'])->name('expert_center');
 Route::get('services/services',[ServicesController::class, 'services'])->name('services');
 Route::get('media/latest-news',[MediaController::class, 'news'])->name('latest_news');
-Route::get('media/latest-news/single-news',[MediaController::class, 'singleNews'])->name('single_news');
+Route::get('media/latest-news/single-news/{id}',[MediaController::class, 'singleNews'])->name('single_news');
 Route::get('media/promotions',[MediaController::class, 'promotions'])->name('promotions');
 Route::get('media/home-blog',[BlogController::class, 'index'])->name('home_blog');
 Route::get('solo_post/{id}',[BlogController::class, 'solo_post'])->name('solo_post');

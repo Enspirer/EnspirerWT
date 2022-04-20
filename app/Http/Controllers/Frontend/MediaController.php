@@ -4,18 +4,55 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Modules\Blog\Entities\Category;
+use Modules\Blog\Entities\Post;
 
 class MediaController extends Controller
 {
     public function news() {
-        return view('frontend.latest_news');
+
+        $category = Category::where('name','News')->first();
+
+        if($category != null){
+            $all_posts = Post::where('category',$category->id)->where('status','Enabled')->orderBy('order','desc')->get();
+            $posts = Post::where('category',$category->id)->where('status','Enabled')->take(3)->latest()->get();
+        }
+        else{
+            $all_posts = null;
+            $posts = null;
+        }
+
+        return view('frontend.latest_news',[
+            'all_posts' => $all_posts,
+            'posts' => $posts
+        ]);
     }
 
     public function promotions() {
-        return view('frontend.promotions');
+
+        $category = Category::where('name','Promotions')->first();
+
+        if($category != null){
+            $all_posts = Post::where('category',$category->id)->where('status','Enabled')->orderBy('order','desc')->get();
+            $posts = Post::where('category',$category->id)->where('status','Enabled')->take(3)->latest()->get();
+        }
+        else{
+            $all_posts = null;
+            $posts = null;
+        }
+
+        return view('frontend.promotions',[
+            'all_posts' => $all_posts,
+            'posts' => $posts
+        ]);
     }
 
-    public function singleNews() {
-        return view('frontend.single_news');
+    public function singleNews($id) {
+
+        $post_details = Post::where('id',$id)->first();
+
+        return view('frontend.single_news',[
+            'post_details' => $post_details
+        ]);
     }
 }
