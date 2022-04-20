@@ -61,16 +61,15 @@
                                     </a>
                                 </div>
                                 <div class="email" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
-                                    <a href="mailto:hello@tallentor.com" class="contact-link">
-                                        <img src="{{url('images/contact-us/email (2).png')}}" alt="">
-                                        <div class="text">hello@tallentor.com</div>
-                                    </a>
-                                </div>
-
-                                <div class="email" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
                                     <a href="https://www.messenger.com/t/tallentor" class="contact-link" target="_blank">
                                         <img src="{{url('images/messenger.jpg')}}" alt="">
                                         <div class="text">Connect with Messenger</div>
+                                    </a>
+                                </div>
+                                <div class="email" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
+                                    <a href="mailto:hello@tallentor.com" class="contact-link">
+                                        <img src="{{url('images/contact-us/email (2).png')}}" alt="">
+                                        <div class="text">hello@tallentor.com</div>
                                     </a>
                                 </div>
                                 <div class="images" style="">
