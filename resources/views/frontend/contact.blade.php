@@ -134,6 +134,13 @@
                                 <div class="text">hello@tallentor.com</div>
                             </a>
                         </div>
+
+                        <div class="email">
+                            <a href="https://www.messenger.com/t/tallentor" class="contact-link">
+                                <img src="{{url('images/messenger.jpg')}}" alt="">
+                                <div class="text">Contact with Messenger</div>
+                            </a>
+                        </div>
                         <div class="images">
                             <img src="{{url('images/contact-us/Group 549.png')}}" alt="" class="large">
                             <img src="{{url('images/contact-us/679.png')}}" alt="" class="medium">
