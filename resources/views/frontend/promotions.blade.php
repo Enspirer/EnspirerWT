@@ -12,7 +12,7 @@
   <div class="splide__track">
 	<ul class="splide__list">
 
-	@if(count($posts) == 0 || $posts == null)
+		@if($posts == null || count($posts) == 0)
 			<li class="splide__slide">
 				<div class="feature-block">
 					@include('frontend.includes.not_found',[
@@ -52,7 +52,7 @@
 					<div class="splide news-slider" role="group" id="allNewsSlider">
 						<div class="splide__track">
 							<ul class="splide__list">
-								@if(count($all_posts) == 0 || $all_posts == null)								
+								@if($all_posts == null || count($all_posts) == 0)								
 									@include('frontend.includes.not_found',[
 										'not_found_title' => 'Data not found',
 										'not_found_description' => null,
