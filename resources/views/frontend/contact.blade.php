@@ -123,12 +123,16 @@
                 <div class="col-lg-6">
                     <div class="inner-wrapper">
                         <div class="address">
-                            <img src="{{url('images/contact-us/location (1).png')}}" alt="">
-                            <div class="text">19 Koombahla Court, Rowville, <br> Victoria 3178, Australia</div>
+                            <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link">
+                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                <div class="text">Chat with Us</div>
+                            </a>
                         </div>
                         <div class="email">
-                            <img src="{{url('images/contact-us/email (2).png')}}" alt="">
-                            <a href="mailto:info@tallentor.com">info@tallentor.com</a>
+                            <a href="mailto:hello@tallentor.com" class="contact-link">
+                                <img src="{{url('images/contact-us/email (2).png')}}" alt="">
+                                <div class="text">hello@tallentor.com</div>
+                            </a>
                         </div>
                         <div class="images">
                             <img src="{{url('images/contact-us/Group 549.png')}}" alt="" class="large">

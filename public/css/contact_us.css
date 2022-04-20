@@ -242,7 +242,7 @@
     gap: 3rem;
 }
 
-.contact-form .inner-wrapper .address {
+.contact-form .inner-wrapper .address .contact-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -254,6 +254,7 @@
     -ms-flex-align: center;
     align-items: center;
     gap: 2rem;
+    text-decoration: none;
 }
 
 .contact-form .inner-wrapper .address img {
@@ -262,9 +263,11 @@
 
 .contact-form .inner-wrapper .address .text {
     font-size: 0.875rem;
+    text-decoration: none;
+    color: #000;
 }
 
-.contact-form .inner-wrapper .email {
+.contact-form .inner-wrapper .email .contact-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -276,13 +279,14 @@
     -ms-flex-align: center;
     align-items: center;
     gap: 2rem;
+    text-decoration: none;
 }
 
 .contact-form .inner-wrapper .email img {
     width: 50px;
 }
 
-.contact-form .inner-wrapper .email a {
+.contact-form .inner-wrapper .email .text {
     font-size: 0.875rem;
     text-decoration: none;
     color: #000;
