@@ -261,12 +261,6 @@
                                                             <div class="option-block">
                                                                 <ul class="navbar-nav">
                                                                     <li class="nav-item">
-                                                                        <a href="#" class="nav-link"><i class="bi bi-telephone-fill"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item">
-                                                                        <a href="#" class="nav-link"><i class="bi bi-bookmark-fill"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item">
                                                                         <a href="#" class="nav-link"><i class="bi bi-trash"></i></a>
                                                                     </li>
                                                                     <li class="nav-item">
@@ -526,14 +520,6 @@
                                                                                     <div class="text">Add Role</div>
                                                                                 </a>
                                                                             </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="icons"><i class="bi bi-link-45deg"></i></td>
-                                                                            <td class="title" colspan="3">Chat URL</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="icons"></i></td>
-                                                                            <td class="inputs" colspan="3"><input class="table-input" type="text" value="https://app.timelines.ai/chat/174548/messages/" disabled readonly></td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td class="icons blue-icon"><i class="bi bi-bookmark-fill"></i></td>

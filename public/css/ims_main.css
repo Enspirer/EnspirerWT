@@ -603,6 +603,7 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    pointer-events: none;
 }
 
 .ims__section .ims__control-panel .control-block .control-link:not(:last-child) {
@@ -621,6 +622,7 @@
 
 .ims__section .ims__control-panel .control-block .control-link.active {
     color: #222;
+    pointer-events: all;
 }
 
 .ims__section .ims__control-panel .control-block .controls {

@@ -42,7 +42,7 @@
                                                             <i class="bi bi-archive-fill"></i>
                                                             <div class="text">Archive</div>
                                                         </a>
-                                                        <a href="#" class="control-link">
+                                                        <a href="#" class="control-link" data-delete-modal data-bs-toggle="modal" data-bs-target="#deleteInquiry">
                                                             <i class="bi bi-trash-fill"></i>
                                                             <div class="text">Delete</div>
                                                         </a>
@@ -56,7 +56,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="ims__data-table">
-                                                    <table class="table table-borderless">
+                                                    <table class="table table-borderless" id="inquirySummery">
                                                         <thead>
                                                             <tr class="data-row">
                                                                 <th class="data-title"></th>
@@ -80,8 +80,8 @@
                                                                 @foreach($all_ims_pro_client_messages as $all_ims_pro_client_message)
                                                                     <tr class="data-row" data-href="#">
                                                                         <td class="data--select data-cell">
-                                                                            <input class="form-check-input"
-                                                                                type="checkbox" value="">
+                                                                            <input class="form-check-input inquiry-check"
+                                                                            id="{{$all_ims_pro_client_message->id}}" type="checkbox" value="">
                                                                         </td>
                                                                         <td class="data--fav data-cell">
                                                                             <label class="fav-btn">
@@ -135,3 +135,84 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+<!-- Delete Inquery Modal -->
+<div class="modal fade" id="deleteInquiry" tabindex="-1" aria-labelledby="deleteInquiryLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteInquiryLabel">Delete Inquiry</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Do you want to delete selected inquiries?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"data-cancel-btn data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" data-delete-btn>Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    const dataTable = document.getElementById("inquirySummery")
+const dataCheck = dataTable.querySelectorAll(".inquiry-check")
+const dataDeleteModal = document.querySelector('[data-delete-modal]')
+const dataDeleteBtn = document.querySelector('[data-delete-btn]')
+const dataCancelBtn = document.querySelector('[data-cancel-btn]')
+const dataChecked = []
+
+dataCheck.forEach(function (i) {
+    i.addEventListener('change', function () {
+        const data = i.getAttribute("id");
+        const dataIndex = dataChecked.indexOf(data);
+
+        if (i.checked) {
+
+            if (dataChecked.includes(data) === false) {
+                dataChecked.push(data);
+            } else {
+                return;
+            }
+
+            dataDeleteModal.classList.add("active");
+
+        } else {
+
+            if (dataIndex > -1) {
+                dataChecked.splice(dataIndex, 1);
+            } else {
+                return;
+            }
+        }
+
+        console.log(dataChecked.length);
+
+        if (dataChecked.length == 0) {
+            dataDeleteModal.classList.remove("active");
+        }
+    })
+})
+
+dataDeleteBtn.addEventListener('click', function () {
+    fetch("{{url('/')}}/api/selected_conversation", {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataChecked)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+    setTimeout(dataCancelBtn.click(), 1000)
+})
+</script>
