@@ -57,7 +57,7 @@
                                 <div class="address" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
                                     <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link" target="_blank">
                                         <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
-                                        <div class="text">Chat with Us</div>
+                                        <div class="text">Chat with on WhatsApp</div>
                                     </a>
                                 </div>
                                 <div class="email" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
