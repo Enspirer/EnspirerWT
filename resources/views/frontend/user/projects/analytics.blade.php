@@ -190,7 +190,7 @@
                                                 <div class="row-data">
                                                     <div class="row-info">
                                                         <div class="info">
-                                                            <div class="icon-primary"><img src="https://flagcdn.com/w40/{{strtolower($country->value)}}.png" class="width-4 height-4"></div>
+                                                            <div class="icon-primary"><img src="https://flagcdn.com/w40/{{ explode(':', $country->value)[0] }}.png" class="width-4 height-4"></div>
                                                             <div class="text">
                                                                 @if(!empty(explode(':', $country->value)[1]))
                                                                     <a href="" class="text-body">{{ explode(':', $country->value)[1] }}</a>
