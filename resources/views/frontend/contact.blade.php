@@ -149,8 +149,8 @@
         <div class="modal-content">
 
             <div class="modal-body" style="padding: 3rem">
-                <h2 class="text-center">Submitted Successfully!</h2>
-                <!-- <h5>Email Alert Sent</h5> -->
+                <p class="text-center">Your message submitted successfully.</p>
+                <p class="text-center">One of our agents will be in touch shortly.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
