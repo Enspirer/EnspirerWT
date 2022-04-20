@@ -12,8 +12,79 @@
         <div class="container">
             <div class="header">
                 <h2 class="title">We are here to help</h2>
-                <h6 class="subtitle">Contact Tallentor</h6>
+                {{--<h6 class="subtitle">Contact Tallentor</h6>--}}
             </div>
+
+
+            <section class="contact-form">
+                <div class="container">
+
+                    <div class="row g-5">
+                        <div class="col-lg-6">
+                            <form action="{{route('frontend.contact_us.store')}}" method="post" class="contact-form" enctype="multipart/form-data">
+                                {{csrf_field()}}
+
+                                @if(session()->has('error'))
+                                    <div class="alert alert-danger">
+                                        {{ session()->get('error') }}
+                                    </div>
+                                @endif
+
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="inquiry" placeholder="Your Inquiry" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" name="help" placeholder="How can we help you ?" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" id="tick" class="form-check-input">
+                                    <label class="form-check-label" for="tick">I would like to receive information and updates from Tallentor in relation to my enquiry, <br> I understand Tallentor will never share my information</label>
+                                </div>
+                                <div class="button-block">
+                                    <div class="g-recaptcha" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR" ></div>
+                                    <button type="submit" class="form-submit-btn" disabled>Send Message <i class="bi bi-arrow-right-short"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="inner-wrapper">
+                                <div class="address" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
+                                    <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link" target="_blank">
+                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                        <div class="text">Chat with Us</div>
+                                    </a>
+                                </div>
+                                <div class="email" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
+                                    <a href="mailto:hello@tallentor.com" class="contact-link">
+                                        <img src="{{url('images/contact-us/email (2).png')}}" alt="">
+                                        <div class="text">hello@tallentor.com</div>
+                                    </a>
+                                </div>
+
+                                <div class="email" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
+                                    <a href="https://www.messenger.com/t/tallentor" class="contact-link" target="_blank">
+                                        <img src="{{url('images/messenger.jpg')}}" alt="">
+                                        <div class="text">Connect with Messenger</div>
+                                    </a>
+                                </div>
+                                <div class="images" style="">
+                                    <img src="{{url('images/contact-us/Group 549.png')}}" alt="" class="large">
+                                    <img src="{{url('images/contact-us/679.png')}}" alt="" class="medium">
+                                    <img src="{{url('images/contact-us/679 [Converted]-03.png')}}" alt="" class="small">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <br><br>
             <div class="slider">
                 <div class="splide" id="contactSlider">
                     <div class="splide__track">
@@ -79,78 +150,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section><br><br>
 
-    <section class="contact-form">
-        <div class="container">
-            <div class="header">
-                <h2 class="title">Contact Us</h2>
-                <h6 class="subtitle">Have any questions ? We'd love to hear from you.</h6>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <form action="{{route('frontend.contact_us.store')}}" method="post" class="contact-form" enctype="multipart/form-data">
-                    {{csrf_field()}}
 
-                        @if(session()->has('error'))
-                            <div class="alert alert-danger">
-                                {{ session()->get('error') }}
-                            </div>
-                        @endif
-
-                        <div class="mb-3">
-                            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" name="inquiry" placeholder="Your Inquiry" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" name="help" placeholder="How can we help you ?" required>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" id="tick" class="form-check-input">
-                            <label class="form-check-label" for="tick">I would like to receive information and updates from Tallentor in relation to my enquiry, <br> I understand Tallentor will never share my information</label>
-                        </div>
-                        <div class="button-block">
-                            <div class="g-recaptcha" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR" ></div>
-                            <button type="submit" class="form-submit-btn" disabled>Send Message <i class="bi bi-arrow-right-short"></i></button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-6">
-                    <div class="inner-wrapper">
-                        <div class="address">
-                            <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link" target="_blank">
-                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
-                                <div class="text">Chat with Us</div>
-                            </a>
-                        </div>
-                        <div class="email">
-                            <a href="mailto:hello@tallentor.com" class="contact-link">
-                                <img src="{{url('images/contact-us/email (2).png')}}" alt="">
-                                <div class="text">hello@tallentor.com</div>
-                            </a>
-                        </div>
-
-                        <div class="email">
-                            <a href="https://www.messenger.com/t/tallentor" class="contact-link" target="_blank">
-                                <img src="{{url('images/messenger.jpg')}}" alt="">
-                                <div class="text">Connect with Messenger</div>
-                            </a>
-                        </div>
-                        <div class="images">
-                            <img src="{{url('images/contact-us/Group 549.png')}}" alt="" class="large">
-                            <img src="{{url('images/contact-us/679.png')}}" alt="" class="medium">
-                            <img src="{{url('images/contact-us/679 [Converted]-03.png')}}" alt="" class="small">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 @if(\Session::has('success') )
