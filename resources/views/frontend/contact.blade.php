@@ -111,7 +111,7 @@
                             <input type="text" class="form-control" name="help" placeholder="How can we help you ?" required>
                         </div>
                         <div class="mb-3 form-check">
-                            <input type="checkbox" id="tick" class="form-check-input" required>
+                            <input type="checkbox" id="tick" class="form-check-input">
                             <label class="form-check-label" for="tick">I would like to receive information and updates from Tallentor in relation to my enquiry, <br> I understand Tallentor will never share my information</label>
                         </div>
                         <div class="button-block">
