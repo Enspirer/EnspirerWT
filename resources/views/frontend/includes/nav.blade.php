@@ -84,6 +84,10 @@
                         <div class="col-auto ms-lg-0 ms-auto">
                             <div class="profile-block">
                                 <ul class="navbar-nav">
+                                    @if(isset($project_id))
+                                        <h6 class="me-3">{{get_expire_date($project_id)['remaining_days']}} Days Left for {{get_expire_date($project_id)['project_name']}}</h6>
+                                    @endif
+
                                     @auth()
 
                                     <li class="nav-item dropdown">
@@ -192,14 +196,14 @@
                                                     <div class="text">Projects</div>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <!-- <li>
                                                 <a class="dropdown-item" href="{{url('settings')}}">
                                                     <div class="icon-block">
                                                         <i class="bi bi-person"></i>
                                                     </div>
                                                     <div class="text">Your Details</div>
                                                 </a>
-                                            </li>
+                                            </li> -->
                                             <li>
                                                 <a class="dropdown-item" href="{{url('settings')}}">
                                                     <div class="icon-block">
@@ -218,16 +222,7 @@
                                                     </div>
                                                     <div class="text">Password & Security</div>
                                                 </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="{{url('settings')}}">
-                                                    <div class="icon-block">
-                                                        <i class="bi bi-box-seam"></i>
-                                                    </div>
-                                                    <div class="text">Choose Plan</div>
-                                                </a>
-                                            </li>
-                                            
+                                            </li>                                            
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>

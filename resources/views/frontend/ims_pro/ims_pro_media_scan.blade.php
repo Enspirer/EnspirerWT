@@ -29,7 +29,11 @@
                                                         class="bi bi-chevron-right"></i></a>
                                             </li>
                                             <li class="breadcrumb-item">
-                                                <a class="breadcrumb-link breadcrumb-current">Media Scan</a>
+                                                @if(whatsapp_server_status($project_id)['connection_status'] != 'Authenticated')
+                                                    <a class="breadcrumb-link breadcrumb-current">Media Scan</a>
+                                                @else
+                                                    <a class="breadcrumb-link breadcrumb-current">Dashboard</a>
+                                                @endif
                                             </li>
                                         </ul>
                                     </div>

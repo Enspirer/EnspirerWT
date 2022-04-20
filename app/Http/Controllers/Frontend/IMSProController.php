@@ -22,15 +22,17 @@ class IMSProController extends Controller
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
 
         if(!empty( auth()->user()->id) === true ){
-            if($ims_pro_user->user_id != auth()->user()->id){
+            if($ims_pro_user != null){
+                if($ims_pro_user->user_id != auth()->user()->id){
 
-                $itemsCart = Cart::getContent();
-    
-                if(count($itemsCart) == 0){
-                    return redirect()->route('frontend.ims_login_page',$id);  
-                }
-    
-            } 
+                    $itemsCart = Cart::getContent();
+        
+                    if(count($itemsCart) == 0){
+                        return redirect()->route('frontend.ims_login_page',$id);  
+                    }
+        
+                } 
+            }            
         }else{
             $itemsCart = Cart::getContent();
     
@@ -52,17 +54,20 @@ class IMSProController extends Controller
     {     
         // dd($phone_number);
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
+        // dd($ims_pro_user);
 
         if(!empty( auth()->user()->id) === true ){
-            if($ims_pro_user->user_id != auth()->user()->id){
+            if($ims_pro_user != null){
+                if($ims_pro_user->user_id != auth()->user()->id){
 
-                $itemsCart = Cart::getContent();
-    
-                if(count($itemsCart) == 0){
-                    return redirect()->route('frontend.ims_login_page',$id);  
-                }
-    
-            } 
+                    $itemsCart = Cart::getContent();
+        
+                    if(count($itemsCart) == 0){
+                        return redirect()->route('frontend.ims_login_page',$id);  
+                    }
+        
+                } 
+            }
         }else{
             $itemsCart = Cart::getContent();
     
@@ -134,16 +139,17 @@ class IMSProController extends Controller
         $all_ims_pro_client_messages = ImsProClientMessages::where('project_id',$id)->orderBy('id','desc');       
 
         if(!empty( auth()->user()->id) === true ){
-
-            if($ims_pro_user->user_id == auth()->user()->id){
-                if ($request->has('search_name')){
-                    $sort_search = $request->search_name;
-                    $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('name', 'like', '%'.$sort_search.'%');
+            if($ims_pro_user != null){
+                if($ims_pro_user->user_id == auth()->user()->id){
+                    if ($request->has('search_name')){
+                        $sort_search = $request->search_name;
+                        $all_ims_pro_client_messages = $all_ims_pro_client_messages->where('name', 'like', '%'.$sort_search.'%');
+                    }
+                    $all_ims_pro_client_messages = $all_ims_pro_client_messages->get()->unique('phone_number');
                 }
-                $all_ims_pro_client_messages = $all_ims_pro_client_messages->get()->unique('phone_number');
-            }
-            else{
-                $all_ims_pro_client_messages = null;
+                else{
+                    $all_ims_pro_client_messages = null;
+                }
             }
             
         }
@@ -236,15 +242,17 @@ class IMSProController extends Controller
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
 
         if(!empty( auth()->user()->id) === true ){
-            if($ims_pro_user->user_id != auth()->user()->id){
+            if($ims_pro_user != null){
+                if($ims_pro_user->user_id != auth()->user()->id){
 
-                $itemsCart = Cart::getContent();
-    
-                if(count($itemsCart) == 0){
-                    return redirect()->route('frontend.ims_login_page',$id);  
-                }
-    
-            } 
+                    $itemsCart = Cart::getContent();
+        
+                    if(count($itemsCart) == 0){
+                        return redirect()->route('frontend.ims_login_page',$id);  
+                    }
+        
+                } 
+            }
         }else{
             $itemsCart = Cart::getContent();
     
@@ -271,15 +279,17 @@ class IMSProController extends Controller
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
 
         if(!empty( auth()->user()->id) === true ){
-            if($ims_pro_user->user_id != auth()->user()->id){
+            if($ims_pro_user != null){
+                if($ims_pro_user->user_id != auth()->user()->id){
 
-                $itemsCart = Cart::getContent();
-    
-                if(count($itemsCart) == 0){
-                    return redirect()->route('frontend.ims_login_page',$id);  
-                }
-    
-            } 
+                    $itemsCart = Cart::getContent();
+        
+                    if(count($itemsCart) == 0){
+                        return redirect()->route('frontend.ims_login_page',$id);  
+                    }
+        
+                } 
+            }
         }else{
             $itemsCart = Cart::getContent();
     
@@ -303,15 +313,17 @@ class IMSProController extends Controller
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
 
         if(!empty( auth()->user()->id) === true ){
-            if($ims_pro_user->user_id != auth()->user()->id){
+            if($ims_pro_user != null){
+                if($ims_pro_user->user_id != auth()->user()->id){
 
-                $itemsCart = Cart::getContent();
-    
-                if(count($itemsCart) == 0){
-                    return redirect()->route('frontend.ims_login_page',$id);  
-                }
-    
-            } 
+                    $itemsCart = Cart::getContent();
+        
+                    if(count($itemsCart) == 0){
+                        return redirect()->route('frontend.ims_login_page',$id);  
+                    }
+        
+                } 
+            }
         }else{
             $itemsCart = Cart::getContent();
     
@@ -346,15 +358,17 @@ class IMSProController extends Controller
         $ims_pro_user = IMSProUsers::where('project_id',$id)->first();
 
         if(!empty( auth()->user()->id) === true ){
-            if($ims_pro_user->user_id != auth()->user()->id){
+            if($ims_pro_user != null){
+                if($ims_pro_user->user_id != auth()->user()->id){
 
-                $itemsCart = Cart::getContent();
-    
-                if(count($itemsCart) == 0){
-                    return redirect()->route('frontend.ims_login_page',$id);  
-                }
-    
-            } 
+                    $itemsCart = Cart::getContent();
+        
+                    if(count($itemsCart) == 0){
+                        return redirect()->route('frontend.ims_login_page',$id);  
+                    }
+        
+                } 
+            }
         }else{
             $itemsCart = Cart::getContent();
     

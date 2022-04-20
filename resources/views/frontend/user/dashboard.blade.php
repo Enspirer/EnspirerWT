@@ -314,15 +314,25 @@
                                             </div>
                                             <div class="col-xxl-4 my-3 info-blocks statics-block">
                                                 @if($project_detail->package_starting_date != null)
-                                                    <div class="progress-wrapper">
-                                                        <div class="lbl lbl-start">Start Date</div>
-                                                        <div class="lbl lbl-end">End Date</div>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" aria-valuemin="0" style="width: {{get_expire_date($project_detail->id)['remaining_days'] / 30 * 100}}%;" aria-valuemax="30"></div>
-                                                        </div>
-                                                        <div class="date date-start">{{$project_detail->package_starting_date}}</div>
-                                                        <div class="date date-end">{{$project_detail->expire_date}}</div>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        @if($project_detail->package_type == 'Free')                                                            
+                                                            <div class="lbl lbl-start mt-3">Trial</div>
+                                                        @endif
                                                     </div>
+                                                    <div class="col-10">
+                                                        <div class="progress-wrapper">
+                                                            <div class="lbl lbl-start">Start Date</div>
+                                                            <div class="lbl lbl-end">End Date</div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" aria-valuemin="0" style="width: {{get_expire_date($project_detail->id)['remaining_days'] / 30 * 100}}%;" aria-valuemax="30"></div>
+                                                            </div>
+                                                            <div class="date date-start">{{$project_detail->package_starting_date}}</div>
+                                                            <div class="date date-end">{{$project_detail->expire_date}}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    
                                                 @else
                                                     <div class="progress-wrapper">
                                                         <div class="lbl lbl-start">Not Selected</div>

@@ -15,10 +15,25 @@ class ChatController extends Controller
     {
         $widgetlist = Widgets::where('project_id',$id)->where('widget_type','All-in-One Chat')->where('category','Widgets')->first();
 
-        return view('frontend.user.projects.widget',[
-            'project_id' => $id,
-            'widgetlist' => $widgetlist
-        ]);
+        if(Projects::where('id',$id)->first()->selected_package == 'All In One Widget + IMS Lite'){
+            return view('frontend.user.projects.widget',[
+                'project_id' => $id,
+                'widgetlist' => $widgetlist
+            ]);
+        }
+        elseif(Projects::where('id',$id)->first()->selected_package == 'All In One Widget + IMS Pro'){
+            return redirect()->route('frontend.user.project.widget_plus',$id);
+        }
+        elseif(Projects::where('id',$id)->first()->selected_package == 'Optimizer'){
+            return redirect()->route('frontend.user.project.optimizer',$id);
+        }
+        else{
+            return view('frontend.user.projects.widget',[
+                'project_id' => $id,
+                'widgetlist' => $widgetlist
+            ]);
+        }          
+        
     }
 
     public function widget_plus($id)

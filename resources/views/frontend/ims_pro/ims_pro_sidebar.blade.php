@@ -25,7 +25,11 @@
                                     <div class="nav-link__block">
                                         <i class="bi bi-chevron-down ims__hidden"></i>
                                         <i class="bi bi-speedometer2"></i>
-                                        <div class="text">Media Scan</div>
+                                            @if(whatsapp_server_status($project_id)['connection_status'] != 'Authenticated')
+                                                <div class="text">Media Scan</div>
+                                            @else
+                                                <div class="text">Dashboard</div>
+                                            @endif
                                         <!-- <div class="count ims__hidden">2400</div> -->
                                     </div>
                                 </a>
