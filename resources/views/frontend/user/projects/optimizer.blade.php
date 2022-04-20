@@ -177,11 +177,7 @@
                                             </tbody>
                                         </table>
                                     @else
-                                        @include('frontend.includes.not_found',[
-                                            'not_found_title' => 'Data Not Found',
-                                            'not_found_description' => null,
-                                            'not_found_button_caption' => null
-                                        ])
+                                        <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
                                     @endif
                                 </div>
                             </div>
