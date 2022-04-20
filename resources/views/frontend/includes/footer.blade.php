@@ -67,7 +67,7 @@
                 <div class="col-4">
                     <div class="contact-info">
                         <div class="header">
-                            <a href="https://web.whatsapp.com/send?phone=94760939990">
+                            <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank">
                                 <img src="{{url('images/landing_page/home/phone-icon.png')}}" alt="">
                                 <div class="title">Let's Talk</div>
                             </a>

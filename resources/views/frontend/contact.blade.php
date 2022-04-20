@@ -123,7 +123,7 @@
                 <div class="col-lg-6">
                     <div class="inner-wrapper">
                         <div class="address">
-                            <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link">
+                            <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link" target="_blank">
                                 <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
                                 <div class="text">Chat with Us</div>
                             </a>
@@ -136,7 +136,7 @@
                         </div>
 
                         <div class="email">
-                            <a href="https://www.messenger.com/t/tallentor" class="contact-link">
+                            <a href="https://www.messenger.com/t/tallentor" class="contact-link" target="_blank">
                                 <img src="{{url('images/messenger.jpg')}}" alt="">
                                 <div class="text">Connect with Messenger</div>
                             </a>
