@@ -25,6 +25,7 @@
                                 <th scope="col">#ID</th>
                                 <th scope="col">Feature Image</th>  
                                 <th scope="col">Title</th>
+                                <th scope="col">Category</th>                                
                                 <th scope="col">Status</th>
                                 <th scope="col">Featured</th>                              
                                 <th scope="col">Order</th>
@@ -82,6 +83,7 @@
                     {data: 'id', name: 'id'},
                     {data: 'feature_image', name: 'feature_image'},                                       
                     {data: 'title', name: 'title'},
+                    {data: 'category', name: 'category'},                    
                     {data: 'status', name: 'status'},
                     {data: 'featured', name: 'featured'}, 
                     {data: 'order', name: 'order'},

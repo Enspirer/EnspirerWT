@@ -60,13 +60,23 @@ class NewsController extends Controller
                         $featured = '<span class="badge badge-danger">Disabled</span>';
                     }   
                     return $featured;
-                })     
+                })    
+                ->addColumn('category', function($data){
+                    $category = Category::where('id',$data->category)->first();
+    
+                    if($category) {
+                        return $category->name;
+                    }
+                    else {
+                        return '<span class="badge badge-danger">Category not defined</span>';
+                    }                  
+                }) 
                 ->addColumn('feature_image', function($data){
                     $img = '<img src="'.uploaded_asset($data->feature_image).'" style="width: 50%">';
                  
                     return $img;
                 })       
-                ->rawColumns(['action','status','featured','feature_image'])
+                ->rawColumns(['action','status','featured','category','feature_image'])
                 ->make(true);
         }
         return back();

@@ -26,6 +26,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link {{Request::segment(1)=='billing' ? 'active' :null }}" href="{{route('frontend.user.billing')}}">
+                                <i class="bi bi-receipt"></i>
+                                <span class="text">Billing</span>
+                                <span class="tool-tip">Billing</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link {{Request::segment(1)=='projects' ? 'active' :null }}" href="{{route('frontend.user.project.index')}}">
                                 <i class="bi bi-layers"></i>
                                 <span class="text">Projects</span>
