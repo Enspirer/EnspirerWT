@@ -8,148 +8,144 @@
 
 <link rel="stylesheet" href="{{url('css/contact_us.css')}}">
 
-    <section class="slider-section">
-        <div class="container">
-            <div class="header">
-                <h2 class="title">We are here to help</h2>
-                {{--<h6 class="subtitle">Contact Tallentor</h6>--}}
-            </div>
-
-
-            <section class="contact-form">
-                <div class="container">
-
-                    <div class="row g-5">
-                        <div class="col-lg-6">
-                            <form action="{{route('frontend.contact_us.store')}}" method="post" class="contact-form" enctype="multipart/form-data">
-                                {{csrf_field()}}
-
-                                @if(session()->has('error'))
-                                    <div class="alert alert-danger">
-                                        {{ session()->get('error') }}
-                                    </div>
-                                @endif
-
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" name="name" placeholder="Full Name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control" name="inquiry" placeholder="Your Inquiry" required></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" name="help" placeholder="How can we help you ?" required>
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" id="tick" class="form-check-input">
-                                    <label class="form-check-label" for="tick">I would like to receive information and updates from Tallentor in relation to my enquiry, <br> I understand Tallentor will never share my information</label>
-                                </div>
-                                <div class="button-block">
-                                    <div class="g-recaptcha" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR" ></div>
-                                    <button type="submit" class="form-submit-btn" disabled>Send Message <i class="bi bi-arrow-right-short"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="inner-wrapper">
-                                <div class="address" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
-                                    <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link" target="_blank">
-                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
-                                        <div class="text">Chat with on WhatsApp</div>
-                                    </a>
-                                </div>
-                                <div class="email" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
-                                    <a href="https://www.messenger.com/t/tallentor" class="contact-link" target="_blank">
-                                        <img src="{{url('images/messenger.jpg')}}" alt="">
-                                        <div class="text">Connect with Messenger</div>
-                                    </a>
-                                </div>
-                                <div class="email" style="border-style: solid;padding-left: 30px;padding-right: 30px;padding-top: 10px;padding-bottom: 10px;border-width: 1px;border-color: #dfdfdf;border-radius: 10px;width: 330px;">
-                                    <a href="mailto:hello@tallentor.com" class="contact-link">
-                                        <img src="{{url('images/contact-us/email (2).png')}}" alt="">
-                                        <div class="text">hello@tallentor.com</div>
-                                    </a>
-                                </div>
-                                <div class="images" style="">
-                                    <img src="{{url('images/contact-us/Group 549.png')}}" alt="" class="large">
-                                    <img src="{{url('images/contact-us/679.png')}}" alt="" class="medium">
-                                    <img src="{{url('images/contact-us/679 [Converted]-03.png')}}" alt="" class="small">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<section class="form-section">
+    <div class="container">
+        <div class="row g-lg-5">
+            <div class="col-lg-5">
+                <div class="mobile-header">
+                    <div class="title">We are here to help</div>
+                    <div class="text">Fill up the form and our Team will get back <br> to you within 24 hours.</div>
                 </div>
-            </section>
+                <form action="{{route('frontend.contact_us.store')}}" method="post" class="contact-form" enctype="multipart/form-data">
+                    {{csrf_field()}}
 
-            <br><br>
-            <div class="slider">
-                <div class="splide" id="contactSlider">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="slider-card">
-                                    <div class="icon-block">
-                                        <i class="bi bi-check-circle-fill"></i>
-                                        <i class="bi bi-three-dots-vertical"></i>
-                                    </div>
-                                    <div class="main-icon">
-                                        <img src="{{url('images/contact-us/Group 440.png')}}" alt="">
-                                    </div>
-                                    <h5 class="title">Sales Inquires</h5>
-                                    <p class="text">Product information and Corporate inquiries</p>
-                                    <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="slider-card">
-                                    <div class="icon-block">
-                                        <i class="bi bi-check-circle-fill"></i>
-                                        <i class="bi bi-three-dots-vertical"></i>
-                                    </div>
-                                    <div class="main-icon">
-                                        <img src="{{url('images/contact-us/Group 457.png')}}" alt="">
-                                    </div>
-                                    <h5 class="title">Billing</h5>
-                                    <p class="text">Account information and bulk purchases</p>
-                                    <a href="mailto:billing@tallentor.com" class="contact">billing@tallentor.com</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="slider-card">
-                                    <div class="icon-block">
-                                        <i class="bi bi-check-circle-fill"></i>
-                                        <i class="bi bi-three-dots-vertical"></i>
-                                    </div>
-                                    <div class="main-icon">
-                                        <img src="{{url('images/contact-us/Group 483.png')}}" alt="">
-                                    </div>
-                                    <h5 class="title">Support</h5>
-                                    <p class="text">Technical support and assistance with installations</p>
-                                    <a href="mailto:support@tallentor.com" class="contact">support@tallentor.com</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="slider-card">
-                                    <div class="icon-block">
-                                        <i class="bi bi-check-circle-fill"></i>
-                                        <i class="bi bi-three-dots-vertical"></i>
-                                    </div>
-                                    <div class="main-icon">
-                                        <img src="{{url('images/contact-us/Group 508.png')}}" alt="">
-                                    </div>
-                                    <h5 class="title">Partnership</h5>
-                                    <p class="text">Become a partner in your region with Tallentor</p>
-                                    <a href="mailto:partner@tallentor.com" class="contact">partner@tallentor.com</a>
-                                </div>
-                            </li>
-                        </ul>
+                    @if(session()->has('error'))
+                        <div class="alert alert-danger">
+                            {{ session()->get('error') }}
+                        </div>
+                    @endif
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="name" placeholder="Full Name" required>
                     </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="inquiry" placeholder="Your Inquiry" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="help" placeholder="How can we help you ?" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" id="tick" class="form-check-input">
+                        <label class="form-check-label" for="tick">I would like to receive information and updates from Tallentor in relation to my enquiry, <br> I understand Tallentor will never share my information</label>
+                    </div>
+                    <div class="button-block">
+                        <div class="g-recaptcha" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR" ></div>
+                        <button type="submit" class="form-submit-btn" disabled>Send Message <i class="bi bi-arrow-right-short"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-7">
+                <div class="inner-wrapper">
+                    <div class="header">
+                        <div class="title">We are here to help</div>
+                        <div class="text">Fill up the form and our Team will get back <br> to you within 24 hours.</div>
+                    </div>
+                    <div class="social address">
+                        <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link" target="_blank">
+                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                            <div class="text">Chat with on WhatsApp</div>
+                        </a>
+                    </div>
+                    <div class="social email">
+                        <a href="https://www.messenger.com/t/tallentor" class="contact-link" target="_blank">
+                            <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                            <div class="text">Chat with on Messenger</div>
+                        </a>
+                    </div>
+                    <div class="social email">
+                        <a href="mailto:hello@tallentor.com" class="contact-link">
+                            <img src="{{url('images/contact-us/email (2).png')}}" alt="">
+                            <div class="text">hello@tallentor.com</div>
+                        </a>
+                    </div>
+                    <img src="{{url('images/landing_page/contact_us/contact_background.png')}}" alt="" class="background-img">
                 </div>
             </div>
         </div>
-    </section><br><br>
+    </div>
+</section>
+
+<section class="slider-section">
+    <div class="container">
+        <div class="slider">
+            <div class="splide" id="contactSlider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="slider-card">
+                                <div class="icon-block">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </div>
+                                <div class="main-icon">
+                                    <img src="{{url('images/contact-us/Group 440.png')}}" alt="">
+                                </div>
+                                <h5 class="title">Sales Inquires</h5>
+                                <p class="text">Product information and Corporate inquiries</p>
+                                <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slider-card">
+                                <div class="icon-block">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </div>
+                                <div class="main-icon">
+                                    <img src="{{url('images/contact-us/Group 457.png')}}" alt="">
+                                </div>
+                                <h5 class="title">Billing</h5>
+                                <p class="text">Account information and bulk purchases</p>
+                                <a href="mailto:billing@tallentor.com" class="contact">billing@tallentor.com</a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slider-card">
+                                <div class="icon-block">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </div>
+                                <div class="main-icon">
+                                    <img src="{{url('images/contact-us/Group 483.png')}}" alt="">
+                                </div>
+                                <h5 class="title">Support</h5>
+                                <p class="text">Technical support and assistance with installations</p>
+                                <a href="mailto:support@tallentor.com" class="contact">support@tallentor.com</a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slider-card">
+                                <div class="icon-block">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </div>
+                                <div class="main-icon">
+                                    <img src="{{url('images/contact-us/Group 508.png')}}" alt="">
+                                </div>
+                                <h5 class="title">Partnership</h5>
+                                <p class="text">Become a partner in your region with Tallentor</p>
+                                <a href="mailto:partner@tallentor.com" class="contact">partner@tallentor.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

@@ -10,17 +10,11 @@
 }
 
 .slider-section {
-    padding-top: 100px;
+    margin: 5rem 0;
 }
 
 .slider-section .header {
-    margin: calc(1.2775rem + 3.11143vw) 0;
-}
-
-@media (min-width: 1400px) {
-    .slider-section .header {
-        margin: 4rem 0;
-    }
+    margin: 4rem 0;
 }
 
 .slider-section .header .title {
@@ -103,40 +97,23 @@
 
 .slider-section .slider .splide__slide .slider-card .contact {
     font-size: 0.8125rem;
-    margin: calc(1.2525rem + 0.28286vw) 0;
     text-decoration: none;
+    margin: 1.5rem 0;
     text-align: center;
     display: block;
     color: #000;
 }
 
-@media (min-width: 1400px) {
-    .slider-section .slider .splide__slide .slider-card .contact {
-        margin: 1.5rem 0;
-    }
+.form-section {
+    padding: 10rem 0 5rem;
+    background-color: #02044A;
 }
 
-.contact-form {
-    margin-bottom: calc(1.2875rem + 4.24286vw);
+.form-section .header {
+    margin: 4rem 0;
 }
 
-@media (min-width: 1400px) {
-    .contact-form {
-        margin-bottom: 5rem;
-    }
-}
-
-.contact-form .header {
-    margin: calc(1.2775rem + 3.11143vw) 0;
-}
-
-@media (min-width: 1400px) {
-    .contact-form .header {
-        margin: 4rem 0;
-    }
-}
-
-.contact-form .header .title {
+.form-section .header .title {
     font-size: 40px;
     text-align: center;
     color: #2d465b;
@@ -144,66 +121,78 @@
     font-weight: 400;
 }
 
-.contact-form .header .subtitle {
+.form-section .header .subtitle {
     font-size: 20px;
     font-weight: 300;
     text-align: center;
 }
 
-.contact-form .contact-form {
-    padding: calc(1.2575rem + 0.84857vw);
-    border: 1px solid rgba(112, 112, 112, 0.2);
+.form-section .mobile-header {
+    margin-bottom: 3rem;
+    display: none;
 }
 
-@media (min-width: 1400px) {
-    .contact-form .contact-form {
-        padding: 2rem;
-    }
+.form-section .mobile-header .title {
+    font-weight: 700;
+    color: #fff;
+    font-size: 40px;
+    margin: 0;
 }
 
-.contact-form .contact-form .form-control {
-    font-size: 0.875rem;
-    border-radius: 0;
+.form-section .mobile-header .text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ABACC2;
 }
 
-.contact-form .contact-form .form-control:focus {
+.form-section .contact-form {
+    padding: 2rem;
+    border: 1px solid #0C75FF;
+    border-radius: 15px;
+    background-color: #01033E;
+}
+
+.form-section .contact-form .form-control {
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.form-section .contact-form .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.contact-form .contact-form input.form-control {
+.form-section .contact-form input.form-control {
     height: 40px;
 }
 
-.contact-form .contact-form textarea {
+.form-section .contact-form textarea {
     height: 140px;
     resize: none;
 }
 
-.contact-form .contact-form .form-check {
-    margin: calc(1.2625rem + 1.41429vw) 0 calc(1.2675rem + 1.98vw) 0;
+.form-section .contact-form .form-check {
+    margin: 2.5rem 0 3rem 0;
 }
 
-@media (min-width: 1400px) {
-    .contact-form .contact-form .form-check {
-        margin: 2.5rem 0 3rem 0;
-    }
-}
-
-.contact-form .contact-form .form-check .form-check-label {
+.form-section .contact-form .form-check .form-check-label {
     position: relative;
-    font-size: 0.75rem;
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
 }
 
-.contact-form .contact-form .button-block {
+.form-section .contact-form .button-block {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.contact-form .contact-form .button-block .form-submit-btn {
-    font-size: 0.875rem;
-    padding: 0.5rem calc(1.2525rem + 0.28286vw);
+.form-section .contact-form .button-block .form-submit-btn {
+    font-size: 14px;
     font-weight: 300;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -215,19 +204,20 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 1rem;
-    border: 1px solid #000;
-    background-color: #fff;
-    width: fit-content;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    height: 50px;
+    border-radius: 5px;
 }
 
-@media (min-width: 1400px) {
-    .contact-form .contact-form .form-submit-btn {
-        padding: 0.5rem 1.5rem;
-    }
+.form-section .contact-form .form-submit-btn {
+    padding: 0.5rem 1.5rem;
 }
 
-.contact-form .inner-wrapper {
+.form-section .inner-wrapper {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -239,10 +229,28 @@
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 1rem;
+    height: 100%;
 }
 
-.contact-form .inner-wrapper .address .contact-link {
+.form-section .inner-wrapper .header {
+    margin: 3rem 0;
+}
+
+.form-section .inner-wrapper .header .title {
+    font-weight: 700;
+    color: #fff;
+    font-size: 40px;
+    margin: 0;
+}
+
+.form-section .inner-wrapper .header .text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ABACC2;
+}
+
+.form-section .inner-wrapper .address .contact-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -257,17 +265,35 @@
     text-decoration: none;
 }
 
-.contact-form .inner-wrapper .address img {
-    width: 50px;
+.form-section .inner-wrapper .social img {
+    width: 40px;
+    margin-left: 25px;
 }
 
-.contact-form .inner-wrapper .address .text {
-    font-size: 0.875rem;
-    text-decoration: none;
-    color: #000;
+.form-section .inner-wrapper .social .text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
 }
 
-.contact-form .inner-wrapper .email .contact-link {
+.form-section .inner-wrapper .social .contact-link {
+    width: 280px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-section .inner-wrapper .social .contact-link:hover {
+    box-shadow: 0 0 10px #0c75ff;
+    border: 1px solid #0C75FF;
+    background-color: #030D58;
+}
+
+.form-section .inner-wrapper .email .contact-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -278,35 +304,21 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 2rem;
+    gap: 25px;
     text-decoration: none;
 }
 
-.contact-form .inner-wrapper .email img {
-    width: 50px;
-}
-
-.contact-form .inner-wrapper .email .text {
-    font-size: 0.875rem;
-    text-decoration: none;
-    color: #000;
-}
-
-.contact-form .inner-wrapper .images .large {
+.form-section .inner-wrapper .background-img {
     position: absolute;
     width: 80%;
-}
-
-.contact-form .inner-wrapper .images .medium {
-    position: absolute;
     right: 0;
-    top: 8rem;
 }
 
-.contact-form .inner-wrapper .images .small {
-    position: absolute;
-    right: 6rem;
-    top: 1rem;
+@media screen and (max-width: 1199px) {
+    .form-section .inner-wrapper .background-img {
+        width: 60%;
+        bottom: 0;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -314,39 +326,38 @@
         padding-top: 80px;
     }
 
-    .contact-form .inner-wrapper .images .large {
-        width: 200px;
-        top: 2rem;
-        right: 0;
+    .form-section .mobile-header {
+        display: block;
     }
 
-    .contact-form .inner-wrapper .images .medium {
-        top: -6rem;
-        width: 150px;
+    .form-section .inner-wrapper .header {
+        display: none;
     }
 
-    .contact-form .inner-wrapper .images .small {
-        width: 150px;
-        right: 10rem;
-        top: -6rem;
+    .form-section .inner-wrapper .background-img {
+        display: none;
+    }
+
+    .form-section .inner-wrapper {
+        margin-top: 3rem;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .contact-form .contact-form .button-block {
+    .form-section .contact-form .button-block {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
     }
 
-    .contact-form .contact-form .button-block .form-submit-btn {
+    .form-section .contact-form .button-block .form-submit-btn {
         margin: 0;
     }
 }
 
 @media screen and (max-width: 400px) {
 
-    .contact-form .inner-wrapper .images .large {
+    .form-section .inner-wrapper .images .large {
         width: 160px;
     }
 
