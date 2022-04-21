@@ -172,7 +172,7 @@
                                     </div>
                                 </section> -->
 
-                                <div class="property-block">
+                                <div class="webProperty-block">
                                     <div class="header">
                                         <div class="info-block">
                                             <div class="title">{{$project_detail->name}}</div>

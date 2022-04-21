@@ -1686,40 +1686,40 @@
 
 /* Property Block */
 
-.property-block {
+.webProperty-block {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin: 0 0 3rem 0;
 }
 
-.property-block .header {
+.webProperty-block .header {
     display: flex;
     flex-direction: row;
     padding: 20px 20px 15px 20px;
     border-bottom: 1px solid #ddd;
 }
 
-.property-block .header .info-block {
+.webProperty-block .header .info-block {
     flex: 1 1 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.property-block .header .info-block .title {
+.webProperty-block .header .info-block .title {
     color: #333;
     font-size: 24px;
     font-weight: 500;
 }
 
-.property-block .header .info-block .url {
+.webProperty-block .header .info-block .url {
     color: #999;
     font-weight: 500;
     font-size: 14px;
 }
 
-.property-block .header .sub-block {
+.webProperty-block .header .sub-block {
     flex: 1 1 100%;
     position: relative;
     display: flex;
@@ -1727,7 +1727,7 @@
     justify-content: center;
 }
 
-.property-block .header .sub-block .lbl {
+.webProperty-block .header .sub-block .lbl {
     flex: 1 1 100%;
     position: absolute;
     font-size: 14px;
@@ -1736,20 +1736,20 @@
     top: 25px;
 }
 
-.property-block .header .sub-block .lbl.lbl-start {
+.webProperty-block .header .sub-block .lbl.lbl-start {
     left: 0;
 }
 
-.property-block .header .sub-block .lbl.lbl-end {
+.webProperty-block .header .sub-block .lbl.lbl-end {
     right: 0;
 }
 
-.property-block .header .sub-block .progress {
+.webProperty-block .header .sub-block .progress {
     margin: 30px 0 25px;
     height: 4px;
 }
 
-.property-block .header .sub-block .date {
+.webProperty-block .header .sub-block .date {
     flex: 1 1 100%;
     position: absolute;
     font-size: 12px;
@@ -1758,29 +1758,29 @@
     bottom: 0;
 }
 
-.property-block .header .sub-block .date.date-start {
+.webProperty-block .header .sub-block .date.date-start {
     left: 0;
 }
 
-.property-block .header .sub-block .date.date-end {
+.webProperty-block .header .sub-block .date.date-end {
     right: 0;
 }
 
-.property-block .header .sub-block .sub-type {
+.webProperty-block .header .sub-block .sub-type {
     text-align: center;
     font-size: 18px;
     font-weight: 500;
     color: #777;
 }
 
-.property-block .header .sub-block .text {
+.webProperty-block .header .sub-block .text {
     text-align: center;
     font-size: 18px;
     font-weight: 500;
     color: #777;
 }
 
-.property-block .header .button-block {
+.webProperty-block .header .button-block {
     flex: 1 1 100%;
     display: flex;
     flex-direction: row;
@@ -1789,7 +1789,7 @@
     gap: 15px;
 }
 
-.property-block .header .button-block .btn {
+.webProperty-block .header .button-block .btn {
     font-size: 14px;
     font-weight: 400;
     display: flex;
@@ -1803,27 +1803,27 @@
     border-radius: 5px;
 }
 
-.property-block .header .button-block .btn.btn-view {
+.webProperty-block .header .button-block .btn.btn-view {
     border: 1px solid #017FFA;
     color: #333;
 }
 
-.property-block .header .button-block .btn.btn-delete {
+.webProperty-block .header .button-block .btn.btn-delete {
     border: 1px solid #FA0101;
     color: #FA0101;
 }
 
-.property-block .header .button-block .btn .bi {
+.webProperty-block .header .button-block .btn .bi {
     font-size: 16px;
 }
 
-.property-block .body {
+.webProperty-block .body {
     display: flex;
     flex-direction: row;
     padding: 15px 20px 20px 20px;
 }
 
-.property-block .body .content-block {
+.webProperty-block .body .content-block {
     flex: 1 1 100%;
     display: flex;
     flex-direction: row;
@@ -1831,30 +1831,30 @@
     padding: 0 20px;
 }
 
-.property-block .body .content-block:not(:nth-last-child(1)) {
+.webProperty-block .body .content-block:not(:nth-last-child(1)) {
     border-right: 1px solid #ddd;
 }
 
-.property-block .body .content-block .image-block img {
+.webProperty-block .body .content-block .image-block img {
     width: 45px;
     object-fit: cover;
     object-position: center;
 }
 
-.property-block .body .content-block .content .subtitle {
+.webProperty-block .body .content-block .content .subtitle {
     font-size: 16px;
     font-weight: 400;
     color: #777;
 }
 
-.property-block .body .content-block .content .text {
+.webProperty-block .body .content-block .content .text {
     font-size: 12px;
     font-weight: 400;
     color: #333;
     margin-bottom: 10px;
 }
 
-.property-block .body .content-block .content .link {
+.webProperty-block .body .content-block .content .link {
     font-size: 14px;
     font-weight: 400;
     color: #0086E6;
