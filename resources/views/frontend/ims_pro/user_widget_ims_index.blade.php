@@ -249,6 +249,28 @@
     }
 
 
+    function chat_user_details()
+    {    
+        company = $('#company').val();     
+        tags = $('#tags').val();   
+        phone_number = $('#phone_number').val();
+        project_id = $('#project_id').val();
+        widget_id = $('#widget_id').val();   
+        // alert(user_role);  
+
+        $.post("{{url('/')}}/api/chat_user_details",
+            {                
+                company:company,               
+                tags:tags,            
+                phone_number:phone_number,            
+                project_id:project_id,            
+                widget_id:widget_id            
+            },
+        );
+
+    }
+
+
 </script>
 
 

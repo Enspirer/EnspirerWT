@@ -76,9 +76,14 @@
                         
                     </div>
                 </div>
-                <input type="hidden" name="hidden_id" value="{{ $post->id }}"/>
-                <a href="{{route('admin.post.index')}}" class="btn btn-info pull-right ml-4">Back</a>&nbsp;&nbsp;
-                <button type="submit" class="btn btn-success pull-right">Update</button><br>
+                                
+
+                <div class="mt-5 text-right">
+                    <input type="hidden" name="hidden_id" value="{{ $post->id }}"/>
+                    <a href="{{route('admin.post.index')}}" class="btn rounded-pill text-light px-4 py-2 me-2 btn-primary ml-4">Back</a>&nbsp;&nbsp;
+                    <button type="submit" class="btn rounded-pill text-light px-4 py-2 ms-2 btn-success">Update</button><br>
+                </div>
+
             </div><br>
             
             

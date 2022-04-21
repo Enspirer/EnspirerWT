@@ -76,7 +76,10 @@
                         
                     </div>
                 </div>
-                <input type="submit" class="btn btn-success pull-right" value="Create New" /><br>
+                <div class="mt-5 text-right">
+                    <input type="submit" class="btn rounded-pill text-light px-4 py-2 ms-2 btn-success" value="Create New" /><br>
+                </div>
+
             </div><br>       
             
         </div>
