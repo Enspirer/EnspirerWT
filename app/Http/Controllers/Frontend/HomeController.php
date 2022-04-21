@@ -256,13 +256,35 @@ class HomeController extends Controller
 
     public function index()
     {
-        $posts = Post::where('status','Enabled')->take(2)->latest()->get();
-        $featured_post = Post::where('status','Enabled')->where('featured','Enabled')->first();
-        // dd($posts);
+        $news_cat = Category::where('name','News')->where('status','Enabled')->first();
+        $promo_cat = Category::where('name','Promotions')->where('status','Enabled')->first();
+        $blogs_cat = Category::where('name','Blogs')->where('status','Enabled')->first();
+
+        if($news_cat != null){
+            $news_post = Post::where('status','Enabled')->where('category',$news_cat->id)->where('featured','Enabled')->first();
+        }
+        else{
+            $news_post = null;
+        }
+
+        if($promo_cat != null){
+            $promo_post = Post::where('status','Enabled')->where('category',$promo_cat->id)->where('featured','Enabled')->first();
+        }
+        else{
+            $promo_post = null;
+        }
+
+        if($blogs_cat != null){
+            $blog_post = Post::where('status','Enabled')->where('category',$blogs_cat->id)->where('featured','Enabled')->first();
+        }
+        else{
+            $blog_post = null;
+        }
 
         return view('frontend.index',[
-            'posts' => $posts,
-            'featured_post' => $featured_post
+            'news_post' => $news_post,
+            'promo_post' => $promo_post,
+            'blog_post' => $blog_post
         ]);
     }
 

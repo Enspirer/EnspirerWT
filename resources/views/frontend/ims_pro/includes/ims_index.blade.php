@@ -443,13 +443,13 @@
                                                                         <tr>
                                                                             <td class="icons"><i class="bi bi-briefcase-fill"></i></td>
                                                                             <td class="title">Company</td>
-                                                                            <td class="inputs"><input class="table-input" type="text" placeholder="Set a company ..."></td>
+                                                                            <td class="inputs"><input class="table-input" id="company" name="company" onChange="chat_user_details()" type="text" placeholder="Set a company ..."></td>
                                                                         </tr>
-                                                                        <tr>
+                                                                        <!-- <tr>
                                                                             <td class="icons"><i class="bi bi-person-fill"></i></td>
                                                                             <td class="title">Role</td>
-                                                                            <td class="inputs"><input class="table-input" type="text" placeholder="Set a role ..."></td>
-                                                                        </tr>
+                                                                            <td class="inputs"><input class="table-input" id="user_role" name="user_role" onChange="chat_user_details()" type="text" placeholder="Set a role ..."></td>
+                                                                        </tr> -->
                                                                         <tr>
                                                                             <td class="icons"><i class="bi bi-telephone-fill"></i></td>
                                                                             <td class="title">Phone</td>
@@ -467,22 +467,11 @@
                                                                         <tr>
                                                                             <td class="icons"><i class="bi bi-tags-fill"></i></td>
                                                                             <td class="title">Tags</td>
-                                                                            <td class="inputs"><input class="table-input" type="text" placeholder="Set a tags ..."></td>
+                                                                            <td class="inputs"><input class="table-input" id="tags" name="tags" onChange="chat_user_details()" type="text" placeholder="Set a tags ..."></td>
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
-                                                                <div class="dropdown">
-                                                                    <a class="add-property-dropdown btn-add-property" href="#" role="button" id="addPropertyDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                        <i class="bi bi-plus-lg"></i>
-                                                                        <div class="text">Add a property</div>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu" aria-labelledby="addPropertyDrop">
-                                                                        <li><a class="dropdown-item" href="#"><div class="text">Sample text</div></a></li>
-                                                                        <li><a class="dropdown-item" href="#"><div class="text">Sample text</div></a></li>
-                                                                        <li><a class="dropdown-item" href="#"><div class="text">Sample text</div></a></li>
-                                                                    </ul>
-                                                                </div>
+                                                              
                                                             </div>
                                                             <div class="optioin-block">
                                                                 <table class="table table-borderless align-middle">
@@ -514,12 +503,7 @@
                                                                                     </ul>
                                                                                 </div>
                                                                             </td>
-                                                                            <td class="role">
-                                                                                <a href="#" class="btn-add-role">
-                                                                                    <i class="bi bi-plus-lg"></i>
-                                                                                    <div class="text">Add Role</div>
-                                                                                </a>
-                                                                            </td>
+                                                                            
                                                                         </tr>
                                                                         <tr>
                                                                             <td class="icons blue-icon"><i class="bi bi-bookmark-fill"></i></td>

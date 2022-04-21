@@ -47,6 +47,8 @@ Route::post('ims_chat_insert', [HomeController::class, 'ims_chat_insert'])->name
 Route::post('submit_chat', [IMSProController::class, 'submit_chat'])->name('submit_chat');
 Route::post('responsible_ims_pro', [IMSProController::class, 'responsible_ims_pro'])->name('responsible_ims_pro');
 
+Route::post('chat_user_details', [IMSProController::class, 'chat_user_details'])->name('chat_user_details');
+
 Route::post('default_server_auth_status', [HomeController::class, 'default_server_auth_status'])->name('default_server_auth_status');
 Route::post('project_server_auth_status', [HomeController::class, 'project_server_auth_status'])->name('project_server_auth_status');
 

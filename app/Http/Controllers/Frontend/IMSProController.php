@@ -575,8 +575,24 @@ class IMSProController extends Controller
     }
 
 
+    public function chat_user_details(Request $request){
+        // dd($request);
+           
+        $company = $request->company;
+        $tags = $request->tags; 
+
+        $update = new Inquiries_Status;
+
+        $update->company = $company;
+        $update->tags = $tags;
+
+        Inquiries_Status::where('phone_number',$request->phone_number)->where('project_id',$request->project_id)->where('widget_id',$request->widget_id)->update($update->toArray());
+
+    }
+
+
     
-  
+    
 
     
 

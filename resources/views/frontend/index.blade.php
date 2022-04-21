@@ -451,39 +451,56 @@
                 <div class="text">New Product releases, Promotions and articles from Tallentor members club</div>
             </div>
             <div class="inner-wrapper">
-                @if(count($posts) != 0)
-                    @foreach($posts as $key => $post)
-                        <div class="card">
-                            <div class="image-block">
-                                <img src="{{uploaded_asset($post->feature_image)}}" alt="">
-                            </div>
-                            <div class="content-block">
-                                <div class="header">
-                                    <img src="{{uploaded_asset(Modules\Blog\Entities\Category::where('id',$post->category)->first()->image)}}" alt="">
-                                    <div class="title">{{$post->title}}</div>
-                                </div>
-                                <div class="text">{!! $post->description !!}</div>
-                                <div class="footer">
-                                    <a href="{{route('frontend.solo_post',$post->id)}}" class="btn-view">View More</a>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($featured_post != null)
+             
+                @if($news_post != null)
                     <div class="card">
                         <div class="image-block">
-                            <img src="{{uploaded_asset($featured_post->feature_image)}}" alt="">
+                            <img src="{{uploaded_asset($news_post->feature_image)}}" alt="">
                         </div>
                         <div class="content-block">
                             <div class="header">
-                                <img src="{{uploaded_asset(Modules\Blog\Entities\Category::where('id',$featured_post->category)->first()->image)}}" alt="">
-                                <div class="title">{{$featured_post->title}}</div>
+                                <img src="{{uploaded_asset(Modules\Blog\Entities\Category::where('id',$news_post->category)->first()->image)}}" alt="">
+                                <div class="title">{{$news_post->title}}</div>
                             </div>
-                            <div class="text">{!! $featured_post->description !!}</div>
+                            <div class="text">{!! $news_post->description !!}</div>
                             <div class="footer">
-                                <a href="{{route('frontend.solo_post',$featured_post->id)}}" class="btn-view">View More</a>
+                                <a href="{{route('frontend.single_news',$news_post->id)}}" class="btn-view">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+                @if($promo_post != null)
+                    <div class="card">
+                        <div class="image-block">
+                            <img src="{{uploaded_asset($promo_post->feature_image)}}" alt="">
+                        </div>
+                        <div class="content-block">
+                            <div class="header">
+                                <img src="{{uploaded_asset(Modules\Blog\Entities\Category::where('id',$promo_post->category)->first()->image)}}" alt="">
+                                <div class="title">{{$promo_post->title}}</div>
+                            </div>
+                            <div class="text">{!! $promo_post->description !!}</div>
+                            <div class="footer">
+                                <a href="{{route('frontend.single_news',$promo_post->id)}}" class="btn-view">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+                @if($blog_post != null)
+                    <div class="card">
+                        <div class="image-block">
+                            <img src="{{uploaded_asset($blog_post->feature_image)}}" alt="">
+                        </div>
+                        <div class="content-block">
+                            <div class="header">
+                                <img src="{{uploaded_asset(Modules\Blog\Entities\Category::where('id',$blog_post->category)->first()->image)}}" alt="">
+                                <div class="title">{{$blog_post->title}}</div>
+                            </div>
+                            <div class="text">{!! $blog_post->description !!}</div>
+                            <div class="footer">
+                                <a href="{{route('frontend.single_news',$blog_post->id)}}" class="btn-view">View More</a>
                             </div>
                         </div>
                     </div>

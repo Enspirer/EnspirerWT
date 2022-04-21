@@ -111,8 +111,16 @@ class NewsController extends Controller
             }else{         
                 
                 if($request->featured == 'Enabled')
-                {            
-                    DB::table('posts')->where('featured','Enabled')->update(array('featured' => 'Disabled'));           
+                {
+                    if(Category::where('id',$request->category)->first()->name == 'News'){
+                        DB::table('posts')->where('featured','Enabled')->where('category',$request->category)->update(array('featured' => 'Disabled'));           
+                    }
+                    elseif(Category::where('id',$request->category)->first()->name == 'Promotions'){                        
+                        DB::table('posts')->where('featured','Enabled')->where('category',$request->category)->update(array('featured' => 'Disabled'));           
+                    }
+                    elseif(Category::where('id',$request->category)->first()->name == 'Blogs'){
+                        DB::table('posts')->where('featured','Enabled')->where('category',$request->category)->update(array('featured' => 'Disabled'));           
+                    }
                 } 
                
                 $add = new Post;
@@ -177,8 +185,16 @@ class NewsController extends Controller
             }else{           
                 
                 if($request->featured == 'Enabled')
-                {            
-                    DB::table('posts')->where('featured','Enabled')->update(array('featured' => 'Disabled'));           
+                {
+                    if(Category::where('id',$request->category)->first()->name == 'News'){
+                        DB::table('posts')->where('featured','Enabled')->where('category',$request->category)->update(array('featured' => 'Disabled'));           
+                    }
+                    elseif(Category::where('id',$request->category)->first()->name == 'Promotions'){                        
+                        DB::table('posts')->where('featured','Enabled')->where('category',$request->category)->update(array('featured' => 'Disabled'));           
+                    }
+                    elseif(Category::where('id',$request->category)->first()->name == 'Blogs'){
+                        DB::table('posts')->where('featured','Enabled')->where('category',$request->category)->update(array('featured' => 'Disabled'));           
+                    }
                 } 
                
                 $update = new Post;
