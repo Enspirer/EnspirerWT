@@ -77,7 +77,7 @@
                         @else
                             @foreach($project_details as $project_detail)
 
-                                <!-- <section id="sectionProperties">
+                                <section id="sectionProperties">
                                     <div class="property-block mb-5">
                                         <div class="row g-0 p-4 border-bottom">
                                             <div class="inner-wrapper">
@@ -170,74 +170,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </section> -->
-
-                                <div class="webProperty-block">
-                                    <div class="header">
-                                        <div class="info-block">
-                                            <div class="title">{{$project_detail->name}}</div>
-                                            <div class="url">{{$project_detail->url}}</div>
-                                        </div>
-                                        <div class="sub-block">
-                                            @if($project_detail->package_starting_date != null)
-                                                    @if($project_detail->selected_package == 'All In One Widget + IMS Lite')
-                                                        <div class="sub-type">Widget Lite</div>
-                                                    @elseif($project_detail->selected_package == 'All In One Widget + IMS Pro')
-                                                        <div class="sub-type">Widget Pro</div>
-                                                    @elseif($project_detail->selected_package == 'Optimizer')
-                                                        <div class="sub-type">Optimizer</div>
-                                                    @elseif($project_detail->package_type == 'Free') 
-                                                        <div class="sub-type">Trial</div>
-                                                    @endif
-                                                <div class="lbl lbl-start">Bill Start Date</div>
-                                                <div class="lbl lbl-end">Bill End Date</div>
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" progress-color aria-valuemin="0" style="width: {{get_expire_date($project_detail->id)['remaining_days'] / 30 * 100}}%;" aria-valuemax="30"></div>
-                                                </div>
-                                                <div class="date date-start">{{$project_detail->package_starting_date}}</div>
-                                                <div class="date date-end">{{$project_detail->expire_date}}</div>
-                                            @else
-                                                <div class="text">Not Selected</div>
-                                            @endif
-                                        </div>
-                                        <div class="button-block">
-                                            <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn btn-view"><i class="bi bi-x-diamond-fill"></i>View</a>
-                                            <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="delete btn btn-delete" data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i>Delete</a>
-                                        </div>
-                                    </div>
-                                    <div class="body">
-                                        <div class="content-block">
-                                            <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/unpaid_invoices.png')}}" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <div class="subtitle">Unpaid invoices</div>
-                                                <div class="text">You don't have unpaid invoices</div>
-                                                <a href="#" class="link">Go to Unpaid invoices</a>
-                                            </div>
-                                        </div>
-                                        <div class="content-block">
-                                            <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/services.png')}}" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <div class="subtitle">Services</div>
-                                                <div class="text">1 service has auto-renewal turned-off</div>
-                                                <a href="#" class="link">Go to Services</a>
-                                            </div>
-                                        </div>
-                                        <div class="content-block">
-                                            <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/payment_history.png')}}" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <div class="subtitle">Payment history</div>
-                                                <div class="text">Find all your payments and their invoices</div>
-                                                <a href="#" class="link">Go to Payment history</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </section>
 
                             @endforeach
                         @endif
