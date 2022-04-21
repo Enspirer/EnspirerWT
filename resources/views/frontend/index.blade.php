@@ -489,12 +489,34 @@
                     </div>
                 @endif
             </div>
-            <div class="button-block">
-                <a href="#" class="cta-btn-border">
-                    <span class="text">View More</span>
-                    <i class="bi bi-arrow-right-short"></i>
-                </a>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="button-block">
+                        <a href="{{route('frontend.latest_news')}}" class="cta-btn-border">
+                            <span class="text">View All News</span>
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="button-block">
+                        <a href="{{route('frontend.promotions')}}" class="cta-btn-border">
+                            <span class="text">View Promo</span>
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="button-block">
+                        <a href="{{route('frontend.home_blog')}}" class="cta-btn-border">
+                            <span class="text">All Articles</span>
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+            
         </div>
     </section>
 

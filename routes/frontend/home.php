@@ -13,6 +13,7 @@ use App\Http\Controllers\Frontend\SecurityController;
 use App\Http\Controllers\Frontend\ChatController;
 use App\Http\Controllers\Frontend\ReportsController;
 use App\Http\Controllers\Frontend\User\ProjectController;
+use App\Http\Controllers\Frontend\User\BillingController;
 use App\Http\Controllers\Frontend\AnalyticsController;
 use App\Http\Controllers\Frontend\EShopController;
 use App\Http\Controllers\Frontend\MarketPlaceController;
@@ -94,7 +95,7 @@ Route::get('services/services',[ServicesController::class, 'services'])->name('s
 Route::get('media/latest-news',[MediaController::class, 'news'])->name('latest_news');
 Route::get('media/latest-news/single-news/{id}',[MediaController::class, 'singleNews'])->name('single_news');
 Route::get('media/promotions',[MediaController::class, 'promotions'])->name('promotions');
-Route::get('media/home-blog',[BlogController::class, 'index'])->name('home_blog');
+Route::get('media/home-blog',[MediaController::class, 'blogs'])->name('home_blog');
 Route::get('solo_post/{id}',[BlogController::class, 'solo_post'])->name('solo_post');
 Route::get('terms-condition',[TermsAndPrivacyController::class, 'terms_condition'])->name('terms_condition');
 Route::get('privacy-policy',[TermsAndPrivacyController::class, 'privacy_policy'])->name('privacy_policy');
@@ -145,6 +146,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
         Route::post('profile_details/update', [SettingsController::class, 'profile_details_update'])->name('profile_details.update');
         Route::get('reports', [ReportsController::class, 'index'])->name('reports');
+        Route::get('billing', [BillingController::class, 'index'])->name('billing');
         Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
         Route::get('notifications', [NotificationsController::class, 'index'])->name('notifications.index');
         Route::get('user_notifications_status/{id}', [NotificationsController::class, 'user_notifications_status'])->name('user_notifications_status');
