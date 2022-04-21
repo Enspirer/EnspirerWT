@@ -1241,12 +1241,15 @@ class HomeController extends Controller
 
     public function selected_conversation(Request $request)
     {       
-        // dd($request);
-        if ($request->input('ids')) {
-            $entries = ImsProClientMessages::whereIn('id', $request->input('ids'))->get()->unique('phone_number');
+        // dd($request->input('phone_numbers'));
 
-            foreach ($entries as $entry) {
-                $entry->delete();
+        if ($request->input('phone_numbers')) {
+
+            $json_decode = $request->input('phone_numbers');
+            // dd($json_decode);
+
+            foreach ($json_decode as $entry) {
+                ImsProClientMessages::where('phone_number', $entry)->delete();
             }
         }
     }

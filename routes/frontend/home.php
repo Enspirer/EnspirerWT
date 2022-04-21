@@ -105,6 +105,7 @@ Route::get('pricing',[PricingController::class, 'pricing'])->name('pricing');
 Route::get('generatePDF/{id}',[IMSController::class, 'generatePDF'])->name('generatePDF');
 Route::get('analytics_generatePDF',[IMSController::class, 'analytics_generatePDF'])->name('analytics_generatePDF');
 
+Route::get('generate_report_file_pdf/{project_id}/{phone_number}',[IMSProController::class, 'generate_report_file_pdf'])->name('generate_report_file_pdf');
 
 
 
@@ -123,6 +124,9 @@ Route::get('user_widget/ims_pro_broadcast/{id}', [IMSProController::class, 'ims_
 Route::post('user_widget/ims_pro_contacts_store', [IMSProController::class, 'ims_pro_contacts_store'])->name('user_widget.ims_pro_contacts_store');
 Route::post('user_widget/ims_pro_contacts_update', [IMSProController::class, 'ims_pro_contacts_update'])->name('user_widget.ims_pro_contacts_update');
 Route::get('user_widget/ims_pro_contacts_delete/{id}', [IMSProController::class, 'ims_pro_contacts_delete'])->name('user_widget.ims_pro_contacts_delete');
+
+
+Route::post('conversation/delete', [IMSProController::class, 'conversation_delete'])->name('conversation.delete');
 
 
 

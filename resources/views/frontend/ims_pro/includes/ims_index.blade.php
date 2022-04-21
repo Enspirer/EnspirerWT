@@ -261,7 +261,7 @@
                                                             <div class="option-block">
                                                                 <ul class="navbar-nav">
                                                                     <li class="nav-item">
-                                                                        <a href="#" class="nav-link"><i class="bi bi-trash"></i></a>
+                                                                        <a href="#" class="nav-link delete" data-bs-toggle="modal" data-bs-target="#delete_conversation"><i class="bi bi-trash"></i></a>
                                                                     </li>
                                                                     <li class="nav-item">
                                                                         <div href="#" class="nav-link dropdown">
@@ -534,7 +534,7 @@
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
-                                                                <a href="#" class="btn-report-download">
+                                                                <a href="{{ route('frontend.generate_report_file_pdf',[$solo_ims_pro_client->phone_number,$solo_ims_pro_client->project_id]) }}" class="btn-report-download">
                                                                     <i class="bi bi-download"></i>
                                                                     <div class="text">Download Report File</div>
                                                                 </a>

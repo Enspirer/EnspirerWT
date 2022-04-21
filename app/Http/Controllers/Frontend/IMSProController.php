@@ -14,6 +14,8 @@ use DataTables;
 use Modules\WidgetManager\Entities\ImsClients;
 use Illuminate\Support\Facades\Hash;
 use Cart;
+use DB;
+use PDF;
 
 class IMSProController extends Controller
 {    
@@ -590,6 +592,28 @@ class IMSProController extends Controller
 
     }
 
+    public function conversation_delete(Request $request)
+    {
+        ImsProClientMessages::where('phone_number', $request->hid_chat_phone_number)->where('project_id', $request->hid_chat_project_id)->delete(); 
+        return back();
+    }
+
+    public function generate_report_file_pdf($phone_number, $project_id)
+    {
+        // dd($project_id);
+        $solo_ims_pro_client = ImsProClientMessages::where('phone_number', $phone_number)->where('project_id', $project_id)->first(); 
+
+        $solo_ims_pro_client_messages = ImsProClientMessages::where('project_id',$project_id)->where('phone_number',$phone_number)->get();
+
+        // dd($solo_ims_pro_client);
+
+        $pdf = PDF::loadView('solo_ims_pro_client', [
+            'solo_ims_pro_client' => $solo_ims_pro_client,
+            'solo_ims_pro_client_messages' => $solo_ims_pro_client_messages
+        ]);
+  
+        return $pdf->download('solo_ims_pro_client.pdf');
+    }
 
     
     

@@ -55,82 +55,83 @@
                         <div class="text">Status Report</div>
                     </a>
                 </div>
-                <div class="ims__data-table">
-                    <table class="table table-borderless" id="inquirySummery">
-                        <thead>
-                            <tr class="data-row">
-                                <th class="data-title"></th>
-                                <th class="data-title"></th>
-                                <th class="data-title"></th>
-                                <th class="data-title">Name</th>
-                                <th class="data-title">Date</th>
-                                <th class="data-title">Messenger Channel</th>                                                                              
-                                <th class="data-title">Responsible</th>
-                                <th class="data-title">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @if(count($all_ims_pro_client_messages) == 0)
-                                @include('frontend.includes.not_found',[
-                                    'not_found_title' => 'No Any Chats Found',
-                                    'not_found_description' => null,
-                                    'not_found_button_caption' => null
-                                ])
-                            @else
-                                @foreach($all_ims_pro_client_messages as $all_ims_pro_client_message)
-                                    <tr class="data-row" data-href="#">
-                                        <td class="data--select data-cell">
-                                            <input class="form-check-input inquiry-check"
-                                            id="{{$all_ims_pro_client_message->id}}" type="checkbox" value="">
-                                        </td>
-                                        <td class="data--fav data-cell">
-                                            <label class="fav-btn">
-                                                <input type="checkbox">
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star"></i>
-                                            </label>
-                                        </td>
-                                        <td class="data--pic data-cell">
-                                            <img src="{{url('img/profile_avatar.jpg')}}" alt="">
-                                        </td>
-                                        <td class="data--name data-cell">
-                                            <a href="{{route('frontend.user_widget.ims_pro_index',[$all_ims_pro_client_message->project_id,$all_ims_pro_client_message->phone_number,$all_ims_pro_client_message->type])}}" style="text-decoration:none; color:#212529;">
-                                                <div class="info-block">
-                                                    <div class="header">
-                                                        <div class="name">{{$all_ims_pro_client_message->name}}</div>
-                                                        <div class="count">10</div>
+                @if(count($all_ims_pro_client_messages) == 0)
+                    @include('frontend.includes.not_found',[
+                        'not_found_title' => 'No Any Chats Found',
+                        'not_found_description' => null,
+                        'not_found_button_caption' => null
+                    ])
+                @else
+                    <div class="ims__data-table">
+                        <table class="table table-borderless" id="inquirySummery">
+                            <thead>
+                                <tr class="data-row">
+                                    <th class="data-title"></th>
+                                    <th class="data-title"></th>
+                                    <th class="data-title"></th>
+                                    <th class="data-title">Name</th>
+                                    <th class="data-title">Date</th>
+                                    <th class="data-title">Messenger Channel</th>                                                                              
+                                    <th class="data-title">Responsible</th>
+                                    <th class="data-title">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    @foreach($all_ims_pro_client_messages as $all_ims_pro_client_message)
+                                        <tr class="data-row" data-href="#">
+                                            <td class="data--select data-cell">
+                                                <input class="form-check-input inquiry-check"
+                                                id="{{$all_ims_pro_client_message->phone_number}}" type="checkbox" value="">
+                                            </td>
+                                            <td class="data--fav data-cell">
+                                                <label class="fav-btn">
+                                                    <input type="checkbox">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star"></i>
+                                                </label>
+                                            </td>
+                                            <td class="data--pic data-cell">
+                                                <img src="{{url('img/profile_avatar.jpg')}}" alt="">
+                                            </td>
+                                            <td class="data--name data-cell">
+                                                <a href="{{route('frontend.user_widget.ims_pro_index',[$all_ims_pro_client_message->project_id,$all_ims_pro_client_message->phone_number,$all_ims_pro_client_message->type])}}" style="text-decoration:none; color:#212529;">
+                                                    <div class="info-block">
+                                                        <div class="header">
+                                                            <div class="name">{{$all_ims_pro_client_message->name}}</div>
+                                                            <div class="count">10</div>
+                                                        </div>
+                                                        <div class="message"><span>You:</span>The sample text here and this is the . . .</div>
                                                     </div>
-                                                    <div class="message"><span>You:</span>The sample text here and this is the . . .</div>
+                                                </a>
+                                            </td>
+                                            <td class="data--date data-cell">
+                                                <div class="text">{{ $all_ims_pro_client_message->created_at->format('d M Y') }}</div>
+                                            </td>  
+                                            <td class="data--chnnel data-cell">
+                                                <div class="channel-block">
+                                                    <div class="icon">
+                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                    </div>
+                                                    <div class="name">WhatsApp</div>
                                                 </div>
-                                            </a>
-                                        </td>
-                                        <td class="data--date data-cell">
-                                            <div class="text">{{ $all_ims_pro_client_message->created_at->format('d M Y') }}</div>
-                                        </td>  
-                                        <td class="data--chnnel data-cell">
-                                            <div class="channel-block">
-                                                <div class="icon">
-                                                    <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                            </td>
+                                            <td class="data--date data-cell">
+                                                <div class="text">Manager</div>
+                                            </td>      
+                                            <td class="data--status data-cell">
+                                                <div class="status-block">
+                                                    <div class="indicator orange"></div>
+                                                    <div class="status">Pending</div>
                                                 </div>
-                                                <div class="name">WhatsApp</div>
-                                            </div>
-                                        </td>
-                                        <td class="data--date data-cell">
-                                            <div class="text">Manager</div>
-                                        </td>      
-                                        <td class="data--status data-cell">
-                                            <div class="status-block">
-                                                <div class="indicator orange"></div>
-                                                <div class="status">Pending</div>
-                                            </div>
-                                        </td>
-                                        
-                                    </tr>                                                                
-                                @endforeach   
-                            @endif                                                        
-                        </tbody>
-                    </table>
-                </div>
+                                            </td>
+                                            
+                                        </tr>                                                                
+                                    @endforeach   
+                            </tbody>
+                        </table>
+                    </div>
+                @endif                                                        
             </div>
         </div>
     </div>
@@ -205,7 +206,7 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    'ids': dataChecked,
+                    'phone_numbers': dataChecked,
                 })
             })
             .then(response => response.json())
@@ -216,6 +217,9 @@
                 console.error('Error:', error);
             });
 
-        setTimeout(dataCancelBtn.click(), 1000)
+            setTimeout(function(){
+                dataCancelBtn.click()
+                location.reload()
+            },1000)
     })
 </script>

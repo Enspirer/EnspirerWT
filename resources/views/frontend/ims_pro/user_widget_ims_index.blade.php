@@ -52,6 +52,34 @@
 
 
     @if($solo_ims_pro_client != null)
+        
+        <div class="modal fade" id="delete_conversation" tabindex="-1" aria-labelledby="delete_conversation_Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <form action="{{ route('frontend.conversation.delete')}}" method="post" enctype="multipart/form-data">
+                {{csrf_field()}}
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="delete_conversation_Label">Delete Conversation</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Do you want to delete this conversation?</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" name="hid_chat_phone_number" value="{{ $solo_ims_pro_client->phone_number }}"/>
+                            <input type="hidden" name="hid_chat_project_id" value="{{ $solo_ims_pro_client->project_id }}"/>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    @endif
+
+
+    @if($solo_ims_pro_client != null)
     <!-- Modal -->
     <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -132,6 +160,13 @@
     $("#close-btn").click(function () {
         $('#overlay').modal('hide');
     });
+</script>
+
+<script>
+    $('.delete').on('click', function() {
+        let link = $(this).attr('href');
+        $('.modal-footer a').attr('href', link);
+    })
 </script>
 
 
