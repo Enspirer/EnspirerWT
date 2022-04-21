@@ -160,9 +160,14 @@
     color: #fff;
 }
 
-.form-section .contact-form .form-control:focus {
-    -webkit-box-shadow: none;
-    box-shadow: none;
+.form-section .contact-form .form-control:-webkit-autofill,
+.form-section .contact-form .form-control:-webkit-autofill:hover,
+.form-section .contact-form .form-control:-webkit-autofill:focus,
+.form-section .contact-form .form-control:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #01033E inset !important;
+    box-shadow: 0 0 0 30px #01033E inset !important;
+    -webkit-text-fill-color: #fff !important;
+    color: #fff !important;
 }
 
 .form-section .contact-form input.form-control {
@@ -314,6 +319,78 @@
     right: 0;
 }
 
+/* Form Submit Modal */
+.form-submit-modal .modal-dialog {
+    width: 90%;
+    max-width: 600px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+}
+
+.form-submit-modal .modal-dialog .modal-content {
+    background: linear-gradient(60deg, #E4F2FB, #9ACDFF);
+    border: 2px solid #0C75FF;
+    border-radius: 15px;
+}
+
+.form-submit-modal.unsuccess .modal-dialog .modal-content {
+    background: linear-gradient(60deg, #FCDBE1, #FF9CAE);
+    border: 2px solid #BF1936;
+}
+
+.form-submit-modal .modal-dialog .modal-content .modal-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.form-submit-modal .modal-dialog .modal-content .modal-body .bi {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    color: #fff;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.form-submit-modal .modal-dialog .modal-content .modal-body .bi:hover {
+    cursor: pointer;
+}
+
+.form-submit-modal .modal-dialog .modal-content .modal-body .image-block img {
+    width: 100%;
+}
+
+.form-submit-modal .modal-dialog .modal-content .modal-body .content-block .title {
+    font-size: 40px;
+    color: #0C75FF;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.form-submit-modal.unsuccess .modal-dialog .modal-content .modal-body .content-block .title {
+    color: #BF1936;
+}
+
+.form-submit-modal .modal-dialog .modal-content .modal-body .content-block .text {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    color: #333;
+}
+
 @media screen and (max-width: 1199px) {
     .form-section .inner-wrapper .background-img {
         width: 60%;
@@ -352,6 +429,21 @@
 
     .form-section .contact-form .button-block .form-submit-btn {
         margin: 0;
+    }
+
+    .form-submit-modal .modal-dialog {
+        max-width: 300px;
+    }
+
+    .form-submit-modal .modal-dialog .modal-content .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .form-submit-modal .modal-dialog .modal-content .modal-body .content-block {
+        text-align: center;
     }
 }
 

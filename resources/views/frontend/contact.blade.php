@@ -147,25 +147,45 @@
     </div>
 </section>
 
-
-
-
 @if(\Session::has('success') )
 
-<div class="modal fade" id="overlay" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+<div class="modal fade form-submit-modal" id="overlay" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
-
-            <div class="modal-body" style="padding: 3rem">
-                <p class="text-center">Your message submitted successfully.</p>
-                <p class="text-center">One of our agents will be in touch shortly.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal-body">
+                <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
+                <div class="image-block">
+                    <img src="{{url('images/landing_page/contact_us/success.png')}}" alt="">
+                </div>
+                <div class="content-block">
+                    <div class="title">Success !</div>
+                    <p class="text">Your message submitted successfully.</p>
+                    <p class="text">One of our agents will be in touch shortly.</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+@else
+
+<!-- <div class="modal fade form-submit-modal unsuccess" id="overlay" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
+                <div class="image-block">
+                    <img src="{{url('images/landing_page/contact_us/unsuccess.png')}}" alt="">
+                </div>
+                <div class="content-block">
+                    <div class="title">Ooopsie !</div>
+                    <p class="text">Your message Failed to deliver.</p>
+                    <p class="text">Please try again later.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
 
 @endif
 
