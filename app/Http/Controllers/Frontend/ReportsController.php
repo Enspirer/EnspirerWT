@@ -28,4 +28,59 @@ class ReportsController extends Controller
             'project_type' => $project_type
         ]);
     }
+
+    public function project_inside(Request $request, $id) {
+             
+        $project = Projects::where('id',$id)->first();
+
+        return view('frontend.user.reports.project_inside',[
+            'project' => $project,
+            'project_id' => $project->id
+        ]);
+    }
+
+    public function inquiry_report(Request $request, $id) {
+             
+        $project = Projects::where('id',$id)->first();
+
+        return view('frontend.user.reports.inquiry_report',[
+            'project' => $project,
+            'project_id' => $project->id
+        ]);
+    }
+
+
+    public function seo_optimize_report(Request $request, $id) {
+             
+        $project = Projects::where('id',$id)->first();
+
+        return view('frontend.user.reports.seo_optimize_report',[
+            'project' => $project,
+            'project_id' => $project->id
+        ]);
+    }
+
+
+    public function security_report(Request $request, $id) {
+             
+        $project = Projects::where('id',$id)->first();
+
+        return view('frontend.user.reports.security_report',[
+            'project' => $project,
+            'project_id' => $project->id
+        ]);
+    }
+
+
+    public function billing_report(Request $request, $id) {
+             
+        $project = Projects::where('id',$id)->first();
+
+        return view('frontend.user.reports.billing_report',[
+            'project' => $project,
+            'project_id' => $project->id
+        ]);
+    }
+
+
 }

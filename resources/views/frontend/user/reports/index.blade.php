@@ -144,7 +144,6 @@
                                             <tr>
                                                 <th class="text-center">Name</th>
                                                 <th>URL</th>
-                                                <th>SEO Result</th>
                                                 <th>Analytics Result</th>
                                                 <th>Generate at</th>
                                                 <th></th>
@@ -160,30 +159,22 @@
                                                     <div class="propery">
                                                         <!-- <img src="{{url('images/Tallentor.png')}}" alt=""> -->
                                                             @if(get_seo_result($report->id)->favicon->value == null)
-                                                                <a href="{{route('frontend.user.project.chat',$report->id)}}" style="text-decoration:none;">
+                                                                <a href="{{route('frontend.user.reports.project_inside',$report->id)}}" style="text-decoration:none;">
                                                                     <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
                                                                 </a>
                                                             @else
-                                                                <a href="{{route('frontend.user.project.chat',$report->id)}}" style="text-decoration:none;">
+                                                                <a href="{{route('frontend.user.reports.project_inside',$report->id)}}" style="text-decoration:none;">
                                                                     <img src="{{get_seo_result($report->id)->favicon->value}}" alt="propery-image">
                                                                 </a>                                                        
                                                             @endif
                                                             <div class="name">
-                                                                <a href="{{route('frontend.user.project.chat',$report->id)}}" style="text-decoration:none; color:rgba(0, 0, 0, 0.5)">
+                                                                <a href="{{route('frontend.user.reports.project_inside',$report->id)}}" style="text-decoration:none; color:rgba(0, 0, 0, 0.5)">
                                                                     {{$report->url}}
                                                                 </a>  
                                                             </div>
                                                     </div>
                                                 </td>
-                                                <td class="col-3">
-                                                    <div class="seo-result">
-                                                        <div class="progress">
-                                                            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                                                                aria-valuemax="100"></div>
-                                                        </div>
-                                                        <div class="precentage">69/100</div>
-                                                    </div>
-                                                </td>
+                                               
                                                 <td class="col-3">
                                                     <div class="analytics-block">
                                                         <div class="visitors-block up">

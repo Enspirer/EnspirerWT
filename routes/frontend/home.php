@@ -153,8 +153,15 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
         Route::post('profile_details/update', [SettingsController::class, 'profile_details_update'])->name('profile_details.update');
         Route::get('reports', [ReportsController::class, 'index'])->name('reports');
+        Route::get('reports/project_inside/{id}', [ReportsController::class, 'project_inside'])->name('reports.project_inside');
+        Route::get('reports/inquiry_report/{id}', [ReportsController::class, 'inquiry_report'])->name('reports.inquiry_report');
+        Route::get('reports/seo_optimize_report/{id}', [ReportsController::class, 'seo_optimize_report'])->name('reports.seo_optimize_report');
+        Route::get('reports/security_report/{id}', [ReportsController::class, 'security_report'])->name('reports.security_report');
+        Route::get('reports/billing_report/{id}', [ReportsController::class, 'billing_report'])->name('reports.billing_report');
+        
         Route::get('billing', [BillingController::class, 'index'])->name('billing');
         Route::get('unpaid_invoices/{id}', [BillingController::class, 'unpaid_invoices'])->name('unpaid_invoices');
+        Route::get('paid_invoices/{id}', [BillingController::class, 'paid_invoices'])->name('paid_invoices');
         
         Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
         Route::get('notifications', [NotificationsController::class, 'index'])->name('notifications.index');

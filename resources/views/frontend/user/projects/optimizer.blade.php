@@ -623,7 +623,7 @@
                 <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
                 <code>
                     &lt;div id="{{$widgetlist->widget_key}}"&gt;&lt;/div&gt; <br>
-                    &lt;script src="{{url('')}}/whatsapp_widget/{{$widgetlist->id}}/tallentorw.js"&gt;&lt;/script&gt;
+                    &lt;script data-host="https://tallentor.com" data-dnt="false" src="https://tallentor.com/js/script_tracker.js" id="ZwSg9rf6GA" async defer&gt;&lt;/script&gt;
                 </code>
             </div>
             <div class="modal-footer">

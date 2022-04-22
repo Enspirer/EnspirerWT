@@ -19,7 +19,7 @@
                             
                             <table width="100%">
                             <tr>
-                                <td width="50%"><h5 class="invoice-inverse">Invoice ID: 565768</h5></td>
+                                <td width="50%"><h5 class="invoice-inverse">Invoice ID: {{$invoice_id}}</h5></td>
                                 
                             </tr>            
                             </table> 
