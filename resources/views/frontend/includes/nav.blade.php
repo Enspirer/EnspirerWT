@@ -84,11 +84,22 @@
                         <div class="col-auto ms-lg-0 ms-auto">
                             <div class="profile-block">
                                 <ul class="navbar-nav">
+                                    
+                                    <li class="nav-item">
+                                        <div class="text">Trial</div>
+                                        <div class="sub">Optimizer</div>
+                                    </li>
+                                    
+                                    <li class="nav-item">
                                     @if(isset($project_id))
-                                        <h6 class="me-3">{{get_expire_date($project_id)['remaining_days']}} Days Left for {{get_expire_date($project_id)['project_name']}}</h6>
+                                        <div class="sub-duration">{{get_expire_date($project_id)['remaining_days']}} Days Left for {{get_expire_date($project_id)['project_name']}}</div>
                                     @endif
 
                                     @auth()
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width:50%;"></div>
+                                        </div>
+                                    </li>
 
                                     <li class="nav-item dropdown">
                                         @if(count(App\Models\Notification::where('user_id',auth()->user()->id)->where('status','Pending')->get()) != 0)

@@ -35,6 +35,7 @@ use App\Http\Controllers\Frontend\NotFoundController;
 use App\Http\Controllers\Frontend\MobileViewController;
 use App\Http\Controllers\Frontend\PricingController;
 use App\Http\Controllers\Frontend\MediaController;
+use App\Http\Controllers\Frontend\DemoController;
 
 
 /*
@@ -96,7 +97,7 @@ Route::get('media/latest-news',[MediaController::class, 'news'])->name('latest_n
 Route::get('media/latest-news/single-news/{id}',[MediaController::class, 'singleNews'])->name('single_news');
 Route::get('media/promotions',[MediaController::class, 'promotions'])->name('promotions');
 Route::get('media/home-blog',[MediaController::class, 'blogs'])->name('home_blog');
-Route::get('media/tallentor-demo',[MediaController::class, 'tallentor_demo'])->name('tallentor_demo');
+Route::get('tallentor-demo',[DemoController::class, 'tallentor_demo'])->name('tallentor_demo');
 Route::get('solo_post/{id}',[BlogController::class, 'solo_post'])->name('solo_post');
 Route::get('terms-condition',[TermsAndPrivacyController::class, 'terms_condition'])->name('terms_condition');
 Route::get('privacy-policy',[TermsAndPrivacyController::class, 'privacy_policy'])->name('privacy_policy');

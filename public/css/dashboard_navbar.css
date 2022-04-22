@@ -26,13 +26,47 @@
     align-items: center;
 }
 
+#navBar.nav-bar .profile-block .navbar-nav .nav-item .text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin: 0 auto 0.25em;
+    text-align: center;
+}
+
+#navBar.nav-bar .profile-block .navbar-nav .nav-item .sub-duration {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin: 0 auto 0.25em;
+    text-align: center;
+    width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#navBar.nav-bar .profile-block .navbar-nav .nav-item .sub {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+    color: #777;
+    margin: 0 15px;
+}
+
+#navBar.nav-bar .profile-block .navbar-nav .nav-item .progress {
+    height: 4px;
+    width: 200px;
+    margin: 0 15px;
+}
+
 #navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell {
     color: #333;
     font-size: 2rem;
     position: relative;
 }
 
-#navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell::after{
+#navBar.nav-bar .profile-block .navbar-nav .nav-item .notification-bell::after {
     content: none;
 }
 
