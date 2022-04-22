@@ -139,7 +139,7 @@
                 <img src="{{url('images/landing_page/home/ims-banner.png')}}" alt="">
             </div>
             <div class="button-block">
-                <a href="#" class="cta-btn-border">
+                <a href="{{url('tallentor-demo')}}" class="cta-btn-border">
                     <span class="text">Request Demo</span>
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
@@ -233,7 +233,7 @@
             </div>
         </div>
         <div class="button-block">
-            <a href="#" class="cta-btn-border">
+            <a href="{{url('tallentor-demo')}}" class="cta-btn-border">
                 <span class="text">Request Demo</span>
                 <i class="bi bi-arrow-right-short"></i>
             </a>
