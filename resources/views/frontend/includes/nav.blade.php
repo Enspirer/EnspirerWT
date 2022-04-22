@@ -86,8 +86,15 @@
                                 <ul class="navbar-nav">
                                     
                                     <li class="nav-item">
-                                        <div class="text">Trial</div>
-                                        <div class="sub">Optimizer</div>
+                                        <div class="inner-wrapper">
+                                            <div class="image-block">
+                                                <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
+                                            </div>
+                                            <div class="content-block">
+                                                <div class="text">Trial</div>
+                                                <div class="sub">Optimizer</div>
+                                            </div>
+                                        </div>
                                     </li>
                                     
                                     <li class="nav-item">
