@@ -230,6 +230,9 @@
         })
     </script>
 
+@if(count($project_details) != 0)
+@foreach($project_details as $project_detail){
+
     <script>
         // Progressbar color changer
         const progressColor = document.querySelectorAll("[progress-color]")
@@ -247,5 +250,9 @@
             })
         })
     </script>
+    
+@endforeach
+@endif
+   
 
 @endpush
