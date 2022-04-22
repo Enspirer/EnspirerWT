@@ -27,11 +27,10 @@
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
                         <li class="breadcrumb-item"><i class="bi bi-chevron-right"></i></li>
-                        <li class="breadcrumb-item"><span>Unpaid Invoices</span></li>
+                        <li class="breadcrumb-item"><span>Paid Invoices</span></li>
                     </ul>
                 </div>
-               
-                
+
                 <div class="row g-0">
                     <div class="ims__control-panel">
                         <div class="row">
@@ -55,9 +54,8 @@
                         </div>                        
                     </div>
                 </div>
-
-
-                @if(count($unpaid_invoices) == 0)
+                
+                @if(count($paid_invoices) == 0)
                     @include('frontend.includes.not_found',[
                         'not_found_title' => 'Data not found',
                         'not_found_description' => null,
@@ -110,24 +108,24 @@
                                             </thead>
                                             <tbody data-body>
 
-                                                @foreach($unpaid_invoices as $unpaid_invoice)
+                                                @foreach($paid_invoices as $paid_invoice)
                                                     <tr class="data-row" data-row>
                                                         <td class="data--select data-cell">
                                                             <input class="form-check-input inquiry-check"
                                                             id="#" type="checkbox" value="">
                                                         </td>
                                                         <td class="data--id data-cell">
-                                                            <div class="text">{{$unpaid_invoice->id}}</div>
+                                                            <div class="text">{{$paid_invoice->id}}</div>
                                                         </td>
                                                         <td class="data--status data-cell">
                                                             <div class="status">
                                                                 <i class="bi unpaid bi-exclamation-circle-fill"></i>
                                                                 <i class="bi paid bi-check-circle-fill"></i>
-                                                                <div class="text">{{$unpaid_invoice->status}}</div>
+                                                                <div class="text">{{$paid_invoice->status}}</div>
                                                             </div>
                                                         </td>
                                                         <td class="data-cell">
-                                                            <div class="text">{{ $unpaid_invoice->created_at->format('d, M Y') }}</div>
+                                                            <div class="text">{{ $paid_invoice->created_at->format('d, M Y') }}</div>
                                                         </td>
                                                         <td class="data-cell">
                                                             <div class="text">18, Feb 2022</div>
@@ -217,7 +215,7 @@
 
                                                                         <div class="button-block">
                                                                             <a href="#" class="btn btn-payNow">Pay Now</a>
-                                                                            <a href="{{ route('frontend.invoice_pdf',$unpaid_invoice->id) }}" class="btn btn-view">View Invoice</a>
+                                                                            <a href="{{ route('frontend.invoice_pdf',$paid_invoice->id) }}" class="btn btn-view">View Invoice</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>

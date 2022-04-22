@@ -622,7 +622,11 @@ function addWidget() {
                         @if(count($widget_meta->whatsapp_details) != 1)
                             @foreach($widget_meta->whatsapp_details as $key => $whats)
                                 @if($whats == 'whatsapp')  
-                                    <a href="https://web.whatsapp.com/send?phone={{$widget_meta->whatsapp_number}}" class="allin1btn allin1btn1"><img width="25" src="{{url('images/social_media_icons/whatsapp.png')}}"></a>
+                                    @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','IMS Pro')->first() != null)
+                                        <a href="https://web.whatsapp.com/send?phone={{$widget_meta->whatsapp_number}}" class="allin1btn allin1btn1"><img width="25" src="{{url('images/social_media_icons/whatsapp.png')}}"></a>
+                                    @else
+                                        <button onclick="allin1formpopup(1)" class="allin1btn allin1btn1"><img width="25" src="{{url('images/social_media_icons/whatsapp.png')}}"></button>
+                                    @endif
                                 @endif
                             @endforeach
                         @endif

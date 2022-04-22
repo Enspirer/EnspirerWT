@@ -102,7 +102,7 @@
                                         <div class="content">
                                             <div class="subtitle">Payment history</div>
                                             <div class="text">Find all your payments and their invoices</div>
-                                            <a href="#" class="link">Go to Payment history</a>
+                                            <a href="{{route('frontend.user.paid_invoices',$project_detail->id)}}" class="link">Go to Payment history</a>
                                         </div>
                                     </div>
                                 </div>
