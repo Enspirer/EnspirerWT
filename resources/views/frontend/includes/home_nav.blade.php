@@ -72,6 +72,9 @@
                                 <li>
                                     <a class="dropdown-item" href="{{url('media/home-blog')}}">Blog</a>
                                 </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url('media/tallentor-demo')}}">Tallentor Demo</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
