@@ -109,6 +109,8 @@ Route::get('analytics_generatePDF',[IMSController::class, 'analytics_generatePDF
 
 Route::get('generate_report_file_pdf/{project_id}/{phone_number}',[IMSProController::class, 'generate_report_file_pdf'])->name('generate_report_file_pdf');
 
+Route::get('invoice_pdf/{id}',[BillingController::class, 'invoice_pdf'])->name('invoice_pdf');
+
 
 
 Route::get('ims_login_page/{id}', [IMSLoginController::class, 'login_page'])->name('ims_login_page');
@@ -153,6 +155,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::post('profile_details/update', [SettingsController::class, 'profile_details_update'])->name('profile_details.update');
         Route::get('reports', [ReportsController::class, 'index'])->name('reports');
         Route::get('billing', [BillingController::class, 'index'])->name('billing');
+        Route::get('unpaid_invoices/{id}', [BillingController::class, 'unpaid_invoices'])->name('unpaid_invoices');
+        
         Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
         Route::get('notifications', [NotificationsController::class, 'index'])->name('notifications.index');
         Route::get('user_notifications_status/{id}', [NotificationsController::class, 'user_notifications_status'])->name('user_notifications_status');
