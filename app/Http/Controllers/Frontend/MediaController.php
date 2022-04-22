@@ -74,4 +74,8 @@ class MediaController extends Controller
             'post_details' => $post_details
         ]);
     }
+
+    public function tallentor_demo() {
+        return view('frontend.tallentor_demo');
+    }
 }

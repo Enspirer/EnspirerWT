@@ -1,0 +1,78 @@
+.section-schedule {
+    background: url('../images/landing_page/tallentor_demo/demo_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem 0 5rem;
+
+    .inner-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .content-block {
+            flex: 0 0 40%;
+
+            .title-light {
+                font-size: 35px;
+                color: #02044A;
+                font-weight: 400;
+            }
+
+            .title {
+                font-size: 40px;
+                color: #02044A;
+                font-weight: 700;
+            }
+
+            .text {
+                font-size: 16px;
+                font-weight: 300;
+                color: #ABACC2;
+                margin: 1.5em 0;
+            }
+
+            .schedule-form {
+                .form-control {
+                    border-radius: 0;
+                    border: none;
+                    border-bottom: 1px solid #ccc;
+                    font-size: 16px;
+                    font-weight: 300;
+
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                    }
+                }
+
+                .iti {
+                    width: 100%;
+                }
+
+                .form-img {
+                    width: 35px;
+                }
+            }
+        }
+
+        .image-block {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+
+    .section-schedule {
+        .inner-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+}
