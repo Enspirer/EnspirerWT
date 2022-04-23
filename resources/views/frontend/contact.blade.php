@@ -56,13 +56,13 @@
                     <div class="social address">
                         <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link" target="_blank">
                             <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
-                            <div class="text">Chat with on WhatsApp</div>
+                            <div class="text">Chat on WhatsApp</div>
                         </a>
                     </div>
                     <div class="social email">
                         <a href="https://www.messenger.com/t/tallentor" class="contact-link" target="_blank">
                             <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
-                            <div class="text">Chat with on Messenger</div>
+                            <div class="text">Connect on Messenger</div>
                         </a>
                     </div>
                     <div class="social email">

@@ -20,7 +20,7 @@
                                         <div class="product">iMS <span class="blue pro-cat">Lite</span></div>
                                         <div class="text blue">Inquiry Management System</div>
 
-                                        <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                                        <a href="{{url('/tallentor-demo')}}" class="cta-btn-fill"><span class="text">Request Demo</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
                                 <div class="image-block slide-01">
@@ -37,7 +37,7 @@
                                         <div class="product">iMS <span class="red pro-cat">Pro</span></div>
                                         <div class="text">conversation records <br> status reports</div>
 
-                                        <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                                        <a href="{{url('/tallentor-demo')}}" class="cta-btn-fill"><span class="text">Request Demo</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
                                 <div class="image-block">
@@ -54,7 +54,7 @@
                                         <div class="product blue">Mobile App</div>
                                         <div class="text">Real time visitors <br> Chat invite</div>
 
-                                        <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                                        <a href="{{url('/tallentor-demo')}}" class="cta-btn-fill"><span class="text">Request Demo</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
                                 <div class="image-block">
@@ -77,35 +77,45 @@
             </div>
             <div class="body">
                 <div class="feature-box">
-                    <div class="content-block">
-                        <div class="header">
-                            <div class="title"><img src="{{url('images/landing_page/home/whatsapp-blue.png')}}" alt="" width="30"> WhatsApp Widget</div>
-                            <span class="text">Integrate the most popular communication channel into your website and improve your customer service quality and sales conversion.</span>
+                    <div class="inner-wrapper">
+                        <div class="content-block">
+                            <div class="header">
+                                <div class="title"><img src="{{url('images/landing_page/home/whatsapp-blue.png')}}" alt="" width="30"> WhatsApp Widget</div>
+                                <span class="text">Integrate the most popular communication channel into your website and improve your customer service quality and sales conversion.</span>
+                            </div>
+                            <ul class="features">
+                                <li><i class="bi bi-check-circle-fill"></i>Customisable ready to use widget</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Inquiry Management System - IMS</li>
+                            </ul>
                         </div>
-                        <ul class="features">
-                            <li><i class="bi bi-check-circle-fill"></i>Customisable ready to use widget</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Inquiry Management System - IMS</li>
-                        </ul>
-                        <a href="#" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                        <div class="image-block">
+                            <img src="{{url('images/landing_page/home/whatsapp-widget.png')}}" alt="">
+                        </div>
                     </div>
-                    <div class="image-block">
-                        <img src="{{url('images/landing_page/home/whatsapp-widget.png')}}" alt="">
+                    <div class="button-block">
+                        <a href="{{url('register')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                        <a href="{{url('contact')}}" class="cta-btn-fill"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                 </div>
                 <div class="feature-box">
-                    <div class="content-block">
-                        <div class="header">
-                            <div class="title"><img src="{{url('images/landing_page/home/open-menu.png')}}" alt="" width="30"> All-in-One chat</div>
-                            <span class="text">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</span>
+                    <div class="inner-wrapper">
+                        <div class="content-block">
+                            <div class="header">
+                                <div class="title"><img src="{{url('images/landing_page/home/open-menu.png')}}" alt="" width="30"> All-in-One chat</div>
+                                <span class="text">Giving the customer maximum flexibility to choose the mode they like to contact you, with a super easy interface.</span>
+                            </div>
+                            <ul class="features">
+                                <li><i class="bi bi-check-circle-fill"></i>Pick and choose the channels</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Quick integration with IMS option.</li>
+                            </ul>
                         </div>
-                        <ul class="features">
-                            <li><i class="bi bi-check-circle-fill"></i>Pick and choose the channels</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Quick integration with IMS option.</li>
-                        </ul>
-                        <a href="#" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                        <div class="image-block">
+                            <img src="{{url('images/landing_page/home/all-in-one-chat.png')}}" alt="">
+                        </div>
                     </div>
-                    <div class="image-block">
-                        <img src="{{url('images/landing_page/home/all-in-one-chat.png')}}" alt="">
+                    <div class="button-block">
+                        <a href="{{url('register')}}" class="cta-btn-border"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
+                        <a href="{{url('contact')}}" class="cta-btn-fill"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                 </div>
             </div>
@@ -143,8 +153,8 @@
                     <span class="text">Request Demo</span>
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
-                <a href="#" class="cta-btn-fill">
-                    <span class="text">Buy Now</span>
+                <a href="{{url('contact')}}" class="cta-btn-fill">
+                    <span class="text">Inquire now</span>
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
@@ -237,8 +247,8 @@
                 <span class="text">Request Demo</span>
                 <i class="bi bi-arrow-right-short"></i>
             </a>
-            <a href="#" class="cta-btn-fill">
-                <span class="text">Buy Now</span>
+            <a href="{{url('contact')}}" class="cta-btn-fill">
+                <span class="text">Inquire Now</span>
                 <i class="bi bi-arrow-right-short"></i>
             </a>
         </div>
@@ -303,7 +313,7 @@
                 <div class="button-block">
                     <div class="content">
                         <h1 class="title">The Talent <br> Marketplace</h1>
-                        <a href="{{url('market_place')}}" class="cta-btn-border"><span class="text">Find Talent</span> <i class="bi bi-arrow-right-short"></i></a>
+                        <a href="{{url('services/marketplace')}}" class="cta-btn-border"><span class="text">Find Talent</span> <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                 </div>
                 <div class="card-block" id="marketplaceCards">
@@ -363,7 +373,7 @@
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <a href="#">
+                                <a href="{{url('/eshop')}}">
                                     <div class="card">
                                         <div class="image-block">
                                             <img src="{{url('images/landing_page/home/payroll.png')}}" alt="" class="default">
@@ -390,7 +400,7 @@
                                 </a>
                             </li>
                             <li class="splide__slide">
-                                <a href="#">
+                                <a href="{{url('/eshop')}}">
                                     <div class="card">
                                         <div class="image-block">
                                             <img src="{{url('images/landing_page/home/ecommerce.png')}}" alt=""
@@ -413,7 +423,7 @@
                                 </a>
                             </li>
                             <li class="splide__slide">
-                                <a href="#">
+                                <a href="{{url('/eshop')}}">
                                     <div class="card">
                                         <div class="image-block">
                                             <img src="{{url('images/landing_page/home/multi-vendor.png')}}" alt="" class="default">
@@ -438,9 +448,9 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="footer">
-                <a href="{{url('contact')}}" class="cta-btn-fill"><span class="text">Talk to Our Team</span> <i class="bi bi-arrow-right-short"></i></a>
-            </div> -->
+            <div class="footer">
+                <a href="{{url('/eshop')}}" class="cta-btn-fill"><span class="text">Visit Shop</span> <i class="bi bi-arrow-right-short"></i></a>
+            </div>
         </div>
     </section>
 
@@ -463,9 +473,6 @@
                                 <div class="title">{{$news_post->title}}</div>
                             </div>
                             <div class="text">{!! $news_post->description !!}</div>
-                            <div class="footer">
-                                <a href="{{route('frontend.single_news',$news_post->id)}}" class="btn-view">View More</a>
-                            </div>
                         </div>
                     </div>
                 @endif
@@ -481,9 +488,6 @@
                                 <div class="title">{{$promo_post->title}}</div>
                             </div>
                             <div class="text">{!! $promo_post->description !!}</div>
-                            <div class="footer">
-                                <a href="{{route('frontend.single_news',$promo_post->id)}}" class="btn-view">View More</a>
-                            </div>
                         </div>
                     </div>
                 @endif
@@ -499,9 +503,6 @@
                                 <div class="title">{{$blog_post->title}}</div>
                             </div>
                             <div class="text">{!! $blog_post->description !!}</div>
-                            <div class="footer">
-                                <a href="{{route('frontend.single_news',$blog_post->id)}}" class="btn-view">View More</a>
-                            </div>
                         </div>
                     </div>
                 @endif

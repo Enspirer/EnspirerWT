@@ -57,12 +57,11 @@
                                         <p class="text">Bring your business online with modern themes. Payment gateway integrations and customised delivery modules.</p>
                                         <div class="pricing">
                                             <div class="fee">From $50 <span>per month</span></div>
-                                            <div class="duration">Inquire Now</div>
                                         </div>
                                         <div class="button-block">
-                                            <a href="#" class="cta-btn-border"><span class="text">Customization</span><i
+                                            <a href="{{url('tallentor-demo')}}" class="cta-btn-border"><span class="text">Request Demo</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
-                                            <a href="#" class="cta-btn-fill"><span class="text">Add to cart</span><i
+                                            <a href="{{url('contact')}}" class="cta-btn-fill"><span class="text">Inquire Now</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
                                         </div>
                                     </div>
@@ -89,12 +88,11 @@
                                         <p class="text">The most versatile solution with advanced admin features. Wide range of IPG options, ability to integrate with account softwares.</p>
                                         <div class="pricing">
                                             <div class="fee">From $100 <span>per month</span></div>
-                                            <div class="duration">Inquire Now</div>
                                         </div>
                                         <div class="button-block">
-                                            <a href="#" class="cta-btn-border"><span class="text">Customization</span><i
+                                            <a href="{{url('tallentor-demo')}}" class="cta-btn-border"><span class="text">Request Demo</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
-                                            <a href="#" class="cta-btn-fill"><span class="text">Add to cart</span><i
+                                            <a href="{{url('contact')}}" class="cta-btn-fill"><span class="text">Inquire Now</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
                                         </div>
                                     </div>
@@ -121,12 +119,11 @@
                                         <p class="text">Fully customised web applications with admin control panel for dynamic functions with unique user interfaces.</p>
                                         <div class="pricing">
                                             <div class="fee">From $700 <span>per month</span></div>
-                                            <div class="duration">Inquire Now</div>
                                         </div>
                                         <div class="button-block">
-                                            <a href="#" class="cta-btn-border"><span class="text">Customization</span><i
+                                            <a href="{{url('tallentor-demo')}}" class="cta-btn-border"><span class="text">Request Demo</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
-                                            <a href="#" class="cta-btn-fill"><span class="text">Add to cart</span><i
+                                            <a href="{{url('contact')}}" class="cta-btn-fill"><span class="text">Inquire Now</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
                                         </div>
                                     </div>
@@ -153,12 +150,11 @@
                                         <p class="text">Unlimited number of courses and tutor accounts. Student progress management with Certificates. High bandwidth web host for video content </p>
                                         <div class="pricing">
                                             <div class="fee">From $700 <span>per month</span></div>
-                                            <div class="duration">Add to cart</div>
                                         </div>
                                         <div class="button-block">
-                                            <a href="#" class="cta-btn-border"><span class="text">Customization</span><i
+                                            <a href="{{url('tallentor-demo')}}" class="cta-btn-border"><span class="text">Request Demo</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
-                                            <a href="#" class="cta-btn-fill"><span class="text">Add to cart</span><i
+                                            <a href="{{url('contact')}}" class="cta-btn-fill"><span class="text">Inquire Now</span><i
                                                     class="bi bi-arrow-right-short"></i></a>
                                         </div>
                                     </div>
@@ -180,7 +176,6 @@
                 <div class="row g-5 row-cols-lg-3 row-cols-sm-2 row-cols-1 justify-content-center">
                     <div class="col">
                         <div class="product-card">
-                            <a href="#">
                                 <div class="image-block">
                                     <img src="{{url('images/landing_page/eShop/real_state_portal.png')}}" alt="">
                                 </div>
@@ -192,22 +187,22 @@
                                             <li><i class="bi bi-check-circle-fill"></i>Multiple Agent Accounts</li>
                                         </ul>
                                     </p>
-                                    <div class="rating">
+                                    <!-- <div class="rating">
                                         <i class="bi bi-star-fill"></i>
                                         <div class="rate">4.9</div>
                                         <div class="amount">(1k+)</div>
-                                    </div>
+                                    </div> -->
                                     <div class="pricing">
                                         <div class="fee">From $75 <span>per month</span></div>
-                                        <div class="duration">Inquire Now</div>
+                                    </div>
+                                    <div class="button-block">
+                                        <a href="{{url('contact')}}" class="cta-btn"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="product-card">
-                            <a href="#">
                                 <div class="image-block">
                                     <img src="{{url('images/landing_page/eShop/travel_website.png')}}" alt="">
                                 </div>
@@ -219,22 +214,22 @@
                                             <li><i class="bi bi-check-circle-fill"></i>Dynamic Travel Packages</li>
                                         </ul>
                                     </p>
-                                    <div class="rating">
+                                    <!-- <div class="rating">
                                         <i class="bi bi-star-fill"></i>
                                         <div class="rate">4.9</div>
                                         <div class="amount">(1k+)</div>
-                                    </div>
+                                    </div> -->
                                     <div class="pricing">
                                         <div class="fee">From $30 <span>per month</span></div>
-                                        <div class="duration">Inquire Now</div>
+                                    </div>
+                                    <div class="button-block">
+                                        <a href="{{url('contact')}}" class="cta-btn"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="product-card">
-                            <a href="#">
                                 <div class="image-block">
                                     <img src="{{url('images/landing_page/eShop/car_pool_app.png')}}" alt="">
                                 </div>
@@ -246,22 +241,22 @@
                                             <li><i class="bi bi-check-circle-fill"></i>Map and IPG Integration</li>
                                         </ul>
                                     </p>
-                                    <div class="rating">
+                                    <!-- <div class="rating">
                                         <i class="bi bi-star-fill"></i>
                                         <div class="rate">4.9</div>
                                         <div class="amount">(1k+)</div>
-                                    </div>
+                                    </div> -->
                                     <div class="pricing">
                                         <div class="fee">From $100 <span>per month</span></div>
-                                        <div class="duration">Inquire Now</div>
+                                    </div>
+                                    <div class="button-block">
+                                        <a href="{{url('contact')}}" class="cta-btn"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="product-card">
-                            <a href="#">
                                 <div class="image-block">
                                     <img src="{{url('images/landing_page/eShop/business_card_app.png')}}" alt="">
                                 </div>
@@ -273,22 +268,22 @@
                                             <li><i class="bi bi-check-circle-fill"></i>Inquiry Management System</li>
                                         </ul>
                                     </p>
-                                    <div class="rating">
+                                    <!-- <div class="rating">
                                         <i class="bi bi-star-fill"></i>
                                         <div class="rate">4.9</div>
                                         <div class="amount">(1k+)</div>
-                                    </div>
+                                    </div> -->
                                     <div class="pricing">
                                         <div class="fee">From $25 <span>per month</span></div>
-                                        <div class="duration">Inquire Now</div>
+                                    </div>
+                                    <div class="button-block">
+                                        <a href="{{url('contact')}}" class="cta-btn"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="product-card">
-                            <a href="#">
                                 <div class="image-block">
                                     <img src="{{url('images/landing_page/eShop/erp_solution.png')}}" alt="">
                                 </div>
@@ -300,22 +295,22 @@
                                             <li><i class="bi bi-check-circle-fill"></i>Customisable for any Industry</li>
                                         </ul>
                                     </p>
-                                    <div class="rating">
+                                    <!-- <div class="rating">
                                         <i class="bi bi-star-fill"></i>
                                         <div class="rate">4.9</div>
                                         <div class="amount">(1k+)</div>
-                                    </div>
+                                    </div> -->
                                     <div class="pricing">
                                         <div class="fee">From $250 <span>per month</span></div>
-                                        <div class="duration">Inquire Now</div>
+                                    </div>
+                                    <div class="button-block">
+                                        <a href="{{url('contact')}}" class="cta-btn"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="product-card">
-                            <a href="#">
                                 <div class="image-block">
                                     <img src="{{url('images/landing_page/eShop/pos_system.png')}}" alt="">
                                 </div>
@@ -327,17 +322,18 @@
                                             <li><i class="bi bi-check-circle-fill"></i>Integration with Major Account Softwares</li>
                                         </ul>
                                     </p>
-                                    <div class="rating">
+                                    <!-- <div class="rating">
                                         <i class="bi bi-star-fill"></i>
                                         <div class="rate">4.9</div>
                                         <div class="amount">(1k+)</div>
-                                    </div>
+                                    </div> -->
                                     <div class="pricing">
                                         <div class="fee">From $250 <span>per month</span></div>
-                                        <div class="duration">Inquire Now</div>
+                                    </div>
+                                    <div class="button-block">
+                                        <a href="{{url('contact')}}" class="cta-btn"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                     </div>
                 </div>

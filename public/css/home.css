@@ -154,13 +154,24 @@
 .feature-section .body .feature-box {
     background-color: #fff;
     width: 624px;
+    padding: 20px 10px 20px 20px;
+}
+
+.feature-section .body .feature-box .inner-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 20px 10px 20px 20px;
+}
+
+.feature-section .body .feature-box .button-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 .feature-section .body .feature-box .content-block {
@@ -1077,9 +1088,13 @@
         width: 100%;
     }
 
-    .feature-section .body .feature-box {
+    .feature-section .body .feature-box .inner-wrapper {
         flex-direction: column-reverse;
         gap: 3rem;
+    }
+
+    .feature-section .body .feature-box .button-block {
+        flex-direction: column;
     }
 
     .subcription-block .content-block .widget-block {

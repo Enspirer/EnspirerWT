@@ -468,6 +468,35 @@
     color: #000;
 }
 
+.tallentor-shop .product-card .content-block .button-block {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.tallentor-shop .product-card .content-block .button-block .cta-btn {
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.tallentor-shop .product-card .content-block .button-block .cta-btn .text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+    margin: 0;
+}
+
+.tallentor-shop .product-card .content-block .button-block .cta-btn .bi {
+    font-size: 17px;
+    color: #333;
+    margin: 0;
+}
+
 .pagination-section {
     margin-bottom: calc(1.2875rem + 4.24286vw);
 }
