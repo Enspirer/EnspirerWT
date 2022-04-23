@@ -771,7 +771,12 @@
                     $('#visitors_record').html(obj);
                 }
                 else{
-                    $('#visitors_record').html('<tr class="tbl-row"><td class="tb-col" colspan="6"><img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound"></td></tr>');
+                    $('#visitors_record').html(`
+                    <tr class="tbl-row"><td class="tb-col" colspan="6">
+                    <img src="{{url('images/searching.gif')}}" alt="" style="display:block;width:250px;margin:0 auto;">
+                    <h2 style="text-align:center;">Connecting Realtime Data...</h2>
+                    </td></tr>
+                    `);
                 }
 
             }
