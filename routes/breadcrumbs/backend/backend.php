@@ -129,3 +129,11 @@ Breadcrumbs::for('admin.auth.user.project_detail', function ($trail) {
 Breadcrumbs::for('admin.user.widget_detail', function ($trail) {
     $trail->push('Widgets', route('admin.user.widget_detail',1));
 });
+
+
+Breadcrumbs::for('admin.tallentor_demo.index', function ($trail) {
+    $trail->push('Tallentor Demo', route('admin.tallentor_demo.index'));
+});
+Breadcrumbs::for('admin.tallentor_demo.edit', function ($trail) {
+    $trail->push('Edit', route('admin.tallentor_demo.edit',1));
+});

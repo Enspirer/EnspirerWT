@@ -131,6 +131,13 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link {{active_class(Route::is('admin/tallentor_demo'))}}" href="{{ route('admin.tallentor_demo.index') }}">
+                    <i class="nav-icon fas fa-file-video"></i>
+                    Tallentor Demo
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link {{active_class(Route::is('admin/widget_settings_update'))}}" href="{{ route('admin.widget_settings_update.index') }}">
                     <i class="nav-icon fas fa-cogs"></i>
                     Widget Settings

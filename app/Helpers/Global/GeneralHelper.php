@@ -459,6 +459,8 @@ if (! function_exists('get_expire_date')) {
         if($project->expire_date == null){
             return [
                 'package_available_days' => null,
+                'selected_package' => null,
+                'package_type' => null,
                 'package_starting_date' => null,
                 'expire_date' => null,
                 'remaining_days' => null,
@@ -472,6 +474,8 @@ if (! function_exists('get_expire_date')) {
 
             return [
                 'package_available_days' => $project->package_available_days,
+                'selected_package' => $project->selected_package,
+                'package_type' => $project->package_type,
                 'package_starting_date' => $project->package_starting_date,
                 'expire_date' => $project->expire_date,
                 'remaining_days' => $remaining_days,

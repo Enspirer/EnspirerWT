@@ -159,16 +159,16 @@
                                                     <div class="propery">
                                                         <!-- <img src="{{url('images/Tallentor.png')}}" alt=""> -->
                                                             @if(get_seo_result($report->id)->favicon->value == null)
-                                                                <a href="{{route('frontend.user.reports.project_inside',$report->id)}}" style="text-decoration:none;">
+                                                                <a href="{{route('frontend.user.reports.analytics_report',$report->id)}}" style="text-decoration:none;">
                                                                     <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">
                                                                 </a>
                                                             @else
-                                                                <a href="{{route('frontend.user.reports.project_inside',$report->id)}}" style="text-decoration:none;">
+                                                                <a href="{{route('frontend.user.reports.analytics_report',$report->id)}}" style="text-decoration:none;">
                                                                     <img src="{{get_seo_result($report->id)->favicon->value}}" alt="propery-image">
                                                                 </a>                                                        
                                                             @endif
                                                             <div class="name">
-                                                                <a href="{{route('frontend.user.reports.project_inside',$report->id)}}" style="text-decoration:none; color:rgba(0, 0, 0, 0.5)">
+                                                                <a href="{{route('frontend.user.reports.analytics_report',$report->id)}}" style="text-decoration:none; color:rgba(0, 0, 0, 0.5)">
                                                                     {{$report->url}}
                                                                 </a>  
                                                             </div>

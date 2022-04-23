@@ -1005,7 +1005,7 @@
 }
 
 .realtime_notfound {
-    width: 350px;
+    width: 350px !important;
     margin: 1rem auto;
     display: block;
 }

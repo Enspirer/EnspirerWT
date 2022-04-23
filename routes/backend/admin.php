@@ -15,6 +15,7 @@ use App\Http\Controllers\Backend\WidgetSettingController;
 use App\Http\Controllers\Backend\IMSProWidgetsController;
 use App\Http\Controllers\Backend\UserProjectController;
 use App\Http\Controllers\Backend\PushNotificationController;
+use App\Http\Controllers\Backend\TallentorDemoController;
 
 
 
@@ -90,6 +91,12 @@ Route::get('contact_us/getdetails', [ContactUsController::class, 'getDetails'])-
 Route::get('contact_us/edit/{id}', [ContactUsController::class, 'edit'])->name('contact_us.edit');
 Route::post('contact_us/update', [ContactUsController::class, 'update'])->name('contact_us.update');
 Route::get('contact_us/delete/{id}', [ContactUsController::class, 'destroy'])->name('contact_us.destroy');
+
+Route::get('tallentor_demo', [TallentorDemoController::class, 'index'])->name('tallentor_demo.index');
+Route::get('tallentor_demo/getdetails', [TallentorDemoController::class, 'getDetails'])->name('tallentor_demo.getDetails');
+Route::get('tallentor_demo/edit/{id}', [TallentorDemoController::class, 'edit'])->name('tallentor_demo.edit');
+Route::post('tallentor_demo/update', [TallentorDemoController::class, 'update'])->name('tallentor_demo.update');
+Route::get('tallentor_demo/delete/{id}', [TallentorDemoController::class, 'destroy'])->name('tallentor_demo.destroy');
 
 Route::get('help_category', [HelpCategoryController::class, 'index'])->name('help_category.index');
 Route::post('help_category/store', [HelpCategoryController::class, 'store'])->name('help_category.store');

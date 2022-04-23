@@ -29,11 +29,11 @@ class ReportsController extends Controller
         ]);
     }
 
-    public function project_inside(Request $request, $id) {
+    public function analytics_report(Request $request, $id) {
              
         $project = Projects::where('id',$id)->first();
 
-        return view('frontend.user.reports.project_inside',[
+        return view('frontend.user.reports.analytics_report',[
             'project' => $project,
             'project_id' => $project->id
         ]);

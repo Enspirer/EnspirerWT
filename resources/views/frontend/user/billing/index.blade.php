@@ -32,11 +32,12 @@
                 </div>
 
                 @if(count($projects) == 0)
-                    @include('frontend.includes.not_found',[
+                    <!-- @include('frontend.includes.not_found',[
                         'not_found_title' => 'Data not found',
                         'not_found_description' => null,
                         'not_found_button_caption' => null
-                    ])
+                    ]) -->
+                    <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
                 @else
                     @foreach($projects as $project_detail)
                         <div class="row g-0">

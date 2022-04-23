@@ -97,7 +97,10 @@ Route::get('media/latest-news',[MediaController::class, 'news'])->name('latest_n
 Route::get('media/latest-news/single-news/{id}',[MediaController::class, 'singleNews'])->name('single_news');
 Route::get('media/promotions',[MediaController::class, 'promotions'])->name('promotions');
 Route::get('media/home-blog',[MediaController::class, 'blogs'])->name('home_blog');
+
 Route::get('tallentor-demo',[DemoController::class, 'tallentor_demo'])->name('tallentor_demo');
+Route::post('tallentor_demo_store',[DemoController::class, 'tallentor_demo_store'])->name('tallentor_demo_store');
+
 Route::get('solo_post/{id}',[BlogController::class, 'solo_post'])->name('solo_post');
 Route::get('terms-condition',[TermsAndPrivacyController::class, 'terms_condition'])->name('terms_condition');
 Route::get('privacy-policy',[TermsAndPrivacyController::class, 'privacy_policy'])->name('privacy_policy');
@@ -154,7 +157,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
         Route::post('profile_details/update', [SettingsController::class, 'profile_details_update'])->name('profile_details.update');
         Route::get('reports', [ReportsController::class, 'index'])->name('reports');
-        Route::get('reports/project_inside/{id}', [ReportsController::class, 'project_inside'])->name('reports.project_inside');
+        Route::get('reports/analytics_report/{id}', [ReportsController::class, 'analytics_report'])->name('reports.analytics_report');
         Route::get('reports/inquiry_report/{id}', [ReportsController::class, 'inquiry_report'])->name('reports.inquiry_report');
         Route::get('reports/seo_optimize_report/{id}', [ReportsController::class, 'seo_optimize_report'])->name('reports.seo_optimize_report');
         Route::get('reports/security_report/{id}', [ReportsController::class, 'security_report'])->name('reports.security_report');
