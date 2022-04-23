@@ -177,7 +177,27 @@
                                             </tbody>
                                         </table>
                                     @else
-                                        <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
+                                        <table class="table align-middle">
+                                            <thead class="tbl-header">
+                                                <tr class="tbl-row">
+                                                    <td class="th-col"></td>
+                                                    <td class="th-col">Country</td>
+                                                    <td class="th-col">Status</td>
+                                                    <td class="th-col">Key Event</td>
+                                                    <td class="th-col">Pages</td>
+                                                    <td class="th-col"></td>
+                                                </tr>
+                                            </thead>
+                                            <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
+
+                                            <tbody class="tbl-body" id="visitors_record">
+                                                <tr class="tbl-row">
+                                                    <td class="tb-col" colspan="6">
+                                                        <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     @endif
                                 </div>
                             </div>
@@ -751,7 +771,7 @@
                     $('#visitors_record').html(obj);
                 }
                 else{
-                    $('#visitors_record').html('<tr class="tbl-row"><td class="tb-col rt-keyEvent"><h2 class="text-center mt-4 p-5 ms-5" style="margin-left:150px;">Realtime Data...</h2></td></tr>');
+                    $('#visitors_record').html('<tr class="tbl-row"><td class="tb-col" colspan="6"><img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound"></td></tr>');
                 }
 
             }
