@@ -1,0 +1,338 @@
+.ims__control-panel {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 1rem;
+}
+
+.ims__control-panel .control-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.ims__control-panel .control-block .control-link {
+    text-decoration: none;
+    color: #777;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.ims__control-panel .control-block .control-link:not(:last-child) {
+    border-right: 1px solid #777;
+}
+
+.ims__control-panel .control-block .control-link .bi {
+    font-size: 13px;
+}
+
+.ims__control-panel .control-block .control-link .text {
+    font-size: 13px;
+    font-weight: 300;
+    margin-right: 15px;
+}
+
+.ims__control-panel .control-block .control-link.active {
+    color: #222;
+    pointer-events: all;
+}
+
+.ims__control-panel .control-block .controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+    padding-left: .5rem;
+    padding-right: 1rem;
+    border-right: 1px solid rgba(112, 112, 112, 0.2);
+}
+
+.ims__control-panel .control-block .controls .form-check-input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.ims__control-panel .control-block .actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-status-report {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #017FFA;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.btn-status-report .bi {
+    font-size: 18px;
+    color: #017FFA;
+}
+
+.btn-status-report .text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #017FFA;
+}
+
+.ims__control-panel .ims__data-table {
+    margin: 1rem 0;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.ims__control-panel .ims__data-table::-webkit-scrollbar {
+    width: .5rem;
+}
+
+.ims__control-panel .ims__data-table::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.ims__control-panel .ims__data-table::-webkit-scrollbar-thumb {
+    background-color: #E5E5E5;
+    border-radius: 50px;
+}
+
+.ims__control-panel .ims__data-table .data-row {
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.5);
+}
+
+.ims__control-panel .ims__data-table .data-row[data-href]:hover {
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-title {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-title:last-child {
+    text-align: center;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell:last-child {
+    text-align: center;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell.data--name .text {
+    color: #000;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .form-check-input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .fav-btn {
+    position: relative;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .fav-btn:hover {
+    cursor: pointer;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .fav-btn .bi {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .fav-btn .bi-star-fill {
+    color: #FFD70E;
+    display: none;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .fav-btn .bi-star {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .fav-btn input {
+    opacity: 0;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .fav-btn input:checked+.bi-star-fill {
+    display: block;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .fav-btn input:checked+.bi-star {
+    display: none;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell img {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .text {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .form-select {
+    border-radius: 0;
+    width: 140px;
+    font-size: 0.8125rem;
+    font-weight: 300;
+    color: #000;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .form-select option {
+    font-size: 0.8125rem;
+    font-weight: 300;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .form-select:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .form-control {
+    font-size: 0.8125rem;
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-weight: 300;
+    padding: 0.375rem 0;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .info-block .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .info-block .header .name {
+    font-size: 14px;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .info-block .header .count {
+    background-color: #f00;
+    font-size: 11px;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 10px;
+    line-height: 1;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .info-block .message {
+    font-size: 12px;
+    color: #464646;
+    font-weight: 300;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .info-block .message span {
+    font-size: 12px;
+    color: #464646;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .channel-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .channel-block .icon img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .channel-block .name {
+    font-size: 13px;
+    color: #464646;
+    font-weight: 300;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .status-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .status-block .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .status-block .indicator.orange {
+    background-color: #EF7800;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .status-block .indicator.green {
+    background-color: #33CC0D;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .status-block .indicator.red {
+    background-color: #f00;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .status-block .indicator.black {
+    background-color: #000;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .status-block .status {
+    font-size: 13px;
+    color: #464646;
+    font-weight: 300;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .chat-btn {
+    text-decoration: none;
+}
+
+.ims__control-panel .ims__data-table .data-row .data-cell .chat-btn .bi {
+    font-size: 1.5625rem;
+    color: #2BA600;
+}
