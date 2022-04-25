@@ -31,7 +31,7 @@
                     </ul>
                 </div>
 
-                <div class="row g-0">
+                <!-- <div class="row g-0">
                     <div class="ims__control-panel">
                         <div class="row">
                             <div class="col-3">
@@ -53,14 +53,79 @@
                             </div>
                         </div>                        
                     </div>
+                </div> -->
+
+                <div class="billing-summery">
+                    <div class="inner-wrapper">
+                        <div class="package-block">
+                            <div class="header">
+                                <div class="text">Project Details</div>
+                                <i class="bi bi-question-circle-fill"></i>
+                            </div>
+                            <div class="body">
+                                <div class="image-block">
+                                    <img src="https://fakeimg.pl/250x100/" alt="">
+                                </div>
+                                <div class="property-block">
+                                    <div class="title">Project name and Link</div>
+                                    <div class="pro-name">Tallentor</div>
+                                    <div class="pro-url">https://tallentor.com/</div>
+                                </div>
+                                <div class="package">
+                                    <div class="title">Package Details</div>
+                                    <div class="inner-block">
+                                        <div class="image-block">
+                                            <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                        </div>
+                                        <div class="content-block">
+                                            <div class="title">Package</div>
+                                            <div class="name">Widget Lite</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summery-block">
+                            <div class="header">
+                                <div class="text">Payment Details</div>
+                                <i class="bi bi-question-circle-fill"></i>
+                            </div>
+                            <div class="body">
+                                <div class="title">Payment Status</div>
+                                <div class="content-block">
+                                    <div class="status-block green">
+                                        <i class="bi bi-circle-fill"></i>
+                                        <div class="text">Paid Bills</div>
+                                        <div class="count">02</div>
+                                    </div>
+                                    <div class="status-block red">
+                                        <i class="bi bi-circle-fill"></i>
+                                        <div class="text">Unpaid Bills</div>
+                                        <div class="count">02</div>
+                                    </div>
+                                    <div class="status-block orange">
+                                        <i class="bi bi-circle-fill"></i>
+                                        <div class="text">Pending Bills</div>
+                                        <div class="count">02</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 @if(count($paid_invoices) == 0)
-                    @include('frontend.includes.not_found',[
+                    <!-- @include('frontend.includes.not_found',[
                         'not_found_title' => 'Data not found',
                         'not_found_description' => null,
                         'not_found_button_caption' => null
-                    ])
+                    ]) -->
+
+                    <div class="ims__control-panel">
+                        <div class="row g-0">
+                            <img src="{{url('images/dashboard/billing/no-data.png')}}" alt="" class="no-data-img">
+                        </div>
+                    </div>
                 @else
                     <div class="row g-0 mt-5">
                         <div class="ims__control-panel">
