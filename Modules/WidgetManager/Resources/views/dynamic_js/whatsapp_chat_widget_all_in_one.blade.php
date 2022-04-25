@@ -970,7 +970,7 @@ function allin1closetawktoiframe() {
 
 document.cookie = "tallentor_widget=982SHEKKSMLA";
 
-setInterval(myTimer, 10000);
+setInterval(myTimer, 5000);
 
 function myTimer() {
     const widget_id = '{{$widget_id}}';
