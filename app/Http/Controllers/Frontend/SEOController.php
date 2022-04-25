@@ -10,8 +10,6 @@ class SEOController extends Controller
 {
     public function seo($id)
     {
-
-
         return view('frontend.user.projects.seo',[
             'project_id' => $id
         ]);
