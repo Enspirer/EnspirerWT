@@ -130,10 +130,24 @@ Breadcrumbs::for('admin.user.widget_detail', function ($trail) {
     $trail->push('Widgets', route('admin.user.widget_detail',1));
 });
 
+Breadcrumbs::for('admin.auth.user.project_bills', function ($trail) {
+    $trail->push('Project Bills', route('admin.auth.user.project_bills',1));
+});
+Breadcrumbs::for('admin.project_bills_backend', function ($trail) {
+    $trail->push('Paid Invoices', route('admin.project_bills_backend',1));
+});
+
 
 Breadcrumbs::for('admin.tallentor_demo.index', function ($trail) {
     $trail->push('Tallentor Demo', route('admin.tallentor_demo.index'));
 });
 Breadcrumbs::for('admin.tallentor_demo.edit', function ($trail) {
     $trail->push('Edit', route('admin.tallentor_demo.edit',1));
+});
+
+Breadcrumbs::for('admin.projects.bots', function ($trail) {
+    $trail->push('Bots', route('admin.projects.bots',1));
+});
+Breadcrumbs::for('admin.projects.bots_edit', function ($trail) {
+    $trail->push('Edit Bots', route('admin.projects.bots_edit',1));
 });

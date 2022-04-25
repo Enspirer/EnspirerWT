@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('End Point Settings'))
+@section('title', __('All Inquiries'))
 
 @section('content')
 

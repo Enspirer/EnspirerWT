@@ -36,6 +36,7 @@ Route::group([
             Route::delete('/', [UserController::class, 'destroy'])->name('user.destroy');
 
             Route::get('project_detail', [UserProjectController::class, 'project_detail'])->name('user.project_detail');
+            Route::get('project_bills', [UserProjectController::class, 'project_bills'])->name('user.project_bills');
 
 
             // Account

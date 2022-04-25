@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use DataTables;
 use App\Models\Projects;
 use App\Models\ProjectType;
+use App\Models\SeoBot;
+use App\Models\Auth\User;
 use phpDocumentor\Reflection\Project;
 use App\Http\Requests\Backend\Auth\User\StoreReportRequest;
 class ProjectsController extends Controller
@@ -45,6 +47,8 @@ class ProjectsController extends Controller
         ]);
     }
 
+    
+
     public function getdetails(Request $request)
     {       
         $data = Projects::get();
@@ -66,10 +70,13 @@ class ProjectsController extends Controller
                 }                    
             })
             ->addColumn('action', function($data){
-                $button1 = '<a href="'.route('admin.projects.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
-                $button2 = '<a href="'.route('admin.projects.show',$data->id).'" name="show" id="'.$data->id.'" class="edit btn btn-info btn-sm" style="margin-right: 10px"><i class="fas fa-info-circle"></i> Show </a>';
-                $button3 = '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
-                return $button1.$button2.$button3;
+                $button = '<a href="'.route('admin.projects.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
+                $button .= '<a href="'.route('admin.projects.show',$data->id).'" name="show" id="'.$data->id.'" class="edit btn btn-info btn-sm" style="margin-right: 10px"><i class="fas fa-info-circle"></i> Show </a>';
+                $button .= '<a href="'.route('admin.auth.user.project_detail',User::where('id',$data->user_id)->first()).'" name="Details" id="'.$data->id.'" class="edit btn btn-primary btn-sm" style="margin-right: 10px"><i class="fas fa-list"></i> Details </a>';
+                $button .= '<a href="'.route('admin.auth.user.project_bills',User::where('id',$data->user_id)->first()).'" name="details" id="'.$data->id.'" class="edit btn btn-success btn-sm" style="margin-right: 10px"><i class="fas fa-dollar-sign"></i> Bills </a>';
+                $button .= '<a href="'.route('admin.projects.bots',$data->id).'" name="bots" id="'.$data->id.'" class="edit btn btn-warning btn-sm" style="margin-right: 10px"><i class="fas fa-robot"></i> Bots </a>';
+                $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
+                return $button;
                 })
             ->rawColumns(['action','project_type'])
             ->make(true);
@@ -79,7 +86,6 @@ class ProjectsController extends Controller
 
     public function store(StoreReportRequest $request)
     {        
-
 
         $project = new Projects();
         $iresult = $project->create_seo_report($request);
@@ -135,6 +141,81 @@ class ProjectsController extends Controller
     }
 
 
+
+    public function bots($id, Request $request)
+    {
+        $project = Projects::where('id',$id)->first();
+
+        return view('backend.projects.bots',[
+            'project' => $project
+        ]);
+    }
+
+
+    public function bots_getdetails(Request $request, $id)
+    {       
+        $data = SeoBot::where('project_id',$id)->get();
+        return DataTables::of($data)
+
+            ->editColumn('status', function($data){
+                if($data->status == 'Activated'){
+                    $status = '<span class="badge badge-success">Activated</span>';
+                }
+                elseif($data->status == 'Deactivated'){
+                    $status = '<span class="badge badge-warning">Deactivated</span>';
+                } 
+                else{
+                    $status = '<span class="badge badge-danger">Failed</span>';
+                }   
+                return $status;
+            })
+            ->addColumn('action', function($data){
+                $button = '<a href="'.route('admin.projects.bots_edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
+                $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
+                return $button;
+                })
+            ->rawColumns(['action','status'])
+            ->make(true);
+        
+        return back();
+    }
+
+    public function bots_edit($id)
+    {
+        $bots = SeoBot::where('id',$id)->first(); 
+        $project = Projects::where('id',$bots->project_id)->first();
+
+        return view('backend.projects.bots_edit',[
+            'bots' => $bots,
+            'project' => $project
+        ]);
+    }
+
+    public function bots_update(Request $request)
+    {        
+        // dd($request);                    
+     
+        $update = new SeoBot;
+
+        $update->bot_type = $request->bot_type;        
+        $update->activated_bot_count = $request->activated_bot_count;
+        $update->total_score = $request->total_score;
+        $update->starting_time = $request->starting_time;
+        $update->ending_time = $request->ending_time;
+        $update->status = $request->status;
+
+        SeoBot::whereId($request->hidden_id)->update($update->toArray());
+
+        return redirect()->route('admin.projects.bots',$request->hidden_project_id)->withFlashSuccess('Updated Successfully');            
+
+    }
+
+    public function bots_destroy($id)
+    {
+        SeoBot::where('id', $id)->delete(); 
+    }
+
+    
 
 
 }
