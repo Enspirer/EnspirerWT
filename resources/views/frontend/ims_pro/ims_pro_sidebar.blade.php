@@ -9,7 +9,7 @@
                             <div class="logo-text">- IMS</div>
                         </div>
                         <div class="caption">Inquiry Management Systems</div>
-                        <a href="{{ route('frontend.user.ims.visitor_statistics', $project_id) }}" style="text-decoration:none;">
+                        <a href="{{ route('frontend.user.project.optimizer', $project_id) }}" style="text-decoration:none;" target="_blank">
                             <div class="live-status-block">
                                 <i class="bi bi-broadcast"></i>
                                 <div class="caption">Live Visitors</div>
