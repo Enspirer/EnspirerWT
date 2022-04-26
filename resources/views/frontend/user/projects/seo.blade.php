@@ -34,16 +34,16 @@
                         <div class="overview-block">
                             <div class="heaeder">
                                 <div class="title">Overview</div>
-                                <div class="duration">3 days ago</div>
+                                <div class="duration">{{$project->created_at->diffForHumans()}}</div>
                             </div>
                             <div class="body">
                                 <div class="guage-block">
                                     <div id="guage" style="width:350px;height:350px;margin:auto"></div>
                                     <div class="status-block">
-                                        <div class="precentage">82.0%</div>
+                                        <div class="precentage">{{number_format((float)$project->score, 2, '.', '')}}%</div>
                                         <div class="stats font-blue">Tests Passed</div>
-                                        <div class="name">Tallentor | Home</div>
-                                        <div class="url font-blue">https://tallentor.com/</div>
+                                        <div class="name">{{$project->name}}</div>
+                                        <div class="url font-blue">{{$project->url}}</div>
                                     </div>
                                 </div>
                                 <div class="progress-block">
@@ -135,42 +135,50 @@
                             </div>
                         </div>
 
-                        <div class="seo-block">
-                            <div class="heaeder">
-                                <div class="title">SEO</div>
-                                <div class="duration">3 days ago</div>
-                            </div>
-                            <div class="body">
-                                <table class="seo-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="tbCol-1"><i class="bi font-blue bi-triangle-fill"></i></td>
-                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
-                                            <td class="tbCol-3">
-                                                <div class="title">The meta description tag have medium issues.</div>
-                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
-                                            </td>
-                                            <td class="tbCol-4">
-                                                <a href="#" class="table-btn bg-green">Suggestions</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
-                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
-                                            <td class="tbCol-3">
-                                                <div class="title">The meta description tag have medium issues.</div>
-                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
-                                            </td>
-                                            <td class="tbCol-4">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        @if($project->seo_result != null)
+                            @foreach(json_decode($project->seo_result) as $key => $seo_result)
+                                <div class="seo-block">
+                                    <div class="heaeder">
+                                        <div class="title">{{ $string=str_replace("_"," ", ucfirst(trans($key)) ) }}</div>
+                                        <div class="duration">{{$project->created_at->diffForHumans()}}</div>
+                                    </div>
+                                    <div class="body">
+                                        <table class="seo-table">
+                                            <tbody>
+                                                @if($seo_result->passed == 'false')
+                                                    <tr>
+                                                        <td class="tbCol-1"><i class="bi font-blue bi-triangle-fill"></i></td>
+                                                        <td class="tbCol-2"><div class="title">Meta Description</div></td>
+                                                        <td class="tbCol-3">
+                                                            <div class="title">The meta description tag have medium issues.</div>
+                                                            <div class="text">The size of the HTML webpage is 176.41 kB.</div>
+                                                        </td>
+                                                        <td class="tbCol-4">
+                                                            <a href="#" class="table-btn bg-green">Suggestions</a>
+                                                        </td>
+                                                    </tr>
+                                                @else
+                                                    <tr>
+                                                        <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
+                                                        <td class="tbCol-2"><div class="title">Meta Description</div></td>
+                                                        <td class="tbCol-3">
+                                                            <div class="title">The meta description tag have medium issues.</div>
+                                                            <div class="text">The size of the HTML webpage is 176.41 kB.</div>
+                                                        </td>
+                                                        <td class="tbCol-4">
+                                                            <i class="bi bi-exclamation-circle"></i>
+                                                        </td>
+                                                    </tr>
+                                                @endif
+                                               
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
 
-                        <div class="seo-block">
+                        <!-- <div class="seo-block">
                             <div class="heaeder">
                                 <div class="title">Performance</div>
                                 <div class="duration">3 days ago</div>
@@ -238,7 +246,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="bot-block">
                             <div class="inner-wrapper">
@@ -308,7 +316,7 @@
             },
             data: [
                 {
-                value: 70
+                value: {{$project->score}}
                 }
             ]
             }
