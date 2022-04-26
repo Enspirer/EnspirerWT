@@ -1262,4 +1262,28 @@ class HomeController extends Controller
 
     
 
+    public function check_project_available_days(Request $request)
+    {       
+        $projects = Projects::where('status','!=','disabled')->get();
+        // return $projects;
+
+        foreach ($projects as $project) {
+
+            if(get_expire_date($project->id)['remaining_days'] < 1 ){
+
+                $update = new Projects;
+                $update->status = 'Disabled';
+                Projects::whereId($project->id)->update($update->toArray());
+            }
+            
+        }
+
+        // return $projects;
+
+        
+    }
+    
+
+    
+
 }

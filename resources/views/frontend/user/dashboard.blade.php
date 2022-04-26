@@ -76,101 +76,198 @@
 
                         @else
                             @foreach($project_details as $project_detail)
-
-                                <section id="sectionProperties">
-                                    <div class="property-block mb-5">
-                                        <div class="row g-0 p-4 border-bottom">
-                                            <div class="inner-wrapper">
-                                                <div class="col-4">
-                                                    <div class="name-block">
-                                                        <div class="property-name">
-                                                            <span class="pro-name">{{$project_detail->name}}</span>
-                                                            <span class="pro-url">{{$project_detail->url}}</span>
+                                @if($project_detail->status != 'Disabled')
+                                    <section id="sectionProperties">
+                                        <div class="property-block mb-5">
+                                            <div class="row g-0 p-4 border-bottom">
+                                                <div class="inner-wrapper">
+                                                    <div class="col-4">
+                                                        <div class="name-block">
+                                                            <div class="property-name">
+                                                                <span class="pro-name">{{$project_detail->name}}</span>
+                                                                <span class="pro-url">{{$project_detail->url}}</span>
+                                                            </div>
+                                                            <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn btn-open"><i class="bi bi-x-diamond-fill"></i>View</a>
                                                         </div>
-                                                        <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn btn-open"><i class="bi bi-x-diamond-fill"></i>View</a>
                                                     </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="button-block">
-                                                        <div class="form-check form-switch">
-                                                            <label class="form-check-label" for="flexSwitchCheckDefault">Email
-                                                                Notifications</label>
-                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                    <div class="col-4">
+                                                        <div class="button-block">
+                                                            <div class="form-check form-switch">
+                                                                <label class="form-check-label" for="flexSwitchCheckDefault">Email
+                                                                    Notifications</label>
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                            </div>
+                                                            <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="delete btn btn-delete"
+                                                                data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i>Delete</a>
                                                         </div>
-                                                        <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="delete btn btn-delete"
-                                                            data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row g-0 py-2 align-items-center">
-                                            <div class="col-xxl-4 my-3 info-blocks seo-block">
-                                                @if($project_detail->selected_package == 'All In One Widget + IMS Lite')
-                                                    <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
-                                                @elseif($project_detail->selected_package == 'All In One Widget + IMS Pro')
-                                                    <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
-                                                @elseif($project_detail->selected_package == 'Optimizer')
-                                                    <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
-                                                @endif
-                                                <div class="text-block">
-                                                    <div class="title">Package</div>
-                                                    @if($project_detail->selected_package != null)
-                                                        <div class="package">{{$project_detail->selected_package}}</div>
+                                            <div class="row g-0 py-2 align-items-center">
+                                                <div class="col-xxl-4 my-3 info-blocks seo-block">
+                                                    @if($project_detail->selected_package == 'All In One Widget + IMS Lite')
+                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                    @elseif($project_detail->selected_package == 'All In One Widget + IMS Pro')
+                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                    @elseif($project_detail->selected_package == 'Optimizer')
+                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
+                                                    @endif
+                                                    <div class="text-block">
+                                                        <div class="title">Package</div>
+                                                        @if($project_detail->selected_package != null)
+                                                            <div class="package">{{$project_detail->selected_package}}</div>
+                                                        @else
+                                                            <div class="package">Not Selected</div>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-4 my-3 info-blocks analytics-block">
+                                                    <div class="block-content">
+                                                        <div class="row g-0 justify-content-evenly align-items-end">
+                                                            <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                                <span class="block-title mb-2">Realtime</span>
+                                                                <span class="sub-title">Visitors</span>
+                                                                <span class="precentage up"><i class="bi bi-graph-up-arrow up"> {{ count(App\Models\VisitorCount::where('project_id',$project_detail->id)->get()) }}</i></span>
+                                                            
+                                                            </div>
+                                                            <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                                <span class="sub-title">Pageviews</span>
+                                                                @if(App\Models\Widgets::where('project_id',$project_detail->id)->first() != null)
+                                                                <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i> {{ App\Models\Widgets::where('project_id',$project_detail->id)->first()->load_count }}</span>
+                                                                @else
+                                                                <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i> No Details</span>
+                                                                @endif                                                            
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-4 my-3 info-blocks statics-block">
+                                                    @if($project_detail->package_starting_date != null)
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            @if($project_detail->package_type == 'Free')                                                            
+                                                                <div class="lbl lbl-start mt-3">Trial</div>
+                                                            @endif
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <div class="progress-wrapper">
+                                                                <div class="lbl lbl-start">Start Date</div>
+                                                                <div class="lbl lbl-end">End Date</div>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar" aria-valuemin="0" style="width: {{get_expire_date($project_detail->id)['remaining_days'] / 30 * 100}}%;" aria-valuemax="30"></div>
+                                                                </div>
+                                                                <div class="date date-start">{{$project_detail->package_starting_date}}</div>
+                                                                <div class="date date-end">{{$project_detail->expire_date}}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        
                                                     @else
-                                                        <div class="package">Not Selected</div>
+                                                        <div class="progress-wrapper">
+                                                            <div class="lbl lbl-start">Not Selected</div>
+                                                        </div>
                                                     @endif
                                                 </div>
                                             </div>
-                                            <div class="col-xxl-4 my-3 info-blocks analytics-block">
-                                                <div class="block-content">
-                                                    <div class="row g-0 justify-content-evenly align-items-end">
-                                                        <div class="col-sm-auto col-8 my-sm-0 my-2">
-                                                            <span class="block-title mb-2">Realtime</span>
-                                                            <span class="sub-title">Visitors</span>
-                                                            <span class="precentage up"><i class="bi bi-graph-up-arrow up"> {{ count(App\Models\VisitorCount::where('project_id',$project_detail->id)->get()) }}</i></span>
-                                                           
+                                        </div>
+                                    </section>
+                                @else
+
+                                    <section id="sectionProperties">
+                                        <div class="property-block disabled mb-5">
+                                            <div class="row g-0 p-4 border-bottom">
+                                                <div class="inner-wrapper">
+                                                    <div class="col-4">
+                                                        <div class="name-block">
+                                                            <div class="property-name">
+                                                                <span class="pro-name">{{$project_detail->name}}</span>
+                                                                <span class="pro-url">{{$project_detail->url}}</span>
+                                                            </div>
+                                                            <button type="button" class="btn btn-open" disabled><i class="bi bi-x-diamond-fill"></i>View</button>
                                                         </div>
-                                                        <div class="col-sm-auto col-8 my-sm-0 my-2">
-                                                            <span class="sub-title">Pageviews</span>
-                                                            @if(App\Models\Widgets::where('project_id',$project_detail->id)->first() != null)
-                                                             <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i> {{ App\Models\Widgets::where('project_id',$project_detail->id)->first()->load_count }}</span>
-                                                            @else
-                                                             <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i> No Details</span>
-                                                            @endif                                                            
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="button-block">
+                                                            <div class="form-check form-switch">
+                                                                <label class="form-check-label" for="flexSwitchCheckDefault">Email
+                                                                    Notifications</label>
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                            </div>
+                                                            <a href="{{ route('frontend.user.project_dash.destroy', $project_detail->id) }}" class="delete btn btn-delete"
+                                                                data-bs-toggle="modal" data-bs-target="#deletedashwidget"><i class="bi bi-trash"></i>Delete</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xxl-4 my-3 info-blocks statics-block">
-                                                @if($project_detail->package_starting_date != null)
-                                                <div class="row">
-                                                    <div class="col-2">
-                                                        @if($project_detail->package_type == 'Free')                                                            
-                                                            <div class="lbl lbl-start mt-3">Trial</div>
+                                            <div class="row g-0 py-2 align-items-center">
+                                                <div class="col-xxl-4 my-3 info-blocks seo-block">
+                                                    @if($project_detail->selected_package == 'All In One Widget + IMS Lite')
+                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                    @elseif($project_detail->selected_package == 'All In One Widget + IMS Pro')
+                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                    @elseif($project_detail->selected_package == 'Optimizer')
+                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
+                                                    @endif
+                                                    <div class="text-block">
+                                                        <div class="title">Package</div>
+                                                        @if($project_detail->selected_package != null)
+                                                            <div class="package">{{$project_detail->selected_package}}</div>
+                                                        @else
+                                                            <div class="package">Not Selected</div>
                                                         @endif
                                                     </div>
-                                                    <div class="col-10">
-                                                        <div class="progress-wrapper">
-                                                            <div class="lbl lbl-start">Start Date</div>
-                                                            <div class="lbl lbl-end">End Date</div>
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" aria-valuemin="0" style="width: {{get_expire_date($project_detail->id)['remaining_days'] / 30 * 100}}%;" aria-valuemax="30"></div>
+                                                </div>
+                                                <div class="col-xxl-4 my-3 info-blocks analytics-block">
+                                                    <div class="block-content">
+                                                        <div class="row g-0 justify-content-evenly align-items-end">
+                                                            <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                                <span class="block-title mb-2">Realtime</span>
+                                                                <span class="sub-title">Visitors</span>
+                                                                <span class="precentage up"><i class="bi bi-graph-up-arrow up"> {{ count(App\Models\VisitorCount::where('project_id',$project_detail->id)->get()) }}</i></span>
+                                                            
                                                             </div>
-                                                            <div class="date date-start">{{$project_detail->package_starting_date}}</div>
-                                                            <div class="date date-end">{{$project_detail->expire_date}}</div>
+                                                            <div class="col-sm-auto col-8 my-sm-0 my-2">
+                                                                <span class="sub-title">Pageviews</span>
+                                                                @if(App\Models\Widgets::where('project_id',$project_detail->id)->first() != null)
+                                                                <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i> {{ App\Models\Widgets::where('project_id',$project_detail->id)->first()->load_count }}</span>
+                                                                @else
+                                                                <span class="precentage down"><i class="bi bi-graph-down-arrow down"></i> No Details</span>
+                                                                @endif                                                            
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                    
-                                                @else
-                                                    <div class="progress-wrapper">
-                                                        <div class="lbl lbl-start">Not Selected</div>
+                                                <div class="col-xxl-4 my-3 info-blocks statics-block">
+                                                    @if($project_detail->package_starting_date != null)
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            @if($project_detail->package_type == 'Free')                                                            
+                                                                <div class="lbl lbl-start mt-3">Trial</div>
+                                                            @endif
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <div class="progress-wrapper">
+                                                                <div class="lbl lbl-start">Start Date</div>
+                                                                <div class="lbl lbl-end">End Date</div>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar" aria-valuemin="0" style="width: {{get_expire_date($project_detail->id)['remaining_days'] / 30 * 100}}%;" aria-valuemax="30"></div>
+                                                                </div>
+                                                                <div class="date date-start">{{$project_detail->package_starting_date}}</div>
+                                                                <div class="date date-end">{{$project_detail->expire_date}}</div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                @endif
+                                                        
+                                                    @else
+                                                        <div class="progress-wrapper">
+                                                            <div class="lbl lbl-start">Not Selected</div>
+                                                        </div>
+                                                    @endif
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </section>
+                                @endif
 
                             @endforeach
                         @endif

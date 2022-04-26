@@ -79,6 +79,7 @@ class WidgetController extends Controller
             $update->package_starting_date = $add->created_at;
             $update->package_type = 'Free';
             $update->expire_date = $add->created_at->addDays(30);
+            $update->status = 'Enabled';
 
             Projects::whereId($project->id)->update($update->toArray());
         }
@@ -139,6 +140,7 @@ class WidgetController extends Controller
                 $update->package_starting_date = $add_another->created_at;
                 $update->package_type = 'Free';
                 $update->expire_date = $add_another->created_at->addDays(30);
+                $update->status = 'Enabled';
 
                 Projects::whereId($request->project_id)->update($update->toArray());
     
@@ -169,6 +171,7 @@ class WidgetController extends Controller
                 $update->package_starting_date = $widget_check_another->created_at;
                 $update->package_type = 'Free';
                 $update->expire_date = $widget_check_another->created_at->addDays(30);
+                $update->status = 'Enabled';
 
                 Projects::whereId($widget_check_another->project_id)->update($update->toArray());
 
@@ -231,6 +234,7 @@ class WidgetController extends Controller
         $update->package_starting_date = null;
         $update->package_type = null;
         $update->expire_date = null;
+        $update->status = null;
 
         Projects::whereId($project->id)->update($update->toArray());
 
@@ -257,6 +261,7 @@ class WidgetController extends Controller
         $update->package_starting_date = $current;
         $update->package_type = 'Free';
         $update->expire_date = null;
+        $update->status = 'Enabled';
 
         Projects::whereId($request->project_id)->update($update->toArray());
 
@@ -338,6 +343,7 @@ class WidgetController extends Controller
         $update->package_starting_date = null;
         $update->package_type = null;
         $update->expire_date = null;
+        $update->status = null;
 
         Projects::whereId($id)->update($update->toArray());
 
@@ -453,15 +459,11 @@ class WidgetController extends Controller
     }
 
 
-
-
-
     public function user_widget_settings($id)
     {
         $widget = Widgets::where('id',$id)->first();
         $project = Projects::where('id',$widget->project_id)->first();           
         $whatsapp_chat = WhatsappChatWidgetTemplate::where('status','Enabled')->get();
-
 
 
         if($widget->widget_type == 'Whatsapp Chat')
