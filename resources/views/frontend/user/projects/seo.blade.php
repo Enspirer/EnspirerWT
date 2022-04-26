@@ -253,7 +253,163 @@
                                 <div class="subtitle">Get your own</div>
                                 <div class="title">Optimizer Bot</div>
                                 <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quibusdam earum, numquam odio delectus porro nisi eos deleniti rerum asperiores?</div>
-                                <a href="#" class="bot-btn">Get Your Bot</a>
+                                <a href="#" class="bot-btn" data-bs-toggle="modal" data-bs-target="#botModal">Get Your Bot</a>
+                            </div>
+                        </div>
+
+                        <div class="modal fade bot-modal" id="botModal" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="back-btn" btn-prev>
+                                            <i class="bi bi-arrow-left-short"></i>
+                                            <div class="text">Back</div>
+                                        </button>
+                                        <div class="modal-title">Get Your Bot</div>
+                                        <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="naviagtion-block">
+                                            <ul class="nav-tree">
+                                                <li class="list-item active">Choose a Bot
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Quantity
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Terms & Conditions
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Apply your bot
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-block">
+                                            <div class="action-block slider active">
+                                                <input type="hidden" slider-input>
+                                                <div class="splide bot-slider" id="botSlider">
+                                                    <div class="splide__track">
+                                                        <ul class="splide__list">
+                                                            <li class="splide__slide">
+                                                                <a href="#" class="slider-link" data-bot="bot-1">
+                                                                    <div class="slider-card">
+                                                                        <div class="image-block">
+                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                        </div>
+                                                                        <div class="content-block">
+                                                                            <div class="title">Bot Name Here</div>
+                                                                            <ul class="option-list">
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="amount">$500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="splide__slide">
+                                                                <a href="#" class="slider-link" data-bot="bot-2">
+                                                                    <div class="slider-card">
+                                                                        <div class="image-block">
+                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                        </div>
+                                                                        <div class="content-block">
+                                                                            <div class="title">Bot Name Here</div>
+                                                                            <ul class="option-list">
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="amount">$500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="action-block quantity-block">
+                                                <input type="hidden" quantity-input>
+                                                <div class="title">How many Bots do you wish to integrate your site ?</div>
+                                                <div class="input-group">
+                                                    <select class="form-select" form-select>
+                                                        <option value="1" selected>1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                    <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="action-block terms-block">
+                                                <input type="hidden" terms-input>
+                                                <div class="title">Terms & Conditions</div>
+                                                <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem eius recusandae sint quasi? Rem ipsa iste, labore adipisci vero mollitia sunt nam totam accusamus! Eum perspiciatis doloribus cumque maxime!</div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="termsCheck" form-check>
+                                                    <label class="form-check-label" for="termsCheck"> I Agreed </label>
+                                                </div>
+                                                <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
+                                            </div>
+                                            <div class="action-block summery-block">
+                                                <input type="hidden" summery-input>
+                                                <div class="fees-block">
+                                                    <div class="fee-row">
+                                                        <div class="text">Subtotal</div>
+                                                        <div class="amount">$20.00</div>
+                                                    </div>
+                                                    <div class="fee-row">
+                                                        <div class="text">Discount</div>
+                                                        <div class="amount">$20.00</div>
+                                                    </div>
+                                                    <div class="fee-row">
+                                                        <div class="text">Taxes & Fees</div>
+                                                        <div class="amount">$20.00</div>
+                                                    </div>
+                                                    <div class="fee-row">
+                                                        <div class="text">Total</div>
+                                                        <div class="amount" total-fee>$20.00</div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn-submit" btn-submit>Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="text">Get Bonus</div>
+                                        <div class="bonus">$5</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -316,7 +472,7 @@
             },
             data: [
                 {
-                value: {{$project->score}}
+                value: 70
                 }
             ]
             }
@@ -325,6 +481,97 @@
 
       // Display the chart using the configuration items and data just specified.
       myChart.setOption(option);
+    </script>
+
+    <script>
+        // Bot Slider
+        var botSlider = new Splide( '#botSlider', {
+            type   : 'loop',
+            width: '450px',
+            } );
+
+            botSlider.mount();
+    </script>
+
+    <script>
+        // Modal Function
+        const actionBlock = document.querySelectorAll(".action-block")
+        const listItem = document.querySelectorAll(".list-item")
+        const btnNext =document.querySelectorAll("[btn-next]")
+        const btnPrev =document.querySelector("[btn-prev]")
+        const btnSubmit =document.querySelector("[btn-submit]")
+        const formSelect = document.querySelector("[form-select]")
+        const formCheck = document.querySelector("[form-check]")
+        const sliderInput = document.querySelector("[slider-input]")
+        const quantityInput = document.querySelector("[quantity-input]")
+        const termsInput = document.querySelector("[terms-input]")
+        const summeryInput = document.querySelector("[summery-input]")
+        const totalFee = document.querySelector("[total-fee]")
+        const dataBot = document.querySelectorAll("[data-bot]")
+
+        let counter = 0;
+
+        dataBot.forEach(function(bot){
+            bot.addEventListener('click', function() {
+                const dataVal = bot.getAttribute("data-bot")
+                sliderInput.value = dataVal
+                counter += 1;
+                btnPrev.classList.add('active')
+                actionBlock[counter].classList.add('active')
+                actionBlock[counter - 1].classList.remove('active')
+                listItem[counter].classList.add('active')
+            })
+        });
+
+        btnNext[0].addEventListener('click', function(){
+            const dataVal = formSelect.value
+            quantityInput.value = dataVal
+            counter += 1;
+            actionBlock[counter].classList.add('active')
+            actionBlock[counter - 1].classList.remove('active')
+            listItem[counter].classList.add('active')
+        })
+
+        btnNext[1].addEventListener('click', function(){
+            
+            if(formCheck.checked) {
+                termsInput.value = '1'
+
+                counter += 1;
+
+                actionBlock[counter].classList.add('active')
+                actionBlock[counter - 1].classList.remove('active')
+                listItem[counter].classList.add('active')
+            } else {
+                return;
+            }
+            
+        })
+
+        btnSubmit.addEventListener('click', function(){
+            const dataVal = totalFee.textContent
+            summeryInput.value = dataVal
+            btnSubmit.textContent = 'Done'
+        })
+
+        btnPrev.addEventListener('click', function(){
+            if(counter>0) {
+                counter -= 1;
+                actionBlock[counter].classList.add('active')
+                actionBlock[counter + 1].classList.remove('active')
+                listItem[counter].classList.add('active')
+                listItem[counter + 1].classList.remove('active')
+
+                if(counter == 0 ) {
+                    btnPrev.classList.remove('active')
+                } else {
+                    return;
+                }
+
+            } else {
+                return;
+            }
+        })
     </script>
 
 @endpush
