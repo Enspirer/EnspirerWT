@@ -1135,4 +1135,51 @@
     }
 }
 
+/* Slider new updates */
+
+.hero-section.home {
+    background: url(../images/landing_page/new/hero-background.png);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-section .slide-wrapper .content-block .title,
+.hero-section .slide-wrapper .content-block .title span,
+.hero-section .slide-wrapper .content-block .caption,
+.hero-section .slide-wrapper .content-block .product,
+.hero-section .slide-wrapper .content-block .text {
+    color: #fff !important;
+}
+
+.hero-section .slide-wrapper .content-block .cta-btn-fill {
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.hero-section .slide-wrapper .content-block .cta-btn-fill:hover .text {
+    color: #333 !important;
+}
+
+.hero-section .custom__pagination .custom__pagination__page {
+    color: #8A8A8A;
+}
+
+/* Navbar */
+
+.navigation-bar.transparent {
+    background-color: transparent;
+}
+
+.navigation-bar.transparent .inner-wrapper .navbar-nav .nav-item .nav-link,
+.navigation-bar.transparent .inner-wrapper .navbar-nav .nav-item .nav-link.active,
+.navigation-bar.transparent .inner-wrapper .navbar-nav .nav-item .nav-link:hover {
+    color: #fff;
+}
+
+.navigation-bar.transparent .inner-wrapper .navbar-nav .nav-item .nav-link.active {
+    border-bottom: 2px solid #fff;
+    border-radius: 0;
+}
+
 /*# sourceMappingURL=home.css.map */

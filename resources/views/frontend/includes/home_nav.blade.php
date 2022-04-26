@@ -1,4 +1,4 @@
-<section class="navigation-bar">
+<section class="navigation-bar {{ Request::segment(1) == '' ? 'transparent' : null }}">
         <div class="container">
             <div class="inner-wrapper">
                 <div class="mobile-brand">
