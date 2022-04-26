@@ -33,7 +33,7 @@
             </a>
         </li>
         <li class="nav-item {{Request::segment(5)=='seo-bot' ? 'active' :null }}">
-            <a href="#" class="nav-link">
+            <a href="#botSection" class="nav-link">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-bot.png')}}" alt="">
                     <div class="text">SEO Bot</div>

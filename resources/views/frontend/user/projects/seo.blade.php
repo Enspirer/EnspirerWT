@@ -248,7 +248,7 @@
                             </div>
                         </div> -->
 
-                        <div class="bot-block">
+                        <div class="bot-block" id="botSection">
                             <div class="inner-wrapper">
                                 <div class="subtitle">Get your own</div>
                                 <div class="title">Optimizer Bot</div>
