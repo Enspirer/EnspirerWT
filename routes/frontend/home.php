@@ -109,10 +109,10 @@ Route::get('pricing',[PricingController::class, 'pricing'])->name('pricing');
 
 Route::get('generatePDF/{id}',[IMSController::class, 'generatePDF'])->name('generatePDF');
 Route::get('analytics_generatePDF',[IMSController::class, 'analytics_generatePDF'])->name('analytics_generatePDF');
-
 Route::get('generate_report_file_pdf/{project_id}/{phone_number}',[IMSProController::class, 'generate_report_file_pdf'])->name('generate_report_file_pdf');
-
 Route::get('invoice_pdf/{id}',[BillingController::class, 'invoice_pdf'])->name('invoice_pdf');
+Route::get('inquiriesPDF/{id}',[ReportsController::class, 'inquiriesPDF'])->name('inquiriesPDF');
+
 
 
 

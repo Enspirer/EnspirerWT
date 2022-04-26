@@ -176,6 +176,9 @@ class WidgetController extends Controller
 
         }
 
+        DB::table('notifications')->where('user_id',auth()->user()->id)->delete();       
+
+
         // dd($widget_check);       
 
         if($widget_check != null){
