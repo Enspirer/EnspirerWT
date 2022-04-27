@@ -69,6 +69,10 @@
     transition: all .3s ease;
 }
 
+.section-cards .cards .card .card-link img {
+    width: 120px;
+}
+
 .section-cards .cards .card .card-link .text {
     font-size: 16px;
     color: #333;
