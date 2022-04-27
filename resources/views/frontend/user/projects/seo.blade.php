@@ -443,10 +443,12 @@
                                                                         <div class="title">The webpage does contain any social links.</div>
                                                                     @endif
                                                                 @endif
-                                                                @if(count($seo_result->value) != 0)
-                                                                    @foreach($seo_result->value as $social)
-                                                                        <a href="{{$social}}"><div class="text">Social</div></a>                                                                 
-                                                                    @endforeach
+                                                                @if(is_array($seo_result->value))
+                                                                    @if(count($seo_result->value) != 0)
+                                                                        @foreach($seo_result->value as $social)
+                                                                            <a href="{{$social}}"><div class="text">Social</div></a>                                                                 
+                                                                        @endforeach
+                                                                    @endif
                                                                 @endif
                                                             @endif
 
