@@ -162,29 +162,35 @@
                                                             @endif
                                                         </td>
                                                         <td class="tbCol-3">
-                                                            @if($key == 'title')                                                                                                                              
-                                                                @if($seo_result->errors->length->min == null || $seo_result->errors->length->max == null)
-                                                                    <div class="title">Need to added a long length title.</div>
-                                                                @else
-                                                                    <div class="title">The title tag is perfect.</div>
+                                                            @if($key == 'title')    
+                                                                @if(isset($seo_result->errors))
+                                                                    @if($seo_result->errors->length->min == null || $seo_result->errors->length->max == null)
+                                                                        <div class="title">Need to added a long length title.</div>
+                                                                    @else
+                                                                        <div class="title">The title tag is perfect.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <div class="text">{{$seo_result->value}}</div>
                                                             @endif
 
                                                             @if($key == 'meta_description')
-                                                                @if($seo_result->errors->missing == null)
-                                                                    <div class="title">Meta description is missing.</div>
-                                                                @else
-                                                                    <div class="title">The meta description tag is good.</div>
+                                                                @if(isset($seo_result->errors))
+                                                                    @if($seo_result->errors->missing == null)
+                                                                        <div class="title">Meta description is missing.</div>
+                                                                    @else
+                                                                        <div class="title">The meta description tag is good.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <div class="text">{{$seo_result->value}}</div>
                                                             @endif
 
                                                             @if($key == 'headings')
-                                                                @if($seo_result->errors->missing == null)
-                                                                    <div class="title">headers are missing.</div>
-                                                                @else
-                                                                    <div class="title">The h1 tag is the same with the title tag.</div>
+                                                                @if(isset($seo_result->errors))
+                                                                    @if($seo_result->errors->missing == null)
+                                                                        <div class="title">headers are missing.</div>
+                                                                    @else
+                                                                        <div class="title">The h1 tag is the same with the title tag.</div>
+                                                                    @endif
                                                                 @endif
                                                                 @if(count($seo_result->value) != 0)
                                                                     @foreach($seo_result->value as $headings)
@@ -217,10 +223,12 @@
                                                             @endif
                                                             
                                                             @if($key == 'in_page_links')
-                                                                @if($seo_result->errors->too_many->max == null)
-                                                                    <div class="title">The number of links on the webpage is too much.</div>
-                                                                @else
-                                                                    <div class="title">The number of links on the webpage is okay.</div>
+                                                                @if(isset($seo_result->errors))
+                                                                    @if($seo_result->errors->too_many->max == null)
+                                                                        <div class="title">The number of links on the webpage is too much.</div>
+                                                                    @else
+                                                                        <div class="title">The number of links on the webpage is okay.</div>
+                                                                    @endif
                                                                 @endif
 
                                                                 <div class="row">
@@ -245,28 +253,34 @@
                                                             @endif
 
                                                             @if($key == 'load_time')
-                                                                @if($seo_result->errors->too_slow->max == null)
-                                                                    <div class="title">The webpage loading time is too slow.</div>
-                                                                @else
-                                                                    <div class="title">The webpage loading time is okay.</div>
+                                                                @if(isset($seo_result->errors))
+                                                                    @if($seo_result->errors->too_slow->max == null)
+                                                                        <div class="title">The webpage loading time is too slow.</div>
+                                                                    @else
+                                                                        <div class="title">The webpage loading time is okay.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <div class="text">{{$seo_result->value}}</div>
                                                             @endif
 
                                                             @if($key == 'page_size')
-                                                                @if($seo_result->errors->too_large->max == null)
-                                                                    <div class="title">The size of the HTML webpage is too large.</div>
-                                                                @else
-                                                                    <div class="title">The size of the HTML webpage is okay.</div>
+                                                                @if(isset($seo_result->errors))
+                                                                    @if($seo_result->errors->too_large->max == null)
+                                                                        <div class="title">The size of the HTML webpage is too large.</div>
+                                                                    @else
+                                                                        <div class="title">The size of the HTML webpage is okay.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <div class="text">{{$seo_result->value}}</div>
                                                             @endif
 
                                                             @if($key == 'http_requests')
-                                                                @if($seo_result->errors->too_many->max == null)
-                                                                    <div class="title">HTTP requests on the webpage is too many.</div>
-                                                                @else
-                                                                    <div class="title">There are less HTTP requests on the webpage.</div>
+                                                                @if(isset($seo_result->errors))                                                            
+                                                                    @if($seo_result->errors->too_many->max == null)
+                                                                        <div class="title">HTTP requests on the webpage is too many.</div>
+                                                                    @else
+                                                                        <div class="title">There are less HTTP requests on the webpage.</div>
+                                                                    @endif
                                                                 @endif
 
                                                                 @if(count($seo_result->value->JavaScripts) != 0)
@@ -287,10 +301,12 @@
                                                             @endif
 
                                                             @if($key == 'dom_size')
-                                                                @if($seo_result->errors->too_many->max == null)
-                                                                    <div class="title">The DOM size is not optimal.</div>
-                                                                @else
-                                                                    <div class="title">The DOM size is optimal.</div>
+                                                                @if(isset($seo_result->errors)) 
+                                                                    @if($seo_result->errors->too_many->max == null)
+                                                                        <div class="title">The DOM size is not optimal.</div>
+                                                                    @else
+                                                                        <div class="title">The DOM size is optimal.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <div class="text">{{$seo_result->value}}</div>
                                                             @endif
@@ -301,10 +317,12 @@
                                                             @endif 
 
                                                             @if($key == 'structured_data')
-                                                                @if($seo_result->errors->missing == null)
-                                                                    <div class="title">Structured data is missing.</div>
-                                                                @else
-                                                                    <div class="title">The webpage has structured data.</div>
+                                                                @if(isset($seo_result->errors)) 
+                                                                    @if($seo_result->errors->missing == null)
+                                                                        <div class="title">Structured data is missing.</div>
+                                                                    @else
+                                                                        <div class="title">The webpage has structured data.</div>
+                                                                    @endif
                                                                 @endif
                                                                 @if(count($seo_result->value) != 0)
                                                                     @foreach($seo_result->value as $structured_data)
@@ -314,10 +332,12 @@
                                                             @endif
 
                                                             @if($key == 'meta_viewport')
-                                                                @if($seo_result->errors->missing == null)
-                                                                    <div class="title">Meta viewport is missing.</div>
-                                                                @else
-                                                                    <div class="title">The webpage has a meta viewport tag set.</div>
+                                                                @if(isset($seo_result->errors)) 
+                                                                    @if($seo_result->errors->missing == null)
+                                                                        <div class="title">Meta viewport is missing.</div>
+                                                                    @else
+                                                                        <div class="title">The webpage has a meta viewport tag set.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <div class="text">{{$seo_result->value}}</div>
                                                             @endif 
@@ -328,10 +348,12 @@
                                                             @endif 
 
                                                             @if($key == 'seo_friendly_url')
-                                                                @if($seo_result->errors->bad_format == null)
-                                                                    <div class="title">The URL is not SEO friendly.</div>
-                                                                @else
-                                                                    <div class="title">The URL is SEO friendly.</div>
+                                                                @if(isset($seo_result->errors)) 
+                                                                    @if($seo_result->errors->bad_format == null)
+                                                                        <div class="title">The URL is not SEO friendly.</div>
+                                                                    @else
+                                                                        <div class="title">The URL is SEO friendly.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <a href="{{$seo_result->value}}"><div class="text">Seo Friendly Url</div></a>
                                                             @endif 
@@ -342,10 +364,12 @@
                                                             @endif 
 
                                                             @if($key == 'favicon')
-                                                                @if($seo_result->errors->missing == null)
-                                                                    <div class="title">The webpage does have a favicon.</div>
-                                                                @else
-                                                                    <div class="title">The webpage does not have a favicon.</div>
+                                                                @if(isset($seo_result->errors)) 
+                                                                    @if($seo_result->errors->missing == null)
+                                                                        <div class="title">The webpage does have a favicon.</div>
+                                                                    @else
+                                                                        <div class="title">The webpage does not have a favicon.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <div class="text">{{$seo_result->value}}</div>
                                                             @endif 
@@ -371,10 +395,12 @@
                                                             @endif 
 
                                                             @if($key == '404_page')
-                                                                @if($seo_result->errors->missing == null)
-                                                                    <div class="title">The website has not 404 error pages.</div>
-                                                                @else
-                                                                    <div class="title">The website has 404 error pages.</div>
+                                                                @if(isset($seo_result->errors)) 
+                                                                    @if($seo_result->errors->missing == null)
+                                                                        <div class="title">The website has not 404 error pages.</div>
+                                                                    @else
+                                                                        <div class="title">The website has 404 error pages.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <a href="{{$seo_result->value}}"><div class="text">404 Page</div></a>
                                                             @endif 
@@ -404,10 +430,12 @@
                                                             @endif 
 
                                                             @if($key == 'social')
-                                                                @if($seo_result->errors->missing == null)
-                                                                    <div class="title">The webpage does not contain any social links..</div>
-                                                                @else
-                                                                    <div class="title">The webpage does contain any social links.</div>
+                                                                @if(isset($seo_result->errors)) 
+                                                                    @if($seo_result->errors->missing == null)
+                                                                        <div class="title">The webpage does not contain any social links..</div>
+                                                                    @else
+                                                                        <div class="title">The webpage does contain any social links.</div>
+                                                                    @endif
                                                                 @endif
                                                                 @if(count($seo_result->value) != 0)
                                                                     @foreach($seo_result->value as $social)
@@ -417,10 +445,12 @@
                                                             @endif
 
                                                             @if($key == 'inline_css')
-                                                                @if($seo_result->errors->failed == null)
-                                                                    <div class="title">The webpage does not contain inline CSS code.</div>
-                                                                @else
-                                                                    <div class="title">The webpage does contain inline CSS code.</div>
+                                                                @if(isset($seo_result->errors)) 
+                                                                    @if($seo_result->errors->failed == null)
+                                                                        <div class="title">The webpage does not contain inline CSS code.</div>
+                                                                    @else
+                                                                        <div class="title">The webpage does contain inline CSS code.</div>
+                                                                    @endif
                                                                 @endif
                                                                 <div class="text">{{$seo_result->value}}</div>
                                                             @endif 
