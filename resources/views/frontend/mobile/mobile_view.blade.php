@@ -203,7 +203,7 @@
         fetch('{{URL::to('/api/live_visitor_monitor_api',$project_id)}}')
             .then(res => res.json())
             .then(data => {
-                // document.querySelector('[data-counter]').textContent = data.length;
+                document.querySelector('[data-counter]').textContent = data.length;
                 tBody.innerHTML = '';
 
                 data.forEach(function (data) {
