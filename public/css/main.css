@@ -42,10 +42,10 @@
 }
 
 .cta-btn-fill:hover {
-    color: #000 !important;
+    color: #fff !important;
 }
 
-.cta-btn-fill::before {
+/* .cta-btn-fill::before {
     content: '';
     position: absolute;
     top: 0;
@@ -59,7 +59,7 @@
 .cta-btn-fill:hover::before {
     width: 100%;
     transition: all .3s ease-in-out;
-}
+} */
 
 .cta-btn-fill .text {
     position: relative;
@@ -91,10 +91,10 @@
 }
 
 .cta-btn-border:hover {
-    color: #fff !important;
+    color: #000 !important;
 }
 
-.cta-btn-border::before {
+/* .cta-btn-border::before {
     content: '';
     position: absolute;
     top: 0;
@@ -108,7 +108,7 @@
 .cta-btn-border:hover::before {
     width: 100%;
     transition: all .3s ease-in-out;
-}
+} */
 
 .cta-btn-border .text {
     position: relative;

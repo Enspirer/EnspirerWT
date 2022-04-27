@@ -276,8 +276,9 @@
 
 
 #getstartedNav {
-    border: 1px solid #00AEEF;
+    border: 1px solid #fff;
     padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
 #getstartedNav:focus {
