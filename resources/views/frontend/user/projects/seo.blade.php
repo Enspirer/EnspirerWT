@@ -205,10 +205,12 @@
 
                                                             @if($key == 'content_keywords')
                                                                 <div class="title">The content has relevant keywords.</div>
-                                                                @if(count($seo_result->value) != 0)
-                                                                    @foreach($seo_result->value as $content_keywords)
-                                                                        <div class="text">{{$content_keywords}}</div>                                                                  
-                                                                    @endforeach
+                                                                @if(is_array($seo_result->value))
+                                                                    @if(count($seo_result->value) != 0)
+                                                                        @foreach($seo_result->value as $content_keywords)
+                                                                            <div class="text">{{$content_keywords}}</div>                                                                  
+                                                                        @endforeach
+                                                                    @endif
                                                                 @endif
                                                             @endif
 
