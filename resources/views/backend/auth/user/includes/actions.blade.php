@@ -69,6 +69,10 @@
             <i class="fas fa-list"></i>
         </a>
 
+        <a href="{{ route('admin.auth.user.project_bills', $user) }}" data-toggle="tooltip" data-placement="top" title="Bills" class="btn btn-danger">
+            <i class="fas fa-dollar-sign"></i>
+        </a>
+
 
     </div>
 @endif

@@ -22,6 +22,7 @@
                             <tr>
                                 <th scope="col">#ID</th>
                                 <th scope="col">Project Name</th>
+                                <th scope="col">URL</th>
                                 <th scope="col">Project Type</th>
                                 <th scope="col">Option</th>
                             </tr>
@@ -76,6 +77,7 @@
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'name', name: 'name'},
+                    {data: 'url', name: 'url'},
                     {data: 'project_type', name: 'project_type'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]

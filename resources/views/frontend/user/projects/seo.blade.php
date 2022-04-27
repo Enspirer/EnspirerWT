@@ -4,6 +4,7 @@
 
 @section('content')
 
+<link rel="stylesheet" href="{{url('css/seo.css')}}">
 
     <section id="sectionMainWindow">
         @include('frontend.includes.sidebar')
@@ -26,359 +27,725 @@
                             </ul>
                         </div>
 
-                        <section id="sectionTabs">
-                            @include('frontend.user.projects.includes.card_section')
-                        </section>
+                        @include('frontend.user.projects.includes.card_section')
 
-                        <!-- <section id="sectionTabNavs">
-                            <div class="row g-0 mb-5">
-                                <div class="col">
+                        @include('frontend.user.projects.includes.seo_nav')
+
+                        <div class="imsPro-section">
+                            <div class="inner-wrapper">
+                                <div class="subtitle">Get your own</div>
+                                <div class="title">Optimizer Bot</div>
+                                <div class="option-block">
+                                    <div class="option">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <div class="text">Realtime View + Invites</div>
+                                    </div>
+                                    <div class="option">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <div class="text">Heatmaps</div>
+                                    </div>
+                                    <div class="option">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <div class="text">Session Recording</div>
+                                    </div>
+                                    <div class="option">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <div class="text">Analytics Center</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="ims-btn">IMS Pro</a>
+                            </div>
+                        </div>
+
+                        <div class="overview-block">
+                            <div class="heaeder">
+                                <div class="title">Overview</div>
+                                <div class="duration">{{$project->created_at->diffForHumans()}}</div>
+                            </div>
+                            <div class="body">
+                                <div class="guage-block">
+                                    <div id="guage" style="width:350px;height:350px;margin:auto"></div>
+                                    <div class="status-block">
+                                        <div class="precentage">{{number_format((float)$project->score, 2, '.', '')}}%</div>
+                                        <div class="stats font-blue">Tests Passed</div>
+                                        <div class="name">{{$project->name}}</div>
+                                        <div class="url font-blue">{{$project->url}}</div>
+                                    </div>
+                                </div>
+                                <div class="progress-block">
+                                    <div class="inner-block">
+                                        <div class="header font-gray">
+                                            <div class="text">3 high issues</div>
+                                            <div class="precentage">3.0%</div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-red" style="width:40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="inner-block">
+                                        <div class="header font-gray">
+                                            <div class="text">3 medium issues</div>
+                                            <div class="precentage">3.0%</div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-orange" style="width:70%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="inner-block">
+                                        <div class="header font-gray">
+                                            <div class="text">2 low issues</div>
+                                            <div class="precentage">3.0%</div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-brown" style="width:20%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="inner-block">
+                                        <div class="header font-gray">
+                                            <div class="text">22 test passed</div>
+                                            <div class="precentage">3.0%</div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" style="width:80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="infor-block">
                                     <div class="inner-wrapper">
-                                        <ul class="navbar-nav row g-0 flex-row">
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3 active">
-                                                        <i class="bi bi-clipboard-data"></i>
-                                                        <span class="text">Overview</span>
-                                                    </a>
-                                                </li>
+                                        <div class="stats-block">
+                                            <div class="header">
+                                                <i class="bi font-blue bi-square-fill"></i>
+                                                <div class="text">Pass</div>
+                                                <i class="bi font-gray bi-question-circle"></i>
                                             </div>
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3">
-                                                        <i class="bi bi-search-heart"></i>
-                                                        <span class="text">SEO</span>
-                                                    </a>
-                                                </li>
+                                            <div class="body">
+                                                <i class="bi font-blue bi-arrow-up-right"></i>
+                                                <div class="precentage font-blue">82.0%</div>
                                             </div>
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3">
-                                                        <i class="bi bi-speedometer2"></i>
-                                                        <span class="text">Performance</span>
-                                                    </a>
-                                                </li>
+                                        </div>
+                                        <div class="stats-block">
+                                            <div class="header">
+                                                <i class="bi font-green bi-square-fill"></i>
+                                                <div class="text">Normal</div>
+                                                <i class="bi font-gray bi-question-circle"></i>
                                             </div>
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3">
-                                                        <i class="bi bi-shield-check"></i>
-                                                        <span class="text">Security</span>
-                                                    </a>
-                                                </li>
+                                            <div class="body">
+                                                <i class="bi font-green bi-arrow-up-right"></i>
+                                                <div class="precentage font-green">82.0%</div>
                                             </div>
-                                            <div class="col">
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-3">
-                                                        <i class="bi bi-person"></i>
-                                                        <span class="text">Miscellaneous</span>
-                                                    </a>
-                                                </li>
+                                        </div>
+                                        <div class="stats-block">
+                                            <div class="header">
+                                                <i class="bi font-orange bi-square-fill"></i>
+                                                <div class="text">Issues</div>
+                                                <i class="bi font-gray bi-question-circle"></i>
                                             </div>
-                                        </ul>
+                                            <div class="body">
+                                                <i class="bi font-orange bi-arrow-down-left"></i>
+                                                <div class="precentage font-orange">82.0%</div>
+                                            </div>
+                                        </div>
+                                        <div class="stats-block">
+                                            <div class="header">
+                                                <i class="bi font-red bi-square-fill"></i>
+                                                <div class="text">Risks</div>
+                                                <i class="bi font-gray bi-question-circle"></i>
+                                            </div>
+                                            <div class="body">
+                                                <i class="bi font-red bi-arrow-up-right"></i>
+                                                <div class="precentage font-red">82.0%</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </section> -->
+                        </div>
 
-                        <!-- Analytics -->
-
-
-                        <!-- Visitors -->
-
-
-                        <!-- SEO -->
-
-                        <!-- <section id="sectionSEOBlock">
-                            <div class="inner-wrapper p-4 mb-5">
-                                <div class="row g-0 pb-3 border-bottom align-items-center justify-content-between">
-                                    <div class="col-auto titile">Overview</div>
-                                    <div class="col-auto duration">3 days ago</div>
+                        @if($project->seo_result != null)
+                            <div class="seo-block">
+                                <div class="heaeder">
+                                    <div class="title">SEO</div>
+                                    <div class="duration">{{$project->created_at->diffForHumans()}}</div>
                                 </div>
-                                <div class="row g-0">
-                                    <div class="col-4"></div>
-                                    <div class="col-4">
-                                        <div class="statics-block">
-                                            <div class="row my-4">
-                                                <div class="col">
-                                                    <div class="issues-blocks">
-                                                        <div class="issue-info">
-                                                <span class="info"><i class="bi bi-triangle-fill red"></i>3
-                                                    high
-                                                    issues</span>
-                                                            <span class="info-prec">3.0%</span>
-                                                        </div>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-danger" role="progressbar"
-                                                                 style="width: 100%" aria-valuenow="100" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row my-4">
-                                                <div class="col">
-                                                    <div class="issues-blocks">
-                                                        <div class="issue-info">
-                                                <span class="info"><i class="bi bi-square-fill yellow"></i>3
-                                                    medium
-                                                    issues</span>
-                                                            <span class="info-prec">3.0%</span>
-                                                        </div>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-warning" role="progressbar"
-                                                                 style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row my-4">
-                                                <div class="col">
-                                                    <div class="issues-blocks">
-                                                        <div class="issue-info">
-                                                <span class="info"><i class="bi bi-circle-fill gray"></i>2
-                                                    low issues</span>
-                                                            <span class="info-prec">2.0%</span>
-                                                        </div>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row my-4">
-                                                <div class="col">
-                                                    <div class="issues-blocks">
-                                                        <div class="issue-info">
-                                                <span class="info"><i class="bi bi-star-fill blue"></i>22
-                                                    test passed</span>
-                                                            <span class="info-prec">82.0%</span>
-                                                        </div>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4"></div>
-                                </div>
-                            </div>
-                        </section> -->
-
-                        <!-- Whatsapp Chat Blocks -->
-
-                        <section id="sectionWhatsappWidget">
-                            @if(count(App\Models\Widgets::where('project_id',$project_id)->where('category','Analytics')->get()) != 0)
-                                <div class="block-2 mb-5">
-                                    <div class="row g-0 mb-4">
-                                        <div class="col">
-                                            <div class="block-title">My Realtime Widget</div>
-                                        </div>
-                                    </div>
-                                    <div class="row row-cols-md-2 g-5 justify-content-between">
-                                        <div class="col">
-                                            <div class="innwer-wrapper px-4 dotted-border">
-                                                <button type="button" class="btn-whatsapp" data-bs-toggle="modal"
-                                                    data-bs-target="#createAnalyticsModal">Create Analytics</button>
-                                            </div>
-                                        </div>
-                                        @foreach(\App\Models\Widgets::where('project_id',$project_id)->where('category','Analytics')->get() as $widgetlist)
-                                        <div class="col">
-                                            <div class="inner-wrapper px-5 pt-5 pb-4">
-                                                <div class="row g-0">
-                                                    <div class="header">
-                                                        <span class="title">{{$widgetlist->widget_type}}</span> 
-                                                        @if($widgetlist->widget_type == 'Analytics')                                          
-                                                            <i class="bi bi-clipboard2-pulse" style="font-size:25px;"></i>
-                                                            <img src="{{url('images/whatsapp.png')}}" alt="">
+                                @foreach(json_decode($project->seo_result) as $key => $seo_result)
+                                    @if($key == 'title' || $key == 'meta_description' || $key == 'headings' || $key == 'content_keywords' || $key == 'image_keywords' || $key == 'seo_friendly_url' || $key == '404_page' || $key == 'robots' || $key == 'noindex' || $key == 'in_page_links' || $key == 'language' || $key == 'favicon')
+                                    
+                                        <div class="body" style="border-bottom: 1px solid #ddd">
+                                            <table class="seo-table">
+                                                <tbody>
+                                                    <tr>
+                                                        @if($seo_result->importance == 'high')
+                                                            <td class="tbCol-1"><i class="bi font-red bi-triangle-fill"></i></td>
+                                                        @elseif($seo_result->importance == 'medium')
+                                                            <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
+                                                        @else
+                                                            <td class="tbCol-1"><i class="bi font-grey bi-circle-fill"></i></td>
                                                         @endif
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0 mt-5 mb-4">
-                                                    <div class="col">
-                                                        <div class="row g-0 mb-2 justify-content-between">
-                                                            <div class="col-auto">
-                                                                <div class="progress-label">{{$widgetlist->widget_key}}</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row g-0">
-                                                            <div class="col">
-                                                                <div class="progress">
-                                                                    <div class="progress-bar w-75" role="progressbar"
-                                                                        aria-valuenow="75" aria-valuemin="0"
-                                                                        aria-valuemax="100">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0">
-                                                    <div class="col">
-                                                        <p class="body-text">Lorem ipsum dolor sit amet consectetur
-                                                            adipisicing elit. Mollitia sit maxime nam sapiente illum,
-                                                            consequuntur aperiam quia reprehenderit deserunt delectus.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0 mt-4 mb-3">
-                                                    <div class="button-block">
-                                                        <div class="block-1">
-                                                           
-                                                            <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}"
-                                                                class="act-btn act-settings">
-                                                                <i class="bi bi-gear"></i>
-                                                                Settings
-                                                            </a>
-                                                            <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" class="me-3 act-btn act-script">
-                                                            <i class="bi bi-code-slash"></i>
-                                                                Add Script
-                                                            </a>
-                                                        </div>
-                                                        <div class="block-2">
-                                                            <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
-                                                            <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}"
-                                                                class="act-btn delete act-delete" data-bs-toggle="modal"
-                                                                data-bs-target="#deleteFavorite">
-                                                                <i class="bi bi-trash"></i>
-                                                                Delete
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            @endif
-                            <div class="row g-0">
-                                <div class="chat-applications">
-                                    <div class="row g-0 mb-5">
-                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
-                                            <div class="col">
-                                                <div class="block-title">Realtime Widget</div>
-                                            </div>
-                                        @endif
-                                    </div>
-                                    <div class="row row-cols-md-2 g-5 justify-content-between">
 
-                                        @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
-                                            <div class="col">
-                                                <div class="inner-wrapper px-5 py-4">
-                                                    <div class="row g-0">
-                                                        <div class="header">
-                                                            <div class="title">Realtime</div>
-                                                            <div class="image-block">
-                                                                <i class="bi bi-clipboard2-pulse" style="font-size:25px;"></i>
-                                                            </div>
-                                                            <img src="{{url('images/whatsapp2.png')}}" alt="" class="watermark-img">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row g-0">
-                                                        <div class="col">
-                                                            <p class="body-text">Give users an opportunity to contact you on
-                                                                WhatsApp
-                                                                straight from your website.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row g-0 mt-4 mb-3">
-                                                        <div class="button-block">
-                                                            @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
-                                                                <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
-                                                                {{csrf_field()}}
-                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                                    <input type="hidden" name="widget_type" value="Analytics">
-                                                                    <button type="submit" class="create-widget-btn">Create Analytics</button>
-                                                                </form>
-                                                            @else
-                                                                <button type="submit" class="create-widget-btn" disabled>Already Installed</button>
-                                                            @endif
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endif
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                                                            <td class="tbCol-2">                                                           
+                                                                <div class="title">{{ str_replace("_"," ", ucfirst(trans($key)) ) }}</div>                                                            
+                                                            </td>
+                                                            <td class="tbCol-3">
+                                                                @if($key == 'title')    
+                                                                    @if(isset($seo_result->errors))
+                                                                        @if($seo_result->errors->length->min == null || $seo_result->errors->length->max == null)
+                                                                            <div class="title">Need to added a long length title.</div>
+                                                                        @else
+                                                                            <div class="title">The title tag is perfect.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif
 
-                            <!-- Modal -->
-                            <div class="modal fade widget-explorer" id="createAnalyticsModal" tabindex="-1"
-                                aria-labelledby="createWidgetModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h5 class="modal-title" id="createWidgetModalLabel">Analytics</h5>
-                                                <button type="button" class="btn-close-modal" data-bs-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <i class="bi bi-x-lg"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="block-1">
-                                                    <div class="row g-0">
-                                                        <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
-                                                            {{csrf_field()}}
-                                                            <div class="inner-wrapper">
-                                                                <div class="col">
-                                                                    <div class="row g-0 align-items-center justify-content-between">
-                                                                        <div class="col-7">
-                                                                            <div class="header">
-                                                                                <span class="title">Realtime</span>
-                                                                            </div>
-                                                                            <p class="body-text">Give users an opportunity
-                                                                                to contact you on WhatsApp straight from
-                                                                                your website.
-                                                                            </p>
-                                                                            <div class="button-block">
-                                                                                @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','Analytics')->first() == null)
-                                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                                                    <input type="hidden" name="widget_type" value="Analytics">
-                                                                                    <button type="submit" class="btn-whatsapp"></i>Create Analytics</button>
-                                                                                @else
-                                                                                    <button type="submit" class="btn-whatsapp" disabled>Already Installed</button>
-                                                                                @endif
-                                                                            </div>
+                                                                @if($key == 'meta_description')
+                                                                    @if(isset($seo_result->errors))
+                                                                        @if($seo_result->errors->missing == null)
+                                                                            <div class="title">Meta description is missing.</div>
+                                                                        @else
+                                                                            <div class="title">The meta description tag is good.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif
+
+                                                                @if($key == 'headings')
+                                                                    @if(isset($seo_result->errors))
+                                                                        @if(isset($seo_result->errors->missing))
+                                                                            @if($seo_result->errors->missing == null)
+                                                                                <div class="title">headers are missing.</div>
+                                                                            @else
+                                                                                <div class="title">The h1 tag is the same with the title tag.</div>
+                                                                            @endif
+                                                                        @endif
+                                                                    @endif
+                                                                    @if(is_array($seo_result->value))
+                                                                        @if(count($seo_result->value) != 0)
+                                                                            @foreach($seo_result->value as $headings)
+                                                                                <div class="text">{{$headings}}</div>                                                                  
+                                                                            @endforeach
+                                                                        @endif
+                                                                    @endif
+                                                                @endif
+
+                                                                @if($key == 'content_keywords')
+                                                                    <div class="title">The content has relevant keywords.</div>
+                                                                    @if(is_array($seo_result->value))
+                                                                        @if(count($seo_result->value) != 0)
+                                                                            @foreach($seo_result->value as $content_keywords)
+                                                                                <div class="text">{{$content_keywords}}</div>                                                                  
+                                                                            @endforeach
+                                                                        @endif
+                                                                    @endif
+                                                                @endif
+
+                                                                @if($key == 'image_keywords')
+                                                                    <div class="title">All images have alt attributes set.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif
+
+                                                                @if($key == 'seo_friendly_url')
+                                                                    @if(isset($seo_result->errors)) 
+                                                                        @if($seo_result->errors->bad_format == null)
+                                                                            <div class="title">The URL is not SEO friendly.</div>
+                                                                        @else
+                                                                            <div class="title">The URL is SEO friendly.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <a href="{{$seo_result->value}}"><div class="text">Seo Friendly Url</div></a>
+                                                                @endif 
+
+                                                                @if($key == '404_page')
+                                                                    @if(isset($seo_result->errors)) 
+                                                                        @if($seo_result->errors->missing == null)
+                                                                            <div class="title">The website has not 404 error pages.</div>
+                                                                        @else
+                                                                            <div class="title">The website has 404 error pages.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <a href="{{$seo_result->value}}"><div class="text">404 Page</div></a>
+                                                                @endif 
+
+                                                                @if($key == 'robots')
+                                                                    <div class="title">The webpage can be accessed by search engines.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+                                                                @if($key == 'noindex')
+                                                                    <div class="title">The webpage does not have a noindex tag set.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+
+                                                                @if($key == 'in_page_links')
+                                                                    @if(isset($seo_result->errors))
+                                                                        @if($seo_result->errors->too_many->max == null)
+                                                                            <div class="title">The number of links on the webpage is too much.</div>
+                                                                        @else
+                                                                            <div class="title">The number of links on the webpage is okay.</div>
+                                                                        @endif
+                                                                    @endif
+
+                                                                    <div class="row">
+                                                                        <div class="col-6">
+                                                                            @if(count($seo_result->value->Externals) != 0)
+                                                                                <div class="title" style="color:black">Externals.</div>
+                                                                                @foreach($seo_result->value->Externals as $external)
+                                                                                    <a href="{{$external->url}}"><div class="text">{{$external->text}}</div></a>                                                                         
+                                                                                @endforeach
+                                                                            @endif
                                                                         </div>
-                                                                        <div class="col-4">
-                                                                            <div class="whatsapp-feature-block">
-                                                                                <img src="{{url('images/whatsapp (1).png')}}" alt="">
-                                                                                <div class="title">WhatsApp Chat</div>
-                                                                                <div class="subtitle">Entertainment</div>
-                                                                                <div class="star-rating">
-                                                                                    <i class="bi active bi-star"></i>
-                                                                                    <i class="bi active bi-star"></i>
-                                                                                    <i class="bi active bi-star"></i>
-                                                                                    <i class="bi active bi-star"></i>
-                                                                                    <i class="bi bi-star"></i>
-                                                                                </div>
-                                                                                <div class="pricing">Free</div>
-                                                                            </div>
+                                                                        <div class="col-6">
+                                                                            @if(count($seo_result->value->Internals) != 0)
+                                                                                <div class="title" style="color:black">Internals.</div>
+                                                                                @foreach($seo_result->value->Internals as $internal)
+                                                                                    <a href="{{$internal->url}}"><div class="text">{{$internal->text}}</div></a>                                                                         
+                                                                                @endforeach
+                                                                            @endif
                                                                         </div>
-                                                                    </div>
-                                                                </div>
+                                                                    </div>                                                                
+                                                                @endif
+
+                                                                @if($key == 'language')
+                                                                    <div class="title">The webpage has the language declared.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+                                                                @if($key == 'favicon')
+                                                                    @if(isset($seo_result->errors)) 
+                                                                        @if($seo_result->errors->missing == null)
+                                                                            <div class="title">The webpage does have a favicon.</div>
+                                                                        @else
+                                                                            <div class="title">The webpage does not have a favicon.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
 
                                                                 
-                                                            </div>
-                                                        </form>
+
+                                                                <!-- <div class="text">The size of the HTML webpage is 176.41 kB.</div> -->
+                                                            </td>
+                                                            <td class="tbCol-4">
+                                                                <a href="#" class="table-btn bg-green">Suggestions</a>
+                                                            </td>
+                                                        </tr>                                                   
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
+
+                            <!-- ********************************************************************************** -->
+
+                            <div class="seo-block">
+                                <div class="heaeder">
+                                    <div class="title">Performance</div>
+                                    <div class="duration">{{$project->created_at->diffForHumans()}}</div>
+                                </div>
+                                @foreach(json_decode($project->seo_result) as $key => $seo_result)
+                                    @if($key == 'text_compression' || $key == 'load_time' || $key == 'page_size' || $key == 'http_requests' || $key == 'image_format' || $key == 'defer_javascript' || $key == 'dom_size')
+                                    
+                                        <div class="body" style="border-bottom: 1px solid #ddd">
+                                            <table class="seo-table">
+                                                <tbody>
+                                                    <tr>
+                                                        @if($seo_result->importance == 'high')
+                                                            <td class="tbCol-1"><i class="bi font-red bi-triangle-fill"></i></td>
+                                                        @elseif($seo_result->importance == 'medium')
+                                                            <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
+                                                        @else
+                                                            <td class="tbCol-1"><i class="bi font-grey bi-circle-fill"></i></td>
+                                                        @endif
+
+                                                            <td class="tbCol-2">                                                           
+                                                                <div class="title">{{ str_replace("_"," ", ucfirst(trans($key)) ) }}</div>                                                            
+                                                            </td>
+                                                            <td class="tbCol-3">
+                                                                @if($key == 'text_compression')
+                                                                    <div class="title">The HTML file is compressed.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+                                                                @if($key == 'load_time')
+                                                                    @if(isset($seo_result->errors))
+                                                                        @if($seo_result->errors->too_slow->max == null)
+                                                                            <div class="title">The webpage loading time is too slow.</div>
+                                                                        @else
+                                                                            <div class="title">The webpage loading time is okay.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif
+
+                                                                @if($key == 'page_size')
+                                                                    @if(isset($seo_result->errors))
+                                                                        @if($seo_result->errors->too_large->max == null)
+                                                                            <div class="title">The size of the HTML webpage is too large.</div>
+                                                                        @else
+                                                                            <div class="title">The size of the HTML webpage is okay.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif
+
+                                                                @if($key == 'http_requests')
+                                                                    @if(isset($seo_result->errors))                                                            
+                                                                        @if($seo_result->errors->too_many->max == null)
+                                                                            <div class="title">HTTP requests on the webpage is too many.</div>
+                                                                        @else
+                                                                            <div class="title">There are less HTTP requests on the webpage.</div>
+                                                                        @endif
+                                                                    @endif
+
+                                                                    @if(count($seo_result->value->JavaScripts) != 0)
+                                                                        @foreach($seo_result->value->JavaScripts as $JavaScripts)
+                                                                            <a href="{{$JavaScripts}}"><div class="text">JavaScripts</div></a>                                                                         
+                                                                        @endforeach
+                                                                    @endif 
+                                                                    @if(count($seo_result->value->Images) != 0)
+                                                                        @foreach($seo_result->value->Images as $Images)
+                                                                            <a href="{{$Images}}"><div class="text">Images</div></a>                                                                         
+                                                                        @endforeach
+                                                                    @endif
+                                                                @endif
+
+                                                                @if($key == 'image_format')
+                                                                    <div class="title">The images are served in the AVIF, WebP format.</div>
+                                                                    @if(count($seo_result->value) != 0)
+                                                                        @foreach($seo_result->value as $image_format)
+                                                                            <div class="text">{{$image_format}}</div>                                                                  
+                                                                        @endforeach
+                                                                    @endif
+                                                                @endif
+                                                                
+                                                                @if($key == 'defer_javascript')
+                                                                    <div class="title">The are some javascript resources without the defer attribute.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif
+
+                                                                @if($key == 'dom_size')
+                                                                    @if(isset($seo_result->errors)) 
+                                                                        @if($seo_result->errors->too_many->max == null)
+                                                                            <div class="title">The DOM size is not optimal.</div>
+                                                                        @else
+                                                                            <div class="title">The DOM size is optimal.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif
+
+
+                                                                
+
+                                                                <!-- <div class="text">The size of the HTML webpage is 176.41 kB.</div> -->
+                                                            </td>
+                                                            <td class="tbCol-4">
+                                                                <a href="#" class="table-btn bg-green">Suggestions</a>
+                                                            </td>
+                                                        </tr>                                                   
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
+
+                            <!-- **************************************************************************************** -->
+
+                            <div class="seo-block">
+                                <div class="heaeder">
+                                    <div class="title">Security</div>
+                                    <div class="duration">{{$project->created_at->diffForHumans()}}</div>
+                                </div>
+                                @foreach(json_decode($project->seo_result) as $key => $seo_result)
+                                    @if($key == 'https_encryption' || $key == 'plaintext_email')
+                                    
+                                        <div class="body" style="border-bottom: 1px solid #ddd">
+                                            <table class="seo-table">
+                                                <tbody>
+                                                    <tr>
+                                                        @if($seo_result->importance == 'high')
+                                                            <td class="tbCol-1"><i class="bi font-red bi-triangle-fill"></i></td>
+                                                        @elseif($seo_result->importance == 'medium')
+                                                            <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
+                                                        @else
+                                                            <td class="tbCol-1"><i class="bi font-grey bi-circle-fill"></i></td>
+                                                        @endif
+
+                                                            <td class="tbCol-2">                                                           
+                                                                <div class="title">{{ str_replace("_"," ", ucfirst(trans($key)) ) }}</div>                                                            
+                                                            </td>
+                                                            <td class="tbCol-3">
+                                                                @if($key == 'https_encryption')
+                                                                    <div class="title">The webpage uses HTTPS encryption.</div>
+                                                                    <a href="{{$seo_result->value}}"><div class="text">Https Encryption</div></a>
+                                                                @endif 
+
+                                                                @if($key == 'plaintext_email')
+                                                                    <div class="title">The webpage does not contain any plaintext emails.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+                                                                
+
+                                                                <!-- <div class="text">The size of the HTML webpage is 176.41 kB.</div> -->
+                                                            </td>
+                                                            <td class="tbCol-4">
+                                                                <a href="#" class="table-btn bg-green">Suggestions</a>
+                                                            </td>
+                                                        </tr>                                                   
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
+
+
+                            
+
+
+                        @endif
+
+                        <!-- <div class="seo-block">
+                            <div class="heaeder">
+                                <div class="title">Performance</div>
+                                <div class="duration">3 days ago</div>
+                            </div>
+                            <div class="body">
+                                <table class="seo-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="tbCol-1"><i class="bi font-blue bi-triangle-fill"></i></td>
+                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
+                                            <td class="tbCol-3">
+                                                <div class="title">The meta description tag have medium issues.</div>
+                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
+                                            </td>
+                                            <td class="tbCol-4">
+                                                <a href="#" class="table-btn bg-green">Suggestions</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
+                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
+                                            <td class="tbCol-3">
+                                                <div class="title">The meta description tag have medium issues.</div>
+                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
+                                            </td>
+                                            <td class="tbCol-4">
+                                                <i class="bi bi-exclamation-circle"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="seo-block">
+                            <div class="heaeder">
+                                <div class="title">Miscellaneous</div>
+                                <div class="duration">3 days ago</div>
+                            </div>
+                            <div class="body">
+                                <table class="seo-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="tbCol-1"><i class="bi font-blue bi-triangle-fill"></i></td>
+                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
+                                            <td class="tbCol-3">
+                                                <div class="title">The meta description tag have medium issues.</div>
+                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
+                                            </td>
+                                            <td class="tbCol-4">
+                                                <a href="#" class="table-btn bg-green">Suggestions</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
+                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
+                                            <td class="tbCol-3">
+                                                <div class="title">The meta description tag have medium issues.</div>
+                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
+                                            </td>
+                                            <td class="tbCol-4">
+                                                <i class="bi bi-exclamation-circle"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> -->
+
+                        <div class="bot-block" id="botSection">
+                            <div class="inner-wrapper">
+                                <div class="subtitle">Get your own</div>
+                                <div class="title">Optimizer Bot</div>
+                                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quibusdam earum, numquam odio delectus porro nisi eos deleniti rerum asperiores?</div>
+                                <a href="#" class="bot-btn" data-bs-toggle="modal" data-bs-target="#botModal">Get Your Bot</a>
+                            </div>
+                        </div>
+
+                        <div class="modal fade bot-modal" id="botModal" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="back-btn" btn-prev>
+                                            <i class="bi bi-arrow-left-short"></i>
+                                            <div class="text">Back</div>
+                                        </button>
+                                        <div class="modal-title">Get Your Bot</div>
+                                        <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="naviagtion-block">
+                                            <ul class="nav-tree">
+                                                <li class="list-item active">Choose a Bot
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Quantity
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Terms & Conditions
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Apply your bot
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-block">
+                                            <div class="action-block slider active">
+                                                <input type="hidden" slider-input>
+                                                <div class="splide bot-slider" id="botSlider">
+                                                    <div class="splide__track">
+                                                        <ul class="splide__list">
+                                                            <li class="splide__slide">
+                                                                <a href="#" class="slider-link" data-bot="bot-1">
+                                                                    <div class="slider-card">
+                                                                        <div class="image-block">
+                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                        </div>
+                                                                        <div class="content-block">
+                                                                            <div class="title">Bot Name Here</div>
+                                                                            <ul class="option-list">
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="amount">$500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="splide__slide">
+                                                                <a href="#" class="slider-link" data-bot="bot-2">
+                                                                    <div class="slider-card">
+                                                                        <div class="image-block">
+                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                        </div>
+                                                                        <div class="content-block">
+                                                                            <div class="title">Bot Name Here</div>
+                                                                            <ul class="option-list">
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="amount">$500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="action-block quantity-block">
+                                                <input type="hidden" quantity-input>
+                                                <div class="title">How many Bots do you wish to integrate your site ?</div>
+                                                <div class="input-group">
+                                                    <select class="form-select" form-select>
+                                                        <option value="1" selected>1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                    <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="action-block terms-block">
+                                                <input type="hidden" terms-input>
+                                                <div class="title">Terms & Conditions</div>
+                                                <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem eius recusandae sint quasi? Rem ipsa iste, labore adipisci vero mollitia sunt nam totam accusamus! Eum perspiciatis doloribus cumque maxime!</div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="termsCheck" form-check>
+                                                    <label class="form-check-label" for="termsCheck"> I Agreed </label>
+                                                </div>
+                                                <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
+                                            </div>
+                                            <div class="action-block summery-block">
+                                                <input type="hidden" summery-input>
+                                                <div class="fees-block">
+                                                    <div class="fee-row">
+                                                        <div class="text">Subtotal</div>
+                                                        <div class="amount">$20.00</div>
+                                                    </div>
+                                                    <div class="fee-row">
+                                                        <div class="text">Discount</div>
+                                                        <div class="amount">$20.00</div>
+                                                    </div>
+                                                    <div class="fee-row">
+                                                        <div class="text">Taxes & Fees</div>
+                                                        <div class="amount">$20.00</div>
+                                                    </div>
+                                                    <div class="fee-row">
+                                                        <div class="text">Total</div>
+                                                        <div class="amount" total-fee>$20.00</div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn-submit" btn-submit>Submit</button>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="modal-footer">
+                                        <div class="text">Get Bonus</div>
+                                        <div class="bonus">$5</div>
+                                    </div>
                                 </div>
+                                <a href="#" class="bot-btn">Get Your Bot</a>
                             </div>
-                            @include('frontend.user.projects.dialogs.widget_source')
-                        </section>
+                        </div>
 
                     </div>
                 </div>
@@ -386,125 +753,159 @@
         </div>
     </section>
 
-@foreach(\App\Models\Widgets::where('project_id',$project_id)->get() as $widgetlist)
-
-<!-- Modal -->
-<div class="modal fade get_widget_Modal" id="get_widget_Modal{{$widgetlist->id}}" tabindex="-1" role="dialog" aria-labelledby="get_widget_Lable" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <img src="{{url('images/Group 389.png')}}" alt="">
-                <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
-                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
-                <i class="bi bi-x-lg"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p class="text">Copy and paste this code into desired place of your website (HTML editor, website template, theme, etc)</p>
-                <code>
-                    &lt;script data-host="{{url('')}}" data-dnt="false" src="{{url('js/script_tracker.js')}}" id="{{$widgetlist->widget_key}}" async defer&gt;&lt;/script&gt
-                </code>
-            </div>
-            <div class="modal-footer">
-                <a href="{{route('frontend.user.project.chat',$project_id)}}" class="modal-btn">I have installed the code</a>
-            </div>
-        </div>
-    </div>
-</div>
-@endforeach
-
-<div class="modal fade dashboard-modal delete-modal" id="deleteFavorite" tabindex="-1" aria-labelledby="deleteFavoriteLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="title">
-                <h3 class="modal-title">Delete Analitycs ?</h3>
-                <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#fff,secondary:#fff" style="width:60px;height:60px"> </lord-icon></div>
-                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-            </div>
-            <div class="modal-footer">
-                <div class="text-block">
-                Do you want to delete this?
-                </div>
-                <div class="button-block">
-                    <a type="button" class="btn btn-close btn-secondary" data-bs-dismiss="modal">Close</a>
-                    <a href="" class="btn btn-delete btn-danger">Delete</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-@if(\Session::has('success') )
-
-<div class="modal fade" id="overlay" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="title">
-                    <h3 class="modal-title" >Created Successfully!</h3>
-                    <i class="bi bi-check-circle"></i>
-                </div>
-                <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="content-block">
-                    <div class="title">How to setup the Widget?</div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis deserunt ab distinctio. Voluptatum deserunt blanditiis asperiores quos placeat voluptatibus illo possimus facilis.</div>
-                    <a href="#" class="act-btn act-tutorial">
-                    <i class="bi bi-boxes"></i>
-                    Tutorials</a>
-                </div>
-                <div class="image-block">
-                    <img src="{{url('images/tutorial.png')}}" alt="">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="button-block">
-                    <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}"
-                        class="act-btn act-settings">
-                        <i class="bi bi-gear"></i>
-                        Settings
-                    </a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" class="act-btn act-script">
-                    <i class="bi bi-code-slash"></i>
-                        Add Script
-                    </a>
-                    <input type="hidden" name="hid_id" value="{{$widgetlist->id}}">
-                    <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}"
-                        class="act-btn delete act-delete" data-bs-toggle="modal"
-                        data-bs-target="#deleteFavorite">
-                        <i class="bi bi-trash"></i>
-                        Delete
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@endif
 
 @endsection
 
 
 @push('after-scripts')
 
-<script>
-    $(window).on('load', function () {
-        $('#overlay').modal('show');
-    });
-    $("#close-btn").click(function () {
-        $('#overlay').modal('hide');
-    });
-</script>
+    <script type="text/javascript">
+      // Initialize the echarts instance based on the prepared dom
+      var myChart = echarts.init(document.getElementById('guage'));
 
-<script>
-    $('.delete').on('click', function () {
-        let link = $(this).attr('href');
-        $('.modal-footer a').attr('href', link);
-    })
-</script>
+      // Specify the configuration items and data for the chart
+      option = {
+        series: [
+            {
+            type: 'gauge',
+            center: ['50%', '60%'],
+            startAngle: 200,
+            endAngle: -20,
+            itemStyle: {
+                color: '#017FFA'
+            },
+            progress: {
+                show: true,
+                width: 20
+            },
+            axisLine: {
+                lineStyle: {
+                width: 20
+                }
+            },
+            pointer: {
+                show: false
+            },
+            axisTick: {
+                show: false
+            },
+            splitLine: {
+                show: false
+            },
+            axisLabel: {
+                show: false
+            },
+            anchor: {
+                show: false
+            },
+            title: {
+                show: false
+            },
+            detail: {
+                show: false
+            },
+            data: [
+                {
+                value: {{$project->score}}
+                }
+            ]
+            }
+        ]
+        };
+
+      // Display the chart using the configuration items and data just specified.
+      myChart.setOption(option);
+    </script>
+
+    <script>
+        // Bot Slider
+        var botSlider = new Splide( '#botSlider', {
+            type   : 'loop',
+            width: '450px',
+            } );
+
+            botSlider.mount();
+    </script>
+
+    <script>
+        // Modal Function
+        const actionBlock = document.querySelectorAll(".action-block")
+        const listItem = document.querySelectorAll(".list-item")
+        const btnNext =document.querySelectorAll("[btn-next]")
+        const btnPrev =document.querySelector("[btn-prev]")
+        const btnSubmit =document.querySelector("[btn-submit]")
+        const formSelect = document.querySelector("[form-select]")
+        const formCheck = document.querySelector("[form-check]")
+        const sliderInput = document.querySelector("[slider-input]")
+        const quantityInput = document.querySelector("[quantity-input]")
+        const termsInput = document.querySelector("[terms-input]")
+        const summeryInput = document.querySelector("[summery-input]")
+        const totalFee = document.querySelector("[total-fee]")
+        const dataBot = document.querySelectorAll("[data-bot]")
+
+        let counter = 0;
+
+        dataBot.forEach(function(bot){
+            bot.addEventListener('click', function() {
+                const dataVal = bot.getAttribute("data-bot")
+                sliderInput.value = dataVal
+                counter += 1;
+                btnPrev.classList.add('active')
+                actionBlock[counter].classList.add('active')
+                actionBlock[counter - 1].classList.remove('active')
+                listItem[counter].classList.add('active')
+            })
+        });
+
+        btnNext[0].addEventListener('click', function(){
+            const dataVal = formSelect.value
+            quantityInput.value = dataVal
+            counter += 1;
+            actionBlock[counter].classList.add('active')
+            actionBlock[counter - 1].classList.remove('active')
+            listItem[counter].classList.add('active')
+        })
+
+        btnNext[1].addEventListener('click', function(){
+            
+            if(formCheck.checked) {
+                termsInput.value = '1'
+
+                counter += 1;
+
+                actionBlock[counter].classList.add('active')
+                actionBlock[counter - 1].classList.remove('active')
+                listItem[counter].classList.add('active')
+            } else {
+                return;
+            }
+            
+        })
+
+        btnSubmit.addEventListener('click', function(){
+            const dataVal = totalFee.textContent
+            summeryInput.value = dataVal
+            btnSubmit.textContent = 'Done'
+        })
+
+        btnPrev.addEventListener('click', function(){
+            if(counter>0) {
+                counter -= 1;
+                actionBlock[counter].classList.add('active')
+                actionBlock[counter + 1].classList.remove('active')
+                listItem[counter].classList.add('active')
+                listItem[counter + 1].classList.remove('active')
+
+                if(counter == 0 ) {
+                    btnPrev.classList.remove('active')
+                } else {
+                    return;
+                }
+
+            } else {
+                return;
+            }
+        })
+    </script>
 
 @endpush

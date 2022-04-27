@@ -1,3 +1,30 @@
+<style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .notification {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+    }
+
+    .notification:hover {
+    background: red;
+    }
+
+    .notification .badge {
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    }
+</style>
+
 <div class="sidebar">
     <nav class="sidebar-nav">
         <ul class="nav">
@@ -147,7 +174,7 @@
             <li class="nav-item">
                 <a class="nav-link {{active_class(Route::is('admin/ims_pro_widgets'))}}" href="{{ route('admin.ims_pro_widgets.index') }}">
                     <i class="nav-icon fas fa-clipboard-list"></i>
-                    IMS Pro
+                    IMS Pro <span class="notification badge">{{App\Models\Widgets::where('end_point_settings',null)->where('widget_type','IMS Pro')->get()->count()}}</span>
                 </a>
             </li>
 

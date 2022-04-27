@@ -48,15 +48,14 @@
 .navigation-bar .inner-wrapper .navbar-nav .nav-item .nav-link {
     font-size: 14px;
     font-weight: 300;
-    color: #000;
+    color: #333;
+    padding: 0.25em 0.75em;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
 }
 
-.navigation-bar .inner-wrapper .navbar-nav .nav-item .nav-link:hover {
-    color: #00AEEF;
-}
-
-.navigation-bar .inner-wrapper .navbar-nav .nav-item .nav-link.active {
-    color: #00AEEF;
+.navigation-bar .inner-wrapper .navbar-nav .nav-item .nav-link:not(.brand-link).active {
+    border-bottom: 2px solid #a1d2fc;
 }
 
 .navigation-bar .inner-wrapper .navbar-nav .nav-item .nav-link:focus {
@@ -277,8 +276,9 @@
 
 
 #getstartedNav {
-    border: 1px solid #00AEEF;
+    border: 1px solid #fff;
     padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
 #getstartedNav:focus {

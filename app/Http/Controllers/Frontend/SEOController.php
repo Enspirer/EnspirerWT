@@ -10,10 +10,11 @@ class SEOController extends Controller
 {
     public function seo($id)
     {
-
+        $project = Projects::where('id',$id)->first();
 
         return view('frontend.user.projects.seo',[
-            'project_id' => $id
+            'project_id' => $id,
+            'project' => $project
         ]);
     }
 }

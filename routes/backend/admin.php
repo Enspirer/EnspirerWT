@@ -65,6 +65,13 @@ Route::post('projects/update', [ProjectsController::class, 'update'])->name('pro
 Route::get('projects/delete/{id}', [ProjectsController::class, 'destroy'])->name('projects.destroy');
 Route::get('projects/seo_report/{id}', [ProjectsController::class, 'seo_report'])->name('projects.seo_report');
 
+Route::get('projects/bots/{id}', [ProjectsController::class, 'bots'])->name('projects.bots');
+Route::get('projects/bots_getdetails/{id}', [ProjectsController::class, 'bots_getdetails'])->name('projects.bots_getdetails');
+Route::get('projects/bots_edit/{id}', [ProjectsController::class, 'bots_edit'])->name('projects.bots_edit');
+Route::post('projects/bots_update', [ProjectsController::class, 'bots_update'])->name('projects.bots_update');
+Route::get('projects/bots/bots_delete/{id}', [ProjectsController::class, 'bots_destroy'])->name('projects.bots_destroy');
+
+
 Route::get('projects/widget_manager/{id}', [WidgetController::class, 'index'])->name('projects.widget_manager');
 Route::get('projects/widget_manager/create/{id}', [WidgetController::class, 'create'])->name('projects.widget_manager.create');
 Route::post('projects/widget_manager/store', [WidgetController::class, 'store'])->name('projects.widget_manager.store');
@@ -123,6 +130,10 @@ Route::get('ims_pro_widgets/endpoint_settings_update_null/{id}', [IMSProWidgetsC
 
 Route::get('ims_pro_widgets/all_inquiries/{id}', [IMSProWidgetsController::class, 'all_inquiries'])->name('ims_pro_widgets.all_inquiries');
 Route::get('ims_pro_widgets/all_inquiries_getdetails/{id}', [IMSProWidgetsController::class, 'all_inquiries_getdetails'])->name('ims_pro_widgets.all_inquiries_getdetails');
+
+Route::get('project_bills_getdetails/{id}', [UserProjectController::class, 'project_bills_getdetails'])->name('project_bills_getdetails');
+Route::get('project_bills_backend/{id}', [UserProjectController::class, 'project_bills_backend'])->name('project_bills_backend');
+
 
 Route::post('ims_pro_widgets/update', [IMSProWidgetsController::class, 'update'])->name('ims_pro_widgets.update');
 Route::get('ims_pro_widgets/delete/{id}', [IMSProWidgetsController::class, 'destroy'])->name('ims_pro_widgets.destroy');

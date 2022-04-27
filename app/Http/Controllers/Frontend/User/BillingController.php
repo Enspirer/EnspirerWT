@@ -39,10 +39,14 @@ class BillingController extends Controller
     {       
         $project = Projects::where('user_id',auth()->user()->id)->where('id',$id)->first();
         $paid_invoices = BillingInvoice::where('project_id',$id)->where('status','Paid')->where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
+        $unpaid_invoices = BillingInvoice::where('project_id',$id)->where('status','Unpaid')->where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
+        $pending_invoices = BillingInvoice::where('project_id',$id)->where('status','Pending')->where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
 
         return view('frontend.user.billing.paid_invoices',[
             'project' => $project,
-            'paid_invoices' => $paid_invoices
+            'paid_invoices' => $paid_invoices,
+            'unpaid_invoices' => $unpaid_invoices,
+            'pending_invoices' => $pending_invoices
         ]);
     }
 

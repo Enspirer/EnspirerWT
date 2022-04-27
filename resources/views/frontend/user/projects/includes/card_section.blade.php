@@ -5,7 +5,7 @@
         @if(App\Models\Projects::where('id',$project_id)->first()->selected_package == 'Optimizer' || App\Models\Projects::where('id',$project_id)->first()->selected_package == 'All In One Widget + IMS Pro')
             <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
                 <a href="{{route('frontend.user.project.chat',$project_id)}}" class="card-link disabled">
-                    <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 51 51" style="enable-background:new 0 0 51 51;" xml:space="preserve">
+                    <!-- <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 51 51" style="enable-background:new 0 0 51 51;" xml:space="preserve">
                         <style type="text/css">
                             .st0{fill:none;stroke-width:3;}
                         </style>
@@ -15,14 +15,15 @@
                             <path id="Rectangle_1359" class="st0" d="M1.5,28.5h16c2.2,0,4,1.8,4,4v17l0,0h-16c-2.2,0-4-1.8-4-4V28.5L1.5,28.5z"/>
                             <path id="Rectangle_1360" class="st0" d="M33.5,28.5h16l0,0v17c0,2.2-1.8,4-4,4h-16l0,0v-17C29.5,30.3,31.3,28.5,33.5,28.5z"/>
                         </g>
-                    </svg>
+                    </svg> -->
+                    <img src="{{url('images/dashboard/main/widget-lite.png')}}" alt="">
                     <div class="text">Widget Lite</div>
                 </a>
             </div>
         @else
             <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
                 <a href="{{route('frontend.user.project.chat',$project_id)}}" class="card-link">
-                    <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 51 51" style="enable-background:new 0 0 51 51;" xml:space="preserve">
+                    <!-- <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 51 51" style="enable-background:new 0 0 51 51;" xml:space="preserve">
                         <style type="text/css">
                             .st0{fill:none;stroke-width:3;}
                         </style>
@@ -32,7 +33,8 @@
                             <path id="Rectangle_1359" class="st0" d="M1.5,28.5h16c2.2,0,4,1.8,4,4v17l0,0h-16c-2.2,0-4-1.8-4-4V28.5L1.5,28.5z"/>
                             <path id="Rectangle_1360" class="st0" d="M33.5,28.5h16l0,0v17c0,2.2-1.8,4-4,4h-16l0,0v-17C29.5,30.3,31.3,28.5,33.5,28.5z"/>
                         </g>
-                    </svg>
+                    </svg> -->
+                    <img src="{{url('images/dashboard/main/widget-lite.png')}}" alt="">
                     <div class="text">Widget Lite</div>
                 </a>
             </div>
@@ -41,7 +43,7 @@
         @if(App\Models\Projects::where('id',$project_id)->first()->selected_package == 'Optimizer')
             <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
                 <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link disabled">
-                    <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 51 51" style="enable-background:new 0 0 51 51;" xml:space="preserve">
+                    <!-- <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 51 51" style="enable-background:new 0 0 51 51;" xml:space="preserve">
                         <style type="text/css">
                             .st0{fill:none;stroke-width:3;}
                             .st1{fill-rule:evenodd;clip-rule:evenodd;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
@@ -55,14 +57,15 @@
                                 <line class="st1" x1="39.5" y1="21.5" x2="39.5" y2="1.5"/>
                             </g>
                         </g>
-                    </svg>
+                    </svg> -->
+                    <img src="{{url('images/dashboard/main/widget-pro.png')}}" alt="">
                     <div class="text">Widget Pro</div>
                 </a>
             </div>
         @else
             <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
                 <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link">
-                    <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 51 51" style="enable-background:new 0 0 51 51;" xml:space="preserve">
+                    <!-- <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 51 51" style="enable-background:new 0 0 51 51;" xml:space="preserve">
                         <style type="text/css">
                             .st0{fill:none;stroke-width:3;}
                             .st1{fill-rule:evenodd;clip-rule:evenodd;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
@@ -76,7 +79,8 @@
                                 <line class="st1" x1="39.5" y1="21.5" x2="39.5" y2="1.5"/>
                             </g>
                         </g>
-                    </svg>
+                    </svg> -->
+                    <img src="{{url('images/dashboard/main/widget-pro.png')}}" alt="">
                     <div class="text">Widget Pro</div>
                 </a>
             </div>
@@ -85,7 +89,7 @@
        
             <div class="card {{Request::segment(3)=='optimizer' ? 'active tab-active' :null }}">
                 <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
-                    <svg  class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 52.5 51.3" style="enable-background:new 0 0 52.5 51.3;" xml:space="preserve">
+                    <!-- <svg  class="tab-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 52.5 51.3" style="enable-background:new 0 0 52.5 51.3;" xml:space="preserve">
                         <style type="text/css">
                             .st0{fill:none;stroke-width:3;}
                             .st1{fill:none;stroke-width:2;stroke-linecap:round;}
@@ -106,17 +110,20 @@
                                 <circle id="Ellipse_423" class="st3" cx="36.3" cy="19.8" r="3"/>
                             </g>
                         </g>
-                    </svg>
+                    </svg> -->
+                    <img src="{{url('images/dashboard/main/optimizer.png')}}" alt="">
                     <div class="text">Optimizer</div>
                 </a>
             </div>
-        <!-- <div class="card {{Request::segment(3)=='optimizer_plus' ? 'active' :null }}">
-            <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
-                <i class="bi bi-ui-checks-grid"></i>
-                <div class="text">Optimizer Plus</div>
-            </a>
-        </div> -->
+
+            <div class="card {{Request::segment(3)=='optimizer_plus' ? 'active' :null }}">
+                <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
+                    <img src="{{url('images/dashboard/main/seo.png')}}" alt="">
+                    <div class="text">SEO</div>
+                </a>
+            </div>
     </div>
+
     @if(App\Models\Projects::where('id',$project_id)->where('selected_package','Optimizer')->first() != null)
         <div class="tabs {{Request::segment(3)=='optimizer' ? 'active' :null }}">
             <div class="tab {{Request::segment(4)=='realtime' ? 'active' :null }}">
@@ -131,14 +138,14 @@
                     <div class="text">Analytics Center</div>
                 </a>
             </div>
-            <div class="tab">
-                <a href="#" class="tab-link">
+            <div class="tab {{Request::segment(4)=='seo' ? 'active' :null }}">
+                <a href="{{ route('frontend.user.project.seo',$project_id) }}" class="tab-link">
                     <img src="{{url('images/dashboard/tab_section/seo-report.png')}}" alt="">
                     <div class="text">SEO Report</div>
                 </a>
             </div>
-            <div class="tab">
-                <a href="#" class="tab-link">
+            <div class="tab {{Request::segment(4)=='security' ? 'active' :null }}">
+                <a href="{{ route('frontend.user.project.security',$project_id) }}" class="tab-link">
                     <img src="{{url('images/dashboard/tab_section/security.png')}}" alt="">
                     <div class="text">Security</div>
                 </a>
@@ -146,185 +153,6 @@
         </div>
     @endif
 </div>
-
-<!-- <div class="subcription-block activated">
-    <div class="active-overlay animate__animated animate__fadeIn">
-        <div class="button-block">
-            <div class="btn-group">
-                <button type="button" class="act-btn ims-lite">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <div class="text">iMS Lite</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-gear"></i>
-                    <div class="text">Settings</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-code-slash"></i>
-                    <div class="text">Add Script</div>
-                </button>                
-            </div>
-            <div class="btn-group">
-                <button type="button" class="act-btn delete">
-                    <i class="bi bi-trash"></i>
-                    <div class="text">Delete</div>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="inner-wrapper">
-        <img src="{{url('images/dashboard/subscriptions/whatsapp-water-mark.png')}}" alt="" class="water-mark">
-        <div class="widget-block">
-            <div class="title">WhatsApp Widget</div>
-            <img src="{{url('images/dashboard/subscriptions/whatsapp.png')}}" alt="" class="widget-img">
-        </div>
-        <div class="separator">
-            <i class="bi bi-plus-lg"></i>
-        </div>
-        <div class="widget-block">
-            <div class="title">IMS <span class="pro-cat blue">Lite</span></div>
-            <img src="{{url('images/dashboard/subscriptions/ims-lite.png')}}" alt="" class="widget-img">
-        </div>
-        <a href="#" class="sub-btn">
-            <i class="bi bi-plus"></i>
-            <div class="text">Activated</div>
-        </a>
-    </div>
-</div> -->
-
-
-
-<!-- <div class="subcription-block">
-    <div class="active-overlay animate__animated animate__fadeIn">
-        <div class="button-block">
-            <div class="btn-group">
-                <button type="button" class="act-btn ims-lite">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <div class="text">iMS Lite</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-gear"></i>
-                    <div class="text">Settings</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-code-slash"></i>
-                    <div class="text">Add Script</div>
-                </button>                
-            </div>
-            <div class="btn-group">
-                <button type="button" class="act-btn delete">
-                    <i class="bi bi-trash"></i>
-                    <div class="text">Delete</div>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="inner-wrapper">
-        <img src="{{url('images/dashboard/subscriptions/whatsapp-water-mark.png')}}" alt="" class="water-mark">
-        <div class="widget-block">
-            <div class="title">WhatsApp Widget</div>
-            <img src="{{url('images/dashboard/subscriptions/whatsapp.png')}}" alt="" class="widget-img">
-        </div>
-        <div class="separator">
-            <i class="bi bi-plus-lg"></i>
-        </div>
-        <div class="widget-block">
-            <div class="title">IMS <span class="pro-cat red">Pro</span></div>
-            <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
-        </div>
-        <a href="#" class="sub-btn">
-            <i class="bi bi-plus"></i>
-            <div class="text">Activate</div>
-        </a>
-    </div>
-</div> -->
-
-
-
-<!-- <div class="subcription-block">
-    <div class="active-overlay animate__animated animate__fadeIn">
-        <div class="button-block">
-            <div class="btn-group">
-                <button type="button" class="act-btn ims-lite">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <div class="text">iMS Lite</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-gear"></i>
-                    <div class="text">Settings</div>
-                </button>
-                <button type="button" class="act-btn">
-                    <i class="bi bi-code-slash"></i>
-                    <div class="text">Add Script</div>
-                </button>                
-            </div>
-            <div class="btn-group">
-                <button type="button" class="act-btn delete">
-                    <i class="bi bi-trash"></i>
-                    <div class="text">Delete</div>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="content-block">
-        <div class="widget-block">
-            <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
-            <div class="content">
-                <div class="title">Desktop</div>
-                <ul class="options">
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Realtime View + Invites</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Analytics Center</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">SEO Reports</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi red bi-x-circle-fill"></i>
-                        <div class="text">Session Recording</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi red bi-x-circle-fill"></i>
-                        <div class="text">Heatmaps</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi red bi-x-circle-fill"></i>
-                        <div class="text">Security</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="widget-block">
-            <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
-            <div class="content">
-                <div class="title">Mobile</div>
-                <ul class="options">
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Realtime View</div>
-                    </li>
-                    <li class="list-item">
-                        <i class="bi green bi-check-circle-fill"></i>
-                        <div class="text">Visitor Invite</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="button-block">
-        <a href="#" class="sub-btn">
-            <i class="bi bi-plus"></i>
-            <div class="text">Activate</div>
-        </a>
-    </div>
-</div> -->
-
-
 
 <div class="modal fade dashboard-modal action-modal" id="widgetdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
     aria-hidden="true">

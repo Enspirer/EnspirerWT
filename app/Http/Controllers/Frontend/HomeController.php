@@ -401,7 +401,12 @@ class HomeController extends Controller
 
 
         $project = Projects::where('id',$widget->project_id)->first();
-        push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'far fa-comment-dots', url('user_widget/ims/individual_inbox',$client->id), $project->user_id);
+        if($project->selected_package == 'All In One Widget + IMS Lite'){
+            push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'far fa-comment-dots', url('user_widget/ims/individual_inbox',$client->id), $project->user_id);
+        }
+        else{
+            push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'far fa-comment-dots', url('user_widget/ims_pro_media_scan',$project->id), $project->user_id);
+        }
 
 
         $incom =  urlencode($request->usermessage);
@@ -1252,6 +1257,30 @@ class HomeController extends Controller
                 ImsProClientMessages::where('phone_number', $entry)->delete();
             }
         }
+    }
+    
+
+    
+
+    public function check_project_available_days(Request $request)
+    {       
+        $projects = Projects::where('status','!=','disabled')->get();
+        // return $projects;
+
+        foreach ($projects as $project) {
+
+            if(get_expire_date($project->id)['remaining_days'] < 1 ){
+
+                $update = new Projects;
+                $update->status = 'Disabled';
+                Projects::whereId($project->id)->update($update->toArray());
+            }
+            
+        }
+
+        // return $projects;
+
+        
     }
     
 

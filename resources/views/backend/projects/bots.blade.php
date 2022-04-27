@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('IMS Pro Widgets'))
+@section('title', __('Bots'))
 
 @section('content')
     
@@ -10,9 +10,9 @@
 
             <div class="card">
                 <div class="card-header">
-                    <strong>IMS Pro Widgets&nbsp;</strong>
+                    <strong>Bots&nbsp; ({{$project->name}})</strong>
 
-                    
+                   
                 </div><!--card-header-->
 
                 <div class="card-body">
@@ -20,11 +20,12 @@
                         <thead>
                             <tr>
                                 <th scope="col">#ID</th>
-                                <th scope="col">Project Name</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Widget Key</th>
-                                <th scope="col">Endpoint Settings</th>
-                                <th scope="col">Status</th>
+                                <th scope="col">Bot Type</th>                        
+                                <th scope="col">Total Score</th>                        
+                                <th scope="col">Activated Bot Count</th>                        
+                                <th scope="col">Starting Time</th>                        
+                                <th scope="col">Ending Time</th>                        
+                                <th scope="col">Status</th>                        
                                 <th scope="col">Option</th>
                             </tr>
                         </thead>
@@ -72,16 +73,17 @@
         $(function () {
             var table = $('#villadatatable').DataTable({
                 processing: true,
-                ajax: "{{route('admin.ims_pro_widgets.getdetails')}}",
+                ajax: "{{route('admin.projects.bots_getdetails',$project->id)}}",
                 serverSide: true,
                 order: [[0, "desc"]],
                 columns: [
                     {data: 'id', name: 'id'},
-                    {data: 'project', name: 'project'},
-                    {data: 'category', name: 'category'},
-                    {data: 'widget_key', name: 'widget_key'},                    
-                    {data: 'end_point_settings', name: 'end_point_settings'},
-                    {data: 'status', name: 'status'},
+                    {data: 'bot_type', name: 'bot_type'},
+                    {data: 'total_score', name: 'total_score'},
+                    {data: 'activated_bot_count', name: 'activated_bot_count'},
+                    {data: 'starting_time', name: 'starting_time'},
+                    {data: 'ending_time', name: 'ending_time'},
+                    {data: 'status', name: 'status'},                    
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
             });
@@ -96,7 +98,7 @@
 
             $('#ok_button').click(function(){
             $.ajax({
-            url:"ims_pro_widgets/delete/"+user_id,
+            url:"bots_delete/"+user_id,
             
             success:function(data)
             {

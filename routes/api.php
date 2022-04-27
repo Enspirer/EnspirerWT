@@ -60,4 +60,5 @@ Route::post('user_optimizer/realtime_invite', [WidgetController::class, 'realtim
 
 Route::post('selected_conversation', [HomeController::class, 'selected_conversation'])->name('selected_conversation');
 
+Route::get('check_project_available_days', [HomeController::class,'check_project_available_days'])->name('check_project_available_days');
 

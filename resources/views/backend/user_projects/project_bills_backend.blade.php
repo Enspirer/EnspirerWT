@@ -1,37 +1,13 @@
-@extends('frontend.layouts.dashboard_app')
+@extends('backend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.frontend.dashboard') )
+@section('title', __('General Settings'))
 
 @section('content')
 
-<link rel="stylesheet" href="{{url('css/reports.css')}}">
-<link rel="stylesheet" href="{{url('css/projects.css')}}">
 <link rel="stylesheet" href="{{url('css/billing.css')}}">
-   
-
-<section id="sectionMainWindow">
-        @include('frontend.includes.sidebar')
-
-    <div id="sectionBody">
-            @include('frontend.includes.nav')
-            
-            <!-- Content goes here -->
-        <div class="row g-0">
-            <div class="section-content">
-                <div class="section-container">
 
 
-            <!-- Section Billing Main -->
-
-                <div class="section-header">
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                        <li class="breadcrumb-item"><i class="bi bi-chevron-right"></i></li>
-                        <li class="breadcrumb-item"><span>Paid Invoices</span></li>
-                    </ul>
-                </div>
-
-                <!-- <div class="row g-0">
+<div class="row g-0 px-5">
                     <div class="ims__control-panel">
                         <div class="row">
                             <div class="col-3">
@@ -44,108 +20,29 @@
                             <div class="col-9">
                                 <h5>Name: {{$project->name}}</h5>
                                 @if($project->settings != null)
-                                    <h5>Owner Email: {{json_decode($project->settings)->owner_email}}</h5>
-                                    <h5>Owner Phone Number: {{json_decode($project->settings)->owner_phone_number}}</h5>
-                                    <h5>Company Email: {{json_decode($project->settings)->company_email}}</h5>
-                                    <h5>Company Address: {{json_decode($project->settings)->company_address}}</h5>
-                                    <h5>{{get_expire_date($project->id)['remaining_days']}} days left to expire.</h5>
+                                    <h6>Owner Email: {{json_decode($project->settings)->owner_email}}</h6>
+                                    <h6>Owner Phone Number: {{json_decode($project->settings)->owner_phone_number}}</h6>
+                                    <h6>Company Email: {{json_decode($project->settings)->company_email}}</h6>
+                                    <h6>Company Address: {{json_decode($project->settings)->company_address}}</h6>
+                                    <h6>{{get_expire_date($project->id)['remaining_days']}} days left to expire.</h6>
                                 @endif
                             </div>
                         </div>                        
                     </div>
-                </div> -->
-
-                <div class="billing-summery">
-                    <div class="inner-wrapper">
-                        <div class="package-block">
-                            <div class="header">
-                                <div class="text">Project Details</div>
-                                <i class="bi bi-question-circle-fill"></i>
-                            </div>
-                            <div class="body">
-                                <div class="image-block">
-                                @if($project->settings != null)
-                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" alt="" width="100%">
-                                @else
-                                    <img src="https://fakeimg.pl/250x100/" alt="" width="100%">
-                                @endif
-                                </div>
-                                <div class="property-block">
-                                    <div class="title">Project name and Link</div>
-                                    <div class="pro-name">{{$project->name}}</div>
-                                    <div class="pro-url">{{$project->url}}</div>
-                                </div>
-                                <div class="package">
-                                    <div class="title">Package Details</div>
-                                    <div class="inner-block">
-                                        <div class="image-block">
-                                            @if($project->selected_package == 'All In One Widget + IMS Lite')
-                                                <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
-                                            @elseif($project->selected_package == 'All In One Widget + IMS Pro')
-                                                <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
-                                            @elseif($project->selected_package == 'Optimizer')
-                                                <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
-                                            @endif
-                                        </div>
-                                        <div class="content-block">
-                                            <div class="title">Package</div>
-                                                @if($project->selected_package != null)
-                                                    <div class="name">{{$project->selected_package}}</div>
-                                                @else
-                                                    <div class="name">Not Selected</div>
-                                                @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="summery-block">
-                            <div class="header">
-                                <div class="text">Payment Details</div>
-                                <i class="bi bi-question-circle-fill"></i>
-                            </div>
-                            <div class="body">
-                                <div class="title">Payment Status</div>
-                                <div class="content-block">
-                                    <div class="status-block green">
-                                        <i class="bi bi-circle-fill"></i>
-                                        <div class="text">Paid Bills</div>
-                                        <div class="count">{{count($paid_invoices)}}</div>
-                                    </div>
-                                    <div class="status-block red">
-                                        <i class="bi bi-circle-fill"></i>
-                                        <div class="text">Unpaid Bills</div>
-                                        <div class="count">{{count($unpaid_invoices)}}</div>
-                                    </div>
-                                    <div class="status-block orange">
-                                        <i class="bi bi-circle-fill"></i>
-                                        <div class="text">Pending Bills</div>
-                                        <div class="count">{{count($pending_invoices)}}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 
                 @if(count($paid_invoices) == 0)
-                    <!-- @include('frontend.includes.not_found',[
+                    @include('frontend.includes.not_found',[
                         'not_found_title' => 'Data not found',
                         'not_found_description' => null,
                         'not_found_button_caption' => null
-                    ]) -->
-
-                    <div class="ims__control-panel">
-                        <div class="row g-0">
-                            <img src="{{url('images/dashboard/billing/no-data.png')}}" alt="" class="no-data-img">
-                        </div>
-                    </div>
+                    ])
                 @else
-                    <div class="row g-0 mt-5">
+                    <div class="row g-0 mt-5 px-5">
                         <div class="ims__control-panel">
                             <div class="row g-0">
                                 <div class="col">
-                                    <div class="control-block">
+                                    <!-- <div class="control-block">
                                         <div class="controls">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox"
@@ -169,13 +66,13 @@
                                                 <i class="bi bi-three-dots"></i>
                                             </a>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="ims__data-table">
                                         <table class="table table-borderless">
                                             <thead>
                                                 <tr class="data-row">
-                                                    <th class="data-title"></th>
+                                                    <!-- <th class="data-title"></th> -->
                                                     <th class="data-title">Invoice ID</th>
                                                     <th class="data-title">Status</th>
                                                     <th class="data-title">Created at</th>
@@ -189,10 +86,10 @@
 
                                                 @foreach($paid_invoices as $paid_invoice)
                                                     <tr class="data-row" data-row>
-                                                        <td class="data--select data-cell">
+                                                        <!-- <td class="data--select data-cell">
                                                             <input class="form-check-input inquiry-check"
                                                             id="#" type="checkbox" value="">
-                                                        </td>
+                                                        </td> -->
                                                         <td class="data--id data-cell">
                                                             <div class="text">{{$paid_invoice->id}}</div>
                                                         </td>
@@ -293,7 +190,6 @@
                                                                         </div>
 
                                                                         <div class="button-block">
-                                                                            <a href="#" class="btn btn-payNow">Pay Now</a>
                                                                             <a href="{{ route('frontend.invoice_pdf',$paid_invoice->id) }}" class="btn btn-view">View Invoice</a>
                                                                         </div>
                                                                     </div>
@@ -315,18 +211,10 @@
                     </div>
 
                 @endif
+
+
+
                 
-            </div>
-        </div>
-    </div>
-</div>
-
-    
-@endsection
-
-
-@push('after-scripts')
-
 <script>
 const dataRow = document.querySelectorAll("[data-row]")
 const dataInnerRow = document.querySelectorAll("[data-inner-row]")
@@ -366,4 +254,5 @@ dataRow.forEach(function (arr1, index) {
         })
     </script>
 
-@endpush
+
+@endsection

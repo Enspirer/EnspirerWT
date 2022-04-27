@@ -1465,6 +1465,11 @@
     border-radius: 1rem;
 }
 
+.section-content #sectionProperties .property-block.disabled{
+    filter: grayscale(1);
+    opacity: .75;
+}
+
 .section-content #sectionProperties .property-block .inner-wrapper {
     display: flex;
     align-items: center;

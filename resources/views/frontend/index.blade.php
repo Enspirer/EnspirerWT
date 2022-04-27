@@ -6,7 +6,7 @@
     
 @include('frontend.includes.home_nav')
 
-    <section class="hero-section">
+    <section class="hero-section home">
         <div class="container">
             <div class="splide" id="heroSlider">
                 <div class="splide__track">
@@ -24,7 +24,7 @@
                                     </div>
                                 </div>
                                 <div class="image-block slide-01">
-                                    <img src="{{url('images/landing_page/home/hero-widget.png')}}" alt="hero-image">
+                                    <img src="{{url('images/landing_page/home/slide-widget-lite.png')}}" alt="hero-image">
                                 </div>
                             </div>
                         </li>
@@ -41,7 +41,7 @@
                                     </div>
                                 </div>
                                 <div class="image-block">
-                                    <img src="{{url('images/landing_page/home/hero-widget-plus.png')}}" alt="hero-image">
+                                    <img src="{{url('images/landing_page/home/slide-widget-pro.png')}}" alt="hero-image">
                                 </div>
                             </div>
                         </li>
@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="image-block">
-                                    <img src="{{url('images/landing_page/home/hero-optimizer.png')}}" alt="hero-image">
+                                    <img src="{{url('images/landing_page/home/slide-optimizer.png')}}" alt="hero-image">
                                 </div>
                             </div>
                         </li>
@@ -542,4 +542,23 @@
 
     
 @endsection
+
+@push('after-scripts')
+
+<script>
+    // nav scroll function
+    document.addEventListener('scroll', function(){
+        const navigationBar = document.querySelector('.navigation-bar')
+
+        if(window.scrollY != 0) {
+            navigationBar.classList.remove("transparent")
+        } else if (window.scrollY == 0) {
+            navigationBar.classList.add("transparent")
+        } else {
+            return;
+        }
+    })
+</script>
+
+@endpush
 
