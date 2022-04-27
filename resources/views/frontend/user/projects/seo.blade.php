@@ -194,10 +194,12 @@
                                                                         @endif
                                                                     @endif
                                                                 @endif
-                                                                @if(count($seo_result->value) != 0)
-                                                                    @foreach($seo_result->value as $headings)
-                                                                        <div class="text">{{$headings}}</div>                                                                  
-                                                                    @endforeach
+                                                                @if(is_array($seo_result->value))
+                                                                    @if(count($seo_result->value) != 0)
+                                                                        @foreach($seo_result->value as $headings)
+                                                                            <div class="text">{{$headings}}</div>                                                                  
+                                                                        @endforeach
+                                                                    @endif
                                                                 @endif
                                                             @endif
 
