@@ -356,6 +356,7 @@
     font-size: 16px;
     font-weight: 400;
     color: #8E8E8E;
+    margin-bottom: .25em;
 }
 
 .seo-block .body .seo-table tbody td .text {
@@ -386,10 +387,20 @@
     flex: 1 1 100%;
 }
 
+.seo-block .body .seo-table tbody td.tbCol-3 a {
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    background-color: antiquewhite;
+    padding: 0.25em 1em;
+    border-radius: 5px;
+    margin: 0.5em 0;
+}
+
 .seo-block .body .seo-table tbody td.tbCol-4 {
     flex: 0 0 20%;
     text-align: center;
-    align-self: center;
+    align-self: flex-start;
 }
 
 /* Bot block */
@@ -814,76 +825,4 @@
 
 .bot-modal .modal-dialog .modal-content .modal-body .content-block .action-block.active {
     display: block;
-}
-
-/* IMS pro section */
-
-.imsPro-section {
-    position: relative;
-    padding: 80px;
-    border-radius: 10px;
-    overflow: hidden;
-    background: url('../images/dashboard/main/ims-pro-background.png');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    margin-bottom: 30px;
-}
-
-.imsPro-section .inner-wrapper {
-    width: 100%;
-    max-width: 500px;
-}
-
-.imsPro-section .inner-wrapper .subtitle {
-    font-size: 22px;
-    font-weight: 400;
-    color: #fff;
-    margin-bottom: 5px;
-}
-
-.imsPro-section .inner-wrapper .title {
-    font-size: 50px;
-    font-weight: 400;
-    color: #74CEFD;
-    line-height: 1;
-}
-
-.imsPro-section .inner-wrapper .option-block {
-    margin: 25px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    row-gap: 10px;
-}
-
-.imsPro-section .inner-wrapper .option-block .option {
-    flex: 0 0 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-}
-
-.imsPro-section .inner-wrapper .option-block .option .bi {
-    font-size: 16px;
-    color: #00AEEF;
-}
-
-.imsPro-section .inner-wrapper .option-block .option .text {
-    font-size: 16px;
-    font-weight: 300;
-    color: #fff;
-}
-
-.imsPro-section .inner-wrapper .ims-btn {
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    background-color: #00AEEF;
-    display: inline-block;
-    padding: 0.75em 2em;
-    border-radius: 5px;
 }

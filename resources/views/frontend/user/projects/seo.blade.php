@@ -29,31 +29,171 @@
 
                         @include('frontend.user.projects.includes.card_section')
 
-                        @include('frontend.user.projects.includes.seo_nav')
+                        <!-- @include('frontend.user.projects.includes.seo_nav') -->
 
-                        <div class="imsPro-section">
+                        <div class="bot-block" id="botSection">
                             <div class="inner-wrapper">
                                 <div class="subtitle">Get your own</div>
                                 <div class="title">Optimizer Bot</div>
-                                <div class="option-block">
-                                    <div class="option">
-                                        <i class="bi bi-check-circle-fill"></i>
-                                        <div class="text">Realtime View + Invites</div>
+                                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quibusdam earum, numquam odio delectus porro nisi eos deleniti rerum asperiores?</div>
+                                <a href="#" class="bot-btn" data-bs-toggle="modal" data-bs-target="#botModal">Get Your Bot</a>
+                            </div>
+                        </div>
+
+                        <div class="modal fade bot-modal" id="botModal" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="back-btn" btn-prev>
+                                            <i class="bi bi-arrow-left-short"></i>
+                                            <div class="text">Back</div>
+                                        </button>
+                                        <div class="modal-title">Get Your Bot</div>
+                                        <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
                                     </div>
-                                    <div class="option">
-                                        <i class="bi bi-check-circle-fill"></i>
-                                        <div class="text">Heatmaps</div>
+                                    <div class="modal-body">
+                                        <div class="naviagtion-block">
+                                            <ul class="nav-tree">
+                                                <li class="list-item active">Choose a Bot
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Quantity
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Terms & Conditions
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Apply your bot
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-block">
+                                            <div class="action-block slider active">
+                                                <input type="hidden" slider-input>
+                                                <div class="splide bot-slider" id="botSlider">
+                                                    <div class="splide__track">
+                                                        <ul class="splide__list">
+                                                            <li class="splide__slide">
+                                                                <a href="#" class="slider-link" data-bot="bot-1">
+                                                                    <div class="slider-card">
+                                                                        <div class="image-block">
+                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                        </div>
+                                                                        <div class="content-block">
+                                                                            <div class="title">Bot Name Here</div>
+                                                                            <ul class="option-list">
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="amount">$500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="splide__slide">
+                                                                <a href="#" class="slider-link" data-bot="bot-2">
+                                                                    <div class="slider-card">
+                                                                        <div class="image-block">
+                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                        </div>
+                                                                        <div class="content-block">
+                                                                            <div class="title">Bot Name Here</div>
+                                                                            <ul class="option-list">
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                                <li>
+                                                                                    Sample Option
+                                                                                    <i class="bi bi-check-circle-fill"></i>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="amount">$500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="action-block quantity-block">
+                                                <input type="hidden" quantity-input>
+                                                <div class="title">How many Bots do you wish to integrate your site ?</div>
+                                                <div class="input-group">
+                                                    <select class="form-select" form-select>
+                                                        <option value="1" selected>1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                    <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="action-block terms-block">
+                                                <input type="hidden" terms-input>
+                                                <div class="title">Terms & Conditions</div>
+                                                <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem eius recusandae sint quasi? Rem ipsa iste, labore adipisci vero mollitia sunt nam totam accusamus! Eum perspiciatis doloribus cumque maxime!</div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="termsCheck" form-check>
+                                                    <label class="form-check-label" for="termsCheck"> I Agreed </label>
+                                                </div>
+                                                <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
+                                            </div>
+                                            <div class="action-block summery-block">
+                                                <input type="hidden" summery-input>
+                                                <div class="fees-block">
+                                                    <div class="fee-row">
+                                                        <div class="text">Subtotal</div>
+                                                        <div class="amount">$20.00</div>
+                                                    </div>
+                                                    <div class="fee-row">
+                                                        <div class="text">Discount</div>
+                                                        <div class="amount">$20.00</div>
+                                                    </div>
+                                                    <div class="fee-row">
+                                                        <div class="text">Taxes & Fees</div>
+                                                        <div class="amount">$20.00</div>
+                                                    </div>
+                                                    <div class="fee-row">
+                                                        <div class="text">Total</div>
+                                                        <div class="amount" total-fee>$20.00</div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn-submit" btn-submit>Submit</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="option">
-                                        <i class="bi bi-check-circle-fill"></i>
-                                        <div class="text">Session Recording</div>
-                                    </div>
-                                    <div class="option">
-                                        <i class="bi bi-check-circle-fill"></i>
-                                        <div class="text">Analytics Center</div>
+                                    <div class="modal-footer">
+                                        <div class="text">Get Bonus</div>
+                                        <div class="bonus">$5</div>
                                     </div>
                                 </div>
-                                <a href="#" class="ims-btn">IMS Pro</a>
+                                <a href="#" class="bot-btn">Get Your Bot</a>
                             </div>
                         </div>
 
@@ -251,7 +391,7 @@
                                                                             <div class="title">The URL is SEO friendly.</div>
                                                                         @endif
                                                                     @endif
-                                                                    <a href="{{$seo_result->value}}"><div class="text">Seo Friendly Url</div></a>
+                                                                    <a href="{{$seo_result->value}}"><div class="text">{{$seo_result->value}}</div></a>
                                                                 @endif 
 
                                                                 @if($key == '404_page')
@@ -262,7 +402,7 @@
                                                                             <div class="title">The website has 404 error pages.</div>
                                                                         @endif
                                                                     @endif
-                                                                    <a href="{{$seo_result->value}}"><div class="text">404 Page</div></a>
+                                                                    <a href="{{$seo_result->value}}"><div class="text">{{$seo_result->value}}</div></a>
                                                                 @endif 
 
                                                                 @if($key == 'robots')
@@ -285,24 +425,20 @@
                                                                         @endif
                                                                     @endif
 
-                                                                    <div class="row">
-                                                                        <div class="col-6">
-                                                                            @if(count($seo_result->value->Externals) != 0)
-                                                                                <div class="title" style="color:black">Externals.</div>
-                                                                                @foreach($seo_result->value->Externals as $external)
-                                                                                    <a href="{{$external->url}}"><div class="text">{{$external->text}}</div></a>                                                                         
-                                                                                @endforeach
-                                                                            @endif
-                                                                        </div>
-                                                                        <div class="col-6">
-                                                                            @if(count($seo_result->value->Internals) != 0)
-                                                                                <div class="title" style="color:black">Internals.</div>
-                                                                                @foreach($seo_result->value->Internals as $internal)
-                                                                                    <a href="{{$internal->url}}"><div class="text">{{$internal->text}}</div></a>                                                                         
-                                                                                @endforeach
-                                                                            @endif
-                                                                        </div>
-                                                                    </div>                                                                
+                                                                    @if(count($seo_result->value->Externals) != 0)
+                                                                        <div class="title my-3">Externals</div>
+                                                                        @foreach($seo_result->value->Externals as $external)
+                                                                            <a href="{{$external->url}}"><div class="text">{{$external->url}}</div></a>                                                                         
+                                                                        @endforeach
+                                                                    @endif
+                                                                    
+                                                                    @if(count($seo_result->value->Internals) != 0)
+                                                                        <div class="title my-3">Internals</div>
+                                                                        @foreach($seo_result->value->Internals as $internal)
+                                                                            <a href="{{$internal->url}}"><div class="text">{{$internal->url}}</div></a>                                                                         
+                                                                        @endforeach
+                                                                    @endif
+                                                                                                                                         
                                                                 @endif
 
                                                                 @if($key == 'language')
@@ -401,12 +537,12 @@
 
                                                                     @if(count($seo_result->value->JavaScripts) != 0)
                                                                         @foreach($seo_result->value->JavaScripts as $JavaScripts)
-                                                                            <a href="{{$JavaScripts}}"><div class="text">JavaScripts</div></a>                                                                         
+                                                                            <a href="{{$JavaScripts}}"><div class="text">{{$JavaScripts}}</div></a>                                                                         
                                                                         @endforeach
                                                                     @endif 
                                                                     @if(count($seo_result->value->Images) != 0)
                                                                         @foreach($seo_result->value->Images as $Images)
-                                                                            <a href="{{$Images}}"><div class="text">Images</div></a>                                                                         
+                                                                            <a href="{{$Images}}"><div class="text">{{$Images}}</div></a>                                                                         
                                                                         @endforeach
                                                                     @endif
                                                                 @endif
@@ -481,7 +617,7 @@
                                                             <td class="tbCol-3">
                                                                 @if($key == 'https_encryption')
                                                                     <div class="title">The webpage uses HTTPS encryption.</div>
-                                                                    <a href="{{$seo_result->value}}"><div class="text">Https Encryption</div></a>
+                                                                    <a href="{{$seo_result->value}}"><div class="text">{{$seo_result->value}}</div></a>
                                                                 @endif 
 
                                                                 @if($key == 'plaintext_email')
@@ -580,172 +716,6 @@
                                 </table>
                             </div>
                         </div> -->
-
-                        <div class="bot-block" id="botSection">
-                            <div class="inner-wrapper">
-                                <div class="subtitle">Get your own</div>
-                                <div class="title">Optimizer Bot</div>
-                                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quibusdam earum, numquam odio delectus porro nisi eos deleniti rerum asperiores?</div>
-                                <a href="#" class="bot-btn" data-bs-toggle="modal" data-bs-target="#botModal">Get Your Bot</a>
-                            </div>
-                        </div>
-
-                        <div class="modal fade bot-modal" id="botModal" tabindex="-1">
-                            <div class="modal-dialog modal-dialog-centered modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="back-btn" btn-prev>
-                                            <i class="bi bi-arrow-left-short"></i>
-                                            <div class="text">Back</div>
-                                        </button>
-                                        <div class="modal-title">Get Your Bot</div>
-                                        <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="naviagtion-block">
-                                            <ul class="nav-tree">
-                                                <li class="list-item active">Choose a Bot
-                                                    <i class="bi bi-check-circle-fill"></i>
-                                                </li>
-                                                <li class="list-item">Quantity
-                                                    <i class="bi bi-check-circle-fill"></i>
-                                                </li>
-                                                <li class="list-item">Terms & Conditions
-                                                    <i class="bi bi-check-circle-fill"></i>
-                                                </li>
-                                                <li class="list-item">Apply your bot
-                                                    <i class="bi bi-check-circle-fill"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-block">
-                                            <div class="action-block slider active">
-                                                <input type="hidden" slider-input>
-                                                <div class="splide bot-slider" id="botSlider">
-                                                    <div class="splide__track">
-                                                        <ul class="splide__list">
-                                                            <li class="splide__slide">
-                                                                <a href="#" class="slider-link" data-bot="bot-1">
-                                                                    <div class="slider-card">
-                                                                        <div class="image-block">
-                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
-                                                                        </div>
-                                                                        <div class="content-block">
-                                                                            <div class="title">Bot Name Here</div>
-                                                                            <ul class="option-list">
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                            </ul>
-                                                                            <div class="amount">$500</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="splide__slide">
-                                                                <a href="#" class="slider-link" data-bot="bot-2">
-                                                                    <div class="slider-card">
-                                                                        <div class="image-block">
-                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
-                                                                        </div>
-                                                                        <div class="content-block">
-                                                                            <div class="title">Bot Name Here</div>
-                                                                            <ul class="option-list">
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                            </ul>
-                                                                            <div class="amount">$500</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="action-block quantity-block">
-                                                <input type="hidden" quantity-input>
-                                                <div class="title">How many Bots do you wish to integrate your site ?</div>
-                                                <div class="input-group">
-                                                    <select class="form-select" form-select>
-                                                        <option value="1" selected>1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                    </select>
-                                                    <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="action-block terms-block">
-                                                <input type="hidden" terms-input>
-                                                <div class="title">Terms & Conditions</div>
-                                                <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem eius recusandae sint quasi? Rem ipsa iste, labore adipisci vero mollitia sunt nam totam accusamus! Eum perspiciatis doloribus cumque maxime!</div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="termsCheck" form-check>
-                                                    <label class="form-check-label" for="termsCheck"> I Agreed </label>
-                                                </div>
-                                                <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
-                                            </div>
-                                            <div class="action-block summery-block">
-                                                <input type="hidden" summery-input>
-                                                <div class="fees-block">
-                                                    <div class="fee-row">
-                                                        <div class="text">Subtotal</div>
-                                                        <div class="amount">$20.00</div>
-                                                    </div>
-                                                    <div class="fee-row">
-                                                        <div class="text">Discount</div>
-                                                        <div class="amount">$20.00</div>
-                                                    </div>
-                                                    <div class="fee-row">
-                                                        <div class="text">Taxes & Fees</div>
-                                                        <div class="amount">$20.00</div>
-                                                    </div>
-                                                    <div class="fee-row">
-                                                        <div class="text">Total</div>
-                                                        <div class="amount" total-fee>$20.00</div>
-                                                    </div>
-                                                </div>
-                                                <button type="submit" class="btn-submit" btn-submit>Submit</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="text">Get Bonus</div>
-                                        <div class="bonus">$5</div>
-                                    </div>
-                                </div>
-                                <a href="#" class="bot-btn">Get Your Bot</a>
-                            </div>
-                        </div>
 
                     </div>
                 </div>

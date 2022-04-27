@@ -116,8 +116,8 @@
                 </a>
             </div>
 
-            <div class="card {{Request::segment(3)=='optimizer_plus' ? 'active' :null }}">
-                <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
+            <div class="card {{Request::segment(3)=='seo' ? 'active' :null }}">
+                <a href="{{ route('frontend.user.project.seo',$project_id) }}" class="card-link">
                     <img src="{{url('images/dashboard/main/seo.png')}}" alt="">
                     <div class="text">SEO</div>
                 </a>
@@ -138,12 +138,12 @@
                     <div class="text">Analytics Center</div>
                 </a>
             </div>
-            <div class="tab {{Request::segment(4)=='seo' ? 'active' :null }}">
+            <!-- <div class="tab {{Request::segment(4)=='seo' ? 'active' :null }}">
                 <a href="{{ route('frontend.user.project.seo',$project_id) }}" class="tab-link">
                     <img src="{{url('images/dashboard/tab_section/seo-report.png')}}" alt="">
                     <div class="text">SEO Report</div>
                 </a>
-            </div>
+            </div> -->
             <div class="tab {{Request::segment(4)=='security' ? 'active' :null }}">
                 <a href="{{ route('frontend.user.project.security',$project_id) }}" class="tab-link">
                     <img src="{{url('images/dashboard/tab_section/security.png')}}" alt="">
