@@ -506,7 +506,131 @@
                             </div>
 
 
-                            
+                            <!-- ********************************************************************************** -->
+
+                            <div class="seo-block">
+                                <div class="heaeder">
+                                    <div class="title">Miscellaneous</div>
+                                    <div class="duration">{{$project->created_at->diffForHumans()}}</div>
+                                </div>
+                                @foreach(json_decode($project->seo_result) as $key => $seo_result)
+                                    @if($key == 'structured_data' || $key == 'meta_viewport' || $key == 'charset' || $key == 'sitemap' || $key == 'social' || $key == 'content_length' || $key == 'text_html_ratio' || $key == 'inline_css' || $key == 'deprecated_html_tags')
+                                    
+                                        <div class="body" style="border-bottom: 1px solid #ddd">
+                                            <table class="seo-table">
+                                                <tbody>
+                                                    <tr>
+                                                        @if($seo_result->importance == 'high')
+                                                            <td class="tbCol-1"><i class="bi font-red bi-triangle-fill"></i></td>
+                                                        @elseif($seo_result->importance == 'medium')
+                                                            <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
+                                                        @else
+                                                            <td class="tbCol-1"><i class="bi font-grey bi-circle-fill"></i></td>
+                                                        @endif
+
+                                                            <td class="tbCol-2">                                                           
+                                                                <div class="title">{{ str_replace("_"," ", ucfirst(trans($key)) ) }}</div>                                                            
+                                                            </td>
+                                                            <td class="tbCol-3">
+                                                                
+                                                                @if($key == 'structured_data')
+                                                                    @if(isset($seo_result->errors)) 
+                                                                        @if($seo_result->errors->missing == null)
+                                                                            <div class="title">Structured data is missing.</div>
+                                                                        @else
+                                                                            <div class="title">The webpage has structured data.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    @if(count($seo_result->value) != 0)
+                                                                        @foreach($seo_result->value as $structured_data)
+                                                                            <div class="text">{{$structured_data}}</div>                                                                  
+                                                                        @endforeach
+                                                                    @endif
+                                                                @endif
+
+                                                                @if($key == 'meta_viewport')
+                                                                    @if(isset($seo_result->errors)) 
+                                                                        @if($seo_result->errors->missing == null)
+                                                                            <div class="title">Meta viewport is missing.</div>
+                                                                        @else
+                                                                            <div class="title">The webpage has a meta viewport tag set.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+                                                                @if($key == 'charset')
+                                                                    <div class="title">The webpage has a charset value set.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+                                                                
+                                                                @if($key == 'sitemap')
+                                                                    <div class="title">The website has sitemaps.</div>
+                                                                    @if(count($seo_result->value) != 0)
+                                                                        @foreach($seo_result->value as $sitemap)
+                                                                            <a href="{{$sitemap}}"><div class="text">Sitemap</div></a>                                                                 
+                                                                        @endforeach
+                                                                    @endif
+                                                                @endif
+
+                                                                @if($key == 'social')
+                                                                    @if(isset($seo_result->errors)) 
+                                                                        @if($seo_result->errors->missing == null)
+                                                                            <div class="title">The webpage does not contain any social links..</div>
+                                                                        @else
+                                                                            <div class="title">The webpage does contain any social links.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    @if(is_array($seo_result->value))
+                                                                        @if(count($seo_result->value) != 0)
+                                                                            @foreach($seo_result->value as $social)
+                                                                                <a href="{{$social}}"><div class="text">Social</div></a>                                                                 
+                                                                            @endforeach
+                                                                        @endif
+                                                                    @endif
+                                                                @endif
+
+                                                                @if($key == 'content_length')
+                                                                    <div class="title">The webpage has 992 words.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+                                                                @if($key == 'text_html_ratio')
+                                                                    <div class="title">The text to HTML ratio is under 10%.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+                                                                @if($key == 'inline_css')
+                                                                    @if(isset($seo_result->errors)) 
+                                                                        @if($seo_result->errors->failed == null)
+                                                                            <div class="title">The webpage does not contain inline CSS code.</div>
+                                                                        @else
+                                                                            <div class="title">The webpage does contain inline CSS code.</div>
+                                                                        @endif
+                                                                    @endif
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+                                                                @if($key == 'deprecated_html_tags')
+                                                                    <div class="title">There are no deprecated HTML tags on the webpage.</div>
+                                                                    <div class="text">{{$seo_result->value}}</div>
+                                                                @endif 
+
+                                                                
+
+                                                                <!-- <div class="text">The size of the HTML webpage is 176.41 kB.</div> -->
+                                                            </td>
+                                                            <td class="tbCol-4">
+                                                                <a href="#" class="table-btn bg-green">Suggestions</a>
+                                                            </td>
+                                                        </tr>                                                   
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
 
 
                         @endif
