@@ -154,7 +154,6 @@
     @endif
 </div>
 
-
 <div class="modal fade dashboard-modal action-modal" id="widgetdisableModal" tabindex="-1" aria-labelledby="createWidgetModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">

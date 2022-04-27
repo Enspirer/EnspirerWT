@@ -8,7 +8,7 @@
 .section-cards .cards {
     display: flex;
     flex-direction: row;
-    width: 75%;
+    width: 100%;
 }
 
 .section-cards .cards .card {
@@ -60,6 +60,7 @@
 .section-cards .cards .card .card-link.disabled {
     pointer-events: none;
     opacity: 0.5;
+    filter: grayscale(1);
 }
 
 .section-cards .cards .card .card-link .tab-icon {
