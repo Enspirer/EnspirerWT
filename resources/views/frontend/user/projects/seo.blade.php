@@ -186,10 +186,12 @@
 
                                                             @if($key == 'headings')
                                                                 @if(isset($seo_result->errors))
-                                                                    @if($seo_result->errors->missing == null)
-                                                                        <div class="title">headers are missing.</div>
-                                                                    @else
-                                                                        <div class="title">The h1 tag is the same with the title tag.</div>
+                                                                    @if(isset($seo_result->errors->missing))
+                                                                        @if($seo_result->errors->missing == null)
+                                                                            <div class="title">headers are missing.</div>
+                                                                        @else
+                                                                            <div class="title">The h1 tag is the same with the title tag.</div>
+                                                                        @endif
                                                                     @endif
                                                                 @endif
                                                                 @if(count($seo_result->value) != 0)
