@@ -1,38 +1,38 @@
-<div class="seo-nav">
+<div class="seo-nav" id="seoNav">
     <ul class="navbar-nav">
-        <li class="nav-item {{Request::segment(5)=='overview' ? 'active' :null }}">
-            <a href="#" class="nav-link">
+        <li class="nav-item">
+            <a href="#overviewSection" class="nav-link">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" alt="">
                     <div class="text">Overview</div>
                 </div>
             </a>
         </li>
-        <li class="nav-item {{Request::segment(5)=='seo' ? 'active' :null }}">
-            <a href="#" class="nav-link">
+        <li class="nav-item">
+            <a href="#seoSection" class="nav-link">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" alt="">
                     <div class="text">SEO</div>
                 </div>
             </a>
         </li>
-        <li class="nav-item {{Request::segment(5)=='performance' ? 'active' :null }}">
-            <a href="#" class="nav-link">
+        <li class="nav-item">
+            <a href="#performanceSection" class="nav-link">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" alt="">
                     <div class="text">Performance</div>
                 </div>
             </a>
         </li>
-        <li class="nav-item {{Request::segment(5)=='miscellaneous' ? 'active' :null }}">
-            <a href="#" class="nav-link">
+        <li class="nav-item">
+            <a href="#miscellaneousSection" class="nav-link">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-miscellaneous.png')}}" alt="">
                     <div class="text">Miscellaneous</div>
                 </div>
             </a>
         </li>
-        <li class="nav-item {{Request::segment(5)=='seo-bot' ? 'active' :null }}">
+        <li class="nav-item">
             <a href="#botSection" class="nav-link">
                 <div class="text-block">
                     <img src="{{url('images/dashboard/ims_pro/nav-bot.png')}}" alt="">

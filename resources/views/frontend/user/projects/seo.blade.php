@@ -31,7 +31,7 @@
 
                         @include('frontend.user.projects.includes.seo_nav')
 
-                        <div class="overview-block" id="overviewSection">
+                        <div class="seo-section overview-block" id="overviewSection">
                             <div class="heaeder">
                                 <div class="title">Overview</div>
                                 <div class="duration">{{$project->created_at->diffForHumans()}}</div>
@@ -136,7 +136,7 @@
                         </div>
 
                         @if($project->seo_result != null)
-                            <div class="seo-block" id="seoSection">
+                            <div class="seo-section seo-block" id="seoSection">
                                 <div class="heaeder">
                                     <div class="title">SEO</div>
                                     <div class="duration">{{$project->created_at->diffForHumans()}}</div>
@@ -313,7 +313,7 @@
 
                             <!-- ********************************************************************************** -->
 
-                            <div class="seo-block" id="performanceSection">
+                            <div class="seo-section seo-block" id="performanceSection">
                                 <div class="heaeder">
                                     <div class="title">Performance</div>
                                     <div class="duration">{{$project->created_at->diffForHumans()}}</div>
@@ -429,7 +429,7 @@
 
                             <!-- **************************************************************************************** -->
 
-                            <div class="seo-block" id="">
+                            <div class="seo-section seo-block" id="">
                                 <div class="heaeder">
                                     <div class="title">Security</div>
                                     <div class="duration">{{$project->created_at->diffForHumans()}}</div>
@@ -462,10 +462,7 @@
                                                                     <div class="title">The webpage does not contain any plaintext emails.</div>
                                                                     <div class="text">{{$seo_result->value}}</div>
                                                                 @endif 
-
                                                                 
-
-                                                                <!-- <div class="text">The size of the HTML webpage is 176.41 kB.</div> -->
                                                             </td>
                                                             <td class="tbCol-4">
                                                                 <a href="#" class="table-btn bg-green">Suggestions</a>
@@ -482,7 +479,7 @@
 
                             <!-- ********************************************************************************** -->
 
-                            <div class="seo-block" id="miscellaneousSection">
+                            <div class="seo-section seo-block" id="miscellaneousSection">
                                 <div class="heaeder">
                                     <div class="title">Miscellaneous</div>
                                     <div class="duration">{{$project->created_at->diffForHumans()}}</div>
@@ -679,7 +676,7 @@
                             </div>
                         </div> -->
 
-                        <div class="bot-block" id="botSection">
+                        <div class="seo-section bot-block" id="botSection">
                             <div class="inner-wrapper">
                                 <div class="subtitle">Get your own</div>
                                 <div class="title">Optimizer Bot</div>

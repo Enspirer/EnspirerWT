@@ -60,6 +60,9 @@
 /* SEO Nav */
 .seo-nav {
     margin: 3rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .seo-nav .navbar-nav {
