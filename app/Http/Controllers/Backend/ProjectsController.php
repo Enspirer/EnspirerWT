@@ -164,6 +164,9 @@ class ProjectsController extends Controller
                 elseif($data->status == 'Deactivated'){
                     $status = '<span class="badge badge-warning">Deactivated</span>';
                 } 
+                elseif($data->status == 'Pending'){
+                    $status = '<span class="badge badge-primary">Pending</span>';
+                } 
                 else{
                     $status = '<span class="badge badge-danger">Failed</span>';
                 }   

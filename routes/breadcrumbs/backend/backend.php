@@ -151,3 +151,8 @@ Breadcrumbs::for('admin.projects.bots', function ($trail) {
 Breadcrumbs::for('admin.projects.bots_edit', function ($trail) {
     $trail->push('Edit Bots', route('admin.projects.bots_edit',1));
 });
+
+
+Breadcrumbs::for('admin.seo_management.index', function ($trail) {
+    $trail->push('SEO Management', route('admin.seo_management.index'));
+});

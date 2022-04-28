@@ -57,6 +57,11 @@
                             Projects
                         </a>
                     </li> 
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/seo_management'))}}" href="{{ route('admin.seo_management.index') }}">
+                            SEO Management
+                        </a>
+                    </li> 
                 </ul>
             </li>
 

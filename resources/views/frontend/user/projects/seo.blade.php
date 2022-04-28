@@ -229,38 +229,51 @@
                                 <div class="progress-block">
                                     <div class="inner-block">
                                         <div class="header font-gray">
-                                            <div class="text">3 high issues</div>
-                                            <div class="precentage">3.0%</div>
+                                            <div class="text">{{$issues_summary['passed_high_risk_points']}} high issues</div>
+                                            <div class="precentage">{{number_format((float)($issues_summary['passed_high_risk_points']/$issues_summary['total_high_risk_points'])*100, 2, '.', '')}}%</div>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar bg-red" style="width:40%"></div>
+                                            @php
+                                                $high = $issues_summary['passed_high_risk_points']/$issues_summary['total_high_risk_points']*100;
+                                            @endphp
+                                            <div class="progress-bar bg-red" style="width:{{$high}}%"></div>
                                         </div>
                                     </div>
                                     <div class="inner-block">
                                         <div class="header font-gray">
-                                            <div class="text">3 medium issues</div>
-                                            <div class="precentage">3.0%</div>
+                                            <div class="text">{{$issues_summary['passed_medium_risk_points']}} medium issues</div>
+                                            <div class="precentage">{{number_format((float)($issues_summary['passed_medium_risk_points']/$issues_summary['total_medium_risk_points'])*100, 2, '.', '')}}%</div>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar bg-orange" style="width:70%"></div>
+                                            @php
+                                                $medium = $issues_summary['passed_medium_risk_points']/$issues_summary['total_medium_risk_points']*100;
+                                            @endphp
+                                            <div class="progress-bar bg-orange" style="width:{{$medium}}%"></div>
                                         </div>
                                     </div>
                                     <div class="inner-block">
                                         <div class="header font-gray">
-                                            <div class="text">2 low issues</div>
-                                            <div class="precentage">3.0%</div>
+                                            <div class="text">{{$issues_summary['passed_low_risk_points']}} low issues</div>
+                                            <div class="precentage">{{number_format((float)($issues_summary['passed_low_risk_points']/$issues_summary['total_low_risk_points'])*100, 2, '.', '')}}%</div>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar bg-brown" style="width:20%"></div>
+                                            @php
+                                                $low = $issues_summary['passed_low_risk_points']/$issues_summary['total_low_risk_points']*100;
+                                            @endphp
+                                            <div class="progress-bar bg-brown" style="width: {{$low}}%"></div>
                                         </div>
                                     </div>
                                     <div class="inner-block">
                                         <div class="header font-gray">
-                                            <div class="text">22 test passed</div>
-                                            <div class="precentage">3.0%</div>
+                                            @php
+                                                $importance = $issues_summary['passed_high_risk_points'] + $issues_summary['passed_medium_risk_points'] + $issues_summary['passed_low_risk_points'];
+                                                $total = $issues_summary['total_high_risk_points'] + $issues_summary['total_medium_risk_points'] + $issues_summary['total_low_risk_points'];
+                                            @endphp
+                                            <div class="text">{{$issues_summary['passed_high_risk_points'] + $issues_summary['passed_medium_risk_points'] + $issues_summary['passed_low_risk_points']}} test passed</div>
+                                            <div class="precentage">{{ ($importance/$total)*100 }}%</div>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar bg-blue" style="width:80%"></div>
+                                            <div class="progress-bar bg-blue" style="width:{{ ($importance/$total)*100 }}%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -274,29 +287,29 @@
                                             </div>
                                             <div class="body">
                                                 <i class="bi font-blue bi-arrow-up-right"></i>
-                                                <div class="precentage font-blue">82.0%</div>
+                                                <div class="precentage font-blue">{{ ($importance/$total)*100 }}%</div>
                                             </div>
                                         </div>
                                         <div class="stats-block">
                                             <div class="header">
-                                                <i class="bi font-green bi-square-fill"></i>
-                                                <div class="text">Normal</div>
+                                                <i class="bi font-gray bi-square-fill"></i>
+                                                <div class="text">low</div>
                                                 <i class="bi font-gray bi-question-circle"></i>
                                             </div>
                                             <div class="body">
                                                 <i class="bi font-green bi-arrow-up-right"></i>
-                                                <div class="precentage font-green">82.0%</div>
+                                                <div class="precentage font-green">{{number_format((float)($issues_summary['passed_low_risk_points']/$issues_summary['total_low_risk_points'])*100, 2, '.', '')}}%</div>
                                             </div>
                                         </div>
                                         <div class="stats-block">
                                             <div class="header">
                                                 <i class="bi font-orange bi-square-fill"></i>
-                                                <div class="text">Issues</div>
+                                                <div class="text">Medium</div>
                                                 <i class="bi font-gray bi-question-circle"></i>
                                             </div>
                                             <div class="body">
                                                 <i class="bi font-orange bi-arrow-down-left"></i>
-                                                <div class="precentage font-orange">82.0%</div>
+                                                <div class="precentage font-orange">{{number_format((float)($issues_summary['passed_medium_risk_points']/$issues_summary['total_medium_risk_points'])*100, 2, '.', '')}}%</div>
                                             </div>
                                         </div>
                                         <div class="stats-block">
@@ -307,7 +320,7 @@
                                             </div>
                                             <div class="body">
                                                 <i class="bi font-red bi-arrow-up-right"></i>
-                                                <div class="precentage font-red">82.0%</div>
+                                                <div class="precentage font-red">{{number_format((float)($issues_summary['passed_high_risk_points']/$issues_summary['total_high_risk_points'])*100, 2, '.', '')}}%</div>
                                             </div>
                                         </div>
                                     </div>

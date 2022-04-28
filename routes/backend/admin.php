@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\IMSProWidgetsController;
 use App\Http\Controllers\Backend\UserProjectController;
 use App\Http\Controllers\Backend\PushNotificationController;
 use App\Http\Controllers\Backend\TallentorDemoController;
+use App\Http\Controllers\Backend\SeoManagementController;
 
 
 
@@ -145,3 +146,13 @@ Route::get('widget_detail/{id}', [UserProjectController::class, 'widget_detail']
 
 Route::get('widget_settings_update', [WidgetSettingController::class, 'index'])->name('widget_settings_update.index');
 Route::post('widget_settings_update/update', [WidgetSettingController::class, 'update'])->name('widget_settings_update.update');
+
+
+Route::get('seo_management', [SeoManagementController::class, 'index'])->name('seo_management.index');
+Route::get('seo_management/getdetails', [SeoManagementController::class, 'getDetails'])->name('seo_management.getDetails');
+
+
+
+
+
+
