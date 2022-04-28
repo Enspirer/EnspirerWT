@@ -366,6 +366,9 @@
     font-size: 14px;
     font-weight: 300;
     color: #8E8E8E;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .seo-block .body .seo-table tbody td .table-btn {
@@ -392,17 +395,12 @@
 
 .seo-block .body .seo-table tbody td.tbCol-3 a {
     text-decoration: none;
-    display: block;
+    display: inline-grid;
     width: fit-content;
     background-color: antiquewhite;
     padding: 0.25em 1em;
     border-radius: 5px;
     margin: 0.5em 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
 }
 
 .seo-block .body .seo-table tbody td.tbCol-4 {
