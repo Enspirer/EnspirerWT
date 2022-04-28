@@ -268,8 +268,8 @@
     width: 100px;
     margin: auto;
     border-radius: 4px;
-    font-size: 16px;
-    padding: 0.1em;
+    font-size: 14px;
+    padding: 0.2em;
 }
 
 .security-block .feature-block .security-table tbody tr td.text-col .text.indicator.green {
