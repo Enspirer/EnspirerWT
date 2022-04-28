@@ -31,6 +31,184 @@
 
                         @include('frontend.user.projects.includes.seo_nav')
 
+
+                        <div class="seo-section bot-block" id="botSection">
+                            <div class="inner-wrapper">
+                                <div class="subtitle">Get your own</div>
+                                <div class="title">Optimizer Bot</div>
+                                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quibusdam earum, numquam odio delectus porro nisi eos deleniti rerum asperiores?</div>
+                                <a href="#" class="bot-btn" data-bs-toggle="modal" data-bs-target="#botModal">Get Your Bot</a>
+                            </div>
+                        </div>
+
+                        <div class="modal fade bot-modal" id="botModal" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="back-btn" btn-prev>
+                                            <i class="bi bi-arrow-left-short"></i>
+                                            <div class="text">Back</div>
+                                        </button>
+                                        <div class="modal-title">Get Your Bot</div>
+                                        <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="naviagtion-block">
+                                            <ul class="nav-tree">
+                                                <li class="list-item active">Choose a Bot
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Quantity
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Terms & Conditions
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                                <li class="list-item">Apply your bot
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-block">
+                                            <form action="{{route('frontend.user.bot_store')}}" method="post" enctype="multipart/form-data">
+                                            {{csrf_field()}}
+                                                <div class="action-block slider active">
+                                                    <input type="hidden" slider-input>
+                                                    <div class="splide bot-slider" id="botSlider">
+                                                        <div class="splide__track">
+                                                            <ul class="splide__list">
+                                                                <li class="splide__slide">
+                                                                    <a href="#" class="slider-link" data-bot="bot-1">
+                                                                        <div class="slider-card">
+                                                                            <div class="image-block">
+                                                                                <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                            </div>
+                                                                            <div class="content-block">
+                                                                                <div class="title">Bot Name Here</div>
+                                                                                <ul class="option-list">
+                                                                                    <li>
+                                                                                        Sample Option
+                                                                                        <i class="bi bi-check-circle-fill"></i>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Sample Option
+                                                                                        <i class="bi bi-check-circle-fill"></i>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Sample Option
+                                                                                        <i class="bi bi-check-circle-fill"></i>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Sample Option
+                                                                                        <i class="bi bi-check-circle-fill"></i>
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <div class="amount">$500</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <input type="hidden" name="bot_type" value="Auto Promoting Bot">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <a href="#" class="slider-link" data-bot="bot-2">
+                                                                        <div class="slider-card">
+                                                                            <div class="image-block">
+                                                                                <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                            </div>
+                                                                            <div class="content-block">
+                                                                                <div class="title">Bot Name Here</div>
+                                                                                <ul class="option-list">
+                                                                                    <li>
+                                                                                        Sample Option
+                                                                                        <i class="bi bi-check-circle-fill"></i>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Sample Option
+                                                                                        <i class="bi bi-check-circle-fill"></i>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Sample Option
+                                                                                        <i class="bi bi-check-circle-fill"></i>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Sample Option
+                                                                                        <i class="bi bi-check-circle-fill"></i>
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <div class="amount">$500</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <input type="hidden" name="bot_type" value="SEO">
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action-block quantity-block">
+                                                    <input type="hidden" quantity-input>
+                                                    <div class="title">How many Bots do you wish to integrate your site ?</div>
+                                                    <div class="input-group">
+                                                        <select class="form-select" name="activated_bot_count" form-select>
+                                                            <option value="1" selected>1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                        <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="action-block terms-block">
+                                                    <input type="hidden" terms-input>
+                                                    <div class="title">Terms & Conditions</div>
+                                                    <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem eius recusandae sint quasi? Rem ipsa iste, labore adipisci vero mollitia sunt nam totam accusamus! Eum perspiciatis doloribus cumque maxime!</div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="termsCheck" form-check>
+                                                        <label class="form-check-label" for="termsCheck"> I Agreed </label>
+                                                    </div>
+                                                    <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
+                                                </div>
+                                                <div class="action-block summery-block">
+                                                    <input type="hidden" summery-input>
+                                                    <div class="fees-block">
+                                                        <div class="fee-row">
+                                                            <div class="text">Subtotal</div>
+                                                            <div class="amount">$20.00</div>
+                                                            <input type="hidden" name="subtotal" value="20">
+                                                        </div>
+                                                        <div class="fee-row">
+                                                            <div class="text">Discount</div>
+                                                            <div class="amount">$20.00</div>
+                                                            <input type="hidden" name="discount" value="20">
+                                                        </div>
+                                                        <div class="fee-row">
+                                                            <div class="text">Taxes & Fees</div>
+                                                            <div class="amount">$20.00</div>
+                                                            <input type="hidden" name="taxes_fees" value="20">
+                                                        </div>
+                                                        <div class="fee-row">
+                                                            <div class="text">Total</div>
+                                                            <div class="amount" total-fee>$20.00</div>
+                                                            <input type="hidden" name="total" value="20">
+                                                        </div>
+                                                    </div>                                                    
+                                                    <input type="hidden" name="hidden_project_id" value="{{$project_id}}">
+                                                    <button type="submit" class="btn-submit" btn-submit>Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="text">Get Bonus</div>
+                                        <div class="bonus">$5</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="bot-btn">Get Your Bot</a>
+                            </div>
+                        </div>
+
+
                         <div class="seo-section overview-block" id="overviewSection">
                             <div class="heaeder">
                                 <div class="title">Overview</div>
@@ -134,6 +312,8 @@
                                 </div>
                             </div>
                         </div>
+
+
 
                         @if($project->seo_result != null)
                             <div class="seo-section seo-block" id="seoSection">
@@ -676,171 +856,7 @@
                             </div>
                         </div> -->
 
-                        <div class="seo-section bot-block" id="botSection">
-                            <div class="inner-wrapper">
-                                <div class="subtitle">Get your own</div>
-                                <div class="title">Optimizer Bot</div>
-                                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quibusdam earum, numquam odio delectus porro nisi eos deleniti rerum asperiores?</div>
-                                <a href="#" class="bot-btn" data-bs-toggle="modal" data-bs-target="#botModal">Get Your Bot</a>
-                            </div>
-                        </div>
-
-                        <div class="modal fade bot-modal" id="botModal" tabindex="-1">
-                            <div class="modal-dialog modal-dialog-centered modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="back-btn" btn-prev>
-                                            <i class="bi bi-arrow-left-short"></i>
-                                            <div class="text">Back</div>
-                                        </button>
-                                        <div class="modal-title">Get Your Bot</div>
-                                        <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="naviagtion-block">
-                                            <ul class="nav-tree">
-                                                <li class="list-item active">Choose a Bot
-                                                    <i class="bi bi-check-circle-fill"></i>
-                                                </li>
-                                                <li class="list-item">Quantity
-                                                    <i class="bi bi-check-circle-fill"></i>
-                                                </li>
-                                                <li class="list-item">Terms & Conditions
-                                                    <i class="bi bi-check-circle-fill"></i>
-                                                </li>
-                                                <li class="list-item">Apply your bot
-                                                    <i class="bi bi-check-circle-fill"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-block">
-                                            <div class="action-block slider active">
-                                                <input type="hidden" slider-input>
-                                                <div class="splide bot-slider" id="botSlider">
-                                                    <div class="splide__track">
-                                                        <ul class="splide__list">
-                                                            <li class="splide__slide">
-                                                                <a href="#" class="slider-link" data-bot="bot-1">
-                                                                    <div class="slider-card">
-                                                                        <div class="image-block">
-                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
-                                                                        </div>
-                                                                        <div class="content-block">
-                                                                            <div class="title">Bot Name Here</div>
-                                                                            <ul class="option-list">
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                            </ul>
-                                                                            <div class="amount">$500</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="splide__slide">
-                                                                <a href="#" class="slider-link" data-bot="bot-2">
-                                                                    <div class="slider-card">
-                                                                        <div class="image-block">
-                                                                            <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
-                                                                        </div>
-                                                                        <div class="content-block">
-                                                                            <div class="title">Bot Name Here</div>
-                                                                            <ul class="option-list">
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                                <li>
-                                                                                    Sample Option
-                                                                                    <i class="bi bi-check-circle-fill"></i>
-                                                                                </li>
-                                                                            </ul>
-                                                                            <div class="amount">$500</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="action-block quantity-block">
-                                                <input type="hidden" quantity-input>
-                                                <div class="title">How many Bots do you wish to integrate your site ?</div>
-                                                <div class="input-group">
-                                                    <select class="form-select" form-select>
-                                                        <option value="1" selected>1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                    </select>
-                                                    <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="action-block terms-block">
-                                                <input type="hidden" terms-input>
-                                                <div class="title">Terms & Conditions</div>
-                                                <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem eius recusandae sint quasi? Rem ipsa iste, labore adipisci vero mollitia sunt nam totam accusamus! Eum perspiciatis doloribus cumque maxime!</div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="termsCheck" form-check>
-                                                    <label class="form-check-label" for="termsCheck"> I Agreed </label>
-                                                </div>
-                                                <button type="button" class="btn-next" btn-next><i class="bi bi-arrow-right"></i></button>
-                                            </div>
-                                            <div class="action-block summery-block">
-                                                <input type="hidden" summery-input>
-                                                <div class="fees-block">
-                                                    <div class="fee-row">
-                                                        <div class="text">Subtotal</div>
-                                                        <div class="amount">$20.00</div>
-                                                    </div>
-                                                    <div class="fee-row">
-                                                        <div class="text">Discount</div>
-                                                        <div class="amount">$20.00</div>
-                                                    </div>
-                                                    <div class="fee-row">
-                                                        <div class="text">Taxes & Fees</div>
-                                                        <div class="amount">$20.00</div>
-                                                    </div>
-                                                    <div class="fee-row">
-                                                        <div class="text">Total</div>
-                                                        <div class="amount" total-fee>$20.00</div>
-                                                    </div>
-                                                </div>
-                                                <button type="submit" class="btn-submit" btn-submit>Submit</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="text">Get Bonus</div>
-                                        <div class="bonus">$5</div>
-                                    </div>
-                                </div>
-                                <a href="#" class="bot-btn">Get Your Bot</a>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>
@@ -849,10 +865,42 @@
     </section>
 
 
+@if(\Session::has('success') )
+
+<div class="modal fade form-submit-modal" id="overlay" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
+                <div class="image-block">
+                    <img src="{{url('images/landing_page/contact_us/success.png')}}" alt="">
+                </div>
+                <div class="content-block">
+                    <div class="title">Success !</div>
+                    <p class="text">Your message submitted successfully.</p>
+                    <p class="text">One of our agents will be in touch shortly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endif
+
+
 @endsection
 
 
 @push('after-scripts')
+
+<script>
+    $(window).on('load', function () {
+        $('#overlay').modal('show');
+    });
+    $("#close-btn").click(function () {
+        $('#overlay').modal('hide');
+    });
+</script>
 
     <script type="text/javascript">
       // Initialize the echarts instance based on the prepared dom

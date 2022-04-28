@@ -176,6 +176,10 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('project_details/{id}', [ProjectController::class, 'show'])->name('project.show');
 
         Route::get('project_details/{id}/seo/overview',[SEOController::class, 'seo'])->name('project.seo');
+        Route::get('project_details/{id}/seo_bots',[SEOController::class, 'seo_bots'])->name('project.seo_bots');
+        Route::post('bot_store', [SEOController::class, 'bot_store'])->name('bot_store');
+
+        
         Route::get('project_details/{id}/optimizer/security',[SecurityController::class, 'security'])->name('project.security');
 
         // Analytics
