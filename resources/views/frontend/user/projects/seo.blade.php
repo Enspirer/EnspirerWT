@@ -399,10 +399,12 @@
 
                                                                 @if($key == 'seo_friendly_url')
                                                                     @if(isset($seo_result->errors)) 
-                                                                        @if($seo_result->errors->bad_format == null)
-                                                                            <div class="title">The URL is not SEO friendly.</div>
-                                                                        @else
-                                                                            <div class="title">The URL is SEO friendly.</div>
+                                                                        @if(isset($seo_result->errors->bad_format)) 
+                                                                            @if($seo_result->errors->bad_format == null)
+                                                                                <div class="title">The URL is not SEO friendly.</div>
+                                                                            @else
+                                                                                <div class="title">The URL is SEO friendly.</div>
+                                                                            @endif
                                                                         @endif
                                                                     @endif
                                                                     <a href="{{$seo_result->value}}"><div class="text">{{$seo_result->value}}</div></a>
