@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Projects;
 use App\Models\SeoBot;
+use App\Models\BillingInvoice;
 use Illuminate\Http\Request;
 
 class SEOController extends Controller
@@ -37,6 +38,22 @@ class SEOController extends Controller
         $add->status='Activated'; 
 
         $add->save();
+
+
+        $add_bill = new BillingInvoice;
+        
+        $add_bill->project_id=$request->hidden_project_id;
+        $add_bill->purchased_package='SEO Bot';
+        $add_bill->is_purchased_seo_bots_id=$add->id;
+        $add_bill->price=$add->total;      
+        $add_bill->payment_plan=null;
+        $add_bill->payment_method='Online';
+        $add_bill->expire_date=null;
+        $add_bill->user_id=auth()->user()->id;
+        $add_bill->status='Paid'; 
+
+        $add_bill->save();
+       
 
         // dd('done');
 
