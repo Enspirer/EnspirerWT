@@ -32,14 +32,16 @@
                         @include('frontend.user.projects.includes.seo_nav')
 
 
-                        <div class="seo-section bot-block" id="botSection">
-                            <div class="inner-wrapper">
-                                <div class="subtitle">Get your own</div>
-                                <div class="title">Optimizer Bot</div>
-                                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quibusdam earum, numquam odio delectus porro nisi eos deleniti rerum asperiores?</div>
-                                <a href="#" class="bot-btn" data-bs-toggle="modal" data-bs-target="#botModal">Get Your Bot</a>
+                        @if(App\Models\SeoBot::where('project_id',$project_id)->first() == null)
+                            <div class="seo-section bot-block" id="botSection">
+                                <div class="inner-wrapper">
+                                    <div class="subtitle">Get your own</div>
+                                    <div class="title">Optimizer Bot</div>
+                                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quibusdam earum, numquam odio delectus porro nisi eos deleniti rerum asperiores?</div>
+                                    <a href="#" class="bot-btn" data-bs-toggle="modal" data-bs-target="#botModal">Get Your Bot</a>
+                                </div>
                             </div>
-                        </div>
+                        @endif
 
                         <div class="modal fade bot-modal" id="botModal" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered modal-xl">
