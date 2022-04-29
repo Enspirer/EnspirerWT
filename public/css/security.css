@@ -253,6 +253,10 @@
     vertical-align: top;
 }
 
+.security-block .feature-block .security-table tbody tr td a {
+    text-decoration: none;
+}
+
 .security-block .feature-block .security-table tr td.text-col.center {
     text-align: center;
 }

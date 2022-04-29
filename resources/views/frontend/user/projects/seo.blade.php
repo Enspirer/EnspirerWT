@@ -4,6 +4,8 @@
 
 @section('content')
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <link rel="stylesheet" href="{{url('css/seo.css')}}">
 
     <section id="sectionMainWindow">
@@ -840,77 +842,142 @@
 
 
                         @endif
+                        
 
-                        <!-- <div class="seo-block">
-                            <div class="heaeder">
-                                <div class="title">Performance</div>
-                                <div class="duration">3 days ago</div>
-                            </div>
-                            <div class="body">
-                                <table class="seo-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="tbCol-1"><i class="bi font-blue bi-triangle-fill"></i></td>
-                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
-                                            <td class="tbCol-3">
-                                                <div class="title">The meta description tag have medium issues.</div>
-                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
-                                            </td>
-                                            <td class="tbCol-4">
-                                                <a href="#" class="table-btn bg-green">Suggestions</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
-                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
-                                            <td class="tbCol-3">
-                                                <div class="title">The meta description tag have medium issues.</div>
-                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
-                                            </td>
-                                            <td class="tbCol-4">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade seoExplorer-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="inner-wrapper">
+            <div class="slider">
+                <div class="splide seoExplorer-slider" id="seoExplorerSlider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="silde-wrapper">
+                                    <div class="image-block">
+                                        <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                    </div>
+                                    <div class="content-block">
+                                        <div class="no">01</div>
+                                        <div class="title">Package 01</div>
+                                        <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
+                                        <div class="fee">$500</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="silde-wrapper">
+                                    <div class="image-block">
+                                        <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                    </div>
+                                    <div class="content-block">
+                                        <div class="no">01</div>
+                                        <div class="title">Package 01</div>
+                                        <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
+                                        <div class="fee">$500</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="silde-wrapper">
+                                    <div class="image-block">
+                                        <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                    </div>
+                                    <div class="content-block">
+                                        <div class="no">01</div>
+                                        <div class="title">Package 01</div>
+                                        <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
+                                        <div class="fee">$500</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="header">
+                    <div class="title">Tell us a little<br>about your purchase</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="body">
+                    <div class="wrapper">
+                        <div class="input-row">
+                            <label for="packageSelect" class="form-label">What is your package</label>
+                            <select id="packageSelect" class="form-select">
+                                <option selected disabled>Please select your package</option>
+                                <option>Package 01</option>
+                                <option>Package 02</option>
+                                <option>Package 03</option>
+                            </select>
+                            <i class="bi bi-question-circle"></i>
+                            <div class="form-tooltip">
+                                <div class="header">
+                                    <div class="title">Package ?</div>
+                                </div>
+                                <div class="body">
+                                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="seo-block">
-                            <div class="heaeder">
-                                <div class="title">Miscellaneous</div>
-                                <div class="duration">3 days ago</div>
+                        <div class="input-row">
+                            <label for="techSelect" class="form-label">Technology</label>
+                            <select id="techSelect" class="form-select">
+                                <option selected disabled>Please select your website technology</option>
+                                <option>Package 01</option>
+                                <option>Package 02</option>
+                                <option>Package 03</option>
+                            </select>
+                            <i class="bi bi-question-circle"></i>
+                            <div class="form-tooltip">
+                                <div class="header">
+                                    <div class="title">Package ?</div>
+                                </div>
+                                <div class="body">
+                                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
                             </div>
-                            <div class="body">
-                                <table class="seo-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="tbCol-1"><i class="bi font-blue bi-triangle-fill"></i></td>
-                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
-                                            <td class="tbCol-3">
-                                                <div class="title">The meta description tag have medium issues.</div>
-                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
-                                            </td>
-                                            <td class="tbCol-4">
-                                                <a href="#" class="table-btn bg-green">Suggestions</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tbCol-1"><i class="bi font-orange bi-square-fill"></i></td>
-                                            <td class="tbCol-2"><div class="title">Meta Description</div></td>
-                                            <td class="tbCol-3">
-                                                <div class="title">The meta description tag have medium issues.</div>
-                                                <div class="text">The size of the HTML webpage is 176.41 kB.</div>
-                                            </td>
-                                            <td class="tbCol-4">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        </div>
+                        <div class="input-row">
+                            <label for="timeSelect" class="form-label">Time Period</label>
+                            <select id="timeSelect" class="form-select">
+                                <option selected disabled>1 year</option>
+                                <option>2 year</option>
+                                <option>3 year</option>
+                                <option>Lifetime</option>
+                            </select>
+                            <i class="bi bi-question-circle"></i>
+                            <div class="form-tooltip">
+                                <div class="header">
+                                    <div class="title">Package ?</div>
+                                </div>
+                                <div class="body">
+                                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
                             </div>
-                        </div> -->
-
+                        </div>
+                        <div class="input-row">
+                            <label for="telInput" class="form-label">Your WhatsApp contact number</label>
+                            <input type="tel" id="telInput" name="phone" class="form-control" placeholder="+94 777000000" required>
+                        </div>
+                        <div class="button-block">
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
                         
 
                     </div>
@@ -948,16 +1015,16 @@
 
 @push('after-scripts')
 
-<script>
-    $(window).on('load', function () {
-        $('#overlay').modal('show');
-    });
-    $("#close-btn").click(function () {
-        $('#overlay').modal('hide');
-    });
-</script>
+    <script>
+        $(window).on('load', function () {
+            $('#overlay').modal('show');
+        });
+        $("#close-btn").click(function () {
+            $('#overlay').modal('hide');
+        });
+    </script>
 
-    <script type="text/javascript">
+    <script>
       // Initialize the echarts instance based on the prepared dom
       var myChart = echarts.init(document.getElementById('guage'));
 
@@ -1104,6 +1171,24 @@
                 return;
             }
         })
+    </script>
+
+    <!-- Model JS -->.
+
+    <script>
+        const phoneInputField = document.getElementById("telInput");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    </script>
+
+    <script>
+        var seoExplorerSlider = new Splide( '#seoExplorerSlider', {
+            width: '450px'
+        } );
+
+        seoExplorerSlider.mount();
     </script>
 
 @endpush
