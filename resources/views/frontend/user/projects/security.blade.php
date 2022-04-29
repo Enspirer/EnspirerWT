@@ -56,7 +56,11 @@
                                         </div>
                                         <div class="content-block">
                                             <div class="image-block">
-                                                <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" alt="">
+                                                @if($project->settings == null)
+                                                    <img src="{{url('img/no-image.jpg')}}" alt="">
+                                                @else
+                                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" alt="">
+                                                @endif
                                             </div>
                                             <div class="content">
                                                 <div class="text">Project name and Link</div>
