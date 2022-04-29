@@ -459,7 +459,11 @@
                             <option value="Scala">Scala</option>
                         </select>
                     </div>
-                </div>
+                    <div class="form-group mt-3">
+                        <label style="font-size:15px">Phone Number <span class="text-danger">*</span></label>
+                        <input type="text" id="phone_number" class="form-control" name="phone_number" required>
+                    </div>
+                </div>  
                 <div class="modal-footer">
                     <input type="hidden" name="hidden_project_id" value="{{$project_id}}">
                     <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>

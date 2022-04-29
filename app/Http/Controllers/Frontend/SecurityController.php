@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\SecurityContacts;
 use App\Models\Projects;
-
+use GuzzleHttp\Client;
 
 class SecurityController extends Controller
 {
@@ -16,6 +16,22 @@ class SecurityController extends Controller
 
         $issues_summary = self::get_issues_count($project->id);
         // dd($issues_summary);
+      
+        try {
+
+            $client = new Client();
+            $res = $client->request('GET', 'http://api.whoapi.com/?domain=tallentor.com&r=blacklist&apikey=5b6b85e2ae3d3e82c8bb431089f37d1f');
+            $response = $res->getBody()->getContents();
+            // dd($response);
+
+            $update = new Projects;
+            $update->email_blacklist = $response;
+            Projects::whereId($id)->update($update->toArray());
+          
+        } catch (\Exception $e) {
+          
+            return $e->getMessage();
+        }
 
         return view('frontend.user.projects.security',[
             'project_id' => $id,
@@ -87,6 +103,7 @@ class SecurityController extends Controller
         $add->user_id=auth()->user()->id;
         $add->package=$request->package;
         $add->technology=$request->technology;
+        $add->phone_number=$request->phone_number;        
         $add->status='Pending'; 
 
         $add->save();

@@ -22,6 +22,7 @@
                                 <th scope="col">#ID</th>
                                 <th scope="col">Package</th>
                                 <th scope="col">Technology</th>
+                                <th scope="col">Phone Number</th>                                
                                 <th scope="col">Status</th>
                                 <th scope="col">Option</th>
                             </tr>
@@ -77,6 +78,7 @@
                     {data: 'id', name: 'id'},
                     {data: 'package', name: 'package'},
                     {data: 'technology', name: 'technology'},
+                    {data: 'phone_number', name: 'phone_number'},                    
                     {data: 'status', name: 'status'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]

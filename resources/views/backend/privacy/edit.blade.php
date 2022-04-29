@@ -34,6 +34,11 @@
                                                     <td style="font-weight: 600; font-size:16px;">Technology:</td>
                                                     <td style="font-size:16px;">{{ $privacy->technology }}</td>
                                                 </tr>
+                                                <tr>
+                                                    <td style="font-weight: 600; font-size:16px;">Phone Number:</td>
+                                                    <td style="font-size:16px;">{{ $privacy->phone_number }}</td>
+                                                </tr>
+                                                
                                             </tbody>                                            
                                         </table>
                                     </div>                                            

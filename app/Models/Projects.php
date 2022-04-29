@@ -827,11 +827,15 @@ class Projects extends Model
             }
         }
 
+        $removeChar = ["https://", "http://", "/"];
+        $http_referer = str_replace($removeChar, "", $request->url);
+
         $roundfunc = ($resultPoints/ $totalPoints) * 100;
         $add = new Projects;
         $add->name = $request->name;
         $add->project_type = $request->project_type;
         $add->url = $request->url;
+        $add->host_ip = gethostbyname($http_referer);
         $add->seo_result = json_encode($data['results']);
         $add->user_id = auth()->user()->id;
         $add->score = (string) $roundfunc;
