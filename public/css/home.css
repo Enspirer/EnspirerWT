@@ -331,21 +331,21 @@
 
 #Group_345 {
     transform-origin: bottom;
-    transform: rotateZ(1deg);
+    transform: rotateZ(-2deg) translate(35px, 35px);
     animation: shake 5s linear infinite;
 }
 
 @keyframes shake {
     0% {
-        transform: rotateZ(1deg);
+        transform: rotateZ(-2deg) translate(35px, 35px);
     }
 
     50% {
-        transform: rotateZ(0deg);
+        transform: rotateZ(-3deg) translate(35px, 35px);
     }
 
     0% {
-        transform: rotateZ(1deg);
+        transform: rotateZ(-2deg) translate(35px, 35px);
     }
 }
 
@@ -385,7 +385,7 @@
     }
 
     50% {
-        transform: translate(59px, 2612px) rotateZ(2deg);
+        transform: translate(59px, 2612px) rotateZ(-1deg);
     }
 
     0% {
