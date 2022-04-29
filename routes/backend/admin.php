@@ -17,6 +17,7 @@ use App\Http\Controllers\Backend\UserProjectController;
 use App\Http\Controllers\Backend\PushNotificationController;
 use App\Http\Controllers\Backend\TallentorDemoController;
 use App\Http\Controllers\Backend\SeoManagementController;
+use App\Http\Controllers\Backend\PrivacyController;
 
 
 
@@ -152,6 +153,11 @@ Route::get('seo_management', [SeoManagementController::class, 'index'])->name('s
 Route::get('seo_management/getdetails', [SeoManagementController::class, 'getDetails'])->name('seo_management.getDetails');
 
 
+Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy.index');
+Route::get('privacy/getdetails', [PrivacyController::class, 'getDetails'])->name('privacy.getDetails');
+Route::get('privacy/edit/{id}', [PrivacyController::class, 'edit'])->name('privacy.edit');
+Route::post('privacy/update', [PrivacyController::class, 'update'])->name('privacy.update');
+Route::get('privacy/delete/{id}', [PrivacyController::class, 'destroy'])->name('privacy.destroy');
 
 
 

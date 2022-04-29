@@ -181,6 +181,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         
         Route::get('project_details/{id}/optimizer/security',[SecurityController::class, 'security'])->name('project.security');
+        Route::post('unlimited_privacy/store', [SecurityController::class, 'unlimited_privacy_store'])->name('unlimited_privacy.store');
+
 
         // Analytics
         Route::get('project_details/{id}/optimizer/analytics/overview',[AnalyticsController::class, 'analytics'])->name('project.analytics');
