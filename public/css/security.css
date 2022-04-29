@@ -250,6 +250,7 @@
 .security-block .feature-block .security-table tbody tr td {
     font-size: 16px;
     padding: .5em 1em;
+    vertical-align: top;
 }
 
 .security-block .feature-block .security-table tr td.text-col.center {
