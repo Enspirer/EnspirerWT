@@ -73,6 +73,9 @@ Route::get('projects/bots_edit/{id}', [ProjectsController::class, 'bots_edit'])-
 Route::post('projects/bots_update', [ProjectsController::class, 'bots_update'])->name('projects.bots_update');
 Route::get('projects/bots/bots_delete/{id}', [ProjectsController::class, 'bots_destroy'])->name('projects.bots_destroy');
 
+Route::get('projects/security_backend/{id}', [ProjectsController::class, 'security_backend'])->name('projects.security_backend');
+
+
 
 Route::get('projects/widget_manager/{id}', [WidgetController::class, 'index'])->name('projects.widget_manager');
 Route::get('projects/widget_manager/create/{id}', [WidgetController::class, 'create'])->name('projects.widget_manager.create');

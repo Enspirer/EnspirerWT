@@ -75,6 +75,7 @@ class ProjectsController extends Controller
                 $button .= '<a href="'.route('admin.auth.user.project_detail',User::where('id',$data->user_id)->first()).'" name="Details" id="'.$data->id.'" class="edit btn btn-primary btn-sm" style="margin-right: 10px"><i class="fas fa-list"></i> Details </a>';
                 $button .= '<a href="'.route('admin.auth.user.project_bills',User::where('id',$data->user_id)->first()).'" name="details" id="'.$data->id.'" class="edit btn btn-success btn-sm" style="margin-right: 10px"><i class="fas fa-dollar-sign"></i> Bills </a>';
                 $button .= '<a href="'.route('admin.projects.bots',$data->id).'" name="bots" id="'.$data->id.'" class="edit btn btn-warning btn-sm" style="margin-right: 10px"><i class="fas fa-robot"></i> Bots </a>';
+                $button .= '<a href="'.route('admin.projects.security_backend',$data->id).'" name="security" id="'.$data->id.'" class="edit btn btn-dark btn-sm" style="margin-right: 10px"><i class="fas fa-lock"></i> Security </a>';
                 $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
                 return $button;
                 })
@@ -216,6 +217,18 @@ class ProjectsController extends Controller
     public function bots_destroy($id)
     {
         SeoBot::where('id', $id)->delete(); 
+    }
+
+
+    public function security_backend($id)
+    {
+        $project = Projects::where('id',$id)->first();
+        $project_type = ProjectType::where('id',$project->project_type)->first();
+
+        return view('backend.projects.security',[
+            'project' => $project,
+            'project_type' => $project_type
+        ]);
     }
 
     

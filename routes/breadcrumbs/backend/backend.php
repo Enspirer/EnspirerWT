@@ -163,3 +163,7 @@ Breadcrumbs::for('admin.privacy.index', function ($trail) {
 Breadcrumbs::for('admin.privacy.edit', function ($trail) {
     $trail->push('Edit', route('admin.privacy.edit',1));
 });
+
+Breadcrumbs::for('admin.projects.security_backend', function ($trail) {
+    $trail->push('Security', route('admin.projects.security_backend',1));
+});

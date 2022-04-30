@@ -72,7 +72,7 @@
                                             <div class="info">
                                                 <div class="info-row">
                                                     <span class="title">IP Address:</span>
-                                                    <span class="text">192.168.8.2</span>
+                                                    <span class="text">{{$project->host_ip}}</span>
                                                 </div>
                                                 <div class="info-row">
                                                     <span class="title">CDN:</span>
@@ -187,7 +187,7 @@
                                             @if($key == 'https_encryption' || $key == 'plaintext_email')                                            
                                                 <tr>
                                                     <td class="icon-col">
-                                                        <img src="{{url('images/dashboard/main/icons/danger.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/icons/success.png')}}" alt="">
                                                     </td>
                                                     <td class="text-col">
                                                         @if($key == 'https_encryption')
@@ -201,8 +201,7 @@
                                                             <div class="text">The webpage does not contain any plaintext emails.</div>
                                                             <div class="sub-text">{{$seo_result->value}}</div>
                                                         @endif 
-                                                        <div class="text">example@gmail.com</div>
-                                                        <!-- <div class="sub-text">Server <span>BN-34-HDE</span> was down </div> -->
+                                                        
                                                     </td>
                                                     <td class="info-col">
                                                         <i class="bi bi-exclamation-circle"></i>
@@ -219,7 +218,7 @@
                                 <div class="title">Email Black list</div>
                                 <table class="security-table">
                                     <tbody>
-                                        <tr>
+                                        <!-- <tr>
                                             <td class="icon-col">
                                                 <img src="{{url('images/dashboard/main/icons/sheild-success.png')}}" alt="">
                                             </td>
@@ -242,19 +241,39 @@
                                             <td class="info-col">
                                                 <i class="bi bi-exclamation-circle"></i>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/sheild-danger.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                                <div class="sub-text">Server <span>BN-34-HDE</span> was down </div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
+                                        </tr> -->
+                                        @if($project->email_blacklist != null)
+                                            @foreach(json_decode($project->email_blacklist) as $key => $blacklist)
+                                                @if($key == 'blacklists')
+                                                    @if(count($blacklist) != 0)
+                                                        @foreach($blacklist as $key => $back)
+                                                            <tr>
+                                                                <td class="icon-col">
+                                                                    @if($back->blacklisted == 0)
+                                                                        <img src="{{url('images/dashboard/main/icons/sheild-success.png')}}" alt="">
+                                                                    @else
+                                                                        <img src="{{url('images/dashboard/main/icons/sheild-danger.png')}}" alt="">
+                                                                    @endif
+                                                                </td>
+                                                                <td class="text-col">
+                                                                    <div class="text">{{$back->tracker }} : 
+                                                                        @if($back->blacklisted == 0)
+                                                                            <span style="color:green">Ok</span>
+                                                                        @else
+                                                                            <span style="color:red">Listed</span>                                                                            
+                                                                        @endif
+                                                                    </div>
+                                                                    <!-- <div class="sub-text"></div> -->
+                                                                </td>
+                                                                <!-- <td class="info-col">
+                                                                    <i class="bi bi-exclamation-circle"></i>
+                                                                </td> -->
+                                                            </tr>
+                                                        @endforeach    
+                                                    @endif
+                                                @endif
+                                            @endforeach
+                                        @endif
                                     </tbody>
                                 </table>
                             </div>
