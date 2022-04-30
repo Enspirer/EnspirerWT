@@ -37,7 +37,7 @@
                                     <div class="subtitle">Go to your</div>
                                     <div class="title">Unlimited Privacy </div>
                                     <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" class="privacy-btn" >Explore</a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" class="privacy-btn" >Request</a>
                                 </div>
                                 <div class="image-block">
                                     <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
@@ -499,128 +499,144 @@
 <div class="modal fade seoExplorer-modal" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-body">
-        <div class="inner-wrapper">
-            <div class="slider">
-                <div class="splide seoExplorer-slider" id="seoExplorerSlider">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="silde-wrapper">
-                                    <div class="image-block">
-                                        <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
-                                    </div>
-                                    <div class="content-block">
-                                        <div class="no">01</div>
-                                        <div class="title">Package 01</div>
-                                        <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
-                                        <div class="fee">$500</div>
+        <form action="{{route('frontend.user.unlimited_privacy.store')}}" method="post" enctype="multipart/form-data">
+        {{csrf_field()}}
+            <div class="modal-body">
+                <div class="inner-wrapper">            
+                    <div class="slider">
+                        <div class="splide seoExplorer-slider" id="seoExplorerSlider">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="silde-wrapper">
+                                            <div class="image-block">
+                                                <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                            </div>
+                                            <div class="content-block">
+                                                <div class="no">01</div>
+                                                <div class="title">Package 01</div>
+                                                <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
+                                                <div class="fee">$500</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="silde-wrapper">
+                                            <div class="image-block">
+                                                <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                            </div>
+                                            <div class="content-block">
+                                                <div class="no">01</div>
+                                                <div class="title">Package 01</div>
+                                                <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
+                                                <div class="fee">$500</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="silde-wrapper">
+                                            <div class="image-block">
+                                                <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                            </div>
+                                            <div class="content-block">
+                                                <div class="no">01</div>
+                                                <div class="title">Package 01</div>
+                                                <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
+                                                <div class="fee">$500</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-block">
+                        <div class="header">
+                            <div class="title">Tell us a little<br>about your purchase</div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="body">
+                            <div class="wrapper">
+                                <div class="input-row">
+                                    <label for="packageSelect" class="form-label">What is your package</label>
+                                    <select id="packageSelect" id="package" name="package" class="form-select" required>
+                                        <option value="" selected disabled>Please select your package</option>
+                                        <option value="Package 01">Package 01</option>
+                                        <option value="Package 02">Package 02</option>
+                                        <option value="Package 03">Package 03</option>
+                                    </select>
+                                    <i class="bi bi-question-circle"></i>
+                                    <div class="form-tooltip">
+                                        <div class="header">
+                                            <div class="title">Package ?</div>
+                                        </div>
+                                        <div class="body">
+                                            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="silde-wrapper">
-                                    <div class="image-block">
-                                        <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
-                                    </div>
-                                    <div class="content-block">
-                                        <div class="no">01</div>
-                                        <div class="title">Package 01</div>
-                                        <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
-                                        <div class="fee">$500</div>
+                                <div class="input-row">
+                                    <label for="techSelect" class="form-label">Technology</label>
+                                    <select id="techSelect" class="form-select" id="technology" name="technology" required>
+                                        <option value="" selected disabled>Please select your website technology</option>
+                                        <option value="HTML">HTML</option>
+                                        <option value="CSS">CSS</option>
+                                        <option value="JavaScript">JavaScript</option>
+                                        <option value="Python">Python</option>
+                                        <option value="Java">Java</option>
+                                        <option value="Typescript">Typescript</option>
+                                        <option value="Objective C">Objective C</option>
+                                        <option value="C++">C++</option>
+                                        <option value="SQL">SQL</option>
+                                        <option value="PHP">PHP</option>
+                                        <option value="C#">C#</option>
+                                        <option value="Angular">Angular</option>
+                                        <option value="Ruby Rails">Ruby Rails</option>
+                                        <option value="Golang">Golang</option>
+                                        <option value="Scala">Scala</option>
+                                    </select>
+                                    <i class="bi bi-question-circle"></i>
+                                    <div class="form-tooltip">
+                                        <div class="header">
+                                            <div class="title">Package ?</div>
+                                        </div>
+                                        <div class="body">
+                                            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="silde-wrapper">
-                                    <div class="image-block">
-                                        <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
-                                    </div>
-                                    <div class="content-block">
-                                        <div class="no">01</div>
-                                        <div class="title">Package 01</div>
-                                        <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
-                                        <div class="fee">$500</div>
+                                <div class="input-row">
+                                    <label for="timeSelect" class="form-label">Time Period</label>
+                                    <select id="timeSelect" name="time_period" class="form-select" required>
+                                        <option value="1 year" selected disabled>1 year</option>
+                                        <option value="2 year">2 year</option>
+                                        <option value="3 year">3 year</option>
+                                        <option value="Lifetime">Lifetime</option>
+                                    </select>
+                                    <i class="bi bi-question-circle"></i>
+                                    <div class="form-tooltip">
+                                        <div class="header">
+                                            <div class="title">Package ?</div>
+                                        </div>
+                                        <div class="body">
+                                            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
+                                <div class="input-row">
+                                    <label for="telInput" class="form-label">Your WhatsApp contact number</label>
+                                    <input type="tel" name="phone_number" name="phone_number" class="form-control" placeholder="+94 777000000" required>
+                                </div>
+                                <div class="button-block">
+                                    <input type="hidden" name="hidden_project_id" value="{{$project_id}}">
+                                    <button type="submit" class="btn-submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="content-block">
-                <div class="header">
-                    <div class="title">Tell us a little<br>about your purchase</div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="body">
-                    <div class="wrapper">
-                        <div class="input-row">
-                            <label for="packageSelect" class="form-label">What is your package</label>
-                            <select id="packageSelect" class="form-select">
-                                <option selected disabled>Please select your package</option>
-                                <option>Package 01</option>
-                                <option>Package 02</option>
-                                <option>Package 03</option>
-                            </select>
-                            <i class="bi bi-question-circle"></i>
-                            <div class="form-tooltip">
-                                <div class="header">
-                                    <div class="title">Package ?</div>
-                                </div>
-                                <div class="body">
-                                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <label for="techSelect" class="form-label">Technology</label>
-                            <select id="techSelect" class="form-select">
-                                <option selected disabled>Please select your website technology</option>
-                                <option>Package 01</option>
-                                <option>Package 02</option>
-                                <option>Package 03</option>
-                            </select>
-                            <i class="bi bi-question-circle"></i>
-                            <div class="form-tooltip">
-                                <div class="header">
-                                    <div class="title">Package ?</div>
-                                </div>
-                                <div class="body">
-                                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <label for="timeSelect" class="form-label">Time Period</label>
-                            <select id="timeSelect" class="form-select">
-                                <option selected disabled>1 year</option>
-                                <option>2 year</option>
-                                <option>3 year</option>
-                                <option>Lifetime</option>
-                            </select>
-                            <i class="bi bi-question-circle"></i>
-                            <div class="form-tooltip">
-                                <div class="header">
-                                    <div class="title">Package ?</div>
-                                </div>
-                                <div class="body">
-                                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <label for="telInput" class="form-label">Your WhatsApp contact number</label>
-                            <input type="tel" id="telInput" name="phone" class="form-control" placeholder="+94 777000000" required>
-                        </div>
-                        <div class="button-block">
-                            <button type="submit" class="btn-submit">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
+        </form>
     </div>
   </div>
 </div>

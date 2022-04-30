@@ -103,7 +103,8 @@ class SecurityController extends Controller
         $add->user_id=auth()->user()->id;
         $add->package=$request->package;
         $add->technology=$request->technology;
-        $add->phone_number=$request->phone_number;        
+        $add->phone_number=$request->phone_number;    
+        $add->time_period=$request->time_period;    
         $add->status='Pending'; 
 
         $add->save();
