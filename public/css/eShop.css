@@ -132,8 +132,66 @@
     position: relative;
 }
 
-.hero-section .content .image-block img {
+.hero-section .content .image-block svg {
     width: 100%;
+    height: auto;
+}
+
+/* Animation */
+
+#food_landing_page_header_4x {
+    animation: moveTop 5s linear infinite;
+}
+
+@keyframes moveTop {
+    0% {
+        transform: translate(494.901px, 643px);
+    }
+
+    50% {
+        transform: translate(494.901px, 663px);
+    }
+
+    100% {
+        transform: translate(494.901px, 643px);
+    }
+}
+
+#ec5929bdd46c2af2341fa16b551348c3 {
+    animation: moveBottom 5s linear infinite;
+}
+
+@keyframes moveBottom {
+    0% {
+        transform: translate(994.371px, 763px);
+    }
+
+    50% {
+        transform: translate(994.371px, 743px);
+    }
+
+    100% {
+        transform: translate(994.371px, 763px);
+    }
+}
+
+#f3d0c857aaf69810618821c2a799adb5-2 {
+    transform-origin: center;
+    animation: moveMid 5s linear infinite;
+}
+
+@keyframes moveMid {
+    0% {
+        transform: translate(163.48px, 5px) scale(1);
+    }
+
+    50% {
+        transform: translate(163.48px, 5px) scale(1.025);
+    }
+
+    100% {
+        transform: translate(163.48px, 5px) scale(1);
+    }
 }
 
 .services-section {

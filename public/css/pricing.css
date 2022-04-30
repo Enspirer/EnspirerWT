@@ -1,6 +1,7 @@
 /* Pricing Section */
 .pricing-section {
     position: relative;
+    padding: 9rem 0 5rem;
 }
 
 .pricing-section .header {

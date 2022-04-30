@@ -121,6 +121,11 @@
     width: 100%;
 }
 
+.products-body .inner-container .hero-section .inner-wrapper .image-block svg {
+    width: 100%;
+    height: auto;
+}
+
 .products-body .inner-container .whatsapp-widget {
     margin: 5rem 0;
     position: relative;
