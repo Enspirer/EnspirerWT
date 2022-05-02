@@ -119,6 +119,7 @@
 .feature-section {
     background-color: #F5F6F8;
     padding: 3rem 0 6rem;
+    position: relative;
 }
 
 .feature-section .header {
@@ -301,7 +302,7 @@
 
 /* Arrow path */
 #Path_6497 {
-    stroke-dasharray: 15;
+    stroke-dasharray: 5;
     stroke-dashoffset: 1000;
     animation: dash 10s linear infinite;
 }
@@ -309,21 +310,6 @@
 @keyframes dash {
     to {
         stroke-dashoffset: 0;
-    }
-}
-
-/* Arrow head */
-#Path_6498 {
-    animation: fliker 1s infinite;
-}
-
-@keyframes fliker {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
     }
 }
 
