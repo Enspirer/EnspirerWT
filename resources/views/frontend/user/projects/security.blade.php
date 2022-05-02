@@ -29,26 +29,14 @@
                             </ul>
                         </div>
 
-                        @include('frontend.user.projects.includes.card_section')
-                       
-                        <div class="privacy-block">
-                            <div class="inner-wrapper">
-                                <div class="content-block">
-                                    <div class="subtitle">Go to your</div>
-                                    <div class="title">Unlimited Privacy </div>
-                                    <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" class="privacy-btn" >Request</a>
-                                </div>
-                                <div class="image-block">
-                                    <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div>
+                        @include('frontend.user.projects.includes.card_section')                      
+                        
 
                         <div class="overview-block">
                             <div class="inner-wrapper">
                                 <div class="score-block">
                                     <div id="scoreGuage" style="width:350px;height:350px"></div>
+                                    <a href="{{route('frontend.user.email_blacklist_update',$project->id)}}" class="btn btn-warning col-12">Update</a>
                                 </div>
                                 <div class="info-block">
                                     <div class="header">
@@ -112,6 +100,34 @@
                                 </div>
                             </div>
                         </div>
+
+
+
+                        @if($project->email_blacklist == null)
+                            <div class="privacy-block">
+                                <div class="inner-wrapper">
+                                    <div class="content-block">
+                                        <div class="subtitle">Go to your</div>
+                                        <div class="title">Unlimited Privacy </div>
+                                        <div class="text">Best solution for your website security. Get today  50% discount with Tallentor unlimited security feature.</div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" class="privacy-btn" >Request</a>
+                                    </div>
+                                    <div class="image-block">
+                                        <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        @else
+                            <div class="card" style="padding: 30px; border-radius: 10px; box-shadow:">
+                                
+                                <h5>Request Sent successfully. One of our agents will be in touch shortly.</h5>
+                                <a href="{{route('frontend.user.unlimited_privacy',$project->id)}}" class="btn btn-success col-3 mt-3" >View More</a>
+
+                            </div>
+                        @endif
+
+
+
 
                         <div class="security-block">
                             <div class="feature-block">
@@ -183,32 +199,34 @@
                                             </td>
                                         </tr> -->
 
-                                        @foreach(json_decode($project->seo_result) as $key => $seo_result)
-                                            @if($key == 'https_encryption' || $key == 'plaintext_email')                                            
-                                                <tr>
-                                                    <td class="icon-col">
-                                                        <img src="{{url('images/dashboard/main/icons/success.png')}}" alt="">
-                                                    </td>
-                                                    <td class="text-col">
-                                                        @if($key == 'https_encryption')
-                                                            <div class="text"><b>{{ str_replace("_"," ", ucfirst(trans($key)) ) }}</b></div>
-                                                            <div class="text">The webpage uses HTTPS encryption.</div>
-                                                            <a href="{{$seo_result->value}}"><div class="sub-text">{{$seo_result->value}}</div></a>                                                       
-                                                        @endif 
+                                        @if($project->seo_result != null)
+                                            @foreach(json_decode($project->seo_result) as $key => $seo_result)
+                                                @if($key == 'https_encryption' || $key == 'plaintext_email')                                            
+                                                    <tr>
+                                                        <td class="icon-col">
+                                                            <img src="{{url('images/dashboard/main/icons/success.png')}}" alt="">
+                                                        </td>
+                                                        <td class="text-col">
+                                                            @if($key == 'https_encryption')
+                                                                <div class="text"><b>{{ str_replace("_"," ", ucfirst(trans($key)) ) }}</b></div>
+                                                                <div class="text">The webpage uses HTTPS encryption.</div>
+                                                                <a href="{{$seo_result->value}}"><div class="sub-text">{{$seo_result->value}}</div></a>                                                       
+                                                            @endif 
 
-                                                        @if($key == 'plaintext_email')
-                                                            <div class="text"><b>{{ str_replace("_"," ", ucfirst(trans($key)) ) }}</b></div>                                                    
-                                                            <div class="text">The webpage does not contain any plaintext emails.</div>
-                                                            <div class="sub-text">{{$seo_result->value}}</div>
-                                                        @endif 
-                                                        
-                                                    </td>
-                                                    <td class="info-col">
-                                                        <i class="bi bi-exclamation-circle"></i>
-                                                    </td>
-                                                </tr>
-                                            @endif
-                                        @endforeach
+                                                            @if($key == 'plaintext_email')
+                                                                <div class="text"><b>{{ str_replace("_"," ", ucfirst(trans($key)) ) }}</b></div>                                                    
+                                                                <div class="text">The webpage does not contain any plaintext emails.</div>
+                                                                <div class="sub-text">{{$seo_result->value}}</div>
+                                                            @endif 
+                                                            
+                                                        </td>
+                                                        <td class="info-col">
+                                                            <i class="bi bi-exclamation-circle"></i>
+                                                        </td>
+                                                    </tr>
+                                                @endif
+                                            @endforeach
+                                        @endif
 
                                         
                                     </tbody>
@@ -749,8 +767,8 @@
         },
         data: [
             {
-            value: 60,
-            name: 'Last Update : 28 April 2022  3.56 PM',
+            value: {{number_format((float)($issues_summary['passed_high_risk_points']/$issues_summary['total_high_risk_points'])*100, 2, '.', '')}},
+            name: 'Last Update : {{ $project->updated_at->format('d M Y') }}  {{date('h:i A', strtotime($project->created_at))}}',
             title: {
                 fontSize: 12,
                 offsetCenter: ['0%', '100%']

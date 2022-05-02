@@ -181,8 +181,11 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         
         Route::get('project_details/{id}/optimizer/security',[SecurityController::class, 'security'])->name('project.security');
+        Route::get('unlimited_privacy/{id}', [SecurityController::class, 'unlimited_privacy'])->name('unlimited_privacy');
         Route::post('unlimited_privacy/store', [SecurityController::class, 'unlimited_privacy_store'])->name('unlimited_privacy.store');
-
+        Route::get('email_blacklist_update/{id}', [SecurityController::class, 'email_blacklist_update'])->name('email_blacklist_update');
+        Route::get('view_email_blacklist/{id}', [SecurityController::class, 'view_email_blacklist'])->name('view_email_blacklist');
+        
 
         // Analytics
         Route::get('project_details/{id}/optimizer/analytics/overview',[AnalyticsController::class, 'analytics'])->name('project.analytics');

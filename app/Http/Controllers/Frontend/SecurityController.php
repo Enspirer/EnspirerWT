@@ -6,7 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\SecurityContacts;
 use App\Models\Projects;
+use App\Models\Inquiries_Status;
+use App\Models\BillingInvoice;
+use App\Models\ProjectType;
 use GuzzleHttp\Client;
+
 
 class SecurityController extends Controller
 {
@@ -17,22 +21,22 @@ class SecurityController extends Controller
         $issues_summary = self::get_issues_count($project->id);
         // dd($issues_summary);
       
-        try {
-
-            $client = new Client();
-            $res = $client->request('GET', 'http://api.whoapi.com/?domain=tallentor.com&r=blacklist&apikey=5b6b85e2ae3d3e82c8bb431089f37d1f');
-            $response = $res->getBody()->getContents();
-            // dd($response);
-
-            $update = new Projects;
-            $update->email_blacklist = $response;
-            Projects::whereId($id)->update($update->toArray());
-          
-        } catch (\Exception $e) {
-          
-            return $e->getMessage();
+        if($project->email_blacklist == null){
+            try {
+                $client = new Client();
+                $res = $client->request('GET', 'http://api.whoapi.com/?domain=tallentor.com&r=blacklist&apikey=5b6b85e2ae3d3e82c8bb431089f37d1f');
+                $response = $res->getBody()->getContents();
+                // dd($response);
+    
+                $update = new Projects;
+                $update->email_blacklist = $response;
+                Projects::whereId($id)->update($update->toArray());
+              
+            } catch (\Exception $e) {              
+                return $e->getMessage();
+            }
         }
-
+        
         return view('frontend.user.projects.security',[
             'project_id' => $id,
             'project' => $project,
@@ -93,6 +97,39 @@ class SecurityController extends Controller
         
     }
 
+
+    public function unlimited_privacy($id)
+    {
+        $project = Projects::where('id',$id)->first();
+              
+        return view('frontend.user.projects.unlimited_privacy',[
+            'project_id' => $id,
+            'project' => $project
+        ]);
+    }
+
+    public function view_email_blacklist($id)
+    {
+        $project = Projects::where('id',$id)->first();
+        $project_type = ProjectType::where('id',$project->project_type)->first();
+        $paid_invoices = BillingInvoice::where('project_id',$id)->where('status','Paid')->where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
+        $unpaid_invoices = BillingInvoice::where('project_id',$id)->where('status','Unpaid')->where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
+        $pending_invoices = BillingInvoice::where('project_id',$id)->where('status','Pending')->where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
+        $inquiry_status = Inquiries_Status::where('project_id',$id)->orderBy('id','desc')->get();
+              
+        return view('frontend.user.projects.view_email_blacklist',[
+            'project_id' => $id,
+            'project' => $project,
+            'project_type' => $project_type,
+            'paid_invoices' => $paid_invoices,
+            'unpaid_invoices' => $unpaid_invoices,
+            'pending_invoices' => $pending_invoices,
+            'inquiry_status' => $inquiry_status
+        ]);
+    }
+
+    
+
     public function unlimited_privacy_store(Request $request)
     {        
         // dd($request); 
@@ -114,6 +151,33 @@ class SecurityController extends Controller
         ]);  
 
     }
+
+
+    public function email_blacklist_update(Request $request, $id)
+    {        
+        // dd($request);
+
+        try {
+
+            $client = new Client();
+            $res = $client->request('GET', 'http://api.whoapi.com/?domain=tallentor.com&r=blacklist&apikey=5b6b85e2ae3d3e82c8bb431089f37d1f');
+            $response = $res->getBody()->getContents();
+            // dd($response);
+
+            $update = new Projects;
+            $update->email_blacklist = $response;
+            Projects::whereId($id)->update($update->toArray());
+
+            return back();
+          
+        } catch (\Exception $e) {
+          
+            return $e->getMessage();
+        }
+
+    }
+
+    
 
 
 }
