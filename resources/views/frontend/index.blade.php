@@ -69,7 +69,7 @@
     </section>
 
     <section class="feature-section">
-        <div class="heatmap" id="heatmap" style="width:1000px;height:1000px"></div>
+        {{--<div class="heatmap" id="heatmap" style="width:1000px;height:1000px"></div>--}}
         <div class="container">
             <div class="header">
                 <h3 class="title">Turn website visitors into customers</h3>
