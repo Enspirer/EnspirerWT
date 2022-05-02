@@ -102,6 +102,10 @@
                             </div>
                         </div>
 
+                        <div class="mt-3 text-left mb-5">                  
+                            <a href="{{route('frontend.user.reports.security_report', $project->id)}}" class="btn btn-info rounded-pill text-light px-5 py-2" style="font-size:15px">Back</a>&nbsp;&nbsp;
+                        </div>
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="card">
@@ -152,10 +156,7 @@
                                     </div>
                                 </div>
 
-                                <div class="mt-3 text-left">
-                                    <input type="hidden" name="hidden_project_id" value="{{ $project->id }}"/>                    
-                                    <a href="{{route('frontend.user.reports.security_report', $project->id)}}" class="btn btn-info rounded-pill text-light" style="font-size:15px">Back</a>&nbsp;&nbsp;
-                                </div>
+                               
                             </div><br> 
 
                             <div class="col-md-6">

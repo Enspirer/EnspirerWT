@@ -105,6 +105,10 @@
                     </div>
                 </div>
 
+                <div class="mt-3 text-left mb-5">                  
+                    <a href="{{route('frontend.user.reports.analytics_report', $project->id)}}" class="btn btn-info rounded-pill text-light px-5 py-2" style="font-size:15px">Back</a>&nbsp;&nbsp;
+                </div>
+
                 @if(count($inquiry_status) == 0)
                     @include('frontend.includes.not_found',[
                         'not_found_title' => 'Data not found',
@@ -118,52 +122,9 @@
                                 <div class="col">
                                     <div class="control-block">
                                         <div class="controls">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox"
-                                                    value="" id="imsSelectAll">
-                                                <label class="form-check-label"
-                                                    for="imsSelectAll">
-                                                    <i class="bi bi-chevron-down"></i>
-                                                </label>
-                                            </div>
-                                            <a href="#"
-                                                class="ims__refresh control-link active">
-                                                <i class="bi bi-arrow-clockwise"></i>
-                                            </a>
+                                                                                       
                                         </div>
-                                        <div class="actions">
-                                            <a href="#" class="control-link">
-                                                <i class="bi bi-send-fill"></i>
-                                                <div class="text">Bulk Reply</div>
-                                            </a>
-                                            <a href="#" class="control-link">
-                                                <i class="bi bi-record-circle"></i>
-                                                <div class="text">Assign</div>
-                                            </a>
-                                            <a href="#" class="control-link">
-                                                <i class="bi bi-eye-fill"></i>
-                                                <div class="text">Mark as read</div>
-                                            </a>
-                                            <a href="#" class="control-link">
-                                                <i class="bi bi-tags-fill"></i>
-                                                <div class="text">Labels</div>
-                                            </a>
-                                            <a href="#" class="control-link">
-                                                <i class="bi bi-volume-mute-fill"></i>
-                                                <div class="text">Mute</div>
-                                            </a>
-                                            <a href="#" class="control-link">
-                                                <i class="bi bi-archive-fill"></i>
-                                                <div class="text">Archive</div>
-                                            </a>
-                                            <a href="#" class="control-link" data-delete-modal data-bs-toggle="modal" data-bs-target="#deleteInquiry">
-                                                <i class="bi bi-trash-fill"></i>
-                                                <div class="text">Delete</div>
-                                            </a>
-                                            <a href="#" class="control-link">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                        </div>
+                                        
                                         <a href="{{ url('inquiriesPDF',$project_id) }}" class="btn-status-report">
                                             <i class="bi bi-download"></i>
                                             <div class="text">Status Report</div>
@@ -203,7 +164,11 @@
                                                         <td class="data--name data-cell">
                                                             <div class="info-block">
                                                                 <div class="header">
-                                                                    <div class="name">{{$inquiry->assign_user}}</div>
+                                                                    @if($inquiry->assign_user == null)
+                                                                        <div class="name">{{$inquiry->phone_number}}</div>
+                                                                    @else
+                                                                        <div class="name">{{$inquiry->assign_user}}</div>
+                                                                    @endif
                                                                     <!-- <div class="count">10</div> -->
                                                                 </div>
                                                                 <!-- <div class="message"><span>You:</span>The sample text here and this is the . . .</div> -->

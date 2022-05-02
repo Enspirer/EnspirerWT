@@ -221,9 +221,18 @@ class ReportsController extends Controller
              
         $project = Projects::where('id',$id)->first();
 
+        $paid_invoices = BillingInvoice::where('project_id',$id)->where('status','Paid')->where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
+        $unpaid_invoices = BillingInvoice::where('project_id',$id)->where('status','Unpaid')->where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
+        $pending_invoices = BillingInvoice::where('project_id',$id)->where('status','Pending')->where('user_id',auth()->user()->id)->orderBy('id','desc')->get();
+        $inquiry_status = Inquiries_Status::where('project_id',$id)->orderBy('id','desc')->get();
+
         return view('frontend.user.reports.billing_report',[
             'project' => $project,
-            'project_id' => $project->id
+            'project_id' => $project->id,
+            'paid_invoices' => $paid_invoices,
+            'unpaid_invoices' => $unpaid_invoices,
+            'pending_invoices' => $pending_invoices,
+            'inquiry_status' => $inquiry_status
         ]);
     }
 
