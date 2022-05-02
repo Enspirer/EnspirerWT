@@ -15,7 +15,7 @@
                 <h2 class="title-light">Tallentor</h2>
                 <h2 class="title">Expert Center</h2>
                 <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the <span>industry's dummy</span> text ever since the 1500s</p>
-                <a href="#" class="cta-btn-border">
+                <a href="{{url('/contact')}}" class="cta-btn-border">
                     <span class="text">Contact Expert Center</span>
                     <i class="bi bi-arrow-right-short"></i> 
                 </a>
@@ -140,7 +140,7 @@
                 <i class="bi bi-whatsapp"></i>
                 <span class="text">Via Whatsapp</span>
             </a>
-            <a href="#" class="cta-btn-fill">
+            <a href="{{url('/contact')}}" class="cta-btn-fill">
                 <i class="bi bi-telephone-forward"></i>
                 <span class="text">Contact Us</span>
             </a>
