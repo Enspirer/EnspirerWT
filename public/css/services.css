@@ -86,10 +86,6 @@
     position: relative;
     padding: 10rem 0 5rem;
     width: 100%;
-    background-image: url("images/s1.png"), url("images/s2.png"), url("images/s3.png"), url("images/s4.png"), url("images/s5.png"), url("images/s6.png"), url("images/s7.png"), url("images/s8.png"), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#F6FBFF));
-    background-image: url("images/s1.png"), url("images/s2.png"), url("images/s3.png"), url("images/s4.png"), url("images/s5.png"), url("images/s6.png"), url("images/s7.png"), url("images/s8.png"), linear-gradient(to bottom, #fff, #F6FBFF);
-    background-repeat: no-repeat;
-    background-position: 10% 13%, 40% 38%, 60% 90%, -30% 400%, 50% 25%, 90% 30%, 40% 70%, 35% 90%;
 }
 
 .hero-section .inner-wrapper {
@@ -103,16 +99,110 @@
     position: relative;
 }
 
-.hero-section .inner-wrapper .image-block {}
+.hero-section .inner-wrapper .image-block {
+    flex: 0 0 50%;
+}
 
-.hero-section .inner-wrapper .image-block img {
+.hero-section .inner-wrapper .image-block svg {
     width: 100%;
 }
 
+/* Animations */
+#expressWeb .cls-10,
+#expressWeb .cls-11 {
+    animation: bounce2 18s ease-in-out infinite;
+}
+
+#expressWeb .cls-12,
+#expressWeb .cls-13 {
+    animation: bounce1 15s ease-in-out infinite;
+}
+
+#expressWeb .cls-14,
+#expressWeb .cls-15 {
+    animation: bounce2 12s ease-in-out infinite;
+}
+
+#expressWeb .cls-2,
+#expressWeb .cls-3 {
+    animation: bounce1 18s ease-in-out infinite;
+}
+
+#expressWeb .cls-6,
+#expressWeb .cls-7 {
+    animation: bounce2 15s ease-in-out infinite;
+}
+
+#expressWeb .cls-8,
+#expressWeb .cls-9 {
+    animation: bounce1 12s ease-in-out infinite;
+}
+
+@keyframes bounce1 {
+
+    0%,
+    100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce2 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#expressWeb:hover #side-nav {
+    animation: transform .5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#expressWeb:hover #search-bar {
+    animation: transform .5s ease-in-out;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
+}
+
+#expressWeb:hover #progress-bar {
+    animation: transform .5s ease-in-out;
+    animation-delay: .6s;
+    animation-fill-mode: forwards;
+}
+
+#expressWeb:hover #card {
+    animation: transform .5s ease-in-out;
+    animation-delay: .9s;
+    animation-fill-mode: forwards;
+}
+
+#expressWeb:hover #settings {
+    animation: transform .5s ease-in-out;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes transform {
+
+    from {
+        transform: unset;
+    }
+
+    to {
+        transform: translate(-5px, 0px);
+    }
+}
+
 .enterprise-section {
-    background-image: url("images/s1.png"), url("images/s2.png"), url("images/s3.png"), url("images/s4.png"), url("images/s5.png"), url("images/s6.png"), url("images/s7.png"), url("images/s8.png");
-    background-repeat: no-repeat;
-    background-position: 10% 13%, 40% 38%, 60% 90%, -30% 400%, 50% 25%, 90% 30%, 40% 70%, 35% 90%;
     margin: 5rem 0 10rem;
 }
 
@@ -127,10 +217,78 @@
     position: relative;
 }
 
-.enterprise-section .inner-wrapper .image-block {}
-
-.enterprise-section .inner-wrapper .image-block img {
+.enterprise-section .inner-wrapper .image-block {
     width: 100%;
+}
+
+.enterprise-section .inner-wrapper .image-block svg {
+    width: 100%;
+}
+
+/* Animation */
+#enterpriseWeb:hover #code {
+    animation: fade-top 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#enterpriseWeb:hover #rating {
+    animation: fade-top 1s ease-in-out;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+#enterpriseWeb:hover #video {
+    animation: fade-top 1s ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#enterpriseWeb:hover #dashboard {
+    animation: fade-left 1s ease-in-out;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+#enterpriseWeb:hover #bottom-menu {
+    animation: fade-up 1s ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-top {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-left {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .feature-section {
@@ -336,11 +494,6 @@
     .hero-section .inner-wrapper .image-block,
     .enterprise-section .inner-wrapper .image-block {
         text-align: center;
-    }
-
-    .hero-section .inner-wrapper .image-block img,
-    .enterprise-section .inner-wrapper .image-block img {
-        width: 75%;
     }
 
 }
