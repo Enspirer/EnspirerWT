@@ -138,12 +138,12 @@
                     <div class="text">Analytics Center</div>
                 </a>
             </div>
-            <!-- <div class="tab {{Request::segment(4)=='seo' ? 'active' :null }}">
-                <a href="{{ route('frontend.user.project.seo',$project_id) }}" class="tab-link">
-                    <img src="{{url('images/dashboard/tab_section/seo-report.png')}}" alt="">
-                    <div class="text">SEO Report</div>
+           <div class="tab {{Request::segment(4)=='heatmap' ? 'active' :null }}">
+                <a href="{{ route('frontend.user.projects.heatmap',$project_id) }}" class="tab-link">
+                    <img src="{{url('images/dashboard/tab_section/heatmap.png')}}" alt="">
+                    <div class="text">Heatmap</div>
                 </a>
-            </div> -->
+            </div>
             <div class="tab {{Request::segment(4)=='security' ? 'active' :null }}">
                 <a href="{{ route('frontend.user.project.security',$project_id) }}" class="tab-link">
                     <img src="{{url('images/dashboard/tab_section/security.png')}}" alt="">

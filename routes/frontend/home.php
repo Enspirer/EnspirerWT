@@ -36,6 +36,7 @@ use App\Http\Controllers\Frontend\MobileViewController;
 use App\Http\Controllers\Frontend\PricingController;
 use App\Http\Controllers\Frontend\MediaController;
 use App\Http\Controllers\Frontend\DemoController;
+use App\Http\Controllers\Frontend\HeatmapController;
 
 
 /*
@@ -203,6 +204,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('project_details/{id}/optimizer/analytics/technology/browsers',[AnalyticsController::class, 'analyticsBrowsers'])->name('projects.analytics.browsers');
         Route::get('project_details/{id}/optimizer/analytics/technology/screen-resolutions',[AnalyticsController::class, 'analyticsScreenResolutions'])->name('projects.analytics.screen_resolutions');
         Route::get('project_details/{id}/optimizer/analytics/technology/devices',[AnalyticsController::class, 'analyticsDevices'])->name('projects.analytics.devices');
+        
+        Route::get('project_details/{id}/optimizer/heatmap',[HeatmapController::class, 'heatmap'])->name('projects.heatmap');
 
         Route::get('project_details/{id}/widget',[ChatController::class, 'widget'])->name('project.chat');
         Route::get('project_details/{id}/widget_plus',[ChatController::class, 'widget_plus'])->name('project.widget_plus');
