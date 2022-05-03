@@ -77,12 +77,11 @@
                             <div class="innre-wrapper">
                                 <div class="project-card">
                                     <div class="header">
-                                        <div class="text-block">
-                                            <div class="title">Bot Name Here</div>
-                                            <div class="text">SEO optimization</div>
-                                        </div>
+                                        <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
+                                        <div class="title">Bot Name Here</div>
                                         <div class="bot-no">01</div>
                                     </div>
+                                    <div class="text">SEO optimization</div>
                                     <div class="progress-block">
                                         <div class="progress-item">
                                             <div class="count green">05</div>
@@ -105,12 +104,11 @@
                                 </div>
                                 <div class="project-card">
                                     <div class="header">
-                                        <div class="text-block">
-                                            <div class="title">Bot Name Here</div>
-                                            <div class="text">SEO optimization</div>
-                                        </div>
+                                        <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
+                                        <div class="title">Bot Name Here</div>
                                         <div class="bot-no">01</div>
                                     </div>
+                                    <div class="text">SEO optimization</div>
                                     <div class="progress-block">
                                         <div class="progress-item">
                                             <div class="count green">05</div>
@@ -133,12 +131,11 @@
                                 </div>
                                 <div class="project-card">
                                     <div class="header">
-                                        <div class="text-block">
-                                            <div class="title">Bot Name Here</div>
-                                            <div class="text">SEO optimization</div>
-                                        </div>
+                                        <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
+                                        <div class="title">Bot Name Here</div>
                                         <div class="bot-no">01</div>
                                     </div>
+                                    <div class="text">SEO optimization</div>
                                     <div class="progress-block">
                                         <div class="progress-item">
                                             <div class="count green">05</div>

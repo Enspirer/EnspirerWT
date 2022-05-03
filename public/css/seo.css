@@ -974,25 +974,32 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
 }
 
-.project-section .innre-wrapper .project-card .header .text-block .title {
+.project-section .innre-wrapper .project-card .header img {
+    width: 35px;
+}
+
+.project-section .innre-wrapper .project-card .header .title {
+    flex: 1;
+    text-align: left;
     font-size: 16px;
     font-weight: 400;
     color: #2A48EE;
-    margin-bottom: 5px;
-}
-
-.project-section .innre-wrapper .project-card .header .text-block .text {
-    font-size: 14px;
-    font-weight: 400;
-    color: #777;
+    margin: 0;
 }
 
 .project-section .innre-wrapper .project-card .header .bot-no {
     font-size: 40px;
     font-weight: 800;
     color: #ECECEC;
+}
+
+.project-section .innre-wrapper .project-card .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #777;
 }
 
 .project-section .innre-wrapper .project-card .progress-block {
@@ -1036,7 +1043,7 @@
 }
 
 .project-section .innre-wrapper .project-card .progress-block .progress-item .text {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     color: #333;
 }
