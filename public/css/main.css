@@ -39,27 +39,13 @@
     justify-content: center;
     gap: 10px;
     width: max-content;
+    transition: all .3s ease;
 }
 
 .cta-btn-fill:hover {
-    color: #fff !important;
+    color: #000 !important;
+    background-color: transparent !important;
 }
-
-/* .cta-btn-fill::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0%;
-    background-color: #fff;
-    transition: all .3s ease-in-out;
-}
-
-.cta-btn-fill:hover::before {
-    width: 100%;
-    transition: all .3s ease-in-out;
-} */
 
 .cta-btn-fill .text {
     position: relative;
@@ -88,27 +74,13 @@
     justify-content: center;
     gap: 10px;
     width: max-content;
+    transition: all .3s ease;
 }
 
 .cta-btn-border:hover {
-    color: #000 !important;
+    color: #fff !important;
+    background-color: #000 !important;
 }
-
-/* .cta-btn-border::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0%;
-    background-color: #000;
-    transition: all .3s ease-in-out;
-}
-
-.cta-btn-border:hover::before {
-    width: 100%;
-    transition: all .3s ease-in-out;
-} */
 
 .cta-btn-border .text {
     position: relative;

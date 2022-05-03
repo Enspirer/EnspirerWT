@@ -6,6 +6,8 @@
     
 @include('frontend.includes.home_nav')
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.0/heatmap.min.js" integrity="sha512-FpvmtV53P/z7yzv1TAIVH7PNz94EKXs5aV6ts/Zi+B/VeGU5Xwo6KIbwpTgKc0d4urD/BtkK50IC9785y68/AA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <section class="hero-section home">
         <div class="container">
             <div class="splide" id="heroSlider">
@@ -69,7 +71,6 @@
     </section>
 
     <section class="feature-section">
-        {{--<div class="heatmap" id="heatmap" style="width:1000px;height:1000px"></div>--}}
         <div class="container">
             <div class="header">
                 <h3 class="title">Turn website visitors into customers</h3>
@@ -540,44 +541,50 @@
                 </div>
                 <div class="card-block" id="marketplaceCards">
                     <div class="card card-top">
-                        <div class="icon-block">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="image-block">
-                            <img src="{{url('images/landing_page/home/mobile-app-development.png')}}" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="title">Mobile App Development</div>
-                            <div class="text">Hire the industry experts to bring your idea into reality.
-                            Dedicated Android & iOS developers to work on your project</div>
-                        </div>
+                        <a href="{{url('services/marketplace')}}">
+                            <div class="icon-block">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                            <div class="image-block">
+                                <img src="{{url('images/landing_page/home/mobile-app-development.png')}}" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="title">Mobile App Development</div>
+                                <div class="text">Hire the industry experts to bring your idea into reality.
+                                Dedicated Android & iOS developers to work on your project</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="card active card-middle">
-                        <div class="icon-block">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="image-block">
-                            <img src="{{url('images/landing_page/home/software-development.png')}}" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="title">Software Development</div>
-                            <div class="text">Experienced software developers to work individually or as a part of your team. Save Big with remote working environment, yer achieve the Best results.</div>
-                        </div>
+                        <a href="{{url('services/marketplace')}}">
+                            <div class="icon-block">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                            <div class="image-block">
+                                <img src="{{url('images/landing_page/home/software-development.png')}}" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="title">Software Development</div>
+                                <div class="text">Experienced software developers to work individually or as a part of your team. Save Big with remote working environment, yer achieve the Best results.</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="card card-bottom">
-                        <div class="icon-block">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="image-block">
-                            <img src="{{url('images/landing_page/home/digital-marketing.png')}}" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="title">Digital Marketing</div>
-                            <div class="text">SEO experts, Social media strategists and creative designers all under one package with a dedicated account manager</div>
-                        </div>
+                        <a href="{{url('services/marketplace')}}">
+                            <div class="icon-block">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                            <div class="image-block">
+                                <img src="{{url('images/landing_page/home/digital-marketing.png')}}" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="title">Digital Marketing</div>
+                                <div class="text">SEO experts, Social media strategists and creative designers all under one package with a dedicated account manager</div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -780,6 +787,52 @@
             return;
         }
     })
+</script>
+
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+    // const getBody = document.querySelector("body")
+    getBody.setAttribute('id', 'heatmap')
+
+    // create a heatmap instance
+    var heatmap = h337.create({
+        container: document.getElementById('heatmap'),
+        maxOpacity: .6,
+        radius: 50,
+        blur: .90,
+        // backgroundColor with alpha so you can see through it
+        backgroundColor: 'transparent'
+    });
+    var heatmapContainer = document.getElementById('heatmap');
+
+    heatmapContainer.onmousemove = heatmapContainer.ontouchmove = function (e) {
+        // we need preventDefault for the touchmove
+        e.preventDefault();
+        var x = e.layerX;
+        var y = e.layerY;
+        if (e.touches) {
+            x = e.touches[0].pageX;
+            y = e.touches[0].pageY;
+        }
+
+        heatmap.addData({
+            x: x,
+            y: y,
+            value: 1
+        });
+
+    };
+
+    heatmapContainer.onclick = function (e) {
+        var x = e.layerX;
+        var y = e.layerY;
+        heatmap.addData({
+            x: x,
+            y: y,
+            value: 1
+        });
+    };
+})
 </script>
 
 @endpush

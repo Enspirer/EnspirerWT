@@ -39,6 +39,9 @@
         <link rel="stylesheet" href="{{url('css/card_section.css')}}">
         <!-- Hotjar Tracking Code for https://tallentor.com/ -->
 
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
         <script data-host="https://tallentor.com" data-dnt="false" src="https://tallentor.com/js/script_tracker.js" id="ZwSg9rf6GA" async defer></script>
 
         <script>

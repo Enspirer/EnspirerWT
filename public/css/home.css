@@ -158,6 +158,10 @@
     padding: 20px 10px 20px 20px;
 }
 
+.feature-section .body .feature-box:hover {
+    box-shadow: 0 0 10px rgba(1, 127, 250, 0.2);
+}
+
 .feature-section .body .feature-box .inner-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -615,6 +619,10 @@
     box-shadow: 0 5px 10px rgba(1, 127, 250, 0.25);
 }
 
+.marketplace-section .inner-wrapper .card-block .card a {
+    text-decoration: none;
+}
+
 .marketplace-section .inner-wrapper .card-block .card.active {
     filter: grayscale(0);
     opacity: 1;
@@ -623,6 +631,10 @@
 
 .marketplace-section .inner-wrapper .card-block .card:hover {
     cursor: pointer;
+}
+
+.marketplace-section .inner-wrapper .card-block .card a {
+    text-decoration: none;
 }
 
 .marketplace-section .inner-wrapper .card-block .card .icon-block {
@@ -650,12 +662,14 @@
     font-weight: 500;
     margin: 10px 0 30px;
     text-align: center;
+    color: #333;
 }
 
 .marketplace-section .inner-wrapper .card-block .card .content .text {
     font-size: 14px;
     font-weight: 300;
     text-align: center;
+    color: #333;
 }
 
 .marketplace-section .inner-wrapper .card-block .card-top {
@@ -1225,7 +1239,7 @@
 /* Slider new updates */
 
 .hero-section.home {
-    background: url(../images/landing_page/home/hero-background.png);
+    background: url(../images/landing_page/home/hero-background.svg), url(../images/landing_page/home/hero-background.png);
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
