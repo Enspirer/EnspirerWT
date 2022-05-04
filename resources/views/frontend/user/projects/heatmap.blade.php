@@ -231,20 +231,20 @@
                                             </ul>
                                         </div>
                                         <div class="body">
-                                            <div id="actionChart" style="width:650px;height:450px;margin:auto"></div>
+                                            <div id="actionChart"></div>
                                         </div>
                                     </div>
                                     <div class="chart-block">
                                         <div class="inner-chart">
                                             <div class="header">Popular Pages</div>
                                             <div class="body">
-                                                <div id="pagesChart" style="width:650px;height:250px;margin:auto"></div>
+                                                <div id="pagesChart"></div>
                                             </div>
                                         </div>
                                         <div class="inner-chart">
                                             <div class="header">Event Actions</div>
                                             <div class="body">
-                                                <div id="eventChart" style="width:650px;height:250px;margin:auto"></div>
+                                                <div id="eventChart"></div>
                                             </div>
                                         </div>
                                     </div>
