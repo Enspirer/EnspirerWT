@@ -6,7 +6,7 @@
     
 @include('frontend.includes.home_nav')
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <section class="hero-section home">
         <div class="container">
@@ -25,8 +25,11 @@
                                         <a href="{{url('/tallentor-demo')}}" class="cta-btn-fill"><span class="text">Request Demo</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                                <div class="image-block slide-01">
-                                    <img src="{{url('images/landing_page/home/slide-widget-lite.png')}}" alt="hero-image">
+                                <div class="image-block slide-1">
+                                    <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_1/desktop.png')}}" class="main-img size-img">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_1/imslite.png')}}" class="imslite-img size-img inL">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_1/whatsapp.png')}}" class="wapp-img size-img inR">
                                 </div>
                             </div>
                         </li>
@@ -42,8 +45,12 @@
                                         <a href="{{url('/tallentor-demo')}}" class="cta-btn-fill"><span class="text">Request Demo</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                                <div class="image-block">
-                                    <img src="{{url('images/landing_page/home/slide-widget-pro.png')}}" alt="hero-image">
+                                <div class="image-block slide-2">
+                                    <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_2/desktop.png')}}" class="main-img size-img">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_2/imspro.png')}}" class="imslite-img size-img inL">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_2/whatsapp.png')}}" class="wapp-img size-img inR">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_2/allin1.png')}}" class="allin1-img size-img inR10">
                                 </div>
                             </div>
                         </li>
@@ -59,8 +66,15 @@
                                         <a href="{{url('/tallentor-demo')}}" class="cta-btn-fill"><span class="text">Request Demo</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                                <div class="image-block">
-                                    <img src="{{url('images/landing_page/home/slide-optimizer.png')}}" alt="hero-image">
+                                <div class="image-block slide-3">
+                                    <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/dashboard.png')}}" class="main-img size-img">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/imspro.png')}}" class="imslite-img size-img inL">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/heatmap.png')}}" class="heatmap-img size-img inR20">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/allin1.png')}}" class="allin1-img size-img inR10">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/mobapp.png')}}" class="mobapp-img size-img inR">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/realtime.png')}}" class="realtime-img size-img inR30">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/record.png')}}" class="record-img size-img inR40">
                                 </div>
                             </div>
                         </li>
@@ -832,6 +846,20 @@ window.addEventListener('DOMContentLoaded', function () {
             value: 1
         });
     };
+})
+</script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function(){
+    const heroSlider = document.getElementById("heroSlider")
+    const isActive = heroSlider.querySelectorAll(".splide__slide")
+    
+        isActive.forEach(function(slide){
+            if (slide.classList.contains("is-active")) {
+                const inL = slide.querySelector(".inL")
+                console.log(inL);
+            }
+        })
 })
 </script>
 
