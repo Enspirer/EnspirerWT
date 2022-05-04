@@ -13,27 +13,26 @@
         @include('frontend.includes.nav')
 
         <!-- Content goes here -->
-            @if($project_optimizer != null)
 
-            @else
-                <div class="row g-0">
-                    <div class="section-content">
-                        <div class="section-container">
 
-                            <!-- Section Reports Main End -->
+            <div class="row g-0">
+                <div class="section-content">
+                    <div class="section-container">
 
-                            <div class="breadcrumb-block">
-                                <ul class="breadcrumb mb-5">
-                                    <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                                    <li class="breadcrumb-item active">
-                                        {{App\Models\Projects::where('id',$project_id)->first()->name}}</li>
-                                </ul>
-                            </div>
+                        <!-- Section Reports Main End -->
 
-                            @include('frontend.user.projects.includes.card_section')
+                        <div class="breadcrumb-block">
+                            <ul class="breadcrumb mb-5">
+                                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                                <li class="breadcrumb-item active">
+                                    {{App\Models\Projects::where('id',$project_id)->first()->name}}</li>
+                            </ul>
+                        </div>
 
-                            <div class="title" style="font-size: 22px;color: #333;">Tallentor Optimizer Features</div>
+                        @include('frontend.user.projects.includes.card_section')
 
+                        <div class="title" style="font-size: 22px;color: #333;">Tallentor Optimizer Features</div>
+                        @if($project_optimizer != null)
                             <div class="imsPro-section">
                                 <div class="inner-wrapper">
                                     <div class="subtitle">Go to your</div>
@@ -59,119 +58,124 @@
                                     <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" class="ims-btn">IMS Pro</a>
                                 </div>
                             </div>
+                        @else
 
-                            @if(App\Models\Projects::where('id',$project_id)->where('selected_package','Optimizer')->first() != null)
-                                <div class="realtime-table">
-                                    <div class="header">
-                                        <div class="title">Realtime View</div>
-                                        <!-- <div class="filter-block">
-                                            <div class="filter-group">
-                                                <div class="dropdown filter-dropdown status-drop">
-                                                    <a class="filter-button status-btn" href="#" role="button" id="statusDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Everyone
-                                                        <i class="bi bi-chevron-down"></i>
-                                                    </a>
 
-                                                    <ul class="dropdown-menu" aria-labelledby="statusDrop">
-                                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="dropdown filter-dropdown date-drop">
-                                                    <a class="filter-button date-btn" href="#" role="button" id="dateDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Today
-                                                        <i class="bi bi-chevron-down"></i>
-                                                    </a>
+                        @endif
 
-                                                    <ul class="dropdown-menu" aria-labelledby="dateDrop">
-                                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                    </ul>
-                                                </div>
+
+                        @if(App\Models\Projects::where('id',$project_id)->where('selected_package','Optimizer')->first() != null)
+                            <div class="realtime-table">
+                                <div class="header">
+                                    <div class="title">Realtime View</div>
+                                    <!-- <div class="filter-block">
+                                        <div class="filter-group">
+                                            <div class="dropdown filter-dropdown status-drop">
+                                                <a class="filter-button status-btn" href="#" role="button" id="statusDrop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Everyone
+                                                    <i class="bi bi-chevron-down"></i>
+                                                </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="statusDrop">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                </ul>
                                             </div>
-                                            <div class="filter-group">
-                                                <div class="input-group">
-                                                    <input type="search" class="form-control" placeholder="Search">
-                                                    <i class="bi bi-search"></i>
-                                                </div>
-                                                <div class="dropdown filter-dropdown filter-drop">
-                                                    <a class="filter-button filter-btn" href="#" role="button" id="filterDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bi bi-funnel"></i>
-                                                    </a>
+                                            <div class="dropdown filter-dropdown date-drop">
+                                                <a class="filter-button date-btn" href="#" role="button" id="dateDrop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Today
+                                                    <i class="bi bi-chevron-down"></i>
+                                                </a>
 
-                                                    <ul class="dropdown-menu" aria-labelledby="filterDrop">
-                                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                    </ul>
-                                                </div>
+                                                <ul class="dropdown-menu" aria-labelledby="dateDrop">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                </ul>
                                             </div>
-                                        </div> -->
-                                    </div>
-                                    <div class="body">
-                                        @if(count($visitors_count) != 0)
-                                            <table class="table align-middle">
-                                                <thead class="tbl-header">
+                                        </div>
+                                        <div class="filter-group">
+                                            <div class="input-group">
+                                                <input type="search" class="form-control" placeholder="Search">
+                                                <i class="bi bi-search"></i>
+                                            </div>
+                                            <div class="dropdown filter-dropdown filter-drop">
+                                                <a class="filter-button filter-btn" href="#" role="button" id="filterDrop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-funnel"></i>
+                                                </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="filterDrop">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="body">
+                                    @if(count($visitors_count) != 0)
+                                        <table class="table align-middle">
+                                            <thead class="tbl-header">
+                                            <tr class="tbl-row">
+                                                <td class="th-col"></td>
+                                                <td class="th-col">Country</td>
+                                                <td class="th-col">Status</td>
+                                                <td class="th-col">Key Event</td>
+                                                <td class="th-col">Pages</td>
+                                                <td class="th-col"></td>
+                                            </tr>
+                                            </thead>
+                                            <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
+
+                                            <tbody class="tbl-body" id="visitors_record">
+
+                                            @foreach($visitors_count as $visitors)
                                                 <tr class="tbl-row">
-                                                    <td class="th-col"></td>
-                                                    <td class="th-col">Country</td>
-                                                    <td class="th-col">Status</td>
-                                                    <td class="th-col">Key Event</td>
-                                                    <td class="th-col">Pages</td>
-                                                    <td class="th-col"></td>
-                                                </tr>
-                                                </thead>
-                                                <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
+                                                    <td class="tb-col rt-flag">
+                                                        <img src="https://flagcdn.com/w40/{{strtolower($visitors->iso_code)}}.png" alt="">
+                                                    </td>
+                                                    <td class="tb-col rt-country">
+                                                        {{$visitors->ip_address}}
+                                                    </td>
+                                                    <td class="tb-col rt-status">
+                                                        <div class="status-block">
+                                                            <i class="bi bi-circle-fill"></i>
+                                                            <div class="text">Online</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tb-col rt-keyEvent">
+                                                        <span class="event yellow">Product Viewed</span>
+                                                        <span class="event blue">Cart Viewed</span>
+                                                        <span class="event purple">Top CTA</span>
+                                                    </td>
+                                                    <td class="tb-col rt-pages">
+                                                        <div class="pages-count">10</div>
+                                                    </td>
+                                                    <td class="tb-col rt-invite">
+                                                        @if($visitors->chat_invite == null)
+                                                            <form action="{{route('user_optimizer.realtime_invite')}}" method="post" enctype="multipart/form-data">
+                                                                {{csrf_field()}}
 
-                                                <tbody class="tbl-body" id="visitors_record">
-
-                                                @foreach($visitors_count as $visitors)
-                                                    <tr class="tbl-row">
-                                                        <td class="tb-col rt-flag">
-                                                            <img src="https://flagcdn.com/w40/{{strtolower($visitors->iso_code)}}.png" alt="">
-                                                        </td>
-                                                        <td class="tb-col rt-country">
-                                                            {{$visitors->ip_address}}
-                                                        </td>
-                                                        <td class="tb-col rt-status">
-                                                            <div class="status-block">
-                                                                <i class="bi bi-circle-fill"></i>
-                                                                <div class="text">Online</div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="tb-col rt-keyEvent">
-                                                            <span class="event yellow">Product Viewed</span>
-                                                            <span class="event blue">Cart Viewed</span>
-                                                            <span class="event purple">Top CTA</span>
-                                                        </td>
-                                                        <td class="tb-col rt-pages">
-                                                            <div class="pages-count">10</div>
-                                                        </td>
-                                                        <td class="tb-col rt-invite">
-                                                            @if($visitors->chat_invite == null)
-                                                                <form action="{{route('user_optimizer.realtime_invite')}}" method="post" enctype="multipart/form-data">
-                                                                    {{csrf_field()}}
-
-                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                                    <input type="hidden" name="visitors_id" value="{{$visitors->id}}">
-                                                                    <button type="submit" style="border: none;" class="tbl-btn btn-invite">
-                                                                        <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
-                                                                        <div class="text">Invite</div>
-                                                                    </button>
-                                                                </form>
-                                                            @else
-                                                                <button type="submit" style="border: none;" class="tbl-btn btn-invite" disabled>
+                                                                <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                                <input type="hidden" name="visitors_id" value="{{$visitors->id}}">
+                                                                <button type="submit" style="border: none;" class="tbl-btn btn-invite">
                                                                     <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
-                                                                    <div class="text">Invited</div>
+                                                                    <div class="text">Invite</div>
                                                                 </button>
-                                                            @endif
-                                                        </td>
-                                                        <input type="hidden" name="visitor_project_id" id="visitor_project_id" value="{{$visitors->project_id}}">
-                                                    </tr>
-                                                @endforeach
-                                                <!-- <tr class="tbl-row offline">
+                                                            </form>
+                                                        @else
+                                                            <button type="submit" style="border: none;" class="tbl-btn btn-invite" disabled>
+                                                                <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
+                                                                <div class="text">Invited</div>
+                                                            </button>
+                                                        @endif
+                                                    </td>
+                                                    <input type="hidden" name="visitor_project_id" id="visitor_project_id" value="{{$visitors->project_id}}">
+                                                </tr>
+                                            @endforeach
+                                            <!-- <tr class="tbl-row offline">
                                                 <td class="tb-col rt-flag">
                                                     <img src="https://flagicons.lipis.dev/flags/4x3/sg.svg" alt="">
                                                 </td>
@@ -199,217 +203,215 @@
                                                     </a>
                                                 </td>
                                             </tr> -->
-                                                </tbody>
-                                            </table>
-                                        @else
-                                            <table class="table align-middle">
-                                                <thead class="tbl-header">
-                                                <tr class="tbl-row">
-                                                    <td class="th-col"></td>
-                                                    <td class="th-col">Country</td>
-                                                    <td class="th-col">Status</td>
-                                                    <td class="th-col">Key Event</td>
-                                                    <td class="th-col">Pages</td>
-                                                    <td class="th-col"></td>
-                                                </tr>
-                                                </thead>
-                                                <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
+                                            </tbody>
+                                        </table>
+                                    @else
+                                        <table class="table align-middle">
+                                            <thead class="tbl-header">
+                                            <tr class="tbl-row">
+                                                <td class="th-col"></td>
+                                                <td class="th-col">Country</td>
+                                                <td class="th-col">Status</td>
+                                                <td class="th-col">Key Event</td>
+                                                <td class="th-col">Pages</td>
+                                                <td class="th-col"></td>
+                                            </tr>
+                                            </thead>
+                                            <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
 
-                                                <tbody class="tbl-body" id="visitors_record">
-                                                <tr class="tbl-row">
-                                                    <td class="tb-col" colspan="6">
-                                                        <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        @endif
-                                    </div>
+                                            <tbody class="tbl-body" id="visitors_record">
+                                            <tr class="tbl-row">
+                                                <td class="tb-col" colspan="6">
+                                                    <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    @endif
                                 </div>
-                            @endif
+                            </div>
+                        @endif
 
-                            @if($project_optimizer != null)
-                                <div class="subcription-block activated">
-                                    <div class="active-overlay animate__animated animate__fadeIn">
-                                        <div class="button-block">
-                                            <div class="btn-group">
-                                                <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" type="button" class="act-btn ims-pro">
-                                                    <i class="bi bi-file-earmark-text"></i>
-                                                    <div class="text">IMS Pro</div>
-                                                </a>
-                                                <a href="{{ route('frontend.user.user_widget.settings', $all_in_one->id) }}" type="button" class="act-btn">
-                                                    <i class="bi bi-gear"></i>
-                                                    <div class="text">Widget Settings</div>
-                                                </a>
-                                                <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}" type="button" class="act-btn">
-                                                    <i class="bi bi-gear"></i>
-                                                    <div class="text">IMS Settings</div>
-                                                </a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" type="button" class="act-btn">
-                                                    <i class="bi bi-code-slash"></i>
-                                                    <div class="text">Add Widget Script</div>
-                                                </a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#analyticsModal" type="button" class="act-btn">
-                                                    <i class="bi bi-code-slash"></i>
-                                                    <div class="text">Add Analytics Script</div>
-                                                </a>
-                                            </div>
-                                            <div class="btn-group">
-                                                <a href="{{ route('frontend.user.user_optimizer.destroy', $project_optimizer->id) }}" data-bs-toggle="modal" data-bs-target="#deleteFavorite" type="button" class="act-btn delete">
-                                                    <i class="bi bi-trash"></i>
-                                                    <div class="text">Delete</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="content-block">
-                                        <div class="widget-block">
-                                            <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
-                                            <div class="content">
-                                                <div class="title">Desktop</div>
-                                                <ul class="options">
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Realtime View + Invites</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Analytics Center</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">SEO Reports</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Session Recording</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Heatmaps</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Security</div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="widget-block">
-                                            <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
-                                            <div class="content">
-                                                <div class="title">Mobile</div>
-                                                <ul class="options">
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Realtime View</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Visitor Invite</div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                        @if($project_optimizer != null)
+                            <div class="subcription-block activated">
+                                <div class="active-overlay animate__animated animate__fadeIn">
                                     <div class="button-block">
-                                        <a href="#" class="sub-btn" data-bs-toggle="modal" data-bs-target="#actOptimizer">
-                                            <i class="bi bi-plus"></i>
-                                            <div class="text">Activated</div>
-                                        </a>
+                                        <div class="btn-group">
+                                            <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" type="button" class="act-btn ims-pro">
+                                                <i class="bi bi-file-earmark-text"></i>
+                                                <div class="text">IMS Pro</div>
+                                            </a>
+                                            <a href="{{ route('frontend.user.user_widget.settings', $all_in_one->id) }}" type="button" class="act-btn">
+                                                <i class="bi bi-gear"></i>
+                                                <div class="text">Widget Settings</div>
+                                            </a>
+                                            <a href="{{ route('frontend.user.user_widget.settings', $widgetlist->id) }}" type="button" class="act-btn">
+                                                <i class="bi bi-gear"></i>
+                                                <div class="text">IMS Settings</div>
+                                            </a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" type="button" class="act-btn">
+                                                <i class="bi bi-code-slash"></i>
+                                                <div class="text">Add Widget Script</div>
+                                            </a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#analyticsModal" type="button" class="act-btn">
+                                                <i class="bi bi-code-slash"></i>
+                                                <div class="text">Add Analytics Script</div>
+                                            </a>
+                                        </div>
+                                        <div class="btn-group">
+                                            <a href="{{ route('frontend.user.user_optimizer.destroy', $project_optimizer->id) }}" data-bs-toggle="modal" data-bs-target="#deleteFavorite" type="button" class="act-btn delete">
+                                                <i class="bi bi-trash"></i>
+                                                <div class="text">Delete</div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            @else
-                                <div class="subcription-block">
-                                    <div class="active-overlay animate__animated animate__fadeIn">
-                                        <div class="button-block">
-                                            <div class="btn-group">
-                                                <button type="button" class="act-btn ims-lite">
-                                                    <i class="bi bi-file-earmark-text"></i>
-                                                    <div class="text">IMS Lite</div>
-                                                </button>
-                                                <button type="button" class="act-btn">
-                                                    <i class="bi bi-gear"></i>
-                                                    <div class="text">Settings</div>
-                                                </button>
-                                                <button type="button" class="act-btn">
-                                                    <i class="bi bi-code-slash"></i>
-                                                    <div class="text">Add Script</div>
-                                                </button>
-                                            </div>
-                                            <div class="btn-group">
-                                                <a type="button" class="act-btn delete">
-                                                    <i class="bi bi-trash"></i>
-                                                    <div class="text">Delete</div>
-                                                </a>
-                                            </div>
+                                <div class="content-block">
+                                    <div class="widget-block">
+                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
+                                        <div class="content">
+                                            <div class="title">Desktop</div>
+                                            <ul class="options">
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Realtime View + Invites</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Analytics Center</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">SEO Reports</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Session Recording</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Heatmaps</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Security</div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="content-block">
-                                        <div class="widget-block">
-                                            <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
-                                            <div class="content">
-                                                <div class="title">Desktop</div>
-                                                <ul class="options">
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Realtime View + Invites</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Analytics Center</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">SEO Reports</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Session Recording</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Heatmaps</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Security</div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="widget-block">
-                                            <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
-                                            <div class="content">
-                                                <div class="title">Mobile</div>
-                                                <ul class="options">
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Realtime View</div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <i class="bi green bi-check-circle-fill"></i>
-                                                        <div class="text">Visitor Invite</div>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                    <div class="widget-block">
+                                        <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
+                                        <div class="content">
+                                            <div class="title">Mobile</div>
+                                            <ul class="options">
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Realtime View</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Visitor Invite</div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="button-block">
+                                    <a href="#" class="sub-btn" data-bs-toggle="modal" data-bs-target="#actOptimizer">
+                                        <i class="bi bi-plus"></i>
+                                        <div class="text">Activated</div>
+                                    </a>
+                                </div>
+                            </div>
+                        @else
+                            <div class="subcription-block">
+                                <div class="active-overlay animate__animated animate__fadeIn">
                                     <div class="button-block">
-                                        <a href="#" class="sub-btn" data-bs-toggle="modal" data-bs-target="#actOptimizer">
-                                            <i class="bi bi-plus"></i>
-                                            <div class="text">Activate</div>
-                                        </a>
+                                        <div class="btn-group">
+                                            <button type="button" class="act-btn ims-lite">
+                                                <i class="bi bi-file-earmark-text"></i>
+                                                <div class="text">IMS Lite</div>
+                                            </button>
+                                            <button type="button" class="act-btn">
+                                                <i class="bi bi-gear"></i>
+                                                <div class="text">Settings</div>
+                                            </button>
+                                            <button type="button" class="act-btn">
+                                                <i class="bi bi-code-slash"></i>
+                                                <div class="text">Add Script</div>
+                                            </button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <a type="button" class="act-btn delete">
+                                                <i class="bi bi-trash"></i>
+                                                <div class="text">Delete</div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            @endif
+                                <div class="content-block">
+                                    <div class="widget-block">
+                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
+                                        <div class="content">
+                                            <div class="title">Desktop</div>
+                                            <ul class="options">
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Realtime View + Invites</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Analytics Center</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">SEO Reports</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Session Recording</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Heatmaps</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Security</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="widget-block">
+                                        <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
+                                        <div class="content">
+                                            <div class="title">Mobile</div>
+                                            <ul class="options">
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Realtime View</div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <i class="bi green bi-check-circle-fill"></i>
+                                                    <div class="text">Visitor Invite</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-block">
+                                    <a href="#" class="sub-btn" data-bs-toggle="modal" data-bs-target="#actOptimizer">
+                                        <i class="bi bi-plus"></i>
+                                        <div class="text">Activate</div>
+                                    </a>
+                                </div>
+                            </div>
+                        @endif
 
-                            @include('frontend.user.projects.dialogs.widget_source')
-                        </div>
+                        @include('frontend.user.projects.dialogs.widget_source')
                     </div>
                 </div>
-
-            @endif
+            </div>
     </div>
 </section>
 
