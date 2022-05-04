@@ -1044,35 +1044,7 @@ if(c == 'true'){
 
     var heatmapContainer = document.getElementById('heatmap');
 
-    heatmapContainer.onmousemove = heatmapContainer.ontouchmove = function (e) {
-
-       // we need preventDefault for the touchmove
-       e.preventDefault();
-       var x = e.layerX;
-       var y = e.layerY;
-
-       if (e.touches) {
-          x = e.touches[0].pageX;
-          y = e.touches[0].pageY;
-       }
-
-       heatmap.addData({
-          x: x,
-          y: y,
-          value: 1
-       });
-    };
-
-    heatmapContainer.onclick = function (e) {
-       var x = e.layerX;
-       var y = e.layerY;
-       heatmap.addData({
-          x: x,
-          y: y,
-          value: 1
-       });
-      };
-    })
+    heatmap.addData({x: 399, y: 180,value: 1},{x: 399,y: 180,value: 1});
 
 
 
