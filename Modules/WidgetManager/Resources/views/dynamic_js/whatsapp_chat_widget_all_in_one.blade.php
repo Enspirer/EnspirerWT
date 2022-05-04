@@ -1006,13 +1006,24 @@ function printMousePos(event) {
           document.getElementById("demo").innerHTML = this.responseText;
     }
    };
-   xhttp.open("POST", "{{url('api/heatmapdata')}}", true);
+   xhttp.open("POST", "{{url('api/heatmap_dynamic/1')}}", true);
    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    xhttp.send("position_x=" + X + "&position_y=" + Y + "&current_url=" + current_url + "&widget_id=" + widget_id + "&url=" + current_url)  ;
 
 
     console.log('x=' + X);
     console.log('y=' + Y);
+}
+
+var url_string = window.location.href
+var url = new URL(url_string);
+var c = url.searchParams.get("heatmap");
+
+if(c == 'true'){
+    console.log('heatmap_viewer_enabled');
+  alert('heatmap_viewer')
+}else{
+
 }
 
 document.addEventListener("click", printMousePos);
