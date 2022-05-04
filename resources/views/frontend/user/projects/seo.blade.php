@@ -475,21 +475,21 @@
                                                                     @endif
 
                                                                     @if(isset($seo_result->value->Externals))
-
-                                                                    @if(count($seo_result->value->Externals) != 0)
-                                                                        <div class="title my-3">Externals</div>
-                                                                        @foreach($seo_result->value->Externals as $external)
-                                                                            <a href="{{$external->url}}"><div class="text">{{$external->url}}</div></a>                                                                         
-                                                                        @endforeach
+                                                                        @if(count($seo_result->value->Externals) != 0)
+                                                                            <div class="title my-3">Externals</div>
+                                                                            @foreach($seo_result->value->Externals as $external)
+                                                                                <a href="{{$external->url}}"><div class="text">{{$external->url}}</div></a>                                                                         
+                                                                            @endforeach
+                                                                        @endif
                                                                     @endif
 
-                                                                    @endif
-                                                                    
-                                                                    @if(count($seo_result->value->Internals) != 0)
-                                                                        <div class="title my-3">Internals</div>
-                                                                        @foreach($seo_result->value->Internals as $internal)
-                                                                            <a href="{{$internal->url}}"><div class="text">{{$internal->url}}</div></a>                                                                         
-                                                                        @endforeach
+                                                                    @if(isset($seo_result->value->Internals))                                                                    
+                                                                        @if(count($seo_result->value->Internals) != 0)
+                                                                            <div class="title my-3">Internals</div>
+                                                                            @foreach($seo_result->value->Internals as $internal)
+                                                                                <a href="{{$internal->url}}"><div class="text">{{$internal->url}}</div></a>                                                                         
+                                                                            @endforeach
+                                                                        @endif
                                                                     @endif
                                                                                                                                          
                                                                 @endif
