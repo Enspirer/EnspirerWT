@@ -167,3 +167,10 @@ Breadcrumbs::for('admin.privacy.edit', function ($trail) {
 Breadcrumbs::for('admin.projects.security_backend', function ($trail) {
     $trail->push('Security', route('admin.projects.security_backend',1));
 });
+
+Breadcrumbs::for('admin.projects.heatmap', function ($trail) {
+    $trail->push('Heatmap', route('admin.projects.heatmap',1));
+});
+Breadcrumbs::for('admin.projects.heatmap_edit', function ($trail) {
+    $trail->push('Show', route('admin.projects.heatmap_edit',1));
+});

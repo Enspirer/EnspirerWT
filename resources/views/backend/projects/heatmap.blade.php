@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('Projects'))
+@section('title', __('Heatmap'))
 
 @section('content')
     
@@ -10,9 +10,8 @@
 
             <div class="card">
                 <div class="card-header">
-                    <strong>Projects&nbsp;</strong>
+                    <strong>Heatmap&nbsp; ({{$project->name}})</strong>
 
-                    <a href="{{route('admin.projects.create')}}" class="btn btn-primary pull-right ml-4">Create New</a>
                    
                 </div><!--card-header-->
 
@@ -21,8 +20,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">#ID</th>
-                                <th scope="col">Project Name</th>
-                                <th scope="col">Project Type</th>
+                                <th scope="col">URL</th>                       
                                 <th scope="col">Option</th>
                             </tr>
                         </thead>
@@ -70,13 +68,12 @@
         $(function () {
             var table = $('#villadatatable').DataTable({
                 processing: true,
-                ajax: "{{route('admin.projects.getdetails')}}",
+                ajax: "{{route('admin.projects.heatmap_getdetails',$project->id)}}",
                 serverSide: true,
                 order: [[0, "desc"]],
                 columns: [
                     {data: 'id', name: 'id'},
-                    {data: 'name', name: 'name'},
-                    {data: 'project_type', name: 'project_type'},
+                    {data: 'url', name: 'url'},                  
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
             });
@@ -91,7 +88,7 @@
 
             $('#ok_button').click(function(){
             $.ajax({
-            url:"projects/delete/"+user_id,
+            url:"bots_delete/"+user_id,
             
             success:function(data)
             {

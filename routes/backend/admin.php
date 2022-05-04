@@ -75,6 +75,9 @@ Route::get('projects/bots/bots_delete/{id}', [ProjectsController::class, 'bots_d
 
 Route::get('projects/security_backend/{id}', [ProjectsController::class, 'security_backend'])->name('projects.security_backend');
 
+Route::get('projects/heatmap/{id}', [ProjectsController::class, 'heatmap'])->name('projects.heatmap');
+Route::get('projects/heatmap_getdetails/{id}', [ProjectsController::class, 'heatmap_getdetails'])->name('projects.heatmap_getdetails');
+Route::get('projects/heatmap_edit/{id}', [ProjectsController::class, 'heatmap_edit'])->name('projects.heatmap_edit');
 
 
 Route::get('projects/widget_manager/{id}', [WidgetController::class, 'index'])->name('projects.widget_manager');

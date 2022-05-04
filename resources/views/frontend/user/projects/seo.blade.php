@@ -602,24 +602,30 @@
                                                                         @endif
                                                                     @endif
 
-                                                                    @if(count($seo_result->value->JavaScripts) != 0)
-                                                                        @foreach($seo_result->value->JavaScripts as $JavaScripts)
-                                                                            <a href="{{$JavaScripts}}"><div class="text">{{$JavaScripts}}</div></a>                                                                         
-                                                                        @endforeach
+                                                                    @if(isset($seo_result->value->JavaScripts))
+                                                                        @if(count($seo_result->value->JavaScripts) != 0)
+                                                                            @foreach($seo_result->value->JavaScripts as $JavaScripts)
+                                                                                <a href="{{$JavaScripts}}"><div class="text">{{$JavaScripts}}</div></a>                                                                         
+                                                                            @endforeach
+                                                                        @endif 
                                                                     @endif 
-                                                                    @if(count($seo_result->value->Images) != 0)
-                                                                        @foreach($seo_result->value->Images as $Images)
-                                                                            <a href="{{$Images}}"><div class="text">{{$Images}}</div></a>                                                                         
-                                                                        @endforeach
+                                                                    @if(isset($seo_result->value->Images))
+                                                                        @if(count($seo_result->value->Images) != 0)
+                                                                            @foreach($seo_result->value->Images as $Images)
+                                                                                <a href="{{$Images}}"><div class="text">{{$Images}}</div></a>                                                                         
+                                                                            @endforeach
+                                                                        @endif
                                                                     @endif
                                                                 @endif
 
                                                                 @if($key == 'image_format')
                                                                     <div class="title">The images are served in the AVIF, WebP format.</div>
-                                                                    @if(count($seo_result->value) != 0)
-                                                                        @foreach($seo_result->value as $image_format)
-                                                                            <div class="text">{{$image_format}}</div>                                                                  
-                                                                        @endforeach
+                                                                    @if(is_array($seo_result->value))
+                                                                        @if(count($seo_result->value) != 0)
+                                                                            @foreach($seo_result->value as $image_format)
+                                                                                <div class="text">{{$image_format}}</div>                                                                  
+                                                                            @endforeach
+                                                                        @endif
                                                                     @endif
                                                                 @endif
                                                                 
@@ -747,10 +753,12 @@
                                                                             @endif
                                                                         @endif
                                                                     @endif
-                                                                    @if(count($seo_result->value) != 0)
-                                                                        @foreach($seo_result->value as $structured_data)
-                                                                            <div class="text">{{$structured_data}}</div>                                                                  
-                                                                        @endforeach
+                                                                    @if(is_array($seo_result->value))
+                                                                        @if(count($seo_result->value) != 0)
+                                                                            @foreach($seo_result->value as $structured_data)
+                                                                                <div class="text">{{$structured_data}}</div>                                                                  
+                                                                            @endforeach
+                                                                        @endif
                                                                     @endif
                                                                 @endif
 
@@ -774,10 +782,12 @@
                                                                 
                                                                 @if($key == 'sitemap')
                                                                     <div class="title">The website has sitemaps.</div>
-                                                                    @if(count($seo_result->value) != 0)
-                                                                        @foreach($seo_result->value as $sitemap)
-                                                                            <a href="{{$sitemap}}"><div class="text">Sitemap</div></a>                                                                 
-                                                                        @endforeach
+                                                                    @if(is_array($seo_result->value))
+                                                                        @if(count($seo_result->value) != 0)
+                                                                            @foreach($seo_result->value as $sitemap)
+                                                                                <a href="{{$sitemap}}"><div class="text">Sitemap</div></a>                                                                 
+                                                                            @endforeach
+                                                                        @endif
                                                                     @endif
                                                                 @endif
 

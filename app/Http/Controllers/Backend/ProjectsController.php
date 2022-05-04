@@ -9,6 +9,7 @@ use DataTables;
 use App\Models\Projects;
 use App\Models\ProjectType;
 use App\Models\SeoBot;
+use App\Models\HeatmapDynamic;
 use App\Models\Auth\User;
 use phpDocumentor\Reflection\Project;
 use App\Http\Requests\Backend\Auth\User\StoreReportRequest;
@@ -76,6 +77,7 @@ class ProjectsController extends Controller
                 $button .= '<a href="'.route('admin.auth.user.project_bills',User::where('id',$data->user_id)->first()).'" name="details" id="'.$data->id.'" class="edit btn btn-success btn-sm" style="margin-right: 10px"><i class="fas fa-dollar-sign"></i> Bills </a>';
                 $button .= '<a href="'.route('admin.projects.bots',$data->id).'" name="bots" id="'.$data->id.'" class="edit btn btn-warning btn-sm" style="margin-right: 10px"><i class="fas fa-robot"></i> Bots </a>';
                 $button .= '<a href="'.route('admin.projects.security_backend',$data->id).'" name="security" id="'.$data->id.'" class="edit btn btn-dark btn-sm" style="margin-right: 10px"><i class="fas fa-lock"></i> Security </a>';
+                $button .= '<a href="'.route('admin.projects.heatmap',$data->id).'" name="heatmap" id="'.$data->id.'" class="edit btn btn-light btn-sm" style="margin-right: 10px"><i class="fas fa-fire"></i> Heatmap </a>';
                 $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
                 return $button;
                 })
@@ -231,7 +233,72 @@ class ProjectsController extends Controller
         ]);
     }
 
-    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function heatmap($id)
+    {
+        $project = Projects::where('id',$id)->first();        
+
+        return view('backend.projects.heatmap',[
+            'project' => $project
+        ]);
+    }
+
+    
+    public function heatmap_getdetails(Request $request, $id)
+    {       
+        $data = HeatmapDynamic::where('project_id',$id)->get()->unique('url');
+        return DataTables::of($data)
+
+            ->addColumn('action', function($data){
+                $button = '<a href="'.route('admin.projects.heatmap_edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Show </a>';
+                return $button;
+                })
+            ->rawColumns(['action'])
+            ->make(true);
+        
+        return back();
+    }
+
+    public function heatmap_edit($id)
+    {
+        // dd($id);
+
+        $heat = HeatmapDynamic::where('id',$id)->first();
+        $heatmap = HeatmapDynamic::where('url',$heat->url)->get();
+        $project = Projects::where('id',$heat->project_id)->first();
+
+        return view('backend.projects.heatmap_edit',[
+            'heatmap' => $heatmap,
+            'project' => $project,
+            'heat' => $heat
+        ]);
+    }
 
 }
