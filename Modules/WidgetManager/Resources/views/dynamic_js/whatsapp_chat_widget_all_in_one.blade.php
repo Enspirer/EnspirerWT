@@ -1044,10 +1044,32 @@ if(c == 'true'){
 
     var heatmapContainer = document.getElementById('heatmap');
 
-    heatmap.setData({
-      max: 5,
-      data: [{ x: 102, y: 590, value: 5}]
-    });
+    heatmapContainer.onmousemove = heatmapContainer.ontouchmove = function (e) {
+
+       // we need preventDefault for the touchmove
+       e.preventDefault();
+       var x = e.layerX;
+       var y = e.layerY;
+
+       if (e.touches) {
+          x = e.touches[0].pageX;
+          y = e.touches[0].pageY;
+       }
+
+       heatmap.addData({
+          x: x,
+          y: y,
+          value: 1
+       });
+    };
+
+    heatmapContainer.onclick = function (e) {
+       var x = e.layerX;
+       var y = e.layerY;
+       
+      };
+    })
+
 
 
   alert('heatmap_viewer')
