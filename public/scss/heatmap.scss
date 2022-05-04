@@ -567,6 +567,19 @@
             }
         }
 
+        .body {
+            padding: 0 10px;
+
+            #actionChart {
+                width: 100%;
+                height: 450px;
+            }
+
+            #actionChart>div {
+                margin: auto !important;
+            }
+        }
+
         .inner-chart {
             flex: 1;
 
@@ -577,12 +590,21 @@
                 padding: 5px 15px 15px;
                 border: none;
             }
-        }
-    }
-}
 
-@media screen and (max-width: 1800px) {
-    .chart-section {
-        flex-direction: column;
+            .body {
+                padding: 0 10px;
+
+                #pagesChart,
+                #eventChart {
+                    width: 100%;
+                    height: 300px;
+                }
+
+                #pagesChart>div,
+                #eventChart>div {
+                    margin: auto !important;
+                }
+            }
+        }
     }
 }
