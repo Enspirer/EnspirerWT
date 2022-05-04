@@ -1021,6 +1021,54 @@ var c = url.searchParams.get("heatmap");
 
 if(c == 'true'){
     console.log('heatmap_viewer_enabled');
+
+    window.addEventListener('DOMContentLoaded', function () {
+       const getBody = document.querySelector("body")
+       getBody.setAttribute('id', 'heatmap')
+
+       // create a heatmap instance
+       var heatmap = h337.create({
+          container: document.getElementById('heatmap'),
+          maxOpacity: .6,
+          radius: 50,
+          blur: .90,
+
+          // backgroundColor with alpha so you can see through it
+          backgroundColor: 'transparent'
+       });
+
+    var heatmapContainer = document.getElementById('heatmap');
+
+    heatmapContainer.onmousemove = heatmapContainer.ontouchmove = function (e) {
+
+       // we need preventDefault for the touchmove
+       e.preventDefault();
+       var x = e.layerX;
+       var y = e.layerY;
+
+       if (e.touches) {
+          x = e.touches[0].pageX;
+          y = e.touches[0].pageY;
+       }
+
+       heatmap.addData({
+          x: x,
+          y: y,
+          value: 1
+       });
+    };
+
+    heatmapContainer.onclick = function (e) {
+       var x = e.layerX;
+       var y = e.layerY;
+       heatmap.addData({
+          x: x,
+          y: y,
+          value: 1
+       });
+      };
+    })
+
   alert('heatmap_viewer')
 }else{
 
