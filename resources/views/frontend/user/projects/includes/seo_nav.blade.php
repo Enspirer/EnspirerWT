@@ -1,37 +1,90 @@
 <div class="seo-nav" id="seoNav">
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <a href="#overviewSection" class="nav-link">
-                <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" alt="">
-                    <div class="text">Overview</div>
-                </div>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#seoSection" class="nav-link">
-                <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" alt="">
-                    <div class="text">SEO</div>
-                </div>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#performanceSection" class="nav-link">
-                <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" alt="">
-                    <div class="text">Performance</div>
-                </div>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#miscellaneousSection" class="nav-link">
-                <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-miscellaneous.png')}}" alt="">
-                    <div class="text">Miscellaneous</div>
-                </div>
-            </a>
-        </li>
+
+        @if(Request::segment(3)=='seo_bots' ? 'active' :null)
+            <li class="nav-item">
+                <a href="{{route('frontend.user.project.seo',$project_id)}}" class="nav-link">
+                    <div class="text-block">
+                        <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" alt="">
+                        <div class="text">Overview</div>
+                    </div>
+                </a>
+            </li>
+        @else 
+            <li class="nav-item">
+                <a href="#overviewSection" class="nav-link">
+                    <div class="text-block">
+                        <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" alt="">
+                        <div class="text">Overview</div>
+                    </div>
+                </a>
+            </li>
+        @endif
+
+
+        @if(Request::segment(3)=='seo_bots' ? 'active' :null)
+            <li class="nav-item">
+                <a href="{{route('frontend.user.project.seo',$project_id)}}" class="nav-link">
+                    <div class="text-block">
+                        <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" alt="">
+                        <div class="text">SEO</div>
+                    </div>
+                </a>
+            </li>
+        @else
+            <li class="nav-item">
+                <a href="#seoSection" class="nav-link">
+                    <div class="text-block">
+                        <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" alt="">
+                        <div class="text">SEO</div>
+                    </div>
+                </a>
+            </li>
+        @endif
+
+
+        @if(Request::segment(3)=='seo_bots' ? 'active' :null)
+            <li class="nav-item">
+                <a href="{{route('frontend.user.project.seo',$project_id)}}" class="nav-link">
+                    <div class="text-block">
+                        <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" alt="">
+                        <div class="text">Performance</div>
+                    </div>
+                </a>
+            </li>
+        @else
+            <li class="nav-item">
+                <a href="#performanceSection" class="nav-link">
+                    <div class="text-block">
+                        <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" alt="">
+                        <div class="text">Performance</div>
+                    </div>
+                </a>
+            </li>
+        @endif
+
+
+
+        @if(Request::segment(3)=='seo_bots' ? 'active' :null)
+            <li class="nav-item">
+                <a href="{{route('frontend.user.project.seo',$project_id)}}" class="nav-link">
+                    <div class="text-block">
+                        <img src="{{url('images/dashboard/ims_pro/nav-miscellaneous.png')}}" alt="">
+                        <div class="text">Miscellaneous</div>
+                    </div>
+                </a>
+            </li>
+        @else            
+            <li class="nav-item">
+                <a href="#miscellaneousSection" class="nav-link">
+                    <div class="text-block">
+                        <img src="{{url('images/dashboard/ims_pro/nav-miscellaneous.png')}}" alt="">
+                        <div class="text">Miscellaneous</div>
+                    </div>
+                </a>
+            </li>
+        @endif
+
         <li class="nav-item">
             <a href="{{route('frontend.user.project.seo_bots',$project_id)}}" class="nav-link">
                 <div class="text-block">

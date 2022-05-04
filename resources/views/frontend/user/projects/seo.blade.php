@@ -41,6 +41,12 @@
                                     <a href="#" class="bot-btn" data-bs-toggle="modal" data-bs-target="#botModal">Get Your Bot</a>
                                 </div>
                             </div>
+                        @else
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Submitted Successfully. One of our agents will be in touch shortly.</h4>
+                                </div>
+                            </div>
                         @endif
 
                         <div class="modal fade bot-modal" id="botModal" tabindex="-1">
