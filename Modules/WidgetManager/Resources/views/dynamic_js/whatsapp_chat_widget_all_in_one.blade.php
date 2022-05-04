@@ -1022,6 +1022,11 @@ var c = url.searchParams.get("heatmap");
 if(c == 'true'){
     console.log('heatmap_viewer_enabled');
 
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.0/heatmap.min.js';
+    document.head.appendChild(script);
+
     window.addEventListener('DOMContentLoaded', function () {
        const getBody = document.querySelector("body")
        getBody.setAttribute('id', 'heatmap')
@@ -1068,6 +1073,8 @@ if(c == 'true'){
        });
       };
     })
+
+
 
   alert('heatmap_viewer')
 }else{
