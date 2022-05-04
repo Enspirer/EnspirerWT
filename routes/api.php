@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\IMSController;
 use App\Http\Controllers\Frontend\IMSProController;
 use App\Http\Controllers\Frontend\WidgetController;
+use App\Http\Controllers\Frontend\HeatMapDynamicControlloler;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +63,4 @@ Route::post('selected_conversation', [HomeController::class, 'selected_conversat
 
 Route::get('check_project_available_days', [HomeController::class,'check_project_available_days'])->name('check_project_available_days');
 
+Route::post('heatmap_dynamic/{id}', [HeatMapDynamicControlloler::class, 'store'])->name('heatmap_dynamic');
