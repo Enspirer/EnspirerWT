@@ -68,7 +68,7 @@
                                             <div class="text red">48.2%</div>
                                         </div>
                                     </div>
-                                    <div class="info">15</div>
+                                    <div class="info">{{ count(App\Models\VisitorCount::where('project_id',$project_id)->get()) }}</div>
                                 </div>
                             </div>
                         </div>
