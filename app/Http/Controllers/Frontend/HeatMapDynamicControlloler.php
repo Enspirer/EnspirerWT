@@ -17,6 +17,8 @@ class HeatMapDynamicControlloler extends Controller
         $add->project_id=$request->project_id;
         $add->x_position=$request->x_position;
         $add->y_position=$request->y_position;
+        $add->url=$request->url;
+        $add->ip_address=$request->ip_address;
 
         $add->save();
 

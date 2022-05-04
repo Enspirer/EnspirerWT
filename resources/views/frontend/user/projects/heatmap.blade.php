@@ -60,7 +60,8 @@
                                                 Top Pages
                                             </div>
                                             <div class="body">
-                                                <div class="page-item active">
+
+                                                <!-- <div class="page-item active">
                                                     <a href="#" class="page-link">
                                                         <div class="rank">#1</div>
                                                         <div class="text-block">
@@ -69,87 +70,23 @@
                                                         </div>
                                                         <div class="count">180</div>
                                                     </a>
-                                                </div>
-                                                <div class="page-item">
-                                                    <a href="#" class="page-link">
-                                                        <div class="rank">#2</div>
-                                                        <div class="text-block">
-                                                            <div class="title">Tallentor Home Page</div>
-                                                            <div class="text">tallento.com/home</div>
+                                                </div> -->
+
+                                                @if(count($heatmap_dynamic) != 0)
+                                                    @foreach($heatmap_dynamic as $heatmap)
+                                                        <div class="page-item">
+                                                            <a href="#" class="page-link">
+                                                                <!-- <div class="rank">#2</div> -->
+                                                                <div class="text-block">
+                                                                    <div class="title">{{$project->name}}</div>
+                                                                    <div class="text">{{$heatmap->url}}</div>
+                                                                </div>
+                                                                <div class="count">{{count(App\Models\HeatmapDynamic::where('project_id',$project_id)->where('url',$heatmap->url)->get())}}</div>
+                                                            </a>
                                                         </div>
-                                                        <div class="count">180</div>
-                                                    </a>
-                                                </div>
-                                                <div class="page-item">
-                                                    <a href="#" class="page-link">
-                                                        <div class="rank">#2</div>
-                                                        <div class="text-block">
-                                                            <div class="title">Tallentor Home Page</div>
-                                                            <div class="text">tallento.com/home</div>
-                                                        </div>
-                                                        <div class="count">180</div>
-                                                    </a>
-                                                </div>
-                                                <div class="page-item">
-                                                    <a href="#" class="page-link">
-                                                        <div class="rank">#2</div>
-                                                        <div class="text-block">
-                                                            <div class="title">Tallentor Home Page</div>
-                                                            <div class="text">tallento.com/home</div>
-                                                        </div>
-                                                        <div class="count">180</div>
-                                                    </a>
-                                                </div>
-                                                <div class="page-item">
-                                                    <a href="#" class="page-link">
-                                                        <div class="rank">#2</div>
-                                                        <div class="text-block">
-                                                            <div class="title">Tallentor Home Page</div>
-                                                            <div class="text">tallento.com/home</div>
-                                                        </div>
-                                                        <div class="count">180</div>
-                                                    </a>
-                                                </div>
-                                                <div class="page-item">
-                                                    <a href="#" class="page-link">
-                                                        <div class="rank">#2</div>
-                                                        <div class="text-block">
-                                                            <div class="title">Tallentor Home Page</div>
-                                                            <div class="text">tallento.com/home</div>
-                                                        </div>
-                                                        <div class="count">180</div>
-                                                    </a>
-                                                </div>
-                                                <div class="page-item">
-                                                    <a href="#" class="page-link">
-                                                        <div class="rank">#2</div>
-                                                        <div class="text-block">
-                                                            <div class="title">Tallentor Home Page</div>
-                                                            <div class="text">tallento.com/home</div>
-                                                        </div>
-                                                        <div class="count">180</div>
-                                                    </a>
-                                                </div>
-                                                <div class="page-item">
-                                                    <a href="#" class="page-link">
-                                                        <div class="rank">#2</div>
-                                                        <div class="text-block">
-                                                            <div class="title">Tallentor Home Page</div>
-                                                            <div class="text">tallento.com/home</div>
-                                                        </div>
-                                                        <div class="count">180</div>
-                                                    </a>
-                                                </div>
-                                                <div class="page-item">
-                                                    <a href="#" class="page-link">
-                                                        <div class="rank">#2</div>
-                                                        <div class="text-block">
-                                                            <div class="title">Tallentor Home Page</div>
-                                                            <div class="text">tallento.com/home</div>
-                                                        </div>
-                                                        <div class="count">180</div>
-                                                    </a>
-                                                </div>
+                                                    @endforeach
+                                                @endif
+
                                             </div>
                                         </div>
                                         <div class="legend-block">
