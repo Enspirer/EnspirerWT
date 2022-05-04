@@ -1044,8 +1044,10 @@ if(c == 'true'){
 
     var heatmapContainer = document.getElementById('heatmap');
 
-    heatmap.addData({x: 399, y: 180,value: 1},{x: 399,y: 180,value: 1});
-
+    heatmap.setData({
+      max: 5,
+      data: [{ x: 102, y: 590, value: 5}]
+    });
 
 
   alert('heatmap_viewer')
