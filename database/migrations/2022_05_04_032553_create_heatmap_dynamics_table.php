@@ -18,6 +18,7 @@ class CreateHeatmapDynamicsTable extends Migration
             $table->text('project_id')->nullable();
             $table->text('x_position')->nullable();
             $table->text('y_position')->nullable();
+            $table->text('url')->nullable();
             $table->timestamps();
         });
     }
