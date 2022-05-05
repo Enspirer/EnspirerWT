@@ -1023,7 +1023,7 @@ var url_string = window.location.href
 var url = new URL(url_string);
 var c = url.searchParams.get("heatmap");
 
-if(c == 'true'){
+if (c == 'true') {
     console.log('heatmap_viewer_enabled');
 
     var script = document.createElement('script');
@@ -1032,29 +1032,56 @@ if(c == 'true'){
     document.head.appendChild(script);
 
     window.addEventListener('DOMContentLoaded', function () {
-       const getBody = document.querySelector("body")
-       getBody.setAttribute('id', 'heatmap')
+        const getBody = document.querySelector("body")
+        getBody.setAttribute('id', 'heatmap')
 
-       // create a heatmap instance
-       var heatmap = h337.create({
-          container: document.getElementById('heatmap'),
-          maxOpacity: .6,
-          radius: 50,
-          blur: .90,
+        // create a heatmap instance
+        var heatmap = h337.create({
+            container: document.getElementById('heatmap'),
+            maxOpacity: .6,
+            radius: 50,
+            blur: .90,
 
-          // backgroundColor with alpha so you can see through it
-          backgroundColor: 'transparent'
-       });
+            // backgroundColor with alpha so you can see through it
+            backgroundColor: 'transparent'
+        });
 
-    var heatmapContainer = document.getElementById('heatmap');
+        var heatmapContainer = document.getElementById('heatmap');
 
-       heatmap.addData({ x: 127, y: 509, value: 1},{ x: 300, y: 609, value: 1});
+        let xC;
+        let yC;
+
+        fetch("http://127.0.0.1:8000/api/get_heatmap_dynamic", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    'project_id': 24,
+                    'url': 'https://tallentor.com/',
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(function (info) {
+                    xC = info.x_position
+                    yC = info.y_position
+                })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        heatmap.addData({
+            x: xC,
+            y: yC,
+            value: 1
+        });
     });
 
-
-
-  alert('heatmap_viewer')
-}else{
+    alert('heatmap_viewer')
+} else {
 
 }
 
