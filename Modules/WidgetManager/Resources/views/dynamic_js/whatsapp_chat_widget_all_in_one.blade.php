@@ -1064,14 +1064,20 @@ if (c == 'true') {
             })
             .then(response => response.json())
             .then(data => {
+
+                console.log(data);
                 data.forEach(function (info) {
                     xC = info.x_position
                     yC = info.y_position
+
+                    console.log(info);
                 })
             })
             .catch((error) => {
                 console.log(error);
             });
+
+            console.log(xC, yC);
 
         heatmap.addData({
             x: xC,
