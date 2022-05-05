@@ -345,12 +345,27 @@
   font-weight: 400;
   color: #fff;
 }
-.heatmap-overview .heatmap-block .body .map-frame {
+.heatmap-overview .heatmap-block .body .wrapper {
+  max-width: 1049px;
   width: 100%;
   height: 500px;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #ddd;
+}
+.heatmap-overview .heatmap-block .body .wrapper .map-frame {
+  width: 1920px;
+  height: 1080px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  zoom: 0.75;
+  -moz-transform: scale(0.75);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.75);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.75);
+  -webkit-transform-origin: 0 0;
 }
 
 .chart-section {

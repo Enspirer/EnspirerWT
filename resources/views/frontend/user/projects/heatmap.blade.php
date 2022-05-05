@@ -141,12 +141,14 @@
                                             </div>
                                         </div>
                                         <div class="body">
-                                            @if(count($heatmap_dynamic) != 0)
-                                                @foreach($heatmap_dynamic as $heatmap)
-                                                    <iframe src="{{$heatmap->url}}?heatmap=true" name="change_url" class="map-frame"></iframe>
-                                                    @break
-                                                @endforeach
-                                            @endif
+                                            <div class="wrapper">
+                                                @if(count($heatmap_dynamic) != 0)
+                                                    @foreach($heatmap_dynamic as $heatmap)
+                                                        <iframe src="{{$heatmap->url}}?heatmap=true" name="change_url" class="map-frame"></iframe>
+                                                        @break
+                                                    @endforeach
+                                                @endif
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
