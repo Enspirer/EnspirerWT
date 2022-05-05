@@ -6,6 +6,8 @@
     
 @include('frontend.includes.home_nav')
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.0/heatmap.min.js" integrity="sha512-FpvmtV53P/z7yzv1TAIVH7PNz94EKXs5aV6ts/Zi+B/VeGU5Xwo6KIbwpTgKc0d4urD/BtkK50IC9785y68/AA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <section class="hero-section home">
         <div class="container">
             <div class="splide" id="heroSlider">
@@ -817,37 +819,38 @@ window.addEventListener('DOMContentLoaded', function () {
     });
     var heatmapContainer = document.getElementById('heatmap');
 
-    heatmapContainer.onmousemove = heatmapContainer.ontouchmove = function (e) {
-        // we need preventDefault for the touchmove
-        e.preventDefault();
-        var x = e.layerX;
-        var y = e.layerY;
-        if (e.touches) {
-            x = e.touches[0].pageX;
-            y = e.touches[0].pageY;
-        }
+        $.post("{{url('/')}}/api/get_heatmap_dynamic", {
+            project_id:24,
+            url:'https://tallentor.com/',
+        }, );
+
+    const coordinates = {
+        xPosition: [127, 1545, 216, 1258, 403,120,130,],
+        yPosition: [509, 246, 145, 664, 716,500,505,],
+    }
+
+    const {
+        xPosition,
+        yPosition
+    } = coordinates;
+
+    xPosition.forEach((xP, index) => {
+        const yP = yPosition[index]
+
+        xC = xP;
+        yC = yP;
 
         heatmap.addData({
-            x: x,
-            y: y,
+            x: xC,
+            y: yC,
             value: 1
         });
-
-    };
-
-    heatmapContainer.onclick = function (e) {
-        var x = e.layerX;
-        var y = e.layerY;
-        heatmap.addData({
-            x: x,
-            y: y,
-            value: 1
-        });
-    };
+    })
 })
 </script>
 
 <script>
+// Slider animation
 window.addEventListener('DOMContentLoaded', function () {
     const heroSlider = document.getElementById("heroSlider")
     const isActive = heroSlider.querySelectorAll(".splide__slide")
