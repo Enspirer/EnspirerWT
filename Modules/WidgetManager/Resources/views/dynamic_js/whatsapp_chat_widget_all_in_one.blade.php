@@ -1054,25 +1054,9 @@ if(c == 'true'){
         xPosition: [127, 1545, 216, 1258, 403,120,130,],
         yPosition: [509, 246, 145, 664, 716,500,505,],
     }
-
-    const {
-        xPosition,
-        yPosition
-    } = coordinates;
-
-    xPosition.forEach((xP, index) => {
-        const yP = yPosition[index]
-
-        xC = xP;
-        yC = yP;
-
-        heatmap.addData({
-            x: xC,
-            y: yC,
-            value: 1
-        });
+                                        
     });
-  alert('heatmap_viewer')
+  alert('heatmap_viewer');
 }else{
 
 }
