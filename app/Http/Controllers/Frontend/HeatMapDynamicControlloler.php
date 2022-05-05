@@ -8,17 +8,17 @@ use App\Models\HeatmapDynamic;
 
 class HeatMapDynamicControlloler extends Controller
 {
-    public function store(Request $request)
+    public function store($id, Request $request)
     {        
         dd($request);
    
         $add = new HeatmapDynamic;
 
-        $add->project_id=$request->project_id;
-        $add->x_position=$request->x_position;
-        $add->y_position=$request->y_position;
+        $add->project_id=$id;
+        $add->x_position=$request->position_x;
+        $add->y_position=$request->position_y;
         $add->url=$request->url;
-        $add->ip_address=$request->ip_address;
+        $add->ip_address=$request->ip();
 
         $add->save();
 
