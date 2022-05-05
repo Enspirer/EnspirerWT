@@ -1035,14 +1035,14 @@ if (c == 'true') {
         const getBody = document.querySelector("body")
         getBody.setAttribute('id', 'heatmap')
 
-        fetch("http://tallentor/api/get_heatmap_dynamic", {
+        fetch("http://127.0.0.1:8000/api/get_heatmap_dynamic", {
                 method: "POST",
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    'project_id': 1,
+                    'project_id': 24,
                     'url': 'https://tallentor.com/',
                 })
             })
