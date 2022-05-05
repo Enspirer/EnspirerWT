@@ -1048,30 +1048,29 @@ if(c == 'true'){
 
     var heatmapContainer = document.getElementById('heatmap');
 
-    heatmapContainer.onmousemove = heatmapContainer.ontouchmove = function (e) {
+    
 
-       // we need preventDefault for the touchmove
-       e.preventDefault();
-       var x = e.layerX;
-       var y = e.layerY;
+    const coordinates = {
+        xPosition: [127, 1545, 216, 1258, 403,120,130,],
+        yPosition: [509, 246, 145, 664, 716,500,505,],
+    }
 
-       if (e.touches) {
-          x = e.touches[0].pageX;
-          y = e.touches[0].pageY;
-       }
+    const {
+        xPosition,
+        yPosition
+    } = coordinates;
 
-       heatmap.addData({
-          x: x,
-          y: y,
-          value: 1
-       });
-    };
+    xPosition.forEach((xP, index) => {
+        const yP = yPosition[index]
 
-    heatmapContainer.onclick = function (e) {
-       var x = e.layerX;
-       var y = e.layerY;
-       
-      };
+        xC = xP;
+        yC = yP;
+
+        heatmap.addData({
+            x: xC,
+            y: yC,
+            value: 1
+        });
     })
 
 
