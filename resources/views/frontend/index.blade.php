@@ -6,8 +6,6 @@
     
 @include('frontend.includes.home_nav')
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
     <section class="hero-section home">
         <div class="container">
             <div class="splide" id="heroSlider">
@@ -29,7 +27,7 @@
                                     <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_1/desktop.png')}}" class="main-img size-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_1/imslite.png')}}" class="imslite-img size-img inL">
-                                    <img src="{{url('images/landing_page/home/hero_slides/slide_1/whatsapp.png')}}" class="wapp-img size-img inR">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_1/whatsapp.png')}}" class="wapp-img size-img inR10">
                                 </div>
                             </div>
                         </li>
@@ -49,8 +47,8 @@
                                     <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_2/desktop.png')}}" class="main-img size-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_2/imspro.png')}}" class="imslite-img size-img inL">
-                                    <img src="{{url('images/landing_page/home/hero_slides/slide_2/whatsapp.png')}}" class="wapp-img size-img inR">
-                                    <img src="{{url('images/landing_page/home/hero_slides/slide_2/allin1.png')}}" class="allin1-img size-img inR10">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_2/whatsapp.png')}}" class="wapp-img size-img inR10">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_2/allin1.png')}}" class="allin1-img size-img inR20">
                                 </div>
                             </div>
                         </li>
@@ -70,11 +68,11 @@
                                     <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/dashboard.png')}}" class="main-img size-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/imspro.png')}}" class="imslite-img size-img inL">
-                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/heatmap.png')}}" class="heatmap-img size-img inR20">
-                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/allin1.png')}}" class="allin1-img size-img inR10">
-                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/mobapp.png')}}" class="mobapp-img size-img inR">
-                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/realtime.png')}}" class="realtime-img size-img inR30">
-                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/record.png')}}" class="record-img size-img inR40">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/heatmap.png')}}" class="heatmap-img size-img inR30">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/allin1.png')}}" class="allin1-img size-img inR20">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/mobapp.png')}}" class="mobapp-img size-img inR10">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/realtime.png')}}" class="realtime-img size-img inR40">
+                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/record.png')}}" class="record-img size-img inR50">
                                 </div>
                             </div>
                         </li>
@@ -850,16 +848,43 @@ window.addEventListener('DOMContentLoaded', function () {
 </script>
 
 <script>
-    window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', function () {
     const heroSlider = document.getElementById("heroSlider")
     const isActive = heroSlider.querySelectorAll(".splide__slide")
-    
-        isActive.forEach(function(slide){
-            if (slide.classList.contains("is-active")) {
-                const inL = slide.querySelector(".inL")
-                console.log(inL);
-            }
-        })
+
+    isActive.forEach(function (slide) {
+        const slideConfig = {
+            attributes: true
+        }
+
+        function callback(mutationList, observer) {
+            mutationList.forEach(function (mutation) {
+                if (mutation.target.classList.contains("is-active")) {
+                    const inL = slide.querySelector(".inL")
+                    const inR10 = slide.querySelector(".inR10")
+                    const inR20 = slide.querySelector(".inR20")
+                    const inR30 = slide.querySelector(".inR30")
+                    const inR40 = slide.querySelector(".inR40")
+                    const inR50 = slide.querySelector(".inR50")
+
+                    inL.classList.add("animate__animated", "animate__fadeInLeft")
+                    inR10.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-1s")
+                    inR20.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-2s")
+                    inR30.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-3s")
+                    inR40.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-4s")
+                    inR50.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-5s")
+                } else {
+                    const sizeImg = slide.querySelectorAll(".size-img")
+                    sizeImg.forEach(function (img) {
+                        img.classList.remove("animate__animated", "animate__fadeInLeft", "animate__fadeInRight", "animate__delay-1s", "animate__delay-2s", "animate__delay-3s", "animate__delay-4s", "animate__delay-5s")
+                    })
+                }
+            })
+        }
+
+        const observer = new MutationObserver(callback)
+        observer.observe(slide, slideConfig)
+    })
 })
 </script>
 

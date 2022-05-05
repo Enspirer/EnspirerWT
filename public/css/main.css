@@ -8,6 +8,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --animate-delay: 0.2s;
+}
+
 /* Slider */
 
 .splide__arrow--next {
