@@ -1007,7 +1007,7 @@ function printMousePos(event) {
           document.getElementById("demo").innerHTML = this.responseText;
     }
    };
-   xhttp.open("POST", "{{url('api/heatmap_dynamic/').$project_id}}", true);
+   xhttp.open("POST", "{{url('api/heatmap_dynamic/').'/'.$project_id}}", true);
    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    xhttp.send("position_x=" + X + "&position_y=" + Y + "&widget_id=" + widget_id + "&project_id=" + project_id + "&url=" + current_url);
 
