@@ -999,6 +999,7 @@ function printMousePos(event) {
     const Y = event.pageY;
     const current_url = window.location.href;
     const widget_id = '{{$widget_id}}';
+    const project_id = '{{$project_id}}';    
 
     var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -1006,13 +1007,16 @@ function printMousePos(event) {
           document.getElementById("demo").innerHTML = this.responseText;
     }
    };
-   xhttp.open("POST", "{{url('api/heatmap_dynamic/1')}}", true);
+   xhttp.open("POST", "{{url('api/heatmap_dynamic/').$project_id}}", true);
    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-   xhttp.send("position_x=" + X + "&position_y=" + Y + "&current_url=" + current_url + "&widget_id=" + widget_id + "&url=" + current_url)  ;
+   xhttp.send("position_x=" + X + "&position_y=" + Y + "&current_url=" + current_url + "&widget_id=" + widget_id + "&project_id=" + project_id + "&url=" + current_url);
 
 
     console.log('x=' + X);
     console.log('y=' + Y);
+
+   
+
 }
 
 var url_string = window.location.href
