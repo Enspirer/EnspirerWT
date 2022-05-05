@@ -44,6 +44,8 @@ Route::post('event', [HomeController::class,'analytics_post'])->name('analytics_
 
 Route::post('ims_chat', [HomeController::class, 'ims_chat'])->name('ims_chat');
 Route::post('ims_chat_insert', [HomeController::class, 'ims_chat_insert'])->name('ims_chat_insert');
+Route::post('ims_chat_user_insert', [HomeController::class, 'ims_chat_user_insert'])->name('ims_chat_user_insert');
+
 
 Route::post('submit_chat', [IMSProController::class, 'submit_chat'])->name('submit_chat');
 Route::post('responsible_ims_pro', [IMSProController::class, 'responsible_ims_pro'])->name('responsible_ims_pro');

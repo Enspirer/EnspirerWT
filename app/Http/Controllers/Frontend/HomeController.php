@@ -1211,6 +1211,72 @@ class HomeController extends Controller
 
     }
 
+
+
+    public function ims_chat_user_insert(Request $request)
+    {
+
+        $phone_number = $request->phone_number;
+        $name = $request->name;
+        $type = $request->type;
+        $email = $request->email;        
+        $status = $request->status;
+        $is_read = $request->is_read;
+        $project_id = $request->project_id;
+        $widget_id = $request->widget_id;
+        $facebook_user_name = $request->facebook_user_name;
+        $message = $request->message;
+
+        $project_user_id = Projects::where('id',$request->project_id)->first()->user_id;
+        $user_id = $project_user_id;
+
+        $outputString = preg_replace('/[^0-9]/', '', $phone_number);
+
+
+        $add = new ImsProClientMessages;
+
+        $add->phone_number = $outputString;
+
+        $getcontentDetails = get_contact_info($outputString);
+
+        if($getcontentDetails == null){
+            $add->name = $outputString;
+        }else{
+            $add->name = $getcontentDetails;
+        }
+
+        $add->type = $type;
+        $add->email = $email;
+        $add->status = $status;
+        $add->is_read = $is_read;
+        $add->project_id = $project_id;
+        $add->wideget_id = $widget_id;
+        $add->facebook_user_name = $facebook_user_name;
+        $add->message = $message;
+        $add->user_id = $user_id;
+
+        $add->save();
+
+
+        $inquiries_status = Inquiries_Status::where('project_id',$project_id)->where('phone_number',$phone_number)->first();
+        
+        if($inquiries_status == null){
+
+            $add = new Inquiries_Status;
+
+            $add->phone_number = $outputString;
+            $add->email = $email;
+            $add->status = $status;
+            $add->project_id = $project_id;
+            $add->widget_id = $widget_id;
+    
+            $add->save();
+        }
+
+        return 'sucess';
+
+    }
+
     public function default_server_auth_status(Request $request)
     {     
                 
