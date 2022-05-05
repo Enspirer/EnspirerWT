@@ -1054,9 +1054,14 @@ if(c == 'true'){
         xPosition: [127, 1545, 216, 1258, 403,120,130,],
         yPosition: [509, 246, 145, 664, 716,500,505,],
     }
-                                        
-    });
-  alert('heatmap_viewer');
+
+    const {xPosition, yPosition } = coordinates;
+
+    
+
+
+
+  alert('heatmap_viewer')
 }else{
 
 }
