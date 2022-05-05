@@ -1072,10 +1072,6 @@ if(c == 'true'){
             value: 1
         });
     });
-  }
-
-
-
   alert('heatmap_viewer')
 }else{
 
