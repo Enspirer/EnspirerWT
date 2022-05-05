@@ -10,9 +10,21 @@
   align-items: center;
   margin-bottom: 3rem;
 }
+.sitemap-section .header img {
+  max-width: 220px;
+}
 .sitemap-section svg {
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .sitemap-section {
+    padding: 8rem 0 5rem;
+  }
+  .sitemap-section .header img {
+    max-width: 160px;
+  }
 }
 
 /*# sourceMappingURL=sitemap.css.map */
