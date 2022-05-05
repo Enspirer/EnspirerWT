@@ -10,7 +10,7 @@ class HeatMapDynamicControlloler extends Controller
 {
     public function store($id, Request $request)
     {        
-        dd($request);
+        // dd($request);
    
         $add = new HeatmapDynamic;
 
