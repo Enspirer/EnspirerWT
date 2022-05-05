@@ -1048,7 +1048,7 @@ if(c == 'true'){
 
     var heatmapContainer = document.getElementById('heatmap');
 
-       heatmap.addData({ x: 127, y: 509, value: 1});
+       heatmap.addData({ x: 127, y: 509, value: 1},{ x: 300, y: 609, value: 1});
     });
 
 
