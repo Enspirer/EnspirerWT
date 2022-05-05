@@ -1010,20 +1010,13 @@ function printMousePos(event) {
    xhttp.open("POST", "{{url('api/heatmap_dynamic/').'/'.$project_id}}", true);
    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    xhttp.send("position_x=" + X + "&position_y=" + Y + "&widget_id=" + widget_id + "&project_id=" + project_id + "&url=" + current_url);
-
-
-    console.log('x=' + X);
-    console.log('y=' + Y);
-
-   
-
 }
 
 var url_string = window.location.href
 var url = new URL(url_string);
 var c = url.searchParams.get("heatmap");
 
-if(c == 'true'){
+if (c == 'true') {
     console.log('heatmap_viewer_enabled');
 
     var script = document.createElement('script');
@@ -1032,29 +1025,51 @@ if(c == 'true'){
     document.head.appendChild(script);
 
     window.addEventListener('DOMContentLoaded', function () {
-       const getBody = document.querySelector("body")
-       getBody.setAttribute('id', 'heatmap')
+        const getBody = document.querySelector("body")
+        getBody.setAttribute('id', 'heatmap')
 
-       // create a heatmap instance
-       var heatmap = h337.create({
-          container: document.getElementById('heatmap'),
-          maxOpacity: .6,
-          radius: 50,
-          blur: .90,
+        fetch("https://tallentor.com/api/get_heatmap_dynamic", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    'project_id': {{$project_id}},
+                    'url': url_string,
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(function (info) {
+                    let xC;
+                    let yC;
 
-          // backgroundColor with alpha so you can see through it
-          backgroundColor: 'transparent'
-       });
+                    xC = info.x_position
+                    yC = info.y_position
 
-    var heatmapContainer = document.getElementById('heatmap');
+                    var heatmap = h337.create({
+                        container: document.getElementById('heatmap'),
+                        maxOpacity: .6,
+                        radius: 50,
+                        blur: .90,
+                        backgroundColor: 'transparent'
+                    });
 
-       heatmap.addData({ x: 127, y: 509, value: 1},{ x: 300, y: 609, value: 1});
+                    heatmap.addData({
+                        x: xC,
+                        y: yC,
+                        value: 1
+                    });
+                })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     });
 
-
-
-  alert('heatmap_viewer')
-}else{
+    alert('heatmap_viewer')
+} else {
 
 }
 
