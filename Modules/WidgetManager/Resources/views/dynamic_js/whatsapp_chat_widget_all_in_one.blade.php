@@ -1055,9 +1055,19 @@ if(c == 'true'){
         yPosition: [509, 246, 145, 664, 716,500,505,],
     }
 
-    const {xPosition, yPosition } = coordinates;
+    const xPosition = coordinates.xPosition;
+    const xPosition = coordinates.yPosition;
 
-    
+    heatmap.addData({
+      x: xC,
+      y: yC,
+    value: 1});
+
+    xPosition.forEach((xP, index) => {
+        const yP = yPosition[index]
+        xC = xP;
+        yC = yP;
+    });
 
 
 
