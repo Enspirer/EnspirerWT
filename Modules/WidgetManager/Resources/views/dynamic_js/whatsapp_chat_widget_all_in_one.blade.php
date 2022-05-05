@@ -1010,13 +1010,6 @@ function printMousePos(event) {
    xhttp.open("POST", "{{url('api/heatmap_dynamic/').'/'.$project_id}}", true);
    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    xhttp.send("position_x=" + X + "&position_y=" + Y + "&widget_id=" + widget_id + "&project_id=" + project_id + "&url=" + current_url);
-
-
-    console.log('x=' + X);
-    console.log('y=' + Y);
-
-   
-
 }
 
 var url_string = window.location.href
@@ -1068,8 +1061,6 @@ if (c == 'true') {
                         y: yC,
                         value: 1
                     });
-
-                    console.log(xC, yC);
                 })
             })
             .catch((error) => {
