@@ -6,8 +6,6 @@
     
 @include('frontend.includes.home_nav')
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.0/heatmap.min.js" integrity="sha512-FpvmtV53P/z7yzv1TAIVH7PNz94EKXs5aV6ts/Zi+B/VeGU5Xwo6KIbwpTgKc0d4urD/BtkK50IC9785y68/AA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <section class="hero-section home">
         <div class="container">
             <div class="splide" id="heroSlider">
@@ -801,52 +799,6 @@
             return;
         }
     })
-</script>
-
-<script>
-window.addEventListener('DOMContentLoaded', function () {
-    // const getBody = document.querySelector("body")
-    getBody.setAttribute('id', 'heatmap')
-
-    // create a heatmap instance
-    var heatmap = h337.create({
-        container: document.getElementById('heatmap'),
-        maxOpacity: .6,
-        radius: 50,
-        blur: .90,
-        // backgroundColor with alpha so you can see through it
-        backgroundColor: 'transparent'
-    });
-    var heatmapContainer = document.getElementById('heatmap');
-
-        $.post("{{url('/')}}/api/get_heatmap_dynamic", {
-            project_id:24,
-            url:'https://tallentor.com/',
-        }, );
-
-    const coordinates = {
-        xPosition: [127, 1545, 216, 1258, 403,120,130,],
-        yPosition: [509, 246, 145, 664, 716,500,505,],
-    }
-
-    const {
-        xPosition,
-        yPosition
-    } = coordinates;
-
-    xPosition.forEach((xP, index) => {
-        const yP = yPosition[index]
-
-        xC = xP;
-        yC = yP;
-
-        heatmap.addData({
-            x: xC,
-            y: yC,
-            value: 1
-        });
-    })
-})
 </script>
 
 <script>

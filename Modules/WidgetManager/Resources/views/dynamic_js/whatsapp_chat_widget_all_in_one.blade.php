@@ -1035,8 +1035,8 @@ if (c == 'true') {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    'project_id': 1,
-                    'url': 'https://tallentor.com/',
+                    'project_id': {{$project_id}},
+                    'url': url_string,
                 })
             })
             .then(response => response.json())
