@@ -37,6 +37,7 @@ use App\Http\Controllers\Frontend\PricingController;
 use App\Http\Controllers\Frontend\MediaController;
 use App\Http\Controllers\Frontend\DemoController;
 use App\Http\Controllers\Frontend\HeatmapController;
+use App\Http\Controllers\Frontend\SitemapController;
 
 
 /*
@@ -98,6 +99,7 @@ Route::get('media/latest-news',[MediaController::class, 'news'])->name('latest_n
 Route::get('media/latest-news/single-news/{id}',[MediaController::class, 'singleNews'])->name('single_news');
 Route::get('media/promotions',[MediaController::class, 'promotions'])->name('promotions');
 Route::get('media/home-blog',[MediaController::class, 'blogs'])->name('home_blog');
+Route::get('sitemap',[SitemapController::class, 'sitemap'])->name('sitemap');
 
 Route::get('tallentor-demo',[DemoController::class, 'tallentor_demo'])->name('tallentor_demo');
 Route::post('tallentor_demo_store',[DemoController::class, 'tallentor_demo_store'])->name('tallentor_demo_store');

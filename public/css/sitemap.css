@@ -1,0 +1,18 @@
+.sitemap-section {
+  padding: 10rem 0 5rem;
+  width: 95%;
+  margin: auto;
+}
+.sitemap-section .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.sitemap-section svg {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=sitemap.css.map */
