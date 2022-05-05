@@ -1056,7 +1056,7 @@ if(c == 'true'){
     }
 
     const xPosition = coordinates.xPosition;
-    const xPosition = coordinates.yPosition;
+    const yPosition = coordinates.yPosition;
 
     heatmap.addData({
       x: xC,
