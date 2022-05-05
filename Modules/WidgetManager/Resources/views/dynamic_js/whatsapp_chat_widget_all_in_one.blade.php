@@ -1035,38 +1035,39 @@ if (c == 'true') {
         const getBody = document.querySelector("body")
         getBody.setAttribute('id', 'heatmap')
 
-        // create a heatmap instance
-        var heatmap = h337.create({
-            container: document.getElementById('heatmap'),
-            maxOpacity: .6,
-            radius: 50,
-            blur: .90,
-
-            // backgroundColor with alpha so you can see through it
-            backgroundColor: 'transparent'
-        });
-
-        var heatmapContainer = document.getElementById('heatmap');
-
-        let xC;
-        let yC;
-
-        fetch("http://127.0.0.1:8000/api/get_heatmap_dynamic", {
+        fetch("http://tallentor/api/get_heatmap_dynamic", {
                 method: "POST",
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    'project_id': 24,
+                    'project_id': 1,
                     'url': 'https://tallentor.com/',
                 })
             })
             .then(response => response.json())
             .then(data => {
                 data.forEach(function (info) {
+                    let xC;
+                    let yC;
+
                     xC = info.x_position
                     yC = info.y_position
+
+                    var heatmap = h337.create({
+                        container: document.getElementById('heatmap'),
+                        maxOpacity: .6,
+                        radius: 50,
+                        blur: .90,
+                        backgroundColor: 'transparent'
+                    });
+
+                    heatmap.addData({
+                        x: xC,
+                        y: yC,
+                        value: 1
+                    });
 
                     console.log(xC, yC);
                 })
@@ -1074,12 +1075,6 @@ if (c == 'true') {
             .catch((error) => {
                 console.log(error);
             });
-
-        heatmap.addData({
-            x: xC,
-            y: yC,
-            value: 1
-        });
     });
 
     alert('heatmap_viewer')
