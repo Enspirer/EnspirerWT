@@ -1058,16 +1058,16 @@ if(c == 'true'){
     const xPosition = coordinates.xPosition;
     const yPosition = coordinates.yPosition;
 
-    heatmap.addData({
-      x: xC,
-      y: yC,
-    value: 1});
-
     xPosition.forEach((xP, index) => {
-        const yP = yPosition[index]
-        xC = xP;
-        yC = yP;
-    });
+       const yP = yPosition[index]
+          xC = xP;
+          yC = yP;
+          heatmap.addData({
+             x: xC,
+             y: yC,
+             value: 1
+          });
+     })
 
 
 
