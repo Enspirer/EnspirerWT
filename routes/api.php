@@ -64,3 +64,4 @@ Route::post('selected_conversation', [HomeController::class, 'selected_conversat
 Route::get('check_project_available_days', [HomeController::class,'check_project_available_days'])->name('check_project_available_days');
 
 Route::post('heatmap_dynamic/{id}', [HeatMapDynamicControlloler::class, 'store'])->name('heatmap_dynamic');
+Route::post('get_heatmap_dynamic', [HeatMapDynamicControlloler::class, 'get_heatmap_dynamic'])->name('get_heatmap_dynamic');

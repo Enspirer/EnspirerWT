@@ -249,7 +249,7 @@
             l0,0v0l0,0v0l0,0v0l0,0v0l0,0v0l0,0v0l0,0v0l0,0l0,0l0,0v0l0,0v0l0,0v0l0,0v0l0,0v0l0,0v0l0,0v0l0,0v0l0,0
             C444,392.6,444.1,392.3,444.2,392.1L444.2,392.1z M449,388.5v1c-0.4,0-0.8,0.1-1.1,0.2l-0.3-1c0.4-0.1,0.8-0.2,1.1-0.2L449,388.5
             L449,388.5z" />
-            <a href="{{url(/)}}" target="_blank">
+            <a href="{{url('/')}}" target="_blank">
                 <g id="home">
                     <path id="Rectangle_1" class="st2" d="M143.8,333.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11v-130
                     C132.8,338.4,137.7,333.5,143.8,333.5z" />
@@ -279,7 +279,7 @@
                     <text transform="matrix(1 0 0 1 364.804 346.509)" class="st5 st8">1</text>
                 </g>
             </a>
-            <a href="{{url(/)}}" target="_blank">
+            <a href="{{url('eshop')}}" target="_blank">
                 <g id="eshop-window">
                     <path id="Rectangle_1-2" class="st2" d="M1232,878.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C1221,883.4,1225.9,878.5,1232,878.5z" />
@@ -312,7 +312,7 @@
                     <text transform="matrix(1 0 0 1 1450 891.509)" class="st5 st8">6</text>
                 </g>
             </a>
-            <a href="{{url(/)}}" target="_blank">
+            <a href="#" target="_blank">
                 <g id="services-window">
                     <path id="Rectangle_21" class="st2" d="M143.8,1906.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C132.8,1911.4,137.7,1906.5,143.8,1906.5z" />
@@ -370,7 +370,7 @@
                     <text transform="matrix(1 0 0 1 362 2688.509)" class="st5 st8">4</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('products/widget-pro')}}" target="_blank">
                 <g id="widget-pro">
                     <path id="Rectangle_10" class="st2" d="M540.8,1137.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,1142.4,534.7,1137.5,540.8,1137.5z" />
@@ -403,7 +403,7 @@
                     <text transform="matrix(1 0 0 1 753 1150.509)" class="st5 st8">2.2</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/portfolio')}}" target="_blank">
                 <g id="portfolio">
                     <path id="Rectangle_22" class="st2" d="M540.8,1906.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,1911.4,534.7,1906.5,540.8,1906.5z" />
@@ -436,7 +436,7 @@
                     <text transform="matrix(1 0 0 1 753 1919.509)" class="st5 st8">3.2</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('media/promotions')}}" target="_blank">
                 <g id="promotions">
                     <path id="Rectangle_32" class="st2" d="M540.8,2675.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,2680.4,534.7,2675.5,540.8,2675.5z" />
@@ -469,7 +469,7 @@
                     <text transform="matrix(1 0 0 1 753 2688.509)" class="st5 st8">4.2</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('products/widget-lite')}}" target="_blank">
                 <g id="widget-lite">
                     <path id="Rectangle_13" class="st2" d="M540.8,893.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,898.4,534.7,893.5,540.8,893.5z" />
@@ -502,7 +502,7 @@
                     <text transform="matrix(1 0 0 1 754 906.509)" class="st5 st8">2.1</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/marketplace')}}" target="_blank">
                 <g id="marketplace">
                     <path id="Rectangle_19" class="st2" d="M540.8,1662.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,1667.4,534.7,1662.5,540.8,1662.5z" />
@@ -535,7 +535,7 @@
                     <text transform="matrix(1 0 0 1 754 1675.509)" class="st5 st8">3.1</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('media/latest-news')}}" target="_blank">
                 <g id="latest-news">
                     <path id="Rectangle_33" class="st2" d="M540.8,2431.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,2436.4,534.7,2431.5,540.8,2431.5z" />
@@ -568,7 +568,7 @@
                     <text transform="matrix(1 0 0 1 753 2444.509)" class="st5 st8">4.1</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('products/optimizer')}}" target="_blank">
                 <g id="optimizer">
                     <path id="Rectangle_16" class="st2" d="M540.8,1381.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,1386.4,534.7,1381.5,540.8,1381.5z" />
@@ -601,7 +601,7 @@
                     <text transform="matrix(1 0 0 1 753 1394.509)" class="st5 st8">2.3</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/expert-center')}}" target="_blank">
                 <g id="expert-center">
                     <path id="Rectangle_28" class="st2" d="M540.8,2150.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,2155.4,534.7,2150.5,540.8,2150.5z" />
@@ -634,7 +634,7 @@
                     <text transform="matrix(1 0 0 1 753 2163.509)" class="st5 st8">3.3</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('media/home-blog')}}" target="_blank">
                 <g id="blog">
                     <path id="Rectangle_40" class="st2" d="M540.8,2919.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,2924.4,534.7,2919.5,540.8,2919.5z" />
@@ -667,7 +667,7 @@
                     <text transform="matrix(1 0 0 1 753 2932.509)" class="st5 st8">4.3</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('settings')}}" target="_blank">
                 <g id="my-account">
                     <path id="Rectangle_1-5" class="st2" d="M1104.8,333.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C1093.8,338.4,1098.7,333.5,1104.8,333.5z" />
@@ -704,7 +704,7 @@
                     <text transform="matrix(1 0 0 1 1323 346.509)" class="st5 st8">9</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('password/reset')}}" target="_blank">
                 <g id="lost-password">
                     <g id="Group_3066" transform="translate(-522.196 -788)">
                         <path id="Subtraction_15" class="st9" d="M1256,853h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0h26.9
@@ -724,7 +724,7 @@
                     <text transform="matrix(1 0 0 1 680.582 82.509)" class="st5 st12">Lost Password</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('login')}}" target="_blank">
                 <g id="wLite-start">
                     <g id="Group_3069" transform="translate(-341.196 176.717)">
                         <path id="Subtraction_15-2" class="st9" d="M1256,853h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0h26.9
@@ -744,7 +744,7 @@
                     <text transform="matrix(1 0 0 1 868.487 1047.2261)" class="st5 st12">Get Started</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/marketplace')}}" target="_blank">
                 <g id="programming" transform="translate(0 77.5)">
                     <path id="Subtraction_15-9" class="st13" d="M914.8,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
                     h26.9l15.6,16.9v39.6C918.3,1722.2,916.7,1723.7,914.8,1723.7z" />
@@ -763,7 +763,7 @@
                     <text transform="matrix(1 0 0 1 880.529 1756.2261)" class="st5 st12">&amp; Dev</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/marketplace')}}" target="_blank">
                 <g id="translation" transform="translate(0 77.5)">
                     <path id="Subtraction_15-10" class="st15" d="M1330.2,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
                     h26.9l15.6,16.9v39.6C1333.7,1722.2,1332.1,1723.7,1330.2,1723.7z" />
@@ -782,7 +782,7 @@
                     <text transform="matrix(1 0 0 1 1286.8539 1756.2261)" class="st5 st12">Translation</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/marketplace')}}" target="_blank">
                 <g id="digital-marketing" transform="translate(0 77.5)">
                     <path id="Subtraction_15-11" class="st17" d="M1018.6,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
                     h26.9l15.6,16.9v39.6C1022.1,1722.2,1020.6,1723.7,1018.6,1723.7z" />
@@ -801,7 +801,7 @@
                     <text transform="matrix(1 0 0 1 974.838 1756.2261)" class="st5 st12">Marketing</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/marketplace')}}" target="_blank">
                 <g id="videography" transform="translate(0 77.5)">
                     <path id="Subtraction_15-12" class="st19" d="M1434,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
                     h26.9l15.6,16.9v39.6C1437.5,1722.2,1435.9,1723.7,1434,1723.7z" />
@@ -820,7 +820,7 @@
                     <text transform="matrix(1 0 0 1 1383.547 1756.2261)" class="st5 st12">Photography</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/marketplace')}}" target="_blank">
                 <g id="graphic-design" transform="translate(0 77.5)">
                     <path id="Subtraction_15-13" class="st15" d="M1122.5,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
                     h26.9l15.6,16.9v39.6C1126,1722.2,1124.4,1723.7,1122.5,1723.7z" />
@@ -839,7 +839,7 @@
                     <text transform="matrix(1 0 0 1 1086.734 1756.2261)" class="st5 st12">Design</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('media/latest-news/single-news/1')}}" target="_blank">
                 <g id="latest-news-child" transform="translate(0 77.5)">
                     <g id="Group_3083" transform="translate(0 769)">
                         <path id="Subtraction_15-14" class="st13" d="M914.8,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
@@ -889,7 +889,7 @@
                     </g>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('media/latest-news/single-news/3')}}" target="_blank">
                 <g id="promotion-child" transform="translate(0 324)">
                     <g id="Group_3083-2" transform="translate(0 769)">
                         <path id="Subtraction_15-17" class="st13" d="M914.8,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
@@ -939,7 +939,7 @@
                     </g>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('media/latest-news/single-news/3')}}" target="_blank">
                 <g id="blog-child" transform="translate(0 568)">
                     <g id="Group_3083-3" transform="translate(0 769)">
                         <path id="Subtraction_15-20" class="st13" d="M914.8,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
@@ -989,7 +989,7 @@
                     </g>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/marketplace')}}" target="_blank">
                 <g id="music" transform="translate(0 77.5)">
                     <path id="Subtraction_15-23" class="st17" d="M1537.8,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
                     h26.9l15.6,16.9v39.6C1541.3,1722.2,1539.8,1723.7,1537.8,1723.7z" />
@@ -1008,7 +1008,7 @@
                     <text transform="matrix(1 0 0 1 1504.391 1756.2261)" class="st5 st12">Audio</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/marketplace')}}" target="_blank">
                 <g id="art-craft" transform="translate(0 77.5)">
                     <path id="Subtraction_15-24" class="st19" d="M1226.3,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
                     h26.9l15.6,16.9v39.6C1229.8,1722.2,1228.3,1723.7,1226.3,1723.7z" />
@@ -1027,7 +1027,7 @@
                     <text transform="matrix(1 0 0 1 1196.088 1756.2261)" class="st5 st12">Craft</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('services/marketplace')}}" target="_blank">
                 <g id="business" transform="translate(0 77.5)">
                     <path id="Subtraction_15-25" class="st13" d="M1641.7,1723.7h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0
                     h26.9l15.6,16.9v39.6C1645.2,1722.2,1643.6,1723.7,1641.7,1723.7z" />
@@ -1046,7 +1046,7 @@
                     <text transform="matrix(1 0 0 1 1610.4231 1756.2261)" class="st5 st12">Sales</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('login')}}" target="_blank">
                 <g id="wPro-start">
                     <g id="Group_3070" transform="translate(-341.196 420.717)">
                         <path id="Subtraction_15-3" class="st9" d="M1256,853h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0h26.9
@@ -1088,7 +1088,7 @@
             </a>
             <text transform="matrix(1 0 0 1 210.158 579.509)" class="st5 st12">Global Navigation</text>
             <text transform="matrix(1 0 0 1 470.653 413.509)" class="st5 st12">User Account</text>
-            <a href="#" target="_blank">
+            <a href="{{url('login')}}" target="_blank">
                 <g id="optimizer-start">
                     <g id="Group_3071" transform="translate(-341.196 664.717)">
                         <path id="Subtraction_15-5" class="st9" d="M1256,853h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0h26.9
@@ -1108,7 +1108,7 @@
                     <text transform="matrix(1 0 0 1 868.487 1535.2261)" class="st5 st12">Get Started</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('contact')}}" target="_blank">
                 <g id="contact-expert">
                     <g id="Group_3074" transform="translate(-341.196 1436.217)">
                         <path id="Subtraction_15-6" class="st9" d="M1256,853h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0h26.9
@@ -1129,7 +1129,7 @@
                     <text transform="matrix(1 0 0 1 864.566 2321.7261)" class="st5 st12">Expert Center</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('login')}}" target="_blank">
                 <g id="login">
                     <g id="Group_3067" transform="translate(-522.196 -687)">
                         <path id="Subtraction_15-7" class="st9" d="M1256,853h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0h26.9
@@ -1149,7 +1149,7 @@
                     <text transform="matrix(1 0 0 1 701.309 183.509)" class="st5 st12">Login</text>
                 </g>
             </a>
-            <a href="#" target="_blank">
+            <a href="{{url('register')}}" target="_blank">
                 <g id="register">
                     <g id="Group_3068" transform="translate(-522.196 -586)">
                         <path id="Subtraction_15-8" class="st9" d="M1256,853h-39c-1.9,0-3.5-1.6-3.5-3.5v-53c0-1.9,1.6-3.5,3.5-3.5c0,0,0,0,0,0h26.9
@@ -1195,7 +1195,7 @@
             <path id="Path_6954" class="st23"
                 d="M120.2,2729.9c-0.5-0.5-0.5-1.2,0-1.6l3.8-3.8l-3.8-3.8c-0.5-0.4-0.5-1.2-0.1-1.6
             c0.4-0.5,1.2-0.5,1.6-0.1c0,0,0,0,0.1,0.1l4.7,4.7c0.5,0.5,0.5,1.2,0,1.6l-4.7,4.7C121.4,2730.4,120.6,2730.4,120.2,2729.9z" />
-            <a href="#" target="_blank">
+            <a href="{{url('pricing')}}" target="_blank">
                 <g id="pricing-window">
                     <path id="Rectangle_45" class="st2" d="M540.8,3200.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
                     v-130C529.8,3205.4,534.7,3200.5,540.8,3200.5z" />
@@ -1481,41 +1481,44 @@
                 C987.3,747.7,985.1,745.5,982.3,745.5 M982.3,743.5c3.9,0,7,3.1,7,7c0,3.9-3.1,7-7,7s-7-3.1-7-7
                 C975.3,746.6,978.4,743.5,982.3,743.5z" />
             </g>
-            <a href="#" target="_blank"></a>
-            <g id="contact-us-window">
-                <path id="Path_6952" class="st23" d="M1689.3,869.4c-0.5-0.5-1.2-0.5-1.6,0l-3.8,3.8l-3.8-3.8c-0.4-0.5-1.2-0.5-1.6-0.1
-                c-0.5,0.4-0.5,1.2-0.1,1.6c0,0,0.1,0.1,0.1,0.1l4.7,4.7c0.5,0.5,1.2,0.5,1.6,0l4.7-4.7C1689.8,870.5,1689.8,869.8,1689.3,869.4
-                L1689.3,869.4z" />
-                <path id="Rectangle_1-6" class="st2" d="M1572,878.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
-                v-130C1561,883.4,1565.9,878.5,1572,878.5z" />
-                <path id="Rectangle_1_-_Outline-6" class="st0" d="M1572,879.5c-5.5,0-10,4.5-10,10v130c0,5.5,4.5,10,10,10h220
-                c5.5,0,10-4.5,10-10v-130c0-5.5-4.5-10-10-10H1572 M1572,878.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220
-                c-6.1,0-11-4.9-11-11v-130C1561,883.4,1565.9,878.5,1572,878.5z" />
-                <path id="Rectangle_2-6" class="st2" d="M1572,878.5h220c6.1,0,11,4.9,11,11v8l0,0h-242l0,0v-8
-                C1561,883.4,1565.9,878.5,1572,878.5z" />
-                <path id="Rectangle_2_-_Outline-6" class="st0" d="M1572,879.5c-5.5,0-10,4.5-10,10v7h240v-7c0-5.5-4.5-10-10-10H1572 M1572,878.5
-                h220c6.1,0,11,4.9,11,11v8h-242v-8C1561,883.4,1565.9,878.5,1572,878.5z" />
-                <circle id="Ellipse_354-6" class="st3" cx="1577" cy="888.5" r="4" />
-                <circle id="Ellipse_355-6" class="st3" cx="1593" cy="888.5" r="4" />
-                <circle id="Ellipse_356-6" class="st3" cx="1609" cy="888.5" r="4" />
-                <path id="Rectangle_3-6" class="st3" d="M1651,884.5h136c2.2,0,4,1.8,4,4l0,0c0,2.2-1.8,4-4,4h-136c-2.2,0-4-1.8-4-4l0,0
-                C1647,886.3,1648.8,884.5,1651,884.5z" />
-                <circle id="Ellipse_357-6" class="st2" cx="1803" cy="954.5" r="7" />
-                <path id="Ellipse_357_-_Outline-6" class="st4" d="M1803,948.5c-3.3,0-6,2.7-6,6c0,3.3,2.7,6,6,6s6-2.7,6-6
-                C1809,951.2,1806.3,948.5,1803,948.5 M1803,947.5c3.9,0,7,3.1,7,7c0,3.9-3.1,7-7,7s-7-3.1-7-7C1796,950.6,1799.1,947.5,1803,947.5
-                z" />
-                <circle id="Ellipse_358-4" class="st2" cx="1561" cy="954.5" r="7" />
-                <path id="Ellipse_358_-_Outline-4" class="st4" d="M1561,948.5c-3.3,0-6,2.7-6,6c0,3.3,2.7,6,6,6s6-2.7,6-6
-                C1567,951.2,1564.3,948.5,1561,948.5 M1561,947.5c3.9,0,7,3.1,7,7c0,3.9-3.1,7-7,7s-7-3.1-7-7C1554,950.6,1557.1,947.5,1561,947.5
-                z" />
-                <circle id="Ellipse_360-6" class="st2" cx="1682" cy="1030.5" r="7" />
-                <path id="Ellipse_360_-_Outline-6" class="st4"
-                    d="M1682,1024.5c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6
-                C1688,1027.2,1685.3,1024.5,1682,1024.5 M1682,1023.5c3.9,0,7,3.1,7,7s-3.1,7-7,7s-7-3.1-7-7S1678.1,1023.5,1682,1023.5z" />
-                <text transform="matrix(1 0 0 1 1633.948 963.509)" class="st5 st6">Contact Us</text>
-                <circle id="Ellipse_361-6" class="st7" cx="1796" cy="884.5" r="21" />
-                <text transform="matrix(1 0 0 1 1791 891.509)" class="st5 st8">7</text>
-            </g>
+
+            <a href="{{url('contact')}}" target="_blank">
+                <g id="contact-us-window">
+                    <path id="Path_6952" class="st23" d="M1689.3,869.4c-0.5-0.5-1.2-0.5-1.6,0l-3.8,3.8l-3.8-3.8c-0.4-0.5-1.2-0.5-1.6-0.1
+                    c-0.5,0.4-0.5,1.2-0.1,1.6c0,0,0.1,0.1,0.1,0.1l4.7,4.7c0.5,0.5,1.2,0.5,1.6,0l4.7-4.7C1689.8,870.5,1689.8,869.8,1689.3,869.4
+                    L1689.3,869.4z" />
+                    <path id="Rectangle_1-6" class="st2" d="M1572,878.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220c-6.1,0-11-4.9-11-11
+                    v-130C1561,883.4,1565.9,878.5,1572,878.5z" />
+                    <path id="Rectangle_1_-_Outline-6" class="st0" d="M1572,879.5c-5.5,0-10,4.5-10,10v130c0,5.5,4.5,10,10,10h220
+                    c5.5,0,10-4.5,10-10v-130c0-5.5-4.5-10-10-10H1572 M1572,878.5h220c6.1,0,11,4.9,11,11v130c0,6.1-4.9,11-11,11h-220
+                    c-6.1,0-11-4.9-11-11v-130C1561,883.4,1565.9,878.5,1572,878.5z" />
+                    <path id="Rectangle_2-6" class="st2" d="M1572,878.5h220c6.1,0,11,4.9,11,11v8l0,0h-242l0,0v-8
+                    C1561,883.4,1565.9,878.5,1572,878.5z" />
+                    <path id="Rectangle_2_-_Outline-6" class="st0" d="M1572,879.5c-5.5,0-10,4.5-10,10v7h240v-7c0-5.5-4.5-10-10-10H1572 M1572,878.5
+                    h220c6.1,0,11,4.9,11,11v8h-242v-8C1561,883.4,1565.9,878.5,1572,878.5z" />
+                    <circle id="Ellipse_354-6" class="st3" cx="1577" cy="888.5" r="4" />
+                    <circle id="Ellipse_355-6" class="st3" cx="1593" cy="888.5" r="4" />
+                    <circle id="Ellipse_356-6" class="st3" cx="1609" cy="888.5" r="4" />
+                    <path id="Rectangle_3-6" class="st3" d="M1651,884.5h136c2.2,0,4,1.8,4,4l0,0c0,2.2-1.8,4-4,4h-136c-2.2,0-4-1.8-4-4l0,0
+                    C1647,886.3,1648.8,884.5,1651,884.5z" />
+                    <circle id="Ellipse_357-6" class="st2" cx="1803" cy="954.5" r="7" />
+                    <path id="Ellipse_357_-_Outline-6" class="st4" d="M1803,948.5c-3.3,0-6,2.7-6,6c0,3.3,2.7,6,6,6s6-2.7,6-6
+                    C1809,951.2,1806.3,948.5,1803,948.5 M1803,947.5c3.9,0,7,3.1,7,7c0,3.9-3.1,7-7,7s-7-3.1-7-7C1796,950.6,1799.1,947.5,1803,947.5
+                    z" />
+                    <circle id="Ellipse_358-4" class="st2" cx="1561" cy="954.5" r="7" />
+                    <path id="Ellipse_358_-_Outline-4" class="st4" d="M1561,948.5c-3.3,0-6,2.7-6,6c0,3.3,2.7,6,6,6s6-2.7,6-6
+                    C1567,951.2,1564.3,948.5,1561,948.5 M1561,947.5c3.9,0,7,3.1,7,7c0,3.9-3.1,7-7,7s-7-3.1-7-7C1554,950.6,1557.1,947.5,1561,947.5
+                    z" />
+                    <circle id="Ellipse_360-6" class="st2" cx="1682" cy="1030.5" r="7" />
+                    <path id="Ellipse_360_-_Outline-6" class="st4"
+                        d="M1682,1024.5c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6
+                    C1688,1027.2,1685.3,1024.5,1682,1024.5 M1682,1023.5c3.9,0,7,3.1,7,7s-3.1,7-7,7s-7-3.1-7-7S1678.1,1023.5,1682,1023.5z" />
+                    <text transform="matrix(1 0 0 1 1633.948 963.509)" class="st5 st6">Contact Us</text>
+                    <circle id="Ellipse_361-6" class="st7" cx="1796" cy="884.5" r="21" />
+                    <text transform="matrix(1 0 0 1 1791 891.509)" class="st5 st8">7</text>
+                </g>
+            </a>
+
             <a href="#" target="_blank"></a>
             <path id="Line_60" class="st0" d="M1336.2,874h-2V756h2V874z" />
             <path id="Line_61" class="st0" d="M1685.5,874h-2V756h2V874z" />
