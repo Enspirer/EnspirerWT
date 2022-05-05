@@ -75,7 +75,7 @@
                                                 @if(count($heatmap_dynamic) != 0)
                                                     @foreach($heatmap_dynamic as $heatmap)
                                                         <div class="page-item">
-                                                            <a href="#" class="page-link">
+                                                            <a href="{{$heatmap->url}}" class="page-link" target="change_url">
                                                                 <!-- <div class="rank">#2</div> -->
                                                                 <div class="text-block">
                                                                     <div class="title">{{$project->name}}</div>
@@ -141,7 +141,12 @@
                                             </div>
                                         </div>
                                         <div class="body">
-                                            <iframe src="https://tallentor.com/" class="map-frame"></iframe>
+                                            @if(count($heatmap_dynamic) != 0)
+                                                @foreach($heatmap_dynamic as $heatmap)
+                                                    <iframe src="{{$heatmap->url}}?heatmap=true" name="change_url" class="map-frame"></iframe>
+                                                    @break
+                                                @endforeach
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -826,5 +831,7 @@
     // Display the chart using the configuration items and data just specified.
     eventChart.setOption(eventChartOption);
 </script>
+
+
 
 @endpush
