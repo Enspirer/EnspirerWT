@@ -99,7 +99,7 @@
                                                     <div class="info-block">
                                                         <div class="header">
                                                             <div class="name">{{$all_ims_pro_client_message->name}}</div>
-                                                            <div class="count">10</div>
+                                                            <div class="count">{{\App\Models\ImsProClientMessages::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->count()}}</div>
                                                         </div>
                                                         <div class="message"><span>You:</span>The sample text here and this is the . . .</div>
                                                     </div>
