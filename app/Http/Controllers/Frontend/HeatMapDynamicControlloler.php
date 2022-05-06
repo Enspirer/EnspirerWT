@@ -11,7 +11,7 @@ class HeatMapDynamicControlloler extends Controller
     public function test_heatmap()
     {
         $dataobject = HeatmapDynamic::where('url','https://tallentor.com/')
-            ->select('x_positions', 'y_position')
+            ->select('x_position', 'y_position')
             ->get()->array();
         dd($dataobject);
     }
