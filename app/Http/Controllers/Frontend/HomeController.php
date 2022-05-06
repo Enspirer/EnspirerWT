@@ -1254,6 +1254,7 @@ class HomeController extends Controller
         $add->facebook_user_name = $facebook_user_name;
         $add->message = $message;
         $add->user_id = $user_id;
+        $add->user_type = 'admin_user';
 
         $add->save();
 
