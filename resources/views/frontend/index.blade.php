@@ -6,6 +6,9 @@
     
 @include('frontend.includes.home_nav')
 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <section class="hero-section home">
         <div class="container">
             <div class="splide" id="heroSlider">
@@ -142,30 +145,30 @@
             <h2 class="title">The Inquiry Management System</h2>
             <span class="text">Keep track of all inquiries with status updates & Sales Reports</span>
             <div class="card-block">
-                <div class="card">
+                <div data-aos-easing="ease" data-aos="flip-right" class="card">
                     <img src="{{url('images/landing_page/home/ims_admin.png')}}" alt="">
                     <div class="text">Admin dashboard with user privileges management</div>
                 </div>
-                <div class="card">
+                <div data-aos-easing="ease" data-aos="flip-right" data-aos-delay="300" class="card">
                     <img src="{{url('images/landing_page/home/ims_analytics.png')}}" alt="">
                     <div class="text">Analytics of the inquiry process with reports</div>
                 </div>
-                <div class="card">
+                <div data-aos-easing="ease" data-aos="flip-right" data-aos-delay="600" class="card">
                     <img src="{{url('images/landing_page/home/ims_record.png')}}" alt="">
                     <div class="text">Record of the full status of the inquiry with comments</div>
                 </div>
-                <div class="card">
+                <div data-aos-easing="ease" data-aos="flip-right" data-aos-delay="900" class="card">
                     <img src="{{url('images/landing_page/home/ims_assign.png')}}" alt="">
                     <div class="text">Assign the inquiry to relevant department</div>
                 </div>
             </div>
             <div class="image-block">
                 <img src="{{url('images/landing_page/home/ims-section/ims-background.png')}}" class="back-img">
-                <img src="{{url('images/landing_page/home/ims-section/monitor.png')}}" class="main-img size-img">
-                <img src="{{url('images/landing_page/home/ims-section/dashboard.png')}}" class="dashboard-img size-img">
-                <img src="{{url('images/landing_page/home/ims-section/arrow.svg')}}" class="arrow-img size-img">
-                <img src="{{url('images/landing_page/home/ims-section/blue-leaves.svg')}}" class="bLeaves-img size-img">
-                <img src="{{url('images/landing_page/home/ims-section/yellow-leaves.svg')}}" class="yLeaves-img size-img">
+                <img data-aos-easing="ease" data-aos="fade-right" src="{{url('images/landing_page/home/ims-section/monitor.png')}}" class="main-img size-img">
+                <img data-aos-easing="ease" data-aos="fade-left" data-aos-delay="400" src="{{url('images/landing_page/home/ims-section/dashboard.png')}}" class="dashboard-img size-img">
+                <img data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="800" src="{{url('images/landing_page/home/ims-section/arrow.svg')}}" class="arrow-img size-img">
+                <img data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="1200" src="{{url('images/landing_page/home/ims-section/blue-leaves.svg')}}" class="bLeaves-img size-img">
+                <img data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="1200" src="{{url('images/landing_page/home/ims-section/yellow-leaves.svg')}}" class="yLeaves-img size-img">
             </div>
             <div class="button-block">
                 <a href="{{url('tallentor-demo')}}" class="cta-btn-border">
@@ -336,7 +339,7 @@
                     </div>
                 </div>
                 <div class="card-block" id="marketplaceCards">
-                    <div class="card card-top">
+                    <div data-aos-easing="ease" data-aos="fade-left" class="card card-top">
                         <a href="{{url('services/marketplace')}}">
                             <div class="icon-block">
                                 <i class="bi bi-check-circle-fill"></i>
@@ -352,7 +355,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="card active card-middle">
+                    <div data-aos-easing="ease" data-aos="fade-left" data-aos-delay="800" class="card active card-middle">
                         <a href="{{url('services/marketplace')}}">
                             <div class="icon-block">
                                 <i class="bi bi-check-circle-fill"></i>
@@ -367,7 +370,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="card card-bottom">
+                    <div data-aos-easing="ease" data-aos="fade-left" data-aos-delay="400" class="card card-bottom">
                         <a href="{{url('services/marketplace')}}">
                             <div class="icon-block">
                                 <i class="bi bi-check-circle-fill"></i>
@@ -625,6 +628,10 @@ window.addEventListener('DOMContentLoaded', function () {
         observer.observe(slide, slideConfig)
     })
 })
+</script>
+
+<script>
+  AOS.init();
 </script>
 
 @endpush
