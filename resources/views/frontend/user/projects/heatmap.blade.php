@@ -75,7 +75,7 @@
                                                 @if(count($heatmap_dynamic) != 0)
                                                     @foreach($heatmap_dynamic as $heatmap)
                                                         <div class="page-item">
-                                                            <a href="{{$heatmap->url}}" class="page-link" target="change_url">
+                                                            <a href="{{$heatmap->url}}?heatmap=true" class="page-link" target="change_url">
                                                                 <!-- <div class="rank">#2</div> -->
                                                                 <div class="text-block">
                                                                     <div class="title">{{$project->name}}</div>
