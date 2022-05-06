@@ -8,6 +8,12 @@ use App\Models\HeatmapDynamic;
 
 class HeatMapDynamicControlloler extends Controller
 {
+    public function test_heatmap()
+    {
+        $dataobject = HeatmapDynamic::where('url','')->get();
+        dd($dataobject);
+    }
+    
     public function store($id, Request $request)
     {        
         // dd($request);

@@ -67,3 +67,4 @@ Route::get('check_project_available_days', [HomeController::class,'check_project
 
 Route::post('heatmap_dynamic/{id}', [HeatMapDynamicControlloler::class, 'store'])->name('heatmap_dynamic');
 Route::post('get_heatmap_dynamic', [HeatMapDynamicControlloler::class, 'get_heatmap_dynamic'])->name('get_heatmap_dynamic');
+Route::post('test_heatmap', [HeatMapDynamicControlloler::class, 'test_heatmap'])->name('test_heatmap');
