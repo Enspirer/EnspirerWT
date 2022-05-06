@@ -33,7 +33,7 @@
                                                         class="bi bi-chevron-right"></i></a>
                                             </li>
                                             <li class="breadcrumb-item">
-                                                <a class="breadcrumb-link breadcrumb-current">Chat Summery</a>
+                                                <a class="breadcrumb-link breadcrumb-current">Inquiry Summery</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -59,82 +59,7 @@
   Launch demo modal
 </button>
 
-<!--Report Download Modal -->
-<div class="modal get_widget_Modal fade" id="reportDownload" tabindex="-1" aria-labelledby="reportDownloadLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
-            <i class="bi bi-x-lg"></i>
-        </button>
-        <i class="bi bi-download"></i>
-        <div class="text">Download Report File</div>
-      </div>
-      <div class="modal-body">
-        <form>
-            <div class="form-title">Select Fields</div>
-            <div class="form-row">
-                <select class="form-select" required>
-                    <option disabled>Choose...</option>
-                    <option selected>Custom Date</option>
-                    <option>Task Status</option>
-                    <option>Sample Text</option>
-                </select>
-                <div class="form-input">
-                    <i class="bi bi-calendar4-week"></i>
-                    <input type="text" class="form-control"  required>
-                </div>
-                <div class="form-input">
-                    <i class="bi bi-calendar4-week"></i>
-                    <input type="text" class="form-control"  required>
-                </div>
-                <a href="#" class="form-add-btn">
-                    <i class="bi bi-plus-lg"></i>
-                </a>
-                <a href="#" class="form-delete-btn">
-                    <i class="bi bi-trash"></i>
-                </a>
-            </div>
-            <div class="form-row">
-                <select class="form-select" required>
-                    <option disabled>Choose...</option>
-                    <option selected>Task Status</option>
-                    <option>Task Status</option>
-                    <option>Sample Text</option>
-                </select>
-                <select class="form-select" required>
-                    <option selected disabled>Choose...</option>
-                    <option selected>Pending</option>
-                    <option>Task Status</option>
-                    <option>Sample Text</option>
-                </select>
-                <a href="#" class="form-add-btn">
-                    <i class="bi bi-plus-lg"></i>
-                </a>
-                <a href="#" class="form-delete-btn">
-                    <i class="bi bi-trash"></i>
-                </a>
-            </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <div class="button-block">
-            <a href="#" class="btn-save-filter">
-                <i class="bi bi-sliders2-vertical"></i>
-                <div class="text">Save Filter</div>
-            </a>
-        </div>
-        <div class="button-block">
-            <a href="#" class="btn-cancel">Cancel</a>
-            <a href="#" class="btn-download">
-                <i class="bi bi-download"></i>
-                <div class="text">Download Report File</div>
-            </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
     
 
 @endsection

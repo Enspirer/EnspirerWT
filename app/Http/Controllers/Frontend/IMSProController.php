@@ -615,7 +615,28 @@ class IMSProController extends Controller
         return $pdf->download('solo_ims_pro_client.pdf');
     }
 
-    
+     public function generate_pdf_inquiry(Request $request)
+    {
+        // dd($request);
+
+        // Inquiries_Status;
+        
+        $client_messages = ImsProClientMessages::orderBy('created_at','DESC')->whereBetween('created_at', [$request->start_date, $request->end_date])->get(); 
+        // dd($client_messages);
+       
+        // $data = [
+        //     'ims_client' => $ims_client
+        // ];
+        // dd($data);
+
+        $pdf = PDF::loadView('generate_pdf_inquiry', [
+            'client_messages' => $client_messages,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date
+        ]);
+  
+        return $pdf->download('generate_pdf_inquiry.pdf');
+    }
     
 
     

@@ -41,32 +41,28 @@
                                         <div class="title">Your Bots</div>
                                     </div>
                                     <div class="body">
-                                        <div class="bot-item">
-                                            <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <div class="title">Chat Bot Name</div>
-                                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</div>
-                                                <div class="button-block">
-                                                    <a href="#" class="bot-btn btn-manage">Manage</a>
-                                                    <a href="#" class="bot-btn btn-disable">Disable</a>
+                                        @if(App\Models\SeoBot::where('project_id',$project_id)->first() != null)
+                                        @php
+                                            $bot_count = App\Models\SeoBot::where('project_id',$project_id)->first()->activated_bot_count;
+                                        @endphp
+                                            @for ($i = 1; $i <= $bot_count; $i++)                                            
+                                                <div class="bot-item">
+                                                    <div class="image-block">
+                                                        <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="title">{{App\Models\SeoBot::where('project_id',$project_id)->first()->bot_type}}</div>
+                                                        <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</div>
+                                                        <div class="button-block">
+                                                            <a href="#" class="bot-btn btn-manage">Manage</a>
+                                                            <a href="#" class="bot-btn btn-disable">Disable</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="bot-item">
-                                            <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <div class="title">Chat Bot Name</div>
-                                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</div>
-                                                <div class="button-block">
-                                                    <a href="#" class="bot-btn btn-manage">Manage</a>
-                                                    <a href="#" class="bot-btn btn-disable">Disable</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            @endfor
+                                        @else
+                                            No Any Bots Here
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -75,185 +71,48 @@
                         <div class="project-section">
                             <div class="title">Current Project</div>
                             <div class="innre-wrapper">
-                                <div class="project-card">
-                                    <div class="header">
-                                        <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
-                                        <div class="title">Bot Name Here</div>
-                                        <div class="bot-no">01</div>
-                                    </div>
-                                    <div class="text">SEO optimization</div>
-                                    <div class="progress-block">
-                                        <div class="progress-item">
-                                            <div class="count green">05</div>
-                                            <div class="text">Completed</div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <div class="count orange">03</div>
-                                            <div class="text">In Progress</div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <div class="count red">02</div>
-                                            <div class="text">To Do</div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-indicator green" style="flex:0 0 50%"></div>
-                                        <div class="progress-indicator orange" style="flex:0 0 30%"></div>
-                                        <div class="progress-indicator red" style="flex:0 0 20%"></div>
-                                    </div>
-                                </div>
-                                <div class="project-card">
-                                    <div class="header">
-                                        <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
-                                        <div class="title">Bot Name Here</div>
-                                        <div class="bot-no">01</div>
-                                    </div>
-                                    <div class="text">SEO optimization</div>
-                                    <div class="progress-block">
-                                        <div class="progress-item">
-                                            <div class="count green">05</div>
-                                            <div class="text">Completed</div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <div class="count orange">03</div>
-                                            <div class="text">In Progress</div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <div class="count red">02</div>
-                                            <div class="text">To Do</div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-indicator green" style="flex:0 0 50%"></div>
-                                        <div class="progress-indicator orange" style="flex:0 0 30%"></div>
-                                        <div class="progress-indicator red" style="flex:0 0 20%"></div>
-                                    </div>
-                                </div>
-                                <div class="project-card">
-                                    <div class="header">
-                                        <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
-                                        <div class="title">Bot Name Here</div>
-                                        <div class="bot-no">01</div>
-                                    </div>
-                                    <div class="text">SEO optimization</div>
-                                    <div class="progress-block">
-                                        <div class="progress-item">
-                                            <div class="count green">05</div>
-                                            <div class="text">Completed</div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <div class="count orange">03</div>
-                                            <div class="text">In Progress</div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <div class="count red">02</div>
-                                            <div class="text">To Do</div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-indicator green" style="flex:0 0 50%"></div>
-                                        <div class="progress-indicator orange" style="flex:0 0 30%"></div>
-                                        <div class="progress-indicator red" style="flex:0 0 20%"></div>
-                                    </div>
-                                </div>
+                                
+                                @if(App\Models\SeoBot::where('project_id',$project_id)->first() != null)
+                                    @php
+                                        $bot_count = App\Models\SeoBot::where('project_id',$project_id)->first()->activated_bot_count;
+                                    @endphp
+                                    @for ($i = 1; $i <= $bot_count; $i++)   
+
+                                        <div class="project-card">
+                                            <div class="header">
+                                                <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
+                                                <div class="title">{{App\Models\SeoBot::where('project_id',$project_id)->first()->bot_type}}</div>
+                                                <div class="bot-no">01</div>
+                                            </div>
+                                            <div class="text">SEO optimization</div>
+                                            <div class="progress-block">
+                                                <div class="progress-item">
+                                                    <div class="count green">05</div>
+                                                    <div class="text">Completed</div>
+                                                </div>
+                                                <div class="progress-item">
+                                                    <div class="count orange">03</div>
+                                                    <div class="text">In Progress</div>
+                                                </div>
+                                                <div class="progress-item">
+                                                    <div class="count red">02</div>
+                                                    <div class="text">To Do</div>
+                                                </div>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-indicator green" style="flex:0 0 50%"></div>
+                                                <div class="progress-indicator orange" style="flex:0 0 30%"></div>
+                                                <div class="progress-indicator red" style="flex:0 0 20%"></div>
+                                            </div>
+                                        </div>                                
+                                    @endfor
+                                @else
+                                    No Any Bots Here
+                                @endif
                             </div>
                         </div>
 
-                        <div class="security-block">
-                            <div class="feature-block">
-                                <div class="title">Website Alerts</div>
-                                <table class="security-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/success.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                                <div class="sub-text">Server <span>BN-34-HDE</span> was down </div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/warning.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                                <div class="sub-text">Server <span>BN-34-HDE</span> was down </div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="feature-block">
-                                <div class="title">Website Alerts</div>
-                                <table class="security-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/success.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                                <div class="sub-text">Server <span>BN-34-HDE</span> was down </div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/warning.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                                <div class="sub-text">Server <span>BN-34-HDE</span> was down </div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="feature-block">
-                                <div class="title">Website Alerts</div>
-                                <table class="security-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/success.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                                <div class="sub-text">Server <span>BN-34-HDE</span> was down </div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/warning.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                                <div class="sub-text">Server <span>BN-34-HDE</span> was down </div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

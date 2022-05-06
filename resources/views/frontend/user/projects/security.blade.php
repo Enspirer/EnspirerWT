@@ -130,46 +130,7 @@
 
 
                         <div class="security-block">
-                            <div class="feature-block">
-                                <div class="title">Email Black list</div>
-                                <table class="security-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/sheild-success.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/sheild-warning.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/sheild-danger.png')}}" alt="">
-                                            </td>
-                                            <td class="text-col">
-                                                <div class="text">example@gmail.com</div>
-                                            </td>
-                                            <td class="info-col">
-                                                <i class="bi bi-exclamation-circle"></i>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                           
                             <div class="feature-block">
                                 <div class="title">Website Alerts</div>
                                 <table class="security-table">

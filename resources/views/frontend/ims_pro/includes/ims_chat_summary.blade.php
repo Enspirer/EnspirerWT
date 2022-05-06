@@ -12,42 +12,11 @@
                                 <i class="bi bi-chevron-down"></i>
                             </label>
                         </div>
-                        <a href="#"
-                            class="ims__refresh control-link active">
-                            <i class="bi bi-arrow-clockwise"></i>
-                        </a>
                     </div>
-                    <div class="actions">
-                        <a href="#" class="control-link">
-                            <i class="bi bi-send-fill"></i>
-                            <div class="text">Bulk Reply</div>
-                        </a>
-                        <a href="#" class="control-link">
-                            <i class="bi bi-record-circle"></i>
-                            <div class="text">Assign</div>
-                        </a>
-                        <a href="#" class="control-link">
-                            <i class="bi bi-eye-fill"></i>
-                            <div class="text">Mark as read</div>
-                        </a>
-                        <a href="#" class="control-link">
-                            <i class="bi bi-tags-fill"></i>
-                            <div class="text">Labels</div>
-                        </a>
-                        <a href="#" class="control-link">
-                            <i class="bi bi-volume-mute-fill"></i>
-                            <div class="text">Mute</div>
-                        </a>
-                        <a href="#" class="control-link">
-                            <i class="bi bi-archive-fill"></i>
-                            <div class="text">Archive</div>
-                        </a>
+                    <div class="actions">                        
                         <a href="#" class="control-link" data-delete-modal data-bs-toggle="modal" data-bs-target="#deleteInquiry">
                             <i class="bi bi-trash-fill"></i>
                             <div class="text">Delete</div>
-                        </a>
-                        <a href="#" class="control-link">
-                            <i class="bi bi-three-dots"></i>
                         </a>
                     </div>
                     <a href="#" class="btn-status-report" type="button" data-bs-toggle="modal" data-bs-target="#reportDownload">
@@ -66,7 +35,6 @@
                         <table class="table table-borderless" id="inquirySummery">
                             <thead>
                                 <tr class="data-row">
-                                    <th class="data-title"></th>
                                     <th class="data-title"></th>
                                     <th class="data-title"></th>
                                     <th class="data-title">Name</th>
@@ -91,9 +59,7 @@
                                                     <i class="bi bi-star"></i>
                                                 </label>
                                             </td>
-                                            <td class="data--pic data-cell">
-                                                <img src="{{url('img/profile_avatar.jpg')}}" alt="">
-                                            </td>
+                                           
                                             <td class="data--name data-cell">
                                                 <a href="{{route('frontend.user_widget.ims_pro_index',[$all_ims_pro_client_message->project_id,$all_ims_pro_client_message->phone_number,$all_ims_pro_client_message->type])}}" style="text-decoration:none; color:#212529;">
                                                     <div class="info-block">
@@ -108,12 +74,22 @@
                                             <td class="data--date data-cell">
                                                 <div class="text">{{ $all_ims_pro_client_message->created_at->format('d M Y') }}</div>
                                             </td>  
-                                            <td class="data--chnnel data-cell">
+                                            <td class="data--chnnel data-cell">                                                
                                                 <div class="channel-block">
                                                     <div class="icon">
+                                                    @if($all_ims_pro_client_message->type == 'WhatsApp')
                                                         <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                    @elseif($all_ims_pro_client_message->type == 'Messenger')
+                                                        <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
+                                                    @elseif($all_ims_pro_client_message->type == 'Telegram')
+                                                        <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                    @elseif($all_ims_pro_client_message->type == 'Viber')
+                                                        <img src="{{url('images/social_media_icons/viber.png')}}" alt="" class="chat-client">
+                                                    @elseif($all_ims_pro_client_message->type == 'Line')
+                                                        <img src="{{url('images/social_media_icons/line.png')}}" alt="" class="chat-client">
+                                                    @endif
                                                     </div>
-                                                    <div class="name">WhatsApp</div>
+                                                    <div class="name">{{$all_ims_pro_client_message->type}}</div>
                                                 </div>
                                             </td>
                                             <td class="data--date data-cell">
@@ -127,8 +103,12 @@
                                             </td>      
                                             <td class="data--status data-cell">
                                                 <div class="status-block">
-                                                    <div class="indicator orange"></div>
-                                                    <div class="status">Pending</div>
+                                                    <!-- <div class="indicator orange"></div> -->
+                                                    @if(App\Models\Inquiries_Status::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->latest()->first() == null)
+                                                        <div class="status">Not Assigned</div>
+                                                    @else
+                                                        <div class="status">{{\App\Models\Inquiries_Status::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->latest()->first()->status}}</div>
+                                                    @endif
                                                 </div>
                                             </td>
                                             
@@ -143,6 +123,53 @@
     </div>
 </div>
 
+<!--Report Download Modal -->
+<div class="modal get_widget_Modal fade" id="reportDownload" tabindex="-1" aria-labelledby="reportDownloadLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <i class="bi bi-download"></i>
+            <div class="text">Download Report File</div>
+        </div>
+        <form action="{{ route('frontend.generate_pdf_inquiry', $project->id) }}" method="post" enctype="multipart/form-data">
+        {{csrf_field()}}
+            <div class="modal-body">               
+                <div class="form-title mb-3">Select Fields</div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" onfocus="(this.type='date')" name="start_date" id="start_date" placeholder="Start Date" required>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" onfocus="(this.type='date')" name="end_date" id="end_date" placeholder="End Date" required>
+                        </div>
+                    </div>                                                                        
+                </div>            
+            </div>
+            <div class="modal-footer">
+                <div class="button-block">
+                    <!-- <a href="#" class="btn-save-filter">
+                        <i class="bi bi-sliders2-vertical"></i>
+                        <div class="text">Save Filter</div>
+                    </a> -->
+                </div>
+                <div class="button-block">
+                    <a href="#" class="btn-cancel" data-bs-dismiss="modal">Cancel</a>
+                    <button type="submit" class="btn-download" style="border:none">
+                        <i class="bi bi-download"></i>
+                        <div class="text">Download Report File</div>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
 
 <!-- Delete Inquery Modal -->
 <div class="modal fade" id="deleteInquiry" tabindex="-1" aria-labelledby="deleteInquiryLabel" aria-hidden="true">
