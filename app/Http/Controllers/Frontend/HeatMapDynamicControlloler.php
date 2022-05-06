@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\HeatmapDynamic;
+use Phpml\Clustering\KMeans;
 
 class HeatMapDynamicControlloler extends Controller
 {
@@ -13,7 +14,9 @@ class HeatMapDynamicControlloler extends Controller
         $dataobject = HeatmapDynamic::where('url','https://tallentor.com/')
             ->select('x_position', 'y_position')
             ->get()->toArray();
-        dd($dataobject);
+        $kmeans = new KMeans(2);
+
+        dd($kmeans->cluster($dataobject));
     }
 
     public function store($id, Request $request)
