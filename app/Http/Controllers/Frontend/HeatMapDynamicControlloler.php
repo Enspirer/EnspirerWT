@@ -12,7 +12,7 @@ class HeatMapDynamicControlloler extends Controller
     {
         $dataobject = HeatmapDynamic::where('url','https://tallentor.com/')
             ->select('x_position', 'y_position')
-            ->get()->array();
+            ->get()->toArray();
         dd($dataobject);
     }
 
