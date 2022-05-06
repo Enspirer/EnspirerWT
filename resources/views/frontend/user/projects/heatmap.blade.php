@@ -141,7 +141,7 @@
                                             </div>
                                         </div>
                                         <div class="body">
-                                            <div class="wrapper">
+                                            <div class="wrapper" data-simplebar>
                                                 @if(count($heatmap_dynamic) != 0)
                                                     @foreach($heatmap_dynamic as $heatmap)
                                                         <iframe src="{{$heatmap->url}}?heatmap=true" name="change_url" class="map-frame"></iframe>
