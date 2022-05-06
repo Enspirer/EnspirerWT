@@ -1255,6 +1255,7 @@ class HomeController extends Controller
         $add->message = $message;
         $add->user_id = $user_id;
         $add->user_type = 'admin_user';
+        $add->core_type = 'message';
 
         $add->save();
 
