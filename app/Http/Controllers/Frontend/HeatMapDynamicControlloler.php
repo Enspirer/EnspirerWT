@@ -11,9 +11,10 @@ class HeatMapDynamicControlloler extends Controller
 {
     public function test_heatmap()
     {
-        $dataobject = HeatmapDynamic::where('url','https://tallentor.com/')
-            ->select('x_position', 'y_position')
-            ->get()->toArray();
+//        $dataobject = HeatmapDynamic::where('url','https://tallentor.com/')
+//            ->select('x_position', 'y_position')
+//            ->get()->toArray();
+        $dataobject = [[123,477],[3774,9933],[3322,6000],[884,332], [332,355]];
         $kmeans = new KMeans(2);
 
         dd($kmeans->cluster($dataobject));
