@@ -1017,8 +1017,6 @@ var url = new URL(url_string);
 var c = url.searchParams.get("heatmap");
 
 if (c == 'true') {
-    console.log('heatmap_viewer_enabled');
-
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.0/heatmap.min.js';
@@ -1067,8 +1065,6 @@ if (c == 'true') {
                 console.log(error);
             });
     });
-
-    alert('heatmap_viewer')
 } else {
 
 }

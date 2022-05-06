@@ -102,7 +102,7 @@
                                     </div>
                                     <div class="heatmap-block">
                                         <div class="header">
-                                            <div class="button-block btns-left">
+                                            <!-- <div class="button-block btns-left">
                                                 <a href="#" class="btn-link">
                                                     <i class="bi bi-filter"></i>
                                                     <div class="text">Segments</div>
@@ -111,13 +111,13 @@
                                                     <i class="bi bi-display"></i>
                                                     <div class="text">Device</div>
                                                 </a>
-                                            </div>
+                                            </div> -->
                                             <div class="button-block btns-middle">
                                                 <a href="#" class="btn-link active">
                                                     <i class="bi bi-newspaper"></i>
                                                     <div class="text">Heatmap</div>
                                                 </a>
-                                                <a href="#" class="btn-link">
+                                                <!-- <a href="#" class="btn-link">
                                                     <i class="bi bi-file-earmark-text"></i>
                                                     <div class="text">Forms</div>
                                                 </a>
@@ -128,7 +128,7 @@
                                                 <a href="#" class="btn-link">
                                                     <i class="bi bi-camera-video-fill"></i>
                                                     <div class="text">Recording</div>
-                                                </a>
+                                                </a> -->
                                             </div>
                                             <div class="button-block btns-right">
                                                 <a href="#" class="btn-link">
