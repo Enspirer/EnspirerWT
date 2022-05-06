@@ -101,7 +101,7 @@
                                                             <div class="name">{{$all_ims_pro_client_message->name}}</div>
                                                             <div class="count">{{\App\Models\ImsProClientMessages::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->count()}}</div>
                                                         </div>
-                                                        <div class="message"><span>You:</span>{{\App\Models\ImsProClientMessages::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->latest()->first()->message}} . . .</div>
+                                                        <div class="message"><span></span>{{\App\Models\ImsProClientMessages::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->latest()->first()->message}} . . .</div>
                                                     </div>
                                                 </a>
                                             </td>
@@ -117,7 +117,7 @@
                                                 </div>
                                             </td>
                                             <td class="data--date data-cell">
-                                                <div class="text">Manager</div>
+                                                <div class="text">{{\App\Models\ImsProClientMessages::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->where('core_type',$all_ims_pro_client_message->core_type)->latest()->first()->message}}</div>
                                             </td>      
                                             <td class="data--status data-cell">
                                                 <div class="status-block">
