@@ -5,6 +5,8 @@
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/pricing.css')}}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
 @include('frontend.includes.home_nav')
 
@@ -15,7 +17,7 @@
             <div class="subtitle">Cost-Effective, Full Service, High Security</div>
         </div>
         <div class="content">
-            <div class="pricing-card basic-card">
+            <div data-aos-easing="ease" data-aos="zoom-in"  class="pricing-card basic-card">
                 <div class="header">
                     <img src="{{url('images/landing_page/pricing_section/premium_icon.png')}}" alt="">
                     <div class="text-block">
@@ -96,7 +98,7 @@
                     <a href="#" class="pricing-btn btn-buy">Buy Now</a>
                 </div>
             </div>
-            <div class="pricing-card executive-card">
+            <div data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="300" class="pricing-card executive-card">
                 <div class="header">
                     <img src="{{url('images/landing_page/pricing_section/basic_icon.png')}}" alt="">
                     <div class="text-block">
@@ -177,7 +179,7 @@
                     <a href="#" class="pricing-btn btn-buy">Buy Now</a>
                 </div>
             </div>
-            <div class="pricing-card premium-card">
+            <div data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="600" class="pricing-card premium-card">
                 <div class="special">Popular</div>
                 <div class="header">
                     <img src="{{url('images/landing_page/pricing_section/standard_icon.png')}}" alt="">
@@ -267,3 +269,10 @@
 
 @endsection
 
+@push('after-scripts')
+
+<script>
+  AOS.init();
+</script>
+
+@endpush

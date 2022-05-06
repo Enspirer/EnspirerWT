@@ -4,8 +4,6 @@
     width: 100%;
 }
 
-.hero-section .custom__pagination {}
-
 .hero-section .custom__pagination .custom__pagination__page {
     width: 180px;
     margin: 0;
@@ -371,95 +369,82 @@
     font-weight: 300;
 }
 
-.IMS-section .image-block svg {
+.IMS-section .image-block {
     width: 100%;
-    height: auto;
+    position: relative;
 }
 
-/* ========================================================================================================================= */
-
-/* IMS section Animations */
-
-/* Arrow path */
-#Path_6497 {
-    stroke-dasharray: 5;
-    stroke-dashoffset: 1000;
-    animation: dash 10s linear infinite;
+.IMS-section .image-block .back-img {
+    width: 100%;
 }
 
-@keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
+.IMS-section .image-block .size-img {
+    position: absolute;
 }
 
-/* Blude leaves */
-
-#Group_345 {
-    transform-origin: bottom;
-    transform: rotateZ(-2deg) translate(35px, 35px);
-    animation: shake 5s linear infinite;
+.IMS-section .image-block .main-img {
+    max-width: 470px;
+    width: 37%;
+    left: 5%;
+    bottom: 0;
+    z-index: 2;
 }
 
-@keyframes shake {
-    0% {
-        transform: rotateZ(-2deg) translate(35px, 35px);
-    }
-
-    50% {
-        transform: rotateZ(-3deg) translate(35px, 35px);
-    }
-
-    0% {
-        transform: rotateZ(-2deg) translate(35px, 35px);
-    }
+.IMS-section .image-block .dashboard-img {
+    max-width: 640px;
+    width: 50%;
+    right: 5%;
+    bottom: 5%;
+    z-index: 2;
 }
 
-/* Yellow leaves */
-
-#Group_405 {
-    transform: translate(1387px, 2787px) rotateZ(3deg);
-    transform-origin: top left;
-    animation: shakeY 5s linear infinite;
+.IMS-section .image-block .arrow-img {
+    width: 15%;
+    top: 10%;
+    left: 35%;
+    z-index: 3;
 }
 
-@keyframes shakeY {
-    0% {
-        transform: translate(1387px, 2787px) rotateZ(3deg);
-    }
-
-    50% {
-        transform: translate(1387px, 2787px) rotateZ(0deg);
-    }
-
-    0% {
-        transform: translate(1387px, 2787px) rotateZ(3deg);
-    }
-}
-
-/* Blue leaves */
-
-#Group_404 {
-    transform: translate(59px, 2612px) rotateZ(0deg);
+.IMS-section .image-block .bLeaves-img {
+    width: 25%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: shakeB 3s ease-in-out alternate infinite;
     transform-origin: bottom right;
-    animation: shakeB 10s linear infinite;
 }
 
 @keyframes shakeB {
-    0% {
-        transform: translate(59px, 2612px) rotateZ(0deg);
-    }
-
-    50% {
-        transform: translate(59px, 2612px) rotateZ(-1deg);
-    }
 
     0% {
-        transform: translate(59px, 2612px) rotateZ(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-4deg);
     }
 }
 
-/* ========================================================================================================================= */
+.IMS-section .image-block .yLeaves-img {
+    width: 25%;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    z-index: 1;
+    animation: shakeY 3s ease-in-out alternate infinite;
+    transform-origin: bottom left;
+}
+
+@keyframes shakeY {
+
+    0% {
+        transform: translate(0, -50%) rotate(2deg);
+    }
+
+    100% {
+        transform: translate(0, -50%) rotate(-4deg);
+    }
+}
 
 .IMS-section .button-block {
     display: flex;
