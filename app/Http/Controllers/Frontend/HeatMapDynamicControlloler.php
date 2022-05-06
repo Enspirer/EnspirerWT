@@ -28,7 +28,10 @@ class HeatMapDynamicControlloler extends Controller
 
     public function get_heatmap_dynamic(Request $request)
     {        
-        $heat_dynamic = HeatmapDynamic::where('project_id',$request->project_id)->where('url',$request->url)->get();
+        $filtered_url = str_replace("?heatmap=true", "",$request->url);        
+        // dd($filtered_url);
+
+        $heat_dynamic = HeatmapDynamic::where('project_id',$request->project_id)->where('url',$filtered_url)->get();
         // dd($heat_dynamic);
         
         if(count($heat_dynamic) != 0){
