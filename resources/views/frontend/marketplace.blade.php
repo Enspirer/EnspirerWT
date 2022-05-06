@@ -6,6 +6,8 @@
 
 <link rel="stylesheet" href="{{url('css/categories.css')}}">
 <link rel="stylesheet" href="{{url('css/services.css')}}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
 @include('frontend.includes.home_nav')
 
@@ -2831,7 +2833,7 @@
 
 <section class="feature-section">
     <div class="container inner-wrapper">
-        <div class="feature-block block-3">
+        <div data-aos-easing="ease" data-aos="fade-right" class="feature-block block-3">
             <img src="{{url('images/services/03.png')}}" alt="" class="order-no">
             <div class="image-block">
                 <img src="{{url('images/services/cdd-01.png')}}" alt="">
@@ -2840,7 +2842,7 @@
             <p class="text">Experienced software developers to work individually or as a part of your team. Save Big with remote working environment, yer achieve the Best results.</p>
             <a href="{{url('/contact')}}" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
         </div>
-        <div class="feature-block block-4">
+        <div data-aos-easing="ease" data-aos="fade-left" class="feature-block block-4">
             <img src="{{url('images/services/04.png')}}" alt="" class="order-no">
             <div class="image-block">
                 <img src="{{url('images/services/xcxcx-01.png')}}" alt="">
@@ -2849,7 +2851,7 @@
             <p class="text">Hire the industry experts to bring your idea into reality. Dedicated Android & iOS developers to work on your project</p>
             <a href="{{url('/contact')}}" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
         </div>
-        <div class="feature-block block-5">
+        <div data-aos-easing="ease" data-aos="fade-right" class="feature-block block-5">
             <img src="{{url('images/services/05.png')}}" alt="" class="order-no">
             <div class="image-block">
                 <img src="{{url('images/services/sfsf-01.png')}}" alt="">
@@ -2858,7 +2860,7 @@
             <p class="text">SEO experts, Social media strategists and creative designers all under one package with a dedicated account manager</p>
             <a href="{{url('/contact')}}" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
         </div>
-        <div class="feature-block block-6">
+        <div data-aos-easing="ease" data-aos="fade-left" class="feature-block block-6">
             <img src="{{url('images/services/06.png')}}" alt="" class="order-no">
             <div class="image-block">
                 <img src="{{url('images/services/SEO-01.png')}}" alt="">
@@ -2867,7 +2869,7 @@
             <p class="text">Put your website ahead of your competitors organically. Tallentor SEO tool will scan through the website and generate a report in minutes and our SEO specialists will give you a plan to get you on track fast.</p>
             <a href="{{url('/contact')}}" class="cta-btn-border"><span class="text">Inquire Now</span> <i class="bi bi-arrow-right-short"></i></a>
         </div>
-        <div class="feature-block block-7">
+        <div data-aos-easing="ease" data-aos="fade-right" class="feature-block block-7">
             <img src="{{url('images/services/08.png')}}" alt="" class="order-no">
             <div class="image-block">
                 <img src="{{url('images/services/Analytics-01.png')}}" alt="">
@@ -2931,6 +2933,10 @@ function optionBlocks(id) {
 //         projectForm.classList.add("active");
 //     });
 // });
+</script>
+
+<script>
+  AOS.init();
 </script>
 
 @endpush
