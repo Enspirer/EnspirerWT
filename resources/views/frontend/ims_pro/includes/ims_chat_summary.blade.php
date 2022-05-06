@@ -117,7 +117,13 @@
                                                 </div>
                                             </td>
                                             <td class="data--date data-cell">
-                                                <div class="text">{{\App\Models\Inquiries_Status::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->latest()->first()->assign_user}}</div>
+                                                <div class="channel-block">
+                                                    @if(App\Models\Inquiries_Status::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->latest()->first() == null)
+                                                        <div class="name">Not Assigned</div>
+                                                    @else
+                                                        <div class="name">{{\App\Models\Inquiries_Status::where('project_id',$all_ims_pro_client_message->project_id)->where('phone_number',$all_ims_pro_client_message->phone_number)->latest()->first()->assign_user}}</div>
+                                                    @endif
+                                                </div>
                                             </td>      
                                             <td class="data--status data-cell">
                                                 <div class="status-block">
