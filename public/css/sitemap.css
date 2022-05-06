@@ -17,6 +17,9 @@
   width: 100%;
   height: auto;
 }
+.sitemap-section svg a {
+  text-decoration: none;
+}
 
 @media screen and (max-width: 767px) {
   .sitemap-section {
