@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="209.628" height="392.752" viewBox="0 0 209.628 392.752">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #1b3d6b;
+      }
+
+      .cls-1 {
+        stroke-linecap: round;
+        stroke-dasharray: 8 8;
+      }
+
+      #Path_6497 {
+          stroke-dasharray: 5;
+          stroke-dashoffset: 1000;
+          animation: dash 10s linear infinite;
+      }
+
+      @keyframes dash {
+          to {
+              stroke-dashoffset: 0;
+          }
+      }
+    </style>
+  </defs>
+  <g id="Group_549" data-name="Group 549" transform="translate(-768.301 -2162.27)">
+    <path id="Path_6497" data-name="Path 6497" class="cls-1" d="M-7158.065,15923.862s77.227,26.076,104.307-45.133-34.1-201.594-6.018-272.8,99.292-46.136,99.292-46.136" transform="translate(7927 -13374)"/>
+    <path id="Path_6498" data-name="Path 6498" class="cls-2" d="M-6970.509,15537.717s-1,16.048,12.035,19.057-19.445,2.815-17.689,14.053" transform="translate(12612.469 -10257.498) rotate(19)"/>
+  </g>
+</svg>
