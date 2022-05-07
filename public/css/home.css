@@ -358,7 +358,7 @@
 }
 
 .IMS-section .card-block .card img {
-    width: 60px;
+    width: 55px;
     margin: 0 auto;
 }
 
@@ -372,6 +372,7 @@
 .IMS-section .image-block {
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .IMS-section .image-block .back-img {

@@ -165,10 +165,10 @@
             <div class="image-block">
                 <img src="{{url('images/landing_page/home/ims-section/ims-background.png')}}" class="back-img">
                 <img data-aos-easing="ease" data-aos="fade-right" src="{{url('images/landing_page/home/ims-section/monitor.png')}}" class="main-img size-img">
-                <img data-aos-easing="ease" data-aos="fade-left" data-aos-delay="400" src="{{url('images/landing_page/home/ims-section/dashboard.png')}}" class="dashboard-img size-img">
-                <img data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="800" src="{{url('images/landing_page/home/ims-section/arrow.svg')}}" class="arrow-img size-img">
-                <img data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="1200" src="{{url('images/landing_page/home/ims-section/blue-leaves.svg')}}" class="bLeaves-img size-img">
-                <img data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="1200" src="{{url('images/landing_page/home/ims-section/yellow-leaves.svg')}}" class="yLeaves-img size-img">
+                <img data-aos-easing="ease" data-aos="fade-left" data-aos-delay="300" src="{{url('images/landing_page/home/ims-section/dashboard.png')}}" class="dashboard-img size-img">
+                <img data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="600" src="{{url('images/landing_page/home/ims-section/arrow.svg')}}" class="arrow-img size-img">
+                <img data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="900" src="{{url('images/landing_page/home/ims-section/blue-leaves.svg')}}" class="bLeaves-img size-img">
+                <img data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="900" src="{{url('images/landing_page/home/ims-section/yellow-leaves.svg')}}" class="yLeaves-img size-img">
             </div>
             <div class="button-block">
                 <a href="{{url('tallentor-demo')}}" class="cta-btn-border">
@@ -502,6 +502,12 @@
                             </div>
                             <div class="text">{!! $news_post->description !!}</div>
                         </div>
+                        <div class="button-block">
+                            <a href="{{route('frontend.latest_news')}}" class="cta-btn-border">
+                                <span class="text">View All News</span>
+                                <i class="bi bi-arrow-right-short"></i>
+                            </a>
+                        </div>
                     </div>
                 @endif
 
@@ -516,6 +522,12 @@
                                 <div class="title">{{$promo_post->title}}</div>
                             </div>
                             <div class="text">{!! $promo_post->description !!}</div>
+                        </div>
+                        <div class="button-block">
+                            <a href="{{route('frontend.promotions')}}" class="cta-btn-border">
+                                <span class="text">View Promo</span>
+                                <i class="bi bi-arrow-right-short"></i>
+                            </a>
                         </div>
                     </div>
                 @endif
@@ -532,37 +544,15 @@
                             </div>
                             <div class="text">{!! $blog_post->description !!}</div>
                         </div>
+                        <div class="button-block">
+                            <a href="{{route('frontend.home_blog')}}" class="cta-btn-border">
+                                <span class="text">All Articles</span>
+                                <i class="bi bi-arrow-right-short"></i>
+                            </a>
+                        </div>
                     </div>
                 @endif
-            </div>
-
-            <div class="row">
-                <div class="col-4">
-                    <div class="button-block">
-                        <a href="{{route('frontend.latest_news')}}" class="cta-btn-border">
-                            <span class="text">View All News</span>
-                            <i class="bi bi-arrow-right-short"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="button-block">
-                        <a href="{{route('frontend.promotions')}}" class="cta-btn-border">
-                            <span class="text">View Promo</span>
-                            <i class="bi bi-arrow-right-short"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="button-block">
-                        <a href="{{route('frontend.home_blog')}}" class="cta-btn-border">
-                            <span class="text">All Articles</span>
-                            <i class="bi bi-arrow-right-short"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
+            </div>            
         </div>
     </section>
 
