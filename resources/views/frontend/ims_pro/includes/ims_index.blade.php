@@ -346,12 +346,20 @@
                                                                                         {{--<span class="time">12 days</span>--}}
                                                                                     {{--</div>--}}
                                                                                 </div>
+                                                                                <input type="hidden" name="incoming_mobile_number" id="incoming_mobile_number" value="{{$solo_ims_pro_client_message->phone_number}}">
+                                                                                <input type="hidden" name="incoming_type" id="incoming_type" value="{{$solo_ims_pro_client_message->type}}">
+                                                                                <input type="hidden" name="incoming_project_id" id="incoming_project_id" value="{{$solo_ims_pro_client_message->project_id}}">
+                                                                                <input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="{{$solo_ims_pro_client_message->wideget_id}}">
                                                                             @else
 
                                                                                 <div class="message-block incoming">                                                                             
                                                                                     <div class="label">
                                                                                         <span class="text">{{$solo_ims_pro_client_message->message}}</span>
                                                                                         <!-- <span class="time">12 days</span> -->
+                                                                                        <input type="hidden" name="incoming_mobile_number" id="incoming_mobile_number" value="{{$solo_ims_pro_client_message->phone_number}}">
+                                                                                        <input type="hidden" name="incoming_type" id="incoming_type" value="{{$solo_ims_pro_client_message->type}}">
+                                                                                        <input type="hidden" name="incoming_project_id" id="incoming_project_id" value="{{$solo_ims_pro_client_message->project_id}}">
+                                                                                        <input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="{{$solo_ims_pro_client_message->wideget_id}}">
                                                                                     </div>
                                                                                 </div>
                                                                             @endif

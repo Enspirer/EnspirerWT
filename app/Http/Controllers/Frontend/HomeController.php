@@ -1112,6 +1112,7 @@ class HomeController extends Controller
                 '</div>';
             }
             else{
+                
                 if($new_message->core_type != 'assign'){
                     $content = $content.'<div class="message-block outgoing">'.
                         '<div class="image-block">'.
@@ -1120,6 +1121,10 @@ class HomeController extends Controller
                         '<div class="message">'.
                             '<div class="text">'.$new_message->message.'</div>'.
                         '</div>'.
+                        '<input type="hidden" name="incoming_mobile_number" id="incoming_mobile_number" value="'.$new_message->phone_number.'">'.
+                        '<input type="hidden" name="incoming_type" id="incoming_type" value="'.$new_message->type.'">'.
+                        '<input type="hidden" name="incoming_project_id" id="incoming_project_id" value="'.$new_message->project_id.'">'.
+                        '<input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="'.$new_message->wideget_id.'">'.
                     '</div>';
 
                 }
@@ -1128,6 +1133,10 @@ class HomeController extends Controller
                         '<div class="label">'.
                             '<span class="text">'.$new_message->message.'</span>'.
                         '</div>'.
+                        '<input type="hidden" name="incoming_mobile_number" id="incoming_mobile_number" value="'.$new_message->phone_number.'">'.
+                        '<input type="hidden" name="incoming_type" id="incoming_type" value="'.$new_message->type.'">'.
+                        '<input type="hidden" name="incoming_project_id" id="incoming_project_id" value="'.$new_message->project_id.'">'.
+                        '<input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="'.$new_message->wideget_id.'">'.
                     '</div>';
                 }
 
