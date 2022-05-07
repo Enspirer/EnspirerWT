@@ -956,7 +956,7 @@
 }
 
 .news-section .inner-wrapper .card .content-block {
-    padding: 20px;
+    padding: 20px 20px 0;
 }
 
 .news-section .inner-wrapper .card .content-block .header {
@@ -1060,7 +1060,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-bottom: 30px;
 }
 
 .news-section .button-block a {
