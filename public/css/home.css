@@ -167,6 +167,7 @@
     width: 19%;
     right: 20%;
     top: 20%;
+    display: none;
 }
 
 .hero-section .slide-wrapper .image-block.slide-3 .mobapp-img {

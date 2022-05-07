@@ -72,7 +72,6 @@
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/dashboard.png')}}" class="main-img size-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/imspro.png')}}" class="imslite-img size-img inL">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/heatmap.png')}}" class="heatmap-img size-img inR30">
-                                    <img src="{{url('images/landing_page/home/hero_slides/slide_3/allin1.png')}}" class="allin1-img size-img inR20">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/mobapp.png')}}" class="mobapp-img size-img inR10">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/realtime.png')}}" class="realtime-img size-img inR40">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/record.png')}}" class="record-img size-img inR50">
@@ -601,14 +600,14 @@ window.addEventListener('DOMContentLoaded', function () {
 
                     inL.classList.add("animate__animated", "animate__fadeInLeft")
                     inR10.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-1s")
+                    inR30.classList.add("animate__animated", "animate__fadeIn", "animate__delay-2s")
+                    inR40.classList.add("animate__animated", "animate__fadeIn", "animate__delay-3s")
+                    inR50.classList.add("animate__animated", "animate__fadeIn", "animate__delay-4s")
                     inR20.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-2s")
-                    inR30.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-3s")
-                    inR40.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-4s")
-                    inR50.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-5s")
                 } else {
                     const sizeImg = slide.querySelectorAll(".size-img")
                     sizeImg.forEach(function (img) {
-                        img.classList.remove("animate__animated", "animate__fadeInLeft", "animate__fadeInRight", "animate__delay-1s", "animate__delay-2s", "animate__delay-3s", "animate__delay-4s", "animate__delay-5s")
+                        img.classList.remove("animate__animated", "animate__fadeInLeft", "animate__fadeInRight", "animate__fadeIn", "animate__delay-1s", "animate__delay-2s", "animate__delay-3s", "animate__delay-4s", "animate__delay-5s")
                     })
                 }
             })
