@@ -785,15 +785,15 @@ window.onload = addWidget;
 
 let oldTitle;
 
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
     oldTitle = parent.document.title;
 
     setTimeout(function () {
-        if (oldTitle == '' || oldTitle == 'undefined') {
-            return;
-        } else {
+        if (oldTitle) {
             parent.document.title = "1 New Message";
             titleNotifier();
+        } else {
+            return;
         }
     }, 1000);
 });

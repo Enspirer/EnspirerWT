@@ -453,15 +453,15 @@ window.onload = addWidget;
 
 let oldTitle;
 
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
     oldTitle = parent.document.title;
 
     setTimeout(function () {
-        if (oldTitle == '' || oldTitle == 'undefined') {
-            return;
-        } else {
+        if (oldTitle) {
             parent.document.title = "1 New Message";
             titleNotifier();
+        } else {
+            return;
         }
     }, 1000);
 });
@@ -478,6 +478,7 @@ const stopNotifier = function () {
     clearInterval(titleNotifier);
     parent.document.title = oldTitle;
 }
+
 
 window.addEventListener("load", function () {
     window.addEventListener("scroll", function () {
