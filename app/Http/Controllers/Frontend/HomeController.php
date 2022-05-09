@@ -43,7 +43,7 @@ class HomeController extends Controller
             ->first();
 
 
-    
+
 
 
 
@@ -384,7 +384,7 @@ class HomeController extends Controller
 
 
         $inquiries_status = Inquiries_Status::where('project_id',$widget->project_id)->where('phone_number',$outputString)->first();
-        
+
         if($inquiries_status == null){
 
             $add = new Inquiries_Status;
@@ -394,7 +394,7 @@ class HomeController extends Controller
             $add->status = 'Pending';
             $add->project_id = $widget->project_id;
             $add->widget_id = $request->widget_id;
-    
+
             $add->save();
         }
 
@@ -471,7 +471,7 @@ class HomeController extends Controller
         }else{
             return $visitor_check;
         }
-        
+
     }
 
 
@@ -500,8 +500,8 @@ class HomeController extends Controller
         $project = Projects::where('id',$widget->project_id)->first();
         push_notification('New Message From Tallentor All-In-One Widget', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'far fa-comment-dots', url('user_widget/ims/individual_inbox',$client->id), $project->user_id);
 
-        $incom =  urlencode($request->usermessage);       
-       
+        $incom =  urlencode($request->usermessage);
+
 
     }
 
@@ -545,7 +545,7 @@ class HomeController extends Controller
         $widgetDtails[0]->button_color = $themeArray->button_color;
         $widgetDtails[0]->header_background_color = $themeArray->header_background_color;
         $widgetDtails[0]->button_corner_radius = $themeArray->button_corner_radius;
-        $widgetDtails[0]->custom_css = $themeArray->custom_css;        
+        $widgetDtails[0]->custom_css = $themeArray->custom_css;
         $netype = json_encode($widgetDtails);
 
 
@@ -557,56 +557,56 @@ class HomeController extends Controller
     }
 
     public function api_chat(Request $request)
-    {     
-        // dd($request);   
+    {
+        // dd($request);
 
         $template_layout_details = WhatsappChatWidgetTemplate::where('id',$request->template_layout)->first();
         // dd($template_layout_details);
-      
+
 
         $device_array = [];
 
-        if($request->desktop != null){            
+        if($request->desktop != null){
             array_push($device_array,$request->desktop);
         }
-        if($request->mobile_device != null){            
+        if($request->mobile_device != null){
             array_push($device_array,$request->mobile_device);
         }
 
         $date_time_array = [];
 
-        if($request->monday != null){            
+        if($request->monday != null){
             array_push($date_time_array,$request->monday);
         }
-        if($request->tuesday != null){            
+        if($request->tuesday != null){
             array_push($date_time_array,$request->tuesday);
         }
-        if($request->wednesday != null){            
+        if($request->wednesday != null){
             array_push($date_time_array,$request->wednesday);
         }
-        if($request->thursday != null){            
+        if($request->thursday != null){
             array_push($date_time_array,$request->thursday);
         }
-        if($request->friday != null){            
+        if($request->friday != null){
             array_push($date_time_array,$request->friday);
         }
-        if($request->saturday != null){            
+        if($request->saturday != null){
             array_push($date_time_array,$request->saturday);
         }
-        if($request->sunday != null){            
+        if($request->sunday != null){
             array_push($date_time_array,$request->sunday);
         }
 
         $notify_array = [];
 
-        if($request->bubble_notification_bage != null){            
+        if($request->bubble_notification_bage != null){
             array_push($notify_array,$request->bubble_notification_bage);
         }
-        if($request->show_notification_in_tab_tile != null){            
+        if($request->show_notification_in_tab_tile != null){
             array_push($notify_array,$request->show_notification_in_tab_tile);
         }
-      
-        
+
+
         $template_layout = $request->template_layout;
         $whatsapp_number = $request->whatsapp_number;
         $bubble_icon = $request->bubble_icon;
@@ -671,93 +671,93 @@ class HomeController extends Controller
             'custom_css' => $custom_css,
         ];
 
-        $final_array = [$array];         
-     
+        $final_array = [$array];
+
         $update = new Widgets;
 
         $update->settings = json_encode($final_array);
 
         Widgets::whereId($request->hidden_id)->update($update->toArray());
 
-        // return json_encode($output);                  
+        // return json_encode($output);
 
     }
 
     public function user_api_chat(Request $request)
-    {     
+    {
         // dd($request);
         // dd($request->bubble_icon);
 
         $template_layout_details = WhatsappChatWidgetTemplate::where('id',$request->template_layout)->first();
         // dd($template_layout_details);
-      
+
 
         $device_array = [];
 
-        if($request->desktop != null){            
+        if($request->desktop != null){
             array_push($device_array,$request->desktop);
         }
-        if($request->mobile_device != null){            
+        if($request->mobile_device != null){
             array_push($device_array,$request->mobile_device);
         }
 
         $date_time_array = [];
 
-        if($request->monday != null){            
+        if($request->monday != null){
             array_push($date_time_array,$request->monday);
         }
-        if($request->tuesday != null){            
+        if($request->tuesday != null){
             array_push($date_time_array,$request->tuesday);
         }
-        if($request->wednesday != null){            
+        if($request->wednesday != null){
             array_push($date_time_array,$request->wednesday);
         }
-        if($request->thursday != null){            
+        if($request->thursday != null){
             array_push($date_time_array,$request->thursday);
         }
-        if($request->friday != null){            
+        if($request->friday != null){
             array_push($date_time_array,$request->friday);
         }
-        if($request->saturday != null){            
+        if($request->saturday != null){
             array_push($date_time_array,$request->saturday);
         }
-        if($request->sunday != null){            
+        if($request->sunday != null){
             array_push($date_time_array,$request->sunday);
         }
 
         $notify_array = [];
 
-        if($request->bubble_notification_bage != null){            
+        if($request->bubble_notification_bage != null){
             array_push($notify_array,$request->bubble_notification_bage);
         }
-        if($request->show_notification_in_tab_tile != null){            
+        if($request->show_notification_in_tab_tile != null){
             array_push($notify_array,$request->show_notification_in_tab_tile);
         }
 
-        if($request->bubble_icon == null){            
+        if($request->bubble_icon == null){
             $pre_bubble_icon = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->bubble_icon;
         }else{
             $pre_bubble_icon = $request->bubble_icon;
         }
 
         // dd($pre_bubble_icon);
-      
-        
+
+
         $template_layout = $request->template_layout;
         $whatsapp_number = $request->whatsapp_number;
         $bubble_icon = $pre_bubble_icon;
         $chat_header = $request->chat_header;
         $caption = $request->caption;
         $image = $request->image;
-        $agent_name = $request->agent_name;        
+        $agent_name = $request->agent_name;
         $welcome_message = $request->welcome_message;
-        $btn_text = $request->btn_text;        
+        $btn_text = $request->btn_text;
         $start_chat = $request->start_chat;
         $show_icon = $request->show_icon;
         $position = $request->position;
         $alignment = $request->alignment;
         $where_display_chat = $request->where_display_chat;
-        $specific_time_selector = $request->specific_time_selector;        
+        $specific_time_selector = $request->specific_time_selector;
         $visitors = $request->visitors;
         $start_time = $request->start_time;
         $end_time = $request->end_time;
@@ -783,9 +783,9 @@ class HomeController extends Controller
             'chat_header' => $chat_header,
             'caption' => $caption,
             'image' => $image,
-            'agent_name' => $agent_name,            
+            'agent_name' => $agent_name,
             'welcome_message' => $welcome_message,
-            'btn_text' => $btn_text,            
+            'btn_text' => $btn_text,
             'start_chat' => $start_chat,
             'show_icon' => $show_icon,
             'position' => $position,
@@ -814,72 +814,72 @@ class HomeController extends Controller
             'custom_css' => $custom_css,
         ];
 
-        $final_array = [$array];         
-     
+        $final_array = [$array];
+
         $update = new Widgets;
 
         $update->settings = json_encode($final_array);
 
         Widgets::whereId($request->hidden_id)->update($update->toArray());
 
-        // return json_encode($output);                  
+        // return json_encode($output);
 
     }
 
 
 
     public function user_api_chat_all(Request $request)
-    {     
+    {
         // dd($request);
         // dd($request->get_tawkto_array);
 
         $template_layout_details = WhatsappChatWidgetTemplate::where('id',$request->template_layout)->first();
         // dd($template_layout_details);
-      
+
 
         $device_array = [];
 
-        if($request->desktop != null){            
+        if($request->desktop != null){
             array_push($device_array,$request->desktop);
         }
-        if($request->mobile_device != null){            
+        if($request->mobile_device != null){
             array_push($device_array,$request->mobile_device);
         }
 
         $date_time_array = [];
 
-        if($request->monday != null){            
+        if($request->monday != null){
             array_push($date_time_array,$request->monday);
         }
-        if($request->tuesday != null){            
+        if($request->tuesday != null){
             array_push($date_time_array,$request->tuesday);
         }
-        if($request->wednesday != null){            
+        if($request->wednesday != null){
             array_push($date_time_array,$request->wednesday);
         }
-        if($request->thursday != null){            
+        if($request->thursday != null){
             array_push($date_time_array,$request->thursday);
         }
-        if($request->friday != null){            
+        if($request->friday != null){
             array_push($date_time_array,$request->friday);
         }
-        if($request->saturday != null){            
+        if($request->saturday != null){
             array_push($date_time_array,$request->saturday);
         }
-        if($request->sunday != null){            
+        if($request->sunday != null){
             array_push($date_time_array,$request->sunday);
         }
 
         $notify_array = [];
 
-        if($request->bubble_notification_bage != null){            
+        if($request->bubble_notification_bage != null){
             array_push($notify_array,$request->bubble_notification_bage);
         }
-        if($request->show_notification_in_tab_tile != null){            
+        if($request->show_notification_in_tab_tile != null){
             array_push($notify_array,$request->show_notification_in_tab_tile);
         }
 
-        if($request->bubble_icon == null){            
+        if($request->bubble_icon == null){
             $pre_bubble_icon = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->bubble_icon;
         }else{
             $pre_bubble_icon = $request->bubble_icon;
@@ -887,37 +887,37 @@ class HomeController extends Controller
 
         // dd($pre_bubble_icon);
 
-        if($request->get_whatsapp_array == null){            
+        if($request->get_whatsapp_array == null){
             $db_whatsapp_array = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->whatsapp_details;
         }else{
-            // $db_whatsapp_array = [];        
-            // array_push($db_whatsapp_array,$request->get_whatsapp_array);   
-            $db_whatsapp_array = $request->get_whatsapp_array;     
+            // $db_whatsapp_array = [];
+            // array_push($db_whatsapp_array,$request->get_whatsapp_array);
+            $db_whatsapp_array = $request->get_whatsapp_array;
         }
-        if($request->get_fb_array == null){            
+        if($request->get_fb_array == null){
             $db_fb_array = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->fb_details;
         }else{
-            $db_fb_array = $request->get_fb_array; 
+            $db_fb_array = $request->get_fb_array;
         }
-        if($request->get_telegram_array == null){            
+        if($request->get_telegram_array == null){
             $db_telegram_array = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->telegram_details;
-        }else{ 
-            $db_telegram_array = $request->get_telegram_array; 
+        }else{
+            $db_telegram_array = $request->get_telegram_array;
         }
-        if($request->get_line_array == null){            
+        if($request->get_line_array == null){
             $db_line_array = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->line_details;
         }else{
-            $db_line_array = $request->get_line_array; 
+            $db_line_array = $request->get_line_array;
         }
-        if($request->get_viber_array == null){            
+        if($request->get_viber_array == null){
             $db_viber_array = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->viber_details;
         }else{
-            $db_viber_array = $request->get_viber_array; 
+            $db_viber_array = $request->get_viber_array;
         }
-        if($request->get_tawkto_array == null){            
+        if($request->get_tawkto_array == null){
             $db_tawkto_array = json_decode(Widgets::where('id',$request->hidden_id)->first()->settings)[0]->tawk_details;
         }else{
-            $db_tawkto_array = $request->get_tawkto_array; 
+            $db_tawkto_array = $request->get_tawkto_array;
         }
 
         // dd($db_viber_array);
@@ -983,28 +983,28 @@ class HomeController extends Controller
 
         // dd($tawk_details);
         // dd($whatsapp_details);
-      
-        
+
+
         $template_layout = $request->template_layout;
         $whatsapp_number = $request->whatsapp_number;
         $bubble_icon = $pre_bubble_icon;
-        $default_icon = $request->default_icon;        
+        $default_icon = $request->default_icon;
         $chat_header = $request->chat_header;
         $caption = $request->caption;
         $image = $request->image;
-        $agent_name = $request->agent_name;        
+        $agent_name = $request->agent_name;
         $welcome_message = $request->welcome_message;
-        $btn_text = $request->btn_text;        
+        $btn_text = $request->btn_text;
         $start_chat = $request->start_chat;
         $show_icon = $request->show_icon;
         $position = $request->position;
         $alignment = $request->alignment;
         $where_display_chat = $request->where_display_chat;
-        $specific_time_selector = $request->specific_time_selector;        
+        $specific_time_selector = $request->specific_time_selector;
         $visitors = $request->visitors;
         $start_time = $request->start_time;
         $end_time = $request->end_time;
-        $timezone = $request->timezone;        
+        $timezone = $request->timezone;
         $auto_trigger = $request->auto_trigger;
         $pop_up_opening_time = $request->pop_up_opening_time;
         $message_auto_reply_time = $request->message_auto_reply_time;
@@ -1023,17 +1023,17 @@ class HomeController extends Controller
             'telegram_details' => $telegram_details,
             'line_details' => $line_details,
             'viber_details' => $viber_details,
-            'tawk_details' => $tawk_details,            
+            'tawk_details' => $tawk_details,
             'template_layout' => $template_layout,
             'whatsapp_number' => $whatsapp_number,
-            'default_icon' => $default_icon,   
-            'bubble_icon' => $bubble_icon,         
+            'default_icon' => $default_icon,
+            'bubble_icon' => $bubble_icon,
             'chat_header' => $chat_header,
             'caption' => $caption,
             'image' => $image,
-            'agent_name' => $agent_name,            
+            'agent_name' => $agent_name,
             'welcome_message' => $welcome_message,
-            'btn_text' => $btn_text,            
+            'btn_text' => $btn_text,
             'start_chat' => $start_chat,
             'show_icon' => $show_icon,
             'position' => $position,
@@ -1045,7 +1045,7 @@ class HomeController extends Controller
             'date_time' => $date_time_array,
             'start_time' => $start_time,
             'end_time' => $end_time,
-            'timezone' => $timezone,            
+            'timezone' => $timezone,
             'auto_trigger' => $auto_trigger,
             'pop_up_opening_time' => $pop_up_opening_time,
             'message_auto_reply_time' => $message_auto_reply_time,
@@ -1060,8 +1060,8 @@ class HomeController extends Controller
             'custom_css' => $custom_css,
         ];
 
-        $final_array = [$array];         
-     
+        $final_array = [$array];
+
         $update = new Widgets;
 
         $update->settings = json_encode($final_array);
@@ -1071,12 +1071,12 @@ class HomeController extends Controller
 
     }
 
-    
+
 
     public function ims_chat(Request $request)
-    {     
-        // dd($request); 
-            
+    {
+        // dd($request);
+
         $incoming_mobile_number = $request->incoming_mobile_number;
         $incoming_project_id = $request->incoming_project_id;
         $incoming_widget_id = $request->incoming_widget_id;
@@ -1091,13 +1091,13 @@ class HomeController extends Controller
 
 
         // dd($new_messages);
-        
+
         $content = null;
 
         foreach($new_messages as $new_message){
 
             if($new_message->user_id == null){
-                
+
                 $content = $content.'<div class="message-block incoming">'.
                     '<div class="image-block">'.
                         '<img src="'.url("images/test.png").'" alt="">'.
@@ -1112,7 +1112,7 @@ class HomeController extends Controller
                 '</div>';
             }
             else{
-                
+
                 if($new_message->core_type != 'assign'){
                     $content = $content.'<div class="message-block outgoing">'.
                         '<div class="image-block">'.
@@ -1129,7 +1129,7 @@ class HomeController extends Controller
 
                 }
                 else{
-                    $content = $content.'<div class="message-block incoming">'.                                                                         
+                    $content = $content.'<div class="message-block incoming">'.
                         '<div class="label">'.
                             '<span class="text">'.$new_message->message.'</span>'.
                         '</div>'.
@@ -1140,83 +1140,91 @@ class HomeController extends Controller
                     '</div>';
                 }
 
-            }           
+            }
 
         }
 
         if($incoming_mobile_number != 'phone_number'){
             $update = new ImsProClientMessages;
-            $update->is_read = 'read';    
+            $update->is_read = 'read';
             ImsProClientMessages::where('phone_number',$incoming_mobile_number)->where('project_id',$incoming_project_id)->where('type',$incoming_type)->update($update->toArray());
         }
 
         // dd($content);
 
-        return json_encode($content); 
+        return json_encode($content);
 
     }
 
 
     public function ims_chat_insert(Request $request)
     {
+        $getMsgContent = ImsProClientMessages::where('message_id',$request->message_id)->first();
 
-        $phone_number = $request->phone_number;
-        $name = $request->name;
-        $type = $request->type;
-        $email = $request->email;        
-        $status = $request->status;
-        $is_read = $request->is_read;
-        $project_id = $request->project_id;
-        $widget_id = $request->widget_id;
-        $facebook_user_name = $request->facebook_user_name;
-        $message = $request->message;
-        $user_id = $request->user_id;
-
-
-        $outputString = preg_replace('/[^0-9]/', '', $phone_number);
-
-
-        $add = new ImsProClientMessages;
-
-        $add->phone_number = $outputString;
-
-        $getcontentDetails = get_contact_info($outputString);
-
-        if($getcontentDetails == null){
-            $add->name = $outputString;
-        }else{
-            $add->name = $getcontentDetails;
-        }
-
-        $add->type = $type;
-        $add->email = $email;
-        $add->status = $status;
-        $add->is_read = $is_read;
-        $add->project_id = $project_id;
-        $add->wideget_id = $widget_id;
-        $add->facebook_user_name = $facebook_user_name;
-        $add->message = $message;
-        $add->user_id = $user_id;
-
-        $add->save();
+        if($getMsgContent == null){
+            $phone_number = $request->phone_number;
+            $name = $request->name;
+            $type = $request->type;
+            $email = $request->email;
+            $status = $request->status;
+            $is_read = $request->is_read;
+            $project_id = $request->project_id;
+            $widget_id = $request->widget_id;
+            $facebook_user_name = $request->facebook_user_name;
+            $message = $request->message;
+            $user_id = $request->user_id;
 
 
-        $inquiries_status = Inquiries_Status::where('project_id',$project_id)->where('phone_number',$phone_number)->first();
-        
-        if($inquiries_status == null){
+            $outputString = preg_replace('/[^0-9]/', '', $phone_number);
 
-            $add = new Inquiries_Status;
+
+            $add = new ImsProClientMessages;
 
             $add->phone_number = $outputString;
+
+            $getcontentDetails = get_contact_info($outputString);
+
+            if($getcontentDetails == null){
+                $add->name = $outputString;
+            }else{
+                $add->name = $getcontentDetails;
+            }
+
+            $add->type = $type;
             $add->email = $email;
             $add->status = $status;
+            $add->is_read = $is_read;
             $add->project_id = $project_id;
-            $add->widget_id = $widget_id;
-    
+            $add->wideget_id = $widget_id;
+            $add->facebook_user_name = $facebook_user_name;
+            $add->message = $message;
+            $add->user_id = $user_id;
+            $add->message_id = $request->message_id;
+            $add->notify_name = $request->notify_name;
             $add->save();
+
+
+            $inquiries_status = Inquiries_Status::where('project_id',$project_id)->where('phone_number',$phone_number)->first();
+
+            if($inquiries_status == null){
+
+                $add = new Inquiries_Status;
+
+                $add->phone_number = $outputString;
+                $add->email = $email;
+                $add->status = $status;
+                $add->project_id = $project_id;
+                $add->widget_id = $widget_id;
+
+                $add->save();
+            }
+
+            return 'sucess';
+        }else{
+            return  'message_dublicated';
         }
 
-        return 'sucess';
+
 
     }
 
@@ -1224,80 +1232,88 @@ class HomeController extends Controller
 
     public function ims_chat_user_insert(Request $request)
     {
+        $getMsgContent = ImsProClientMessages::where('message_id',$request->message_id)->first();
 
-        $phone_number = $request->phone_number;
-        $name = $request->name;
-        $type = $request->type;
-        $email = $request->email;        
-        $status = $request->status;
-        $is_read = $request->is_read;
-        $project_id = $request->project_id;
-        $widget_id = $request->widget_id;
-        $facebook_user_name = $request->facebook_user_name;
-        $message = $request->message;
+        if($getMsgContent == null){
+            $phone_number = $request->phone_number;
+            $name = $request->name;
+            $type = $request->type;
+            $email = $request->email;
+            $status = $request->status;
+            $is_read = $request->is_read;
+            $project_id = $request->project_id;
+            $widget_id = $request->widget_id;
+            $facebook_user_name = $request->facebook_user_name;
+            $message = $request->message;
 
-        $project_user_id = Projects::where('id',$request->project_id)->first()->user_id;
-        $user_id = $project_user_id;
+            $project_user_id = Projects::where('id',$request->project_id)->first()->user_id;
+            $user_id = $project_user_id;
 
-        $outputString = preg_replace('/[^0-9]/', '', $phone_number);
-
-
-        $add = new ImsProClientMessages;
-
-        $add->phone_number = $outputString;
-
-        $getcontentDetails = get_contact_info($outputString);
-
-        if($getcontentDetails == null){
-            $add->name = $outputString;
-        }else{
-            $add->name = $getcontentDetails;
-        }
-
-        $add->type = $type;
-        $add->email = $email;
-        $add->status = $status;
-        $add->is_read = $is_read;
-        $add->project_id = $project_id;
-        $add->wideget_id = $widget_id;
-        $add->facebook_user_name = $facebook_user_name;
-        $add->message = $message;
-        $add->user_id = $user_id;
-        $add->user_type = 'admin_user';
-        $add->core_type = 'message';
-
-        $add->save();
+            $outputString = preg_replace('/[^0-9]/', '', $phone_number);
 
 
-        $inquiries_status = Inquiries_Status::where('project_id',$project_id)->where('phone_number',$phone_number)->first();
-        
-        if($inquiries_status == null){
-
-            $add = new Inquiries_Status;
+            $add = new ImsProClientMessages;
 
             $add->phone_number = $outputString;
+
+            $getcontentDetails = get_contact_info($outputString);
+
+            if($getcontentDetails == null){
+                $add->name = $outputString;
+            }else{
+                $add->name = $getcontentDetails;
+            }
+
+            $add->type = $type;
             $add->email = $email;
             $add->status = $status;
+            $add->is_read = $is_read;
             $add->project_id = $project_id;
-            $add->widget_id = $widget_id;
-    
+            $add->wideget_id = $widget_id;
+            $add->facebook_user_name = $facebook_user_name;
+            $add->message = $message;
+            $add->user_id = $user_id;
+            $add->user_type = 'admin_user';
+            $add->core_type = 'message';
+            $add->message_id = $request->message_id;
+            $add->notify_name = $request->notify_name;
             $add->save();
+
+
+            $inquiries_status = Inquiries_Status::where('project_id',$project_id)->where('phone_number',$phone_number)->first();
+
+            if($inquiries_status == null){
+
+                $add = new Inquiries_Status;
+
+                $add->phone_number = $outputString;
+                $add->email = $email;
+                $add->status = $status;
+                $add->project_id = $project_id;
+                $add->widget_id = $widget_id;
+
+                $add->save();
+            }
+
+            return 'sucess';
+        }else{
+            return 'message_duplicated';
         }
 
-        return 'sucess';
+
 
     }
 
     public function default_server_auth_status(Request $request)
-    {     
-                
+    {
+
         $status = $request->status;
-               
+
         Settings::where('key','default_wa_server_auth_status')->update([
             'value' => $status,
             'user_id' => 1
         ]);
-        
+
         return 'sucess';
 
     }
@@ -1322,7 +1338,7 @@ class HomeController extends Controller
 
 
     public function selected_conversation(Request $request)
-    {       
+    {
         // dd($request->input('phone_numbers'));
 
         if ($request->input('phone_numbers')) {
@@ -1335,12 +1351,12 @@ class HomeController extends Controller
             }
         }
     }
-    
 
-    
+
+
 
     public function check_project_available_days(Request $request)
-    {       
+    {
         $projects = Projects::where('status','!=','disabled')->get();
         // return $projects;
 
@@ -1352,15 +1368,15 @@ class HomeController extends Controller
                 $update->status = 'Disabled';
                 Projects::whereId($project->id)->update($update->toArray());
             }
-            
+
         }
 
         // return $projects;
 
-        
-    }
-    
 
-    
+    }
+
+
+
 
 }
