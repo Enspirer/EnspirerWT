@@ -147,7 +147,7 @@
                                                                                                     <div class="status-block">
                                                                                                         @if(get_contact_info($ims_pro_client_message->phone_number))
                                                                                                             @if($ims_pro_client_message->notify_name)
-                                                                                                                <div class="name">{{ get_contact_info($ims_pro_client_message->notify_name) }}</div>
+                                                                                                                <div class="name">{{ $ims_pro_client_message->notify_name }}</div>
                                                                                                             @else
                                                                                                                 <div class="name">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
                                                                                                             @endif
