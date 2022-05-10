@@ -1251,19 +1251,28 @@ class HomeController extends Controller
             $user_id = $project_user_id;
 
             $outputString = preg_replace('/[^0-9]/', '', $phone_number);
-
-
             $add = new ImsProClientMessages;
 
-            $add->phone_number = $outputString;
 
-            $getcontentDetails = get_contact_info($outputString);
+            $getContentphoneNumber = ImsProClientMessages::where('phone_number',$outputString)->first();
 
-            if($getcontentDetails == null){
-                $add->name = $outputString;
+            if($getContentphoneNumber == null){
+                $getcontentDetails = get_contact_info($outputString);
+
+                if($getcontentDetails == null){
+                    $add->name = $outputString;
+                }else{
+                    $add->name = $getcontentDetails;
+                }
+
             }else{
-                $add->name = $getcontentDetails;
+                $add->name = $getContentphoneNumber->name;
             }
+
+
+
+
+
 
             $add->type = $type;
             $add->email = $email;
