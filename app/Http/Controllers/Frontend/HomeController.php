@@ -1201,6 +1201,7 @@ class HomeController extends Controller
             $add->user_id = $user_id;
             $add->message_id = $request->message_id;
             $add->notify_name = $request->notify_name;
+            $add->json_details = $request->json_details;
             $add->save();
 
 
@@ -1277,6 +1278,7 @@ class HomeController extends Controller
             $add->core_type = 'message';
             $add->message_id = $request->message_id;
             $add->notify_name = $request->notify_name;
+            $add->json_details = $request->json_details;
             $add->save();
 
 
