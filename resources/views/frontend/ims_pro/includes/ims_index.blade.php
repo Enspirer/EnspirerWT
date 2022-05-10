@@ -107,7 +107,7 @@
                                                                                                             @if($ims_pro_client_message->notify_name)
                                                                                                                 <div class="name">{{ $ims_pro_client_message->notify_name }}</div>
                                                                                                             @else
-                                                                                                                <div class="name">{{is_wa_group($solo_ims_pro_client->phone_number)}}</div>
+                                                                                                                <div class="name">{{is_wa_group($ims_pro_client_message->phone_number)}}</div>
                                                                                                             @endif
 
                                                                                                             <div class="contact">{{$ims_pro_client_message->type}}</div>
