@@ -11,7 +11,7 @@
                                                             <input type="search" class="form-control" name="search_name" id="search_name" placeholder="Search Chat" required>
                                                         </div>
                                                     </form>
-                                                    
+
                                                     <div class="filter dropdown">
                                                         <a class="filter-dropdown imsPro-dropdown" href="#" role="button" id="filterDrop" data-bs-toggle="dropdown"
                                                             aria-expanded="false">
@@ -62,7 +62,7 @@
                                                     <div class="inner-wrapper">
                                                         <ul class="list-group list-group-flush">
 
-                                                        
+
 
                                                             @if($all_ims_pro_client_messages != null)
                                                             @if(count($all_ims_pro_client_messages) != 0)
@@ -93,14 +93,20 @@
                                                                                                     @endif
                                                                                                 </div>
                                                                                                 <div class="status-block">
-                                                                                                    @if(get_contact_info($ims_pro_client_message->phone_number))
-                                                                                                        <div class="name">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                    @else
-                                                                                                        <div class="name">{{$ims_pro_client_message->phone_number}}</div>
-                                                                                                        <div class="contact">{{$ims_pro_client_message->type}}</div>
-                                                                                                    @endif
+                                                                                                        @if(get_contact_info($ims_pro_client_message->phone_number))
+                                                                                                            @if($ims_pro_client_message->name)
+                                                                                                                <div class="name">{{ get_contact_info($ims_pro_client_message->name) }}</div>
+                                                                                                            @else
+                                                                                                                <div class="name">{{ get_contact_info($ims_pro_client_message->phone_number) }}</div>
+                                                                                                            @endif
+
+                                                                                                            <div class="contact">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                        @else
+                                                                                                            <div class="name">{{$ims_pro_client_message->phone_number}}</div>
+                                                                                                            <div class="contact">{{$ims_pro_client_message->type}}</div>
+                                                                                                        @endif
+
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="active-status">{{$ims_pro_client_message->created_at->diffForHumans(null,true)}}</div>
@@ -255,7 +261,7 @@
                                                                     @else
                                                                         <div class="name">{{is_wa_group($solo_ims_pro_client->phone_number)}}</div>
                                                                         <div class="contact">{{$solo_ims_pro_client->type}}</div>
-                                                                    @endif                                                                
+                                                                    @endif
                                                                 </div>
                                                             </div>
                                                             <div class="option-block">
@@ -352,7 +358,7 @@
                                                                                 <input type="hidden" name="incoming_widget_id" id="incoming_widget_id" value="{{$solo_ims_pro_client_message->wideget_id}}">
                                                                             @else
 
-                                                                                <div class="message-block incoming">                                                                             
+                                                                                <div class="message-block incoming">
                                                                                     <div class="label">
                                                                                         <span class="text">{{$solo_ims_pro_client_message->message}}</span>
                                                                                         <!-- <span class="time">12 days</span> -->
@@ -382,7 +388,7 @@
                                                                     <input type="hidden" name="hidden_user_type" id="hidden_user_type" value="admin_user">
                                                                 @else
                                                                     @if(count($ims_pro_user_details) != 0)
-                                                                        @foreach($ims_pro_user_details as $ims_pro_user_detail)  
+                                                                        @foreach($ims_pro_user_details as $ims_pro_user_detail)
                                                                             <input type="hidden" name="hidden_user_email" id="hidden_user_email" value="{{App\Models\IMSProUsers::where('id',$ims_pro_user_detail->id)->first()->email}}">
                                                                             <input type="hidden" name="hidden_user_id" id="hidden_user_id" value="{{$ims_pro_user_detail->id}}">
                                                                             @if(App\Models\IMSProUsers::where('id',$ims_pro_user_detail->id)->first()->role == 'Admin')
@@ -479,7 +485,7 @@
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
-                                                              
+
                                                             </div>
                                                             <div class="optioin-block">
                                                                 <table class="table table-borderless align-middle">
@@ -507,11 +513,11 @@
                                                                                             @foreach($ims_pro_users as $ims_pro_user)
                                                                                                 <li><a class="dropdown-item" id="{{$ims_pro_user->id}}" href="#"><div class="text">{{$ims_pro_user->name}}</div></a></li>
                                                                                             @endforeach
-                                                                                        @endif                                                                                    
+                                                                                        @endif
                                                                                     </ul>
                                                                                 </div>
                                                                             </td>
-                                                                            
+
                                                                         </tr>
                                                                         <tr>
                                                                             <td class="icons blue-icon"><i class="bi bi-bookmark-fill"></i></td>
@@ -559,4 +565,3 @@
                                         </div>
                                     </div>
                                 </div>
-                                
