@@ -101,7 +101,6 @@
                                                                                                             <div class="name">{{$ims_pro_client_message->phone_number}}</div>
                                                                                                             <div class="contact">{{$ims_pro_client_message->type}}</div>
                                                                                                         @endif
-                                                                                                    @endif
 
                                                                                                 </div>
                                                                                             </div>
