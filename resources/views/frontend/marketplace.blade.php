@@ -1,14 +1,14 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
-
+@section('title', 'Web Designers | eCommerce | PHP developers | Digital Marketing | Tallentor')
+@section('meta_description','Global talent pool of Web Designers, mobile app developers,PHP developers, SEO experts, Digital Marketing consultants, Business analysis, system architects, project managers, graphic designers, wordpress developers who specializes in PHP and .net development, Python, angular, Android & iOS development')
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/categories.css')}}">
 <link rel="stylesheet" href="{{url('css/services.css')}}">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
 @include('frontend.includes.home_nav')
 
 <section class="section-categories active" id="mainCat">
@@ -522,7 +522,7 @@
                                             <img src="{{url('images/landing_page/marketplace/programming/payroll_management.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            Payroll Management 
+                                            Payroll Management
                                         </div>
                                     </a>
                                 </div>
@@ -537,7 +537,7 @@
                                             <img src="{{url('images/landing_page/marketplace/programming/pos.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            POS System 
+                                            POS System
                                         </div>
                                     </a>
                                 </div>
@@ -637,7 +637,7 @@
                                             <img src="{{url('images/landing_page/marketplace/graphic_design/branding.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            Company Branding 
+                                            Company Branding
                                         </div>
                                     </a>
                                 </div>
@@ -932,7 +932,7 @@
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/speechwriting.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            Speechwriting 
+                                            Speechwriting
                                         </div>
                                     </a>
                                 </div>
@@ -962,7 +962,7 @@
                                             <img src="{{url('images/landing_page/marketplace/writing_translation/scriptwriting.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            Scriptwriting 
+                                            Scriptwriting
                                         </div>
                                     </a>
                                 </div>
@@ -1042,7 +1042,7 @@
                                             <img src="{{url('images/landing_page/marketplace/video_photography/video_editing.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            Video Editing 
+                                            Video Editing
                                         </div>
                                     </a>
                                 </div>
@@ -1102,7 +1102,7 @@
                                             <img src="{{url('images/landing_page/marketplace/video_photography/product_photograpy.png')}}" alt="">
                                         </div>
                                         <div class="content-block">
-                                            Product Photography 
+                                            Product Photography
                                         </div>
                                     </a>
                                 </div>
@@ -2883,7 +2883,7 @@
 
 @include('frontend.includes.footer')
 
-    
+
 @endsection
 
 @push('after-scripts')

@@ -1,11 +1,15 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
+@section('title', 'Corporate web application| Mobile app development | Multivendor & E-commerce solutions')
+
+@section('meta_description','Over 10 years of experience in the IT industry with proven track record in corporate web application development and mobile app development. Social media management and search Engine optimisation for small medium and Enterprise level businesses')
+
+
 
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/portfolio.css')}}">
-    
+
 @include('frontend.includes.home_nav')
 
 <section class="hero-section">
@@ -134,6 +138,6 @@
 
 @include('frontend.includes.footer')
 
-    
+
 @endsection
 

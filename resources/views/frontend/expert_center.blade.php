@@ -1,11 +1,12 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
+@section('title', 'Project scope | Business analysis | system design |scope document| system architecture')
+@section('meta_description', 'The project scope documentation is vital for the best productivity of the project. The Expert Team consist of project Manager, Business Analyst, System designer, QA Specialist | system architect ')
 
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/expert_center.css')}}">
-    
+
 @include('frontend.includes.home_nav')
 
 <section class="hero-section">
@@ -14,10 +15,10 @@
             <div class="content-block">
                 <h2 class="title-light">Tallentor</h2>
                 <h2 class="title">Expert Center</h2>
-                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the <span>industry's dummy</span> text ever since the 1500s</p>
+                <p class="text">The efficiency of the project largely depends on precision planning of the scope. Hire the best team of experts to plan your project to achieve maximum results</p>
                 <a href="{{url('/contact')}}" class="cta-btn-border">
                     <span class="text">Contact Expert Center</span>
-                    <i class="bi bi-arrow-right-short"></i> 
+                    <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
             <div class="image-block">
@@ -150,7 +151,7 @@
 
 @include('frontend.includes.footer')
 
-    
+
 @endsection
 
 @push('after-scripts')
