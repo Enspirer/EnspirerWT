@@ -1,11 +1,12 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
+@section('title', 'Whatsapp widget | instagram widget | Viber and Botim Widget | Tallentor')
+@section('meta_description','All in one widget on your website, Whatsapp widget, instagram widget, Viber, Telegram and Botim widget with Inquiry Management system. Improve user engagement with the best widget from Tallentor')
 
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/product.css')}}">
-    
+
 @include('frontend.includes.home_nav')
 
 <div class="products-body">
@@ -14,7 +15,7 @@
 
                 <section class="hero-section">
                     <div class="container">
-                        <ul class="breadcrumb">                                            
+                        <ul class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a class="breadcrumb-link">Products</a>
                             </li>
@@ -150,6 +151,6 @@
 
     @include('frontend.includes.footer')
 
-    
+
 @endsection
 
