@@ -1,9 +1,9 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
-
+@section('title', 'The Best whatsapp widget | Web Optimizer | Chatbot | Tallentor')
+@section('meta_description','Engage real-time users on your website with the best whatsapp widget integrated with inquiry management system. Increase website performance with Optimizer app. Bulk whatsapp messages | Talent pool remote developers')
 @section('content')
-    
+
 @include('frontend.includes.home_nav')
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -202,7 +202,7 @@
                         <button type="button" class="act-btn">
                             <i class="bi bi-code-slash"></i>
                             <div class="text">Add Script</div>
-                        </button>                
+                        </button>
                     </div>
                     <div class="btn-group">
                         <button type="button" class="act-btn delete">
@@ -488,7 +488,7 @@
                 <div class="text">New Product releases, Promotions and articles from Tallentor members club</div>
             </div>
             <div class="inner-wrapper">
-             
+
                 @if($news_post != null)
                     <div class="card">
                         <div class="image-block">
@@ -551,13 +551,13 @@
                         </div>
                     </div>
                 @endif
-            </div>            
+            </div>
         </div>
     </section>
 
     @include('frontend.includes.footer')
 
-    
+
 @endsection
 
 @push('after-scripts')
