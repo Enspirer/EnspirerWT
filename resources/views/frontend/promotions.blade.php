@@ -1,11 +1,13 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
+@section('title', 'Latest promotions from Tallentor | what’s new and product updates | tallento')
+@section('meta_description', 'Optimise web performance with Tallentor Optimizer | real time user engagement with Optimizer mobile app, user heat maps, user session records, Chat invites, Analytic reports, SEO reports
+Whatsapp chat widget to improve user engagement with inquiry management system')
 
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/news.css')}}">
-    
+
 @include('frontend.includes.home_nav')
 
 <section class="splide section-news" id="newsSlider">
@@ -44,7 +46,7 @@
 				</li>
 			@endforeach
 		@endif
-		
+
 		<li class="splide__slide">
 			<div class="feature-block">
 				<div class="allNews-section">
@@ -52,7 +54,7 @@
 					<div class="splide news-slider" role="group" id="allNewsSlider">
 						<div class="splide__track">
 							<ul class="splide__list">
-								@if($all_posts == null || count($all_posts) == 0)								
+								@if($all_posts == null || count($all_posts) == 0)
 									@include('frontend.includes.not_found',[
 										'not_found_title' => 'Data not found',
 										'not_found_description' => null,
@@ -75,8 +77,8 @@
 											</div>
 										</li>
 									@endforeach
-								@endif								
-								
+								@endif
+
 							</ul>
 						</div>
 					</div>
@@ -86,7 +88,7 @@
 	</ul>
   </div>
 </section>
-    
+
 @endsection
 
 @push('after-scripts')

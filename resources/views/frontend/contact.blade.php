@@ -1,9 +1,10 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
+@section('title', 'The Best whatsapp widget | Web Optimizer | Chatbot | Tallentor')
+@section('meta_description', 'Engage real-time users on your website with the best whatsapp widget integrated with inquiry management system. Increase website performance with Optimizer app. Bulk whatsapp messages | Talent pool remote developers')
 
 @section('content')
-    
+
 @include('frontend.includes.home_nav')
 
 <link rel="stylesheet" href="{{url('css/contact_us.css')}}">
@@ -191,7 +192,7 @@
 
     @include('frontend.includes.footer')
 
-    
+
 @endsection
 
 @push('after-scripts')
