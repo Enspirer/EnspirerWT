@@ -9,8 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>@yield('title', app_name())</title>
-        <meta name="description" content="@yield('meta_description', 'Laravel Boilerplate')">
-        <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
+        <meta name="description" content="@yield('meta_description', 'Tallentor ')">
+        <meta name="author" content="@yield('meta_author', 'Tallentor Development Team')">
         <link rel="apple-touch-icon" sizes="180x180" href="{{url('images/logo/fev/apple-touch-icon.png')}}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{url('images/logo/fev/favicon-32x32.png')}}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{url('images/logo/fev/favicon-16x16.png')}}">
@@ -44,6 +44,16 @@
 
         <script data-host="https://tallentor.com" data-dnt="false" src="https://tallentor.com/js/script_tracker.js" id="ZwSg9rf6GA" async defer></script>
 
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PKG2HKG');</script>
+        <!-- End Google Tag Manager -->
+
+
+
         <script>
             (function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -63,7 +73,12 @@
         @stack('after-styles')
     </head>
     <body>
-        @include('includes.partials.read-only')
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKG2HKG"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    @include('includes.partials.read-only')
 
         <div id="app">
             @include('includes.partials.logged-in-as')
@@ -76,10 +91,10 @@
 
         <!-- Scripts -->
         @stack('before-scripts')
-        
+
         @stack('after-scripts')
 
-        
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -102,7 +117,7 @@
                         page      : 'splide__pagination__page custom__pagination__page',
                 },
             }, );
-            
+
             heroSlider.mount();
 
             window.addEventListener('load', function () {
@@ -116,7 +131,7 @@
             })
         </script>
 
-        
+
         <!-- Index Slider -->
 
         <script>
@@ -269,7 +284,7 @@
 		});
 	}
     </script>
-                
+
         @include('includes.partials.ga')
     </body>
 </html>
