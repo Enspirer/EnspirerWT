@@ -37,7 +37,7 @@
                     <div class="number">01</div>
                     <div class="title">Free Consultation</div>
                     <div class="text">Brief consultation to analyze the scale of the project</div>
-                    <a href="#" class="card-btn">Request for 15 min free consolation</a>
+                    <a href="#" class="card-btn">Request for 15 min free consultation</a>
                 </div>
                 <div class="card">
                     <div class="number">03</div>
