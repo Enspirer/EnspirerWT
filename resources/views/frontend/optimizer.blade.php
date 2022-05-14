@@ -1,11 +1,13 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
+@section('title', 'Web Optimizer | Whatsapp chat widget | Heatmaps | Realtime users | Tallentor ')
+@section('meta_description','Optimise web performance with Tallentor Optimizer | real time user engagement with Optimizer mobile app, user heat maps, user session records, Chat invites, Analytic reports, SEO reports
+Whatsapp chat widget to improve user engagement with inquiry management system')
 
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/product.css')}}">
-    
+
 @include('frontend.includes.home_nav')
 
 <div class="products-body">
@@ -14,7 +16,7 @@
 
                 <section class="hero-section">
                     <div class="container">
-                        <ul class="breadcrumb">                                            
+                        <ul class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a class="breadcrumb-link">Products</a>
                             </li>
@@ -163,7 +165,7 @@
 
     @include('frontend.includes.footer')
 
-    
+
 @endsection
 
 @push('after-scripts')
@@ -175,7 +177,7 @@ var optimizerSlide = new Splide( '#optimizerSlide', {
     rewind : true,
     arrows: false,
     pagination: false,
-  } ); 
+  } );
 
 var optimizerThumb = new Splide( '#optimizerThumb', {
     type    : 'loop',
@@ -188,18 +190,18 @@ var optimizerThumb = new Splide( '#optimizerThumb', {
     breakpoints: {
             1199: {
               perPage: 3,
-             
+
             },
             767: {
               perPage: 2,
-          
+
             },
             640: {
               perPage: 1,
-        
+
             },
           },
-  } ); 
+  } );
 
 optimizerSlide.sync( optimizerThumb );
 optimizerSlide.mount();
