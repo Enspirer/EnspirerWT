@@ -147,7 +147,7 @@ Book store website')
                                         </div>
                                         <p class="text">Fully customised web applications with admin control panel for dynamic functions with unique user interfaces.</p>
                                         <div class="pricing">
-                                            <div class="fee">From $700 <span>per month</span></div>
+                                            <div class="fee">From $500 <span></span></div>
                                         </div>
                                         <div class="button-block">
                                             <a href="{{url('tallentor-demo')}}" class="cta-btn-border"><span class="text">Request Demo</span><i
@@ -178,7 +178,7 @@ Book store website')
                                         </div>
                                         <p class="text">Unlimited number of courses and tutor accounts. Student progress management with Certificates. High bandwidth web host for video content </p>
                                         <div class="pricing">
-                                            <div class="fee">From $700 <span>per month</span></div>
+                                            <div class="fee">From $50 <span>per month</span></div>
                                         </div>
                                         <div class="button-block">
                                             <a href="{{url('tallentor-demo')}}" class="cta-btn-border"><span class="text">Request Demo</span><i
