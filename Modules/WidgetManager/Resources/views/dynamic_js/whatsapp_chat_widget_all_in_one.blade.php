@@ -322,7 +322,7 @@ function addWidget() {
         resize: none;
     }
 
-    #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent button, 
+    #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent button,
     #allin1widgetblock #allin1widget .allin1container .allin1footer #allin1startupform .allin1formcontent a {
         padding: 0.25rem 0;
         border-radius: 5px;
@@ -562,10 +562,10 @@ function addWidget() {
                 <div class="allin1tooltip">How can we help?</div>
                     @elseif($widget_meta->scroll_position_appearance == "Bottom")
                         <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;bottom: 1px;margin-bottom: 30px;">
-                        <div class="allin1tooltip">How can we help?</div>    
+                        <div class="allin1tooltip">How can we help?</div>
                         @elseif($widget_meta->scroll_position_appearance == "Left")
                                 <div id="allin1widtoggler" onclick="allin1toggle()" style="background-color: {{ $widget_meta->bubble_background_color}} !important;left: 1px;margin-left: 30px;">
-                                <div class="allin1tooltip">How can we help?</div>  
+                                <div class="allin1tooltip">How can we help?</div>
                                 @elseif($widget_meta->scroll_position_appearance == "Right")
 
 
@@ -585,11 +585,11 @@ function addWidget() {
                                                         <i style="color:{{$widget_meta->bubble_icon_color}};" class="bi bi-{{$widget_meta->bubble_icon}}"></i>
                                                     @endif
                                             </div>
-                                            
+
 
                                     @endif
-                                
-                  
+
+
 
         <div id="allin1widget">
             <div class="allin1container">
@@ -618,10 +618,10 @@ function addWidget() {
                 <div class="allin1footer">
                     <div class="allin1footertitle">{{ $widget_meta->btn_text}}</div>
                     <div class="allin1buttonblock">
-                    
+
                         @if(count($widget_meta->whatsapp_details) != 1)
                             @foreach($widget_meta->whatsapp_details as $key => $whats)
-                                @if($whats == 'whatsapp')  
+                                @if($whats == 'whatsapp')
                                     @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','IMS Pro')->first() != null)
                                             <a target="_blank" href="https://api.whatsapp.com/send?phone={{$widget_meta->whatsapp_number}}" class="allin1btn allin1btn1"><img width="25" src="{{url('images/social_media_icons/whatsapp.png')}}"></a>
                                     @else
@@ -634,7 +634,7 @@ function addWidget() {
 
                         @if(count($widget_meta->fb_details) != 1)
                             @foreach($widget_meta->fb_details as $key => $fb)
-                                @if($fb == 'fb')  
+                                @if($fb == 'fb')
                                     <button onclick="allin1formpopup(2)" class="allin1btn allin1btn2"><img width="25" src="{{url('images/social_media_icons/messenger.png')}}"></button>
                                 @endif
                             @endforeach
@@ -642,7 +642,7 @@ function addWidget() {
 
                         @if(count($widget_meta->telegram_details) != 1)
                             @foreach($widget_meta->telegram_details as $key => $telegram)
-                                @if($telegram == 'telegram')  
+                                @if($telegram == 'telegram')
                                     <button onclick="allin1formpopup(3)" class="allin1btn allin1btn3"><img width="25" src="{{url('images/social_media_icons/telegram.png')}}"></button>
                                 @endif
                             @endforeach
@@ -650,7 +650,7 @@ function addWidget() {
 
                         @if(count($widget_meta->line_details) != 1)
                             @foreach($widget_meta->line_details as $key => $line)
-                                @if($line == 'line')  
+                                @if($line == 'line')
                                     <button onclick="allin1formpopup(4)" class="allin1btn allin1btn4"><img width="25" src="{{url('images/social_media_icons/line.png')}}"></button>
                                 @endif
                             @endforeach
@@ -658,7 +658,7 @@ function addWidget() {
 
                         @if(count($widget_meta->viber_details) != 1)
                             @foreach($widget_meta->viber_details as $key => $viber)
-                                @if($viber == 'viber')  
+                                @if($viber == 'viber')
                                     <button onclick="allin1formpopup(5)" class="allin1btn allin1btn5"><img width="25" src="{{url('images/social_media_icons/viber.png')}}"></button>
                                 @endif
                             @endforeach
@@ -666,12 +666,12 @@ function addWidget() {
 
                         @if(count($widget_meta->tawk_details) != 1)
                             @foreach($widget_meta->tawk_details as $key => $tawk)
-                                @if($tawk == 'tawkto')  
+                                @if($tawk == 'tawkto')
                                     <button onclick="allin1formpopup(6)" class="allin1btn allin1btn6"><img width="25" src="{{url('images/social_media_icons/tawkto.png')}}"></button>
                                 @endif
                             @endforeach
-                        @endif                        
-                        
+                        @endif
+
                     </div>
 
                     <form action="{{route('all_in_one_save_client')}}" method="post" id="allin1startupform">
@@ -785,26 +785,7 @@ window.onload = addWidget;
 
 let oldTitle;
 
-window.addEventListener("DOMContentLoaded", function () {
-    oldTitle = parent.document.title;
 
-    setTimeout(function () {
-        if (oldTitle) {
-            parent.document.title = "1 New Message";
-            titleNotifier();
-        } else {
-            return;
-        }
-    }, 1000);
-});
-
-const titleNotifier = setInterval(function () {
-    if (parent.document.title == '1 New Message') {
-        parent.document.title = oldTitle;
-    } else {
-        parent.document.title = "1 New Message";
-    }
-}, 1000);
 
 const stopNotifier = function () {
     clearInterval(titleNotifier);
@@ -953,11 +934,11 @@ function allin1tawktoiframe() {
     xhttp.open("POST", "{{url('api/tawk_details_store')}}", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("username=" + name.value + "&useremail=" + email.value + "&phone_number=" + tel.value + "&usermessage=" + message.value + "&widget_id=" + widget_id.value);
-   
 
-  
+
+
     document.querySelector('.allin1iframeblock').classList.add("allin1view");
-    
+
 }
 
 function allin1closetawktoiframe() {
@@ -982,7 +963,7 @@ function myTimer() {
           } else {
               return;
           }
-   
+
       } else {
         return;
     }
@@ -990,7 +971,7 @@ function myTimer() {
     xhttp.open("POST", "{{url('api/log_checker')}}", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("widget_id=" + widget_id + "&current_url=" + current_url);
-   
+
    }
 
 
@@ -999,7 +980,7 @@ function printMousePos(event) {
     const Y = event.pageY;
     const current_url = window.location.href;
     const widget_id = '{{$widget_id}}';
-    const project_id = '{{$project_id}}';    
+    const project_id = '{{$project_id}}';
 
     var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
