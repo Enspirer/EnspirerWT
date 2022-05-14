@@ -1,13 +1,15 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
+@section('title', 'Web Optimizer | Whatsapp chat widget | Heatmaps | Realtime users | Tallentor')
+@section('meta_description', 'Optimise web performance with Tallentor Optimizer | real time user engagement with Optimizer mobile app, user heat maps, user session records, Chat invites, Analytic reports, SEO reports
+Whatsapp chat widget to improve user engagement with inquiry management system')
 
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/pricing.css')}}">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
 @include('frontend.includes.home_nav')
 
 <div class="pricing-section my-5">
@@ -104,7 +106,7 @@
                     <div class="text-block">
                         <div class="title">Executive</div>
                     </div>
-                    <div class="pricing-block">                        
+                    <div class="pricing-block">
                         <div class="wrapper">
                             <div class="currency">$</div>
                             <div class="fee">15<span>.00</span></div>

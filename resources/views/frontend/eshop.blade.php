@@ -1,11 +1,14 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
+@section('title', 'Ready to go software solutions| e-commerce | Multi vendor solutions| tallentor')
+@section('meta_description', 'Real Estate portal with Google map integration, ERP solutions, CRM solutions, POS systems
+Car pool mobile app, Digital Business card app, eCommerce solutions, Multi vendor solutions
+Book store website')
 
 @section('content')
 
 <link rel="stylesheet" href="{{url('css/eShop.css')}}">
-    
+
 @include('frontend.includes.home_nav')
 
 <section class="hero-section">
@@ -383,6 +386,6 @@
 
     @include('frontend.includes.footer')
 
-    
+
 @endsection
 
