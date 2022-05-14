@@ -38,7 +38,7 @@
                             <div class="resources">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">Services</li>
-                                    <li class="nav-item"><a href="https://tallentor.com/sitemap" class="nav-link">Sitemap</a></li>
+                                    <li class="nav-item"><a href="https://tallentor.com/sitemap/sitemap.xml" class="nav-link">Sitemap</a></li>
                                     <li class="nav-item"><a href="https://tallentor.com/sitemap" class="nav-link">Navigation Map</a></li>
                                     <li class="nav-item"><a href="https://tallentor.com/services/expert-center" class="nav-link">Expert Centre</a></li>
                                     <li class="nav-item"><a href="https://tallentor.com/pricing" class="nav-link">Pricing</a></li>
