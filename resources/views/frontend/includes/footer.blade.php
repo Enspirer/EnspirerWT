@@ -37,7 +37,7 @@
                             </div>
                             <div class="resources">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item">Services</li>
+                                    <li class="nav-item">Quick Links</li>
                                     <li class="nav-item"><a href="https://tallentor.com/sitemap/sitemap.xml" class="nav-link">Sitemap</a></li>
                                     <li class="nav-item"><a href="https://tallentor.com/sitemap" class="nav-link">Navigation Map</a></li>
                                     <li class="nav-item"><a href="https://tallentor.com/services/expert-center" class="nav-link">Expert Centre</a></li>
@@ -50,7 +50,7 @@
                             </div>
                             <div class="quick-links">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item">Quick Links</li>
+                                    <li class="nav-item">Company</li>
                                     <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
                                     <li class="nav-item"><a href="https://tallentor.com/contact" class="nav-link">Partners</a></li>
                                     <li class="nav-item"><a href="https://tallentor.com/services/portfolio" class="nav-link">Portfolio</a></li>
