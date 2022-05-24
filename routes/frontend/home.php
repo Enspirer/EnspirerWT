@@ -38,7 +38,7 @@ use App\Http\Controllers\Frontend\MediaController;
 use App\Http\Controllers\Frontend\DemoController;
 use App\Http\Controllers\Frontend\HeatmapController;
 use App\Http\Controllers\Frontend\SitemapController;
-
+use App\Http\Controllers\Frontend\PaymentController;
 
 /*
  * Frontend Controllers
@@ -141,6 +141,8 @@ Route::post('conversation/delete', [IMSProController::class, 'conversation_delet
 
 
 
+
+
 /*
  * These frontend controllers require the user to be logged in
  * All route names are prefixed with 'frontend.'
@@ -149,6 +151,10 @@ Route::post('conversation/delete', [IMSProController::class, 'conversation_delet
 Route::group(['middleware' => ['auth', 'password_expires']], function () {
     Route::group(['namespace' => 'User', 'as' => 'user.'], function () {
         // User Dashboard Specific
+        Route::get('p/checkout/{package_id}/{project_id}', [PaymentController::class, 'index'])->name('paypal.index');
+        Route::post('p/checkout/pash', [PaymentController::class, 'postPaymentWithpaypal'])->name('paypal.show');
+        Route::get('p/satus', [PaymentController::class, 'getPaymentStatus'])->name('paypal.status');
+
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('project_dash/delete/{id}', [DashboardController::class, 'project_dash_destroy'])->name('project_dash.destroy');
         Route::get('heatmap', [TestController::class, 'heatmap'])->name('heatmap');
@@ -166,11 +172,11 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('reports/seo_optimize_report/{id}', [ReportsController::class, 'seo_optimize_report'])->name('reports.seo_optimize_report');
         Route::get('reports/security_report/{id}', [ReportsController::class, 'security_report'])->name('reports.security_report');
         Route::get('reports/billing_report/{id}', [ReportsController::class, 'billing_report'])->name('reports.billing_report');
-        
+
         Route::get('billing', [BillingController::class, 'index'])->name('billing');
         Route::get('unpaid_invoices/{id}', [BillingController::class, 'unpaid_invoices'])->name('unpaid_invoices');
         Route::get('paid_invoices/{id}', [BillingController::class, 'paid_invoices'])->name('paid_invoices');
-        
+
         Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
         Route::get('notifications', [NotificationsController::class, 'index'])->name('notifications.index');
         Route::get('user_notifications_status/{id}', [NotificationsController::class, 'user_notifications_status'])->name('user_notifications_status');
@@ -183,13 +189,13 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('project_details/{id}/seo_bots',[SEOController::class, 'seo_bots'])->name('project.seo_bots');
         Route::post('bot_store', [SEOController::class, 'bot_store'])->name('bot_store');
 
-        
+
         Route::get('project_details/{id}/optimizer/security',[SecurityController::class, 'security'])->name('project.security');
         Route::get('unlimited_privacy/{id}', [SecurityController::class, 'unlimited_privacy'])->name('unlimited_privacy');
         Route::post('unlimited_privacy/store', [SecurityController::class, 'unlimited_privacy_store'])->name('unlimited_privacy.store');
         Route::get('email_blacklist_update/{id}', [SecurityController::class, 'email_blacklist_update'])->name('email_blacklist_update');
         Route::get('view_email_blacklist/{id}', [SecurityController::class, 'view_email_blacklist'])->name('view_email_blacklist');
-        
+
 
         // Analytics
         Route::get('project_details/{id}/optimizer/analytics/overview',[AnalyticsController::class, 'analytics'])->name('project.analytics');
@@ -207,7 +213,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('project_details/{id}/optimizer/analytics/technology/browsers',[AnalyticsController::class, 'analyticsBrowsers'])->name('projects.analytics.browsers');
         Route::get('project_details/{id}/optimizer/analytics/technology/screen-resolutions',[AnalyticsController::class, 'analyticsScreenResolutions'])->name('projects.analytics.screen_resolutions');
         Route::get('project_details/{id}/optimizer/analytics/technology/devices',[AnalyticsController::class, 'analyticsDevices'])->name('projects.analytics.devices');
-        
+
         Route::get('project_details/{id}/optimizer/heatmap',[HeatmapController::class, 'heatmap'])->name('projects.heatmap');
 
         Route::get('project_details/{id}/widget',[ChatController::class, 'widget'])->name('project.chat');
@@ -218,7 +224,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         Route::post('user_projects/store', [DashboardController::class, 'user_projects_store'])->name('user_projects.store');
 
-        
+
         Route::post('user_widget/store', [WidgetController::class, 'user_widget_store'])->name('user_widget.store');
         Route::get('user_widget/delete/{id}', [WidgetController::class, 'user_widget_destroy'])->name('user_widget.destroy');
         Route::post('user_optimizer/store', [WidgetController::class, 'user_optimizer_store'])->name('user_optimizer.store');
@@ -229,7 +235,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::post('user_widget_ims_pro_settings/update', [WidgetController::class, 'user_widget_ims_pro_settings_update'])->name('user_widget_ims_pro_settings.update');
 
 
-        
+
 
 
         Route::get('user_widget/ims/{id}', [IMSController::class, 'index'])->name('user_widget.ims');
@@ -250,14 +256,14 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('ims/visitor_statistics/{id}', [VisitorStatisticsController::class, 'index'])->name('ims.visitor_statistics');
 
 
-        
+
 
         Route::post('user_widget_ims_pro_role_management/store', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_store'])->name('user_widget_ims_pro_role_management.store');
         Route::get('user_widget_ims_pro_role_management/getdetails/{id}', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_details'])->name('user_widget_ims_pro_role_management.getdetails');
         Route::get('user_widget_ims_pro_role_management/edit/{id}', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_edit'])->name('user_widget_ims_pro_role_management.edit');
         Route::post('user_widget_ims_pro_role_management/update', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_update'])->name('user_widget_ims_pro_role_management.update');
         Route::get('user_widget_ims_pro_role_management/delete/{id}', [IMSProSettingsController::class, 'user_widget_ims_pro_role_management_destroy'])->name('user_widget_ims_pro_role_management.destroy');
-        
+
 
 
         Route::get('user_widget/analytics/overview/{id}', [AnalyticController::class, 'index'])->name('user_widget.analytics.overview');
@@ -277,7 +283,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('user_widget/analytics/devices/{id}', [AnalyticController::class, 'devices'])->name('user_widget.analytics.devices');
         Route::get('user_widget/analytics/events/{id}', [AnalyticController::class, 'events'])->name('user_widget.analytics.events');
 
-        
+
         Route::get('user_widget/project_settings/{id}', [ProjectController::class, 'project_settings'])->name('project_settings');
         Route::post('user_widget/project_settings/update', [ProjectController::class, 'project_settings_update'])->name('user_widget.project_settings_update');
 

@@ -50,7 +50,7 @@
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" type="button" class="act-btn">
                                                 <i class="bi bi-code-slash"></i>
                                                 <div class="text">Add Script</div>
-                                            </a>                
+                                            </a>
                                         </div>
                                         <div class="btn-group">
                                             <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}" data-bs-toggle="modal" data-bs-target="#deleteFavorite" type="button" class="act-btn delete">
@@ -100,7 +100,7 @@
                                             <button type="button" class="act-btn">
                                                 <i class="bi bi-code-slash"></i>
                                                 <div class="text">Add Script</div>
-                                            </button>                
+                                            </button>
                                         </div>
                                         <div class="btn-group">
                                             <button type="button" class="act-btn delete">
@@ -134,7 +134,7 @@
                         @endif
 
 
-                    
+
 
                         <!-- Modal -->
                         <div class="modal fade widget-explorer" id="createWidgetModal" tabindex="-1"
@@ -315,7 +315,7 @@
                         </div>
                     </div>
                     <div class="button-block">
-                        <a href="#" type="button" class="widget-btn btn-fill">Buy Now</a>
+                        <a href="{{route('frontend.user.paypal.index',[1,$project_id])}}" type="button" class="widget-btn btn-fill">Buy Now</a>
                         @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','All-in-One Chat')->first() == null)
                         <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}

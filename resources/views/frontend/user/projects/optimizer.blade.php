@@ -473,7 +473,7 @@
                         </div>
                     </div>
                     <div class="button-block">
-                        <a href="#" type="button" class="widget-btn btn-fill">Buy Now</a>
+                        <a href="{{route('frontend.user.paypal.index',[3,$project_id])}}" type="button" class="widget-btn btn-fill">Buy Now</a>
                         @if(App\Models\Projects::where('id',$project_id)->where('selected_package','Optimizer')->first() == null)
                             <form action="{{route('frontend.user.user_optimizer.store')}}" method="post" enctype="multipart/form-data">
                                 {{csrf_field()}}

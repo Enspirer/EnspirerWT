@@ -54,7 +54,7 @@
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#get_widget_Modal{{$widgetlist->id}}" type="button" class="act-btn">
                                                 <i class="bi bi-code-slash"></i>
                                                 <div class="text">Add Script</div>
-                                            </a>                
+                                            </a>
                                         </div>
                                         <div class="btn-group">
                                             <a href="{{ route('frontend.user.user_widget.destroy', $widgetlist->id) }}" data-bs-toggle="modal" data-bs-target="#deleteFavorite" type="button" class="act-btn delete">
@@ -73,7 +73,7 @@
                                     <div class="separator">
                                         <i class="bi bi-plus-lg"></i>
                                     </div>
-                                    <div class="widget-block">                                    
+                                    <div class="widget-block">
                                         @if($widgetlist->widget_type == 'IMS Pro')
                                             <div class="title">IMS <span class="pro-cat red">Pro</span></div>
                                         @endif
@@ -107,7 +107,7 @@
                                             <button type="button" class="act-btn">
                                                 <i class="bi bi-code-slash"></i>
                                                 <div class="text">Add Script</div>
-                                            </button>                
+                                            </button>
                                         </div>
                                         <div class="btn-group">
                                             <button type="button" class="act-btn delete">
@@ -141,7 +141,7 @@
                         @endif
 
 
-                        
+
                         @include('frontend.user.projects.dialogs.widget_source')
                     </section>
                 </div>
@@ -186,7 +186,7 @@
                         </div>
                     </div>
                     <div class="button-block">
-                        <a href="#" type="button" class="widget-btn btn-fill">Buy Now</a>
+                        <a href="{{route('frontend.user.paypal.index',[2,$project_id])}}" type="button" class="widget-btn btn-fill">Buy Now</a>
                         @if(App\Models\Widgets::where('project_id',$project_id)->where('widget_type','IMS Pro')->first() ==
                         null)
                         <form action="{{route('frontend.user.user_widget.store')}}" method="post" enctype="multipart/form-data">
