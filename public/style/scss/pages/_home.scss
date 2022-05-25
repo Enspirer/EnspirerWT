@@ -1,0 +1,281 @@
+.greeting-block {
+    .title {
+        font-size: 2rem;
+        font-weight: 400;
+        color: $text-black;
+    }
+
+    .text {
+        font-size: .9rem;
+        font-weight: 300;
+        color: $text-black;
+    }
+}
+
+.home-status-block {
+    background-color: white;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
+    .header {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid $light-gray;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .option-block {
+            flex: 1;
+
+            .inner-wrapper {
+                width: 90%;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2rem;
+
+                .text-block {
+
+                    .name {
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        color: $text-black;
+                        @include text-overflaw(1)
+                    }
+
+                    .url {
+                        font-size: .8rem;
+                        font-weight: 400;
+                        color: $gray;
+                        @include text-overflaw(1)
+                    }
+                }
+
+                .btn-view {
+                    text-decoration: none;
+                    background-color: transparent;
+                    width: 125px;
+                    height: 45px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    border: 1px solid $blue;
+                    border-radius: .5rem;
+
+                    .bi {
+                        font-size: 1rem;
+                        color: $blue;
+                    }
+
+                    .text {
+                        font-size: .9rem;
+                        font-weight: 400;
+                        color: $blue;
+                    }
+                }
+
+                .btn-delete {
+                    text-decoration: none;
+                    background-color: transparent;
+                    width: 125px;
+                    height: 45px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    border: 1px solid $red;
+                    border-radius: .5rem;
+
+                    .bi {
+                        font-size: 1rem;
+                        color: $red;
+                    }
+
+                    .text {
+                        font-size: .9rem;
+                        font-weight: 400;
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+
+    .body {
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: row;
+
+        .status-block {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &:not(:nth-last-child(1)) {
+                border-right: 1px solid $light-gray;
+            }
+
+            .package-block {
+                width: 90%;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1.25rem;
+
+                .image-block {
+                    overflow: hidden;
+                    @include circular(50px, 50px, .5rem);
+
+                    img {
+                        @include circular(100%, 100%, .5rem);
+                    }
+                }
+
+                .text-block {
+                    .subtitle {
+                        font-size: .9rem;
+                        font-weight: 400;
+                        color: $text-black;
+                    }
+
+                    .title {
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        color: $text-black;
+                    }
+                }
+            }
+
+            .info-block {
+                width: 90%;
+                margin: auto;
+                max-width: 350px;
+
+                .header {
+                    padding: 0;
+                    border: none;
+                    justify-content: center;
+                    margin-bottom: 1rem;
+
+                    .title {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: $text-black;
+                    }
+                }
+
+                .body {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 2rem;
+                    padding: 0;
+
+                    .info {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 1rem;
+
+                        &.red {
+
+                            .bi,
+                            .count {
+                                color: $red;
+                            }
+                        }
+
+                        &.blue {
+
+                            .bi,
+                            .count {
+                                color: $blue;
+                            }
+                        }
+
+                        .text,
+                        .bi,
+                        .count {
+                            font-size: .9rem;
+                            font-weight: 400;
+                            color: $gray;
+                        }
+                    }
+                }
+            }
+
+            .package-status {
+                width: 90%;
+                margin: auto;
+
+                .header {
+                    padding: 0;
+                    border: none;
+                    justify-content: center;
+                    margin-bottom: 1rem;
+
+                    .title {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: $text-black;
+                    }
+                }
+
+                .body {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+
+                    .top-labels {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 0.5rem;
+                        line-height: 1;
+
+                        label {
+                            font-size: .8rem;
+                            font-weight: 400;
+                            color: $text-black;
+                        }
+                    }
+
+                    .progress {
+                        height: 5px;
+
+                        .progress-bar {
+                            background-color: $green;
+                            width: 66%;
+                            border-radius: 20px;
+                        }
+                    }
+
+                    .bottom-labels {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: .5rem;
+
+                        label {
+                            font-size: .7rem;
+                            font-weight: 400;
+                            color: $gray;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

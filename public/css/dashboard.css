@@ -1,219 +1,188 @@
 .section-content {
-  background-color: #f4f4f4f5;
-  padding: 2rem 0;
+    background-color: #f4f4f4f5;
+    padding: 2rem 0;
 }
 
 .section-content .section-container {
-  width: 90%;
-  margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .section-content .section-container #sectionHeader .header-block .sub-title {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .section-content .section-container #sectionHeader .header-block .input-group .form-label {
-  font-size: 1.1rem;
-  font-weight: 600;
-  background-color: #fff;
-  width: 250px;
-  text-align: center;
-  height: 60px;
-  border-radius: 0.5rem;
-  white-space: nowrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.75rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #fff;
+    width: 250px;
+    text-align: center;
+    height: 60px;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.75rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
 }
 
 .section-content .section-container #sectionHeader .header-block .input-group .form-control {
-  background-color: #fff !important;
-  border: none;
-  border-radius: 5px !important;
-  padding: 1.1rem 2rem;
+    background-color: #fff !important;
+    border: none;
+    border-radius: 5px !important;
+    padding: 1.1rem 2rem;
 }
 
 .section-content .section-container #sectionHeader .header-block .btn-optimize {
-  line-height: 60px;
-  height: 60px;
-  width: 180px;
-  padding: 0;
-  border-radius: 0.5rem;
-  background-color: #0d6efd;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.1rem;
+    line-height: 60px;
+    height: 60px;
+    width: 180px;
+    padding: 0;
+    border-radius: 0.5rem;
+    background-color: #0d6efd;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .section-content #sectionProperties .property-block {
-  background-color: #fff;
-  border-radius: 1rem;
-  overflow: hidden;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .section-content #sectionProperties .property-block .property-name .pro-name {
-  font-size: 23px;
-  color: #333;
-  display: block;
+    font-size: 23px;
+    color: #333;
+    display: block;
 }
 
 .section-content #sectionProperties .property-block .property-name .pro-url {
-  color: #999;
-  font-size: 17px;
-  display: block;
+    color: #999;
+    font-size: 17px;
+    display: block;
 }
 
 .section-content #sectionProperties .property-block .button-block .btn {
-  border: 1px solid #0d6efd;
-  width: 140px;
-  height: 46px;
-  line-height: 46px;
-  border-radius: 0.5rem;
-  padding: 0;
+    border: 1px solid #0d6efd;
+    width: 140px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 0.5rem;
+    padding: 0;
 }
 
 .section-content #sectionProperties .property-block .button-block .btn .bi {
-  margin-right: .75rem;
+    margin-right: .75rem;
 }
 
 .section-content #sectionProperties .property-block .button-block .form-switch {
-  padding-left: 0;
-  padding-right: 2.5em;
-  white-space: nowrap;
+    padding-left: 0;
+    padding-right: 2.5em;
+    white-space: nowrap;
 }
 
 .section-content #sectionProperties .property-block .button-block .form-switch .form-check-label {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 .section-content #sectionProperties .property-block .button-block .form-switch .form-check-input {
-  float: right;
-  margin-right: -2.5em;
-  margin-left: 0;
+    float: right;
+    margin-right: -2.5em;
+    margin-left: 0;
 }
 
 .section-content #sectionProperties .property-block .info-blocks:not(:last-child) {
-  border-right: 1px solid #ddd;
+    border-right: 1px solid #ddd;
 }
 
 .section-content #sectionProperties .property-block .info-blocks .block-title {
-  display: block;
-  font-size: 17px;
-  text-align: center;
-  white-space: nowrap;
+    display: block;
+    font-size: 17px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .section-content #sectionProperties .property-block .info-blocks .precentage {
-  font-size: 17px;
-  font-weight: 500;
-  color: #0d6efd;
-  white-space: nowrap;
+    font-size: 17px;
+    font-weight: 500;
+    color: #0d6efd;
+    white-space: nowrap;
 }
 
 .section-content #sectionProperties .property-block .seo-block .seo-result {
-  text-align: center;
-  display: block;
-  font-size: 24px;
-  color: #999;
+    text-align: center;
+    display: block;
+    font-size: 24px;
+    color: #999;
 }
 
 .section-content #sectionProperties .property-block .seo-block .progress {
-  height: 0.4rem;
+    height: 0.4rem;
 }
 
 .section-content #sectionProperties .property-block .seo-block .precentage {
-  display: block;
-  text-align: center;
-  margin-bottom: 0.5rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .section-content #sectionProperties .property-block .seo-block .precentage .sign {
-  font-size: .9rem;
-  color: #198754;
+    font-size: .9rem;
+    color: #198754;
 }
 
 .section-content #sectionProperties .property-block .analytics-block .block-content .block-title {
-  text-align: left;
-  display: block;
+    text-align: left;
+    display: block;
 }
 
 .section-content #sectionProperties .property-block .analytics-block .block-content .sub-title {
-  color: #999;
-  font-size: 17px;
-  margin-right: 1rem;
+    color: #999;
+    font-size: 17px;
+    margin-right: 1rem;
 }
 
 .section-content #sectionProperties .property-block .analytics-block .block-content i {
-  margin-right: 1rem;
+    margin-right: 1rem;
 }
 
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info,
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info-prec {
-  color: #999;
-  font-size: 11px;
+    color: #999;
+    font-size: 11px;
 }
 
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info i,
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .issue-info .info-prec i {
-  margin-right: .5rem;
-  font-size: 11px;
+    margin-right: .5rem;
+    font-size: 11px;
 }
 
 .section-content #sectionProperties .property-block .statics-block .issues-blocks .progress {
-  height: 0.4rem;
+    height: 0.4rem;
 }
 
-@media screen and (max-width: 1399px) {
-  .section-content {
-    height: auto;
-  }
-  #sectionProperties .property-block .info-blocks {
-    border-right: none !important;
-  }
-}
-
-@media screen and (max-width: 2199px) {
-  #sectionProperties .button-block .form-check.form-switch {
-    width: 185px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  #sectionHeader .header-block .input-group .form-label {
-    height: 45px !important;
-    width: 220px !important;
-  }
-  #sectionHeader .header-block .btn-optimize {
-    height: 45px !important;
-    line-height: 45px !important;
-    width: 220px !important;
-  }
-  #sectionProperties .property-block .button-block .btn {
-    width: 220px !important;
-    height: 45px !important;
-    line-height: 45px !important;
-  }
-}
 /*# sourceMappingURL=dashboard.css.map */

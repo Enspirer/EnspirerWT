@@ -1,230 +1,251 @@
 .section-project-reports {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 15px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
 }
 
 .section-project-reports .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .section-project-reports .header .title {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .section-project-reports .header .search-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: .625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: .625rem;
 }
 
 .section-project-reports .header .search-block .input-group .form-control {
-  border: none;
-  height: 30px;
-  -webkit-box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+    height: 30px;
+    -webkit-box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .section-project-reports .header .search-block .input-group .input-group-text {
-  border: none;
-  background-color: #A5A5A5;
-  color: #fff;
+    border: none;
+    background-color: #A5A5A5;
+    color: #fff;
 }
 
 .section-project-reports .header .search-block .input-group .input-group-text .bi {
-  color: #fff;
+    color: #fff;
 }
 
 .section-project-reports .header .search-block .report-download {
-  background-color: #A5A5A5;
-  text-decoration: none;
-  color: #fff;
-  width: 40px;
-  height: 30px;
-  border-radius: 0.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    background-color: #A5A5A5;
+    text-decoration: none;
+    color: #fff;
+    width: 40px;
+    height: 30px;
+    border-radius: 0.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .section-project-reports .table tr {
-  vertical-align: middle;
-  border-top: 1px solid rgba(112, 112, 112, 0.5);
+    vertical-align: middle;
+    border-top: 1px solid rgba(112, 112, 112, 0.5);
 }
 
 .section-project-reports .table th {
-  font-size: 1.2rem;
-  font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .section-project-reports .table th:not(:first-child) {
-  text-align: center;
+    text-align: center;
 }
 
 .section-project-reports .table th,
 .section-project-reports .table td {
-  padding: 1rem .5rem;
+    padding: 1rem .5rem;
 }
 
 .section-project-reports .table td .propery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.625rem;
 }
 
 .section-project-reports .table td .propery img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .section-project-reports .table td .propery .name {
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .section-project-reports .table td .seo-result {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: .625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: .625rem;
 }
 
 .section-project-reports .table td .seo-result .progress {
-  -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
-  height: 0.375rem;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    height: 0.375rem;
 }
 
 .section-project-reports .table td .seo-result .precentage {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.5);
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .section-project-reports .table td .analytics-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  gap: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    gap: 1rem;
 }
 
 .section-project-reports .table td .analytics-block .name {
-  color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .section-project-reports .table td .analytics-block .icon-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.625rem;
 }
 
 .section-project-reports .table td .analytics-block .visitors-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.625rem;
 }
 
 .section-project-reports .table td .analytics-block .pageviews-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.625rem;
 }
 
 .section-project-reports .table td .time {
-  color: rgba(0, 0, 0, 0.5);
-  text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .section-project-reports .table td .more-option-btn {
-  color: #000;
-  text-decoration: none;
+    color: #000;
+    text-decoration: none;
 }
 
 .section-project-reports .table td .more-option-btn .bi {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
+
+@media screen and (max-width: 1199px) {
+
+    .section-project-reports .scroll-row {
+        overflow-y: scroll;
+    }
+
+    .section-project-reports .scroll-row .table {
+        min-width: 1000px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .section-project-reports .header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 2rem;
+    }
+}
+
 /*# sourceMappingURL=projects.css.map */

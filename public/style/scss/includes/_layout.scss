@@ -1,0 +1,22 @@
+.dashboard-layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+
+    .dashboard-body {
+        width: calc(100% - 225px);
+        min-height: 100vh;
+        margin-left: auto;
+        background-color: #f4f4f4f5;
+
+        &.mobile {
+            width: calc(100% - 90px);
+        }
+
+        .dashboard-container {
+            width: 90%;
+            margin: 2rem auto 5rem;
+        }
+    }
+}

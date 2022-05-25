@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="{{url('css/projects.css')}}">
    
+@include('frontend.includes.mobile_nav')  
 
     <section id="sectionMainWindow">
         @include('frontend.includes.sidebar')
@@ -56,7 +57,7 @@
                                     'not_found_button_caption' => null
                                 ])
                             @else
-                                <div class="row g-0">
+                                <div class="row g-0 scroll-row">
                                     <table class="table table-borderless">
                                         <thead>
                                             <tr>

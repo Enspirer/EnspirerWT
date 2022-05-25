@@ -871,3 +871,47 @@
     width: 400px;
     margin: 40px auto;
 }
+
+
+@media screen and (max-width: 991px) {
+    .webProperty-block .header {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+
+    .webProperty-block .header .info-block,
+    .webProperty-block .header .sub-block {
+        flex: 0 0 50%;
+    }
+
+    .webProperty-block .header .button-block {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .webProperty-block .body {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+
+    .webProperty-block .body .content-block {
+        flex: 0 0 50%;
+    }
+
+    .webProperty-block .body .content-block:not(:nth-child(1)) {
+        border: none !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .webProperty-block .header .info-block,
+    .webProperty-block .header .sub-block {
+        flex: 1 1 100%;
+    }
+
+    .webProperty-block .body .content-block {
+        flex: 1 1 100%;
+        border: none !important;
+    }
+}

@@ -1,0 +1,369 @@
+.ims-pro-mobile-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1B3D6B;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.ims-pro-mobile-nav .nav-toggler {
+  background-color: transparent;
+  border: none;
+}
+.ims-pro-mobile-nav .nav-toggler .bi {
+  font-size: 24px;
+  color: #fff;
+}
+.ims-pro-mobile-nav .brand {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ims-pro-mobile-nav .profile-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.ims-pro-mobile-nav .profile-block .mob-notification {
+  background-color: transparent;
+  border: none;
+}
+.ims-pro-mobile-nav .profile-block .mob-notification.notify {
+  position: relative;
+}
+.ims-pro-mobile-nav .profile-block .mob-notification.notify::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  right: -2px;
+}
+.ims-pro-mobile-nav .profile-block .mob-notification .bi {
+  font-size: 20px;
+  color: #fff;
+}
+.ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-btn {
+  background-color: transparent;
+  border: none;
+}
+.ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-btn img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-menu {
+  max-width: unset;
+}
+.ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-menu .dropdown-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-menu .dropdown-item .name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  width: 100%;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-menu .dropdown-item .bi {
+  font-size: 16px;
+}
+.ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-menu .dropdown-item .text {
+  font-size: 13px;
+  font-weight: 400;
+}
+.ims-pro-mobile-nav .profile-block .mob-property {
+  background-color: transparent;
+  border: none;
+}
+.ims-pro-mobile-nav .profile-block .mob-property .bi {
+  font-size: 22px;
+  color: #fff;
+}
+
+.nav-toggle-modal .modal-dialog .modal-content {
+  background-color: #1f2851;
+}
+.nav-toggle-modal .modal-dialog .modal-content .brand {
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, 0);
+  font-size: 24px;
+}
+.nav-toggle-modal .modal-dialog .modal-content .bi {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 2rem;
+  color: #fff;
+}
+.nav-toggle-modal .modal-dialog .modal-content .navs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav {
+  text-align: center;
+}
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .nav-link.active .text {
+  color: #fff;
+}
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .nav-link .text {
+  font-size: 32px;
+  color: #91b4bd;
+  font-weight: 300;
+}
+
+.mob-notify-modal .modal-dialog .modal-content {
+  background-color: #fff;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-header .title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #333;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-header .bi {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(0, -50%);
+  font-size: 2rem;
+  color: #333;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-body .empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  width: 225px;
+  text-align: center;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item.visited {
+  opacity: 0.5;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-decoration: none;
+  gap: 2rem;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .bi {
+  font-size: 2rem;
+  color: #333;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .text-block {
+  flex: 1;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .text-block .title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .text-block .text {
+  font-size: 12px;
+  font-weight: 300;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .duration {
+  font-size: 12px;
+  font-weight: 300;
+  color: #777;
+  white-space: nowrap;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.mob-notify-modal .modal-dialog .modal-content .modal-footer .view-more {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+.mob-property-modal .modal-dialog .modal-content {
+  background-color: #fff;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-header .title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #333;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-header .bi {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(0, -50%);
+  font-size: 2rem;
+  color: #333;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .create-project {
+  text-decoration: none;
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  position: relative;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .text::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #777;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translate(0, -50%);
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .text::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #777;
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translate(0, -50%);
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .mob-property-drop-btn {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #0d6efd;
+  height: 65px;
+  width: 295px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .mob-property-drop-menu {
+  padding: 1rem !important;
+  max-width: 300px !important;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+  border-radius: 5px !important;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .mob-property-drop-menu .dropdown-item {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property .text-block {
+  text-align: left;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property .text-block .name {
+  font-size: 13px;
+  font-weight: 400;
+  color: #333;
+  width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property .text-block .url {
+  font-size: 11px;
+  font-weight: 400;
+  color: #777;
+  width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property .bi {
+  font-size: 16px;
+  color: #333;
+}
+
+@media screen and (min-width: 992px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .mobile-nav .brand {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=ims_pro_mobile_nav.css.map */

@@ -6,8 +6,7 @@
 
 <link rel="stylesheet" href="{{url('css/reports.css')}}">
 <link rel="stylesheet" href="{{url('css/projects.css')}}">
-<link rel="stylesheet" href="{{url('css/billing.css')}}">
-   
+<link rel="stylesheet" href="{{url('css/billing.css')}}">  
 
 <section id="sectionMainWindow">
         @include('frontend.includes.sidebar')

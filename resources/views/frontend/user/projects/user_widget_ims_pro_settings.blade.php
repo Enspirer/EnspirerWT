@@ -7,6 +7,8 @@
 
 <link rel="stylesheet" href="{{url('css/project_settings.css')}}">
 
+@include('frontend.includes.mobile_nav')  
+
 <section id="sectionMainWindow">
     @include('frontend.includes.sidebar')
 

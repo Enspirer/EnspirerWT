@@ -1,0 +1,49 @@
+@mixin text-overflaw($lines) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+
+@mixin circular($width, $height, $radius) {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    object-fit: cover;
+    object-position: center;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2rem;
+
+    .br-item {
+        font-size: .9rem;
+        font-weight: 400;
+        color: $gray;
+
+        .br-link {
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 400;
+            color: $gray;
+            display: block;
+            position: relative;
+
+            &::after {
+                content: '>';
+                position: absolute;
+                top: 50%;
+                right: -1.35rem;
+                transform: translate(0, -50%);
+                font-size: 22px;
+                font-weight: 300;
+                line-height: 1;
+            }
+        }
+    }
+}

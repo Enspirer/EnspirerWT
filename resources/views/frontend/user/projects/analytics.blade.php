@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="{{url('css/analytics.css')}}">
 
+@include('frontend.includes.mobile_nav')   
 
 <section id="sectionMainWindow">
     @include('frontend.includes.sidebar')
@@ -75,7 +76,7 @@
                     </div>
 
                     <div class="row g-4 mb-4">
-                        <div class="col-6">                                    
+                        <div class="col-lg-6">                                    
                             <div class="data-chart data-chart-feature">
                                 <div class="inner-wrapper">
                                     <div class="header">
@@ -123,7 +124,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6">
                             <div class="data-chart data-chart-feature">
                                 <div class="inner-wrapper">
                                     <div class="header">
@@ -172,7 +173,7 @@
                         </div>
                     </div>
                     <div class="row g-4 mb-4">
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div class="data-chart data-chart-feature">
                                 <div class="inner-wrapper">
                                     <div class="header">
@@ -225,7 +226,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div class="data-chart data-chart-feature">
                                 <div class="inner-wrapper">
                                     <div class="header">
@@ -280,7 +281,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div class="data-chart data-chart-feature">
                                 <div class="inner-wrapper">
                                     <div class="header">
@@ -337,7 +338,7 @@
                         </div>
                     </div>
                     <div class="row g-0 mb-4">
-                        <div class="col">
+                        <div class="col-12">
                             <div class="data-chart data-chart-feature">
                                 <div class="inner-wrapper">
                                     <div class="header">

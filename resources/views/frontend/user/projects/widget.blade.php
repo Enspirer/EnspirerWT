@@ -4,6 +4,7 @@
 
 @section('content')
 
+@include('frontend.includes.mobile_nav')  
 
 <section id="sectionMainWindow">
     @include('frontend.includes.sidebar')

@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="{{url('css/dashboard_settings.css')}}">
 
 
+@include('frontend.includes.mobile_nav')  
+
 <section id="sectionMainWindow">
     @include('frontend.includes.sidebar')
 
@@ -68,16 +70,16 @@
                                 </div>
                             </div>
                             <div class="row g-0">
-                                <div class="col-9">
+                                <div class="col-xl-9">
                                     <div class="content">
-                                        <div class="row g-0">
-                                            <div class="col-4">
+                                        <div class="row g-md-0 g-5">
+                                            <div class="col-md-4">
                                                 <div class="profile-pic">
                                                     <img src="{{ auth()->user()->picture }}" alt="">
                                                     <i class="bi bi-pencil-fill" onclick="editProf()"></i>
                                                 </div>
                                             </div>
-                                            <div class="col-8">
+                                            <div class="col-md-8">
                                                 <div class="profile-info">
                                                     <i class="bi bi-pencil-fill" onclick="editProf()"></i>
                                                     <div class="info-item">
@@ -126,7 +128,7 @@
                                 </div>
                             </div>
                             <div class="row g-0">
-                                <div class="col-6">
+                                <div class="col-xl-6">
                                     <div class="card p-5" style="border-radius:20px;">
                                         <div class="content">
                                             <div class="row g-0">
@@ -139,11 +141,11 @@
                                             </div>
                                             <form action="{{route('frontend.user.profile_details.update')}}" class="row g-4" method="post" enctype="multipart/form-data" >
                                                 {{csrf_field()}}
-                                                <div class="col-6">
+                                                <div class="col-md-6">
                                                     <label for="firstName" class="form-label">First Name</label>
                                                     <input type="text" class="form-control" name="first_name" value="{{$user->first_name}}" id="firstName" required>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-md-6">
                                                     <label for="lastName" class="form-label">Last Name</label>
                                                     <input type="text" class="form-control" name="last_name" value="{{$user->last_name}}" id="lastName" required>
                                                 </div>
@@ -159,19 +161,19 @@
                                                     <label for="address" class="form-label">Address</label>
                                                     <input type="text" class="form-control" name="address" value="{{$user->address}}" id="address" required>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-md-6">
                                                     <label for="inputCity" class="form-label">City</label>
                                                     <input type="text" class="form-control" name="city" value="{{$user->city}}" id="inputCity" required>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-md-6">
                                                     <label for="inputProvince" class="form-label">Province</label>
                                                     <input type="text" class="form-control" name="province" value="{{$user->province}}" id="inputProvince" required>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-md-6">
                                                     <label for="zipCode" class="form-label">Zip Code</label>
                                                     <input type="text" class="form-control" name="zip_code" value="{{$user->zip_code}}" id="zipCode" required>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-md-6">
                                                     <label for="inputCountry" class="form-label">Country</label>
                                                     <select id="inputCountry" class="form-select" name="country" required>
                                                         <option value="" selected disabled>Select Here...</option>
@@ -442,7 +444,7 @@
                                 </div>
                             </div>
                             <div class="row g-0">
-                                <div class="col-6">
+                                <div class="col-xl-6">
                                     <div class="card p-5" style="border-radius:20px;">
                                         <div class="content">
                                             

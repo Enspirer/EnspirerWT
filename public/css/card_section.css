@@ -1014,3 +1014,73 @@
     margin: 1rem auto;
     display: block;
 }
+
+@media screen and (max-width: 1199px) {
+
+    .subcription-block .inner-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .subcription-block .content-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .subcription-block .content-block .widget-block {
+        border: none !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section-cards .cards {
+        flex-wrap: wrap;
+    }
+
+    .section-cards .cards .card {
+        flex: 0 0 50%;
+    }
+
+    .section-cards .tabs.active {
+        flex-wrap: wrap;
+    }
+
+    .section-cards .tabs .tab {
+        flex: 0 0 50%;
+    }
+
+    .realtime-table .body {
+        overflow-y: scroll;
+    }
+
+    .realtime-table .body .table {
+        min-width: 1000px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .subcription-block .content-block .widget-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subcription-block .content-block .widget-block img {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .section-cards .cards .card .card-link img {
+        width: 75px;
+    }
+
+    .section-cards .tabs .tab {
+        padding: 1rem;
+    }
+
+    .imsPro-section .inner-wrapper .option-block .option {
+        flex: 1 1 100%;
+    }
+}

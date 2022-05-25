@@ -4,9 +4,9 @@
                     <div class="side-nav-toggle">
                         <span class="toggle-btn bi bi-list"></span>
                     </div>
-                    <a href="{{url('dashboard')}}">
-                    <img src="{{url('images/full-logo.png')}}" alt="full-logo" class="full-logo">
-                    <img src="{{url('images/small-logo.png')}}" alt="small-logo" class="small-logo">
+                    <a href="{{url('dashboard')}}" class="brand">
+                        <div class="full-text">Tallentor</div>
+                        <div class="short-text">T</div>
                     </a>
                 </div>
                 <div class="side-navs">
@@ -56,7 +56,7 @@
                     </ul>
                 </div>
                 <div class="side-nav-footer">
-                    <span class="copyright">&copy; Tallentor.2022</span>
+                    <span class="copyright">&copy; Tallentor.{{date('Y')}}</span>
                     <p class="theme">Tallentor - analytics platform for solution of all type of business
                     </p>
                 </div>

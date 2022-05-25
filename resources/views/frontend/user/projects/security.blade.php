@@ -8,6 +8,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <link rel="stylesheet" href="{{url('css/security.css')}}">
 
+@include('frontend.includes.mobile_nav')   
+
     <section id="sectionMainWindow">
         @include('frontend.includes.sidebar')
 

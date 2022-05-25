@@ -202,7 +202,7 @@
                                                 <li>
                                                     <a class="dropdown-item" href="{{url('dashboard')}}">
                                                         <div class="icon-block">
-                                                            <i class="bi bi-speedometer"></i>
+                                                            <i class="bi bi-pc-display"></i>
                                                         </div>
                                                         <div class="text">Dashboard</div>
                                                     </a>

@@ -33,6 +33,7 @@
 
         <link rel="stylesheet" href="{{url('css/jquery-clockpicker.min.css')}}">
         <link rel="stylesheet" href="{{url('css/ims_main.css')}}">
+        <link rel="stylesheet" href="{{url('css/ims_pro_mobile_nav.css')}}">
 
         <!-- Date Range Picker -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>

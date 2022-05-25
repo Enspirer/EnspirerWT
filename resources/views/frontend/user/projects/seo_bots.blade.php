@@ -6,6 +6,8 @@
 
 <link rel="stylesheet" href="{{url('css/seo.css')}}">
 
+@include('frontend.includes.mobile_nav')   
+
     <section id="sectionMainWindow">
         @include('frontend.includes.sidebar')
 

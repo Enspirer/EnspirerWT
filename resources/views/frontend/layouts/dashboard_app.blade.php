@@ -41,6 +41,10 @@
         <link rel="stylesheet" href="{{url('css/dashboard_navbar.css')}}">
         <link rel="stylesheet" href="{{url('css/jquery-clockpicker.min.css')}}">
         <link rel="stylesheet" href="{{url('css/card_section.css')}}">
+        <link rel="stylesheet" href="{{url('css/mobile_nav.css')}}">
+
+        <!-- Test style -->
+        <link rel="stylesheet" href="{{url('style/css/main.css')}}">
 
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')

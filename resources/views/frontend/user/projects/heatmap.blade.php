@@ -12,6 +12,8 @@
 
 <link rel="stylesheet" href="{{url('css/heatmap.css')}}">
 
+@include('frontend.includes.mobile_nav')   
+
     <section id="sectionMainWindow">
         @include('frontend.includes.sidebar')
 

@@ -6,7 +6,8 @@
 
 <link rel="stylesheet" href="{{url('css/reports.css')}}">
 <link rel="stylesheet" href="{{url('css/projects.css')}}">
-   
+
+@include('frontend.includes.mobile_nav')   
 
 <section id="sectionMainWindow">
         @include('frontend.includes.sidebar')
@@ -74,14 +75,14 @@
                     <div class="footer">
                         <form action="{{route('frontend.user.user_projects.store')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
-                            <div class="row">
-                                <div class="col-3">
+                            <div class="row g-4">
+                                <div class="col-xl-3 col-lg-6">
                                     <div class="input-group">
                                         <label class="form-input-label"><i class="bi bi-search"></i></label>
                                         <input type="text" name="name" class="form-control" placeholder="Type your project name" aria-describedby="findReports" required>
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-xl-3 col-lg-6">
                                     <div class="input-group">
                                         <label class="form-input-label"><i class="bi bi-search"></i></label>
                                         <select class="form-control" name="project_type" style="font-size:15px;" id="project_type" name="project_type" required>
@@ -92,20 +93,19 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-xl-3 col-lg-12">
                                     <div class="input-group">
                                         <label class="form-input-label"><i class="bi bi-search"></i></label>
                                         <input type="text" name="url" class="form-control" placeholder="Type your website URL here with https://" aria-describedby="findReports" required>
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-xl-3 col-lg-6">
                                     <div class="input-group">
                                         <button type="submit" class="btn col-12" style="height:4.5rem;" role="button" id="findReports">Show Results</button>                                  
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                            
+                        </form>                            
                     </div>
                 </div>
 
@@ -138,7 +138,7 @@
                                     'not_found_button_caption' => null
                                 ])
                             @else
-                                <div class="row g-0">
+                                <div class="row g-0 scroll-row">
                                     <table class="table table-borderless">
                                         <thead>
                                             <tr>

@@ -4,6 +4,7 @@
 
 @section('content')
    
+    @include('frontend.includes.mobile_nav')
 
     <section id="sectionMainWindow">
         @include('frontend.includes.sidebar')
@@ -59,7 +60,6 @@
                                    <div class="row">
                                        <div class="col-md-6">
                                            <div style="background-image: url('{{url('images/landing_page/home/banner_1.png')}}');height: 400px;background-position: center;background-size: contain;background-repeat: no-repeat;"></div>
-
                                        </div>
                                        <div class="col-md-6">
                                            <div class="content-block no-projects" style="padding-top: 50px;">
@@ -68,7 +68,8 @@
                                             <h5 class="text">Improve user engagement &amp; <br> grow your business fast</h5>
                                             <h5>All-in-One Chat With <span>IMS</span></h5>
                                             <h6 class="blue-text"><span>I</span>nquiry <span>M</span>anagement <span>S</span>ystem</h6>
-                                               <button data-bs-toggle="modal" data-bs-target="#project_modal" class="btn btn-primary" style="font-size: 16px;padding: 10px;margin-top: 30px;">Add your website here </button>                                    </div>
+                                               <button data-bs-toggle="modal" data-bs-target="#project_modal" class="btn btn-primary" style="font-size: 16px;padding: 10px;margin-top: 30px;">Add your website here </button>
+                                            </div>
                                        </div>
                                    </div>
                                </div>
@@ -81,7 +82,7 @@
                                         <div class="property-block mb-5">
                                             <div class="row g-0 p-4 border-bottom">
                                                 <div class="inner-wrapper">
-                                                    <div class="col-4">
+                                                    <div class="col-lg-5 col-12">
                                                         <div class="name-block">
                                                             <div class="property-name">
                                                                 <span class="pro-name">{{$project_detail->name}}</span>
@@ -90,7 +91,7 @@
                                                             <a href="{{route('frontend.user.project.chat',$project_detail->id)}}" type="button" class="btn btn-open"><i class="bi bi-x-diamond-fill"></i>View</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
+                                                    <div class="col-lg-5 col-12">
                                                         <div class="button-block">
                                                             <div class="form-check form-switch">
                                                                 <label class="form-check-label" for="flexSwitchCheckDefault">Email
@@ -123,7 +124,7 @@
                                                 </div>
                                                 <div class="col-xxl-4 my-3 info-blocks analytics-block">
                                                     <div class="block-content">
-                                                        <div class="row g-0 justify-content-evenly align-items-end">
+                                                        <div class="row g-0 justify-content-sm-evenly align-items-end">
                                                             <div class="col-sm-auto col-8 my-sm-0 my-2">
                                                                 <span class="block-title mb-2">Realtime</span>
                                                                 <span class="sub-title">Visitors</span>
@@ -144,12 +145,12 @@
                                                 <div class="col-xxl-4 my-3 info-blocks statics-block">
                                                     @if($project_detail->package_starting_date != null)
                                                     <div class="row">
-                                                        <div class="col-2">
+                                                        <div class="col-xl-2">
                                                             @if($project_detail->package_type == 'Free')                                                            
                                                                 <div class="lbl lbl-start mt-3">Trial</div>
                                                             @endif
                                                         </div>
-                                                        <div class="col-10">
+                                                        <div class="col-xl-10">
                                                             <div class="progress-wrapper">
                                                                 <div class="lbl lbl-start">Start Date</div>
                                                                 <div class="lbl lbl-end">End Date</div>
@@ -328,27 +329,27 @@
     </script>
 
 @if(count($project_details) != 0)
-@foreach($project_details as $project_detail){
+    @foreach($project_details as $project_detail)
 
-    <script>
-        // Progressbar color changer
-        const progressColor = document.querySelectorAll("[progress-color]")
-        const progressWidth = {{get_expire_date($project_detail->id)['remaining_days'] / 30 * 100}}
+        <script>
+            // Progressbar color changer
+            const progressColor = document.querySelectorAll("[progress-color]")
+            const progressWidth = {{get_expire_date($project_detail->id)['remaining_days'] / 30 * 100}}
 
-        window.addEventListener('load', function () {
-            progressColor.forEach(function (progress) {
-                if (progressWidth < 51) {
-                    progress.style.backgroundColor = "#33CC0D";
-                } else if (progressWidth > 51 && progressWidth < 76) {
-                    progress.style.backgroundColor = "#FFAC1B";
-                } else {
-                    progress.style.backgroundColor = "#FF0000";
-                }
+            window.addEventListener('load', function () {
+                progressColor.forEach(function (progress) {
+                    if (progressWidth < 51) {
+                        progress.style.backgroundColor = "#33CC0D";
+                    } else if (progressWidth > 51 && progressWidth < 76) {
+                        progress.style.backgroundColor = "#FFAC1B";
+                    } else {
+                        progress.style.backgroundColor = "#FF0000";
+                    }
+                })
             })
-        })
-    </script>
-    
-@endforeach
+        </script>  
+
+    @endforeach
 @endif
    
 

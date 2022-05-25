@@ -569,3 +569,69 @@
 .graph-section .body .stats .stats-block .info {
     font-size: 22px;
 }
+
+@media screen and (max-width: 1399px) {
+    .graph-section .body .graph {
+        flex: 1 1 100%;
+    }
+
+    .graph-section .body {
+        flex-direction: column;
+    }
+
+    .graph-section .body .stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .analytics-nav .navbar-nav {
+        flex-wrap: wrap;
+    }
+
+    .analytics-nav .navbar-nav .nav-item {
+        border-right: none !important;
+        border-bottom: 1px solid #f4f4f4f5;
+    }
+
+    .analytics-nav .navbar-nav .nav-item:nth-child(1) {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .analytics-nav .navbar-nav .nav-item:nth-last-child(1) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .graph-section .body .graph #analyticsGraph {
+        width: 600px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .graph-section .body .graph #analyticsGraph {
+        width: 500px !important;
+        height: 300px !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .graph-section .body .graph #analyticsGraph {
+        width: 300px !important;
+        height: 200px !important;
+    }
+
+    .graph-section .body .stats {
+        flex-direction: column;
+    }
+}
