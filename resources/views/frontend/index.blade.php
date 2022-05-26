@@ -17,6 +17,15 @@
                         <li class="splide__slide">
                             <div class="slide-wrapper">
                                 <div class="content-block">
+                                </div>
+                                <div class="image-block slide-1">
+                                    <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slide-wrapper">
+                                <div class="content-block">
                                     <div class="inner-wrapper">
                                         <h2 class="title">Widget <span>Lite</span></h2>
                                         <div class="caption">WhatsApp widget <br> All in one widget</div>
@@ -26,7 +35,7 @@
                                         <a href="{{url('/tallentor-demo')}}" class="cta-btn-fill"><span class="text">Request Demo</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                                <div class="image-block slide-1">
+                                <div class="image-block slide-2">
                                     <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_1/desktop.png')}}" class="main-img size-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_1/imslite.png')}}" class="imslite-img size-img inL">
@@ -46,7 +55,7 @@
                                         <a href="{{url('/tallentor-demo')}}" class="cta-btn-fill"><span class="text">Request Demo</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                                <div class="image-block slide-2">
+                                <div class="image-block slide-3">
                                     <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_2/desktop.png')}}" class="main-img size-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_2/imspro.png')}}" class="imslite-img size-img inL">
@@ -67,7 +76,7 @@
                                         <a href="{{url('/tallentor-demo')}}" class="cta-btn-fill"><span class="text">Request Demo</span> <i class="bi bi-arrow-right-short"></i></a>
                                     </div>
                                 </div>
-                                <div class="image-block slide-3">
+                                <div class="image-block slide-4">
                                     <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/dashboard.png')}}" class="main-img size-img">
                                     <img src="{{url('images/landing_page/home/hero_slides/slide_3/imspro.png')}}" class="imslite-img size-img inL">
@@ -577,7 +586,33 @@
     })
 </script>
 
+<!-- Hero Slider -->
 <script>
+const heroSlider = new Splide('#heroSlider', {
+    type: 'fade',
+    autoplay: false,
+    arrows: false,
+    rewind: true,
+    classes: {
+        pagination: 'splide__pagination custom__pagination',
+        page: 'splide__pagination__page custom__pagination__page',
+    },
+}, );
+
+heroSlider.mount();
+
+window.addEventListener('DOMContentLoaded', function () {
+    const slideWrapper = document.getElementById('heroSlider')
+    const indicator1 = slideWrapper.querySelector('li:nth-child(1) .custom__pagination__page')
+    const indicator2 = slideWrapper.querySelector('li:nth-child(2) .custom__pagination__page')
+    const indicator3 = slideWrapper.querySelector('li:nth-child(3) .custom__pagination__page')
+    const indicator4 = slideWrapper.querySelector('li:nth-child(4) .custom__pagination__page')
+    indicator1.textContent = 'Trending';
+    indicator2.textContent = 'Widget Lite';
+    indicator3.textContent = 'Widget Pro';
+    indicator4.textContent = 'Optimizer';
+})
+
 // Slider animation
 window.addEventListener('DOMContentLoaded', function () {
     const heroSlider = document.getElementById("heroSlider")
@@ -598,12 +633,30 @@ window.addEventListener('DOMContentLoaded', function () {
                     const inR40 = slide.querySelector(".inR40")
                     const inR50 = slide.querySelector(".inR50")
 
-                    inL.classList.add("animate__animated", "animate__fadeInLeft")
-                    inR10.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-1s")
-                    inR30.classList.add("animate__animated", "animate__fadeIn", "animate__delay-2s")
-                    inR40.classList.add("animate__animated", "animate__fadeIn", "animate__delay-3s")
-                    inR50.classList.add("animate__animated", "animate__fadeIn", "animate__delay-4s")
-                    inR20.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-2s")
+                    if (inL) {
+                        inL.classList.add("animate__animated", "animate__fadeInLeft")
+                    }
+
+                    if (inR10) {
+                        inR10.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-1s")
+                    }
+
+                    if (inR20) {
+                        inR20.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-2s")
+                    }
+
+                    if (inR30) {
+                        inR30.classList.add("animate__animated", "animate__fadeIn", "animate__delay-2s")
+                    }
+
+                    if (inR40) {
+                        inR40.classList.add("animate__animated", "animate__fadeIn", "animate__delay-3s")
+                    }
+
+                    if (inR50) {
+                        inR50.classList.add("animate__animated", "animate__fadeIn", "animate__delay-4s")
+                    }
+
                 } else {
                     const sizeImg = slide.querySelectorAll(".size-img")
                     sizeImg.forEach(function (img) {
@@ -617,6 +670,30 @@ window.addEventListener('DOMContentLoaded', function () {
         observer.observe(slide, slideConfig)
     })
 })
+
+// Slide 1 background
+window.addEventListener('DOMContentLoaded', function () {
+    const heroSection = document.querySelector(".hero-section.home")
+    const slide1 = document.getElementById("heroSlider-slide01")
+
+    const options = {
+        attributes: true
+    }
+
+    function callback(mutationList, observer) {
+        mutationList.forEach(function (mutation) {
+            if (mutation.target.classList.contains("is-active")) {
+                heroSection.classList.add("uae")
+            } else {
+                heroSection.classList.remove("uae")
+            }
+        })
+    }
+
+    const observer = new MutationObserver(callback)
+    observer.observe(slide1, options)
+})
+
 </script>
 
 <script>

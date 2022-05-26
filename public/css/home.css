@@ -24,6 +24,11 @@
     color: #333;
 }
 
+.hero-section .custom__pagination li:nth-child(1) .custom__pagination__page {
+    color: #fff;
+    background-color: #FF0404;
+}
+
 .hero-section .custom__pagination .custom__pagination__page.is-active::after {
     content: '';
     width: 100%;
@@ -141,7 +146,7 @@
     bottom: 0;
 }
 
-.hero-section .slide-wrapper .image-block.slide-2 .wapp-img {
+.hero-section .slide-wrapper .image-block.slide-3 .wapp-img {
     max-width: 305px;
     width: 30%;
     right: 5%;
@@ -155,14 +160,14 @@
     bottom: 10%;
 }
 
-.hero-section .slide-wrapper .image-block.slide-3 .heatmap-img {
+.hero-section .slide-wrapper .image-block.slide-4 .heatmap-img {
     max-width: 223px;
     width: 22%;
     right: 0;
     top: 0;
 }
 
-.hero-section .slide-wrapper .image-block.slide-3 .allin1-img {
+.hero-section .slide-wrapper .image-block.slide-4 .allin1-img {
     max-width: 196px;
     width: 19%;
     right: 20%;
@@ -170,21 +175,21 @@
     display: none;
 }
 
-.hero-section .slide-wrapper .image-block.slide-3 .mobapp-img {
+.hero-section .slide-wrapper .image-block.slide-4 .mobapp-img {
     max-width: 194px;
     width: 19%;
     right: 20%;
     bottom: 0;
 }
 
-.hero-section .slide-wrapper .image-block.slide-3 .realtime-img {
+.hero-section .slide-wrapper .image-block.slide-4 .realtime-img {
     max-width: 183px;
     width: 17%;
     right: 0%;
     top: 36%;
 }
 
-.hero-section .slide-wrapper .image-block.slide-3 .record-img {
+.hero-section .slide-wrapper .image-block.slide-4 .record-img {
     max-width: 160px;
     width: 16%;
     right: 6%;
@@ -1304,6 +1309,13 @@
 .hero-section.home {
     background: url(../images/landing_page/home/hero-background.svg), url(../images/landing_page/home/hero-background.png);
     background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-section.home.uae {
+    background: url(../images/landing_page/home/hero_slides/slide_1.png);
+    background-position: inherit;
     background-size: cover;
     background-repeat: no-repeat;
 }
