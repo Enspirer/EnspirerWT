@@ -68,13 +68,49 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="{{ route('frontend.user_widget.ims_pro_broadcast', $project_id) }}" class="nav-link {{Request::segment(2)=='ims_pro_broadcast' ? 'active' :null }}">
-                                    <div class="nav-link__block">
-                                        <i class="bi bi-chevron-down ims__hidden"></i>
-                                        <i class="bi bi-person-x"></i>
-                                        <div class="text">Broadcast</div>
+                                <div class="accordion" id="bcAcc">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="bcHead">
+                                            <button class="bc-btn {{Request::segment(2)=='ims_pro_broadcast' ? 'active' :null }} collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcCol" aria-expanded="true" aria-controls="bcCol">
+                                            <div class="nav-link__block">
+                                                <i class="bi bi-person-x"></i>
+                                                <div class="text">Broadcast</div>
+                                                <i class="bi bi-chevron-down"></i>
+                                            </div>
+                                            </button>
+                                        </h2>
+                                        <div id="bcCol" class="accordion-collapse collapse" aria-labelledby="bcHead" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <ul class="navbar-nav">
+                                                    <li class="nav-item">
+                                                        <a href="{{ route('frontend.user_widget.ims_pro_broadcast', $project_id) }}" class="nav-link {{Request::segment(2)=='ims_pro_broadcast' ? 'active' :null }}">
+                                                            <div class="nav-link__block">
+                                                                <i class="bi bi-clock-history"></i>
+                                                                <div class="text">History</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link">
+                                                            <div class="nav-link__block">
+                                                                <i class="bi bi-calendar2-plus"></i>
+                                                                <div class="text">Schedule</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link">
+                                                            <div class="nav-link__block">
+                                                                <i class="bi bi-layout-text-window-reverse"></i>
+                                                                <div class="text">Template</div>                                                              
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
                             </li>
 
                          

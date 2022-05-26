@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #f98404;
+      }
+
+      .cls-1 {
+        opacity: 0.2;
+      }
+    </style>
+  </defs>
+  <g id="Group_631" data-name="Group 631" transform="translate(-935 -802)">
+    <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-1" cx="13" cy="13" r="13" transform="translate(935 802)"/>
+    <g id="Group_616" data-name="Group 616" transform="translate(938.992 805.195)">
+      <path id="Path_9039" data-name="Path 9039" class="cls-2" d="M11.059,8.5A2.559,2.559,0,1,1,8.5,11.059,2.562,2.562,0,0,1,11.059,8.5Zm0,4.119A1.559,1.559,0,1,0,9.5,11.059,1.561,1.561,0,0,0,11.059,12.619Z" transform="translate(-2.051 -1.254)"/>
+      <path id="Path_9040" data-name="Path 9040" class="cls-2" d="M9.008,4.5a7.3,7.3,0,0,1,4.4,1.457,7.427,7.427,0,0,1,2.628,3.7.5.5,0,0,1,0,.3,7.427,7.427,0,0,1-2.628,3.7,7.366,7.366,0,0,1-8.8,0,7.427,7.427,0,0,1-2.629-3.7.5.5,0,0,1,0-.3,7.427,7.427,0,0,1,2.629-3.7A7.3,7.3,0,0,1,9.008,4.5Zm6.024,5.3a6.367,6.367,0,0,0-12.048,0,6.367,6.367,0,0,0,12.048,0Z"/>
+    </g>
+  </g>
+</svg>
