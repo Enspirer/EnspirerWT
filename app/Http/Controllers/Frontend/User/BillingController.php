@@ -50,6 +50,14 @@ class BillingController extends Controller
         ]);
     }
 
+    public function custom_invoice() {   
+        return view('frontend.user.billing.custom_invoice');
+    }
+
+    public function view_custom_invoice() {  
+        return view('frontend.user.billing.view_custom_invoice');
+    }
+
     
 
     public function invoice_pdf($id)

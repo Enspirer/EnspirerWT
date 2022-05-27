@@ -11,20 +11,6 @@ btn.onclick = function () {
     body.classList.toggle("active");
 }
 
-// Side nav active class
-
-const items = sideNav.querySelectorAll('.nav-link');
-
-items.forEach(function (item) {
-    item.addEventListener("click", function () {
-        var val = $('.nav-link').val();
-        items.forEach(function (tab) {
-            tab.classList.remove("active");
-        });
-        item.classList.add("active");
-    });
-});
-
 // Side Nav Media Queries
 
 function windowSize(x) {

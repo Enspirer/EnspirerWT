@@ -15,42 +15,61 @@
                             <a class="nav-link {{Request::segment(1)=='dashboard' ? 'active' :null }}" href="{{route('frontend.user.dashboard')}}">
                                 <i class="bi bi-columns-gap"></i>
                                 <span class="text">Dashboard</span>
-                                <span class="tool-tip">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{Request::segment(1)=='reports' ? 'active' :null }}" href="{{route('frontend.user.reports')}}">
                                 <i class="bi bi-clipboard2-data"></i>
                                 <span class="text">Reports</span>
-                                <span class="tool-tip">Reports</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{Request::segment(1)=='billing' ? 'active' :null }}" href="{{route('frontend.user.billing')}}">
-                                <i class="bi bi-receipt"></i>
-                                <span class="text">Billing</span>
-                                <span class="tool-tip">Billing</span>
-                            </a>
+                            <div class="accordion" id="billingAcc">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="billingHead">
+                                        <button class="nav-link {{Request::segment(1)=='billing' ? 'active' :null }} collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bililngCollapse" aria-expanded="true" aria-controls="bililngCollapse">
+                                            <i class="bi bi-receipt"></i>
+                                            <span class="text">Billing</span>
+                                            <span class="alerts">05</span>
+                                        </button>
+                                    </h2>
+                                    <div id="bililngCollapse" class="accordion-collapse collapse" aria-labelledby="billingHead" data-bs-parent="#billingAcc">
+                                        <div class="accordion-body">
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                    <a href="{{route('frontend.user.billing')}}" class="nav-link {{Request::segment(1)=='billing' ? 'active' :null }}">
+                                                        <i class="bi bi-clipboard2-check"></i>
+                                                        <span class="text">Project Invoice</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="{{route('frontend.user.custom_invoice')}}" class="nav-link">
+                                                        <i class="bi bi-file-earmark-plus"></i>
+                                                        <span class="text">Custom Invoice</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{Request::segment(1)=='projects' ? 'active' :null }}" href="{{route('frontend.user.project.index')}}">
                                 <i class="bi bi-layers"></i>
                                 <span class="text">Projects</span>
-                                <span class="tool-tip">Projects</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="bi bi-tools"></i>
                                 <span class="text">Tools</span>
-                                <span class="tool-tip">Tools</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{Request::segment(1)=='settings' ? 'active' :null }}" href="{{route('frontend.user.settings.index')}}">
                                 <i class="bi bi-gear"></i>
                                 <span class="text">Settings</span>
-                                <span class="tool-tip">Settings</span>
                             </a>
                         </li>
                     </ul>

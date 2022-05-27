@@ -872,6 +872,518 @@
     margin: 40px auto;
 }
 
+/* Custom Invoice */
+
+.custom-invoice .header {
+    margin-bottom: 3rem;
+}
+
+.custom-invoice .header .title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.custom-invoice .header .subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #333;
+}
+
+.custom-invoice .table-block {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.custom-invoice .table-block .controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.custom-invoice .table-block .controls button {
+    background-color: transparent;
+    border: none;
+    color: #777;
+    font-weight: 300;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.custom-invoice .table-block .controls button .bi {
+    font-size: 16px;
+}
+
+.custom-invoice .table-block .inner-wrapper .invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-invoice .table-block .inner-wrapper .invoice-table th {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding: .5rem;
+}
+
+.custom-invoice .table-block .inner-wrapper .invoice-table td {
+    border-bottom: 1px solid #ddd;
+    padding: .5rem;
+}
+
+.custom-invoice .table-block .inner-wrapper .invoice-table td .text {
+    font-size: 13px;
+    font-weight: 300;
+    color: #999;
+}
+
+.custom-invoice .table-block .inner-wrapper .invoice-table td .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 13px;
+    font-weight: 300;
+    color: #999;
+}
+
+.custom-invoice .table-block .inner-wrapper .invoice-table td .status .bi {
+    font-size: 1rem;
+    color: #FEA419;
+}
+
+.custom-invoice .table-block .inner-wrapper .invoice-table td .view {
+    text-decoration: none;
+    color: #017FFA;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.custom-invoice .table-block .inner-wrapper .invoice-table td .btn-pay {
+    text-decoration: none;
+    color: #fff;
+    background-color: #FF1313;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+}
+
+.payment-modal .modal-content {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.payment-modal .modal-content .inner-wrapper {
+    background-color: #F4F8FF;
+    padding: 2rem;
+}
+
+.payment-modal .modal-content .inner-wrapper .header {
+    margin-bottom: 2rem;
+}
+
+.payment-modal .modal-content .inner-wrapper .header .title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.payment-modal .modal-content .inner-wrapper .body .label {
+    font-size: 13px;
+    font-weight: 300;
+    color: #333;
+}
+
+.payment-modal .modal-content .inner-wrapper .body .text {
+    font-size: 11px;
+    font-weight: 300;
+    color: #777;
+}
+
+.payment-modal .modal-content .inner-wrapper .body .form-control {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    height: 45px;
+    background-color: #EFF3FE;
+}
+
+.payment-modal .modal-content .inner-wrapper .body .footer-text {
+    font-size: 12px;
+    font-weight: 300;
+    color: #333;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.payment-card {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.payment-card .header {
+    margin: 0 !important;
+    border-bottom: 1px solid #E9F1FF;
+    padding: 1rem;
+}
+
+.payment-card .header .title {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    color: #333;
+    text-align: center;
+}
+
+.payment-card .sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #E9F1FF;
+}
+
+.payment-card .sub .text {
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    color: #333 !important;
+}
+
+.payment-card .body {
+    padding: 1rem 0;
+    border-bottom: 1px solid #E9F1FF;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.payment-card .body .payment-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-card .body .payment-row .text {
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    color: #333 !important;
+}
+
+.payment-card .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.payment-card .footer .text {
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    color: #333 !important;
+}
+
+.payment-card .footer .text-light {
+    font-size: 11px !important;
+    font-weight: 300 !important;
+    color: #333 !important;
+}
+
+.payment-card .checkout-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2053CD;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+.payment-card .checkout-btn .bi {
+    font-size: 16px;
+}
+
+.pay-sucess-modal .modal-content {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pay-sucess-modal .modal-content .inner-wrapper {
+    background-color: #F4F8FF;
+    padding: 2rem;
+    text-align: center;
+}
+
+.pay-sucess-modal .modal-content .inner-wrapper img {
+    width: 80px;
+    margin-bottom: 2rem;
+}
+
+.pay-sucess-modal .modal-content .inner-wrapper .title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.pay-sucess-modal .modal-content .inner-wrapper .text {
+    font-size: 13px;
+    font-weight: 300;
+    color: #333;
+    width: 80%;
+    margin: 0 auto 2rem;
+}
+
+.pay-sucess-modal .modal-content .inner-wrapper .pay-sucess-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2053CD;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+.pay-cancel-modal .modal-content {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pay-cancel-modal .modal-content .inner-wrapper {
+    background-color: #F4F8FF;
+    padding: 2rem;
+    text-align: center;
+}
+
+.pay-cancel-modal .modal-content .inner-wrapper img {
+    width: 80px;
+    margin-bottom: 2rem;
+}
+
+.pay-cancel-modal .modal-content .inner-wrapper .title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.pay-cancel-modal .modal-content .inner-wrapper .text {
+    font-size: 13px;
+    font-weight: 300;
+    color: #333;
+    width: 80%;
+    margin: 0 auto 2rem;
+}
+
+.pay-cancel-modal .modal-content .inner-wrapper .pay-cancel-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #FFAC1B;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+/* View invoice */
+
+.view-invoice .invoice {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.view-invoice .invoice .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.view-invoice .invoice .header img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.view-invoice .invoice .header .text-block .name {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.view-invoice .invoice .header .text-block .url {
+    font-size: 12px;
+    font-weight: 300;
+    color: #777;
+}
+
+.view-invoice .invoice .info-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background: url(../images/dashboard/main/invoice-info-back.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+}
+
+.view-invoice .invoice .info-block .info {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.view-invoice .invoice .info-block .info.text-right {
+    text-align: right;
+}
+
+.view-invoice .invoice .info-block .info li {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.view-invoice .invoice .info-block .info li.strong {
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.view-invoice .invoice .invoice-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #142775;
+    margin-bottom: 1rem;
+}
+
+.view-invoice .invoice .package-block {
+    margin-bottom: 2rem;
+}
+
+.view-invoice .invoice .package-block .package-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.view-invoice .invoice .package-block .package-table th {
+    padding: .5rem;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.view-invoice .invoice .package-block .package-table td {
+    padding: 1.5rem .5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.view-invoice .invoice .package-block .package-table td .text {
+    font-size: 13px;
+    font-weight: 300;
+    color: #777;
+}
+
+.view-invoice .invoice .invoice-description {
+    font-size: 12px;
+    font-weight: 300;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.view-invoice .get-invoice {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.view-invoice .get-invoice .header {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #E9F1FF;
+}
+
+.view-invoice .get-invoice .text {
+    font-size: 12px;
+    font-weight: 300;
+    color: #777;
+    margin: 2rem 0;
+}
+
+.view-invoice .get-invoice .btn-download {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    color: #2A48EE;
+    text-decoration: none;
+    width: 300px;
+    margin: auto;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.view-invoice .get-invoice .btn-download .bi {
+    font-size: 1.5rem;
+}
 
 @media screen and (max-width: 991px) {
     .webProperty-block .header {
