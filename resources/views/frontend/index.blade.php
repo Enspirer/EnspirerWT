@@ -694,10 +694,10 @@ window.addEventListener('DOMContentLoaded', function () {
     function callback(mutationList, observer) {
         mutationList.forEach(function (mutation) {
             if (mutation.target.classList.contains("is-active")) {
-                heroSection.classList.add("uae")
+                heroSection.classList.remove("svg-back")
                 pageNav.classList.add("uae")
             } else {
-                heroSection.classList.remove("uae")
+                heroSection.classList.add("svg-back")
                 pageNav.classList.remove("uae")
             }
         })

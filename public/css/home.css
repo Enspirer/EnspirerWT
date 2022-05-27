@@ -1304,14 +1304,14 @@
 
 /* Slider new updates */
 
-.hero-section.home {
+.hero-section.home.svg-back {
     background: url(../images/landing_page/home/hero-background.svg), url(../images/landing_page/home/hero-background.png);
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.hero-section.home.uae {
+.hero-section.home {
     background: url(../images/landing_page/home/hero_slides/slide_1.png);
     background-position: center;
     background-size: cover;
