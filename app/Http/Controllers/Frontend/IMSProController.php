@@ -387,6 +387,24 @@ class IMSProController extends Controller
         ]);
     }
 
+    public function ims_pro_broadcast_template($id) {
+        $project = Projects::where('id',$id)->first();  
+        
+        return view('frontend.ims_pro.ims_pro_broadcast_template',[
+            'project_id' => $project->id,
+            'project' => $project          
+        ]);
+    }
+
+    public function ims_pro_broadcast_schedule($id) {
+        $project = Projects::where('id',$id)->first();  
+
+        return view('frontend.ims_pro.ims_pro_broadcast_schedule',[
+            'project_id' => $project->id,
+            'project' => $project          
+        ]);
+    }
+
     public function ims_pro_contacts_store(Request $request)
     {        
         // dd($request);               

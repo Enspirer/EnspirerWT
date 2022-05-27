@@ -262,8 +262,8 @@
                                                 <div class="text">Completed</div>
                                             </td>
                                             <td>
-                                                <i class="bi bi-bar-chart"></i>
-                                                <i class="bi bi-eye"></i>
+                                                <button class="action-btn btn-chart"><i class="bi bi-bar-chart"></i></button>
+                                                <button class="action-btn btn-seen"><i class="bi bi-eye"></i></button>                                           
                                             </td>
                                         </tbody>
                                     </table>
@@ -405,5 +405,25 @@
 
 
 @push('after-scripts')
+
+<script>
+const brNavigation = window.addEventListener('DOMContentLoaded', function () {
+    const brModal = document.getElementById("newBrModal")
+    const btnNext = brModal.querySelector(".btn-next")
+    const btnBack = brModal.querySelector(".btn-back")
+    const section1 = brModal.querySelector(".section-1")
+    const section2 = brModal.querySelector(".section-2")
+
+    btnNext.addEventListener('click', function(){
+        section1.style.display = "none";
+        section2.style.display = "block";
+    })
+
+    btnBack.addEventListener('click', function(){
+        section1.style.display = "block";
+        section2.style.display = "none";
+    })
+})
+</script>
 
 @endpush

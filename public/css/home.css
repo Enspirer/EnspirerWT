@@ -1343,21 +1343,4 @@
     color: #8A8A8A;
 }
 
-/* Navbar */
-
-.navigation-bar.transparent {
-    background-color: transparent;
-}
-
-.navigation-bar.transparent .inner-wrapper .navbar-nav .nav-item .nav-link,
-.navigation-bar.transparent .inner-wrapper .navbar-nav .nav-item .nav-link.active,
-.navigation-bar.transparent .inner-wrapper .navbar-nav .nav-item .nav-link:hover {
-    color: #fff;
-}
-
-.navigation-bar.transparent .inner-wrapper .navbar-nav .nav-item .nav-link.active {
-    border-bottom: 2px solid #fff;
-    border-radius: 0;
-}
-
 /*# sourceMappingURL=home.css.map */

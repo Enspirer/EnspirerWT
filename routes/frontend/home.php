@@ -130,7 +130,9 @@ Route::get('user_widget/ims_pro_index/{id}/{phone_number}/{type}', [IMSProContro
 Route::get('user_widget/ims_pro_chat_summary/{id}', [IMSProController::class, 'ims_pro_chat_summary'])->name('user_widget.ims_pro_chat_summary');
 Route::get('user_widget/ims_pro_my_inquiry/{id}', [IMSProController::class, 'ims_pro_my_inquiry'])->name('user_widget.ims_pro_my_inquiry');
 Route::get('user_widget/ims_pro_contacts/{id}', [IMSProController::class, 'ims_pro_contacts'])->name('user_widget.ims_pro_contacts');
-Route::get('user_widget/ims_pro_broadcast/{id}', [IMSProController::class, 'ims_pro_broadcast'])->name('user_widget.ims_pro_broadcast');
+Route::get('user_widget/ims_pro_broadcast/{id}/history', [IMSProController::class, 'ims_pro_broadcast'])->name('user_widget.ims_pro_broadcast');
+Route::get('user_widget/ims_pro_broadcast/{id}/template', [IMSProController::class, 'ims_pro_broadcast_template'])->name('user_widget.ims_pro_broadcast_template');
+Route::get('user_widget/ims_pro_broadcast/{id}/schedule', [IMSProController::class, 'ims_pro_broadcast_schedule'])->name('user_widget.ims_pro_broadcast_schedule');
 
 Route::post('user_widget/ims_pro_contacts_store', [IMSProController::class, 'ims_pro_contacts_store'])->name('user_widget.ims_pro_contacts_store');
 Route::post('user_widget/ims_pro_contacts_update', [IMSProController::class, 'ims_pro_contacts_update'])->name('user_widget.ims_pro_contacts_update');
@@ -138,9 +140,6 @@ Route::get('user_widget/ims_pro_contacts_delete/{id}', [IMSProController::class,
 
 
 Route::post('conversation/delete', [IMSProController::class, 'conversation_delete'])->name('conversation.delete');
-
-
-
 
 
 /*

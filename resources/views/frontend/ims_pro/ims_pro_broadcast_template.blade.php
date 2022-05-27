@@ -53,158 +53,22 @@
                                 </div>
                             </div> -->
 
-                            <div class="history-header">
-                                <div class="row g-4">
-                                    <div class="col-lg-8">
-                                        <div class="welcome-block">
-                                            <div class="content-block">
-                                                <div class="title">Welcome Back, User</div>
-                                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dolorum nam at minus architecto recusandae iure reprehenderit quas accusantium fugiat.</div>
-                                                <a href="#" class="cta-btn" data-bs-toggle="modal" data-bs-target="#newBrModal">New Broadcast</a>
-                                            </div>
-                                            <div class="image-block">
-                                                <img src="{{url('images/ims-pro/broadcast/welcome.png')}}" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="msg-summery">
-                                            <div class="text">Overall Bulk Message</div>
-                                            <div class="count">468</div>
-                                            <div class="title">Total SMS Sent </div>
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col my-4">
+                                    <a href="#" class="new-template-btn" data-bs-toggle="modal" data-bs-target="#newTemp">New Template</a>
                                 </div>
                             </div>
 
-                            <div class="broadcast-title">Data range filter</div>
-
-                            <div class="history-filter-section">
-                                <div class="row g-5">
-                                    <div class="col-lg-8">
-                                        <div class="data-filter">
-                                            <div class="row g-4">
-                                                <div class="col-lg-4">
-                                                    <div class="label">Date picker from</div>
-                                                    <input type="date" class="form-control" name="date_from">
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <div class="label">Date picker to</div>
-                                                    <input type="date" class="form-control" name="date_to">
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <div class="label">Period</div>
-                                                    <select class="form-select">
-                                                        <option selected disbled>Choose...</option>
-                                                        <option>Yesterday</option>
-                                                        <option>Last Week</option>
-                                                        <option>Last 7 Days</option>
-                                                        <option>Last Month</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 align-self-center">
-                                        <div class="button-block">
-                                            <a href="#" class="cta-btn" data-bs-toggle="modal" data-bs-target="#newBrModal">New Broadcast</a>
-                                            <i class="bi bi-exclamation-circle"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="broadcast-title">Overview</div>
-
-                            <div class="history-overview-block">
-                                <div class="overviw-block">
-                                    <div class="text">Overall Bulk Message</div>
-                                    <div class="count">468</div>
-                                    <div class="title">Total SMS Sent</div>
-                                </div>
-                                <div class="info-blocks">
-                                    <div class="info-block green">
-                                        <img src="{{url('images/ims-pro/broadcast/sent.svg')}}" alt="">
-                                        <div class="count">200</div>
-                                        <div class="text">Sent Message</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-block blue">
-                                        <img src="{{url('images/ims-pro/broadcast/delivered.svg')}}" alt="">
-                                        <div class="count">200</div>
-                                        <div class="text">Delivered Message</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-block orange">
-                                        <img src="{{url('images/ims-pro/broadcast/read.svg')}}" alt="">
-                                        <div class="count">200</div>
-                                        <div class="text">Read Message</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-block pink">
-                                        <img src="{{url('images/ims-pro/broadcast/replied.svg')}}" alt="">
-                                        <div class="count">200</div>
-                                        <div class="text">Replied</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-block gray">
-                                        <img src="{{url('images/ims-pro/broadcast/sending.svg')}}" alt="">
-                                        <div class="count">200</div>
-                                        <div class="text">Sending</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-block red">
-                                        <img src="{{url('images/ims-pro/broadcast/failed.svg')}}" alt="">
-                                        <div class="count">200</div>
-                                        <div class="text">Failed</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-block green">
-                                        <img src="{{url('images/ims-pro/broadcast/processing.svg')}}" alt="">
-                                        <div class="count">200</div>
-                                        <div class="text">Processing</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-block dark-blue">
-                                        <img src="{{url('images/ims-pro/broadcast/queued.svg')}}" alt="">
-                                        <div class="count">200</div>
-                                        <div class="text">Queued</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="broadcast-title">Broadcast list</div>
+                            <div class="broadcast-title">Template list</div>
 
                             <div class="broadcast-list-section">
                                 <div class="header">
                                     <div class="filter-block">
                                         <select class="form-select">
-                                            <option selected disbled>Choose...</option>
-                                            <option>Everyone</option>
-                                        </select>
-                                        <select class="form-select">
-                                            <option selected disbled>Choose...</option>
-                                            <option>Yesterday</option>
-                                            <option>Last Week</option>
-                                            <option>Last 7 Days</option>
-                                            <option>Last Month</option>
+                                            <option selected disbled>Sort By</option>
+                                            <option>Date</option>
+                                            <option>Name</option>
+                                            <option>name</option>
                                         </select>
                                     </div>
                                     <div class="filter-block">
@@ -212,22 +76,16 @@
                                             <input type="text" class="form-control" name="search" placeholder="Search">
                                             <i class="bi bi-search"></i>
                                         </div>
-                                        <button type="button" class="filter-btn">
-                                            <i class="bi bi-funnel"></i>
-                                        </button>
                                     </div>
                                 </div>
                                 <div class="body">
                                     <table class="broadcast-list-table">
                                         <thead>
                                             <th>Broadcast Name</th>
-                                            <th>Scheduled</th>
-                                            <th>Successful</th>
-                                            <th>Read</th>
-                                            <th>Replied</th>
-                                            <th>Recipients</th>
-                                            <th>Failed</th>
+                                            <th>Category</th>
                                             <th>Status</th>
+                                            <th>Language</th>
+                                            <th>Last Updated</th>
                                             <th>Actions</th>
                                         </thead>
                                         <tbody>
@@ -235,35 +93,21 @@
                                                 <div class="text">Untitled_240254</div>
                                             </td>
                                             <td>
-                                                <div class="text">2022-05-24  05:42 PM</div>
+                                                <div class="text">Account Update</div>
                                             </td>
                                             <td>
-                                                <div class="progress green">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
+                                                <div class="status"><i class="bi bi-check-circle-fill"></i>Approved</div>
                                             </td>
                                             <td>
-                                                <div class="progress orange">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
+                                                <div class="text">English</div>
                                             </td>
                                             <td>
-                                                <div class="progress pink">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
+                                                <div class="text">01-05-2022</div>
                                             </td>
                                             <td>
-                                                <div class="text">1 Contacts</div>
-                                            </td>
-                                            <td>
-                                                <div class="text">1 Contacts</div>
-                                            </td>
-                                            <td>
-                                                <div class="text">Completed</div>
-                                            </td>
-                                            <td>
-                                                <i class="bi bi-bar-chart"></i>
-                                                <i class="bi bi-eye"></i>
+                                                <button class="action-btn btn-copy"><i class="bi bi-files"></i></button>
+                                                <button class="action-btn btn-seen"><i class="bi bi-eye"></i></button>
+                                                <button class="action-btn btn-delete"><i class="bi bi-trash"></i></button>                                               
                                             </td>
                                         </tbody>
                                     </table>
@@ -278,102 +122,92 @@
 </section>
 
 <!-- New Broadcast Modal -->
-<div class="modal fade new-br-modal" id="newBrModal" tabindex="-1" aria-labelledby="newBrModalLabel" aria-hidden="true">
+<div class="modal fade new-br-modal" id="newTemp" tabindex="-1" aria-labelledby="newTempLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
         <div class="inner-wrapper">
             <div class="content-block">
                 <div class="wrapper">
                     <div class="header">
-                        <div class="title">New Broadcast</div>
+                        <div class="title">Create template message</div>
                     </div>
                     <div class="body">
-                        <div class="form-section section-1">
+                        <div class="form-section">
                             <div class="row g-3">
-                                <div class="col-10">
-                                    <label class="form-label">Broadcast Name</label>
-                                    <input type="text" class="form-control" name="broadcast_name" placeholder="name_451254786210">
+                                <div class="col-lg-6">
+                                    <label class="form-label">Template Name</label>
+                                    <input type="text" class="form-control" name="temp_name" placeholder="Template Name">
                                 </div>
-                                <div class="col-2 align-self-end" style="height: 30px;">
-                                    <i class="bi bi-question-circle"></i>
-                                </div>
-                                <div class="col-10">
-                                    <label class="form-label">Select Template Message</label>
-                                    <select class="form-select" name="broadcast_template">
-                                        <option selected disabled>Template Message</option>
-                                        <option>Template 1</option>
-                                        <option>Template 2</option>
-                                        <option>Template 3</option>
+                                <div class="col-lg-6">
+                                    <label class="form-label">Category</label>
+                                    <select class="form-select" name="temp_category">
+                                        <option selected disabled>Alert Update</option>
+                                        <option>Marketing</option>
+                                        <option>Business</option>
+                                        <option>Promotion</option>
                                     </select>
                                 </div>
-                                <div class="col-2 align-self-end" style="height: 30px;">
-                                    <i class="bi bi-question-circle"></i>
+                                <div class="col-lg-6">
+                                    <label class="form-label">Language</label>
+                                    <select class="form-select" name="temp_lang">
+                                        <option selected disabled>English</option>
+                                        <option>Spanish</option>
+                                        <option>Hindi</option>
+                                        <option>Sinhala</option>
+                                    </select>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label">Schedule Start Date</label>
+                                    <label class="form-label">Header <span class="light-text">(Optional)</span></label>
+                                    <div class="light-text">Add a title or choose which type of media you'll use for this header. Your title can't include more than one variable.</div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <label class="form-label">Date Picker From</label>
-                                    <input type="date" class="form-control" name="start_date">
-                                </div>
-                                <div class="col-lg-6">
-                                    <label class="form-label">Date Picker To</label>
-                                    <input type="date" class="form-control" name="end_date">
-                                </div>
-                                <div class="col-4">
-                                    <button type="button" class="btn-next">Next</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-section section-2">
-                            <div class="row g-3">
-                                <div class="col-lg-9">
-                                    <label class="form-label">Add Contact</label>
-                                    <input type="text" class="form-control" name="broadcast_Contacts" placeholder="Kasun Siripala">
-                                </div>
-                                <div class="col-3 align-self-end">
-                                    <button type="button" class="cta-btn">Add</button>
-                                </div>
-                                <div class="col-lg-6 mt-5">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="select_all"> 
-                                        <label class="form-check-label">
-                                            Select All
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mt-5">
-                                    <label class="form-check-label">
-                                        2 Contacts Selected
-                                    </label>
+                                    <select class="form-select" name="temp_header">
+                                        <option selected disabled>Text</option>
+                                        <option>Option</option>
+                                        <option>Option</option>
+                                        <option>Option</option>
+                                    </select>
                                 </div>
                                 <div class="col-12">
-                                    <div class="selected-contacts-block">
-                                        <div class="contact-block">
-                                            <div class="name">Kasun Lakmal</div>
-                                            <button type="button" class="remove-contact">
-                                                <i class="bi bi-x"></i>
-                                            </button>
-                                        </div>
-                                        <div class="contact-block">
-                                            <div class="name">Supun Dilshan</div>
-                                            <button type="button" class="remove-contact">
-                                                <i class="bi bi-x"></i>
-                                            </button>
-                                        </div>
-                                        <div class="contact-block">
-                                            <div class="name">Avishka Supun</div>
-                                            <button type="button" class="remove-contact">
-                                                <i class="bi bi-x"></i>
-                                            </button>
-                                        </div>
-                                    </div>
+                                    <input type="text" class="form-control" name="temp_type_header" placeholder="Type your header">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Body</label>
+                                    <div class="light-text">To add a custom variable, please add a variable in double curly brackets without a space. Example: </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="char-count">12/1024</div>
+                                    <textarea class="form-control" name="temp_body" style="height: 100px;" rows="3" placeholder="Text"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Footer <span class="light-text">(Optional)</span></label>
+                                    <div class="light-text">Add a short line of text to the bottom of your message template.</div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="char-count">01/60</div>
+                                    <input type="text" class="form-control" name="temp_footer" placeholder="Text">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Buttons <span class="light-text">(Optional)</span></label>
+                                    <div class="light-text">Create buttons that let customers respond to your message or take action.</div>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select" name="temp_buttons">
+                                        <option selected disabled>Quick Reply</option>
+                                        <option>Option</option>
+                                        <option>Option</option>
+                                        <option>Option</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <div class="char-count">01/20</div>
+                                    <input type="text" class="form-control" name="temp_button_text" placeholder="Text">
                                 </div>
                                 <div class="col-4">
-                                    <button type="button" class="btn-back">Back</button>
+                                    <button type="button" class="btn-save">Save as Draft</button>
                                 </div>
                                 <div class="col-4">
-                                    <button type="submit" class="btn-add">Add Broadcast</button>
+                                    <button type="button" class="btn-submit">Save and Submit</button>
                                 </div>
                             </div>
                         </div>

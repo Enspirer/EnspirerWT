@@ -2663,6 +2663,21 @@
     color: #333;
 }
 
+.broadcast-list-section .body .broadcast-list-table tbody td .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.broadcast-list-section .body .broadcast-list-table tbody td .status .bi {
+    color: #00B090;
+    font-size: 1rem;
+}
+
 .broadcast-list-section .body .broadcast-list-table tbody td .progress {
     height: 3px;
     width: 125px;
@@ -2680,10 +2695,15 @@
     background-color: #CB1BA3;
 }
 
-.broadcast-list-section .body .broadcast-list-table tbody td .bi {
+.broadcast-list-section .body .broadcast-list-table tbody td .action-btn {
+    background-color: transparent;
+    border: none;
+    padding: .25rem;
+}
+
+.broadcast-list-section .body .broadcast-list-table tbody td .action-btn .bi {
     font-size: 1rem;
     color: #333;
-    margin: .25rem;
 }
 
 .new-br-modal .modal-dialog .modal-content {
@@ -2720,17 +2740,36 @@
 }
 
 .new-br-modal .modal-dialog .modal-content .inner-wrapper .content-block .wrapper .body {
-    max-height: 450px;
+    height: 450px;
     overflow-y: scroll;
     overflow-x: clip;
     margin-bottom: 2rem;
     padding: 1rem;
 }
 
+.form-section.section-2 {
+    display: none;
+}
+
 .new-br-modal .modal-dialog .modal-content .inner-wrapper .content-block .wrapper .body .form-section .form-label {
     font-size: .8rem;
     font-weight: 300;
     color: #333;
+}
+
+.new-br-modal .modal-dialog .modal-content .inner-wrapper .content-block .wrapper .body .form-section .light-text {
+    font-size: 11px;
+    font-weight: 300;
+    color: #777;
+}
+
+.new-br-modal .modal-dialog .modal-content .inner-wrapper .content-block .wrapper .body .form-section .char-count {
+    font-size: 11px;
+    font-weight: 300;
+    color: #777;
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
 }
 
 .new-br-modal .modal-dialog .modal-content .inner-wrapper .content-block .wrapper .body .form-section .form-control,
@@ -2846,10 +2885,45 @@
     color: #fff;
 }
 
+.new-br-modal .modal-dialog .modal-content .inner-wrapper .content-block .wrapper .body .form-section .btn-save {
+    width: 100%;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #333;
+    height: 45px;
+    font-size: .9rem;
+    font-weight: 300;
+    color: #333;
+}
+
+.new-br-modal .modal-dialog .modal-content .inner-wrapper .content-block .wrapper .body .form-section .btn-submit {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to bottom, #29A9E9, #0A65E0);
+    height: 45px;
+    font-size: .9rem;
+    font-weight: 300;
+    color: #fff;
+}
+
 .new-br-modal .modal-dialog .modal-content .inner-wrapper .preview-block {
     flex: 1;
     background: linear-gradient(to bottom, #393E48, #23272C);
     display: flex;
+    position: relative;
+}
+
+.new-br-modal .modal-dialog .modal-content .inner-wrapper .preview-block::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 21px solid #393E48;
+    position: absolute;
+    top: 5%;
+    left: -19px;
 }
 
 .new-br-modal .modal-dialog .modal-content .inner-wrapper .preview-block .wrapper {
@@ -2921,6 +2995,26 @@
 .new-br-modal .modal-dialog .modal-content .inner-wrapper .preview-block .wrapper .preview-card .cta-link .bi {
     font-size: 1rem;
     color: #007AF5;
+}
+
+.new-template-btn {
+    text-decoration: none;
+    background: linear-gradient(to right, #00AEEF, #1B3D6B);
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    font-weight: 300;
+    color: #fff;
+    margin-left: auto;
+}
+
+.new-template-btn:hover {
+    color: #fff;
 }
 
 /*# sourceMappingURL=ims_main.css.map */
