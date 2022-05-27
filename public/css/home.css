@@ -1072,6 +1072,12 @@
     width: 215px;
 }
 
+@media screen and (max-width: 1600px) {
+    .hero-section {
+        padding-top: 50px;
+    }
+}
+
 @media screen and (max-width: 1399px) {
     .feature-section .body {
         flex-direction: column;
