@@ -15,17 +15,17 @@
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
+                            <div class="uae-section">
+                                <div class="text-block">
+                                    <div class="tallentor">Tallentor</div>
+                                    <div class="text">Is now in</div>
+                                </div>
+                                <div class="text-block">
+                                    <div class="dubai">Dubai</div>
+                                </div>
+                            </div>
                             <div class="slide-wrapper">
                                 <div class="content-block">
-                                    <div class="wrapper">
-                                        <div class="text-block">
-                                            <div class="tallentor">Tallentor</div>
-                                            <div class="text">Is now in</div>
-                                        </div>
-                                        <div class="text-block">
-                                            <div class="dubai">Dubai</div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="image-block slide-1">
                                     <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">

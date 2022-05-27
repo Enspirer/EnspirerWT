@@ -9,11 +9,11 @@
     margin: 0;
     padding: 1em 0;
     opacity: 1;
-    border-top: 1px solid #C1C1C1;
     border-radius: 0;
     height: auto;
-    background-color: transparent;
-    color: #C1C1C1;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2.5px);
+    color: #fff;
     font-size: 14px;
     font-weight: 400;
     position: relative;
@@ -24,23 +24,21 @@
     color: #333;
 }
 
-.hero-section .custom__pagination.uae li:not(:nth-child(1)) .custom__pagination__page {
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(2.5px);
-    border-top: 1px solid transparent;
-    color: #fff;
-}
-
-.hero-section .custom__pagination.uae li:not(:nth-child(1), :nth-last-child(1)) .custom__pagination__page {
+.hero-section .custom__pagination li:not(:nth-last-child(1)) .custom__pagination__page {
     border-right: 1px solid #fff;
 }
 
-.hero-section .custom__pagination li:nth-child(1) .custom__pagination__page {
+.hero-section .custom__pagination.uae li:nth-child(1) .custom__pagination__page {
+    border-right: 1px solid #FF0404;
     color: #fff;
     background-color: #FF0404;
 }
 
-.hero-section .custom__pagination li:nth-child(1) .custom__pagination__page::after {
+.hero-section .custom__pagination li:nth-child(1) .custom__pagination__page {
+    color: #FF0404;
+}
+
+/* .hero-section .custom__pagination li:nth-child(1) .custom__pagination__page::after {
     content: '';
     width: 100%;
     height: 3px;
@@ -62,7 +60,7 @@
     top: -2px;
     left: 50%;
     transform: translate(-50%, 0);
-}
+} */
 
 .hero-section .slide-wrapper {
     display: flex;
@@ -1252,35 +1250,6 @@
 }
 
 @media screen and (max-width: 767px) {
-    .hero-section .custom__pagination {
-        display: none;
-    }
-
-    .hero-section .slide-wrapper {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 3rem;
-    }
-
-    .hero-section .slide-wrapper .content-block {
-        text-align: center;
-    }
-
-    .hero-section .slide-wrapper .content-block .inner-wrapper {
-        position: unset;
-    }
-
-    .hero-section .slide-wrapper .image-block {
-        text-align: center;
-    }
-
-    .hero-section .slide-wrapper .image-block img {
-        width: 80%;
-    }
-
-    .hero-section .slide-wrapper .image-block.slide-01 img {
-        width: 90%;
-    }
 
     .SEO-section .header {
         width: 100%;
@@ -1362,24 +1331,23 @@
     background-color: transparent;
 }
 
-.hero-section .custom__pagination .custom__pagination__page {
-    color: #8A8A8A;
-}
-
 .hero-section .slide-wrapper .content-block {
     position: relative;
 }
 
-.hero-section .slide-wrapper .content-block .wrapper {
+.hero-section .uae-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 12rem;
-    padding: 7rem 6.5rem;
+    width: 85%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
-.hero-section .slide-wrapper .content-block .wrapper .text-block .tallentor {
+.hero-section .uae-section .text-block .tallentor {
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
@@ -1387,10 +1355,11 @@
     line-height: 1;
 }
 
-.hero-section .slide-wrapper .content-block .wrapper .text-block .text {
+.hero-section .uae-section .text-block .text {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 56px;
+    color: #fff;
     line-height: 1;
     font-family: 'Bebas Neue', cursive;
     margin: 0;
@@ -1399,11 +1368,121 @@
     transform: scaleX(1.75);
 }
 
-.hero-section .slide-wrapper .content-block .wrapper .text-block .dubai {
+.hero-section .uae-section .text-block .dubai {
     font-size: 160px;
     font-weight: 500;
     color: #fff;
     font-family: 'Captain Blackjack';
+}
+
+@media screen and (max-width: 1399px) {
+    .hero-section .uae-section .text-block .tallentor {
+        font-size: calc(80px * .85);
+    }
+
+    .hero-section .uae-section .text-block .text {
+        font-size: calc(56px * .85);
+    }
+
+    .hero-section .uae-section .text-block .dubai {
+        font-size: calc(160px * .85);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .hero-section .uae-section .text-block .tallentor {
+        font-size: calc(80px * .75);
+    }
+
+    .hero-section .uae-section .text-block .text {
+        font-size: calc(56px * .75);
+    }
+
+    .hero-section .uae-section .text-block .dubai {
+        font-size: calc(160px * .75);
+    }
+
+    .hero-section .slide-wrapper .content-block .inner-wrapper {
+        top: 15%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .hero-section .uae-section .text-block .text {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .hero-section .uae-section {
+        top: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+    }
+
+    .hero-section .slide-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .hero-section .slide-wrapper .content-block {
+        text-align: center;
+    }
+
+    .hero-section .slide-wrapper .content-block .inner-wrapper {
+        position: unset;
+    }
+
+    .hero-section .slide-wrapper .image-block {
+        text-align: center;
+    }
+
+    .hero-section .slide-wrapper .image-block img {
+        width: 80%;
+    }
+
+    .hero-section .slide-wrapper .image-block.slide-01 img {
+        width: 90%;
+    }
+
+    .cta-btn-border,
+    .cta-btn-fill {
+        margin: 0 auto;
+    }
+
+    .hero-section.home {
+        background-position: top center;
+    }
+
+    .hero-section .custom__pagination .custom__pagination__page {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 575px) {
+    .hero-section .uae-section .text-block .tallentor {
+        font-size: calc(80px * .5);
+    }
+
+    .hero-section .uae-section .text-block .text {
+        font-size: calc(56px * .5);
+    }
+
+    .hero-section .uae-section .text-block .dubai {
+        font-size: calc(160px * .5);
+    }
+
+    .hero-section .uae-section {
+        max-width: 350px;
+    }
+
+    .hero-section .custom__pagination {
+        display: none;
+    }
 }
 
 /*# sourceMappingURL=home.css.map */

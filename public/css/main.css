@@ -30,6 +30,16 @@
     left: -2.5rem !important;
 }
 
+@media screen and (max-width: 991px) {
+    .splide__arrow--next {
+        right: 0 !important;
+    }
+
+    .splide__arrow--prev {
+        left: 0 !important;
+    }
+}
+
 .splide__arrow {
     background-color: #fff !important;
     opacity: 1 !important;
@@ -106,15 +116,6 @@
     position: relative;
     z-index: 1;
     font-size: 20px;
-}
-
-
-@media screen and (max-width: 767px) {
-
-    .cta-btn-border,
-    .cta-btn-fill {
-        margin: 0 auto;
-    }
 }
 
 /*# sourceMappingURL=main.css.map */
