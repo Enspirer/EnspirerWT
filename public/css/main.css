@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Captain Blackjack';
+    src: url('../fonts/custom/CaptainBlackjack.woff2') format('woff2'),
+        url('../fonts/custom/CaptainBlackjack.woff') format('woff');
+}
+
 
 * {
     margin: 0;
