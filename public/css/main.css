@@ -20,26 +20,6 @@
     --animate-delay: 0.2s;
 }
 
-/* Slider */
-
-.splide__arrow--next {
-    right: -2.5rem !important;
-}
-
-.splide__arrow--prev {
-    left: -2.5rem !important;
-}
-
-@media screen and (max-width: 991px) {
-    .splide__arrow--next {
-        right: 0 !important;
-    }
-
-    .splide__arrow--prev {
-        left: 0 !important;
-    }
-}
-
 .splide__arrow {
     background-color: #fff !important;
     opacity: 1 !important;

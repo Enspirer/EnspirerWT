@@ -1265,6 +1265,12 @@
     display: none;
 }
 
+#sectionSideNav.active #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .alerts {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
 #sectionSideNav.active #sideNav.side-nav .side-navs .navbar-nav .nav-item .nav-link .tool-tip {
     position: absolute;
     width: 120px;
