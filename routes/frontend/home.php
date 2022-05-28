@@ -172,7 +172,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('reports/security_report/{id}', [ReportsController::class, 'security_report'])->name('reports.security_report');
         Route::get('reports/billing_report/{id}', [ReportsController::class, 'billing_report'])->name('reports.billing_report');
 
-        Route::get('billing', [BillingController::class, 'index'])->name('billing');
+        Route::get('billing/project-invoice', [BillingController::class, 'index'])->name('billing');
         Route::get('billing/custom-invoice', [BillingController::class, 'custom_invoice'])->name('custom_invoice');
         Route::get('billing/custom-invoice/view', [BillingController::class, 'view_custom_invoice'])->name('view_custom_invoice');
         Route::get('unpaid_invoices/{id}', [BillingController::class, 'unpaid_invoices'])->name('unpaid_invoices');

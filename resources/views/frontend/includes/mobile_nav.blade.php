@@ -92,9 +92,32 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{Request::segment(1)=='billing' ? 'active' :null }}" href="{{route('frontend.user.billing')}}">
-                        <span class="text">Billing</span>
-                    </a>
+                    <div class="accordion" id="billingAcc">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="billingHead">
+                                <button class="nav-link {{Request::segment(1)=='billing' ? 'active' :null }} collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bililngCollapse" aria-expanded="true" aria-controls="bililngCollapse">
+                                    <span class="text">Billing</span>
+                                    <span class="alerts">05</span>
+                                </button>
+                            </h2>
+                            <div id="bililngCollapse" class="accordion-collapse collapse" aria-labelledby="billingHead" data-bs-parent="#billingAcc">
+                                <div class="accordion-body">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a href="{{route('frontend.user.billing')}}" class="nav-link {{Request::segment(2)=='project-invoice' ? 'active' :null }}">
+                                                <span class="text">Project Invoice</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{route('frontend.user.custom_invoice')}}" class="nav-link {{Request::segment(2)=='custom-invoice' ? 'active' :null }}">
+                                                <span class="text">Custom Invoice</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{Request::segment(1)=='projects' ? 'active' :null }}" href="{{route('frontend.user.project.index')}}">

@@ -34,7 +34,7 @@
 
                     <section class="view-invoice">
                         <div class="row g-4">
-                            <div class="col-8">
+                            <div class="col-lg-8">
                                 <div class="invoice">
                                     <div class="header">
                                         <img src="{{url('images/test.png')}}" alt="">
@@ -90,7 +90,7 @@
                                     <div class="invoice-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley .</div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-lg-4">
                                 <div class="row g-4">
                                     <div class="col-12">
                                         <div class="payment-card">

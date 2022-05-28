@@ -1068,7 +1068,7 @@
 }
 
 .payment-card .body {
-    padding: 1rem 0;
+    padding: 1rem 0 !important;
     border-bottom: 1px solid #E9F1FF;
     display: flex;
     flex-direction: column;
@@ -1385,6 +1385,17 @@
     font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1199px) {
+    .custom-invoice .table-block .inner-wrapper {
+        overflow-x: scroll;
+        padding-bottom: 2rem;
+    }
+
+    .custom-invoice .table-block .inner-wrapper .invoice-table {
+        min-width: 1000px;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .webProperty-block .header {
         flex-wrap: wrap;
@@ -1413,6 +1424,13 @@
     .webProperty-block .body .content-block:not(:nth-child(1)) {
         border: none !important;
     }
+
+    .payment-modal .modal-content .inner-wrapper .body {
+        max-height: 400px;
+        padding: 0 2rem;
+        overflow-y: scroll;
+        overflow-x: clip;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -1425,5 +1443,19 @@
     .webProperty-block .body .content-block {
         flex: 1 1 100%;
         border: none !important;
+    }
+
+    .pay-sucess-modal .modal-content .inner-wrapper .pay-sucess-btn {
+        width: 80%;
+    }
+
+    .view-invoice .invoice .info-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .view-invoice .invoice .info-block .info.text-right {
+        text-align: left;
     }
 }

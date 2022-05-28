@@ -166,6 +166,37 @@
                                 font-weight: 300;
                             }
                         }
+
+                        .accordion {
+                            .accordion-item {
+                                border: none;
+                                background-color: transparent;
+
+                                .nav-link {
+                                    width: 100%;
+                                    background-color: transparent;
+                                    border: none;
+                                    position: relative;
+
+                                    .alerts {
+                                        background-color: #f00;
+                                        color: #fff;
+                                        line-height: 1;
+                                        padding: 2px 8px;
+                                        border-radius: 20px;
+                                        position: absolute;
+                                    }
+                                }
+
+                                .accordion-body {
+                                    padding: 0;
+
+                                    .text {
+                                        font-size: 22px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

@@ -41,7 +41,7 @@
                         <div class="table-block">
                             <div class="controls">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
+                                    <input class="form-check-input" type="checkbox" data-check-all>
                                     <label class="form-check-label">
                                         <i class="bi bi-chevron-down"></i>
                                     </label>
@@ -72,7 +72,7 @@
                                     </thead>
                                     <tbody>
                                         <td>
-                                            <input class="form-check-input" type="checkbox">
+                                            <input class="form-check-input" type="checkbox" data-check>
                                         </td>
                                         <td>
                                             <div class="text">INV-2022-00</div>
@@ -122,8 +122,8 @@
                 <div class="title">Payment Details</div>
             </div>
             <div class="body">
-                <div class="row g-4">
-                    <div class="col-8">
+                <div class="row g-5">
+                    <div class="col-lg-8">
                         <div class="row g-4">
                             <div class="col-12">
                                 <div class="label">Card Holder</div>
@@ -139,23 +139,23 @@
                             <div class="col-12">
                                 <input type="text" class="form-control" name="card_number">
                             </div>
-                            <div class="col-7">
+                            <div class="col-lg-7">
                                 <div class="label">CSV Number</div>
                                 <div class="text">Enter the 3 or 4 digit number on the card</div>
                             </div>
-                            <div class="col-5">
+                            <div class="col-lg-5">
                                 <input type="text" class="form-control" name="csv_no" placeholder="327">
                             </div>
-                            <div class="col-7">
+                            <div class="col-lg-7">
                                 <div class="label">Expiry Date</div>
                                 <div class="text">Enter the expiration date of the card</div>
                             </div>
-                            <div class="col-5">
+                            <div class="col-lg-5">
                                 <input type="text" class="form-control" name="exp_date">
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 align-self-center">
+                    <div class="col-lg-4 align-self-center">
                         <div class="payment-card">
                             <div class="header">
                                 <div class="title">Summery</div>
@@ -261,21 +261,42 @@ dataRow.forEach(function (arr1, index) {
 </script>  
 
 <script>
-        // Progressbar color changer
-        const progressColor = document.querySelectorAll("[progress-color]")
-        const progressWidth = 75;
+    // Progressbar color changer
+    const progressColor = document.querySelectorAll("[progress-color]")
+    const progressWidth = 75;
 
-        window.addEventListener('load', function () {
-            progressColor.forEach(function (progress) {
-                if (progressWidth < 51) {
-                    progress.style.backgroundColor = "#33CC0D";
-                } else if (progressWidth > 51 && progressWidth < 76) {
-                    progress.style.backgroundColor = "#FFAC1B";
-                } else {
-                    progress.style.backgroundColor = "#FF0000";
-                }
-            })
+    window.addEventListener('load', function () {
+        progressColor.forEach(function (progress) {
+            if (progressWidth < 51) {
+                progress.style.backgroundColor = "#33CC0D";
+            } else if (progressWidth > 51 && progressWidth < 76) {
+                progress.style.backgroundColor = "#FFAC1B";
+            } else {
+                progress.style.backgroundColor = "#FF0000";
+            }
         })
-    </script>
+    })
+</script>
+
+<script>
+const checkAll = function() {
+    const mainCheck = document.querySelector("[data-check-all]")
+    const checkboxes = document.querySelectorAll("[data-check]")
+
+    mainCheck.addEventListener('change', function(){
+        if(this.checked == true) {
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = true;
+            })
+        } else {
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = false;
+            })
+        }
+    })
+}
+
+window.addEventListener('DOMContentLoaded', checkAll())
+</script>
 
 @endpush

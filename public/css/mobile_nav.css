@@ -135,6 +135,30 @@
   color: #91b4bd;
   font-weight: 300;
 }
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item {
+  border: none;
+  background-color: transparent;
+}
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item .nav-link {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item .nav-link .alerts {
+  background-color: #f00;
+  color: #fff;
+  line-height: 1;
+  padding: 2px 8px;
+  border-radius: 20px;
+  position: absolute;
+}
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item .accordion-body {
+  padding: 0;
+}
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item .accordion-body .text {
+  font-size: 22px;
+}
 
 .mob-notify-modal .modal-dialog .modal-content {
   background-color: #fff;

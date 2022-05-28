@@ -37,13 +37,13 @@
                                         <div class="accordion-body">
                                             <ul class="navbar-nav">
                                                 <li class="nav-item">
-                                                    <a href="{{route('frontend.user.billing')}}" class="nav-link {{Request::segment(1)=='billing' ? 'active' :null }}">
+                                                    <a href="{{route('frontend.user.billing')}}" class="nav-link {{Request::segment(2)=='project-invoice' ? 'active' :null }}">
                                                         <i class="bi bi-clipboard2-check"></i>
                                                         <span class="text">Project Invoice</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="{{route('frontend.user.custom_invoice')}}" class="nav-link">
+                                                    <a href="{{route('frontend.user.custom_invoice')}}" class="nav-link {{Request::segment(2)=='custom-invoice' ? 'active' :null }}">
                                                         <i class="bi bi-file-earmark-plus"></i>
                                                         <span class="text">Custom Invoice</span>
                                                     </a>
