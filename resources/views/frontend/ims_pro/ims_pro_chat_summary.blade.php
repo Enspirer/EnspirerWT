@@ -11,6 +11,8 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 <link rel="stylesheet" href="{{url('css/ims_pro-media_scan.css')}}">
 
+@include('frontend.ims_pro.includes.ims_pro_mobile_nav')
+
 <section class="ims__section">
         @include('frontend.ims_pro.ims_pro_sidebar')
             <div class="ims__main-col">
@@ -52,14 +54,6 @@
             </div>
         
     </section>
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reportDownload">
-  Launch demo modal
-</button>
-
-
     
 
 @endsection

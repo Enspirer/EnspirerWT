@@ -56,6 +56,7 @@ Route::get('mobile_view/mobile-settings',[MobileViewController::class, 'mobile_s
 Route::get('mobile_view/mobile-register',[MobileViewController::class, 'mobile_register'])->name('mobile_register');
 Route::get('mobile_view/mobile-login',[MobileViewController::class, 'mobile_login'])->name('mobile_login');
 Route::get('mobile_view/mobile-analytics',[MobileViewController::class, 'mobile_analytics'])->name('mobile_analytics');
+
 // Analytics Inner Pages
 Route::get('mobile_view/mobile-analytics/analytics-browsers',[MobileViewController::class, 'mobile_analytics_browsers'])->name('analytics_browsers');
 Route::get('mobile_view/mobile-analytics/analytics-campaigns',[MobileViewController::class, 'mobile_analytics_campaigns'])->name('analytics_campaigns');
@@ -73,7 +74,7 @@ Route::get('mobile_view/mobile-analytics/analytics-screen-resolutions',[MobileVi
 Route::get('mobile_view/mobile-analytics/analytics-search-engines',[MobileViewController::class, 'mobile_analytics_search_engines'])->name('analytics_search_engines');
 Route::get('mobile_view/mobile-analytics/analytics-social-networks',[MobileViewController::class, 'mobile_analytics_social_networks'])->name('analytics_social_networks');
 
-Route::get('not_found',[NotFoundController::class, 'index'])->name('not_found');
+Route::get('not-found',[NotFoundController::class, 'index'])->name('not_found');
 
 
 Route::post('/aiz-uploader', [AizUploadController::class, 'show_uploader']);
@@ -152,7 +153,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         // User Dashboard Specific
         Route::get('p/checkout/{package_id}/{project_id}', [PaymentController::class, 'index'])->name('paypal.index');
         Route::post('p/checkout/pash', [PaymentController::class, 'postPaymentWithpaypal'])->name('paypal.show');
-        Route::get('p/satus', [PaymentController::class, 'getPaymentStatus'])->name('paypal.status');
+        Route::get('p/satus/{package_id}/{project_id}/{amount}', [PaymentController::class, 'getPaymentStatus'])->name('paypal.status');
 
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('project_dash/delete/{id}', [DashboardController::class, 'project_dash_destroy'])->name('project_dash.destroy');

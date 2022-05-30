@@ -15,20 +15,20 @@
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
-                            <div class="uae-section">
-                                <div class="text-block">
-                                    <div class="tallentor">Tallentor</div>
-                                    <div class="text">Is now in</div>
-                                </div>
-                                <div class="text-block">
-                                    <div class="dubai">Dubai</div>
-                                </div>
-                            </div>
                             <div class="slide-wrapper">
                                 <div class="content-block">
+                                    <div class="inner-wrapper">
+                                        <div class="tallentor">Tallentor</div>
+                                        <div class="is-now-in">Is now in</div>
+                                        <div class="dubai">Dubai</div>
+                                    </div>
                                 </div>
                                 <div class="image-block slide-1">
                                     <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
+                                    <img src="{{url('images/landing_page/home/hero_slides/uae-tile-1.png')}}" class="size-img tile tile-1">
+                                    <img src="{{url('images/landing_page/home/hero_slides/uae-tile-2.png')}}" class="size-img tile tile-2">
+                                    <img src="{{url('images/landing_page/home/hero_slides/uae-tile-3.png')}}" class="size-img tile tile-3">
+                                    <img src="{{url('images/landing_page/home/hero_slides/uae-tile-4.png')}}" class="size-img tile tile-4">
                                 </div>
                             </div>
                         </li>
@@ -642,6 +642,10 @@ window.addEventListener('DOMContentLoaded', function () {
                     const inR30 = slide.querySelector(".inR30")
                     const inR40 = slide.querySelector(".inR40")
                     const inR50 = slide.querySelector(".inR50")
+                    const tile1 = slide.querySelector(".tile-1")
+                    const tile2 = slide.querySelector(".tile-2")
+                    const tile3 = slide.querySelector(".tile-3")
+                    const tile4 = slide.querySelector(".tile-4")
 
                     if (inL) {
                         inL.classList.add("animate__animated", "animate__fadeInLeft")
@@ -667,10 +671,26 @@ window.addEventListener('DOMContentLoaded', function () {
                         inR50.classList.add("animate__animated", "animate__fadeIn", "animate__delay-4s")
                     }
 
+                    if (tile1) {
+                        tile1.classList.add("animate__animated", "animate__flipInY")
+                    }
+
+                    if (tile2) {
+                        tile2.classList.add("animate__animated", "animate__flipInY", "animate__delay-1s")
+                    }
+
+                    if (tile3) {
+                        tile3.classList.add("animate__animated", "animate__flipInY", "animate__delay-2s")
+                    }
+
+                    if (tile4) {
+                        tile4.classList.add("animate__animated", "animate__flipInY", "animate__delay-3s")
+                    }
+
                 } else {
                     const sizeImg = slide.querySelectorAll(".size-img")
                     sizeImg.forEach(function (img) {
-                        img.classList.remove("animate__animated", "animate__fadeInLeft", "animate__fadeInRight", "animate__fadeIn", "animate__delay-1s", "animate__delay-2s", "animate__delay-3s", "animate__delay-4s", "animate__delay-5s")
+                        img.classList.remove("animate__animated", "animate__fadeInLeft", "animate__fadeInRight", "animate__fadeIn", "animate__delay-1s", "animate__delay-2s", "animate__delay-3s", "animate__delay-4s", "animate__delay-5s", "animate__flipInY")
                     })
                 }
             })

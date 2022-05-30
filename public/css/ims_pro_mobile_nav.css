@@ -67,6 +67,11 @@
 }
 .ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-menu {
   max-width: unset;
+  border: none;
+  transform: translate(15%, 0) !important;
+}
+.ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-menu::after {
+  content: none;
 }
 .ims-pro-mobile-nav .profile-block .mob-profile-drop .profile-drop-menu .dropdown-item {
   display: flex;
@@ -100,7 +105,7 @@
 }
 
 .nav-toggle-modal .modal-dialog .modal-content {
-  background-color: #1f2851;
+  background-color: #1B3D6B;
 }
 .nav-toggle-modal .modal-dialog .modal-content .brand {
   text-decoration: none;
@@ -111,12 +116,47 @@
   transform: translate(-50%, 0);
   font-size: 24px;
 }
-.nav-toggle-modal .modal-dialog .modal-content .bi {
+.nav-toggle-modal .modal-dialog .modal-content .live-visitors {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-toggle-modal .modal-dialog .modal-content .live-visitors .bi {
+  color: #f00;
+  font-size: 40px;
+  line-height: 1;
+}
+.nav-toggle-modal .modal-dialog .modal-content .live-visitors .text {
+  font-size: 13px;
+  font-weight: 300;
+  color: #fff;
+}
+.nav-toggle-modal .modal-dialog .modal-content .live-visitors .count {
+  font-size: 32px;
+  font-weight: 400;
+  color: #fff;
+}
+.nav-toggle-modal .modal-dialog .modal-content .bi-x-lg {
   position: absolute;
   top: 40px;
-  left: 40px;
+  right: 40px;
   font-size: 2rem;
   color: #fff;
+  cursor: pointer;
+}
+.nav-toggle-modal .modal-dialog .modal-content .main-dashboard {
+  position: absolute;
+  top: 52.5px;
+  left: 40px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: #fff;
+  cursor: pointer;
 }
 .nav-toggle-modal .modal-dialog .modal-content .navs {
   position: absolute;
@@ -135,234 +175,46 @@
   color: #91b4bd;
   font-weight: 300;
 }
-
-.mob-notify-modal .modal-dialog .modal-content {
-  background-color: #fff;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-header .title {
-  font-size: 24px;
-  font-weight: 400;
-  color: #333;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-header .bi {
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  transform: translate(0, -50%);
-  font-size: 2rem;
-  color: #333;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-body .empty {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  font-weight: 400;
-  color: #777;
-  width: 225px;
-  text-align: center;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item.visited {
-  opacity: 0.5;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-decoration: none;
-  gap: 2rem;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .bi {
-  font-size: 2rem;
-  color: #333;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .text-block {
-  flex: 1;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .text-block .title {
-  font-size: 14px;
-  font-weight: 400;
-  color: #333;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .text-block .text {
-  font-size: 12px;
-  font-weight: 300;
-  color: #333;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .list-link .duration {
-  font-size: 12px;
-  font-weight: 300;
-  color: #777;
-  white-space: nowrap;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.mob-notify-modal .modal-dialog .modal-content .modal-footer .view-more {
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333;
-}
-
-.mob-property-modal .modal-dialog .modal-content {
-  background-color: #fff;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-header .title {
-  font-size: 24px;
-  font-weight: 400;
-  color: #333;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-header .bi {
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  transform: translate(0, -50%);
-  font-size: 2rem;
-  color: #333;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.5rem;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body .create-project {
-  text-decoration: none;
-  background-color: #0d6efd;
-  color: #fff;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body .text {
-  font-size: 14px;
-  font-weight: 400;
-  color: #777;
-  position: relative;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body .text::before {
-  content: "";
-  width: 20px;
-  height: 1px;
-  background-color: #777;
-  position: absolute;
-  top: 50%;
-  left: -30px;
-  transform: translate(0, -50%);
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body .text::after {
-  content: "";
-  width: 20px;
-  height: 1px;
-  background-color: #777;
-  position: absolute;
-  top: 50%;
-  right: -30px;
-  transform: translate(0, -50%);
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .mob-property-drop-btn {
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item {
+  border: none;
   background-color: transparent;
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: 1px solid #0d6efd;
-  height: 65px;
-  width: 295px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333;
 }
-.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .mob-property-drop-menu {
-  padding: 1rem !important;
-  max-width: 300px !important;
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item .nav-link {
   width: 100%;
-  max-height: 200px;
-  overflow-y: scroll;
-  border-radius: 5px !important;
+  background-color: transparent;
+  border: none;
+  position: relative;
 }
-.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .mob-property-drop-menu .dropdown-item {
-  padding: 0.75rem 1rem;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333;
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item .nav-link .alerts {
+  background-color: #f00;
+  color: #fff;
+  line-height: 1;
+  padding: 2px 8px;
+  border-radius: 20px;
+  position: absolute;
 }
-.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  width: fit-content;
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item .accordion-body {
+  padding: 0;
 }
-.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property .text-block {
-  text-align: left;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property .text-block .name {
-  font-size: 13px;
-  font-weight: 400;
-  color: #333;
-  width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property .text-block .url {
-  font-size: 11px;
-  font-weight: 400;
-  color: #777;
-  width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.mob-property-modal .modal-dialog .modal-content .modal-body .mob-property-drop .property .bi {
-  font-size: 16px;
-  color: #333;
+.nav-toggle-modal .modal-dialog .modal-content .navs .navbar-nav .nav-item .accordion .accordion-item .accordion-body .text {
+  font-size: 22px;
 }
 
-@media screen and (min-width: 992px) {
-  .mobile-nav {
+@media screen and (min-width: 1200px) {
+  .ims-pro-mobile-nav {
     display: none;
   }
 }
 @media screen and (max-width: 575px) {
-  .mobile-nav .brand {
-    display: none;
+  .nav-toggle-modal .modal-dialog .modal-content .main-dashboard {
+    top: unset;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .ims-pro-mobile-nav .brand {
+    font-size: 18px;
   }
 }
 

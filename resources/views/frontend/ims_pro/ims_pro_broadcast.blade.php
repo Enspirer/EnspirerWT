@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="{{url('css/ims_pro.css')}}">
 <link rel="stylesheet" href="{{url('css/ims_pro-media_scan.css')}}">
 
+@include('frontend.ims_pro.includes.ims_pro_mobile_nav')
 
 <section class="ims__section">
     @include('frontend.ims_pro.ims_pro_sidebar')
@@ -55,7 +56,7 @@
 
                             <div class="history-header">
                                 <div class="row g-4">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-9">
                                         <div class="welcome-block">
                                             <div class="content-block">
                                                 <div class="title">Welcome Back, User</div>
@@ -67,7 +68,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
                                         <div class="msg-summery">
                                             <div class="text">Overall Bulk Message</div>
                                             <div class="count">468</div>
@@ -81,7 +82,7 @@
 
                             <div class="history-filter-section">
                                 <div class="row g-5">
-                                    <div class="col-lg-8">
+                                    <div class="col-md-8">
                                         <div class="data-filter">
                                             <div class="row g-4">
                                                 <div class="col-lg-4">
@@ -105,7 +106,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 align-self-center">
+                                    <div class="col-md-4 align-self-center">
                                         <div class="button-block">
                                             <a href="#" class="cta-btn" data-bs-toggle="modal" data-bs-target="#newBrModal">New Broadcast</a>
                                             <i class="bi bi-exclamation-circle"></i>
@@ -320,7 +321,7 @@
                                     <label class="form-label">Date Picker To</label>
                                     <input type="date" class="form-control" name="end_date">
                                 </div>
-                                <div class="col-4">
+                                <div class="col-lg-4">
                                     <button type="button" class="btn-next">Next</button>
                                 </div>
                             </div>
@@ -369,10 +370,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-xl-4 col-lg-5">
                                     <button type="button" class="btn-back">Back</button>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-xl-4 col-lg-5">
                                     <button type="submit" class="btn-add">Add Broadcast</button>
                                 </div>
                             </div>
