@@ -15,7 +15,7 @@ class CreateBillingInvoicesTable extends Migration
     {
         Schema::create('billing_invoices', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('project_id');
+            $table->text('project_id')->nullable();
             $table->text('purchased_package')->nullable();
             $table->text('price')->nullable();
             $table->text('payment_plan')->nullable()->comment('monthly or annually');

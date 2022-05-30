@@ -15,10 +15,7 @@
                         <div class="form-group">
                             <label>Project <span class="text-danger">*</span></label>
                             <select class="form-control" name="project_id" required>
-                                <option value="" selected disabled>-- Select Here --</option>
-                                @foreach($projects as $project)
-                                    <option value="{{$project->id}}">{{$project->name}}</option>  
-                                @endforeach                               
+                                <option value="" selected>None</option>
                             </select>
                         </div>
                         <div class="form-group">
