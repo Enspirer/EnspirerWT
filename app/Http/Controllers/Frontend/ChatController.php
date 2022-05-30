@@ -32,14 +32,15 @@ class ChatController extends Controller
                 'project_id' => $id,
                 'widgetlist' => $widgetlist
             ]);
-        }          
-        
+        }
+
     }
 
     public function widget_plus($id)
     {
         $widgetlist = Widgets::where('project_id',$id)->where('widget_type','IMS Pro')->first();
         $all_in_one = Widgets::where('project_id',$id)->where('widget_type','All-in-One Chat')->first();
+
 
         return view('frontend.user.projects.widget_plus',[
             'project_id' => $id,

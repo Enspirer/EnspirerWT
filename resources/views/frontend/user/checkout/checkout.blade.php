@@ -99,6 +99,8 @@
 
                                                                         <form class="form-horizontal" method="POST" id="payment-form" role="form" action="{{route('frontend.user.paypal.show')}}" >
                                                                             {{ csrf_field() }}
+                                                                            <input type="hidden" name="project_id" value="{{$project_details->id}}">
+                                                                            <input type="hidden" name="package_type"  value="{{$package_details['package_id']}}">
 
                                                                             <div class="form-group{{ $errors->has('amount') ? ' has-error' : '' }}">
                                                                                 <div class="col-md-6">

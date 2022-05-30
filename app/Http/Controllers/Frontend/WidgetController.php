@@ -16,8 +16,7 @@ use App\Models\VisitorCount;
 class WidgetController extends Controller
 {
     public function user_widget_store(Request $request)
-    {        
-        // dd($request);  
+    {
 
         $default_settings = '[{"template_layout":"1","whatsapp_number":"0797894561","bubble_icon":"whatsapp","chat_header":"Header Example!","caption":"Typically replies in minutes","image":"1","agent_name":"Sunimal","welcome_message":"Welcome Message!","btn_text":"Start Chat","start_chat":"on","show_icon":"on","position":"Embed Bubble","alignment":"right","where_display_chat":"Excluded Pages","specific_time_selector":"on","device":["desktop","mobile_device"],"visitors":"new_visitors","date_time":["monday","friday","saturday","sunday"],"start_time":"12:05PM","end_time":"01:10PM","timezone":"Asia\/Calcutta","auto_trigger":null,"pop_up_opening_time":"4000","message_auto_reply_time":"6000","scroll_position":"right","exit_internet":"on","notification":["bubble_notification_bage"],"bubble_background_color":"#055147","bubble_icon_color":"#487662","button_color":"#79a37d","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right","button_corner_radius":"53","custom_css":"No"}]';
         $all_in_one = '[{"whatsapp_details":[null],"fb_details":[null],"telegram_details":[null],"line_details":[null],"viber_details":[null],"tawk_details":[null],"template_layout":"1","whatsapp_number":"079147258369","default_icon":"on","bubble_icon":"envelope-fill","chat_header":"Header All in One","caption":"Typically replies within an hour","image":"3","agent_name":"Yasiru","welcome_message":"Welcome Message! All In One","btn_text":"Start Chat With:","start_chat":"on","show_icon":"on","position":"Floating Bubble","alignment":"right","where_display_chat":"Specific Pages","specific_time_selector":"on","device":["desktop"],"visitors":"all_visitors","date_time":["thursday","friday"],"start_time":"05:20PM","end_time":"08:30PM","timezone":"Asia\/Calcutta","auto_trigger":"on","pop_up_opening_time":"4000","message_auto_reply_time":"6000","scroll_position":"right","exit_internet":"on","notification":["bubble_notification_bage","show_notification_in_tab_tile"],"bubble_background_color":"#055147","bubble_icon_color":"#bfc0bf","header_background_color":"#92967d","enabled_animation":"on","scroll_position_appearance":"Right","custom_css":"No"}]';
@@ -27,20 +26,20 @@ class WidgetController extends Controller
         $pin = mt_rand(1000000, 9999999)
             . mt_rand(1000000, 9999999)
             . $characters[rand(0, strlen($characters) - 1)];
-        $widget_key = str_shuffle($pin);   
-        
+        $widget_key = str_shuffle($pin);
+
         $widget_check = Widgets::where('project_id',$request->project_id)->where('widget_type',$request->widget_type)->first();
-        // dd($widget_check);     
+        // dd($widget_check);
 
         if($widget_check == null){
 
             $add = new Widgets;
-            $add->status = 'Enabled';        
+            $add->status = 'Enabled';
             $add->widget_type = $request->widget_type;
             $add->widget_key = $widget_key;
             $add->load_count = $request->load_count;
             $add->project_id = $request->project_id;
-    
+
             if($request->widget_type == 'Whatsapp Chat'){
                 $add->settings = $default_settings;
             }elseif($request->widget_type == 'All-in-One Chat'){
@@ -50,8 +49,8 @@ class WidgetController extends Controller
             }elseif($request->widget_type == 'IMS Pro'){
                 $add->settings = $ims_pro;
             }
-    
-    
+
+
             if($request->widget_type == 'Whatsapp Chat'){
                 $add->category = 'Widgets';
             }elseif($request->widget_type == 'All-in-One Chat'){
@@ -61,7 +60,7 @@ class WidgetController extends Controller
             }elseif($request->widget_type == 'IMS Pro'){
                 $add->category = 'Widgets Plus';
             }
-    
+
             $add->save();
 
 
@@ -69,7 +68,7 @@ class WidgetController extends Controller
 
             $update = new Projects;
 
-            $update->package_available_days = 30;           
+            $update->package_available_days = 30;
             if($request->widget_type == 'All-in-One Chat'){
                 $update->selected_package = 'All In One Widget + IMS Lite';
             }
@@ -85,12 +84,12 @@ class WidgetController extends Controller
         }
 
         // dd($widget_check);
-      
+
         $characters_two = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $pin_two = mt_rand(1000000, 9999999)
             . mt_rand(1000000, 9999999)
             . $characters_two[rand(0, strlen($characters_two) - 1)];
-        $widget_key_two = str_shuffle($pin_two); 
+        $widget_key_two = str_shuffle($pin_two);
 
         if($request->has('widget_type_another')){
             $widget_check_another = Widgets::where('project_id',$request->project_id)->where('widget_type',$request->widget_type_another)->first();
@@ -99,12 +98,12 @@ class WidgetController extends Controller
             if($widget_check_another == null){
 
                 $add_another = new Widgets;
-                $add_another->status = 'Enabled';        
+                $add_another->status = 'Enabled';
                 $add_another->widget_type = $request->widget_type_another;
                 $add_another->widget_key = $widget_key_two;
                 $add_another->load_count = $request->load_count;
                 $add_another->project_id = $request->project_id;
-        
+
                 if($request->widget_type_another == 'Whatsapp Chat'){
                     $add_another->settings = $default_settings;
                 }elseif($request->widget_type_another == 'All-in-One Chat'){
@@ -114,8 +113,8 @@ class WidgetController extends Controller
                 }elseif($request->widget_type_another == 'IMS Pro'){
                     $add_another->settings = $ims_pro;
                 }
-        
-        
+
+
                 if($request->widget_type_another == 'Whatsapp Chat'){
                     $add_another->category = 'Widgets Plus';
                 }elseif($request->widget_type_another == 'All-in-One Chat'){
@@ -125,7 +124,7 @@ class WidgetController extends Controller
                 }elseif($request->widget_type_another == 'IMS Pro'){
                     $add_another->category = 'Widgets Plus';
                 }
-        
+
                 $add_another->save();
 
 
@@ -143,12 +142,12 @@ class WidgetController extends Controller
                 $update->status = 'Enabled';
 
                 Projects::whereId($request->project_id)->update($update->toArray());
-    
+
             }
             else{
 
                 $update_another = new Widgets;
-        
+
                 if($request->widget_type_another == 'Whatsapp Chat'){
                     $update_another->category = 'Widgets Plus';
                 }elseif($request->widget_type_another == 'All-in-One Chat'){
@@ -158,9 +157,9 @@ class WidgetController extends Controller
                 }elseif($request->widget_type_another == 'IMS Pro'){
                     $update_another->category = 'Widgets Plus';
                 }
-        
+
                 Widgets::whereId($widget_check_another->id)->update($update_another->toArray());
-                
+
                 // dd($widget_check_another);
 
                 $update = new Projects;
@@ -175,14 +174,14 @@ class WidgetController extends Controller
 
                 Projects::whereId($widget_check_another->project_id)->update($update->toArray());
 
-            }            
+            }
 
         }
 
-        DB::table('notifications')->where('user_id',auth()->user()->id)->delete();       
+        DB::table('notifications')->where('user_id',auth()->user()->id)->delete();
 
 
-        // dd($widget_check);       
+        // dd($widget_check);
 
         if($widget_check != null){
             // dd($widget_check);
@@ -217,8 +216,8 @@ class WidgetController extends Controller
 
         // return back()->with([
         //     'success' => 'success'
-        // ]);    
-                    
+        // ]);
+
     }
 
     public function user_widget_destroy($id)
@@ -239,7 +238,7 @@ class WidgetController extends Controller
         Projects::whereId($project->id)->update($update->toArray());
 
 
-        DB::table('widgets')->where('project_id',$chech_whether_ims->project_id)->delete();       
+        DB::table('widgets')->where('project_id',$chech_whether_ims->project_id)->delete();
 
         return back();
     }
@@ -248,15 +247,15 @@ class WidgetController extends Controller
     // **************************************optimizer***********************************************
 
     public function user_optimizer_store(Request $request)
-    {        
+    {
         // dd($request);
-        
+
         // get the current time
         $current = Carbon::now();
         // dd($current);
 
         $update = new Projects;
-        $update->package_available_days = 30;           
+        $update->package_available_days = 30;
         $update->selected_package = 'Optimizer';
         $update->package_starting_date = $current;
         $update->package_type = 'Free';
@@ -268,7 +267,7 @@ class WidgetController extends Controller
         $project = Projects::where('id',$request->project_id)->first();
         $update_expire = new Projects;
         $update_expire->expire_date = $project->updated_at->addDays(30);
-        Projects::whereId($request->project_id)->update($update_expire->toArray());  
+        Projects::whereId($request->project_id)->update($update_expire->toArray());
 
 
         $optimizer_widget_ims_pro = Widgets::where('project_id',$request->project_id)->where('widget_type','IMS Pro')->first();
@@ -282,19 +281,19 @@ class WidgetController extends Controller
         $pin = mt_rand(1000000, 9999999)
             . mt_rand(1000000, 9999999)
             . $characters[rand(0, strlen($characters) - 1)];
-        $widget_key = str_shuffle($pin); 
+        $widget_key = str_shuffle($pin);
 
         if($optimizer_widget_ims_pro == null){
 
             $add = new Widgets;
-            $add->status = 'Enabled';        
+            $add->status = 'Enabled';
             $add->widget_type = 'IMS Pro';
             $add->widget_key = $widget_key;
             $add->load_count = null;
             $add->project_id = $request->project_id;
             $add->settings = $ims_pro;
             $add->category = 'Widgets Plus';
-    
+
             $add->save();
 
         }
@@ -303,36 +302,36 @@ class WidgetController extends Controller
         $pin_two = mt_rand(1000000, 9999999)
             . mt_rand(1000000, 9999999)
             . $characters_two[rand(0, strlen($characters_two) - 1)];
-        $widget_key_two = str_shuffle($pin_two); 
+        $widget_key_two = str_shuffle($pin_two);
 
         if($optimizer_widget_all_in_one == null){
 
             $add_another = new Widgets;
-            $add_another->status = 'Enabled';        
+            $add_another->status = 'Enabled';
             $add_another->widget_type = 'All-in-One Chat';
             $add_another->widget_key = $widget_key_two;
             $add_another->load_count = null;
-            $add_another->project_id = $request->project_id;    
+            $add_another->project_id = $request->project_id;
             $add_another->settings = $all_in_one;
             $add_another->category = 'Widgets Plus';
-    
-            $add_another->save();            
+
+            $add_another->save();
 
         }
         else{
 
             $update_another = new Widgets;
             $update_another->category = 'Widgets Plus';
-    
-            Widgets::whereId($optimizer_widget_all_in_one->id)->update($update_another->toArray());
-            
-        }    
 
-     
+            Widgets::whereId($optimizer_widget_all_in_one->id)->update($update_another->toArray());
+
+        }
+
+
         return back()->with([
             'success' => 'success'
-        ]);    
-                    
+        ]);
+
     }
 
     public function user_optimizer_destroy($id)
@@ -347,23 +346,23 @@ class WidgetController extends Controller
 
         Projects::whereId($id)->update($update->toArray());
 
-        DB::table('widgets')->where('project_id',$id)->delete();       
+        DB::table('widgets')->where('project_id',$id)->delete();
 
         return back();
     }
 
 
     public function optimizer_realtime_view(Request $request)
-    {     
+    {
 
         $visitor_project_id = $request->visitor_project_id;
 
         $visitors_count = VisitorCount::where('project_id',$visitor_project_id)->get();
         // dd($visitors_count);
-        
+
         $content = null;
 
-        foreach($visitors_count as $visitors){                   
+        foreach($visitors_count as $visitors){
 
             if($visitors->chat_invite == null){
 
@@ -435,34 +434,34 @@ class WidgetController extends Controller
                 '</tr>';
 
             }
-            
+
 
         }
 
 
-        return json_encode($content); 
+        return json_encode($content);
 
     }
 
     public function realtime_invite(Request $request)
-    {        
+    {
         // dd($request);
-       
+
         $update = new VisitorCount;
 
-        $update->chat_invite = 1; 
+        $update->chat_invite = 1;
 
         VisitorCount::whereId($request->visitors_id)->update($update->toArray());
 
-        return back();      
-                    
+        return back();
+
     }
 
 
     public function user_widget_settings($id)
     {
         $widget = Widgets::where('id',$id)->first();
-        $project = Projects::where('id',$widget->project_id)->first();           
+        $project = Projects::where('id',$widget->project_id)->first();
         $whatsapp_chat = WhatsappChatWidgetTemplate::where('status','Enabled')->get();
 
 
@@ -503,9 +502,9 @@ class WidgetController extends Controller
                 'ims_pro_users' => $ims_pro_users
             ]);
         }
-    
-        
-        
+
+
+
     }
 
     public function user_whatsapp_chat_preview($widget_id)
@@ -520,42 +519,42 @@ class WidgetController extends Controller
 
 
     public function user_widget_ims_pro_settings_update(Request $request)
-    {        
-        // dd($request); 
+    {
+        // dd($request);
 
         if($request->logo == null){
             return back()->with([
                 'error' => 'Add a Logo'
-            ]); 
+            ]);
         }
 
         $whatsapp_number = $request->whatsapp_number;
         $logo = $request->logo;
         $address = $request->address;
         $company_email = $request->company_email;
-       
+
         $array = [
             'whatsapp_number' => $whatsapp_number,
             'logo' => $logo,
             'address' => $address,
-            'company_email' => $company_email            
+            'company_email' => $company_email
         ];
 
-        $final_array = [$array];         
-     
+        $final_array = [$array];
+
         $update = new Widgets;
 
         $update->settings = json_encode($final_array);
 
         Widgets::whereId($request->hidden_id)->update($update->toArray());
 
-        
+
         return back()->with([
             'success' => 'Updated Successfully'
-        ]);   
+        ]);
 
     }
 
-    
+
 
 }
