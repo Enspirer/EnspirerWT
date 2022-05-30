@@ -41,7 +41,7 @@
                                     <div class="nav-link__block">
                                         <i class="bi bi-chevron-down ims__hidden"></i>
                                         <i class="bi bi-person-lines-fill"></i>
-                                        <div class="text">Conversion</div>
+                                        <div class="text">Conversation</div>
                                     </div>
                                 </a>
                             </li>

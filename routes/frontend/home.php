@@ -74,7 +74,7 @@ Route::get('mobile_view/mobile-analytics/analytics-screen-resolutions',[MobileVi
 Route::get('mobile_view/mobile-analytics/analytics-search-engines',[MobileViewController::class, 'mobile_analytics_search_engines'])->name('analytics_search_engines');
 Route::get('mobile_view/mobile-analytics/analytics-social-networks',[MobileViewController::class, 'mobile_analytics_social_networks'])->name('analytics_social_networks');
 
-Route::get('not_found',[NotFoundController::class, 'index'])->name('not_found');
+Route::get('not-found',[NotFoundController::class, 'index'])->name('not_found');
 
 
 Route::post('/aiz-uploader', [AizUploadController::class, 'show_uploader']);

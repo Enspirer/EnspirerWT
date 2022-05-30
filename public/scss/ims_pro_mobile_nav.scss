@@ -78,6 +78,12 @@
 
             .profile-drop-menu {
                 max-width: unset;
+                border: none;
+                transform: translate(15%, 0) !important;
+
+                &::after {
+                    content: none;
+                }
 
                 .dropdown-item {
                     display: flex;
@@ -122,7 +128,7 @@
 .nav-toggle-modal {
     .modal-dialog {
         .modal-content {
-            background-color: #1f2851;
+            background-color: #1B3D6B;
 
             .brand {
                 text-decoration: none;
@@ -134,12 +140,52 @@
                 font-size: 24px;
             }
 
-            .bi {
+            .live-visitors {
+                position: absolute;
+                left: 50%;
+                top: 2rem;
+                transform: translate(-50%, 0);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .bi {
+                    color: #f00;
+                    font-size: 40px;
+                    line-height: 1;
+                }
+
+                .text {
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: #fff;
+                }
+
+                .count {
+                    font-size: 32px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+
+            .bi-x-lg {
                 position: absolute;
                 top: 40px;
-                left: 40px;
+                right: 40px;
                 font-size: 2rem;
                 color: #fff;
+                cursor: pointer;
+            }
+
+            .main-dashboard {
+                position: absolute;
+                top: 52.5px;
+                left: 40px;
+                font-size: .9rem;
+                text-decoration: none;
+                font-weight: 300;
+                color: #fff;
+                cursor: pointer;
             }
 
             .navs {
@@ -166,270 +212,36 @@
                                 font-weight: 300;
                             }
                         }
-                    }
-                }
-            }
-        }
-    }
-}
 
-.mob-notify-modal {
-    .modal-dialog {
-        .modal-content {
-            background-color: #fff;
+                        .accordion {
+                            .accordion-item {
+                                border: none;
+                                background-color: transparent;
 
-            .modal-header {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                position: relative;
+                                .nav-link {
+                                    width: 100%;
+                                    background-color: transparent;
+                                    border: none;
+                                    position: relative;
 
-                .title {
-                    font-size: 24px;
-                    font-weight: 400;
-                    color: #333;
-                }
-
-                .bi {
-                    position: absolute;
-                    top: 50%;
-                    left: 40px;
-                    transform: translate(0, -50%);
-                    font-size: 2rem;
-                    color: #333;
-                }
-            }
-
-            .modal-body {
-                .empty {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: #777;
-                    width: 225px;
-                    text-align: center;
-                }
-
-                .list-group {
-                    .list-group-item {
-                        &.visited {
-                            opacity: .5;
-                        }
-
-                        .list-link {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-                            align-items: flex-start;
-                            text-decoration: none;
-                            gap: 2rem;
-
-                            .bi {
-                                font-size: 2rem;
-                                color: #333;
-                            }
-
-                            .text-block {
-                                flex: 1;
-
-                                .title {
-                                    font-size: 14px;
-                                    font-weight: 400;
-                                    color: #333;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 1;
-                                    -webkit-box-orient: vertical;
+                                    .alerts {
+                                        background-color: #f00;
+                                        color: #fff;
+                                        line-height: 1;
+                                        padding: 2px 8px;
+                                        border-radius: 20px;
+                                        position: absolute;
+                                    }
                                 }
 
-                                .text {
-                                    font-size: 12px;
-                                    font-weight: 300;
-                                    color: #333;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 2;
-                                    -webkit-box-orient: vertical;
+                                .accordion-body {
+                                    padding: 0;
+
+                                    .text {
+                                        font-size: 22px;
+                                    }
                                 }
                             }
-
-                            .duration {
-                                font-size: 12px;
-                                font-weight: 300;
-                                color: #777;
-                                white-space: nowrap;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .modal-footer {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-
-                .view-more {
-                    text-decoration: none;
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: #333;
-                }
-            }
-        }
-    }
-}
-
-.mob-property-modal {
-    .modal-dialog {
-        .modal-content {
-            background-color: #fff;
-
-            .modal-header {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-
-                .title {
-                    font-size: 24px;
-                    font-weight: 400;
-                    color: #333;
-                }
-
-                .bi {
-                    position: absolute;
-                    top: 50%;
-                    left: 40px;
-                    transform: translate(0, -50%);
-                    font-size: 2rem;
-                    color: #333;
-                }
-            }
-
-            .modal-body {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 1.5rem;
-
-                .create-project {
-                    text-decoration: none;
-                    background-color: #0d6efd;
-                    color: #fff;
-                    padding: 15px 30px;
-                    border-radius: 5px;
-                    font-size: 14px;
-                }
-
-                .text {
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: #777;
-                    position: relative;
-
-                    &::before {
-                        content: '';
-                        width: 20px;
-                        height: 1px;
-                        background-color: #777;
-                        position: absolute;
-                        top: 50%;
-                        left: -30px;
-                        transform: translate(0, -50%);
-                    }
-
-                    &::after {
-                        content: '';
-                        width: 20px;
-                        height: 1px;
-                        background-color: #777;
-                        position: absolute;
-                        top: 50%;
-                        right: -30px;
-                        transform: translate(0, -50%);
-                    }
-                }
-
-                .mob-property-drop {
-                    .mob-property-drop-btn {
-                        background-color: transparent;
-                        padding: 10px 15px;
-                        border-radius: 5px;
-                        border: 1px solid #0d6efd;
-                        height: 65px;
-                        width: 295px;
-                        font-size: 14px;
-                        font-weight: 400;
-                        color: #333;
-                    }
-
-                    .mob-property-drop-menu {
-                        padding: 1rem !important;
-                        max-width: 300px !important;
-                        width: 100%;
-                        max-height: 200px;
-                        overflow-y: scroll;
-                        border-radius: 5px !important;
-
-                        .dropdown-item {
-                            padding: .75rem 1rem;
-                            text-align: center;
-                            font-size: 14px;
-                            font-weight: 400;
-                            color: #333;
-                        }
-                    }
-
-                    .property {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        gap: 1rem;
-                        width: fit-content;
-
-                        img {
-                            width: 40px;
-                            height: 40px;
-                            border-radius: 50%;
-                            object-fit: cover;
-                            object-position: center;
-                        }
-
-                        .text-block {
-                            text-align: left;
-
-                            .name {
-                                font-size: 13px;
-                                font-weight: 400;
-                                color: #333;
-                                width: 180px;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                            }
-
-                            .url {
-                                font-size: 11px;
-                                font-weight: 400;
-                                color: #777;
-                                width: 180px;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                            }
-                        }
-
-                        .bi {
-                            font-size: 16px;
-                            color: #333;
                         }
                     }
                 }
@@ -438,17 +250,29 @@
     }
 }
 
-@media screen and (min-width: 992px) {
-    .mobile-nav {
+@media screen and (min-width: 1200px) {
+    .ims-pro-mobile-nav {
         display: none;
     }
 }
 
 @media screen and (max-width: 575px) {
+    .nav-toggle-modal {
+        .modal-dialog {
+            .modal-content {
+                .main-dashboard {
+                    top: unset;
+                    bottom: 2rem;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+            }
+        }
+    }
 
-    .mobile-nav {
+    .ims-pro-mobile-nav {
         .brand {
-            display: none;
+            font-size: 18px;
         }
     }
 }

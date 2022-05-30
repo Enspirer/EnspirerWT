@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="{{url('css/ims_pro.css')}}">
 <link rel="stylesheet" href="{{url('css/ims_pro-media_scan.css')}}">
 
+@include('frontend.ims_pro.includes.ims_pro_mobile_nav')
 
 <section class="ims__section">
     @include('frontend.ims_pro.ims_pro_sidebar')
@@ -203,10 +204,10 @@
                                     <div class="char-count">01/20</div>
                                     <input type="text" class="form-control" name="temp_button_text" placeholder="Text">
                                 </div>
-                                <div class="col-4">
+                                <div class="col-lg-4">
                                     <button type="button" class="btn-save">Save as Draft</button>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-lg-4">
                                     <button type="button" class="btn-submit">Save and Submit</button>
                                 </div>
                             </div>
