@@ -173,7 +173,7 @@ class PaymentController extends Controller
                 self::optimizedOptimizerFunction($project_id,360);
                 self::generateInvoice($project_id,$package_id,$amount,'annually',auth()->user()->id,'Paid');
 
-                return redirect()->route('frontend.user.user_widget.settings', $project_id);
+                return redirect()->route('frontend.user.dashboard);
             }
 //
             return Redirect::route('frontend.user.dashboard');
