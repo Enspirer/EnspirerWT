@@ -11,9 +11,9 @@
     opacity: 1;
     border-radius: 0;
     height: auto;
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(2.5px);
-    color: #fff;
+    background-color: transparent;
+    /* backdrop-filter: blur(2.5px); */
+    color: #999;
     font-size: 14px;
     font-weight: 400;
     position: relative;
@@ -79,6 +79,31 @@
     position: absolute;
     top: 25%;
     left: 0;
+    text-align: center;
+}
+
+.hero-section .slide-wrapper .content-block .inner-wrapper .tallentor {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+}
+
+.hero-section .slide-wrapper .content-block .inner-wrapper .is-now-in {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 34px;
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.hero-section .slide-wrapper .content-block .inner-wrapper .dubai {
+    font-size: 140px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    font-family: 'Captain Blackjack';
 }
 
 .hero-section .slide-wrapper .content-block .title {
@@ -139,6 +164,30 @@
 
 .hero-section .slide-wrapper .image-block .back-img {
     width: 100%;
+}
+
+.hero-section .slide-wrapper .image-block .tile {
+    position: absolute;
+    width: 17%;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section .slide-wrapper .image-block .tile.tile-1 {
+    right: 56%;
+    bottom: 10%;
+}
+
+.hero-section .slide-wrapper .image-block .tile.tile-2 {
+    right: 38%;
+}
+
+.hero-section .slide-wrapper .image-block .tile.tile-3 {
+    right: 20%;
+    bottom: 10%;
+}
+
+.hero-section .slide-wrapper .image-block .tile.tile-4 {
+    right: 2%;
 }
 
 .hero-section .slide-wrapper .image-block .size-img {
@@ -1133,6 +1182,22 @@
     .marketplace-section .inner-wrapper .card-block .card .bi-check-circle-fill {
         color: #017FFA;
     }
+
+    .hero-section .slide-wrapper .content-block .inner-wrapper .tallentor {
+        font-size: 36px;
+    }
+
+    .hero-section .slide-wrapper .content-block .inner-wrapper .is-now-in {
+        font-size: 28px;
+    }
+
+    .hero-section .slide-wrapper .content-block .inner-wrapper .dubai {
+        font-size: 110px;
+    }
+
+    .hero-section .slide-wrapper {
+        margin: 100px 0 60px;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -1247,6 +1312,22 @@
     .subcription-block .content-block .widget-block {
         border: none !important;
     }
+
+    .hero-section .slide-wrapper .image-block .tile.tile-1 {
+        right: 66%;
+    }
+
+    .hero-section .slide-wrapper .image-block .tile.tile-2 {
+        right: 48%;
+    }
+
+    .hero-section .slide-wrapper .image-block .tile.tile-3 {
+        right: 30%;
+    }
+
+    .hero-section .slide-wrapper .image-block .tile.tile-4 {
+        right: 12%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1279,7 +1360,7 @@
     }
 }
 
-@media screen and (max-width: 574px) {
+@media screen and (max-width: 575px) {
 
     .IMS-section .card-block .card .text {
         font-size: 14px;
@@ -1300,12 +1381,16 @@
         flex-direction: column;
         gap: 1rem;
     }
+
+    .hero-section .slide-wrapper .content-block .inner-wrapper .dubai {
+        font-size: 90px;
+    }
 }
 
 /* Slider new updates */
 
 .hero-section.home.svg-back {
-    background: url(../images/landing_page/home/hero-background.svg), url(../images/landing_page/home/hero-background.png);
+    background: url(../images/landing_page/home/hero-background.svg), url(../images/landing_page/home/hero_slides/slide_1.png);
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1335,52 +1420,6 @@
     position: relative;
 }
 
-.hero-section .uae-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 55vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -102%);
-}
-
-.hero-section .uae-section .text-block .tallentor {
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3.958vw;
-    line-height: 1;
-}
-
-.hero-section .uae-section .text-block .text {
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.771vw;
-    color: #fff;
-    line-height: 1;
-    font-family: 'Bebas Neue', cursive;
-    margin: 0;
-    text-align: right;
-    letter-spacing: 3px;
-    transform: scaleX(1.75);
-}
-
-.hero-section .uae-section .text-block .dubai {
-    font-size: 7.917vw;
-    font-weight: 500;
-    color: #fff;
-    font-family: 'Captain Blackjack';
-}
-
-@media screen and (max-width: 1499px) {
-    .hero-section .uae-section {
-        transform: translate(-50%, -93%);
-    }
-}
-
 @media screen and (max-width: 1199px) {
 
     .hero-section .slide-wrapper .content-block .inner-wrapper {
@@ -1389,30 +1428,6 @@
 }
 
 @media screen and (max-width: 991px) {
-
-    .hero-section .uae-section .text-block .tallentor {
-        font-size: calc(80px * .7);
-    }
-
-    .hero-section .uae-section .text-block .text {
-        font-size: calc(56px * .7);
-    }
-
-    .hero-section .uae-section .text-block .dubai {
-        font-size: calc(160px * .7);
-    }
-
-    .hero-section .uae-section .text-block .text {
-        text-align: center;
-        margin-top: 2rem;
-    }
-
-    .hero-section .uae-section {
-        top: 50%;
-        width: 100%;
-        transform: translate(-50%, -50%);
-        flex-direction: column;
-    }
 
     .hero-section .slide-wrapper {
         flex-direction: column-reverse;
@@ -1457,21 +1472,6 @@
 @media screen and (max-width: 767px) {}
 
 @media screen and (max-width: 575px) {
-    .hero-section .uae-section .text-block .tallentor {
-        font-size: calc(80px * .5);
-    }
-
-    .hero-section .uae-section .text-block .text {
-        font-size: calc(56px * .5);
-    }
-
-    .hero-section .uae-section .text-block .dubai {
-        font-size: calc(160px * .5);
-    }
-
-    .hero-section .uae-section {
-        max-width: 350px;
-    }
 
     .hero-section .custom__pagination {
         display: none;
