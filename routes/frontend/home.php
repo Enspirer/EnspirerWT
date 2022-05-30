@@ -154,7 +154,6 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         // User Dashboard Specific
         Route::get('p/checkout/{package_id}/{project_id}', [PaymentController::class, 'index'])->name('paypal.index');
         Route::post('p/checkout/pash', [PaymentController::class, 'postPaymentWithpaypal'])->name('paypal.show');
-        Route::get('p/satus', [PaymentController::class, 'getPaymentStatus'])->name('paypal.status');
 
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('project_dash/delete/{id}', [DashboardController::class, 'project_dash_destroy'])->name('project_dash.destroy');
