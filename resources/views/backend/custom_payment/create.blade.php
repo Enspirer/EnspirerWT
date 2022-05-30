@@ -14,7 +14,7 @@
 
                         <div class="form-group">
                             <label>Project <span class="text-danger">*</span></label>
-                            <select class="form-control" name="project_id" required>
+                            <select class="form-control" name="project_id">
                                 <option value="" selected>None</option>
                             </select>
                         </div>
