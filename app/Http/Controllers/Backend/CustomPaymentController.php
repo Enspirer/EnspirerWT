@@ -1,0 +1,179 @@
+<?php
+
+namespace App\Http\Controllers\Backend;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use DataTables;
+use App\Models\BillingInvoice;
+use App\Models\Projects;
+use App\Models\Auth\User;
+use PDF;
+
+class CustomPaymentController extends Controller
+{
+    public function index()
+    {
+        return view('backend.custom_payment.index');
+    }
+
+    public function create()
+    {
+        $projects = Projects::orderby('id','desc')->get();
+
+        return view('backend.custom_payment.create',[
+            'projects' => $projects
+        ]);
+    }
+
+    public function getdetails(Request $request)
+    {       
+        $data = BillingInvoice::get();
+        return DataTables::of($data)            
+            ->addColumn('status', function($data){
+                if($data->status == 'Pending'){
+                    $status = '<span class="badge badge-warning">Pending</span>';
+                }
+                else{
+                    $status = '<span class="badge badge-success">Paid</span>';
+                }   
+                return $status;
+            })
+            ->addColumn('action', function($data){
+                $button = '<a href="'.route('admin.custom_payment.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
+                $button .= '<a href="'.route('admin.custom_payment.view',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-success btn-sm" style="margin-right: 10px"><i class="fas fa-file"></i> View </a>';
+                $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
+                return $button;
+                })
+            ->rawColumns(['action','status'])
+            ->make(true);
+        
+        return back();
+    }
+
+    public function store(Request $request)
+    {        
+        // dd($request);  
+        
+        $add = new BillingInvoice;
+
+        $add->project_id = $request->project_id;        
+        $add->due_date = $request->due_date;
+        $add->payment_status = $request->payment_status;
+        $add->purchased_service_list = $request->purchased_service_list;
+        $add->discount_type = $request->discount_type;
+        $add->discount = $request->discount;
+        $add->date = $request->date;
+        $add->invoice_no = $request->invoice_no;
+        $add->state = $request->state;
+        $add->city = $request->city;
+        $add->country = $request->country;
+        $add->name = $request->name;
+        $add->purchased_package = $request->purchased_package;
+        $add->price = $request->price;
+        $add->payment_plan = $request->payment_plan;
+        $add->payment_method = $request->payment_method;
+        $add->expire_date = $request->expire_date;
+        $add->phone_number = $request->phone_number;
+        $add->address = $request->address;
+        $add->user_id = auth()->user()->id;
+        $add->status = 'Pending';
+
+        $add->save();
+
+        return redirect()->route('admin.custom_payment.index')->withFlashSuccess('Added Successfully');    
+                    
+    }
+
+    public function edit($id)
+    {
+        $custom_payment = BillingInvoice::where('id',$id)->first(); 
+        $projects = Projects::orderby('id','desc')->get();
+
+        return view('backend.custom_payment.edit',[
+            'custom_payment' => $custom_payment,
+            'projects' => $projects
+        ]);
+    }
+
+    public function view($id)
+    {
+       // dd($id);
+        $billing_invoice = BillingInvoice::where('id',$id)->first(); 
+        $project = Projects::where('id',$billing_invoice->project_id)->first();
+        // dd($billing_invoice);
+
+        $user = User::where('id',$billing_invoice->id)->first();
+
+        $data = [
+            'created_at' => $billing_invoice->created_at->format('d M Y'),
+            'purchased_package' => $billing_invoice->purchased_package,
+            'price' => $billing_invoice->price,
+            'invoice_id' => $billing_invoice->id,
+            'payment_plan' => $billing_invoice->payment_plan,
+            'payment_method' => $billing_invoice->payment_method,
+            'phone_number' => $billing_invoice->phone_number,
+            'address' => $billing_invoice->address,
+            'status' => $billing_invoice->status,
+            'name' => $billing_invoice->name,
+            'project_name' => $project->name,
+            'country' => $billing_invoice->country,
+            'state' => $billing_invoice->state,
+            'city' => $billing_invoice->city,
+            'discount' => $billing_invoice->discount,
+            'date' => $billing_invoice->date,
+            'expire_date' => $billing_invoice->expire_date,
+            'due_date' => $billing_invoice->due_date,
+            'discount_type' => $billing_invoice->discount_type,
+            'payment_status' => $billing_invoice->payment_status,
+            'purchased_service_list' => $billing_invoice->purchased_service_list,
+            'invoice_no' => $billing_invoice->invoice_no,
+            'email' => $user->email
+        ];
+
+        $pdf = PDF::loadView('custom_payment',$data);
+
+        return $pdf->download('custom_payment.pdf');
+    }
+
+    
+
+    public function update(Request $request)
+    {        
+        // dd($request);                         
+     
+        $update = new BillingInvoice;
+
+        $update->project_id = $request->project_id;        
+        $update->due_date = $request->due_date;
+        $update->payment_status = $request->payment_status;
+        $update->purchased_service_list = $request->purchased_service_list;
+        $update->discount_type = $request->discount_type;
+        $update->discount = $request->discount;
+        $update->date = $request->date;
+        $update->invoice_no = $request->invoice_no;
+        $update->state = $request->state;
+        $update->city = $request->city;
+        $update->country = $request->country;
+        $update->name = $request->name;
+        $update->purchased_package = $request->purchased_package;
+        $update->price = $request->price;
+        $update->payment_plan = $request->payment_plan;
+        $update->payment_method = $request->payment_method;
+        $update->expire_date = $request->expire_date;
+        $update->phone_number = $request->phone_number;
+        $update->address = $request->address;
+        $update->user_id = auth()->user()->id;
+        $update->status = 'Pending';
+
+        BillingInvoice::whereId($request->hidden_id)->update($update->toArray());
+
+        return redirect()->route('admin.custom_payment.index')->withFlashSuccess('Updated Successfully');            
+
+    }
+
+    public function destroy($id)
+    {
+        BillingInvoice::where('id', $id)->delete(); 
+    }
+}
