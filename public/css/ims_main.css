@@ -558,7 +558,7 @@
     border-right: none;
     border-bottom: none;
     border-left: none;
-    border-top: 4px solid #017FFA;
+    /* border-top: 4px solid #017FFA; */
     -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -737,7 +737,7 @@
 .ims__section .ims__control-panel .ims__data-table {
     margin: 1rem 0;
     max-height: 70vh;
-    overflow-y: scroll;
+    overflow: scroll;
 }
 
 .ims__section .ims__control-panel .ims__data-table::-webkit-scrollbar {
@@ -2460,12 +2460,14 @@
     background-color: #fff;
     padding: 1rem;
     width: 100%;
+    row-gap: 1rem;
 }
 
 .history-overview-block .info-blocks .info-block {
     flex: 0 0 12.5%;
     padding: 1rem;
     position: relative;
+    min-width: 113px;
 }
 
 .history-overview-block .info-blocks .info-block:not(:nth-last-child(1)) {
@@ -2487,6 +2489,7 @@
     font-size: .8rem;
     font-weight: 300;
     margin-bottom: .25rem;
+    height: 40px;
 }
 
 .history-overview-block .info-blocks .info-block .progress {
@@ -2642,6 +2645,7 @@
 .broadcast-list-section .body .broadcast-list-table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 1000px;
 }
 
 .broadcast-list-section .body .broadcast-list-table thead th {
@@ -3015,6 +3019,101 @@
 
 .new-template-btn:hover {
     color: #fff;
+}
+
+@media screen and (max-width: 1199px) {
+    .ims__side-col {
+        display: none;
+    }
+
+    .ims__main-col {
+        width: 100%;
+    }
+
+    .ims__section .ims__navbar {
+        display: none;
+    }
+
+    .ims__section .ims__control-panel .ims__data-table .table {
+        min-width: 1000px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .broadcast-list-section .header {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: .5rem;
+    }
+
+    .new-br-modal {
+        overflow-y: scroll !important;
+    }
+
+    .new-br-modal .modal-dialog .modal-content .inner-wrapper {
+        flex-direction: column;
+    }
+
+    .new-br-modal .modal-dialog .modal-content .inner-wrapper .preview-block .wrapper {
+        width: 80%;
+        padding: 3rem 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .ims__section .ims__body-container {
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    .history-header .welcome-block {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .history-header .welcome-block .image-block {
+        flex: unset;
+        height: 200px;
+    }
+
+    .history-header .welcome-block .content-block {
+        text-align: center;
+    }
+
+    .history-header .welcome-block .content-block .cta-btn {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .ims__section .ims__control-panel .control-block {
+        flex-wrap: wrap;
+    }
+
+    .ims__section .ims__control-panel .control-block .actions {
+        flex: 1 1 80%;
+    }
+
+    .btn-status-report {
+        margin-left: 0 !important;
+    }
+
+    .history-header .welcome-block .content-block .title {
+        font-size: 1.1rem;
+    }
+
+    .history-header .welcome-block .content-block .text {
+        font-size: 0.8rem;
+    }
+
+    .history-overview-block {
+        flex-direction: column;
+    }
+
+    .broadcast-list-section .header .filter-block:nth-child(1) {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: .5rem;
+    }
 }
 
 /*# sourceMappingURL=ims_main.css.map */

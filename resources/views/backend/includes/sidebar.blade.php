@@ -155,6 +155,25 @@
                 </ul>
             </li>
 
+            <li class="nav-item nav-dropdown ">
+                <a class="nav-link nav-dropdown-toggle " href="#">
+                    <i class="nav-icon fas fa-dollar-sign"></i>
+                    Payments
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/help_category'))}}" href="{{ route('admin.help_category.index') }}">
+                            Project Payment
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/custom_payment'))}}" href="{{ route('admin.custom_payment.index') }}">
+                            Custom Payment
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link {{active_class(Route::is('admin/contact_us'))}}" href="{{ route('admin.contact_us.index') }}">
                     <i class="nav-icon fas fa-comments"></i>

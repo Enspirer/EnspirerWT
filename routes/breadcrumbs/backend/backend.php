@@ -174,3 +174,15 @@ Breadcrumbs::for('admin.projects.heatmap', function ($trail) {
 Breadcrumbs::for('admin.projects.heatmap_edit', function ($trail) {
     $trail->push('Show', route('admin.projects.heatmap_edit',1));
 });
+
+
+Breadcrumbs::for('admin.custom_payment.index', function ($trail) {
+    $trail->push('Custom Payment', route('admin.custom_payment.index'));
+});
+Breadcrumbs::for('admin.custom_payment.create', function ($trail) {
+    $trail->push('Create Custom Payment', route('admin.custom_payment.create'));
+});
+Breadcrumbs::for('admin.custom_payment.edit', function ($trail) {
+    $trail->push('Edit Custom Payment', route('admin.custom_payment.edit',1));
+});
+

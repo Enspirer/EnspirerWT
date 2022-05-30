@@ -18,6 +18,7 @@ use App\Http\Controllers\Backend\PushNotificationController;
 use App\Http\Controllers\Backend\TallentorDemoController;
 use App\Http\Controllers\Backend\SeoManagementController;
 use App\Http\Controllers\Backend\PrivacyController;
+use App\Http\Controllers\Backend\CustomPaymentController;
 
 
 
@@ -166,5 +167,13 @@ Route::post('privacy/update', [PrivacyController::class, 'update'])->name('priva
 Route::get('privacy/delete/{id}', [PrivacyController::class, 'destroy'])->name('privacy.destroy');
 
 
+Route::get('custom_payment', [CustomPaymentController::class, 'index'])->name('custom_payment.index');
+Route::get('custom_payment/create', [CustomPaymentController::class, 'create'])->name('custom_payment.create');
+Route::post('custom_payment/store', [CustomPaymentController::class, 'store'])->name('custom_payment.store');
+Route::get('custom_payment/getdetails', [CustomPaymentController::class, 'getdetails'])->name('custom_payment.getdetails');
+Route::get('custom_payment/edit/{id}', [CustomPaymentController::class, 'edit'])->name('custom_payment.edit');
+Route::get('custom_payment/view/{id}', [CustomPaymentController::class, 'view'])->name('custom_payment.view');
+Route::post('custom_payment/update', [CustomPaymentController::class, 'update'])->name('custom_payment.update');
+Route::get('custom_payment/delete/{id}', [CustomPaymentController::class, 'destroy'])->name('custom_payment.destroy');
 
 
