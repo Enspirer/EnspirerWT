@@ -168,22 +168,22 @@
 
 .hero-section .slide-wrapper .image-block .tile {
     position: absolute;
-    width: 17%;
+    width: 20%;
     box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-section .slide-wrapper .image-block .tile.tile-1 {
-    right: 56%;
-    bottom: 10%;
+    right: 65%;
+    bottom: 5%;
 }
 
 .hero-section .slide-wrapper .image-block .tile.tile-2 {
-    right: 38%;
+    right: 44%;
 }
 
 .hero-section .slide-wrapper .image-block .tile.tile-3 {
-    right: 20%;
-    bottom: 10%;
+    right: 23%;
+    bottom: 5%;
 }
 
 .hero-section .slide-wrapper .image-block .tile.tile-4 {
@@ -1314,19 +1314,19 @@
     }
 
     .hero-section .slide-wrapper .image-block .tile.tile-1 {
-        right: 66%;
+        right: 72%;
     }
 
     .hero-section .slide-wrapper .image-block .tile.tile-2 {
-        right: 48%;
+        right: 50%;
     }
 
     .hero-section .slide-wrapper .image-block .tile.tile-3 {
-        right: 30%;
+        right: 28%;
     }
 
     .hero-section .slide-wrapper .image-block .tile.tile-4 {
-        right: 12%;
+        right: 6%;
     }
 }
 
@@ -1382,8 +1382,27 @@
         gap: 1rem;
     }
 
+    .hero-section .slide-wrapper .content-block .inner-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 1rem;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    .hero-section .slide-wrapper .content-block .inner-wrapper .tallentor {
+        font-size: 28px;
+        line-height: 1;
+    }
+
+    .hero-section .slide-wrapper .content-block .inner-wrapper .is-now-in {
+        font-size: 20px;
+        line-height: 1;
+    }
+
     .hero-section .slide-wrapper .content-block .inner-wrapper .dubai {
-        font-size: 90px;
+        font-size: 74px;
     }
 }
 

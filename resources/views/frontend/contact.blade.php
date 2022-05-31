@@ -18,28 +18,28 @@
                     <img src="{{url('images/landing_page/contact_us/uae.png')}}" alt="">
                 </div>                
                 <div class="title">Tallentor International</div>
-                <div class="address">B2, 202, Jumeirah village circle, Dubai.<span>UAE</span></div>
+                <div class="address">B2, 202, Jumeirah village circle, <br>Dubai.<span>UAE</span></div>
                 <a href="tel:+971583017648" class="phone">+971 58 301 7648</a>
                 <a href="mailto:dubai@tallentor.com" class="email">dubai@tallentor.com</a>
             </div>
             <div class="branch-card">
                 <div class="image-block">
                     <img src="{{url('images/landing_page/contact_us/aus.png')}}" alt="">
+                    <div class="subtitle">Head Office</div>
                 </div>                
                 <div class="title">Tallentor International</div>
-                <div class="address">19 Koombahla Court, Rowville, Victoria 3178,<span>Australia</span></div>
+                <div class="address">19 Koombahla Court, Rowville, <br>Victoria 3178,<span>Australia</span></div>
                 <a href="tel:+61435975999" class="phone">+61 43 597 5999</a>
                 <a href="mailto:info@tallentor.com" class="email">info@tallentor.com</a>
             </div>
             <div class="branch-card">
                 <div class="image-block">
                     <img src="{{url('images/landing_page/contact_us/uk.png')}}" alt="">
-                    <div class="subtitle">Head Office</div>
                 </div>                
-                <div class="title">Enspirer International</div>
-                <div class="address">35 Melbourne Avenue London W13 9BX,<span>United Kingdom</span></div>
+                <div class="title">Tallentor International</div>
+                <div class="address">35 Melbourne Avenue <br>London W13 9BX,<span>UK</span></div>
                 <a href="tel:+447741025138" class="phone">+44 774 102 5138</a>
-                <a href="mailto:uk@enspirer.com" class="email">uk@enspirer.com</a>
+                <a href="mailto:uk@tallentor.com" class="email">uk@tallentor.com</a>
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@
                         <div class="text">Fill up the form and our Team will get back <br> to you within 24 hours.</div>
                     </div>
                     <div class="social address">
-                        <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank" class="contact-link" target="_blank">
+                        <a href="https://web.whatsapp.com/send?phone=971583017648" target="_blank" class="contact-link" target="_blank">
                             <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
                             <div class="text">Chat on WhatsApp</div>
                         </a>

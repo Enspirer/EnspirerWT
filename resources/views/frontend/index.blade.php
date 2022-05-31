@@ -600,7 +600,7 @@
     
 const heroSlider = new Splide('#heroSlider', {
     type: 'fade',
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     rewind: true,
     classes: {
