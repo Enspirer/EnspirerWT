@@ -105,7 +105,7 @@
 }
 
 .form-section {
-    padding: 10rem 0 5rem;
+    padding: 5rem 0 5rem;
     background-color: #02044A;
 }
 
@@ -369,6 +369,84 @@
     color: #333;
 }
 
+.branch-section {
+    margin: 10rem 0 5rem;
+}
+
+.branch-section .header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.branch-section .inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.branch-section .inner-wrapper .branch-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.branch-section .inner-wrapper .branch-card:hover {
+    border: 1px solid #017FFA;
+    box-shadow: 2px 4px 15px rgba(1, 127, 250, 0.23);
+}
+
+.branch-section .inner-wrapper .branch-card .image-block {
+    height: 270px;
+    position: relative;
+}
+
+.branch-section .inner-wrapper .branch-card .image-block .subtitle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: .9rem;
+    font-weight: 400;
+    color: #00AEEF;
+}
+
+.branch-section .inner-wrapper .branch-card .title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.branch-section .inner-wrapper .branch-card .address {
+    font-size: .9rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.branch-section .inner-wrapper .branch-card .address span {
+    font-size: .9rem;
+    font-weight: 500;
+    color: #333;
+    margin-left: .25rem;
+}
+
+.branch-section .inner-wrapper .branch-card a {
+    display: block;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 400;
+    color: #00AEEF;
+}
+
 @media screen and (max-width: 1199px) {
     .form-section .inner-wrapper .background-img {
         width: 60%;
@@ -395,6 +473,11 @@
 
     .form-section .inner-wrapper {
         margin-top: 3rem;
+    }
+
+    .branch-section .inner-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
