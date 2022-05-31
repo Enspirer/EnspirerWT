@@ -17,7 +17,7 @@
                         <li class="splide__slide">
                             <div class="slide-wrapper">
                                 <div class="content-block">
-                                    <div class="inner-wrapper">
+                                    <div class="inner-wrapper uae-wrapper">
                                         <div class="tallentor">Tallentor</div>
                                         <div class="is-now-in">Is now in</div>
                                         <div class="dubai">Dubai</div>

@@ -1382,7 +1382,7 @@
         gap: 1rem;
     }
 
-    .hero-section .slide-wrapper .content-block .inner-wrapper {
+    .hero-section .slide-wrapper .content-block .uae-wrapper {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -1391,17 +1391,17 @@
         justify-content: center;
     }
 
-    .hero-section .slide-wrapper .content-block .inner-wrapper .tallentor {
+    .hero-section .slide-wrapper .content-block .uae-wrapper .tallentor {
         font-size: 28px;
         line-height: 1;
     }
 
-    .hero-section .slide-wrapper .content-block .inner-wrapper .is-now-in {
+    .hero-section .slide-wrapper .content-block .uae-wrapper .is-now-in {
         font-size: 20px;
         line-height: 1;
     }
 
-    .hero-section .slide-wrapper .content-block .inner-wrapper .dubai {
+    .hero-section .slide-wrapper .content-block .uae-wrapper .dubai {
         font-size: 74px;
     }
 }
