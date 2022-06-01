@@ -310,18 +310,18 @@
                         </ul>
                     </div>
                     <div class="info-block active">
-                        <div class="image-block" style="border-right:none">
-                            <img src="{{url('images/landing_page/nav/marketplace.png')}}">
+                        <div class="image-block" style="border-right:none;">
+                            <img src="{{url('images/landing_page/nav/marketplace.png')}}" style="margin-left:7.5rem;">
                         </div>
                     </div>
                     <div class="info-block">
-                        <div class="image-block" style="border-right:none">
-                            <img src="{{url('images/landing_page/nav/portfolio.png')}}">
+                        <div class="image-block" style="border-right:none;">
+                            <img src="{{url('images/landing_page/nav/portfolio.png')}}" style="margin-left:7.5rem;">
                         </div>
                     </div>
                     <div class="info-block">
-                        <div class="image-block" style="border-right:none">
-                            <img src="{{url('images/landing_page/nav/expert-center.png')}}">
+                        <div class="image-block" style="border-right:none;">
+                            <img src="{{url('images/landing_page/nav/expert-center.png')}}" style="margin-left:7.5rem;">
                         </div>
                     </div>
                 </div>
