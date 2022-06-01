@@ -34,77 +34,94 @@
 
                     <section class="custom-invoice">
                         <div class="header">
-                            <div class="title">Good Morning, Jhone</div>
+                            <div class="title">Good Morning, {{auth()->user()->first_name}}</div>
                             <div class="subtitle">Here's your websites situation for today.</div>
                         </div>
 
-                        <div class="table-block">
-                            <div class="controls">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" data-check-all>
-                                    <label class="form-check-label">
-                                        <i class="bi bi-chevron-down"></i>
-                                    </label>
+                        @if(count($custom_invoice) == 0)
+                            @include('frontend.includes.not_found',[
+                                'not_found_title' => 'Data not found',
+                                'not_found_description' => null,
+                                'not_found_button_caption' => null
+                            ])
+						@else                        
+                            <div class="table-block">
+                                <div class="controls">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" data-check-all>
+                                        <label class="form-check-label">
+                                            <i class="bi bi-chevron-down"></i>
+                                        </label>
+                                    </div>
+                                    <button type="button">
+                                        <i class="bi bi-arrow-clockwise"></i>
+                                    </button>
+                                    <button type="button">
+                                        <i class="bi bi-trash"></i>
+                                        Delete
+                                    </button>
+                                    <button type="button">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
                                 </div>
-                                <button type="button">
-                                    <i class="bi bi-arrow-clockwise"></i>
-                                </button>
-                                <button type="button">
-                                    <i class="bi bi-trash"></i>
-                                    Delete
-                                </button>
-                                <button type="button">
-                                    <i class="bi bi-three-dots"></i>
-                                </button>
+                                <div class="inner-wrapper">
+                                    <table class="invoice-table">
+                                        <thead>
+                                            <th></th>
+                                            <th>Invoice ID</th>
+                                            <th>Status</th>
+                                            <th>Sent Date</th>
+                                            <th>Due Date</th>
+                                            <th>Note</th>
+                                            <th>Amount</th>
+                                            <th></th>
+                                            <th></th>
+                                        </thead>
+                                        @foreach($custom_invoice as $custom)
+                                            <tbody>                                        
+                                                    <td>
+                                                        <input class="form-check-input" type="checkbox" data-check>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text">{{$custom->invoice_no}}</div>
+                                                    </td>
+                                                    <td>
+                                                        @if($custom->status == 'Paid')
+                                                            <div class="" style="font-size: 1rem; color: #2e991b">
+                                                                <i class="bi bi-coin"></i>
+                                                                Paid
+                                                            </div>
+                                                        @else
+                                                            <div class="status">
+                                                                <i class="bi bi-exclamation-circle-fill"></i>
+                                                                Unpaid
+                                                            </div>
+                                                        @endif
+                                                    </td>
+                                                    <td>
+                                                        <div class="text">{{$custom->date}}</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text">{{$custom->due_date}}</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text">You have to pay within ...</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text">${{$custom->price}}</div>
+                                                    </td>
+                                                    <td>
+                                                        <a href="{{route('frontend.user.view_custom_invoice')}}" class="view">View Invoice</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="btn-pay" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay Now</a>
+                                                    </td>
+                                            </tbody>
+                                        @endforeach
+                                    </table>
+                                </div>
                             </div>
-                            <div class="inner-wrapper">
-                                <table class="invoice-table">
-                                    <thead>
-                                        <th></th>
-                                        <th>Invoice ID</th>
-                                        <th>Status</th>
-                                        <th>Sent Date</th>
-                                        <th>Due Date</th>
-                                        <th>Note</th>
-                                        <th>Amount</th>
-                                        <th></th>
-                                        <th></th>
-                                    </thead>
-                                    <tbody>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" data-check>
-                                        </td>
-                                        <td>
-                                            <div class="text">INV-2022-00</div>
-                                        </td>
-                                        <td>
-                                            <div class="status">
-                                                <i class="bi bi-exclamation-circle-fill"></i>
-                                                Unpaid
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text">18, Feb 2022</div>
-                                        </td>
-                                        <td>
-                                            <div class="text">18, Feb 2022</div>
-                                        </td>
-                                        <td>
-                                            <div class="text">You have to pay within ...</div>
-                                        </td>
-                                        <td>
-                                            <div class="text">$ 20.00</div>
-                                        </td>
-                                        <td>
-                                            <a href="{{route('frontend.user.view_custom_invoice')}}" class="view">View Invoice</a>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn-pay" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay Now</a>
-                                        </td>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        @endif
                     </section>
 
                 </div>

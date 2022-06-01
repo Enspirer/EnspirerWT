@@ -51,7 +51,12 @@ class BillingController extends Controller
     }
 
     public function custom_invoice() {   
-        return view('frontend.user.billing.custom_invoice');
+
+        $custom_invoice = BillingInvoice::where('user_id',auth()->user()->id)->where('purchased_service_list','!=',null)->get();
+// dd($custom_invoice);
+        return view('frontend.user.billing.custom_invoice',[
+            'custom_invoice' => $custom_invoice
+        ]);
     }
 
     public function view_custom_invoice() {  
