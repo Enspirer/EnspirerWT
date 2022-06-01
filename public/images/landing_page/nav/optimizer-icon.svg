@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.015" height="42.482" viewBox="0 0 44.015 42.482">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_3098" data-name="Group 3098" transform="translate(1 1)">
+    <path id="Rectangle_1363" data-name="Rectangle 1363" class="cls-1" d="M2-1H18.855V15.855a3,3,0,0,1-3,3H-1V2A3,3,0,0,1,2-1ZM16.855,1H2A1,1,0,0,0,1,2V16.855H15.855a1,1,0,0,0,1-1Z" transform="translate(0 0.651)"/>
+    <path id="Rectangle_1364" data-name="Rectangle 1364" class="cls-1" d="M-1-1H15.855a3,3,0,0,1,3,3V17.482H2a3,3,0,0,1-3-3ZM16.855,15.482V2a1,1,0,0,0-1-1H1V14.482a1,1,0,0,0,1,1Z" transform="translate(0 24)"/>
+    <path id="Rectangle_1362" data-name="Rectangle 1362" class="cls-1" d="M2-1H18.855V14.482a3,3,0,0,1-3,3H-1V2A3,3,0,0,1,2-1ZM16.855,1H2A1,1,0,0,0,1,2V15.482H15.855a1,1,0,0,0,1-1Z" transform="translate(23.349 24)"/>
+    <path id="Line_571" data-name="Line 571" class="cls-1" d="M18.675,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H18.675a1,1,0,0,1,1,1A1,1,0,0,1,18.675,1Z" transform="translate(23.34 16.553)"/>
+    <path id="Line_572" data-name="Line 572" class="cls-1" d="M18.675,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H18.675a1,1,0,0,1,1,1A1,1,0,0,1,18.675,1Z" transform="translate(23.34 9.338)"/>
+    <path id="Path_7624" data-name="Path 7624" class="cls-1" transform="translate(21.289 9.338)"/>
+    <path id="Line_574" data-name="Line 574" class="cls-1" d="M18.675,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H18.675a1,1,0,0,1,1,1A1,1,0,0,1,18.675,1Z" transform="translate(23.34 2.547)"/>
+    <circle id="Ellipse_421" data-name="Ellipse 421" class="cls-1" cx="2.06" cy="2.06" r="2.06" transform="translate(26.736 0)"/>
+    <path id="Ellipse_421_-_Outline" data-name="Ellipse 421 - Outline" class="cls-1" d="M2.06-1A3.06,3.06,0,1,1-1,2.06,3.064,3.064,0,0,1,2.06-1Zm0,4.12A1.06,1.06,0,1,0,1,2.06,1.061,1.061,0,0,0,2.06,3.12Z" transform="translate(26.736 0)"/>
+    <circle id="Ellipse_422" data-name="Ellipse 422" class="cls-1" cx="2.06" cy="2.06" r="2.06" transform="translate(32.964 7.518)"/>
+    <path id="Ellipse_422_-_Outline" data-name="Ellipse 422 - Outline" class="cls-1" d="M2.06-1A3.06,3.06,0,1,1-1,2.06,3.064,3.064,0,0,1,2.06-1Zm0,4.12A1.06,1.06,0,1,0,1,2.06,1.061,1.061,0,0,0,2.06,3.12Z" transform="translate(32.964 7.518)"/>
+    <circle id="Ellipse_423" data-name="Ellipse 423" class="cls-1" cx="2.06" cy="2.06" r="2.06" transform="translate(26.736 14.385)"/>
+    <path id="Ellipse_423_-_Outline" data-name="Ellipse 423 - Outline" class="cls-1" d="M2.06-1A3.06,3.06,0,1,1-1,2.06,3.064,3.064,0,0,1,2.06-1Zm0,4.12A1.06,1.06,0,1,0,1,2.06,1.061,1.061,0,0,0,2.06,3.12Z" transform="translate(26.736 14.385)"/>
+  </g>
+</svg>

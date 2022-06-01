@@ -257,6 +257,40 @@
 	}
     </script>
 
+<script>
+    
+const megaMenuFn = () => {
+    const ids = ['productsNavModal', 'servicesNavModal']
+
+    ids.forEach((id) => {
+        const megaMenu = document.getElementById(id)
+        const navLink = megaMenu.querySelectorAll(".nav-link")
+        const infoBlock = megaMenu.querySelectorAll(".info-block")
+
+        navLink.forEach((link, index) => {
+            const block = infoBlock[index]
+
+            link.addEventListener('mouseover', () => {
+
+                navLink.forEach((link) => {
+                    link.classList.remove("active")
+                })
+
+                infoBlock.forEach((block) => {
+                    block.classList.remove("active")
+                })
+
+                link.classList.add("active")
+                block.classList.add("active")
+            })
+        })
+    })
+}
+
+window.addEventListener('DOMContentLoaded', megaMenuFn())
+
+</script>
+
         @include('includes.partials.ga')
     </body>
 </html>
