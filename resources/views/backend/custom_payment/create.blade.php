@@ -390,7 +390,7 @@
                                                 <td>Total</td>
                                                 <td>Price</td>
                                                 <td>
-                                                    <a href="" class="btn btn-primary">Delete</a>
+                                                    <button type="button" class="btn btn-primary remove">Delete</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -455,7 +455,7 @@
                     '<td>'+ Number(discount).toFixed(2)+ '</td>' +
                     '<td>'+ Number(gettotal).toFixed(2) + '</td>' +
                     '<td>' +
-                        '<a href="#" class="btn btn-primary">Delete</a>' +
+                        '<button type="button" class="btn btn-primary remove" onclick="delete_service('+ id +','+ gettotal +')">Delete</button>' +
                     '</td>' +
                 '</tr>' +
                     '<input type="hidden" name="service_name[]" value="'+ service_name +'">' +
@@ -480,6 +480,30 @@
           insert_item(element_id,total_amount,service_name,discount);
 
 
+        }
+
+        function delete_service(elementId,price){
+            
+            alert(elementId);
+            alert(price);
+                // alert($(this).closest("tr"));
+
+                var total_amount = $('#total_amount').val();
+                var full_total = $('#full_total').val();
+                // alert(total_amount);
+                // alert(full_total);
+
+                totalvalue =  full_total - total_amount;
+                // alert(totalvalue);
+
+                full_total.val(totalvalue);
+                        
+
+
+                $(this).closest("tr").remove();
+
+
+           
         }
 
 

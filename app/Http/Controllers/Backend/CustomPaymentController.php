@@ -53,29 +53,38 @@ class CustomPaymentController extends Controller
 
     public function store(Request $request)
     {        
-        // dd($request);  
-        
+        // dd($request);
+
+        $json_output = [
+            'service_name' => $request->service_name,
+            'amount' => $request->amount,
+            'total' => $request->total
+        ];
+
+
         $add = new BillingInvoice;
 
-        $add->project_id = $request->project_id;        
+        // $add->project_id = $request->project_id;     
         $add->due_date = $request->due_date;
         $add->payment_status = $request->payment_status;
-        $add->purchased_service_list = $request->purchased_service_list;
-        $add->discount_type = $request->discount_type;
-        $add->discount = $request->discount;
-        $add->date = $request->date;
         $add->invoice_no = $request->invoice_no;
+
+        $add->purchased_service_list = json_encode($json_output);
         $add->state = $request->state;
         $add->city = $request->city;
         $add->country = $request->country;
         $add->name = $request->name;
-        $add->purchased_package = $request->purchased_package;
-        $add->price = $request->price;
-        $add->payment_plan = $request->payment_plan;
-        $add->payment_method = $request->payment_method;
-        $add->expire_date = $request->expire_date;
         $add->phone_number = $request->phone_number;
         $add->address = $request->address;
+        $add->payment_plan = $request->payment_plan;
+        $add->discount_type = $request->discount_type;
+        $add->discount = $request->discount;
+        $add->date = $request->date;
+
+        $add->purchased_package = $request->purchased_package;
+        $add->price = $request->price;        
+        $add->payment_method = $request->payment_method;
+        $add->expire_date = $request->expire_date;
         $add->user_id = auth()->user()->id;
         $add->status = 'Pending';
 
