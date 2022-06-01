@@ -35,31 +35,33 @@
 
                         <div class="title" style="font-size: 22px;color: #333;">Tallentor Optimizer Features</div>
                         @if($project_optimizer != null)
-                            <div class="imsPro-section">
-                                <div class="inner-wrapper">
-                                    <div class="subtitle">Go to your</div>
-                                    <div class="title">IMS Pro</div>
-                                    <div class="option-block">
-                                        <div class="option">
-                                            <i class="bi bi-check-circle-fill"></i>
-                                            <div class="text">Realtime View + Invites</div>
+                            @can('ims_pro')
+                                <div class="imsPro-section">
+                                    <div class="inner-wrapper">
+                                        <div class="subtitle">Go to your</div>
+                                        <div class="title">IMS Pro</div>
+                                        <div class="option-block">
+                                            <div class="option">
+                                                <i class="bi bi-check-circle-fill"></i>
+                                                <div class="text">Realtime View + Invites</div>
+                                            </div>
+                                            <div class="option">
+                                                <i class="bi bi-check-circle-fill"></i>
+                                                <div class="text">Heatmaps</div>
+                                            </div>
+                                            <div class="option">
+                                                <i class="bi bi-check-circle-fill"></i>
+                                                <div class="text">Session Recording</div>
+                                            </div>
+                                            <div class="option">
+                                                <i class="bi bi-check-circle-fill"></i>
+                                                <div class="text">Analytics Center</div>
+                                            </div>
                                         </div>
-                                        <div class="option">
-                                            <i class="bi bi-check-circle-fill"></i>
-                                            <div class="text">Heatmaps</div>
-                                        </div>
-                                        <div class="option">
-                                            <i class="bi bi-check-circle-fill"></i>
-                                            <div class="text">Session Recording</div>
-                                        </div>
-                                        <div class="option">
-                                            <i class="bi bi-check-circle-fill"></i>
-                                            <div class="text">Analytics Center</div>
-                                        </div>
+                                        <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" class="ims-btn">IMS Pro</a>
                                     </div>
-                                    <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" class="ims-btn">IMS Pro</a>
                                 </div>
-                            </div>
+                            @endcan
                         @else
 
 
@@ -67,84 +69,128 @@
 
 
                         @if(App\Models\Projects::where('id',$project_id)->where('selected_package','Optimizer')->first() != null)
-                            <div class="realtime-table">
-                                <div class="header">
-                                    <div class="title">Realtime View</div>
-                                    <!-- <div class="filter-block">
-                                        <div class="filter-group">
-                                            <div class="dropdown filter-dropdown status-drop">
-                                                <a class="filter-button status-btn" href="#" role="button" id="statusDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Everyone
-                                                    <i class="bi bi-chevron-down"></i>
-                                                </a>
+                            @can('realtime')
+                                <div class="realtime-table">
+                                    <div class="header">
+                                        <div class="title">Realtime View</div>
+                                        <!-- <div class="filter-block">
+                                            <div class="filter-group">
+                                                <div class="dropdown filter-dropdown status-drop">
+                                                    <a class="filter-button status-btn" href="#" role="button" id="statusDrop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Everyone
+                                                        <i class="bi bi-chevron-down"></i>
+                                                    </a>
 
-                                                <ul class="dropdown-menu" aria-labelledby="statusDrop">
-                                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                </ul>
+                                                    <ul class="dropdown-menu" aria-labelledby="statusDrop">
+                                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="dropdown filter-dropdown date-drop">
+                                                    <a class="filter-button date-btn" href="#" role="button" id="dateDrop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Today
+                                                        <i class="bi bi-chevron-down"></i>
+                                                    </a>
+
+                                                    <ul class="dropdown-menu" aria-labelledby="dateDrop">
+                                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="dropdown filter-dropdown date-drop">
-                                                <a class="filter-button date-btn" href="#" role="button" id="dateDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Today
-                                                    <i class="bi bi-chevron-down"></i>
-                                                </a>
+                                            <div class="filter-group">
+                                                <div class="input-group">
+                                                    <input type="search" class="form-control" placeholder="Search">
+                                                    <i class="bi bi-search"></i>
+                                                </div>
+                                                <div class="dropdown filter-dropdown filter-drop">
+                                                    <a class="filter-button filter-btn" href="#" role="button" id="filterDrop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-funnel"></i>
+                                                    </a>
 
-                                                <ul class="dropdown-menu" aria-labelledby="dateDrop">
-                                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                </ul>
+                                                    <ul class="dropdown-menu" aria-labelledby="filterDrop">
+                                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="filter-group">
-                                            <div class="input-group">
-                                                <input type="search" class="form-control" placeholder="Search">
-                                                <i class="bi bi-search"></i>
-                                            </div>
-                                            <div class="dropdown filter-dropdown filter-drop">
-                                                <a class="filter-button filter-btn" href="#" role="button" id="filterDrop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <i class="bi bi-funnel"></i>
-                                                </a>
-
-                                                <ul class="dropdown-menu" aria-labelledby="filterDrop">
-                                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <div class="body">
-                                    @if(count($visitors_count) != 0)
-                                        <table class="table align-middle">
-                                            <thead class="tbl-header">
-                                            <tr class="tbl-row">
-                                                <td class="th-col"></td>
-                                                <td class="th-col">Country</td>
-                                                <td class="th-col">Status</td>
-                                                <td class="th-col">Key Event</td>
-                                                <td class="th-col">Pages</td>
-                                                <td class="th-col"></td>
-                                            </tr>
-                                            </thead>
-                                            <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
-
-                                            <tbody class="tbl-body" id="visitors_record">
-
-                                            @foreach($visitors_count as $visitors)
+                                        </div> -->
+                                    </div>
+                                    <div class="body">
+                                        @if(count($visitors_count) != 0)
+                                            <table class="table align-middle">
+                                                <thead class="tbl-header">
                                                 <tr class="tbl-row">
+                                                    <td class="th-col"></td>
+                                                    <td class="th-col">Country</td>
+                                                    <td class="th-col">Status</td>
+                                                    <td class="th-col">Key Event</td>
+                                                    <td class="th-col">Pages</td>
+                                                    <td class="th-col"></td>
+                                                </tr>
+                                                </thead>
+                                                <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
+
+                                                <tbody class="tbl-body" id="visitors_record">
+
+                                                @foreach($visitors_count as $visitors)
+                                                    <tr class="tbl-row">
+                                                        <td class="tb-col rt-flag">
+                                                            <img src="https://flagcdn.com/w40/{{strtolower($visitors->iso_code)}}.png" alt="">
+                                                        </td>
+                                                        <td class="tb-col rt-country">
+                                                            {{$visitors->ip_address}}
+                                                        </td>
+                                                        <td class="tb-col rt-status">
+                                                            <div class="status-block">
+                                                                <i class="bi bi-circle-fill"></i>
+                                                                <div class="text">Online</div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tb-col rt-keyEvent">
+                                                            <span class="event yellow">Product Viewed</span>
+                                                            <span class="event blue">Cart Viewed</span>
+                                                            <span class="event purple">Top CTA</span>
+                                                        </td>
+                                                        <td class="tb-col rt-pages">
+                                                            <div class="pages-count">10</div>
+                                                        </td>
+                                                        <td class="tb-col rt-invite">
+                                                            @if($visitors->chat_invite == null)
+                                                                <form action="{{route('user_optimizer.realtime_invite')}}" method="post" enctype="multipart/form-data">
+                                                                    {{csrf_field()}}
+
+                                                                    <input type="hidden" name="project_id" value="{{$project_id}}">
+                                                                    <input type="hidden" name="visitors_id" value="{{$visitors->id}}">
+                                                                    <button type="submit" style="border: none;" class="tbl-btn btn-invite">
+                                                                        <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
+                                                                        <div class="text">Invite</div>
+                                                                    </button>
+                                                                </form>
+                                                            @else
+                                                                <button type="submit" style="border: none;" class="tbl-btn btn-invite" disabled>
+                                                                    <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
+                                                                    <div class="text">Invited</div>
+                                                                </button>
+                                                            @endif
+                                                        </td>
+                                                        <input type="hidden" name="visitor_project_id" id="visitor_project_id" value="{{$visitors->project_id}}">
+                                                    </tr>
+                                                @endforeach
+                                                <!-- <tr class="tbl-row offline">
                                                     <td class="tb-col rt-flag">
-                                                        <img src="https://flagcdn.com/w40/{{strtolower($visitors->iso_code)}}.png" alt="">
+                                                        <img src="https://flagicons.lipis.dev/flags/4x3/sg.svg" alt="">
                                                     </td>
                                                     <td class="tb-col rt-country">
-                                                        {{$visitors->ip_address}}
+                                                        Singapore
                                                     </td>
                                                     <td class="tb-col rt-status">
                                                         <div class="status-block">
-                                                            <i class="bi bi-circle-fill"></i>
-                                                            <div class="text">Online</div>
+                                                            <i class="bi bi-circle"></i>
+                                                            <div class="text">Offline</div>
                                                         </div>
                                                     </td>
                                                     <td class="tb-col rt-keyEvent">
@@ -156,82 +202,40 @@
                                                         <div class="pages-count">10</div>
                                                     </td>
                                                     <td class="tb-col rt-invite">
-                                                        @if($visitors->chat_invite == null)
-                                                            <form action="{{route('user_optimizer.realtime_invite')}}" method="post" enctype="multipart/form-data">
-                                                                {{csrf_field()}}
-
-                                                                <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                                <input type="hidden" name="visitors_id" value="{{$visitors->id}}">
-                                                                <button type="submit" style="border: none;" class="tbl-btn btn-invite">
-                                                                    <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
-                                                                    <div class="text">Invite</div>
-                                                                </button>
-                                                            </form>
-                                                        @else
-                                                            <button type="submit" style="border: none;" class="tbl-btn btn-invite" disabled>
-                                                                <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
-                                                                <div class="text">Invited</div>
-                                                            </button>
-                                                        @endif
+                                                        <a href="#" class="tbl-btn btn-invite">
+                                                            <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
+                                                            <div class="text">Invite</div>
+                                                        </a>
                                                     </td>
-                                                    <input type="hidden" name="visitor_project_id" id="visitor_project_id" value="{{$visitors->project_id}}">
+                                                </tr> -->
+                                                </tbody>
+                                            </table>
+                                        @else
+                                            <table class="table align-middle">
+                                                <thead class="tbl-header">
+                                                <tr class="tbl-row">
+                                                    <td class="th-col"></td>
+                                                    <td class="th-col">Country</td>
+                                                    <td class="th-col">Status</td>
+                                                    <td class="th-col">Key Event</td>
+                                                    <td class="th-col">Pages</td>
+                                                    <td class="th-col"></td>
                                                 </tr>
-                                            @endforeach
-                                            <!-- <tr class="tbl-row offline">
-                                                <td class="tb-col rt-flag">
-                                                    <img src="https://flagicons.lipis.dev/flags/4x3/sg.svg" alt="">
-                                                </td>
-                                                <td class="tb-col rt-country">
-                                                    Singapore
-                                                </td>
-                                                <td class="tb-col rt-status">
-                                                    <div class="status-block">
-                                                        <i class="bi bi-circle"></i>
-                                                        <div class="text">Offline</div>
-                                                    </div>
-                                                </td>
-                                                <td class="tb-col rt-keyEvent">
-                                                    <span class="event yellow">Product Viewed</span>
-                                                    <span class="event blue">Cart Viewed</span>
-                                                    <span class="event purple">Top CTA</span>
-                                                </td>
-                                                <td class="tb-col rt-pages">
-                                                    <div class="pages-count">10</div>
-                                                </td>
-                                                <td class="tb-col rt-invite">
-                                                    <a href="#" class="tbl-btn btn-invite">
-                                                        <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
-                                                        <div class="text">Invite</div>
-                                                    </a>
-                                                </td>
-                                            </tr> -->
-                                            </tbody>
-                                        </table>
-                                    @else
-                                        <table class="table align-middle">
-                                            <thead class="tbl-header">
-                                            <tr class="tbl-row">
-                                                <td class="th-col"></td>
-                                                <td class="th-col">Country</td>
-                                                <td class="th-col">Status</td>
-                                                <td class="th-col">Key Event</td>
-                                                <td class="th-col">Pages</td>
-                                                <td class="th-col"></td>
-                                            </tr>
-                                            </thead>
-                                            <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
+                                                </thead>
+                                                <input type="hidden" name="visitor_proj" id="visitor_proj" value="{{$project_id}}">
 
-                                            <tbody class="tbl-body" id="visitors_record">
-                                            <tr class="tbl-row">
-                                                <td class="tb-col" colspan="6">
-                                                    <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    @endif
+                                                <tbody class="tbl-body" id="visitors_record">
+                                                <tr class="tbl-row">
+                                                    <td class="tb-col" colspan="6">
+                                                        <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        @endif
+                                    </div>
                                 </div>
-                            </div>
+                            @endcan
                         @endif
 
                         @if($project_optimizer != null)
@@ -239,10 +243,12 @@
                                 <div class="active-overlay animate__animated animate__fadeIn">
                                     <div class="button-block">
                                         <div class="btn-group">
-                                            <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" type="button" class="act-btn ims-pro">
-                                                <i class="bi bi-file-earmark-text"></i>
-                                                <div class="text">IMS Pro</div>
-                                            </a>
+                                            @can('ims_pro')
+                                                <a href="{{ route('frontend.user_widget.ims_pro_media_scan', $project_id) }}" type="button" class="act-btn ims-pro">
+                                                    <i class="bi bi-file-earmark-text"></i>
+                                                    <div class="text">IMS Pro</div>
+                                                </a>
+                                            @endcan
                                             <a href="{{ route('frontend.user.user_widget.settings', $all_in_one->id) }}" type="button" class="act-btn">
                                                 <i class="bi bi-gear"></i>
                                                 <div class="text">Widget Settings</div>

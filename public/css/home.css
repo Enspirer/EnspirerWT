@@ -694,6 +694,7 @@
 
 .marketplace-section {
     border-top: 1px solid #707070;
+    overflow: hidden;
 }
 
 .marketplace-section .inner-wrapper {

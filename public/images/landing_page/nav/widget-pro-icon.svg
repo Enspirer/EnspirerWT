@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42.209" height="40.868" viewBox="0 0 42.209 40.868">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Group_3100" data-name="Group 3100" transform="translate(-769.738 -169.219)">
+    <g id="Group_2248" data-name="Group 2248" transform="translate(770.738 170.218)">
+      <g id="Group_2247" data-name="Group 2247" transform="translate(0 0)">
+        <path id="Rectangle_1363" data-name="Rectangle 1363" class="cls-1" d="M2-1H18.424V15.424a3,3,0,0,1-3,3H-1V2A3,3,0,0,1,2-1ZM16.424,1H2A1,1,0,0,0,1,2V16.424H15.424a1,1,0,0,0,1-1Z" transform="translate(0 0)"/>
+        <path id="Rectangle_1364" data-name="Rectangle 1364" class="cls-1" d="M-1-1H15.424a3,3,0,0,1,3,3V17.083H2a3,3,0,0,1-3-3ZM16.424,15.083V2a1,1,0,0,0-1-1H1V14.083a1,1,0,0,0,1,1Z" transform="translate(0 22.785)"/>
+        <path id="Rectangle_1362" data-name="Rectangle 1362" class="cls-1" d="M2-1H18.424V14.083a3,3,0,0,1-3,3H-1V2A3,3,0,0,1,2-1ZM16.424,1H2A1,1,0,0,0,1,2V15.083H15.424a1,1,0,0,0,1-1Z" transform="translate(22.785 22.785)"/>
+        <path id="Path_7624" data-name="Path 7624" class="cls-1" transform="translate(20.242 8.477)"/>
+      </g>
+    </g>
+    <path id="Path_7625" data-name="Path 7625" class="cls-2" d="M13.277,5a1.655,1.655,0,0,1,1.655,1.655v4.966H19.9a1.655,1.655,0,0,1,0,3.311H14.932V19.9a1.655,1.655,0,0,1-3.311,0V14.932H6.655a1.655,1.655,0,1,1,0-3.311h4.966V6.655A1.655,1.655,0,0,1,13.277,5Z" transform="translate(789.799 164.751)"/>
+  </g>
+</svg>
