@@ -3,91 +3,117 @@
 <div class="section-cards" id="sectionCards">
     <div class="cards">
         @if(App\Models\Projects::where('id',$project_id)->first()->selected_package == 'Optimizer' || App\Models\Projects::where('id',$project_id)->first()->selected_package == 'All In One Widget + IMS Pro')
+            @can('widget_lite')
             <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
                 <a href="{{route('frontend.user.project.chat',$project_id)}}" class="card-link disabled">
                     <img src="{{url('images/dashboard/main/widget-lite.png')}}" alt="">
                     <div class="text">Widget Lite</div>
                 </a>
             </div>
+          @endcan
         @else
-            <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
-                <a href="{{route('frontend.user.project.chat',$project_id)}}" class="card-link">
-                    <img src="{{url('images/dashboard/main/widget-lite.png')}}" alt="">
-                    <div class="text">Widget Lite</div>
-                </a>
-            </div>
+            @can('widget_lite')
+                <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
+                    <a href="{{route('frontend.user.project.chat',$project_id)}}" class="card-link">
+                        <img src="{{url('images/dashboard/main/widget-lite.png')}}" alt="">
+                        <div class="text">Widget Lite</div>
+                    </a>
+                </div>
+            @endcan
+
         @endif
 
         @if(App\Models\Projects::where('id',$project_id)->first()->selected_package == 'Optimizer')
+          @can('widget_pro')
             <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
                 <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link disabled">
                     <img src="{{url('images/dashboard/main/widget-pro.png')}}" alt="">
                     <div class="text">Widget Pro</div>
                 </a>
             </div>
+           @endcan
         @else
-            <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
-                <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link">
-                    <img src="{{url('images/dashboard/main/widget-pro.png')}}" alt="">
-                    <div class="text">Widget Pro</div>
-                </a>
-            </div>
+            @can('widget_pro')
+                <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
+                    <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link">
+                        <img src="{{url('images/dashboard/main/widget-pro.png')}}" alt="">
+                        <div class="text">Widget Pro</div>
+                    </a>
+                </div>
+            @endcan
         @endif
 
         @if(App\Models\Projects::where('id',$project_id)->where('selected_package','Optimizer')->first() != null)
 
-            <div class="card {{Request::segment(3)=='optimizer' ? 'active tab-active' :null }}">
-                <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
-                    <img src="{{url('images/dashboard/main/optimizer.png')}}" alt="">
-                    <div class="text">Optimizer</div>
-                </a>
-            </div>
+            @can('optimizer')
+                <div class="card {{Request::segment(3)=='optimizer' ? 'active tab-active' :null }}">
+                    <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
+                        <img src="{{url('images/dashboard/main/optimizer.png')}}" alt="">
+                        <div class="text">Optimizer</div>
+                    </a>
+                </div>
+            @endcan
 
         @else
 
-            <div class="card {{Request::segment(3)=='optimizer' ? 'active' :null }}">
-                <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
-                    <img src="{{url('images/dashboard/main/optimizer.png')}}" alt="">
-                    <div class="text">Optimizer</div>
-                </a>
-            </div>
+           @can('optimizer')
 
-        @endif      
-            
-            <div class="card {{Request::segment(3)=='seo' ? 'active' :null }}">
-                <a href="{{ route('frontend.user.project.seo',$project_id) }}" class="card-link">
-                    <img src="{{url('images/dashboard/main/seo.png')}}" alt="">
-                    <div class="text">SEO</div>
-                </a>
-            </div>
+                <div class="card {{Request::segment(3)=='optimizer' ? 'active' :null }}">
+                    <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
+                        <img src="{{url('images/dashboard/main/optimizer.png')}}" alt="">
+                        <div class="text">Optimizer</div>
+                    </a>
+                </div>
+           @endcan
+
+        @endif
+
+            @can('seo')
+                <div class="card {{Request::segment(3)=='seo' ? 'active' :null }}">
+                    <a href="{{ route('frontend.user.project.seo',$project_id) }}" class="card-link">
+                        <img src="{{url('images/dashboard/main/seo.png')}}" alt="">
+                        <div class="text">SEO</div>
+                    </a>
+                </div>
+            @endcan
     </div>
 
     @if(App\Models\Projects::where('id',$project_id)->where('selected_package','Optimizer')->first() != null)
         <div class="tabs {{Request::segment(3)=='optimizer' ? 'active' :null }}">
+            @can('realtime')
             <div class="tab {{Request::segment(4)=='realtime' ? 'active' :null }}">
                 <a href="{{ route('frontend.user.project.optimizer',$project_id) }}" class="tab-link">
                     <div class="realtime-icon"></div>
                     <div class="text">Realtime</div>
                 </a>
             </div>
-            <div class="tab {{Request::segment(4)=='analytics' ? 'active' :null }}">
-                <a href="{{ route('frontend.user.project.analytics',$project_id) }}" class="tab-link">
-                    <img src="{{url('images/dashboard/tab_section/analytics-center.png')}}" alt="">
-                    <div class="text">Analytics Center</div>
-                </a>
-            </div>
-           <div class="tab {{Request::segment(4)=='heatmap' ? 'active' :null }}">
-                <a href="{{ route('frontend.user.projects.heatmap',$project_id) }}" class="tab-link">
-                    <img src="{{url('images/dashboard/tab_section/heatmap.png')}}" alt="">
-                    <div class="text">Heatmap</div>
-                </a>
-            </div>
-            <div class="tab {{Request::segment(4)=='security' ? 'active' :null }}">
-                <a href="{{ route('frontend.user.project.security',$project_id) }}" class="tab-link">
-                    <img src="{{url('images/dashboard/tab_section/security.png')}}" alt="">
-                    <div class="text">Security</div>
-                </a>
-            </div>
+            @endcan
+            @can('analytics_center')
+                <div class="tab {{Request::segment(4)=='analytics' ? 'active' :null }}">
+                    <a href="{{ route('frontend.user.project.analytics',$project_id) }}" class="tab-link">
+                        <img src="{{url('images/dashboard/tab_section/analytics-center.png')}}" alt="">
+                        <div class="text">Analytics Center</div>
+                    </a>
+                </div>
+            @endcan
+
+            @can('heatmap')
+               <div class="tab {{Request::segment(4)=='heatmap' ? 'active' :null }}">
+                    <a href="{{ route('frontend.user.projects.heatmap',$project_id) }}" class="tab-link">
+                        <img src="{{url('images/dashboard/tab_section/heatmap.png')}}" alt="">
+                        <div class="text">Heatmap</div>
+                    </a>
+                </div>
+            @endcan
+
+            @can('security')
+                <div class="tab {{Request::segment(4)=='security' ? 'active' :null }}">
+                    <a href="{{ route('frontend.user.project.security',$project_id) }}" class="tab-link">
+                        <img src="{{url('images/dashboard/tab_section/security.png')}}" alt="">
+                        <div class="text">Security</div>
+                    </a>
+                </div>
+            @endcan
         </div>
     @endif
 </div>
