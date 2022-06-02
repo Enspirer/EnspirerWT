@@ -352,20 +352,20 @@
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <label>Amount</label>
+                                                            <label>Amount ($) <span class="text-danger">*</span></label>
                                                             <input type="text" class="form-control" id="total_amount">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <label>Discount</label>
+                                                            <label>Discount ($) <span class="text-danger">*</span></label>
                                                             <input type="text" class="form-control" id="discount">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group" style="margin-top: 28px;">
                                                             <label> </label>
-                                                            <a href="#" class="btn btn-primary" onclick="insert_service()">Add Service</a>
+                                                            <button type="button" class="btn btn-primary service-add-btn" onclick="insert_service()" disabled>Add Service</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -377,9 +377,9 @@
                                         <thead>
                                         <tr>
                                             <th scope="col">Service Name</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Discount</th>
-                                            <th scope="col">Total</th>
+                                            <th scope="col">Price ($)</th>
+                                            <th scope="col">Discount ($)</th>
+                                            <th scope="col">Total ($)</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                         </thead>
@@ -392,7 +392,7 @@
                                     <div class="row">
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label>Total Amount <span class="text-danger">*</span></label>
+                                                <label>Total Amount ($)</label>
                                                 <input type="text" id="full_total" class="form-control" name="full_total" value="0" readonly>
                                             </div>
                                         </div>
@@ -409,7 +409,7 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label>Discount <span class="text-danger">*</span></label>
+                                                <label>Discount <span class="text-danger">*</span> <span id="discount_type_text">(Flat)</span></label>
                                                 <input type="text" class="form-control" id="final_discount" name="final_discount">
                                             </div>
                                         </div>
@@ -494,7 +494,6 @@ function delete_service(elementId, price) {
     full_total.val(totalvalue);
 
     $(elementId).closest("tr").remove();
-
     finalDiscountCalc()
 }
 
@@ -502,24 +501,44 @@ const finalDiscountCalc = () => {
     const discount_type = document.getElementById('discount_type')
     const final_discount = document.getElementById('final_discount')
     const full_total = document.getElementById('full_total')
+    const discount_type_text = document.getElementById("discount_type_text")
 
     const currentTotal = totalArr.reduce((a, b) => {
         return a + b
     }, 0)
 
-    if (discount_type.value === 'Flat' && currentTotal > 0) {
+    if (discount_type.value === 'Flat') {
         totalvalue = currentTotal - final_discount.value
 
         full_total.value = totalvalue
-        console.log(totalvalue);
 
-    } else if (discount_type.value === 'Percentage' && currentTotal > 0) {
+        discount_type_text.textContent = '\(Flat\)'
+
+    } else if (discount_type.value === 'Percentage') {
         totalvalue = currentTotal - (currentTotal * final_discount.value / 100)
 
         full_total.value = totalvalue
-        console.log(totalvalue);
+
+        discount_type_text.textContent = '\(\%\)'
     }
 }
+
+const serviceAddValidation = () => {
+    const total_amount = $('#total_amount').val();
+    const discount = $('#discount').val();
+    const addBtn = document.querySelector('.service-add-btn')
+
+    if (total_amount != '' && discount != '') {
+        addBtn.removeAttribute("disabled")
+    }
+}
+document.getElementById('total_amount').addEventListener('change', () => {
+    serviceAddValidation()
+})
+
+document.getElementById('discount').addEventListener('change', () => {
+    serviceAddValidation()
+})
 
 document.getElementById('discount_type').addEventListener('change', () => {
     finalDiscountCalc()
