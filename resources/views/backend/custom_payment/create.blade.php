@@ -330,7 +330,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <!-- <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Discount Type <span class="text-danger">*</span></label>
                                                 <select class="form-control" name="discount_type" >
@@ -338,7 +338,7 @@
                                                     <option value="Percentage">Percentage</option>
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="row">
                                         <div class="card" style="background: #e2e2e2">
@@ -396,19 +396,22 @@
                                                 <input type="text" id="full_total" class="form-control" name="full_total" value="0" readonly>
                                             </div>
                                         </div>
+
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label>Discount <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" id="discount" name="discount">
+                                                <label>Discount Type <span class="text-danger">*</span></label>
+                                                <select class="form-control" name="discount_type" id="discount_type">
+                                                    <option value="Flat">Flat</option>
+                                                    <option value="Percentage">Percentage</option>
+                                                </select>
                                             </div>
                                         </div>
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label>Purchased Package <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" name="purchased_package" >
+                                                <label>Discount <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="final_discount" name="final_discount">
                                             </div>
-
                                         </div>
 
                                         <div class="col-md-3">
@@ -436,65 +439,93 @@
 
     </form>
 
-    <script>
-        function insert_item(id,amount,service_name, discount){
-            var gettotal = amount - discount;
+<script>
+const totalArr = []
 
-            $('#item_table').append(
-                '<tr id="'+ id +'">' +
-                    '<th>'+ service_name +'</th>' +
-                    '<td>'+ Number(amount).toFixed(2) +'</td>' +
-                    '<td>'+ Number(discount).toFixed(2)+ '</td>' +
-                    '<td>'+ Number(gettotal).toFixed(2) + '</td>' +
-                    '<td>' +
-                        '<button type="button" class="btn btn-primary remove" onclick="delete_service(\''+ id +'\','+ gettotal +')">Delete</button>' +
-                    '</td>' +
-                '</tr>' +
-                    '<input type="hidden" name="service_name[]" value="'+ service_name +'">' +
-                    '<input type="hidden" name="amount[]" value="'+ amount +'">' +
-                    '<input class="item_total" type="hidden" name="total[]" value="'+ gettotal +'">' +
-                    '<input type="hidden" name="discount[]" value="'+ discount +'">'
-            );
-        }
+function insert_service() {
+    var service_name = $('#service_name').val();
+    var total_amount = $('#total_amount').val();
+    var discount = $('#discount').val();
 
-        function insert_service(){
-          var service_name = $('#service_name').val();
-          var total_amount = $('#total_amount').val();
-          var discount = $('#discount').val();
-          //Full Total Around of Invoice
+    var full_total = $('#full_total');
+    var element_id = 'random_' + Math.floor((Math.random() * 100332233) + 1);
 
-          var full_total = $('#full_total');
-          var element_id = 'random_' +  Math.floor((Math.random() * 100332233) + 1);
+    const discountPrice = total_amount - discount
+    totalArr.push(discountPrice)
 
-          totalvalue =  parseInt(full_total.val()) + parseInt(total_amount);
+    totalvalue = totalArr.reduce((a, b) => {
+        return a + b
+    }, 0)
 
-          full_total.val(totalvalue);
-          insert_item(element_id,total_amount,service_name,discount);
+    full_total.val(totalvalue);
+    insert_item(element_id, total_amount, service_name, discount);
+    finalDiscountCalc()
+}
 
+function insert_item(id, amount, service_name, discount) {
+    var gettotal = amount - discount;
 
-        }
+    $('#item_table').append(
+        '<tr id="' + id + '">' +
+        '<th>' + service_name + '</th>' +
+        '<td>' + Number(amount).toFixed(2) + '</td>' +
+        '<td>' + Number(discount).toFixed(2) + '</td>' +
+        '<td>' + Number(gettotal).toFixed(2) + '</td>' +
+        '<td>' +
+        '<button type="button" class="btn btn-primary remove" onclick="delete_service(' + id + ',' + gettotal + ')">Delete</button>' +
+        '</td>' +
+        '</tr>' +
+        '<input type="hidden" name="service_name[]" value="' + service_name + '">' +
+        '<input type="hidden" name="amount[]" value="' + amount + '">' +
+        '<input class="item_total" type="hidden" name="total[]" value="' + gettotal + '">' +
+        '<input type="hidden" name="discount[]" value="' + discount + '">'
+    );
+}
 
-        function delete_service(elementId,price){
-            
-            alert(elementId);
-            alert(price);
-                // alert($(this).closest("tr"));
+function delete_service(elementId, price) {
 
-                var total_amount = $('#total_amount').val();
-                var full_total = $('#full_total').val();
-                // alert(total_amount);
-                // alert(full_total);
-                totalvalue =  full_total - total_amount;
-                // alert(totalvalue);
-                full_total.val(totalvalue);
-                $(this).closest("tr").remove();
+    var full_total = $('#full_total')
 
+    totalArr.pop(price)
+    totalvalue = totalArr.reduce((a, b) => {
+        return a + b
+    }, 0)
 
-           
-        }
+    full_total.val(totalvalue);
 
+    $(elementId).closest("tr").remove();
 
-    </script>
- 
-<br><br>
+    finalDiscountCalc()
+}
+
+const finalDiscountCalc = () => {
+    const discount_type = document.getElementById('discount_type')
+    const final_discount = document.getElementById('final_discount')
+    const full_total = document.getElementById('full_total')
+
+    const currentTotal = totalArr.reduce((a, b) => {
+        return a + b
+    }, 0)
+
+    if (discount_type.value === 'Flat' && currentTotal > 0) {
+        totalvalue = currentTotal - final_discount.value
+
+        full_total.value = totalvalue
+        console.log(totalvalue);
+
+    } else if (discount_type.value === 'Percentage' && currentTotal > 0) {
+        totalvalue = currentTotal - (currentTotal * final_discount.value / 100)
+
+        full_total.value = totalvalue
+        console.log(totalvalue);
+    }
+}
+
+document.getElementById('discount_type').addEventListener('change', () => {
+    finalDiscountCalc()
+})
+document.getElementById('final_discount').addEventListener('change', () => {
+    finalDiscountCalc()
+})
+</script>
 @endsection
