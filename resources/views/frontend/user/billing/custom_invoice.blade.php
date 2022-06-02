@@ -105,13 +105,13 @@
                                                         <div class="text">{{$custom->due_date}}</div>
                                                     </td>
                                                     <td>
-                                                        <div class="text">You have to pay within ...</div>
+                                                        <div class="text">{{$custom->note}}</div>
                                                     </td>
                                                     <td>
                                                         <div class="text">${{$custom->price}}</div>
                                                     </td>
                                                     <td>
-                                                        <a href="{{route('frontend.user.view_custom_invoice')}}" class="view">View Invoice</a>
+                                                        <a href="{{route('frontend.user.view_custom_invoice',$custom->id)}}" class="view">View Invoice</a>
                                                     </td>
                                                     <td>
                                                         <a href="#" class="btn-pay" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay Now</a>

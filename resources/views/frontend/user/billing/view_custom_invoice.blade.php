@@ -36,25 +36,23 @@
                         <div class="row g-4">
                             <div class="col-lg-8">
                                 <div class="invoice">
-                                    <div class="header">
+                                    <!-- <div class="header">
                                         <img src="{{url('images/test.png')}}" alt="">
                                         <div class="text-block">
                                             <div class="name">Tallentor Website</div>
                                             <div class="url">https://tallentor.com/</div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="info-block">
                                         <ul class="info">
                                             <li class="strong">Invoice ID</li>
-                                            <li>INV-2022-02</li>
-                                            <li>Issued Date: 11 May 2022</li>
-                                            <li>Due Date: 11 Jun 2022</li>
+                                            <li>{{$custom_invoice->invoice_no}}</li>
+                                            <li>Issued Date: {{$custom_invoice->date}}</li>
+                                            <li>Due Date: {{$custom_invoice->due_date}}</li>
                                         </ul>
                                         <ul class="info text-right">
                                             <li class="strong">Billed to</li>
-                                            <li>Tallentor Global</li>
-                                            <li>Address line 01</li>
-                                            <li>Address line 02</li>
+                                            <li>{{$custom_invoice->address}}</li>
                                         </ul>
                                     </div>
                                     <div class="invoice-title">Package Details</div>
@@ -69,25 +67,25 @@
                                             </thead>
                                             <tbody>
                                                 <td>
-                                                    <div class="text">Widget Pro</div>
+                                                    <div class="text">{{$custom_invoice->name}}</div>
                                                 </td>
                                                 <td>
-                                                    <div class="text">18, Feb 2022</div>
+                                                    <div class="text">{{$custom_invoice->date}}</div>
                                                 </td>
                                                 <td>
-                                                    <div class="text">18, Feb 2022</div>
+                                                    <div class="text">{{$custom_invoice->due_date}}</div>
                                                 </td>
                                                 <td>
-                                                    <div class="text">You have to pay within ...</div>
+                                                    <div class="text">{{$custom_invoice->note}}</div>
                                                 </td>
                                                 <td>
-                                                    <div class="text red">$ 20.00</div>
+                                                    <div class="text red">$ {{$custom_invoice->price}}</div>
                                                 </td>
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="invoice-title">Description</div>
-                                    <div class="invoice-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley .</div>
+                                    <div class="invoice-description">{{$custom_invoice->description}}</div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -97,30 +95,30 @@
                                             <div class="header">
                                                 <div class="title">Summery</div>
                                             </div>
-                                            <div class="sub">
+                                            <!-- <div class="sub">
                                                 <div class="text">Pro (Billed monthly)</div>
                                                 <div class="text">$20.00</div>
-                                            </div>
+                                            </div> -->
                                             <div class="body">
-                                                <div class="payment-row">
+                                                <!-- <div class="payment-row">
                                                     <div class="text">Last Bill </div>
                                                     <div class="text">$00.00</div>
                                                 </div>
                                                 <div class="payment-row">
                                                     <div class="text">Package</div>
                                                     <div class="text">$15.00</div>
-                                                </div>
+                                                </div> -->
                                                 <div class="payment-row">
-                                                    <div class="text">Discount (20% OFF)</div>
-                                                    <div class="text">-$5.00</div>
+                                                    <div class="text">Discount</div>
+                                                    <div class="text">${{$custom_invoice->discount}}</div>
                                                 </div>
                                             </div>
                                             <div class="footer">
                                                 <div class="text-block">
                                                     <div class="text">Today you pay</div>
-                                                    <div class="text-light">After 30 days: $6.59</div>
+                                                    <!-- <div class="text-light">After 30 days: $6.59</div> -->
                                                 </div>
-                                                <div class="text">$25.00</div>
+                                                <div class="text">${{$custom_invoice->price}}</div>
                                             </div>
                                             <a href="#" class="checkout-btn" data-bs-toggle="modal" data-bs-target="#paySucModal">
                                                 Checkout <i class="bi bi-arrow-right-short"></i>
@@ -131,7 +129,7 @@
                                         <div class="get-invoice">
                                             <div class="header">Download Invoice</div>
                                             <div class="text">Also you can download this invoice</div>
-                                            <a href="#" class="btn-download">
+                                            <a href="{{route('frontend.user.custom_payment.invoice',$custom_invoice->id)}}" class="btn-download">
                                                 Download
                                                 <i class="bi bi-download"></i>
                                             </a>

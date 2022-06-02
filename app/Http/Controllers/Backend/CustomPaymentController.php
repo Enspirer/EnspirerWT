@@ -9,6 +9,8 @@ use App\Models\BillingInvoice;
 use App\Models\Projects;
 use App\Models\Auth\User;
 use PDF;
+use Illuminate\Support\Facades\Hash;
+
 
 class CustomPaymentController extends Controller
 {
@@ -55,12 +57,61 @@ class CustomPaymentController extends Controller
     {        
         // dd($request);
 
-        $json_output = [
-            'service_name' => $request->service_name,
-            'amount' => $request->amount,
-            'total' => $request->total
-        ];
+        $user = User::where('email',$request->email_address)->first();
 
+        if($user != null){
+            $user_id = $user->id;
+        }
+        else{
+            
+            $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $pin = mt_rand(1000000, 9999999)
+                . mt_rand(1000000, 9999999)
+                . $characters[rand(0, strlen($characters) - 1)];
+            $string = str_shuffle($pin);
+
+            $hashed_password = Hash::make($string); 
+            
+            $arr = explode(' ',trim($request->name));
+            $first_name = $arr[0];
+
+            if(isset($arr[1])){
+                $last_name = $arr[1];
+            }
+
+            $add = new User;
+
+            $add->first_name=$first_name;
+            if(isset($arr[1])){
+                $add->last_name=$last_name;
+            }
+            $add->email=$request->email_address;            
+            $add->password=$hashed_password;
+            $add->save();
+
+            $user_id = $add->id;
+
+        }
+    
+        $service_names= $request->service_name;
+        $amounts = $request->amount;
+        $totals = $request->total;
+        
+
+        $outArray =[];
+        if($service_names != null)
+        {
+            foreach ($service_names as $key=>$service){
+                $outputArray = [
+                    'service_name' => $service,
+                    'amount' =>$amounts[$key],
+                    'total' =>$totals[$key],
+                ];
+                array_push($outArray,$outputArray);
+            }
+        }
+
+        // dd($outArray);
 
         $add = new BillingInvoice;
 
@@ -69,7 +120,7 @@ class CustomPaymentController extends Controller
         $add->payment_status = $request->payment_status;
         $add->invoice_no = $request->invoice_no;
 
-        $add->purchased_service_list = json_encode($json_output);
+        $add->purchased_service_list = json_encode($outArray);
         $add->state = $request->state;
         $add->city = $request->city;
         $add->country = $request->country;
@@ -85,7 +136,7 @@ class CustomPaymentController extends Controller
         $add->price = $request->price;        
         $add->payment_method = $request->payment_method;
         $add->expire_date = $request->expire_date;
-        $add->user_id = auth()->user()->id;
+        $add->user_id = $user_id;
         $add->status = 'Pending';
 
         $add->save();
@@ -108,41 +159,43 @@ class CustomPaymentController extends Controller
     public function view($id)
     {
        // dd($id);
-        $billing_invoice = BillingInvoice::where('id',$id)->first(); 
-        $project = Projects::where('id',$billing_invoice->project_id)->first();
-        // dd($billing_invoice);
+       $billing_invoice = BillingInvoice::where('id',$id)->first(); 
+       $project = Projects::where('id',$billing_invoice->project_id)->first();
+       // dd($billing_invoice);
+       
+     
 
-        $user = User::where('id',$billing_invoice->id)->first();
+       $user = User::where('id',$billing_invoice->id)->first();
 
-        $data = [
-            'created_at' => $billing_invoice->created_at->format('d M Y'),
-            'purchased_package' => $billing_invoice->purchased_package,
-            'price' => $billing_invoice->price,
-            'invoice_id' => $billing_invoice->id,
-            'payment_plan' => $billing_invoice->payment_plan,
-            'payment_method' => $billing_invoice->payment_method,
-            'phone_number' => $billing_invoice->phone_number,
-            'address' => $billing_invoice->address,
-            'status' => $billing_invoice->status,
-            'name' => $billing_invoice->name,
-            'project_name' => $project->name,
-            'country' => $billing_invoice->country,
-            'state' => $billing_invoice->state,
-            'city' => $billing_invoice->city,
-            'discount' => $billing_invoice->discount,
-            'date' => $billing_invoice->date,
-            'expire_date' => $billing_invoice->expire_date,
-            'due_date' => $billing_invoice->due_date,
-            'discount_type' => $billing_invoice->discount_type,
-            'payment_status' => $billing_invoice->payment_status,
-            'purchased_service_list' => $billing_invoice->purchased_service_list,
-            'invoice_no' => $billing_invoice->invoice_no,
-            'email' => $user->email
-        ];
+       $data = [
+           'created_at' => $billing_invoice->created_at->format('d M Y'),
+           'purchased_package' => $billing_invoice->purchased_package,
+           'price' => $billing_invoice->price,
+           'invoice_id' => $billing_invoice->id,
+           'payment_plan' => $billing_invoice->payment_plan,
+           'payment_method' => $billing_invoice->payment_method,
+           'phone_number' => $billing_invoice->phone_number,
+           'address' => $billing_invoice->address,
+           'status' => $billing_invoice->status,
+           'name' => $billing_invoice->name,
+           'project_name' => $project->name,
+           'country' => $billing_invoice->country,
+           'state' => $billing_invoice->state,
+           'city' => $billing_invoice->city,
+           'discount' => $billing_invoice->discount,
+           'date' => $billing_invoice->date,
+           'expire_date' => $billing_invoice->expire_date,
+           'due_date' => $billing_invoice->due_date,
+           'discount_type' => $billing_invoice->discount_type,
+           'payment_status' => $billing_invoice->payment_status,            
+           'invoice_no' => $billing_invoice->invoice_no,
+           'email' => $user->email,            
+           'purchased_service_list' => $billing_invoice->purchased_service_list
+       ];
 
-        $pdf = PDF::loadView('custom_payment',$data);
+       $pdf = PDF::loadView('custom_payment',$data);
 
-        return $pdf->download('custom_payment.pdf');
+       return $pdf->download('custom_payment.pdf');
     }
 
     

@@ -30,7 +30,7 @@
                                         <button class="nav-link {{Request::segment(1)=='billing' ? 'active' :null }} collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bililngCollapse" aria-expanded="true" aria-controls="bililngCollapse">
                                             <i class="bi bi-receipt"></i>
                                             <span class="text">Billing</span>
-                                            <span class="alerts">05</span>
+                                            <span class="alerts">{{count(App\Models\BillingInvoice::where('user_id',auth()->user()->id)->where('status','Pending')->get()) }}</span>
                                         </button>
                                     </h2>
                                     <div id="bililngCollapse" class="accordion-collapse collapse" aria-labelledby="billingHead" data-bs-parent="#billingAcc">

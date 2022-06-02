@@ -72,10 +72,9 @@
                                         <td><h6 class="text-inverse">Discount Type:</td>
                                         <td><h6 class="text-inverse">{{$discount_type}}</h6></td>
                                         </tr>
-                                        <tr>
-                                        <td><h6 class="text-inverse">Purchased Service List:</td>
-                                        <td><h6 class="text-inverse">{{$purchased_service_list}}</h6></td>
-                                        </tr>
+                            
+                                        
+
                                         <tr>
                                         <td><h6 class="text-inverse">Invoice No:</td>
                                         <td><h6 class="text-inverse">{{$invoice_no}}</h6></td>
@@ -116,6 +115,23 @@
                                         <td><h6 class="text-inverse">Expire Date:</td>
                                         <td><h6 class="text-inverse">{{$expire_date}}</h6></td>
                                         </tr>
+
+                                        @if($purchased_service_list != null)
+                                            <tr>
+                                            <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Service Name:</td>
+                                            <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Amount</h6></td>
+                                            <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Total</h6></td>
+                                            </tr>
+                                            @foreach(json_decode($purchased_service_list) as $key => $seo_result)
+                                                <tr>
+                                                    <td><h6 class="text-inverse">{{ str_replace("_"," ", ucfirst(trans($seo_result->service_name)) ) }}:</td>
+                                                    <td><h6 class="text-inverse">{{$seo_result->amount}}</h6></td>
+                                                    <td><h6 class="text-inverse">{{$seo_result->total}}</h6></td>
+                                                </tr>
+                                            @endforeach
+                                        @endif                                        
+                                             
+                                       
                                     </table>
                             </address>
                             

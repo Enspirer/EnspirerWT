@@ -59,8 +59,55 @@ class BillingController extends Controller
         ]);
     }
 
-    public function view_custom_invoice() {  
-        return view('frontend.user.billing.view_custom_invoice');
+    public function custome_invoice($id)
+    {
+       // dd($id);
+       $billing_invoice = BillingInvoice::where('id',$id)->first(); 
+       $project = Projects::where('id',$billing_invoice->project_id)->first();
+       // dd($billing_invoice);
+       
+     
+
+       $user = User::where('id',$billing_invoice->id)->first();
+
+       $data = [
+           'created_at' => $billing_invoice->created_at->format('d M Y'),
+           'purchased_package' => $billing_invoice->purchased_package,
+           'price' => $billing_invoice->price,
+           'invoice_id' => $billing_invoice->id,
+           'payment_plan' => $billing_invoice->payment_plan,
+           'payment_method' => $billing_invoice->payment_method,
+           'phone_number' => $billing_invoice->phone_number,
+           'address' => $billing_invoice->address,
+           'status' => $billing_invoice->status,
+           'name' => $billing_invoice->name,
+           'project_name' => $project->name,
+           'country' => $billing_invoice->country,
+           'state' => $billing_invoice->state,
+           'city' => $billing_invoice->city,
+           'discount' => $billing_invoice->discount,
+           'date' => $billing_invoice->date,
+           'expire_date' => $billing_invoice->expire_date,
+           'due_date' => $billing_invoice->due_date,
+           'discount_type' => $billing_invoice->discount_type,
+           'payment_status' => $billing_invoice->payment_status,            
+           'invoice_no' => $billing_invoice->invoice_no,
+           'email' => $user->email,            
+           'purchased_service_list' => $billing_invoice->purchased_service_list
+       ];
+
+       $pdf = PDF::loadView('custom_payment',$data);
+
+       return $pdf->download('custom_payment.pdf');
+    }
+
+    public function view_custom_invoice($id) {  
+
+        $custom_invoice = BillingInvoice::where('id',$id)->first();
+
+        return view('frontend.user.billing.view_custom_invoice',[
+            'custom_invoice' => $custom_invoice
+        ]);
     }
 
     
