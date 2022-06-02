@@ -384,15 +384,7 @@
                                         </tr>
                                         </thead>
                                         <tbody class="item_table" id="item_table">
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Total</td>
-                                                <td>Price</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-primary remove">Delete</button>
-                                                </td>
-                                            </tr>
+
                                         </tbody>
                                     </table>
 
@@ -455,7 +447,7 @@
                     '<td>'+ Number(discount).toFixed(2)+ '</td>' +
                     '<td>'+ Number(gettotal).toFixed(2) + '</td>' +
                     '<td>' +
-                        '<button type="button" class="btn btn-primary remove" onclick="delete_service('+ id +','+ gettotal +')">Delete</button>' +
+                        '<button type="button" class="btn btn-primary remove" onclick="delete_service(\''+ id +'\','+ gettotal +')">Delete</button>' +
                     '</td>' +
                 '</tr>' +
                     '<input type="hidden" name="service_name[]" value="'+ service_name +'">' +
@@ -492,14 +484,9 @@
                 var full_total = $('#full_total').val();
                 // alert(total_amount);
                 // alert(full_total);
-
                 totalvalue =  full_total - total_amount;
                 // alert(totalvalue);
-
                 full_total.val(totalvalue);
-                        
-
-
                 $(this).closest("tr").remove();
 
 
