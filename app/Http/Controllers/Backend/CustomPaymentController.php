@@ -92,11 +92,12 @@ class CustomPaymentController extends Controller
             $user_id = $add->id;
 
         }
+
     
         $service_names= $request->service_name;
         $amounts = $request->amount;
         $totals = $request->total;
-        
+        $discount = $request->discount;        
 
         $outArray =[];
         if($service_names != null)
@@ -106,6 +107,7 @@ class CustomPaymentController extends Controller
                     'service_name' => $service,
                     'amount' =>$amounts[$key],
                     'total' =>$totals[$key],
+                    'discount' =>$discount[$key]
                 ];
                 array_push($outArray,$outputArray);
             }
@@ -115,11 +117,10 @@ class CustomPaymentController extends Controller
 
         $add = new BillingInvoice;
 
-        // $add->project_id = $request->project_id;     
+        $add->project_id = $request->project_id; 
         $add->due_date = $request->due_date;
         $add->payment_status = $request->payment_status;
         $add->invoice_no = $request->invoice_no;
-
         $add->purchased_service_list = json_encode($outArray);
         $add->state = $request->state;
         $add->city = $request->city;
@@ -129,11 +130,10 @@ class CustomPaymentController extends Controller
         $add->address = $request->address;
         $add->payment_plan = $request->payment_plan;
         $add->discount_type = $request->discount_type;
-        $add->discount = $request->discount;
+        $add->discount = $request->final_discount;
         $add->date = $request->date;
-
         $add->purchased_package = $request->purchased_package;
-        $add->price = $request->price;        
+        $add->price = $request->full_total;        
         $add->payment_method = $request->payment_method;
         $add->expire_date = $request->expire_date;
         $add->user_id = $user_id;
