@@ -48,6 +48,12 @@
                                             <li class="strong">Invoice ID: # {{$custom_invoice->id}}</li>
                                             <li></li>
                                             <li>Issued Date: {{$custom_invoice->date}}</li>
+                                            @if($custom_invoice->status == 'Pending')
+                                                <li>Status: <span style="background-color: #ff4500;padding: 1px;border-radius: 3px;padding-left: 8px;padding-right: 8px;margin-left: 10px;;">{{$custom_invoice->status}}</span> </li>
+                                            @elseif($custom_invoice->status == 'Completed')
+                                                <li>Status: <span style="background-color: #44d824;padding: 1px;border-radius: 3px;padding-left: 8px;padding-right: 8px;margin-left: 10px;;">{{$custom_invoice->status}}</span> </li>
+                                            @endif
+                                            <li>Payment Method: {{$custom_invoice->payment_method}}</li>
                                         </ul>
                                         <ul class="info text-right">
                                             <li class="strong">Billed to:  {{$custom_invoice->name}}</li>
