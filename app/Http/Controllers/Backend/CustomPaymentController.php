@@ -42,7 +42,7 @@ class CustomPaymentController extends Controller
                 return $status;
             })
             ->addColumn('action', function($data){
-                $button = '<a href="'.route('admin.custom_payment.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
+                $button = '<a href="'.route('admin.custom_payment.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Invoice </a>';
                 $button .= '<a href="'.route('admin.custom_payment.view',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-success btn-sm" style="margin-right: 10px"><i class="fas fa-file"></i> View </a>';
                 $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
                 return $button;
@@ -128,7 +128,7 @@ class CustomPaymentController extends Controller
         $add->name = $request->name;
         $add->phone_number = $request->phone_number;
         $add->address = $request->address;
-        $add->payment_plan = $request->payment_plan;
+        $add->payment_plan = 'Custom';
         $add->discount_type = $request->discount_type;
         $add->discount = $request->final_discount;
         $add->date = $request->date;

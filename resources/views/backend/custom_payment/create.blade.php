@@ -297,7 +297,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Email Address <span class="text-danger">*</span></label>
-                                    <input type="text" id="email_address" class="form-control" name="email_address" >
+                                    <input type="text" id="email_address" class="form-control" name="email_address" required>
                                 </div>
                             </div>
 
@@ -321,7 +321,7 @@
                                                 <input type="date" class="form-control" name="date" >
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <!-- <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Payment Plan <span class="text-danger">*</span></label>
                                                 <select class="form-control" name="payment_plan" >
@@ -329,7 +329,7 @@
                                                     <option value="Annually">Annually</option>
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Discount Type <span class="text-danger">*</span></label>

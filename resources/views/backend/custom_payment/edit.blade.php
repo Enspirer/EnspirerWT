@@ -3,397 +3,335 @@
 @section('title', __('Edit'))
 
 @section('content')
-    <form action="{{route('admin.custom_payment.update')}}" method="post" enctype="multipart/form-data">
-        {{csrf_field()}}
+
+<style>
+    body{
+        margin-top:20px;
+        color: #484b51;
+    }
+    .text-secondary-d1 {
+        color: #728299!important;
+    }
+    .page-header {
+        margin: 0 0 1rem;
+        padding-bottom: 1rem;
+        padding-top: .5rem;
+        border-bottom: 1px dotted #e2e2e2;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .page-title {
+        padding: 0;
+        margin: 0;
+        font-size: 1.75rem;
+        font-weight: 300;
+    }
+    .brc-default-l1 {
+        border-color: #dce9f0!important;
+    }
+
+    .ml-n1, .mx-n1 {
+        margin-left: -.25rem!important;
+    }
+    .mr-n1, .mx-n1 {
+        margin-right: -.25rem!important;
+    }
+    .mb-4, .my-4 {
+        margin-bottom: 1.5rem!important;
+    }
+
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0,0,0,.1);
+    }
+
+    .text-grey-m2 {
+        color: #888a8d!important;
+    }
+
+    .text-success-m2 {
+        color: #86bd68!important;
+    }
+
+    .font-bolder, .text-600 {
+        font-weight: 600!important;
+    }
+
+    .text-110 {
+        font-size: 110%!important;
+    }
+    .text-blue {
+        color: #478fcc!important;
+    }
+    .pb-25, .py-25 {
+        padding-bottom: .75rem!important;
+    }
+
+    .pt-25, .py-25 {
+        padding-top: .75rem!important;
+    }
+    .bgc-default-tp1 {
+        background-color: rgba(121,169,197,.92)!important;
+    }
+    .bgc-default-l4, .bgc-h-default-l4:hover {
+        background-color: #f3f8fa!important;
+    }
+    .page-header .page-tools {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+    }
+
+    .btn-light {
+        color: #757984;
+        background-color: #f5f6f9;
+        border-color: #dddfe4;
+    }
+    .w-2 {
+        width: 1rem;
+    }
+
+    .text-120 {
+        font-size: 120%!important;
+    }
+    .text-primary-m1 {
+        color: #4087d4!important;
+    }
+
+    .text-danger-m1 {
+        color: #dd4949!important;
+    }
+    .text-blue-m2 {
+        color: #68a3d5!important;
+    }
+    .text-150 {
+        font-size: 150%!important;
+    }
+    .text-60 {
+        font-size: 60%!important;
+    }
+    .text-grey-m1 {
+        color: #7b7d81!important;
+    }
+    .align-bottom {
+        vertical-align: bottom!important;
+    }
+
+</style>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-body">           
+                    <div class="card-body">     
+               
+           
+                        <div class="page-content container">
+                            <div class="page-header text-blue-d2">
+                                <h1 class="page-title text-secondary-d1">
+                                    Invoice
+                                    <small class="page-info">
+                                        <i class="fa fa-angle-double-right text-80"></i>
+                                        ID: {{$custom_payment->invoice_no}}
+                                    </small>
+                                </h1>
 
-                        <div class="form-group">
-                            <label>Project <span class="text-danger">*</span></label>
-                            <select class="form-control" name="project_id" required>
-                                <option value="" selected disabled>-- Select Here --</option>
-                                @foreach($projects as $project)
-                                    <option value="{{$project->id}}" {{$custom_payment->project_id == $project->id ? "selected" : ""}}>{{$project->name}}</option>  
-                                @endforeach                               
-                            </select>
-                        </div>
+                                <!-- <div class="page-tools">
+                                    <div class="action-buttons">
+                                        <a class="btn bg-white btn-light mx-1px text-95" href="#" data-title="Print">
+                                            <i class="mr-1 fa fa-print text-primary-m1 text-120 w-2"></i>
+                                            Print
+                                        </a>
+                                        <a class="btn bg-white btn-light mx-1px text-95" href="#" data-title="PDF">
+                                            <i class="mr-1 fa fa-file-pdf-o text-danger-m1 text-120 w-2"></i>
+                                            Export
+                                        </a>
+                                    </div>
+                                </div> -->
+                            </div>
 
-                        <div class="form-group">
-                            <label>Name <span class="text-danger">*</span></label>
-                            <input type="text" id="name" class="form-control" name="name" value="{{$custom_payment->name}}" required>
-                        </div>
+                            <div class="container px-0">
+                                <div class="row mt-4">
+                                    <div class="col-12 col-lg-12">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="text-center text-150">
+                                                   <img src="{{url('images/logo/mobile-logo.png')}}" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- .row -->
 
-                        <div class="form-group">
-                            <label>Country</label>
-                            <select id="country" class="form-control custom-select" name="country" >
-                                <option value="" selected disabled hidden>Country</option>
-                                <option value="Afghanistan">Afghanistan</option>
-                                <option value="Albania">Albania</option>
-                                <option value="Algeria">Algeria</option>
-                                <option value="American Samoa">American Samoa</option>
-                                <option value="Andorra">Andorra</option>
-                                <option value="Angola">Angola</option>
-                                <option value="Anguilla">Anguilla</option>
-                                <option value="Antigua & Barbuda">Antigua & Barbuda</option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Armenia">Armenia</option>
-                                <option value="Aruba">Aruba</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Austria">Austria</option>
-                                <option value="Azerbaijan">Azerbaijan</option>
-                                <option value="Bahamas">Bahamas</option>
-                                <option value="Bahrain">Bahrain</option>
-                                <option value="Bangladesh">Bangladesh</option>
-                                <option value="Barbados">Barbados</option>
-                                <option value="Belarus">Belarus</option>
-                                <option value="Belgium">Belgium</option>
-                                <option value="Belize">Belize</option>
-                                <option value="Benin">Benin</option>
-                                <option value="Bermuda">Bermuda</option>
-                                <option value="Bhutan">Bhutan</option>
-                                <option value="Bolivia">Bolivia</option>
-                                <option value="Bonaire">Bonaire</option>
-                                <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
-                                <option value="Botswana">Botswana</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
-                                <option value="Brunei">Brunei</option>
-                                <option value="Bulgaria">Bulgaria</option>
-                                <option value="Burkina Faso">Burkina Faso</option>
-                                <option value="Burundi">Burundi</option>
-                                <option value="Cambodia">Cambodia</option>
-                                <option value="Cameroon">Cameroon</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Canary Islands">Canary Islands</option>
-                                <option value="Cape Verde">Cape Verde</option>
-                                <option value="Cayman Islands">Cayman Islands</option>
-                                <option value="Central African Republic">Central African Republic</option>
-                                <option value="Chad">Chad</option>
-                                <option value="Channel Islands">Channel Islands</option>
-                                <option value="Chile">Chile</option>
-                                <option value="China">China</option>
-                                <option value="Christmas Island">Christmas Island</option>
-                                <option value="Cocos Island">Cocos Island</option>
-                                <option value="Colombia">Colombia</option>
-                                <option value="Comoros">Comoros</option>
-                                <option value="Congo">Congo</option>
-                                <option value="Cook Islands">Cook Islands</option>
-                                <option value="Costa Rica">Costa Rica</option>
-                                <option value="Cote DIvoire">Cote DIvoire</option>
-                                <option value="Croatia">Croatia</option>
-                                <option value="Cuba">Cuba</option>
-                                <option value="Curaco">Curacao</option>
-                                <option value="Cyprus">Cyprus</option>
-                                <option value="Czech Republic">Czech Republic</option>
-                                <option value="Denmark">Denmark</option>
-                                <option value="Djibouti">Djibouti</option>
-                                <option value="Dominica">Dominica</option>
-                                <option value="Dominican Republic">Dominican Republic</option>
-                                <option value="East Timor">East Timor</option>
-                                <option value="Ecuador">Ecuador</option>
-                                <option value="Egypt">Egypt</option>
-                                <option value="El Salvador">El Salvador</option>
-                                <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                <option value="Eritrea">Eritrea</option>
-                                <option value="Estonia">Estonia</option>
-                                <option value="Ethiopia">Ethiopia</option>
-                                <option value="Falkland Islands">Falkland Islands</option>
-                                <option value="Faroe Islands">Faroe Islands</option>
-                                <option value="Fiji">Fiji</option>
-                                <option value="Finland">Finland</option>
-                                <option value="France">France</option>
-                                <option value="French Guiana">French Guiana</option>
-                                <option value="French Polynesia">French Polynesia</option>
-                                <option value="French Southern Ter">French Southern Ter</option>
-                                <option value="Gabon">Gabon</option>
-                                <option value="Gambia">Gambia</option>
-                                <option value="Georgia">Georgia</option>
-                                <option value="Germany">Germany</option>
-                                <option value="Ghana">Ghana</option>
-                                <option value="Gibraltar">Gibraltar</option>
-                                <option value="Great Britain">Great Britain</option>
-                                <option value="Greece">Greece</option>
-                                <option value="Greenland">Greenland</option>
-                                <option value="Grenada">Grenada</option>
-                                <option value="Guadeloupe">Guadeloupe</option>
-                                <option value="Guam">Guam</option>
-                                <option value="Guatemala">Guatemala</option>
-                                <option value="Guinea">Guinea</option>
-                                <option value="Guyana">Guyana</option>
-                                <option value="Haiti">Haiti</option>
-                                <option value="Hawaii">Hawaii</option>
-                                <option value="Honduras">Honduras</option>
-                                <option value="Hong Kong">Hong Kong</option>
-                                <option value="Hungary">Hungary</option>
-                                <option value="Iceland">Iceland</option>
-                                <option value="Indonesia">Indonesia</option>
-                                <option value="India">India</option>
-                                <option value="Iran">Iran</option>
-                                <option value="Iraq">Iraq</option>
-                                <option value="Ireland">Ireland</option>
-                                <option value="Isle of Man">Isle of Man</option>
-                                <option value="Israel">Israel</option>
-                                <option value="Italy">Italy</option>
-                                <option value="Jamaica">Jamaica</option>
-                                <option value="Japan">Japan</option>
-                                <option value="Jordan">Jordan</option>
-                                <option value="Kazakhstan">Kazakhstan</option>
-                                <option value="Kenya">Kenya</option>
-                                <option value="Kiribati">Kiribati</option>
-                                <option value="Korea North">Korea North</option>
-                                <option value="Korea Sout">Korea South</option>
-                                <option value="Kuwait">Kuwait</option>
-                                <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                <option value="Laos">Laos</option>
-                                <option value="Latvia">Latvia</option>
-                                <option value="Lebanon">Lebanon</option>
-                                <option value="Lesotho">Lesotho</option>
-                                <option value="Liberia">Liberia</option>
-                                <option value="Libya">Libya</option>
-                                <option value="Liechtenstein">Liechtenstein</option>
-                                <option value="Lithuania">Lithuania</option>
-                                <option value="Luxembourg">Luxembourg</option>
-                                <option value="Macau">Macau</option>
-                                <option value="Macedonia">Macedonia</option>
-                                <option value="Madagascar">Madagascar</option>
-                                <option value="Malaysia">Malaysia</option>
-                                <option value="Malawi">Malawi</option>
-                                <option value="Maldives">Maldives</option>
-                                <option value="Mali">Mali</option>
-                                <option value="Malta">Malta</option>
-                                <option value="Marshall Islands">Marshall Islands</option>
-                                <option value="Martinique">Martinique</option>
-                                <option value="Mauritania">Mauritania</option>
-                                <option value="Mauritius">Mauritius</option>
-                                <option value="Mayotte">Mayotte</option>
-                                <option value="Mexico">Mexico</option>
-                                <option value="Midway Islands">Midway Islands</option>
-                                <option value="Moldova">Moldova</option>
-                                <option value="Monaco">Monaco</option>
-                                <option value="Mongolia">Mongolia</option>
-                                <option value="Montserrat">Montserrat</option>
-                                <option value="Morocco">Morocco</option>
-                                <option value="Mozambique">Mozambique</option>
-                                <option value="Myanmar">Myanmar</option>
-                                <option value="Nambia">Nambia</option>
-                                <option value="Nauru">Nauru</option>
-                                <option value="Nepal">Nepal</option>
-                                <option value="Netherland Antilles">Netherland Antilles</option>
-                                <option value="Netherlands">Netherlands (Holland, Europe)</option>
-                                <option value="Nevis">Nevis</option>
-                                <option value="New Caledonia">New Caledonia</option>
-                                <option value="New Zealand">New Zealand</option>
-                                <option value="Nicaragua">Nicaragua</option>
-                                <option value="Niger">Niger</option>
-                                <option value="Nigeria">Nigeria</option>
-                                <option value="Niue">Niue</option>
-                                <option value="Norfolk Island">Norfolk Island</option>
-                                <option value="Norway">Norway</option>
-                                <option value="Oman">Oman</option>
-                                <option value="Pakistan">Pakistan</option>
-                                <option value="Palau Island">Palau Island</option>
-                                <option value="Palestine">Palestine</option>
-                                <option value="Panama">Panama</option>
-                                <option value="Papua New Guinea">Papua New Guinea</option>
-                                <option value="Paraguay">Paraguay</option>
-                                <option value="Peru">Peru</option>
-                                <option value="Phillipines">Philippines</option>
-                                <option value="Pitcairn Island">Pitcairn Island</option>
-                                <option value="Poland">Poland</option>
-                                <option value="Portugal">Portugal</option>
-                                <option value="Puerto Rico">Puerto Rico</option>
-                                <option value="Qatar">Qatar</option>
-                                <option value="Republic of Montenegro">Republic of Montenegro</option>
-                                <option value="Republic of Serbia">Republic of Serbia</option>
-                                <option value="Reunion">Reunion</option>
-                                <option value="Romania">Romania</option>
-                                <option value="Russia">Russia</option>
-                                <option value="Rwanda">Rwanda</option>
-                                <option value="St Barthelemy">St Barthelemy</option>
-                                <option value="St Eustatius">St Eustatius</option>
-                                <option value="St Helena">St Helena</option>
-                                <option value="St Kitts-Nevis">St Kitts-Nevis</option>
-                                <option value="St Lucia">St Lucia</option>
-                                <option value="St Maarten">St Maarten</option>
-                                <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
-                                <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
-                                <option value="Saipan">Saipan</option>
-                                <option value="Samoa">Samoa</option>
-                                <option value="Samoa American">Samoa American</option>
-                                <option value="San Marino">San Marino</option>
-                                <option value="Sao Tome & Principe">Sao Tome & Principe</option>
-                                <option value="Saudi Arabia">Saudi Arabia</option>
-                                <option value="Senegal">Senegal</option>
-                                <option value="Seychelles">Seychelles</option>
-                                <option value="Sierra Leone">Sierra Leone</option>
-                                <option value="Singapore">Singapore</option>
-                                <option value="Slovakia">Slovakia</option>
-                                <option value="Slovenia">Slovenia</option>
-                                <option value="Solomon Islands">Solomon Islands</option>
-                                <option value="Somalia">Somalia</option>
-                                <option value="South Africa">South Africa</option>
-                                <option value="Spain">Spain</option>
-                                <option value="Sri Lanka">Sri Lanka</option>
-                                <option value="Sudan">Sudan</option>
-                                <option value="Suriname">Suriname</option>
-                                <option value="Swaziland">Swaziland</option>
-                                <option value="Sweden">Sweden</option>
-                                <option value="Switzerland">Switzerland</option>
-                                <option value="Syria">Syria</option>
-                                <option value="Tahiti">Tahiti</option>
-                                <option value="Taiwan">Taiwan</option>
-                                <option value="Tajikistan">Tajikistan</option>
-                                <option value="Tanzania">Tanzania</option>
-                                <option value="Thailand">Thailand</option>
-                                <option value="Togo">Togo</option>
-                                <option value="Tokelau">Tokelau</option>
-                                <option value="Tonga">Tonga</option>
-                                <option value="Trinidad & Tobago">Trinidad & Tobago</option>
-                                <option value="Tunisia">Tunisia</option>
-                                <option value="Turkey">Turkey</option>
-                                <option value="Turkmenistan">Turkmenistan</option>
-                                <option value="Turks & Caicos Is">Turks & Caicos Is</option>
-                                <option value="Tuvalu">Tuvalu</option>
-                                <option value="Uganda">Uganda</option>
-                                <option value="United Kingdom">United Kingdom</option>
-                                <option value="Ukraine">Ukraine</option>
-                                <option value="United Arab Erimates">United Arab Emirates</option>
-                                <option value="United States of America">United States of America</option>
-                                <option value="Uraguay">Uruguay</option>
-                                <option value="Uzbekistan">Uzbekistan</option>
-                                <option value="Vanuatu">Vanuatu</option>
-                                <option value="Vatican City State">Vatican City State</option>
-                                <option value="Venezuela">Venezuela</option>
-                                <option value="Vietnam">Vietnam</option>
-                                <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
-                                <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
-                                <option value="Wake Island">Wake Island</option>
-                                <option value="Wallis & Futana Is">Wallis & Futana Is</option>
-                                <option value="Yemen">Yemen</option>
-                                <option value="Zaire">Zaire</option>
-                                <option value="Zambia">Zambia</option>
-                                <option value="Zimbabwe">Zimbabwe</option>
-                            </select>
-                        </div>
+                                        <hr class="row brc-default-l1 mx-n1 mb-4 mt-3" />
 
-                        <div class="form-group">
-                            <label>State <span class="text-danger">*</span></label>
-                            <input type="text" id="state" class="form-control" name="state" value="{{$custom_payment->state}}">
-                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div>
+                                                    <span class="text-sm text-grey-m2 align-middle">To:</span>
+                                                    <span class="text-600 text-110 text-blue align-middle">{{$custom_payment->name}}</span>
+                                                </div>
+                                                <div class="text-grey-m2">
+                                                    <div class="my-1">
+                                                        {{$custom_payment->city}} {{$custom_payment->country}} 
+                                                    </div>
+                                                    <div class="my-1">
+                                                        {{$custom_payment->address}}
+                                                    </div>
+                                                    <div class="my-1">
+                                                        {{App\Models\Auth\User::where('id',$custom_payment->user_id)->first()->email}}
+                                                    </div>
+                                                    
+                                                    <div class="my-1"><i class="fa fa-phone fa-flip-horizontal text-secondary"></i> <b class="text-600">{{$custom_payment->phone_number}}</b></div>
+                                                </div>
+                                            </div>
+                                            <!-- /.col -->
 
-                        <div class="form-group">
-                            <label>City <span class="text-danger">*</span></label>
-                            <input type="text" id="city" class="form-control" name="city" value="{{$custom_payment->city}}">
-                        </div>
+                                            <div class="text-95 col-sm-6 align-self-start d-sm-flex justify-content-end">
+                                                <hr class="d-sm-none" />
+                                                <div class="text-grey-m2">
+                                                    <div class="mt-1 mb-2 text-secondary-m1 text-600 text-125">
+                                                        Invoice
+                                                    </div>
 
-                        <div class="form-group">
-                            <label>Phone Number <span class="text-danger">*</span></label>
-                            <input type="text" id="phone_number" class="form-control" name="phone_number" value="{{$custom_payment->phone_number}}">
-                        </div>
+                                                    <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">ID:</span> {{$custom_payment->invoice_no}}</div>
 
-                        <div class="form-group">
-                            <label>Address <span class="text-danger">*</span></label>
-                            <input type="text" id="address" class="form-control" name="address" value="{{$custom_payment->address}}">
-                        </div>
+                                                    <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">Issue Date:</span> {{$custom_payment->date}}</div>
 
-                        <div class="form-group">
-                            <label>Price <span class="text-danger">*</span></label>
-                            <input type="text" id="price" class="form-control" name="price" value="{{$custom_payment->price}}">
-                        </div>
+                                                    <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">Status:</span> 
+                                                        @if($custom_payment->status == 'Paid')
+                                                            <span class="badge badge-success badge-pill px-25">{{$custom_payment->status}}</span>
+                                                        @else
+                                                            <span class="badge badge-warning badge-pill px-25">{{$custom_payment->status}}</span>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.col -->
+                                        </div>
 
-                        <div class="form-group">
-                            <label>Discount <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="discount" value="{{$custom_payment->discount}}">
-                        </div>
+                                        <div class="mt-4">
+                                            <div class="row text-600 text-white bgc-default-tp1 py-25">
+                                                <div class="d-none d-sm-block col-1">#</div>
+                                                <div class="col-9 col-sm-5">Service Name</div>
+                                                <div class="d-none d-sm-block col-4 col-sm-2">Price</div>
+                                                <div class="d-none d-sm-block col-sm-2">Discount</div>
+                                                <div class="col-2">Total</div>
+                                            </div>
 
-                        <div class="form-group">
-                            <label>Date <span class="text-danger">*</span></label>
-                            <input type="date" class="form-control" name="date" value="{{$custom_payment->date}}">
-                        </div>
+                                            <div class="text-95 text-secondary-d3">
+                                                @if($custom_payment != null)
+                                                    @foreach(json_decode($custom_payment->purchased_service_list) as $key => $custom)
+                                                        <div class="row mb-2 mb-sm-0 py-25">
+                                                            <div class="d-none d-sm-block col-1">{{$key}}</div>
+                                                            <div class="col-9 col-sm-5">{{ str_replace("_"," ", ucfirst(trans($custom->service_name)) ) }}</div>
+                                                            <div class="d-none d-sm-block col-2">${{$custom->amount}}</div>
+                                                            <div class="d-none d-sm-block col-2 text-95">${{$custom->discount}}</div>
+                                                            <div class="col-2 text-secondary-d2">${{$custom->total}}</div>
+                                                        </div>
+                                                    @endforeach
+                                                @endif
 
-                        <div class="form-group">
-                            <label>Expire Date <span class="text-danger">*</span></label>
-                            <input type="date" class="form-control" name="expire_date" value="{{$custom_payment->expire_date}}">
-                        </div>
+                                                <!-- <div class="row mb-2 mb-sm-0 py-25 bgc-default-l4">
+                                                    <div class="d-none d-sm-block col-1">2</div>
+                                                    <div class="col-9 col-sm-5">Web hosting</div>
+                                                    <div class="d-none d-sm-block col-2">1</div>
+                                                    <div class="d-none d-sm-block col-2 text-95">$15</div>
+                                                    <div class="col-2 text-secondary-d2">$15</div>
+                                                </div> -->
 
-                        <div class="form-group">
-                            <label>Due Date <span class="text-danger">*</span></label>
-                            <input type="date" class="form-control" name="due_date" value="{{$custom_payment->due_date}}">
-                        </div>
+                                                
+                                            </div>
 
-                        <div class="form-group">
-                            <label>Discount Type <span class="text-danger">*</span></label>
-                            <select class="form-control" name="discount_type" >
-                                <option value="Flat" {{$custom_payment->discount_type == 'Flat' ? "selected" : ""}}>Flat</option>   
-                                <option value="Percentage" {{$custom_payment->discount_type == 'Percentage' ? "selected" : ""}}>Percentage</option>                                
-                            </select>
-                        </div>
+                                            <div class="row border-b-2 brc-default-l2"></div>
 
-                        <div class="form-group">
-                            <label>Payment Plan <span class="text-danger">*</span></label>
-                            <select class="form-control" name="payment_plan" >
-                                <option value="Monthly" {{$custom_payment->payment_plan == 'Monthly' ? "selected" : ""}}>Monthly</option>   
-                                <option value="Annually" {{$custom_payment->payment_plan == 'Annually' ? "selected" : ""}}>Annually</option>                                
-                            </select>
-                        </div>
+                                            <!-- or use a table instead -->
+                                            <!--
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-borderless border-0 border-b-2 brc-default-l1">
+                                            <thead class="bg-none bgc-default-tp1">
+                                                <tr class="text-white">
+                                                    <th class="opacity-2">#</th>
+                                                    <th>Description</th>
+                                                    <th>Qty</th>
+                                                    <th>Unit Price</th>
+                                                    <th width="140">Amount</th>
+                                                </tr>
+                                            </thead>
 
-                        <div class="form-group">
-                            <label>Purchased Package <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="purchased_package" value="{{$custom_payment->purchased_package}}">
-                        </div>
+                                            <tbody class="text-95 text-secondary-d3">
+                                                <tr></tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Domain registration</td>
+                                                    <td>2</td>
+                                                    <td class="text-95">$10</td>
+                                                    <td class="text-secondary-d2">$20</td>
+                                                </tr> 
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    -->
 
-                        <div class="form-group">
-                            <label>Payment Method <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="payment_method" value="{{$custom_payment->payment_method}}">
-                        </div>
+                                            <div class="row mt-3">
+                                                <div class="col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0">
+                                                    Extra note such as company or payment information...
+                                                </div>
 
-                        <div class="form-group">
-                            <label>Payment Status <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="payment_status" value="{{$custom_payment->payment_status}}">
-                        </div>
+                                                <div class="col-12 col-sm-5 text-grey text-90 order-first order-sm-last">
+                                                    <!-- <div class="row my-2">
+                                                        <div class="col-7 text-right">
+                                                            SubTotal
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <span class="text-120 text-secondary-d1">$2,250</span>
+                                                        </div>
+                                                    </div>
 
-                        <div class="form-group">
-                            <label>Purchased Service List <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="purchased_service_list" value="{{$custom_payment->purchased_service_list}}">
-                        </div>
+                                                    <div class="row my-2">
+                                                        <div class="col-7 text-right">
+                                                            Tax (10%)
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <span class="text-110 text-secondary-d1">$225</span>
+                                                        </div>
+                                                    </div> -->
 
-                        <div class="form-group">
-                            <label>Invoice No <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="invoice_no" value="{{$custom_payment->invoice_no}}">
+                                                    <div class="row my-2 align-items-center bgc-primary-l3 p-2">
+                                                        <div class="col-7 text-right">
+                                                            Total Amount
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <span class="text-150 text-success-d3 opacity-2">${{$custom->price}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <hr />
+
+                                            <div>
+                                                <span class="text-secondary-d1 text-105">Thank you for your business</span>
+                                                <!-- <a href="#" class="btn btn-info btn-bold px-4 float-right mt-3 mt-lg-0">Pay Now</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 
                     </div>
                 </div>
-                
-                <div class="mt-3 text-right">
-                    <input type="hidden" name="hidden_id" value="{{ $custom_payment->id }}"/>
-                    <a href="{{route('admin.custom_payment.index')}}" class="btn btn-info rounded-pill text-light px-4 py-2">Back</a>&nbsp;&nbsp;
-                    <button type="submit" class="btn rounded-pill text-light px-4 py-2 ms-2 btn-success">Update</button>
-                </div>
-            </div><br> 
-
-        </div>
-
-    </form>
+            </div><br>
+        </div>        
 
 
 <br><br>
 
-
-<script>
-    $(document).ready(function() {
-        let country = <?php echo json_encode ($custom_payment->country) ?>
-
-        $('#country option').each(function(i){
-            if($(this).val() == country) {
-                $(this).attr('selected', 'selected');
-            }
-        });
-    });
-</script>
 
 
 @endsection
