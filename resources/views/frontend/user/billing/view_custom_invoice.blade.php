@@ -58,28 +58,32 @@
                                     <div class="package-block">
                                         <table class="package-table">
                                             <thead>
-                                                <th>Name</th>
-                                                <th>Sent Date</th>
-                                                <th>Due Date</th>
-                                                <th>Note</th>
-                                                <th>Amount</th>
+                                                <th>Service Name</th>
+                                                <th>Price (USD)</th>
+                                                <th>Discount (Flat)</th>
+                                                <th>Total (Discounted)</th>
                                             </thead>
                                             <tbody>
-                                                <td>
-                                                    <div class="text">{{$custom_invoice->name}}</div>
-                                                </td>
-                                                <td>
-                                                    <div class="text">{{$custom_invoice->date}}</div>
-                                                </td>
-                                                <td>
-                                                    <div class="text">{{$custom_invoice->due_date}}</div>
-                                                </td>
-                                                <td>
-                                                    <div class="text">{{$custom_invoice->note}}</div>
-                                                </td>
-                                                <td>
-                                                    <div class="text red">$ {{$custom_invoice->price}}</div>
-                                                </td>
+                                             @if($custom_invoice)
+                                                @foreach(json_decode($custom_invoice->purchased_service_list) as $servicefunc)
+                                                    <tr>
+                                                        <td>
+                                                            <div class="text">{{$servicefunc->service_name}}</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text">{{number_format( $servicefunc->amount,2)}}</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text red">USD - {{ number_format($servicefunc->discount,2)}}</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text" style="font-weight: 500;"><b>USD {{number_format( $servicefunc->total,2)}}</b></div>
+                                                        </td>
+                                                    </tr>
+
+                                                @endforeach
+                                             @endif
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -109,15 +113,15 @@
                                                 </div> -->
                                                 <div class="payment-row">
                                                     <div class="text">Discount</div>
-                                                    <div class="text">${{$custom_invoice->discount}}</div>
+                                                    <div class="text">${{number_format( $custom_invoice->discount,2)}}</div>
                                                 </div>
                                             </div>
                                             <div class="footer">
                                                 <div class="text-block">
-                                                    <div class="text">Today you pay</div>
+                                                    <div class="text">Total Amount you Pay</div>
                                                     <!-- <div class="text-light">After 30 days: $6.59</div> -->
                                                 </div>
-                                                <div class="text">${{$custom_invoice->price}}</div>
+                                                <div class="text"><h4>USD {{number_format($custom_invoice->price,2)}}</h4></div>
                                             </div>
                                             <a href="#" class="checkout-btn" data-bs-toggle="modal" data-bs-target="#paySucModal">
                                                 Checkout <i class="bi bi-arrow-right-short"></i>
