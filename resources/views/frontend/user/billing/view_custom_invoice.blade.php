@@ -88,7 +88,11 @@
                                         </table>
                                     </div>
                                     <div class="invoice-title">Description</div>
-                                    <div class="invoice-description">{{$custom_invoice->description}}</div>
+                                        @if($custom_invoice->description)
+                                            <div class="invoice-description">{{$custom_invoice->description}}</div>
+                                        @else
+                                            <div class="invoice-description">Description Not Found</div>
+                                        @endif
                                 </div>
                             </div>
                             <div class="col-lg-4">
