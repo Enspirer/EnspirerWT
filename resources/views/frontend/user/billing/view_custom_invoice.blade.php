@@ -45,13 +45,12 @@
                                     </div> -->
                                     <div class="info-block">
                                         <ul class="info">
-                                            <li class="strong">Invoice ID</li>
-                                            <li>{{$custom_invoice->invoice_no}}</li>
+                                            <li class="strong">Invoice ID: # {{$custom_invoice->id}}</li>
+                                            <li></li>
                                             <li>Issued Date: {{$custom_invoice->date}}</li>
-                                            <li>Due Date: {{$custom_invoice->due_date}}</li>
                                         </ul>
                                         <ul class="info text-right">
-                                            <li class="strong">Billed to</li>
+                                            <li class="strong">Billed to:  {{$custom_invoice->name}}</li>
                                             <li>{{$custom_invoice->address}}</li>
                                         </ul>
                                     </div>
