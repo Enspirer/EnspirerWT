@@ -474,11 +474,12 @@ function insert_item(id, amount, service_name, discount) {
         '<td>' +
         '<button type="button" class="btn btn-primary remove" onclick="delete_service(' + id + ',' + gettotal + ')">Delete</button>' +
         '</td>' +
-        '</tr>' +
         '<input type="hidden" name="service_name[]" value="' + service_name + '">' +
         '<input type="hidden" name="amount[]" value="' + amount + '">' +
         '<input class="item_total" type="hidden" name="total[]" value="' + gettotal + '">' +
         '<input type="hidden" name="discount[]" value="' + discount + '">'
+        '</tr>' +
+        
     );
 }
 
