@@ -477,8 +477,8 @@ function insert_item(id, amount, service_name, discount) {
         '<input type="hidden" name="service_name[]" value="' + service_name + '">' +
         '<input type="hidden" name="amount[]" value="' + amount + '">' +
         '<input class="item_total" type="hidden" name="total[]" value="' + gettotal + '">' +
-        '<input type="hidden" name="discount[]" value="' + discount + '">'
-        '</tr>' +
+        '<input type="hidden" name="discount[]" value="' + discount + '">' +
+        '</tr>'
         
     );
 }
