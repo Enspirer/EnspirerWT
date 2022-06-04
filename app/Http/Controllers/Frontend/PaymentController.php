@@ -178,7 +178,6 @@ class PaymentController extends Controller
 //
             return Redirect::route('frontend.user.dashboard');
         }
-
         \Session::put('error','Payment failed !!');
         return Redirect::route('frontend.user.paypal.index');
     }
@@ -499,5 +498,89 @@ class PaymentController extends Controller
         return back()->with([
             'success' => 'success'
         ]);
+    }
+
+    public function custom_payment_paypal(Request $request)
+    {
+        $payer = new Payer();
+        $payer->setPaymentMethod('paypal');
+
+        $item_1 = new Item();
+
+        $item_1->setName('Product 1')
+            ->setCurrency('USD')
+            ->setQuantity(1)
+            ->setPrice($request->get('amount'));
+
+        $item_list = new ItemList();
+        $item_list->setItems(array($item_1));
+
+        $amount = new Amount();
+        $amount->setCurrency('USD')
+            ->setTotal($request->get('amount'));
+
+        $transaction = new Transaction();
+        $transaction->setAmount($amount)
+            ->setItemList($item_list)
+            ->setDescription('Enter Your transaction description');
+
+        // Invoice Function
+        $redirect_urls = new RedirectUrls();
+        $redirect_urls->setReturnUrl(route('frontend.user.custom_invoice_status',[$request->id,'paid']))
+            ->setCancelUrl(route('frontend.user.custom_invoice_status',[$request->id,'paid']));
+
+        $payment = new Payment();
+        $payment->setIntent('Sale')
+            ->setPayer($payer)
+            ->setRedirectUrls($redirect_urls)
+            ->setTransactions(array($transaction));
+        try {
+            $payment->create($this->_api_context);
+        } catch (\PayPal\Exception\PPConnectionException $ex) {
+            if (\Config::get('app.debug')) {
+                \Session::put('error','Connection timeout');
+                return Redirect::route('frontend.user.paypal.index');
+            } else {
+                \Session::put('error','Some error occur, sorry for inconvenient');
+                return Redirect::route('frontend.user.paypal.index');
+            }
+        }
+
+        foreach($payment->getLinks() as $link) {
+            if($link->getRel() == 'approval_url') {
+                $redirect_url = $link->getHref();
+                break;
+            }
+        }
+
+        Session::put('paypal_payment_id', $payment->getId());
+
+        if(isset($redirect_url)) {
+            return Redirect::away($redirect_url);
+        }
+
+        \Session::put('error','Unknown error occurred');
+        return Redirect::route('frontend.user.paypal.index');
+    }
+
+
+    function create_invoice_status($id,$status)
+    {
+        if($status == 'paid'){
+            BillingInvoice::where('id',$id)->update([
+                'status' => 'Paid',
+                'payment_status' => 'Paid'
+            ]);
+            return redirect()->route('frontend.user.view_custom_invoice',$id)->with('message', 'success');;
+        }else{
+            BillingInvoice::where('id',$id)->update([
+                'status' => 'Pending',
+                'payment_status' => 'Pending'
+            ]);
+            return redirect()->route('frontend.user.view_custom_invoice',$id)->with('message', 'IT WORKS!');;
+        }
+
+
+
     }
 }

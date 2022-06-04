@@ -18,6 +18,7 @@
             
         <!-- Content goes here -->
 
+
         <div class="row g-0">
             <div class="section-content">
                 <div class="section-container">
@@ -133,9 +134,15 @@
                                                 </div>
                                                 <div class="text"><h4>USD {{number_format($custom_invoice->price,2)}}</h4></div>
                                             </div>
-                                            <a href="#" class="checkout-btn" data-bs-toggle="modal" data-bs-target="#paySucModal">
-                                                Checkout <i class="bi bi-arrow-right-short"></i>
-                                            </a>
+                                            <form action="{{route('frontend.user.paypal.custom_payment')}}" method="post">
+                                                {{csrf_field()}}
+                                                <input type="hidden" name="amount" value="{{$custom_invoice->price}}">
+                                                <input type="hidden" name="id" value="{{$custom_invoice->id}}">
+                                                <button  class="checkout-btn" style="border-width: inherit;width: 100%;">
+                                                    Checkout <i class="bi bi-arrow-right-short"></i>
+                                                </button>
+                                            </form>
+
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -231,9 +238,13 @@
                                 </div>
                                 <div class="text">$25.00</div>
                             </div>
-                            <a href="#" class="checkout-btn" data-bs-toggle="modal" data-bs-target="#paySucModal">
-                                Checkout <i class="bi bi-arrow-right-short"></i>
-                            </a>
+                            <form action="{{route('frontend.user.paypal.custom_payment')}}">
+                                {{csrf_field()}}
+                                <button type="submit" class="checkout-btn">
+                                    Checkout <i class="bi bi-arrow-right-short"></i>
+                                </button>
+                            </form>
+
                         </div>
                     </div>
                 </div>
@@ -248,7 +259,7 @@
 </div>
 
 <!-- Payment Success Modal -->
-<div class="modal fade pay-sucess-modal" id="paySucModal" tabindex="-1" aria-labelledby="paySucModalLabel" aria-hidden="true">
+<div class="modal fade pay-sucess-modal" id="paySucModal" tabindex="-1" aria-labelledby="paySucModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="inner-wrapper">
@@ -277,7 +288,26 @@
     </div>
   </div>
 </div>
+@if(session()->has('message'))
+    @if(session()->get('message') == 'success')
+        <script>
+            $(window).on('load', function() {
+                $('#paySucModal').modal({backdrop: 'static', keyboard: false})
 
+                $('#paySucModal').modal('show');
+            });
+        </script>
+    @else
+        <script>
+            $(window).on('load', function() {
+                $('#payCanModal').modal({backdrop: 'static', keyboard: false})
+
+                $('#payCanModal').modal('show');
+            });
+        </script>
+    @endif
+
+@endif
     
 @endsection
 

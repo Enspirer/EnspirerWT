@@ -155,6 +155,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::post('p/checkout/pash', [PaymentController::class, 'postPaymentWithpaypal'])->name('paypal.show');
         Route::get('p/satus/{package_id}/{project_id}/{amount}', [PaymentController::class, 'getPaymentStatus'])->name('paypal.status');
 
+        Route::post('p/custom-pay/bash-starter', [PaymentController::class, 'custom_payment_paypal'])->name('paypal.custom_payment');
+
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('project_dash/delete/{id}', [DashboardController::class, 'project_dash_destroy'])->name('project_dash.destroy');
         Route::get('heatmap', [TestController::class, 'heatmap'])->name('heatmap');
@@ -176,6 +178,9 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('billing/project-invoice', [BillingController::class, 'index'])->name('billing');
         Route::get('billing/custom-invoice', [BillingController::class, 'custom_invoice'])->name('custom_invoice');
         Route::get('billing/custom-invoice/view/{id}', [BillingController::class, 'view_custom_invoice'])->name('view_custom_invoice');
+        Route::get('billing/custom-invoice/custraction/{id}/{status}',[PaymentController::class, 'create_invoice_status'])->name('custom_invoice_status');
+
+
         Route::get('unpaid_invoices/{id}', [BillingController::class, 'unpaid_invoices'])->name('unpaid_invoices');
         Route::get('paid_invoices/{id}', [BillingController::class, 'paid_invoices'])->name('paid_invoices');
 
