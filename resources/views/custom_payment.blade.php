@@ -11,7 +11,7 @@
     <div class="mt-4">
         <h2 class="text-center mb-5">Invoice</h2>
 
-            <div class="container">
+            <div class="">
                 <div class="col-md-12">
                     <div class="invoice">
                         <!-- begin invoice-company -->
@@ -47,7 +47,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="text-right" width="30%"><img src="{{public_path('images/logo/tallentor-logo.png')}}" style="width: 65%;"></td>
+                                <td class="text-right" width="30%"><img src="{{public_path('images/logo/tallentor-logo.png')}}" style="width: 50%;"></td>
                             </tr>            
                             </table>
                             
@@ -57,13 +57,10 @@
 
                         <div class="invoice-header mb-5">
                             <div class="invoice-from">
-                            <address class="mt-2 mb-2">
-                                <strong class="text-inverse" style="border-bottom:1px solid #23282c;">Payment Information</strong><br>
+                                <address class="mt-2 mb-2">
+                                    <strong class="text-inverse" style="border-bottom:1px solid #23282c;">Payment Information</strong><br>
                                     <table class="mt-3" width="380px">
-                                        <tr>
-                                        <td><h6 class="text-inverse">Project Name:</h6></td>
-                                        <td><h6 class="text-inverse">{{$project_name}}</h6></td>
-                                        </tr>
+                                    
                                         <tr>
                                         <td><h6 class="text-inverse">Purchased Package:</td>
                                         <td><h6 class="text-inverse">{{$purchased_package}}</h6></td>
@@ -72,8 +69,7 @@
                                         <td><h6 class="text-inverse">Discount Type:</td>
                                         <td><h6 class="text-inverse">{{$discount_type}}</h6></td>
                                         </tr>
-                            
-                                        
+                                                                   
 
                                         <tr>
                                         <td><h6 class="text-inverse">Invoice No:</td>
@@ -115,29 +111,45 @@
                                         <td><h6 class="text-inverse">Expire Date:</td>
                                         <td><h6 class="text-inverse">{{$expire_date}}</h6></td>
                                         </tr>
+                                       
+                                    </table>
+                                </address>                            
+                            </div>
 
+
+                            <div class="invoice-from">
+                                <address class="mt-2 mb-2">
+                                    <table class="mt-5" width="100%">
+                                    
                                         @if($purchased_service_list != null)
-                                            <tr>
-                                            <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Service Name:</td>
-                                            <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Amount</h6></td>
-                                            <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Total</h6></td>
+                                            <tr style="margin-top:150px;">
+                                                <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Service Name:</td>
+                                                <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Price</h6></td>
+                                                <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Discount</h6></td>
+                                                <td><h6 class="text-inverse" style="border-bottom:1px solid #23282c;">Total</h6></td>
                                             </tr>
                                             @foreach(json_decode($purchased_service_list) as $key => $seo_result)
                                                 <tr>
                                                     <td><h6 class="text-inverse">{{ str_replace("_"," ", ucfirst(trans($seo_result->service_name)) ) }}:</td>
-                                                    <td><h6 class="text-inverse">{{$seo_result->amount}}</h6></td>
-                                                    <td><h6 class="text-inverse">{{$seo_result->total}}</h6></td>
+                                                    <td><h6 class="text-inverse">USD  {{number_format((float)$seo_result->amount, 2, '.', '')}}</h6></td>
+                                                    <td><h6 class="text-inverse">USD  {{number_format((float)$seo_result->discount, 2, '.', '')}}</h6></td>
+                                                    <td><h6 class="text-inverse">USD  {{number_format((float)$seo_result->total, 2, '.', '')}}</h6></td>
                                                 </tr>
                                             @endforeach
-                                        @endif                                        
-                                             
+                                            <tr>
+                                                <td><h6 class="text-inverse"></td>
+                                                <td><h6 class="text-inverse"></h6></td>
+                                                <td><h6 class="text-inverse"></h6>Total Amount: </td>
+                                                <td><h6 class="text-inverse" style="font-size:22px;">USD  {{number_format($price),2}}</h6></td>
+                                            </tr>
+                                        @endif
                                        
                                     </table>
-                            </address>
-                            
+                                </address>                            
                             </div>
+
                             <div class="invoice-to">
-                            <address class="mt-2 mb-2">
+                            <address class="mt-5 mb-2">
                                 <strong class="text-inverse" style="border-bottom:1px solid #23282c;">Customer Details</strong><br>
                                     <table class="mt-3" width="380px">
                                         <tr>

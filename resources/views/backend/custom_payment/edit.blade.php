@@ -228,9 +228,9 @@
                                                         <div class="row mb-2 mb-sm-0 py-25">
                                                             <div class="d-none d-sm-block col-1">{{$key}}</div>
                                                             <div class="col-9 col-sm-5">{{ str_replace("_"," ", ucfirst(trans($custom->service_name)) ) }}</div>
-                                                            <div class="d-none d-sm-block col-2">${{$custom->amount}}</div>
-                                                            <div class="d-none d-sm-block col-2 text-95">${{$custom->discount}}</div>
-                                                            <div class="col-2 text-secondary-d2">${{$custom->total}}</div>
+                                                            <div class="d-none d-sm-block col-2">USD {{number_format((float)$custom->amount, 2, '.', '')}}</div>
+                                                            <div class="d-none d-sm-block col-2 text-95">USD {{number_format((float)$custom->discount, 2, '.', '')}}</div>
+                                                            <div class="col-2 text-secondary-d2">USD {{number_format((float)$custom->total, 2, '.', '')}}</div>
                                                         </div>
                                                     @endforeach
                                                 @endif
@@ -248,33 +248,6 @@
 
                                             <div class="row border-b-2 brc-default-l2"></div>
 
-                                            <!-- or use a table instead -->
-                                            <!--
-                                    <div class="table-responsive">
-                                        <table class="table table-striped table-borderless border-0 border-b-2 brc-default-l1">
-                                            <thead class="bg-none bgc-default-tp1">
-                                                <tr class="text-white">
-                                                    <th class="opacity-2">#</th>
-                                                    <th>Description</th>
-                                                    <th>Qty</th>
-                                                    <th>Unit Price</th>
-                                                    <th width="140">Amount</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody class="text-95 text-secondary-d3">
-                                                <tr></tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Domain registration</td>
-                                                    <td>2</td>
-                                                    <td class="text-95">$10</td>
-                                                    <td class="text-secondary-d2">$20</td>
-                                                </tr> 
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    -->
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0">
@@ -305,7 +278,7 @@
                                                             Total Amount
                                                         </div>
                                                         <div class="col-5">
-                                                            <span class="text-150 text-success-d3 opacity-2">${{$custom->price}}</span>
+                                                            <span class="text-150 text-success-d3 opacity-2">USD {{number_format($custom_payment->price,2)}}</span>
                                                         </div>
                                                     </div>
                                                 </div>
