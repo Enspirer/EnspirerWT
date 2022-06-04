@@ -71,8 +71,6 @@
                                             <th>Invoice ID</th>
                                             <th>Status</th>
                                             <th>Sent Date</th>
-                                            <th>Due Date</th>
-                                            <th>Note</th>
                                             <th>Amount</th>
                                             <th></th>
                                             <th></th>
@@ -83,10 +81,10 @@
                                                         <input class="form-check-input" type="checkbox" data-check>
                                                     </td>
                                                     <td>
-                                                        <div class="text">{{$custom->invoice_no}}</div>
+                                                        <div class="text">#{{$custom->id}}</div>
                                                     </td>
                                                     <td>
-                                                        @if($custom->status == 'Paid')
+                                                        @if($custom->status == 'Completed')
                                                             <div class="" style="font-size: 1rem; color: #2e991b">
                                                                 <i class="bi bi-coin"></i>
                                                                 Paid
@@ -100,12 +98,6 @@
                                                     </td>
                                                     <td>
                                                         <div class="text">{{$custom->date}}</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="text">{{$custom->due_date}}</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="text">{{$custom->note}}</div>
                                                     </td>
                                                     <td>
                                                         <div class="text">${{$custom->price}}</div>

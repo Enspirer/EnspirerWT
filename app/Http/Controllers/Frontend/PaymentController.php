@@ -568,7 +568,7 @@ class PaymentController extends Controller
     {
         if($status == 'paid'){
             BillingInvoice::where('id',$id)->update([
-                'status' => 'Paid',
+                'status' => 'Completed',
                 'payment_status' => 'Paid'
             ]);
             return redirect()->route('frontend.user.view_custom_invoice',$id)->with('message', 'success');;
