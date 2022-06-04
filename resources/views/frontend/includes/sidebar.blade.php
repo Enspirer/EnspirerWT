@@ -30,7 +30,9 @@
                                         <button class="nav-link {{Request::segment(1)=='billing' ? 'active' :null }} collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bililngCollapse" aria-expanded="true" aria-controls="bililngCollapse">
                                             <i class="bi bi-receipt"></i>
                                             <span class="text">Billing</span>
-                                            <span class="alerts">{{count(App\Models\BillingInvoice::where('user_id',auth()->user()->id)->where('status','Pending')->get()) }}</span>
+                                            @if(count(App\Models\BillingInvoice::where('user_id',auth()->user()->id)->where('status','Pending')->get()) != 0)
+                                                <span class="alerts">{{count(App\Models\BillingInvoice::where('user_id',auth()->user()->id)->where('status','Pending')->get()) }}</span>
+                                            @endif
                                         </button>
                                     </h2>
                                     <div id="bililngCollapse" class="accordion-collapse collapse" aria-labelledby="billingHead" data-bs-parent="#billingAcc">
@@ -46,6 +48,9 @@
                                                     <a href="{{route('frontend.user.custom_invoice')}}" class="nav-link {{Request::segment(2)=='custom-invoice' ? 'active' :null }}">
                                                         <i class="bi bi-file-earmark-plus"></i>
                                                         <span class="text">Custom Invoice</span>
+                                                        @if(count(App\Models\BillingInvoice::where('user_id',auth()->user()->id)->where('status','Pending')->get()) != 0)
+                                                            <span class="alerts">{{count(App\Models\BillingInvoice::where('user_id',auth()->user()->id)->where('status','Pending')->get()) }}</span>
+                                                        @endif
                                                     </a>
                                                 </li>
                                             </ul>
