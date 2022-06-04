@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{url('css/reports.css')}}">
 <link rel="stylesheet" href="{{url('css/projects.css')}}">
 <link rel="stylesheet" href="{{url('css/billing.css')}}">
-   
+
 @include('frontend.includes.mobile_nav')
 
 <section id="sectionMainWindow">
@@ -15,7 +15,7 @@
 
     <div id="sectionBody">
             @include('frontend.includes.nav')
-            
+
         <!-- Content goes here -->
 
         <div class="row g-0">
@@ -44,7 +44,7 @@
                                 'not_found_description' => null,
                                 'not_found_button_caption' => null
                             ])
-						@else                        
+						@else
                             <div class="table-block">
                                 <div class="controls">
                                     <div class="form-check">
@@ -76,7 +76,7 @@
                                             <th></th>
                                         </thead>
                                         @foreach($custom_invoice as $custom)
-                                            <tbody>                                        
+                                            <tbody>
                                                     <td>
                                                         <input class="form-check-input" type="checkbox" data-check>
                                                     </td>
@@ -106,7 +106,37 @@
                                                         <a href="{{route('frontend.user.view_custom_invoice',$custom->id)}}" class="view">View Invoice</a>
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="btn-pay" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay Now</a>
+                                                        @if($custom->status != 'Completed')
+                                                            @if($custom->payment_method == 'paypal')
+                                                                <form action="{{route('frontend.user.paypal.custom_payment')}}" method="post">
+                                                                    {{csrf_field()}}
+                                                                    <input type="hidden" name="amount" value="{{$custom->price}}">
+                                                                    <input type="hidden" name="id" value="{{$custom->id}}">
+                                                                    <button  class="btn btn-primary" style="border-width: inherit;width: 100%;height: 40px;">
+                                                                        Paynow <i class="bi bi-arrow-right-short"></i>
+                                                                    </button>
+                                                                </form>
+                                                            @elseif ($custom->payment_method == 'stripe')
+                                                                <form action="{{route('frontend.user.paypal.custom_payment')}}" method="post">
+                                                                    {{csrf_field()}}
+                                                                    <input type="hidden" name="amount" value="{{$custom->price}}">
+                                                                    <input type="hidden" name="id" value="{{$custom->id}}">
+                                                                    <button  class="btn btn-primary" style="border-width: inherit;width: 100%;height: 40px;">
+                                                                        Paynow <i class="bi bi-arrow-right-short"></i>
+                                                                    </button>
+                                                                </form>
+                                                            @endif
+                                                        @else
+                                                            <form action="{{route('frontend.user.paypal.custom_payment')}}" method="post">
+                                                                {{csrf_field()}}
+                                                                <input type="hidden" name="amount" value="{{$custom->price}}">
+                                                                <input type="hidden" name="id" value="{{$custom->id}}">
+                                                                <button  class="btn btn-primary" style="border-width: inherit;width: 100%;height: 40px;" disabled="">
+                                                                    Paynow <i class="bi bi-arrow-right-short"></i>
+                                                                </button>
+                                                            </form>
+                                                        @endif
+
                                                     </td>
                                             </tbody>
                                         @endforeach
@@ -242,7 +272,7 @@
   </div>
 </div>
 
-    
+
 @endsection
 
 
@@ -267,7 +297,7 @@ dataRow.forEach(function (arr1, index) {
         arr2.classList.toggle("active")
     });
 });
-</script>  
+</script>
 
 <script>
     // Progressbar color changer
