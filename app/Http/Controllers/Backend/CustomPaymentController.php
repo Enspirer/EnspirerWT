@@ -43,7 +43,7 @@ class CustomPaymentController extends Controller
             })
             ->addColumn('action', function($data){
                 $button = '<a href="'.route('admin.custom_payment.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Invoice </a>';
-                $button .= '<a href="'.route('admin.custom_payment.view',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-success btn-sm" style="margin-right: 10px"><i class="fas fa-file"></i> View </a>';
+                $button .= '<a href="'.route('admin.custom_payment.view',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-success btn-sm" style="margin-right: 10px"><i class="fas fa-file"></i> Download PDF </a>';
                 $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
                 return $button;
                 })
