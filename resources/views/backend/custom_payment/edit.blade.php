@@ -228,7 +228,7 @@
                                                         <div class="row mb-2 mb-sm-0 py-25">
                                                             <div class="d-none d-sm-block col-1">{{$key}}</div>
                                                             <div class="col-9 col-sm-5">{{ str_replace("_"," ", ucfirst(trans($custom->service_name)) ) }}</div>
-                                                            <div class="d-none d-sm-block col-2">USD {{number_format($custom->amount, 2, '.', '')}}</div>
+                                                            <div class="d-none d-sm-block col-2">USD {{number_format((float)$custom->amount, 2, '.', '')}}</div>
                                                             <div class="d-none d-sm-block col-2 text-95">USD {{number_format((float)$custom->discount, 2, '.', '')}}</div>
                                                             <div class="col-2 text-secondary-d2">USD {{number_format((float)$custom->total, 2, '.', '')}}</div>
                                                         </div>
