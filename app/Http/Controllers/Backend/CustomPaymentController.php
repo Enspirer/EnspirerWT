@@ -158,14 +158,11 @@ class CustomPaymentController extends Controller
 
     public function view($id)
     {
-       // dd($id);
+    //    dd($id);
        $billing_invoice = BillingInvoice::where('id',$id)->first(); 
-       $project = Projects::where('id',$billing_invoice->project_id)->first();
-       // dd($billing_invoice);
-       
+       // dd($billing_invoice);     
      
-
-       $user = User::where('id',$billing_invoice->id)->first();
+       $user = User::where('id',$billing_invoice->user_id)->first();
 
        $data = [
            'created_at' => $billing_invoice->created_at->format('d M Y'),
@@ -178,7 +175,6 @@ class CustomPaymentController extends Controller
            'address' => $billing_invoice->address,
            'status' => $billing_invoice->status,
            'name' => $billing_invoice->name,
-           'project_name' => $project->name,
            'country' => $billing_invoice->country,
            'state' => $billing_invoice->state,
            'city' => $billing_invoice->city,
