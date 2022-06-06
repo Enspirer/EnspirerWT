@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use DB;
 use Mail;  
 use \App\Mail\CustomUserMail;
-use \App\Mail\TestMail;
+use \App\Mail\InvoiceMail;
 
 
 class CustomPaymentController extends Controller
@@ -167,7 +167,6 @@ class CustomPaymentController extends Controller
             'created_at' => $billing_invoice->created_at->format('d M Y'),
             'purchased_package' => $billing_invoice->purchased_package,
             'price' => $billing_invoice->price,
-            'invoice_id' => $billing_invoice->id,
             'payment_plan' => $billing_invoice->payment_plan,
             'payment_method' => $billing_invoice->payment_method,
             'phone_number' => $billing_invoice->phone_number,
@@ -183,12 +182,16 @@ class CustomPaymentController extends Controller
             'due_date' => $billing_invoice->due_date,
             'discount_type' => $billing_invoice->discount_type,
             'payment_status' => $billing_invoice->payment_status,            
-            'invoice_no' => $billing_invoice->invoice_no,
+            'invoice_id' => $billing_invoice->invoice_no,
             'email' => $user->email,            
             'purchased_service_list' => $billing_invoice->purchased_service_list
         ];
+
+        // dd($invoice_details);
  
-        // \Mail::to($request->email_address)->send(new TestMail($invoice_details));
+        \Mail::to($request->email_address)->send(new InvoiceMail($invoice_details));
+
+        dd('fdgdg');
  
 
         return redirect()->route('admin.custom_payment.index')->withFlashSuccess('Added Successfully');    
