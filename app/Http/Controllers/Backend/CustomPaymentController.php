@@ -186,13 +186,8 @@ class CustomPaymentController extends Controller
             'email' => $user->email,            
             'purchased_service_list' => $billing_invoice->purchased_service_list
         ];
-
-        // dd($invoice_details);
  
         \Mail::to($request->email_address)->send(new InvoiceMail($invoice_details));
-
-        dd('fdgdg');
- 
 
         return redirect()->route('admin.custom_payment.index')->withFlashSuccess('Added Successfully');    
                     
