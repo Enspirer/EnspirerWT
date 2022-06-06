@@ -134,14 +134,24 @@
                                                 </div>
                                                 <div class="text"><h4>USD {{number_format($custom_invoice->price,2)}}</h4></div>
                                             </div>
-                                            <form action="{{route('frontend.user.paypal.custom_payment')}}" method="post">
-                                                {{csrf_field()}}
-                                                <input type="hidden" name="amount" value="{{$custom_invoice->price}}">
-                                                <input type="hidden" name="id" value="{{$custom_invoice->id}}">
-                                                <button  class="checkout-btn" style="border-width: inherit;width: 100%;">
+                                            @if($custom_invoice->status != 'Completed')
+                                                @if($custom_invoice->payment_method == 'paypal')
+                                                <form action="{{route('frontend.user.paypal.custom_payment')}}" method="post">
+                                                    {{csrf_field()}}
+                                                    <input type="hidden" name="amount" value="{{$custom_invoice->price}}">
+                                                    <input type="hidden" name="id" value="{{$custom_invoice->id}}">
+                                                    <button  class="checkout-btn" style="border-width: inherit;width: 100%;">
+                                                        Checkout <i class="bi bi-arrow-right-short"></i>
+                                                    </button>
+                                                </form>
+                                                @elseif ($custom_invoice->payment_method == 'paypal')
+
+                                                @endif
+                                            @else
+                                                <button  class="checkout-btn" style="border-width: inherit;width: 100%;" disabled>
                                                     Checkout <i class="bi bi-arrow-right-short"></i>
                                                 </button>
-                                            </form>
+                                            @endif
 
                                         </div>
                                     </div>
@@ -265,8 +275,8 @@
         <div class="inner-wrapper">
             <img src="{{url('images/dashboard/main/payment-success.svg')}}" alt="">
             <div class="title">Payment Transfer Successful!</div>
-            <div class="text">All Good... Thank You! Your payment of $25.00 has been received successfully.</div>
-            <a href="#" class="pay-sucess-btn" data-bs-toggle="modal" data-bs-target="#payCanModal">
+            <div class="text">All Good... Thank You! Your payment of {{number_format( $custom_invoice->price,2)}} has been received successfully.</div>
+            <a href="{{route('frontend.user.custom_invoice')}}" class="pay-sucess-btn" >
             Back to Dashboard <i class="bi bi-arrow-right-short"></i>
             </a>
         </div>
@@ -281,7 +291,7 @@
             <img src="{{url('images/dashboard/main/payment-cancel.svg')}}" alt="">
             <div class="title">Payment Transfer Failed!</div>
             <div class="text">Bad... Sorry! Your payment was Failed! Please check billing information again and retry.</div>
-            <a href="#" class="pay-cancel-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">
+            <a href="{{route('frontend.user.custom_invoice')}}" class="pay-cancel-btn">
             Try again <i class="bi bi-arrow-right-short"></i>
             </a>
         </div>
