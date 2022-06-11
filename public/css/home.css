@@ -797,28 +797,41 @@
     transition: all .3s ease;
 }
 
-.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover {
-    background-color: #00AEEF;
-    border: 2px solid #fff;
-    border-radius: 8px;
-    box-shadow: 2px 2px 8px #00aeef;
-    transform: scale(1.1) rotateZ(-10deg);
-}
+@media (hover: hover) {
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover {
+        background-color: #00AEEF;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        box-shadow: 2px 2px 8px #00aeef;
+    }
 
-.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper {
-    transform: rotateZ(10deg);
-}
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:nth-child(odd):hover {
+        transform: scale(1.1) rotateZ(-10deg);
+    }
 
-.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper img {
-    filter: invert(1);
-}
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:nth-child(even):hover {
+        transform: scale(1.1) rotateZ(10deg);
+    }
 
-.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper .title {
-    color: white;
-}
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:nth-child(odd):hover .card-wrapper {
+        transform: rotateZ(10deg);
+    }
 
-.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper p {
-    color: white;
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:nth-child(even):hover .card-wrapper {
+        transform: rotateZ(-10deg);
+    }
+
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper img {
+        filter: invert(1);
+    }
+
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper .title {
+        color: white;
+    }
+
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper p {
+        color: white;
+    }
 }
 
 .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card a {
