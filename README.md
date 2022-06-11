@@ -1,5 +1,6 @@
 # EnspirerWT
 [![Laravel](https://github.com/Enspirer/EnspirerWT/actions/workflows/laravel.yml/badge.svg)](https://github.com/Enspirer/EnspirerWT/actions/workflows/laravel.yml)
+[![Dependency Review](https://github.com/Enspirer/EnspirerWT/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/Enspirer/EnspirerWT/actions/workflows/dependency-review.yml)
 
 Engage real-time users on your website with the best whatsapp widget integrated with inquiry management system. Increase website performance with Optimizer app. Bulk whatsapp messages | Talent pool remote developers"
 
