@@ -13,7 +13,7 @@ class BasicTest extends TestCase
      *
      * @return void
      */
-    public function home_page()
+    public function testExample()
     {
         $response = $this->get('/');
         $this->assertTrue(true);
