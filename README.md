@@ -21,4 +21,4 @@ Engage real-time users on your website with the best whatsapp widget integrated 
  * Analytics of the inquiry management process with reports
  
  ## Security Notes
- [I'm an inline-style link](https://github.com/Enspirer/EnspirerWT/blob/main/SECURITY.md)
+ [Versions of your TallentorWT are currently being supported with security updates](https://github.com/Enspirer/EnspirerWT/blob/main/SECURITY.md)
