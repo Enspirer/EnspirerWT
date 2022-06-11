@@ -5,6 +5,7 @@
 Engage real-time users on your website with the best whatsapp widget integrated with inquiry management system. Increase website performance with Optimizer app. Bulk whatsapp messages | Talent pool remote developers"
 
 
+
 ## Widget Lite
 
 * The choice of multiple messenger options
@@ -18,3 +19,6 @@ Engage real-time users on your website with the best whatsapp widget integrated 
  * Assign the inquiry to relevant department
  * Record of the full status of the inquiry with comments
  * Analytics of the inquiry management process with reports
+ 
+ ## Security Notes
+ [I'm an inline-style link](https://github.com/Enspirer/EnspirerWT/blob/main/SECURITY.md)
