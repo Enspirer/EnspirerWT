@@ -743,16 +743,14 @@
 
 .marketplace-section .inner-wrapper .button-block .content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    top: 15%;
+    left: 0;
+    width: max-content;
 }
 
 .marketplace-section .inner-wrapper .button-block .content .title {
-    font-size: 52px;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 60px;
     background-color: #fff;
 }
 
@@ -765,6 +763,100 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper p {
+    flex: 1 1 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 2rem;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card {
+    flex: 0 0 50%;
+    box-shadow: 0 0 1px #00aeef;
+    border: 2px solid #fff;
+    height: 200px;
+    transition: all .3s ease;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover {
+    background-color: #00AEEF;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px #00aeef;
+    transform: scale(1.1) rotateZ(-10deg);
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper {
+    transform: rotateZ(10deg);
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper img {
+    filter: invert(1);
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper .title {
+    color: white;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper p {
+    color: white;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card .card-wrapper {
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card .card-wrapper img {
+    width: 35px;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card .card-wrapper .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.75rem;
+    color: #333;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card .card-wrapper p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding: 0;
 }
 
 .marketplace-section .inner-wrapper .card-block .card {
@@ -1219,6 +1311,62 @@
     .hero-section .slide-wrapper {
         margin: 100px 0 60px;
     }
+
+    .marketplace-section .inner-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .marketplace-section .inner-wrapper .button-block {
+        width: 100%;
+        border: none;
+        align-items: center;
+    }
+
+    .marketplace-section .inner-wrapper .button-block .content {
+        position: unset;
+        transform: unset;
+        margin: 40px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marketplace-section .inner-wrapper .button-block .content .title {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .marketplace-section .inner-wrapper .card-block {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 0 0 40px;
+    }
+
+    .marketplace-section .inner-wrapper .card-block .card {
+        position: unset;
+        transform: unset;
+        max-width: 600px;
+    }
+
+    .marketplace-section .inner-wrapper .card-block .card .image-block {
+        text-align: center;
+    }
+
+    .marketplace-section .inner-wrapper .card-block .card .image-block img {
+        width: 300px;
+    }
+
+    .marketplace-section .inner-wrapper .card-block .wrapper {
+        flex-direction: column;
+    }
+
+    .marketplace-section .inner-wrapper .card-block .wrapper p {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -1249,55 +1397,6 @@
 
     .hero-section .slide-wrapper .content-block .featured-icons {
         margin-top: 40px;
-    }
-
-    .marketplace-section .inner-wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .marketplace-section .inner-wrapper .button-block {
-        width: 100%;
-        border: none;
-        align-items: center;
-    }
-
-    .marketplace-section .inner-wrapper .button-block .content {
-        position: unset;
-        transform: unset;
-        margin: 40px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .marketplace-section .inner-wrapper .button-block .content .title {
-        font-size: 40px;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .marketplace-section .inner-wrapper .card-block {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        margin: 40px 0;
-    }
-
-    .marketplace-section .inner-wrapper .card-block .card {
-        position: unset;
-        transform: unset;
-        max-width: 600px;
-    }
-
-    .marketplace-section .inner-wrapper .card-block .card .image-block {
-        text-align: center;
-    }
-
-    .marketplace-section .inner-wrapper .card-block .card .image-block img {
-        width: 300px;
     }
 
     .IMS-section .card-block {
@@ -1424,6 +1523,10 @@
 
     .hero-section .slide-wrapper .content-block .uae-wrapper .dubai {
         font-size: 74px;
+    }
+
+    .marketplace-section .inner-wrapper .button-block .content .title {
+        font-size: 24px;
     }
 }
 

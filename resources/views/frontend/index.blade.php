@@ -355,56 +355,68 @@
             <div class="inner-wrapper">
                 <div class="button-block">
                     <div class="content">
-                        <h1 class="title">The Talent <br> Marketplace</h1>
-                        <a href="{{url('services/marketplace')}}" class="cta-btn-border"><span class="text">Find Talent</span> <i class="bi bi-arrow-right-short"></i></a>
+                        <h1 class="title">The leading <br> Digital Marketing Agency <br> in the UAE!</h1>
                     </div>
                 </div>
-                <div class="card-block" id="marketplaceCards">
-                    <div data-aos-easing="ease" data-aos="fade-left" class="card card-top">
-                        <a href="{{url('services/marketplace')}}">
-                            <div class="icon-block">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <i class="bi bi-three-dots-vertical"></i>
+                <div class="card-block">
+                    <div class="wrapper">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium ullam magnam optio, veritatis impedit officia sed, aliquam et est exercitationem eum recusandae suscipit ducimus incidunt itaque similique totam libero, commodi sit consequatur pariatur magni odit. Consectetur dicta enim, cupiditate officiis excepturi laudantium ipsa aliquid voluptatibus unde voluptatem minima iure?</p>
+                        <div class="card-section">
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-1.png')}}" alt="" class="card-img">
+                                        <div class="title">Digital Marketing</div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="image-block">
-                                <img src="{{url('images/landing_page/home/mobile-app-development.png')}}" alt="">
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-2.png')}}" alt="" class="card-img">
+                                        <div class="title">Software Development</div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="content">
-                                <div class="title">Mobile App Development</div>
-                                <div class="text">Hire the industry experts to bring your idea into reality.
-                                Dedicated Android & iOS developers to work on your project</div>
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-3.png')}}" alt="" class="card-img">
+                                        <div class="title">Mobile App Development</div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div data-aos-easing="ease" data-aos="fade-left" data-aos-delay="800" class="card active card-middle">
-                        <a href="{{url('services/marketplace')}}">
-                            <div class="icon-block">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <i class="bi bi-three-dots-vertical"></i>
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-4.png')}}" alt="" class="card-img">
+                                        <div class="title">Web Application Development</div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="image-block">
-                                <img src="{{url('images/landing_page/home/software-development.png')}}" alt="">
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-5.png')}}" alt="" class="card-img">
+                                        <div class="title">Whatsapp Widget</div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="content">
-                                <div class="title">Software Development</div>
-                                <div class="text">Experienced software developers to work individually or as a part of your team. Save Big with remote working environment, yer achieve the Best results.</div>
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-6.png')}}" alt="" class="card-img">
+                                        <div class="title">Web Optimizer app</div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div data-aos-easing="ease" data-aos="fade-left" data-aos-delay="400" class="card card-bottom">
-                        <a href="{{url('services/marketplace')}}">
-                            <div class="icon-block">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <i class="bi bi-three-dots-vertical"></i>
-                            </div>
-                            <div class="image-block">
-                                <img src="{{url('images/landing_page/home/digital-marketing.png')}}" alt="">
-                            </div>
-                            <div class="content">
-                                <div class="title">Digital Marketing</div>
-                                <div class="text">SEO experts, Social media strategists and creative designers all under one package with a dedicated account manager</div>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
