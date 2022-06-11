@@ -13,7 +13,7 @@
     height: auto;
     background-color: transparent;
     /* backdrop-filter: blur(2.5px); */
-    color: #999;
+    color: #fff;
     font-size: 14px;
     font-weight: 400;
     position: relative;
@@ -24,12 +24,13 @@
     color: #333;
 }
 
-.hero-section .custom__pagination li:not(:nth-last-child(1)) .custom__pagination__page {
-    border-right: 1px solid #fff;
+.hero-section .custom__pagination li .custom__pagination__page {
+    border-top: 1px solid #fff;
 }
 
 .hero-section .custom__pagination.uae li:nth-child(1) .custom__pagination__page {
     border-right: 1px solid #FF0404;
+    border-top: 1px solid #FF0404;
     color: #fff;
     background-color: #FF0404;
 }
@@ -62,6 +63,25 @@
     transform: translate(-50%, 0);
 } */
 
+.hero-section .header {
+    text-align: center;
+    position: absolute;
+    top: 15%;
+}
+
+.hero-section .header .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hero-section .header p {
+    font-size: .9rem;
+    font-weight: 300;
+    color: white;
+}
+
 .hero-section .slide-wrapper {
     display: flex;
     flex-direction: row;
@@ -82,7 +102,7 @@
     text-align: center;
 }
 
-.hero-section .slide-wrapper .content-block .inner-wrapper .tallentor {
+/* .hero-section .slide-wrapper .content-block .inner-wrapper .tallentor {
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
@@ -104,7 +124,7 @@
     line-height: 1;
     color: #fff;
     font-family: 'Captain Blackjack';
-}
+} */
 
 .hero-section .slide-wrapper .content-block .title {
     font-weight: 700;
@@ -1417,7 +1437,7 @@
 }
 
 .hero-section.home {
-    background: url(../images/landing_page/home/hero_slides/slide_1.png);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/landing_page/home/hero_slides/hero.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -1,9 +1,12 @@
-<section class="navigation-bar {{ Request::segment(1) == '' ? 'transparent' : null }}">
+<section class="navigation-bar">
     <div class="container">
         <div class="inner-wrapper">
             <div class="mobile-brand">
-                <img src="{{url('images/logo/mobile-logo.png')}}" alt="">
+                <img src="{{url('images/logo/tallentor-digital.svg')}}" alt="">
             </div>
+            <a class="navbar-brand" href="#">
+                <img src="{{url('images/logo/tallentor-digital.svg')}}" alt="">
+            </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="{{url('/')}}" class="nav-link {{ Request::segment(1) == '' ? 'active' : null }}">Home</a>
@@ -46,13 +49,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{url('eshop')}}" class="nav-link {{ Request::segment(1) == 'eshop' ? 'active' : null }}">eShop</a>
-                </li>
-                <li class="nav-item mobile-none">
-                    <a href="{{url('/')}}" class="nav-link brand-link">
-                        <div class="brand">
-                            <img src="{{url('images/logo/tallentor-logo.png')}}" alt="">
-                        </div>
-                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{url('pricing')}}" class="nav-link {{ Request::segment(1) == 'pricing' ? 'active' : null }}">Pricing</a>

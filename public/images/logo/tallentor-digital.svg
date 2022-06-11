@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="351.364" height="59.683" viewBox="0 0 351.364 59.683">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+      }
+
+      .cls-2 {
+        fill: #00154e;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fff;
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-3 {
+        font-size: 27px;
+        letter-spacing: 0.1em;
+      }
+
+      .cls-4 {
+        font-size: 19px;
+        letter-spacing: 0.5em;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_3097" data-name="Group 3097" transform="translate(-15.05 -309.988)">
+    <path id="Path_12069" data-name="Path 12069" class="cls-1" d="M279.787,317.709v59.682H95.539l30.231-59.682Z" transform="translate(86.628 -7.721)"/>
+    <path id="Path_12070" data-name="Path 12070" class="cls-2" d="M208.767,317.709l-30.231,59.683H15.05V317.709Z" transform="translate(0 -7.721)"/>
+    <text id="Tallentor" class="cls-3" transform="translate(35.404 350.829)"><tspan x="0" y="0">Tallentor</tspan></text>
+    <text id="DIGITAL" class="cls-4" transform="translate(221.109 347.829)"><tspan x="0" y="0">DIGITAL</tspan></text>
+    <line id="Line_471" data-name="Line 471" class="cls-5" x1="30.231" y2="51.097" transform="translate(178.536 317.709)"/>
+    <line id="Line_472" data-name="Line 472" class="cls-1" x1="30.231" y2="51.097" transform="translate(178.536 317.709)"/>
+  </g>
+</svg>

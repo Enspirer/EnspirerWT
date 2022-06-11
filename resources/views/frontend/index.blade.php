@@ -15,20 +15,24 @@
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
+                            <div class="header">
+                            <div class="title">Digital Marketing Mobile App Development</div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus quasi hic omnis quas, veniam saepe nostrum corporis quod non suscipit nihil odio modi obcaecati pariatur, quaerat debitis? Quidem, repellendus totam.</p>
+                            </div>
                             <div class="slide-wrapper">
                                 <div class="content-block">
-                                    <div class="inner-wrapper uae-wrapper">
+                                    <!-- <div class="inner-wrapper uae-wrapper">
                                         <div class="tallentor">Tallentor</div>
                                         <div class="is-now-in">Is now in</div>
                                         <div class="dubai">Dubai</div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="image-block slide-1">
                                     <img src="{{url('images/landing_page/home/hero_slides/main.png')}}" class="back-img">
-                                    <img src="{{url('images/landing_page/home/hero_slides/uae-tile-1.png')}}" class="size-img tile tile-1">
+                                    <!-- <img src="{{url('images/landing_page/home/hero_slides/uae-tile-1.png')}}" class="size-img tile tile-1">
                                     <img src="{{url('images/landing_page/home/hero_slides/uae-tile-2.png')}}" class="size-img tile tile-2">
                                     <img src="{{url('images/landing_page/home/hero_slides/uae-tile-3.png')}}" class="size-img tile tile-3">
-                                    <img src="{{url('images/landing_page/home/hero_slides/uae-tile-4.png')}}" class="size-img tile tile-4">
+                                    <img src="{{url('images/landing_page/home/hero_slides/uae-tile-4.png')}}" class="size-img tile tile-4"> -->
                                 </div>
                             </div>
                         </li>
@@ -582,17 +586,17 @@
 
 <script>
     // nav scroll function
-    document.addEventListener('scroll', function(){
-        const navigationBar = document.querySelector('.navigation-bar')
+    // document.addEventListener('scroll', function(){
+    //     const navigationBar = document.querySelector('.navigation-bar')
 
-        if(window.scrollY != 0) {
-            navigationBar.classList.remove("transparent")
-        } else if (window.scrollY == 0) {
-            navigationBar.classList.add("transparent")
-        } else {
-            return;
-        }
-    })
+    //     if(window.scrollY != 0) {
+    //         navigationBar.classList.remove("transparent")
+    //     } else if (window.scrollY == 0) {
+    //         navigationBar.classList.add("transparent")
+    //     } else {
+    //         return;
+    //     }
+    // })
 </script>
 
 <!-- Hero Slider -->
@@ -600,7 +604,7 @@
     
 const heroSlider = new Splide('#heroSlider', {
     type: 'fade',
-    autoplay: true,
+    autoplay: false,
     arrows: false,
     rewind: true,
     classes: {
