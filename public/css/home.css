@@ -1554,7 +1554,7 @@
 }
 
 .hero-section.home {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/landing_page/home/hero_slides/hero.png);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/landing_page/home/hero_slides/hero.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
