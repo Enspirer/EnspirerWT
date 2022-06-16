@@ -16,8 +16,8 @@
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <div class="header">
-                            <div class="title">Digital Marketing Mobile App Development</div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus quasi hic omnis quas, veniam saepe nostrum corporis quod non suscipit nihil odio modi obcaecati pariatur, quaerat debitis? Quidem, repellendus totam.</p>
+                            <div class="title">Empower your brand with the innovative Digital Marketing <br> ideas , strategies, solutions</div>
+                            <p>Digital Marketing in the UAE <br>At it’s Best</p>
                             </div>
                             <div class="slide-wrapper">
                                 <div class="content-block">
