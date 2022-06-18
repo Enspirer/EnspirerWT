@@ -37,7 +37,7 @@
                                 <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/landing_page/products/widget-pro-banner.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/widget-pro-banner.png')}}" >
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                                     <div class="splide__track">
                                             <ul class="splide__list">
                                                 <li class="splide__slide">
-                                                    <img src="{{url('images/landing_page/products/slide_1.png')}}" alt="">
+                                                    <img src="{{url('images/landing_page/products/slide_1.png')}}" >
                                                 </li>
                                             </ul>
                                     </div>
@@ -81,13 +81,13 @@
                     </div>
                     <div class="feature-block-section">
                         <div class="curves">
-                            <img src="{{url('images/products/Path 6503.svg')}}" alt="" class="top-curve">
-                            <img src="{{url('images/products/Path 6507.svg')}}" alt="" class="bottom-curve">
+                            <img src="{{url('images/products/Path 6503.svg')}}"  class="top-curve">
+                            <img src="{{url('images/products/Path 6507.svg')}}"  class="bottom-curve">
                         </div>
                         <div class="feature-block block-1">
                             <div class="content-block">
                                 <div class="subtitle-block">
-                                    <img src="{{url('images/products/Polygon 1.png')}}" alt="">
+                                    <img src="{{url('images/products/Polygon 1.png')}}" >
                                     <span class="text">Convert visitors into customers</span>
                                 </div>
                                 <h2 class="title">Inquiry Management System</h2>
@@ -101,30 +101,30 @@
                                 </div>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/landing_page/products/ims-inquiries.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/ims-inquiries.png')}}" >
                             </div>
                         </div>
                         <div class="feature-block block-2">
                             <div class="content-block">
                                 <div class="curves">
-                                    <img src="{{url('images/products/Path 6503.svg')}}" alt="" class="top-curve">
-                                    <img src="{{url('images/products/Path 6507.svg')}}" alt="" class="bottom-curve">
+                                    <img src="{{url('images/products/Path 6503.svg')}}"  class="top-curve">
+                                    <img src="{{url('images/products/Path 6507.svg')}}"  class="bottom-curve">
                                 </div>
                                 <div class="subtitle-block">
-                                    <img src="{{url('images/products/Polygon 1.png')}}" alt="">
+                                    <img src="{{url('images/products/Polygon 1.png')}}" >
                                     <span class="text">Never miss a valuable lead</span>
                                 </div>
                                 <h2 class="title">The tool that marketing team Loves</h2>
                                 <p class="content">It makes everybody's life easier with insights of the leads and funnel management</p>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/landing_page/products/ims-conversation.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/ims-conversation.png')}}" >
                             </div>
                         </div>
                         <div class="feature-block block-3">
                             <!-- <div class="content-block">
                                 <div class="subtitle-block">
-                                    <img src="{{url('images/products/Polygon 1.png')}}" alt="">
+                                    <img src="{{url('images/products/Polygon 1.png')}}" >
                                     <span class="text">Sub topic have to include here</span>
                                 </div>
                                 <h2 class="title">Team inbox for <br> WhatsApp</h2>
@@ -139,7 +139,7 @@
                                 </p>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/products/2225.png')}}" alt="">
+                                <img src="{{url('images/products/2225.png')}}" >
                             </div> -->
                         </div>
                     </div>

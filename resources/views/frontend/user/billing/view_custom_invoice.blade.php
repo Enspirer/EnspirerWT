@@ -38,7 +38,7 @@
                             <div class="col-lg-8">
                                 <div class="invoice">
                                     <!-- <div class="header">
-                                        <img src="{{url('images/test.png')}}" alt="">
+                                        <img src="{{url('images/test.png')}}" >
                                         <div class="text-block">
                                             <div class="name">Tallentor Website</div>
                                             <div class="url">https://tallentor.com/</div>
@@ -273,7 +273,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="inner-wrapper">
-            <img src="{{url('images/dashboard/main/payment-success.svg')}}" alt="">
+            <img src="{{url('images/dashboard/main/payment-success.svg')}}" >
             <div class="title">Payment Transfer Successful!</div>
             <div class="text">All Good... Thank You! Your payment of {{number_format( $custom_invoice->price,2)}} has been received successfully.</div>
             <a href="{{route('frontend.user.custom_invoice')}}" class="pay-sucess-btn" >
@@ -288,7 +288,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="inner-wrapper">
-            <img src="{{url('images/dashboard/main/payment-cancel.svg')}}" alt="">
+            <img src="{{url('images/dashboard/main/payment-cancel.svg')}}" >
             <div class="title">Payment Transfer Failed!</div>
             <div class="text">Bad... Sorry! Your payment was Failed! Please check billing information again and retry.</div>
             <a href="{{route('frontend.user.custom_invoice')}}" class="pay-cancel-btn">

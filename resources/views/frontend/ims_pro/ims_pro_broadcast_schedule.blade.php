@@ -40,7 +40,7 @@
                             <!-- <div class="row g-0">
                                 <div class="welcome-block section-broadcast">
                                     <div class="steps-block">
-                                        <img src="{{url('images/dashboard/ims_pro/section-broadcast.png')}}" alt="" class="img-main">
+                                        <img src="{{url('images/dashboard/ims_pro/section-broadcast.png')}}"  class="img-main">
                                     </div>
                                     <div class="info-block">
                                         <h2 class="sub-title">Do you want use this service ?</h2>

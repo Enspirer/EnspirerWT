@@ -343,17 +343,17 @@
                                                     <div class="edit-icons">
                                                         <a href="#">
                                                             <img src="{{url('images/resources/baseline-create-24px.svg')}}"
-                                                                alt="">
+                                                                >
                                                         </a>
                                                         <a href="#">
                                                             <img src="{{url('images/resources/baseline-delete_outline-24px.svg')}}"
-                                                                alt="">
+                                                                >
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <!-- <div class="body">
                                                     <div class="file-uploader">
-                                                        <img src="{{url('images/image (68).png')}}" alt="">
+                                                        <img src="{{url('images/image (68).png')}}" >
                                                         <div class="title">Drop your image here, or
                                                             <span>brows</span>
                                                         </div>
@@ -392,11 +392,11 @@
                                                     <div class="edit-icons">
                                                         <a href="#">
                                                             <img src="{{url('images/resources/baseline-create-24px.svg')}}"
-                                                                alt="">
+                                                                >
                                                         </a>
                                                         <a href="#">
                                                             <img src="{{url('images/resources/baseline-delete_outline-24px.svg')}}"
-                                                                alt="">
+                                                                >
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1378,7 +1378,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <img src="{{url('images/Group 389.png')}}" alt="">
+                <img src="{{url('images/Group 389.png')}}" >
                 <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
                 <button type="button" class="btn-close-modal" data-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
             </div>
@@ -1404,7 +1404,7 @@
             <form action="{{route('frontend.user.user_projects.store')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" alt=""> Create
+                    <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" > Create
                         your project</h4>
                     <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i
                             class="bi bi-x-lg"></i></button>

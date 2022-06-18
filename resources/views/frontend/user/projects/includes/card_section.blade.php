@@ -6,7 +6,7 @@
             @can('widget_lite')
             <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
                 <a href="{{route('frontend.user.project.chat',$project_id)}}" class="card-link disabled">
-                    <img src="{{url('images/dashboard/main/widget-lite.png')}}" alt="">
+                    <img src="{{url('images/dashboard/main/widget-lite.png')}}" >
                     <div class="text">Widget Lite</div>
                 </a>
             </div>
@@ -15,7 +15,7 @@
             @can('widget_lite')
                 <div class="card {{Request::segment(3)=='widget' ? 'active' :null }}">
                     <a href="{{route('frontend.user.project.chat',$project_id)}}" class="card-link">
-                        <img src="{{url('images/dashboard/main/widget-lite.png')}}" alt="">
+                        <img src="{{url('images/dashboard/main/widget-lite.png')}}" >
                         <div class="text">Widget Lite</div>
                     </a>
                 </div>
@@ -27,7 +27,7 @@
           @can('widget_pro')
             <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
                 <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link disabled">
-                    <img src="{{url('images/dashboard/main/widget-pro.png')}}" alt="">
+                    <img src="{{url('images/dashboard/main/widget-pro.png')}}" >
                     <div class="text">Widget Pro</div>
                 </a>
             </div>
@@ -36,7 +36,7 @@
             @can('widget_pro')
                 <div class="card {{Request::segment(3)=='widget_plus' ? 'active' :null }}">
                     <a href="{{route('frontend.user.project.widget_plus',$project_id)}}" class="card-link">
-                        <img src="{{url('images/dashboard/main/widget-pro.png')}}" alt="">
+                        <img src="{{url('images/dashboard/main/widget-pro.png')}}" >
                         <div class="text">Widget Pro</div>
                     </a>
                 </div>
@@ -48,7 +48,7 @@
             @can('optimizer')
                 <div class="card {{Request::segment(3)=='optimizer' ? 'active tab-active' :null }}">
                     <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
-                        <img src="{{url('images/dashboard/main/optimizer.png')}}" alt="">
+                        <img src="{{url('images/dashboard/main/optimizer.png')}}" >
                         <div class="text">Optimizer</div>
                     </a>
                 </div>
@@ -60,7 +60,7 @@
 
                 <div class="card {{Request::segment(3)=='optimizer' ? 'active' :null }}">
                     <a href="{{route('frontend.user.project.optimizer',$project_id)}}" class="card-link">
-                        <img src="{{url('images/dashboard/main/optimizer.png')}}" alt="">
+                        <img src="{{url('images/dashboard/main/optimizer.png')}}" >
                         <div class="text">Optimizer</div>
                     </a>
                 </div>
@@ -71,7 +71,7 @@
             @can('seo')
                 <div class="card {{Request::segment(3)=='seo' ? 'active' :null }}">
                     <a href="{{ route('frontend.user.project.seo',$project_id) }}" class="card-link">
-                        <img src="{{url('images/dashboard/main/seo.png')}}" alt="">
+                        <img src="{{url('images/dashboard/main/seo.png')}}" >
                         <div class="text">SEO</div>
                     </a>
                 </div>
@@ -91,7 +91,7 @@
             @can('analytics_center')
                 <div class="tab {{Request::segment(4)=='analytics' ? 'active' :null }}">
                     <a href="{{ route('frontend.user.project.analytics',$project_id) }}" class="tab-link">
-                        <img src="{{url('images/dashboard/tab_section/analytics-center.png')}}" alt="">
+                        <img src="{{url('images/dashboard/tab_section/analytics-center.png')}}" >
                         <div class="text">Analytics Center</div>
                     </a>
                 </div>
@@ -100,7 +100,7 @@
             @can('heatmap')
                <div class="tab {{Request::segment(4)=='heatmap' ? 'active' :null }}">
                     <a href="{{ route('frontend.user.projects.heatmap',$project_id) }}" class="tab-link">
-                        <img src="{{url('images/dashboard/tab_section/heatmap.png')}}" alt="">
+                        <img src="{{url('images/dashboard/tab_section/heatmap.png')}}" >
                         <div class="text">Heatmap</div>
                     </a>
                 </div>
@@ -109,7 +109,7 @@
             @can('security')
                 <div class="tab {{Request::segment(4)=='security' ? 'active' :null }}">
                     <a href="{{ route('frontend.user.project.security',$project_id) }}" class="tab-link">
-                        <img src="{{url('images/dashboard/tab_section/security.png')}}" alt="">
+                        <img src="{{url('images/dashboard/tab_section/security.png')}}" >
                         <div class="text">Security</div>
                     </a>
                 </div>
@@ -127,7 +127,7 @@
                     <i class="bi bi-x-lg"></i>
                 </button>
                 <div class="inner-wrapper">
-                    <img src="{{url('images/dashboard/popups/notification.png')}}" alt="">
+                    <img src="{{url('images/dashboard/popups/notification.png')}}" >
                     <div class="content">
                         <div class="title">Hay, Kamal Perera</div>
                         <div class="text">In order to view WhatsApp Widget and All-in-one Widget click here.</div>
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                     <div class="image-block">
-                        <img src="{{url('images/dashboard/popups/statistics.png')}}" alt="">
+                        <img src="{{url('images/dashboard/popups/statistics.png')}}" >
                     </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@
                         </div>
                     </div>
                     <div class="image-block">
-                        <img src="{{url('images/dashboard/popups/heatmap.png')}}" alt="">
+                        <img src="{{url('images/dashboard/popups/heatmap.png')}}" >
                     </div>
                 </div>
             </div>
@@ -230,7 +230,7 @@
                         </div>
                     </div>
                     <div class="image-block">
-                        <img src="{{url('images/dashboard/popups/session_recording.png')}}" alt="">
+                        <img src="{{url('images/dashboard/popups/session_recording.png')}}" >
                     </div>
                 </div>
             </div>

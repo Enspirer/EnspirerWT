@@ -43,9 +43,9 @@
                             <div class="body">
                                 <div class="image-block">
                                 @if($project->settings != null)
-                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" alt="" width="100%">
+                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}"  width="100%">
                                 @else
-                                    <img src="https://fakeimg.pl/250x100/" alt="" width="100%">
+                                    <img src="https://fakeimg.pl/250x100/"  width="100%">
                                 @endif
                                 </div>
                                 <div class="property-block">
@@ -58,11 +58,11 @@
                                     <div class="inner-block">
                                         <div class="image-block">
                                             @if($project->selected_package == 'All In One Widget + IMS Lite')
-                                                <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" >
                                             @elseif($project->selected_package == 'All In One Widget + IMS Pro')
-                                                <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" >
                                             @elseif($project->selected_package == 'Optimizer')
-                                                <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" >
                                             @endif
                                         </div>
                                         <div class="content-block">
@@ -160,7 +160,7 @@
                                                             </label>
                                                         </td>
                                                         <td class="data--pic data-cell">
-                                                            <img src="{{url('img/profile_avatar.jpg')}}" alt="">
+                                                            <img src="{{url('img/profile_avatar.jpg')}}" >
                                                         </td>
                                                         <td class="data--name data-cell">
                                                             <div class="info-block">
@@ -182,42 +182,42 @@
                                                             @if($inquiry->assign_user_type == 'WhatsApp')
                                                                 <div class="channel-block">
                                                                     <div class="icon">
-                                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" >
                                                                     </div>
                                                                     <div class="name">WhatsApp</div>
                                                                 </div>
                                                             @elseif($inquiry->assign_user_type == 'Messenger')
                                                                 <div class="channel-block">
                                                                     <div class="icon">
-                                                                        <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                                                                        <img src="{{url('images/social_media_icons/messenger.png')}}" >
                                                                     </div>
                                                                     <div class="name">Messenger</div>
                                                                 </div>
                                                             @elseif($inquiry->assign_user_type == 'Telegram')
                                                                 <div class="channel-block">
                                                                     <div class="icon">
-                                                                        <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                                                        <img src="{{url('images/social_media_icons/telegram.png')}}" >
                                                                     </div>
                                                                     <div class="name">Telegram</div>
                                                                 </div>
                                                             @elseif($inquiry->assign_user_type == 'Line')
                                                                 <div class="channel-block">
                                                                     <div class="icon">
-                                                                        <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                                                                        <img src="{{url('images/social_media_icons/line.png')}}" >
                                                                     </div>
                                                                     <div class="name">Line</div>
                                                                 </div>
                                                             @elseif($inquiry->assign_user_type == 'Viber')
                                                                 <div class="channel-block">
                                                                     <div class="icon">
-                                                                        <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                                                                        <img src="{{url('images/social_media_icons/viber.png')}}" >
                                                                     </div>
                                                                     <div class="name">Viber</div>
                                                                 </div>
                                                             @elseif($inquiry->assign_user_type == 'Tawkto')
                                                                 <div class="channel-block">
                                                                     <div class="icon">
-                                                                        <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
+                                                                        <img src="{{url('images/social_media_icons/tawkto.png')}}" >
                                                                     </div>
                                                                     <div class="name">Tawkto</div>
                                                                 </div>

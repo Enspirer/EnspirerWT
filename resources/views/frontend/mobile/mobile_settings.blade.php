@@ -13,7 +13,7 @@
         <div class="inner-container">
             <div class="profile">
                 <div class="image-block">
-                    <img src="{{auth()->user()->picture}}" alt="">
+                    <img src="{{auth()->user()->picture}}" >
                     <i class="bi bi-pencil-fill"></i>
                 </div>
                 <div class="status-block">

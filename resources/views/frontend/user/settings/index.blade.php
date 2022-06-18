@@ -75,7 +75,7 @@
                                         <div class="row g-md-0 g-5">
                                             <div class="col-md-4">
                                                 <div class="profile-pic">
-                                                    <img src="{{ auth()->user()->picture }}" alt="">
+                                                    <img src="{{ auth()->user()->picture }}" >
                                                     <i class="bi bi-pencil-fill" onclick="editProf()"></i>
                                                 </div>
                                             </div>
@@ -134,7 +134,7 @@
                                             <div class="row g-0">
                                                 <div class="col">
                                                     <div class="profile-pic">
-                                                        <img src="{{ auth()->user()->picture }}" alt="">
+                                                        <img src="{{ auth()->user()->picture }}" >
                                                         <i class="bi bi-pencil-fill"></i>
                                                     </div>
                                                 </div>
@@ -569,7 +569,7 @@
                                                             <i class="bi bi-check-circle-fill"></i>
                                                         <label class="form-check-label" for="basic-sub">
                                                             <div class="icon-block">
-                                                                <img src="{{url('images/Group 434.png')}}" alt="">
+                                                                <img src="{{url('images/Group 434.png')}}" >
                                                             </div>
                                                             <div class="title-block">
                                                                 <div class="title">Basic</div>
@@ -589,7 +589,7 @@
                                                             <i class="bi bi-check-circle-fill"></i>
                                                         <label class="form-check-label" for="standard-sub">
                                                             <div class="icon-block">
-                                                                <img src="{{url('images/Group 435.png')}}" alt="">
+                                                                <img src="{{url('images/Group 435.png')}}" >
                                                             </div>
                                                             <div class="title-block">
                                                                 <div class="title">Standard</div>
@@ -609,7 +609,7 @@
                                                             <i class="bi bi-check-circle-fill"></i>
                                                         <label class="form-check-label" for="premium-sub">
                                                             <div class="icon-block">
-                                                                <img src="{{url('images/Group 436.png')}}" alt="">
+                                                                <img src="{{url('images/Group 436.png')}}" >
                                                             </div>
                                                             <div class="title-block">
                                                                 <div class="title">Premium</div>

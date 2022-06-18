@@ -38,7 +38,7 @@
                         'not_found_description' => null,
                         'not_found_button_caption' => null
                     ]) -->
-                    <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
+                    <img src="{{url('images/dashboard/optimizer/not_found.png')}}"  class="realtime_notfound">
                 @else
                     @foreach($projects as $project_detail)
                         @if($project_detail->status != 'Disabled')
@@ -76,7 +76,7 @@
                                     <div class="body">
                                         <div class="content-block">
                                             <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/unpaid_invoices.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/unpaid_invoices.png')}}" >
                                             </div>
                                             <div class="content">
                                                 <div class="subtitle">Unpaid invoices</div>
@@ -90,7 +90,7 @@
                                         </div>
                                         <div class="content-block">
                                             <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/services.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/services.png')}}" >
                                             </div>
                                             <div class="content">
                                                 <div class="subtitle">Services</div>
@@ -100,7 +100,7 @@
                                         </div>
                                         <div class="content-block">
                                             <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/payment_history.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/payment_history.png')}}" >
                                             </div>
                                             <div class="content">
                                                 <div class="subtitle">Payment history</div>
@@ -146,7 +146,7 @@
                                     <div class="body">
                                         <div class="content-block">
                                             <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/unpaid_invoices.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/unpaid_invoices.png')}}" >
                                             </div>
                                             <div class="content">
                                                 <div class="subtitle">Unpaid invoices</div>
@@ -160,7 +160,7 @@
                                         </div>
                                         <div class="content-block">
                                             <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/services.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/services.png')}}" >
                                             </div>
                                             <div class="content">
                                                 <div class="subtitle">Services</div>
@@ -170,7 +170,7 @@
                                         </div>
                                         <div class="content-block">
                                             <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/payment_history.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/payment_history.png')}}" >
                                             </div>
                                             <div class="content">
                                                 <div class="subtitle">Payment history</div>

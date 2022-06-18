@@ -7,7 +7,7 @@
                 {{--<div class="text">Please use this keyword: #5bMXv to receive messages from other numbers</div>--}}
             {{--</div>--}}
             {{--<div class="steps-block">--}}
-                {{--<img src="{{url('images/dashboard/ims_pro/section-scan.png')}}" alt="" class="img-main">--}}
+                {{--<img src="{{url('images/dashboard/ims_pro/section-scan.png')}}"  class="img-main">--}}
             {{--</div>--}}
         {{--</div>--}}
     {{--</div>--}}
@@ -16,8 +16,8 @@
         <div class="section-setupProcess">
             <div class="activation-info">Estimated Activation end date : Apr 14</div>
             <div class="title">Give Us to 24 hours to setup</div>
-            <img src="{{url('images/dashboard/ims_pro/media-scan.svg')}}" alt="" class="process-img">
-            <img src="{{url('images/dashboard/ims_pro/media-scan-mobile.svg')}}" alt="" class="process-img-mobile">
+            <img src="{{url('images/dashboard/ims_pro/media-scan.svg')}}"  class="process-img">
+            <img src="{{url('images/dashboard/ims_pro/media-scan-mobile.svg')}}"  class="process-img-mobile">
             <div class="text">Thank you for your request to activate your own number, this process may take up to 24 hours to set up. our team will notify when the account is active.</div>
         </div>
     </div>

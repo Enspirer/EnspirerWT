@@ -60,13 +60,13 @@
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
-                                    <img src="{{url('images/Group 413.png')}}" alt="">
+                                    <img src="{{url('images/Group 413.png')}}" >
                                 </li>
                                 <li class="splide__slide">
-                                    <img src="{{url('images/Group 413.png')}}" alt="">
+                                    <img src="{{url('images/Group 413.png')}}" >
                                 </li>
                                 <li class="splide__slide">
-                                    <img src="{{url('images/Group 413.png')}}" alt="">
+                                    <img src="{{url('images/Group 413.png')}}" >
                                 </li>
                             </ul>
                         </div>

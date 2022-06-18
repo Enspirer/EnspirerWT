@@ -20,7 +20,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
     <div class="content">
         <div data-aos-easing="ease" data-aos="zoom-in"  class="pricing-card basic-card">
             <div class="header">
-                <img src="{{url('images/landing_page/pricing_section/basic-icon.png')}}" alt="">
+                <img src="{{url('images/landing_page/pricing_section/basic-icon.png')}}" >
                 <div class="text-block">
                     <div class="title">Basic</div>
                 </div>
@@ -46,7 +46,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
                         </a>
                     </li>
                 </ul>
-                <img src="{{url('images/landing_page/pricing_section/basic-watermark.png')}}" alt="" class="watermark">
+                <img src="{{url('images/landing_page/pricing_section/basic-watermark.png')}}"  class="watermark">
             </div>
             <div class="footer">
                 <a href="#" class="pricing-btn br-blue blue">Try Demo</a>
@@ -55,7 +55,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
         </div>
         <div data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="300" class="pricing-card executive-card">
             <div class="header">
-                <img src="{{url('images/landing_page/pricing_section/executive-icon.png')}}" alt="">
+                <img src="{{url('images/landing_page/pricing_section/executive-icon.png')}}" >
                 <div class="text-block">
                     <div class="title">Executive</div>
                 </div>
@@ -81,7 +81,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
                         </a>
                     </li>
                 </ul>
-                <img src="{{url('images/landing_page/pricing_section/executive-watermark.png')}}" alt="" class="watermark">
+                <img src="{{url('images/landing_page/pricing_section/executive-watermark.png')}}"  class="watermark">
             </div>
             <div class="footer">
                 <a href="#" class="pricing-btn br-green green">Try Demo</a>
@@ -90,7 +90,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
         </div>
         <div data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="900" class="pricing-card optimizer-card">
             <div class="header">
-                <img src="{{url('images/landing_page/pricing_section/optimizer-icon.png')}}" alt="">
+                <img src="{{url('images/landing_page/pricing_section/optimizer-icon.png')}}" >
                 <div class="text-block">
                     <div class="title">Premium</div>
                 </div>
@@ -156,7 +156,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
         <div data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="600" class="pricing-card premium-card">
             <div class="special">Popular</div>
             <div class="header">
-                <img src="{{url('images/landing_page/pricing_section/premium-icon.png')}}" alt="">
+                <img src="{{url('images/landing_page/pricing_section/premium-icon.png')}}" >
                 <div class="text-block">
                     <div class="title">Premium</div>
                 </div>
@@ -229,14 +229,14 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
         </div>
         <div data-aos-easing="ease" data-aos="zoom-in" data-aos-delay="1200" class="pricing-card enterprise-card">
             <div class="header">
-                <img src="{{url('images/landing_page/pricing_section/enterprise-icon.png')}}" alt="">
+                <img src="{{url('images/landing_page/pricing_section/enterprise-icon.png')}}" >
                 <div class="text-block">
                     <div class="title">Executive</div>
                 </div>
             </div>
             <div class="body">
                 <div class="para">Fully customized solution for <br> Corporates and Agencies</div>
-                <img src="{{url('images/landing_page/pricing_section/enterprise-watermark.png')}}" alt="" class="watermark">
+                <img src="{{url('images/landing_page/pricing_section/enterprise-watermark.png')}}"  class="watermark">
             </div>
             <div class="footer">
                 <a href="{{url('contact')}}" class="pricing-btn bg-dark-blue br-dark-blue">Contact</a>

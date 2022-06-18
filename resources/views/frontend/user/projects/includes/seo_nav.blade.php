@@ -5,7 +5,7 @@
             <li class="nav-item">
                 <a href="{{route('frontend.user.project.seo',$project_id)}}" class="nav-link">
                     <div class="text-block">
-                        <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" alt="">
+                        <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" >
                         <div class="text">Overview</div>
                     </div>
                 </a>
@@ -14,7 +14,7 @@
             <li class="nav-item">
                 <a href="#overviewSection" class="nav-link">
                     <div class="text-block">
-                        <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" alt="">
+                        <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" >
                         <div class="text">Overview</div>
                     </div>
                 </a>
@@ -26,7 +26,7 @@
             <li class="nav-item">
                 <a href="{{route('frontend.user.project.seo',$project_id)}}" class="nav-link">
                     <div class="text-block">
-                        <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" alt="">
+                        <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" >
                         <div class="text">SEO</div>
                     </div>
                 </a>
@@ -35,7 +35,7 @@
             <li class="nav-item">
                 <a href="#seoSection" class="nav-link">
                     <div class="text-block">
-                        <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" alt="">
+                        <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" >
                         <div class="text">SEO</div>
                     </div>
                 </a>
@@ -47,7 +47,7 @@
             <li class="nav-item">
                 <a href="{{route('frontend.user.project.seo',$project_id)}}" class="nav-link">
                     <div class="text-block">
-                        <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" alt="">
+                        <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" >
                         <div class="text">Performance</div>
                     </div>
                 </a>
@@ -56,7 +56,7 @@
             <li class="nav-item">
                 <a href="#performanceSection" class="nav-link">
                     <div class="text-block">
-                        <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" alt="">
+                        <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" >
                         <div class="text">Performance</div>
                     </div>
                 </a>
@@ -69,7 +69,7 @@
             <li class="nav-item">
                 <a href="{{route('frontend.user.project.seo',$project_id)}}" class="nav-link">
                     <div class="text-block">
-                        <img src="{{url('images/dashboard/ims_pro/nav-miscellaneous.png')}}" alt="">
+                        <img src="{{url('images/dashboard/ims_pro/nav-miscellaneous.png')}}" >
                         <div class="text">Miscellaneous</div>
                     </div>
                 </a>
@@ -78,7 +78,7 @@
             <li class="nav-item">
                 <a href="#miscellaneousSection" class="nav-link">
                     <div class="text-block">
-                        <img src="{{url('images/dashboard/ims_pro/nav-miscellaneous.png')}}" alt="">
+                        <img src="{{url('images/dashboard/ims_pro/nav-miscellaneous.png')}}" >
                         <div class="text">Miscellaneous</div>
                     </div>
                 </a>
@@ -88,7 +88,7 @@
         <li class="nav-item">
             <a href="{{route('frontend.user.project.seo_bots',$project_id)}}" class="nav-link">
                 <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-bot.png')}}" alt="">
+                    <img src="{{url('images/dashboard/ims_pro/nav-bot.png')}}" >
                     <div class="text">SEO Bot</div>
                 </div>
             </a>

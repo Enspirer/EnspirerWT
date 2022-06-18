@@ -5,11 +5,11 @@
                 <div class="ims__side-nav">
                     <div class="side-nav__header">
                         <div class="logo-block">
-                            <img src="{{url('images/full-logo.png')}}" alt="" class="logo">
+                            <img src="{{url('images/full-logo.png')}}"  class="logo">
                             <div class="logo-text">- IMS</div>
                         </div>
                         <div class="caption">Inquiry Management Systems</div>
-                        <a href="{{ route('frontend.user.project.optimizer', $project_id ?? '') }}" style="text-decoration:none;" target="_blank">
+                        <a href="{{ route('frontend.user.project.optimizer', $project_id ?? '') }}" style="text-decoration:none;" rel="noopener noreferrer" target="_blank">
                             <div class="live-status-block">
                                 <i class="bi bi-broadcast"></i>
                                 <div class="caption">Live Visitors</div>

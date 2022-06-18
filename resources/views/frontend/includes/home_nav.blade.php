@@ -2,10 +2,10 @@
     <div class="container">
         <div class="inner-wrapper">
             <div class="mobile-brand">
-                <img src="{{url('images/logo/tallentor-digital.svg')}}" alt="">
+                <img src="{{url('images/logo/tallentor-digital.svg')}}" >
             </div>
             <a class="navbar-brand" href="#">
-                <img src="{{url('images/logo/tallentor-digital.svg')}}" alt="">
+                <img src="{{url('images/logo/tallentor-digital.svg')}}" >
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -18,13 +18,13 @@
                         </a>
                         <ul class="dropdown-menu getstarted-dropdown-menu mega-menu-trigger" aria-labelledby="productNav">
                             <li><a class="dropdown-item" href="{{url('products/widget-lite')}}">
-                                <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-widgetLite.png')}}" alt=""></div> <div class="text">Widget Lite</div>
+                                <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-widgetLite.png')}}" ></div> <div class="text">Widget Lite</div>
                             </a></li>
                             <li><a class="dropdown-item" href="{{url('products/widget-pro')}}">
-                                <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-widgetPlus.png')}}" alt=""></div> <div class="text">Widget Pro</div>
+                                <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-widgetPlus.png')}}" ></div> <div class="text">Widget Pro</div>
                             </a></li>
                             <li><a class="dropdown-item" href="{{url('products/optimizer')}}">
-                                <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-Optimizer.png')}}" alt=""></div> <div class="text">Optimizer</div>
+                                <div class="icon-block"><img src="{{url('images/dashboard/tab_section/icon-Optimizer.png')}}" ></div> <div class="text">Optimizer</div>
                             </a></li>
                         </ul>
                     </div>

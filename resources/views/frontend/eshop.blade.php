@@ -68,7 +68,7 @@ Book store website')
                             <li class="splide__slide">
                                 <div class="services-card">
                                     <div class="image-block">
-                                        <img src="{{url('images/landing_page/eShop/e_com_sol.png')}}" alt="">
+                                        <img src="{{url('images/landing_page/eShop/e_com_sol.png')}}" >
                                     </div>
                                     <div class="content-block">
                                         <h4 class="title">E-Commerce Solutions</h4>
@@ -99,7 +99,7 @@ Book store website')
                             <li class="splide__slide">
                                 <div class="services-card">
                                     <div class="image-block">
-                                        <img src="{{url('images/landing_page/eShop/multi_vendor.png')}}" alt="">
+                                        <img src="{{url('images/landing_page/eShop/multi_vendor.png')}}" >
                                     </div>
                                     <div class="content-block">
                                         <h4 class="title">Multi Vendor Solutions</h4>
@@ -130,7 +130,7 @@ Book store website')
                             <li class="splide__slide">
                                 <div class="services-card">
                                     <div class="image-block">
-                                        <img src="{{url('images/landing_page/eShop/dynamic_web.png')}}" alt="">
+                                        <img src="{{url('images/landing_page/eShop/dynamic_web.png')}}" >
                                     </div>
                                     <div class="content-block">
                                         <h4 class="title">Dynamic Website</h4>
@@ -161,7 +161,7 @@ Book store website')
                             <li class="splide__slide">
                                 <div class="services-card">
                                     <div class="image-block">
-                                        <img src="{{url('images/landing_page/eShop/learning_management.png')}}" alt="">
+                                        <img src="{{url('images/landing_page/eShop/learning_management.png')}}" >
                                     </div>
                                     <div class="content-block">
                                         <h4 class="title">Learning Managment Systems</h4>
@@ -206,7 +206,7 @@ Book store website')
                     <div class="col">
                         <div class="product-card">
                                 <div class="image-block">
-                                    <img src="{{url('images/landing_page/eShop/real_state_portal.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/real_state_portal.png')}}" >
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">Real Estate Portal</h6>
@@ -233,7 +233,7 @@ Book store website')
                     <div class="col">
                         <div class="product-card">
                                 <div class="image-block">
-                                    <img src="{{url('images/landing_page/eShop/travel_website.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/travel_website.png')}}" >
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">Travel Website</h6>
@@ -260,7 +260,7 @@ Book store website')
                     <div class="col">
                         <div class="product-card">
                                 <div class="image-block">
-                                    <img src="{{url('images/landing_page/eShop/car_pool_app.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/car_pool_app.png')}}" >
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">Car Pool App</h6>
@@ -287,7 +287,7 @@ Book store website')
                     <div class="col">
                         <div class="product-card">
                                 <div class="image-block">
-                                    <img src="{{url('images/landing_page/eShop/business_card_app.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/business_card_app.png')}}" >
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">Business Card App</h6>
@@ -314,7 +314,7 @@ Book store website')
                     <div class="col">
                         <div class="product-card">
                                 <div class="image-block">
-                                    <img src="{{url('images/landing_page/eShop/erp_solution.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/erp_solution.png')}}" >
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">ERP Solution</h6>
@@ -341,7 +341,7 @@ Book store website')
                     <div class="col">
                         <div class="product-card">
                                 <div class="image-block">
-                                    <img src="{{url('images/landing_page/eShop/pos_system.png')}}" alt="">
+                                    <img src="{{url('images/landing_page/eShop/pos_system.png')}}" >
                                 </div>
                                 <div class="content-block">
                                     <h6 class="title">POS System</h6>

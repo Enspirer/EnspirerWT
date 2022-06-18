@@ -40,7 +40,7 @@
                             <!-- <div class="row g-0">
                                 <div class="welcome-block section-broadcast">
                                     <div class="steps-block">
-                                        <img src="{{url('images/dashboard/ims_pro/section-broadcast.png')}}" alt="" class="img-main">
+                                        <img src="{{url('images/dashboard/ims_pro/section-broadcast.png')}}"  class="img-main">
                                     </div>
                                     <div class="info-block">
                                         <h2 class="sub-title">Do you want use this service ?</h2>
@@ -64,7 +64,7 @@
                                                 <a href="#" class="cta-btn" data-bs-toggle="modal" data-bs-target="#newBrModal">New Broadcast</a>
                                             </div>
                                             <div class="image-block">
-                                                <img src="{{url('images/ims-pro/broadcast/welcome.png')}}" alt="">
+                                                <img src="{{url('images/ims-pro/broadcast/welcome.png')}}" >
                                             </div>
                                         </div>
                                     </div>
@@ -125,7 +125,7 @@
                                 </div>
                                 <div class="info-blocks">
                                     <div class="info-block green">
-                                        <img src="{{url('images/ims-pro/broadcast/sent.svg')}}" alt="">
+                                        <img src="{{url('images/ims-pro/broadcast/sent.svg')}}" >
                                         <div class="count">200</div>
                                         <div class="text">Sent Message</div>
                                         <div class="progress">
@@ -133,7 +133,7 @@
                                         </div>
                                     </div>
                                     <div class="info-block blue">
-                                        <img src="{{url('images/ims-pro/broadcast/delivered.svg')}}" alt="">
+                                        <img src="{{url('images/ims-pro/broadcast/delivered.svg')}}" >
                                         <div class="count">200</div>
                                         <div class="text">Delivered Message</div>
                                         <div class="progress">
@@ -141,7 +141,7 @@
                                         </div>
                                     </div>
                                     <div class="info-block orange">
-                                        <img src="{{url('images/ims-pro/broadcast/read.svg')}}" alt="">
+                                        <img src="{{url('images/ims-pro/broadcast/read.svg')}}" >
                                         <div class="count">200</div>
                                         <div class="text">Read Message</div>
                                         <div class="progress">
@@ -149,7 +149,7 @@
                                         </div>
                                     </div>
                                     <div class="info-block pink">
-                                        <img src="{{url('images/ims-pro/broadcast/replied.svg')}}" alt="">
+                                        <img src="{{url('images/ims-pro/broadcast/replied.svg')}}" >
                                         <div class="count">200</div>
                                         <div class="text">Replied</div>
                                         <div class="progress">
@@ -157,7 +157,7 @@
                                         </div>
                                     </div>
                                     <div class="info-block gray">
-                                        <img src="{{url('images/ims-pro/broadcast/sending.svg')}}" alt="">
+                                        <img src="{{url('images/ims-pro/broadcast/sending.svg')}}" >
                                         <div class="count">200</div>
                                         <div class="text">Sending</div>
                                         <div class="progress">
@@ -165,7 +165,7 @@
                                         </div>
                                     </div>
                                     <div class="info-block red">
-                                        <img src="{{url('images/ims-pro/broadcast/failed.svg')}}" alt="">
+                                        <img src="{{url('images/ims-pro/broadcast/failed.svg')}}" >
                                         <div class="count">200</div>
                                         <div class="text">Failed</div>
                                         <div class="progress">
@@ -173,7 +173,7 @@
                                         </div>
                                     </div>
                                     <div class="info-block green">
-                                        <img src="{{url('images/ims-pro/broadcast/processing.svg')}}" alt="">
+                                        <img src="{{url('images/ims-pro/broadcast/processing.svg')}}" >
                                         <div class="count">200</div>
                                         <div class="text">Processing</div>
                                         <div class="progress">
@@ -181,7 +181,7 @@
                                         </div>
                                     </div>
                                     <div class="info-block dark-blue">
-                                        <img src="{{url('images/ims-pro/broadcast/queued.svg')}}" alt="">
+                                        <img src="{{url('images/ims-pro/broadcast/queued.svg')}}" >
                                         <div class="count">200</div>
                                         <div class="text">Queued</div>
                                         <div class="progress">
@@ -385,7 +385,7 @@
                 <div class="wrapper">
                     <div class="title">Preview</div>
                     <div class="preview-card">
-                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <img src="https://via.placeholder.com/300x200.png" >
                         <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sequi quidem obcaecati sapiente ab debitis. Ipsa illo, ratione ut perferendis reprehenderit consequatur, ab assumenda est doloremque et nisi id. Itaque delectus sed deleniti amet libero modi, magnam doloremque illo quod!</div>
                         <div class="copyright">
                             <div class="text">Powered by Tallentor</div>

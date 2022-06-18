@@ -22,7 +22,7 @@
                 </a>
             </div>
             <div class="image-block">
-                <img src="{{url('images/landing_page/expert_center/hero-img.png')}}" alt="">
+                <img src="{{url('images/landing_page/expert_center/hero-img.png')}}" >
             </div>
         </div>
     </div>

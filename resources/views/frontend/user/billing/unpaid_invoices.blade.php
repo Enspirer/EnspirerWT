@@ -38,9 +38,9 @@
                         <div class="row">
                             <div class="col-3">
                                 @if($project->settings != null)
-                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" alt="" width="100%">
+                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}"  width="100%">
                                 @else
-                                    <img src="{{ url('img/no-image.jpg') }}" alt="" width="100%">
+                                    <img src="{{ url('img/no-image.jpg') }}"  width="100%">
                                 @endif
                             </div>
                             <div class="col-9">
@@ -66,7 +66,7 @@
                             </div>
                             <div class="body">
                                 <div class="image-block">
-                                    <img src="https://fakeimg.pl/250x100/" alt="">
+                                    <img src="https://fakeimg.pl/250x100/" >
                                 </div>
                                 <div class="property-block">
                                     <div class="title">Project name and Link</div>
@@ -77,7 +77,7 @@
                                     <div class="title">Package Details</div>
                                     <div class="inner-block">
                                         <div class="image-block">
-                                            <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                            <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" >
                                         </div>
                                         <div class="content-block">
                                             <div class="title">Package</div>
@@ -126,7 +126,7 @@
 
                     <div class="ims__control-panel">
                         <div class="row g-0">
-                            <img src="{{url('images/dashboard/billing/no-data.png')}}" alt="" class="no-data-img">
+                            <img src="{{url('images/dashboard/billing/no-data.png')}}"  class="no-data-img">
                         </div>
                     </div>
                 @else

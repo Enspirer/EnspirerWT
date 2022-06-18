@@ -107,11 +107,11 @@
                                             <div class="row g-0 py-2 align-items-center">
                                                 <div class="col-xxl-4 my-3 info-blocks seo-block">
                                                     @if($project_detail->selected_package == 'All In One Widget + IMS Lite')
-                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" >
                                                     @elseif($project_detail->selected_package == 'All In One Widget + IMS Pro')
-                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" >
                                                     @elseif($project_detail->selected_package == 'Optimizer')
-                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" >
                                                     @endif
                                                     <div class="text-block">
                                                         <div class="title">Package</div>
@@ -203,11 +203,11 @@
                                             <div class="row g-0 py-2 align-items-center">
                                                 <div class="col-xxl-4 my-3 info-blocks seo-block">
                                                     @if($project_detail->selected_package == 'All In One Widget + IMS Lite')
-                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" >
                                                     @elseif($project_detail->selected_package == 'All In One Widget + IMS Pro')
-                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" >
                                                     @elseif($project_detail->selected_package == 'Optimizer')
-                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" >
                                                     @endif
                                                     <div class="text-block">
                                                         <div class="title">Package</div>

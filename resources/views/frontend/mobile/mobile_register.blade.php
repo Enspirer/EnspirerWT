@@ -9,7 +9,7 @@
 <div class="section-signup">
     <div class="mobile-container">
         <div class="image-block">
-            <img src="{{url('/images/mobile/login/login-hero.png')}}" alt="">
+            <img src="{{url('/images/mobile/login/login-hero.png')}}" >
         </div>
         <div class="title">Welcome to Tallentor !</div>
         <div class="subtitle">Keep your data safe!</div>

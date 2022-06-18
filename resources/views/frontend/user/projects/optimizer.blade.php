@@ -139,7 +139,7 @@
                                                 @foreach($visitors_count as $visitors)
                                                     <tr class="tbl-row">
                                                         <td class="tb-col rt-flag">
-                                                            <img src="https://flagcdn.com/w40/{{strtolower($visitors->iso_code)}}.png" alt="">
+                                                            <img src="https://flagcdn.com/w40/{{strtolower($visitors->iso_code)}}.png" >
                                                         </td>
                                                         <td class="tb-col rt-country">
                                                             {{$visitors->ip_address}}
@@ -166,13 +166,13 @@
                                                                     <input type="hidden" name="project_id" value="{{$project_id}}">
                                                                     <input type="hidden" name="visitors_id" value="{{$visitors->id}}">
                                                                     <button type="submit" style="border: none;" class="tbl-btn btn-invite">
-                                                                        <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
+                                                                        <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" >
                                                                         <div class="text">Invite</div>
                                                                     </button>
                                                                 </form>
                                                             @else
                                                                 <button type="submit" style="border: none;" class="tbl-btn btn-invite" disabled>
-                                                                    <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
+                                                                    <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" >
                                                                     <div class="text">Invited</div>
                                                                 </button>
                                                             @endif
@@ -182,7 +182,7 @@
                                                 @endforeach
                                                 <!-- <tr class="tbl-row offline">
                                                     <td class="tb-col rt-flag">
-                                                        <img src="https://flagicons.lipis.dev/flags/4x3/sg.svg" alt="">
+                                                        <img src="https://flagicons.lipis.dev/flags/4x3/sg.svg" >
                                                     </td>
                                                     <td class="tb-col rt-country">
                                                         Singapore
@@ -203,7 +203,7 @@
                                                     </td>
                                                     <td class="tb-col rt-invite">
                                                         <a href="#" class="tbl-btn btn-invite">
-                                                            <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" alt="">
+                                                            <img src="{{url('images/dashboard/optimizer/invite-icon.png')}}" >
                                                             <div class="text">Invite</div>
                                                         </a>
                                                     </td>
@@ -227,7 +227,7 @@
                                                 <tbody class="tbl-body" id="visitors_record">
                                                 <tr class="tbl-row">
                                                     <td class="tb-col" colspan="6">
-                                                        <img src="{{url('images/dashboard/optimizer/not_found.png')}}" alt="" class="realtime_notfound">
+                                                        <img src="{{url('images/dashboard/optimizer/not_found.png')}}"  class="realtime_notfound">
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -276,7 +276,7 @@
                                 </div>
                                 <div class="content-block">
                                     <div class="widget-block">
-                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}"  class="widget-img">
                                         <div class="content">
                                             <div class="title">Desktop</div>
                                             <ul class="options">
@@ -308,7 +308,7 @@
                                         </div>
                                     </div>
                                     <div class="widget-block">
-                                        <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}"  class="widget-img">
                                         <div class="content">
                                             <div class="title">Mobile</div>
                                             <ul class="options">
@@ -359,7 +359,7 @@
                                 </div>
                                 <div class="content-block">
                                     <div class="widget-block">
-                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}"  class="widget-img">
                                         <div class="content">
                                             <div class="title">Desktop</div>
                                             <ul class="options">
@@ -391,7 +391,7 @@
                                         </div>
                                     </div>
                                     <div class="widget-block">
-                                        <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/mobile-app.png')}}"  class="widget-img">
                                         <div class="content">
                                             <div class="title">Mobile</div>
                                             <ul class="options">
@@ -441,7 +441,7 @@
                                 <div class="plan">Executive</div>
                                 <div class="fee">$ 15.00 <span>/ month</span></div>
                             </div>
-                            <img src="{{url('images/dashboard/subscriptions/plan-icon.png')}}" alt="">
+                            <img src="{{url('images/dashboard/subscriptions/plan-icon.png')}}" >
                         </div>
                         <div class="option-block">
                             <ul class="options desktop">
@@ -539,7 +539,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="whatsapp-feature-block">
-                                                    <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                    <img src="{{url('images/whatsapp (1).png')}}" >
                                                     <div class="title">WhatsApp Chat</div>
                                                     <div class="subtitle">Entertainment</div>
                                                     <div class="star-rating">
@@ -574,7 +574,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="whatsapp-feature-block">
-                                                    <img src="{{url('images/social_media_icons/chat.png')}}" alt="">
+                                                    <img src="{{url('images/social_media_icons/chat.png')}}" >
                                                     <div class="title">All-in-One Chat</div>
                                                     <div class="subtitle">Entertainment</div>
                                                     <div class="star-rating">
@@ -609,7 +609,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="whatsapp-feature-block">
-                                                    <img src="{{url('images/social_media_icons/ims-logo.png')}}" style="width:80px;" alt="">
+                                                    <img src="{{url('images/social_media_icons/ims-logo.png')}}" style="width:80px;" >
                                                     <div class="title">IMS Pro</div>
                                                     <div class="subtitle">Entertainment</div>
                                                     <div class="star-rating">
@@ -644,7 +644,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <img src="{{url('images/Group 389.png')}}" alt="">
+                <img src="{{url('images/Group 389.png')}}" >
                 <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
                 <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
                 <i class="bi bi-x-lg"></i>
@@ -669,7 +669,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <img src="{{url('images/Group 389.png')}}" alt="">
+                <img src="{{url('images/Group 389.png')}}" >
                 <h5 class="modal-title" id="get_widget_Lable">Get analytics of your Website</h5>
                 <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
                     <i class="bi bi-x-lg"></i>
@@ -735,7 +735,7 @@
                     Tutorials</a>
                 </div>
                 <div class="image-block">
-                    <img src="{{url('images/tutorial.png')}}" alt="">
+                    <img src="{{url('images/tutorial.png')}}" >
                 </div>
             </div>
             <div class="modal-footer">
@@ -809,7 +809,7 @@
                 else{
                     $('#visitors_record').html(`
                     <tr class="tbl-row"><td class="tb-col" colspan="6">
-                    <img src="{{url('images/searching.gif')}}" alt="" style="display:block;width:250px;margin:0 auto;">
+                    <img src="{{url('images/searching.gif')}}"  style="display:block;width:250px;margin:0 auto;">
                     <h2 style="text-align:center;">Connecting Realtime Data...</h2>
                     </td></tr>
                     `);

@@ -6,7 +6,7 @@
 
 @section('page-header')
     <h5 class="mb-4">Log Viewer
-        <small class="text-muted">By <a href="https://github.com/ARCANEDEV/LogViewer" target="_blank">ARCANEDEV</a></small>
+        <small class="text-muted">By <a href="https://github.com/ARCANEDEV/LogViewer" rel="noopener noreferrer" target="_blank">ARCANEDEV</a></small>
     </h5>
 @endsection
 

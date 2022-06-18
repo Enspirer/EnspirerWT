@@ -49,10 +49,10 @@
                         <div class="devider">or do it via other accounts</div>
                         <div class="button-block">
                             <a href="#" class="social-signup-btn">
-                                <img src="{{url('images/google.png')}}" alt="">
+                                <img src="{{url('images/google.png')}}" >
                             </a>
                             <a href="#" class="social-signup-btn">
-                                <img src="{{url('images/fb.png')}}" alt="">
+                                <img src="{{url('images/fb.png')}}" >
                             </a>
                         </div>
                         <div class="signin-text">Do you have an account? <a href="{{url('login')}}">Login Now</a></div>
@@ -63,13 +63,13 @@
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
-                                    <img src="{{url('images/Group 413.png')}}" alt="">
+                                    <img src="{{url('images/Group 413.png')}}" >
                                 </li>
                                 <li class="splide__slide">
-                                    <img src="{{url('images/Group 413.png')}}" alt="">
+                                    <img src="{{url('images/Group 413.png')}}" >
                                 </li>
                                 <li class="splide__slide">
-                                    <img src="{{url('images/Group 413.png')}}" alt="">
+                                    <img src="{{url('images/Group 413.png')}}" >
                                 </li>
                             </ul>
                         </div>

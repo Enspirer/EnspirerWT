@@ -90,11 +90,11 @@
                                             <div class="inner-wrapper">
                                                 <div class="image-block">
                                                     @if(get_expire_date($project_id)['selected_package'] == 'All In One Widget + IMS Lite')
-                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" >
                                                     @elseif(get_expire_date($project_id)['selected_package'] == 'All In One Widget + IMS Pro')
-                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" >
                                                     @elseif(get_expire_date($project_id)['selected_package'] == 'Optimizer')
-                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" >
                                                     @endif
                                                 </div>
                                                 <div class="content-block">
@@ -282,7 +282,7 @@
                     <form action="{{route('frontend.user.user_projects.store')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
                         <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" alt=""> Create your project</h4>
+                            <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" > Create your project</h4>
                             <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                         </div>
                         <div class="modal-body">

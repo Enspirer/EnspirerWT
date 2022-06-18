@@ -97,7 +97,7 @@
                                                                                 </label>
                                                                             </td>
                                                                             <td class="data--pic data-cell">
-                                                                                <img src="{{url('img/profile_avatar.jpg')}}" alt="">
+                                                                                <img src="{{url('img/profile_avatar.jpg')}}" >
                                                                             </td>
                                                                             <td class="data--name data-cell">
                                                                                 <div class="info-block">

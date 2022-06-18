@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="image-block">
-                <img src="{{url('images/404.png')}}" alt="">
+                <img src="{{url('images/404.png')}}" >
             </div>
         </div>
     </div>

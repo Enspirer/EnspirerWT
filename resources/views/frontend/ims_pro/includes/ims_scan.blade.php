@@ -48,7 +48,7 @@
                 <div class="card-section">
                     <div class="card card-whatsapp">
                         <div class="image-block">
-                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" >
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="card card-messenger">
                         <div class="image-block">
-                            <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                            <img src="{{url('images/social_media_icons/messenger.png')}}" >
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="card card-line">
                         <div class="image-block">
-                            <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                            <img src="{{url('images/social_media_icons/line.png')}}" >
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="card card-telegram">
                         <div class="image-block">
-                            <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                            <img src="{{url('images/social_media_icons/telegram.png')}}" >
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="card card-tawkto">
                         <div class="image-block">
-                            <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
+                            <img src="{{url('images/social_media_icons/tawkto.png')}}" >
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>
@@ -143,7 +143,7 @@
                     </div>
                     <div class="card card-viber">
                         <div class="image-block">
-                            <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                            <img src="{{url('images/social_media_icons/viber.png')}}" >
                         </div>
                         <div class="content-block">
                             <div class="label">Unread Chat</div>

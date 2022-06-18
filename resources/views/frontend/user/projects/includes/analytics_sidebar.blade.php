@@ -2,7 +2,7 @@
                 <div class="ims__side-nav">
                     <div class="side-nav__header">
                         <div class="logo-block">
-                            <img src="{{url('images/full-logo.png')}}" alt="" class="logo">
+                            <img src="{{url('images/full-logo.png')}}"  class="logo">
                             <!-- <div class="logo-text">- Analytics</div> -->
                         </div>
                         <div class="caption">Tallentor Analytics Center</div>

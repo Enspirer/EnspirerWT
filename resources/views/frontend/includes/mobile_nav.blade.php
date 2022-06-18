@@ -21,7 +21,7 @@
         @auth()
         <div class="dropdown mob-profile-drop">
           <button class="profile-drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="{{auth()->user()->picture}}" alt="">
+            <img src="{{auth()->user()->picture}}" >
           </button>
           <ul class="dropdown-menu dropdown-menu-end profile-drop-menu">
             <li>
@@ -213,9 +213,9 @@
                 <button class="mob-property-drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <div class="property">
                       @if(get_seo_result($project_id)->favicon->value == null)
-                        <img src="{{url('img\frontend\globeicon.png')}}" alt="" onerror="this.src='{{url('globeicon.png')}}';">
+                        <img src="{{url('img\frontend\globeicon.png')}}"  onerror="this.src='{{url('globeicon.png')}}';">
                       @else
-                        <img src="{{get_seo_result($project_id)->favicon->value}}" alt="" onerror="this.src='{{url('globeicon.png')}}';">
+                        <img src="{{get_seo_result($project_id)->favicon->value}}"  onerror="this.src='{{url('globeicon.png')}}';">
                       @endif
                       <div class="text-block">
                         <div class="name">{{\App\Models\Projects::where('id',$project_id)->first()->name}}</div>
@@ -239,9 +239,9 @@
 
                     @if(get_seo_result($project->id) != null)
                       @if(get_seo_result($project->id)->favicon->value == null)
-                        <img src="{{url('img\frontend\globeicon.png')}}" alt="" onerror="this.src='{{url('globeicon.png')}}';">
+                        <img src="{{url('img\frontend\globeicon.png')}}"  onerror="this.src='{{url('globeicon.png')}}';">
                       @else
-                        <img src="{{get_seo_result($project->id)->favicon->value}}" alt="" onerror="this.src='{{url('globeicon.png')}}';">
+                        <img src="{{get_seo_result($project->id)->favicon->value}}"  onerror="this.src='{{url('globeicon.png')}}';">
                       @endif
                     @endif
                     

@@ -75,7 +75,7 @@
                                     @if(count(json_decode($widget->settings)[0]->whatsapp_details) != 1)
                                         <div class="channel channel-whatsapp active">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" >
                                                 <div class="content">
                                                     <div class="name">WhatsApp Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->whatsapp_details) != 1)
@@ -108,7 +108,7 @@
                                     @else
                                         <div class="channel channel-whatsapp">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/whatsapp.png')}}" >
                                                 <div class="content">
                                                     <div class="name">WhatsApp Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->whatsapp_details) != 1)
@@ -142,7 +142,7 @@
                                     @if(count(json_decode($widget->settings)[0]->fb_details) != 1)
                                         <div class="channel channel-messenger active">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/messenger.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Facebook Messenger</div>
                                                     @if(count(json_decode($widget->settings)[0]->fb_details) != 1)
@@ -175,7 +175,7 @@
                                     @else
                                         <div class="channel channel-messenger">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/messenger.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Facebook Messenger</div>
                                                     @if(count(json_decode($widget->settings)[0]->fb_details) != 1)
@@ -209,7 +209,7 @@
                                     @if(count(json_decode($widget->settings)[0]->telegram_details) != 1)
                                         <div class="channel channel-telegram active">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/telegram.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Telegram Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->telegram_details) != 1)
@@ -242,7 +242,7 @@
                                     @else
                                         <div class="channel channel-telegram">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/telegram.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Telegram Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->telegram_details) != 1)
@@ -276,7 +276,7 @@
                                     @if(count(json_decode($widget->settings)[0]->line_details) != 1)
                                         <div class="channel channel-line active">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/line.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Line Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->line_details) != 1)
@@ -309,7 +309,7 @@
                                     @else
                                         <div class="channel channel-line">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/line.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Line Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->line_details) != 1)
@@ -343,7 +343,7 @@
                                     @if(count(json_decode($widget->settings)[0]->viber_details) != 1)
                                         <div class="channel channel-viber active">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/viber.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Viber Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->viber_details) != 1)
@@ -376,7 +376,7 @@
                                     @else
                                         <div class="channel channel-viber">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/viber.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Viber Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->viber_details) != 1)
@@ -411,7 +411,7 @@
                                     @if(count(json_decode($widget->settings)[0]->tawk_details) != 1)
                                         <div class="channel channel-tawkto active">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/tawkto.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Tawk.to Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->tawk_details) != 1)
@@ -444,7 +444,7 @@
                                     @else
                                         <div class="channel channel-tawkto">
                                             <div class="content-block">
-                                                <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
+                                                <img src="{{url('images/social_media_icons/tawkto.png')}}" >
                                                 <div class="content">
                                                     <div class="name">Tawk.to Chat</div>
                                                     @if(count(json_decode($widget->settings)[0]->tawk_details) != 1)
@@ -486,37 +486,37 @@
                                         <div class="button-block">
                                             <div class="button">
                                                 <a href="#" type="button" onclick="showInfoBlock('whatsapp-block')" class="channel-btn whatsapp-btn">
-                                                    <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                    <img src="{{url('images/social_media_icons/whatsapp.png')}}" >
                                                     <div class="text">Whatsapp</div>
                                                 </a>
                                             </div>
                                             <div class="button">
                                                 <a href="#" type="button" onclick="showInfoBlock('messenger-block')" class="channel-btn messenger-btn">
-                                                    <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                                                    <img src="{{url('images/social_media_icons/messenger.png')}}" >
                                                     <div class="text">Messenger</div>
                                                 </a>
                                             </div>
                                             <div class="button">
                                                 <a href="#" type="button" onclick="showInfoBlock('telegram-block')" class="channel-btn telegram-btn">
-                                                    <img src="{{url('images/social_media_icons/telegram.png')}}" alt="">
+                                                    <img src="{{url('images/social_media_icons/telegram.png')}}" >
                                                     <div class="text">Telegram</div>
                                                 </a>
                                             </div>
                                             <div class="button">
                                                 <a href="#" type="button" onclick="showInfoBlock('line-block')" class="channel-btn line-btn">
-                                                    <img src="{{url('images/social_media_icons/line.png')}}" alt="">
+                                                    <img src="{{url('images/social_media_icons/line.png')}}" >
                                                     <div class="text">Line</div>
                                                 </a>
                                             </div>
                                             <div class="button">
                                                 <a href="#" type="button" onclick="showInfoBlock('viber-block')" class="channel-btn viber-btn">
-                                                    <img src="{{url('images/social_media_icons/viber.png')}}" alt="">
+                                                    <img src="{{url('images/social_media_icons/viber.png')}}" >
                                                     <div class="text">Viber</div>
                                                 </a>
                                             </div>
                                             <div class="button">
                                                 <a href="#" type="button" onclick="showInfoBlock('tawkto-block')" class="channel-btn tawkto-btn">
-                                                    <img src="{{url('images/social_media_icons/tawkto.png')}}" alt="">
+                                                    <img src="{{url('images/social_media_icons/tawkto.png')}}" >
                                                     <div class="text">Tawk.to</div>
                                                 </a>
                                             </div>
@@ -938,17 +938,17 @@
                                                     <div class="edit-icons">
                                                         <a href="#">
                                                             <img src="{{url('images/resources/baseline-create-24px.svg')}}"
-                                                                alt="">
+                                                                >
                                                         </a>
                                                         <a href="#">
                                                             <img src="{{url('images/resources/baseline-delete_outline-24px.svg')}}"
-                                                                alt="">
+                                                                >
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <!-- <div class="body">
                                                     <div class="file-uploader">
-                                                        <img src="{{url('images/image (68).png')}}" alt="">
+                                                        <img src="{{url('images/image (68).png')}}" >
                                                         <div class="title">Drop your image here, or
                                                             <span>brows</span>
                                                         </div>
@@ -987,11 +987,11 @@
                                                     <div class="edit-icons">
                                                         <a href="#">
                                                             <img src="{{url('images/resources/baseline-create-24px.svg')}}"
-                                                                alt="">
+                                                                >
                                                         </a>
                                                         <a href="#">
                                                             <img src="{{url('images/resources/baseline-delete_outline-24px.svg')}}"
-                                                                alt="">
+                                                                >
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1974,7 +1974,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <img src="{{url('images/Group 389.png')}}" alt="">
+                <img src="{{url('images/Group 389.png')}}" >
                 <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
                 <button type="button" class="btn-close-modal" data-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
             </div>
@@ -2000,7 +2000,7 @@
             <form action="{{route('frontend.user.user_projects.store')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" alt=""> Create
+                    <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" > Create
                         your project</h4>
                     <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i
                             class="bi bi-x-lg"></i></button>

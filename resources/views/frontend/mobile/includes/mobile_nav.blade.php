@@ -4,7 +4,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="profile">
-            <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
+            <img src="{{url('images/mobile/home/profile-picture.png')}}" >
             <div class="text-block">
                 <div class="name">Amal Perera</div>
                 <div class="active-status active">Active Status</div>
@@ -53,7 +53,7 @@
         </ul>
         <div class="image-block">
             <div class="rectangle"></div>
-            <img src="{{url('images/mobile/home/nav-image.png')}}" alt="">
+            <img src="{{url('images/mobile/home/nav-image.png')}}" >
         </div>
       </div>
       <div class="modal-footer">

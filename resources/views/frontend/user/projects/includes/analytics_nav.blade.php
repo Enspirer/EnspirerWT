@@ -155,7 +155,7 @@
                         aria-expanded="false">
                         <div class="profile">
                             <div class="profile__pic">
-                                <img src="{{auth()->user()->picture}}" alt="">
+                                <img src="{{auth()->user()->picture}}" >
                             </div>
                             <div class="name">{{auth()->user()->first_name}} {{auth()->user()->last_name}}</div>
                             <i class="bi bi-chevron-down"></i>
@@ -249,7 +249,7 @@
             <form action="{{route('frontend.user.user_projects.store')}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" alt=""> Create your project</h4>
+                    <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" > Create your project</h4>
                     <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                 </div>
                 <div class="modal-body">
@@ -285,7 +285,7 @@
         <li class="nav-item {{Request::segment(5)=='overview' ? 'active' :null }}">
             <a href="{{route('frontend.user.project.analytics',$project_id)}}" class="nav-link">
                 <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" alt="">
+                    <img src="{{url('images/dashboard/ims_pro/nav-overview.png')}}" >
                     <div class="text">Overview</div>
                 </div>
             </a>
@@ -293,7 +293,7 @@
         <li class="nav-item dropdown {{Request::segment(5)=='behavior' ? 'active' :null }}">
             <a href="#" class="nav-link" role="button" id="behavDrop" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" alt="">
+                    <img src="{{url('images/dashboard/ims_pro/nav-behavior.png')}}" >
                     <div class="text">Behavior</div>
                 </div>
                 <i class="bi bi-chevron-down"></i>
@@ -307,7 +307,7 @@
         <li class="nav-item dropdown {{Request::segment(5)=='acquisitions' ? 'active' :null }}">
             <a href="#" class="nav-link" role="button" id="acqDrop" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" alt="">
+                    <img src="{{url('images/dashboard/ims_pro/nav-acquisitions.png')}}" >
                     <div class="text">Acquisitions</div>
                 </div>
                 <i class="bi bi-chevron-down"></i>
@@ -324,7 +324,7 @@
         <li class="nav-item dropdown {{Request::segment(5)=='geographic' ? 'active' :null }}">
             <a href="#" class="nav-link" role="button" id="geoDrop" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-geographic.png')}}" alt="">
+                    <img src="{{url('images/dashboard/ims_pro/nav-geographic.png')}}" >
                     <div class="text">Geographic</div>
                 </div>
                 <i class="bi bi-chevron-down"></i>
@@ -341,7 +341,7 @@
         <li class="nav-item dropdown {{Request::segment(5)=='technology' ? 'active' :null }}">
             <a href="#" class="nav-link" role="button" id="techDrop" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="text-block">
-                    <img src="{{url('images/dashboard/ims_pro/nav-technology.png')}}" alt="">
+                    <img src="{{url('images/dashboard/ims_pro/nav-technology.png')}}" >
                     <div class="text">Technology</div>
                 </div>
                 <i class="bi bi-chevron-down"></i>

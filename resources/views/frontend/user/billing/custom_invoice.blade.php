@@ -245,7 +245,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="inner-wrapper">
-            <img src="{{url('images/dashboard/main/payment-success.svg')}}" alt="">
+            <img src="{{url('images/dashboard/main/payment-success.svg')}}" >
             <div class="title">Payment Transfer Successful!</div>
             <div class="text">All Good... Thank You! Your payment of $25.00 has been received successfully.</div>
             <a href="#" class="pay-sucess-btn" data-bs-toggle="modal" data-bs-target="#payCanModal">
@@ -261,7 +261,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="inner-wrapper">
-            <img src="{{url('images/dashboard/main/payment-cancel.svg')}}" alt="">
+            <img src="{{url('images/dashboard/main/payment-cancel.svg')}}" >
             <div class="title">Payment Transfer Failed!</div>
             <div class="text">Bad... Sorry! Your payment was Failed! Please check billing information again and retry.</div>
             <a href="#" class="pay-cancel-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">

@@ -91,7 +91,7 @@
                                                                     <a href="#" class="slider-link" data-bot="bot-1">
                                                                         <div class="slider-card">
                                                                             <div class="image-block">
-                                                                                <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                                <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" >
                                                                             </div>
                                                                             <div class="content-block">
                                                                                 <div class="title">Bot Name Here</div>
@@ -123,7 +123,7 @@
                                                                     <a href="#" class="slider-link" data-bot="bot-2">
                                                                         <div class="slider-card">
                                                                             <div class="image-block">
-                                                                                <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" alt="">
+                                                                                <img src="{{url('images/dashboard/ims_pro/bot-slide.png')}}" >
                                                                             </div>
                                                                             <div class="content-block">
                                                                                 <div class="title">Bot Name Here</div>
@@ -873,7 +873,7 @@
             <div class="modal-body">
                 <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
                 <div class="image-block">
-                    <img src="{{url('images/landing_page/contact_us/success.png')}}" alt="">
+                    <img src="{{url('images/landing_page/contact_us/success.png')}}" >
                 </div>
                 <div class="content-block">
                     <div class="title">Success !</div>

@@ -142,7 +142,7 @@
                         <input type="date" name="date" class="form-control" required>
                     </div>
                     <div class="col-2 text-center">
-                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="" class="form-img">
+                        <img src="{{url('images/social_media_icons/whatsapp.png')}}"  class="form-img">
                     </div>
                     <div class="col-10">
                         <input type="tel" name="phone" class="form-control" placeholder="Whatsapp Number" required>
@@ -154,7 +154,7 @@
                 </form>
             </div>
             <div class="image-block">
-                <img src="{{url('images/landing_page/tallentor_demo/demo_main.png')}}" alt="">
+                <img src="{{url('images/landing_page/tallentor_demo/demo_main.png')}}" >
             </div>
         </div>
     </div>
@@ -169,7 +169,7 @@
             <div class="modal-body">
                 <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
                 <div class="image-block">
-                    <img src="{{url('images/landing_page/contact_us/success.png')}}" alt="">
+                    <img src="{{url('images/landing_page/contact_us/success.png')}}" >
                 </div>
                 <div class="content-block">
                     <div class="title">Success !</div>

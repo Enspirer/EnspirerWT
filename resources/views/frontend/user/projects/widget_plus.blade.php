@@ -66,10 +66,10 @@
                                     </div>
                                 </div>
                                 <div class="inner-wrapper">
-                                    <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}" alt="" class="water-mark">
+                                    <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}"  class="water-mark">
                                     <div class="widget-block">
                                         <div class="title">All in one Widget</div>
-                                        <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}"  class="widget-img">
                                     </div>
                                     <div class="separator">
                                         <i class="bi bi-plus-lg"></i>
@@ -78,7 +78,7 @@
                                         @if($widgetlist->widget_type == 'IMS Pro')
                                             <div class="title">IMS <span class="pro-cat red">Pro</span></div>
                                         @endif
-                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}"  class="widget-img">
                                     </div>
                                     <div class="button-section">
                                         <a href="#" class="sub-btn">
@@ -119,17 +119,17 @@
                                     </div>
                                 </div>
                                 <div class="inner-wrapper">
-                                    <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}" alt="" class="water-mark">
+                                    <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}"  class="water-mark">
                                     <div class="widget-block">
                                         <div class="title">All in one Widget</div>
-                                        <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}"  class="widget-img">
                                     </div>
                                     <div class="separator">
                                         <i class="bi bi-plus-lg"></i>
                                     </div>
                                     <div class="widget-block">
                                         <div class="title">IMS <span class="pro-cat red">Pro</span></div>
-                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/ims-pro.png')}}"  class="widget-img">
                                     </div>
                                     <div class="button-section">
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#actWidgetPro" class="sub-btn">
@@ -171,7 +171,7 @@
                                 <div class="plan">Executive</div>
                                 <div class="fee">$ 15.00 <span>/ month</span></div>
                             </div>
-                            <img src="{{url('images/dashboard/subscriptions/plan-icon.png')}}" alt="">
+                            <img src="{{url('images/dashboard/subscriptions/plan-icon.png')}}" >
                         </div>
                         <div class="option-block">
                             <ul class="options">
@@ -216,7 +216,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <img src="{{url('images/Group 389.png')}}" alt="">
+                <img src="{{url('images/Group 389.png')}}" >
                 <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
                 <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
                 <i class="bi bi-x-lg"></i>
@@ -281,7 +281,7 @@
                     Tutorials</a>
                 </div>
                 <div class="image-block">
-                    <img src="{{url('images/tutorial.png')}}" alt="">
+                    <img src="{{url('images/tutorial.png')}}" >
                 </div>
             </div>
             <div class="modal-footer">

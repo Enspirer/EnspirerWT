@@ -41,9 +41,9 @@
                                     <div class="body">
                                         <div class="image-block">
                                         @if($project->settings != null)
-                                            <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" alt="" width="100%">
+                                            <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}"  width="100%">
                                         @else
-                                            <img src="https://fakeimg.pl/250x100/" alt="" width="100%">
+                                            <img src="https://fakeimg.pl/250x100/"  width="100%">
                                         @endif
                                         </div>
                                         <div class="property-block">
@@ -56,11 +56,11 @@
                                             <div class="inner-block">
                                                 <div class="image-block">
                                                     @if($project->selected_package == 'All In One Widget + IMS Lite')
-                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" >
                                                     @elseif($project->selected_package == 'All In One Widget + IMS Pro')
-                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" >
                                                     @elseif($project->selected_package == 'Optimizer')
-                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" >
                                                     @endif
                                                 </div>
                                                 <div class="content-block">
@@ -126,9 +126,9 @@
                                                                             <tr>
                                                                                 <td class="icon-col">
                                                                                     @if($back->blacklisted == 0)
-                                                                                        <img src="{{url('images/dashboard/main/icons/sheild-success.png')}}" class="me-3" alt="">
+                                                                                        <img src="{{url('images/dashboard/main/icons/sheild-success.png')}}" class="me-3" >
                                                                                     @else
-                                                                                        <img src="{{url('images/dashboard/main/icons/sheild-danger.png')}}" class="me-3" alt="">
+                                                                                        <img src="{{url('images/dashboard/main/icons/sheild-danger.png')}}" class="me-3" >
                                                                                     @endif
                                                                                 </td>
                                                                                 <td class="text-col">

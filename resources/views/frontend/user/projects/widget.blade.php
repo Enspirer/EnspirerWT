@@ -62,17 +62,17 @@
                                     </div>
                                 </div>
                                 <div class="inner-wrapper">
-                                    <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}" alt="" class="water-mark">
+                                    <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}"  class="water-mark">
                                     <div class="widget-block">
                                         <div class="title">{{$widgetlist->widget_type}}</div>
-                                        <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}"  class="widget-img">
                                     </div>
                                     <div class="separator">
                                         <i class="bi bi-plus-lg"></i>
                                     </div>
                                     <div class="widget-block">
                                         <div class="title">IMS <span class="pro-cat blue">Lite</span></div>
-                                        <img src="{{url('images/dashboard/subscriptions/ims-lite.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/ims-lite.png')}}"  class="widget-img">
                                     </div>
                                     <div class="button-section">
                                         <a href="#" class="sub-btn">
@@ -112,17 +112,17 @@
                                     </div>
                                 </div>
                                 <div class="inner-wrapper">
-                                    <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}" alt="" class="water-mark">
+                                    <img src="{{url('images/dashboard/subscriptions/messenger-water-mark.png')}}"  class="water-mark">
                                     <div class="widget-block">
                                         <div class="title">All in one Widget</div>
-                                        <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/all-in-one.png')}}"  class="widget-img">
                                     </div>
                                     <div class="separator">
                                         <i class="bi bi-plus-lg"></i>
                                     </div>
                                     <div class="widget-block">
                                         <div class="title">IMS <span class="pro-cat blue">Lite</span></div>
-                                        <img src="{{url('images/dashboard/subscriptions/ims-lite.png')}}" alt="" class="widget-img">
+                                        <img src="{{url('images/dashboard/subscriptions/ims-lite.png')}}"  class="widget-img">
                                     </div>
                                     <div class="button-section">
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#actWidgetLite" class="sub-btn">
@@ -179,7 +179,7 @@
                                                                     </div>
                                                                     <div class="col-4">
                                                                         <div class="whatsapp-feature-block">
-                                                                            <img src="{{url('images/whatsapp (1).png')}}" alt="">
+                                                                            <img src="{{url('images/whatsapp (1).png')}}" >
                                                                             <div class="title">WhatsApp Chat</div>
                                                                             <div class="subtitle">Entertainment</div>
                                                                             <div class="star-rating">
@@ -214,7 +214,7 @@
                                                                     </div>
                                                                     <div class="col-4">
                                                                         <div class="whatsapp-feature-block">
-                                                                            <img src="{{url('images/social_media_icons/chat.png')}}" alt="">
+                                                                            <img src="{{url('images/social_media_icons/chat.png')}}" >
                                                                             <div class="title">All-in-One Chat</div>
                                                                             <div class="subtitle">Entertainment</div>
                                                                             <div class="star-rating">
@@ -249,7 +249,7 @@
                                                                     </div>
                                                                     <div class="col-4">
                                                                         <div class="whatsapp-feature-block">
-                                                                            <img src="{{url('images/social_media_icons/ims-logo.png')}}" style="width:80px;" alt="">
+                                                                            <img src="{{url('images/social_media_icons/ims-logo.png')}}" style="width:80px;" >
                                                                             <div class="title">IMS Pro</div>
                                                                             <div class="subtitle">Entertainment</div>
                                                                             <div class="star-rating">
@@ -300,7 +300,7 @@
                                 <div class="plan">Basic</div>
                                 <div class="fee">$ 5.00 <span>/ month</span></div>
                             </div>
-                            <img src="{{url('images/dashboard/subscriptions/plan-icon.png')}}" alt="">
+                            <img src="{{url('images/dashboard/subscriptions/plan-icon.png')}}" >
                         </div>
                         <div class="option-block">
                             <ul class="options">
@@ -341,7 +341,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <img src="{{url('images/Group 389.png')}}" alt="">
+                <img src="{{url('images/Group 389.png')}}" >
                 <h5 class="modal-title" id="get_widget_Lable">Add the widget to your website</h5>
                 <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
                 <i class="bi bi-x-lg"></i>
@@ -406,7 +406,7 @@
                     Tutorials</a>
                 </div>
                 <div class="image-block">
-                    <img src="{{url('images/tutorial.png')}}" alt="">
+                    <img src="{{url('images/tutorial.png')}}" >
                 </div>
             </div>
             <div class="modal-footer">

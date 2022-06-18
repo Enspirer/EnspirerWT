@@ -42,7 +42,7 @@
                                                     <div class="header">
                                                         <div class="profile-block">
                                                             <div class="image-block">
-                                                                <img src="{{url('img/profile_avatar.jpg')}}" alt="">
+                                                                <img src="{{url('img/profile_avatar.jpg')}}" >
                                                             </div>
                                                             <div class="profile">
                                                                 <div class="name">{{$ims_client->client_name}}</div>

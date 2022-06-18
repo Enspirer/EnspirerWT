@@ -77,7 +77,7 @@
                 </div>
             </div>
             <div class="image-block">
-                <img src="{{url('images/portfolio/Group 757.png')}}" alt="">
+                <img src="{{url('images/portfolio/Group 757.png')}}" >
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@
         <div class="row g-4">
             <div class="portfolio-block col-md-6 col-12">
                 <div class="image-block">
-                    <img src="{{url('images/portfolio/Group 761.png')}}" alt="">
+                    <img src="{{url('images/portfolio/Group 761.png')}}" >
                 </div>
                 <div class="content-block">
                     <div class="text">Full system integrate</div>
@@ -98,7 +98,7 @@
             </div>
             <div class="portfolio-block col-md-6 col-12">
                 <div class="image-block">
-                    <img src="{{url('images/portfolio/Ceylon Beatz 2.png')}}" alt="">
+                    <img src="{{url('images/portfolio/Ceylon Beatz 2.png')}}" >
                 </div>
                 <div class="content-block light">
                     <div class="text">Full system integrate</div>
@@ -107,7 +107,7 @@
             </div>
             <div class="portfolio-block col-md-3 col-12">
                 <div class="image-block">
-                    <img src="{{url('images/portfolio/SkyCard.png')}}" alt="">
+                    <img src="{{url('images/portfolio/SkyCard.png')}}" >
                 </div>
                 <div class="content-block">
                     <div class="text"></div>
@@ -116,7 +116,7 @@
             </div>
             <div class="portfolio-block col-md-6 col-12">
                 <div class="image-block">
-                    <img src="{{url('images/portfolio/Group 759.png')}}" alt="">
+                    <img src="{{url('images/portfolio/Group 759.png')}}" >
                 </div>
                 <div class="content-block">
                     <div class="text">Full system integrate</div>
@@ -125,7 +125,7 @@
             </div>
             <div class="portfolio-block col-md-3 col-12">
                 <div class="image-block">
-                    <img src="{{url('images/portfolio/Component 2 – 1.png')}}" alt="">
+                    <img src="{{url('images/portfolio/Component 2 – 1.png')}}" >
                 </div>
                 <div class="content-block">
                     <div class="text"></div>

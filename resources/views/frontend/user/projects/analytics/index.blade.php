@@ -284,7 +284,7 @@
                                                                     <div class="info">
                                                                         <div class="icon-primary"><i class="bi bi-globe2"></i></div>
                                                                         <div class="text">{{ $page->value }}</div>
-                                                                        <div class="icon-secondary"><a href="http://{{ $website->url . $page->value }}" target="_blank" rel="nofollow noreferrer noopener" class="text-secondary"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                        <div class="icon-secondary"><a href="http://{{ $website->url . $page->value }}" rel="noopener noreferrer" target="_blank" rel="nofollow noreferrer noopener" class="text-secondary"><i class="bi bi-box-arrow-up-right"></i></a></div>
                                                                     </div>
                                                                     <div class="count">
                                                                         <div class="total-count">{{ number_format($page->count, 0, __('.'), __(',')) }}</div>
@@ -332,7 +332,7 @@
                                                                     <div class="info">
                                                                         <div class="icon-primary"><img src="https://icons.duckduckgo.com/ip3/{{ $referrer->value }}.ico" rel="noreferrer" class="width-4 height-4"></div>
                                                                         <div class="text">{{ $referrer->value }}</div>
-                                                                        <div class="icon-secondary"><a href="http://{{ $referrer->value }}" target="_blank" class="text-secondary"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                                                                        <div class="icon-secondary"><a href="http://{{ $referrer->value }}" rel="noopener noreferrer" target="_blank" class="text-secondary"><i class="bi bi-box-arrow-up-right"></i></a></div>
                                                                     </div>
                                                                     <div class="count">
                                                                         <div class="total-count">{{ number_format($referrer->count, 0, __('.'), __(',')) }}</div>

@@ -38,7 +38,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
                                 <a href="{{url('login')}}" class="cta-btn-fill"><span class="text">Get Started</span> <i class="bi bi-arrow-right-short"></i></a>
                             </div>
                             <div class="image-block">
-                                <img src="{{url('images/landing_page/products/hero-optimizer.png')}}" alt="">
+                                <img src="{{url('images/landing_page/products/hero-optimizer.png')}}" >
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
                                     <div class="splide__track">
                                             <ul class="splide__list">
                                                 <li class="splide__slide">
-                                                    <img src="{{url('images/landing_page/products/slide_1.png')}}" alt="">
+                                                    <img src="{{url('images/landing_page/products/slide_1.png')}}" >
                                                 </li>
                                             </ul>
                                     </div>
@@ -81,30 +81,30 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
                     </div>
                     <div class="feature-block-section">
                         <div class="curves">
-                            <img src="{{url('images/products/Path 6503.svg')}}" alt="" class="top-curve">
-                            <img src="{{url('images/products/Path 6507.svg')}}" alt="" class="bottom-curve">
+                            <img src="{{url('images/products/Path 6503.svg')}}"  class="top-curve">
+                            <img src="{{url('images/products/Path 6507.svg')}}"  class="bottom-curve">
                         </div>
                         <div class="optimizer-slide-wrapper">
                             <div id="optimizerSlide" class="splide optimizer-slide">
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
-                                            <img src="{{url('images/landing_page/products/slide-imsPro.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/products/slide-imsPro.png')}}" >
                                         </li>
                                         <li class="splide__slide">
-                                            <img src="{{url('images/landing_page/products/slide-heatmap.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/products/slide-heatmap.png')}}" >
                                         </li>
                                         <li class="splide__slide">
-                                            <img src="{{url('images/landing_page/products/slide-sessionRec.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/products/slide-sessionRec.png')}}" >
                                         </li>
                                         <li class="splide__slide">
-                                            <img src="{{url('images/landing_page/products/slide-realtime.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/products/slide-realtime.png')}}" >
                                         </li>
                                         <li class="splide__slide">
-                                            <img src="{{url('images/landing_page/products/slide-allin1.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/products/slide-allin1.png')}}" >
                                         </li>
                                         <li class="splide__slide">
-                                            <img src="{{url('images/landing_page/products/slide-analytics.png')}}" alt="">
+                                            <img src="{{url('images/landing_page/products/slide-analytics.png')}}" >
                                         </li>
                                     </ul>
                                 </div>

@@ -157,7 +157,7 @@
                                                 </td>
                                                 <td class="col-3">
                                                     <div class="propery">
-                                                        <!-- <img src="{{url('images/Tallentor.png')}}" alt=""> -->
+                                                        <!-- <img src="{{url('images/Tallentor.png')}}" > -->
                                                             @if(get_seo_result($report->id)->favicon->value == null)
                                                                 <a href="{{route('frontend.user.reports.analytics_report',$report->id)}}" style="text-decoration:none;">
                                                                     <img src="{{url('img\frontend\globeicon.png')}}" alt="propery-image">

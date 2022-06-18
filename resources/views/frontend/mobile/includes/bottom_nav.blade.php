@@ -48,9 +48,9 @@
                                 <a href="{{route('frontend.mobile_view',$project->id)}}" class="list-link">
                                     <div class="property">
                                         @if(get_seo_result($project->id)->favicon->value == null)
-                                            <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                            <img src="{{url('images/mobile/home/property-image.png')}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                         @else
-                                            <img src="{{get_seo_result($project->id)->favicon->value}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                            <img src="{{get_seo_result($project->id)->favicon->value}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                         @endif
                                         <div class="content">
                                             <div class="title">{{$project->name}}</div>
@@ -65,9 +65,9 @@
                                 <a href="{{route('frontend.mobile_view',$project->id)}}" class="list-link">
                                     <div class="property">
                                         @if(get_seo_result($project->id)->favicon->value == null)
-                                            <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                            <img src="{{url('images/mobile/home/property-image.png')}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                         @else
-                                            <img src="{{get_seo_result($project->id)->favicon->value}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                            <img src="{{get_seo_result($project->id)->favicon->value}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                         @endif
                                         <div class="content">
                                             <div class="title">{{$project->name}}</div>
@@ -83,9 +83,9 @@
                             <a href="{{route('frontend.mobile_view',$project->id)}}" class="list-link">
                                 <div class="property">
                                 @if(get_seo_result($project->id)->favicon->value == null)
-                                    <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                    <img src="{{url('images/mobile/home/property-image.png')}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                 @else
-                                    <img src="{{get_seo_result($project->id)->favicon->value}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                    <img src="{{get_seo_result($project->id)->favicon->value}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                 @endif
                                    
                                     <div class="content">

@@ -127,9 +127,9 @@
                                             <div class="profile">
                                                 <div class="profile__pic">
                                                     @auth
-                                                        <img src="{{auth()->user()->picture}}" alt="">
+                                                        <img src="{{auth()->user()->picture}}" >
                                                     @else
-                                                        <img src="{{url('img/profile_avatar.jpg')}}" alt="">
+                                                        <img src="{{url('img/profile_avatar.jpg')}}" >
                                                     @endauth
                                                 </div>
                                                 <div class="name">
@@ -264,7 +264,7 @@
                     <form action="{{route('frontend.user.user_projects.store')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
                         <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" alt=""> Create your project</h4>
+                            <h4 class="modal-title" id="exampleModalLabel"><img src="{{url('images/idea.png')}}" > Create your project</h4>
                             <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                         </div>
                         <div class="modal-body">
@@ -326,7 +326,7 @@
                                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ut autem iusto maiores eaque voluptate temporibus odio in repellat incidunt?</p>
                                 <div class="subscriptions">
                                     <!-- <div class="subcriptioin-block basic-block">
-                                        <img src="{{url('images/dashboard/ims_pro/basic-sub.png')}}" alt="" class="sub-img">
+                                        <img src="{{url('images/dashboard/ims_pro/basic-sub.png')}}"  class="sub-img">
                                         <div class="title">Basic</div>
                                         <div class="discount">20% Savings</div>
                                         <div class="fee"><span>FREE</span> / month</div>                                        
@@ -335,7 +335,7 @@
                                         </button>
                                     </div>
                                     <div class="subcriptioin-block plus-block">
-                                        <img src="{{url('images/dashboard/ims_pro/standard-sub.png')}}" alt="" class="sub-img">
+                                        <img src="{{url('images/dashboard/ims_pro/standard-sub.png')}}"  class="sub-img">
                                         <div class="title">Plus</div>
                                         <div class="discount">20% Savings</div>
                                         <div class="fee">LKR <span>2500</span> .00 / month</div>                                        
@@ -344,7 +344,7 @@
                                         </button>
                                     </div>
                                     <div class="subcriptioin-block executive-block">
-                                        <img src="{{url('images/dashboard/ims_pro/premium-sub.png')}}" alt="" class="sub-img">
+                                        <img src="{{url('images/dashboard/ims_pro/premium-sub.png')}}"  class="sub-img">
                                         <div class="title">Executive</div>
                                         <div class="discount">20% Savings</div>
                                         <div class="fee">LKR <span>5000</span> .00 / month</div>                                        
@@ -353,7 +353,7 @@
                                         </button>
                                     </div>
                                     <div class="subcriptioin-block professional-block">
-                                        <img src="{{url('images/dashboard/ims_pro/premium-sub.png')}}" alt="" class="sub-img">
+                                        <img src="{{url('images/dashboard/ims_pro/premium-sub.png')}}"  class="sub-img">
                                         <div class="title">Professional</div>
                                         <div class="discount">20% Savings</div>
                                         <div class="fee">LKR <span>5000</span> .00 / month</div>                                        
@@ -362,7 +362,7 @@
                                         </button>
                                     </div>
                                     <div class="subcriptioin-block premium-block">
-                                        <img src="{{url('images/dashboard/ims_pro/premium-sub.png')}}" alt="" class="sub-img">
+                                        <img src="{{url('images/dashboard/ims_pro/premium-sub.png')}}"  class="sub-img">
                                         <div class="title">Premium</div>
                                         <div class="discount">20% Savings</div>
                                         <div class="fee">LKR <span>5000</span> .00 / month</div>                                        
@@ -371,15 +371,15 @@
                                         </button>
                                     </div> -->
                                     <div class="subcriptioin-block basic-block">
-                                        <img src="{{url('images/dashboard/ims_pro/basic-plan.png')}}" alt="" class="sub-image">
+                                        <img src="{{url('images/dashboard/ims_pro/basic-plan.png')}}"  class="sub-image">
                                         <input type="hidden" class="sub-input" name="basic">
                                     </div>
                                     <div class="subcriptioin-block executive-block">
-                                        <img src="{{url('images/dashboard/ims_pro/executive-plan.png')}}" alt="" class="sub-image">
+                                        <img src="{{url('images/dashboard/ims_pro/executive-plan.png')}}"  class="sub-image">
                                         <input type="hidden" class="sub-input" name="executive">
                                     </div>
                                     <div class="subcriptioin-block premium-block">
-                                        <img src="{{url('images/dashboard/ims_pro/premium-plan.png')}}" alt="" class="sub-image">
+                                        <img src="{{url('images/dashboard/ims_pro/premium-plan.png')}}"  class="sub-image">
                                         <input type="hidden" class="sub-input" name="premium">
                                     </div>
                                 </div>
@@ -420,7 +420,7 @@
                                         </form>
                                     </div>
                                     <div class="col-6 p-4 image-block">
-                                        <img src="{{url('images/dashboard/ims_pro/modal-image.png')}}" alt="" class="modal-image">
+                                        <img src="{{url('images/dashboard/ims_pro/modal-image.png')}}"  class="modal-image">
                                         <div class="button-block">
                                             <button type="button" class="modal-btn billing-btn-prev btn-prev">
                                                 <i class="bi bi-arrow-left-short"></i>
@@ -460,7 +460,7 @@
                                         </form>
                                     </div>
                                     <div class="col-6 p-4 image-block">
-                                        <img src="{{url('images/dashboard/ims_pro/modal-image.png')}}" alt="" class="modal-image">
+                                        <img src="{{url('images/dashboard/ims_pro/modal-image.png')}}"  class="modal-image">
                                         <div class="button-block">
                                             <button type="button" class="modal-btn inquiry-btn-prev btn-prev">
                                                 <i class="bi bi-arrow-left-short"></i>

@@ -15,7 +15,7 @@
         <div class="inner-wrapper">
             <div class="branch-card">
                 <div class="image-block">
-                    <img src="{{url('images/landing_page/contact_us/uae.png')}}" alt="">
+                    <img src="{{url('images/landing_page/contact_us/uae.png')}}" >
                 </div>                
                 <div class="title">Tallentor International</div>
                 <div class="address">B2, 202, Jumeirah village circle, <br>Dubai.<span>UAE</span></div>
@@ -24,7 +24,7 @@
             </div>
             <div class="branch-card">
                 <div class="image-block">
-                    <img src="{{url('images/landing_page/contact_us/aus.png')}}" alt="">
+                    <img src="{{url('images/landing_page/contact_us/aus.png')}}" >
                     <div class="subtitle">Head Office</div>
                 </div>                
                 <div class="title">Tallentor International</div>
@@ -34,7 +34,7 @@
             </div>
             <div class="branch-card">
                 <div class="image-block">
-                    <img src="{{url('images/landing_page/contact_us/uk.png')}}" alt="">
+                    <img src="{{url('images/landing_page/contact_us/uk.png')}}" >
                 </div>                
                 <div class="title">Tallentor International</div>
                 <div class="address">35 Melbourne Avenue <br>London W13 9BX,<span>UK</span></div>
@@ -91,24 +91,24 @@
                         <div class="text">Fill up the form and our Team will get back <br> to you within 24 hours.</div>
                     </div>
                     <div class="social address">
-                        <a href="https://web.whatsapp.com/send?phone=971583017648" target="_blank" class="contact-link" target="_blank">
-                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                        <a href="https://web.whatsapp.com/send?phone=971583017648" rel="noopener noreferrer" target="_blank" class="contact-link">
+                            <img src="{{url('images/social_media_icons/whatsapp.png')}}" >
                             <div class="text">Chat on WhatsApp</div>
                         </a>
                     </div>
                     <div class="social email">
-                        <a href="https://www.messenger.com/t/tallentor" class="contact-link" target="_blank">
-                            <img src="{{url('images/social_media_icons/messenger.png')}}" alt="">
+                        <a href="https://www.messenger.com/t/tallentor" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url('images/social_media_icons/messenger.png')}}" >
                             <div class="text">Connect on Messenger</div>
                         </a>
                     </div>
                     <div class="social email">
                         <a href="mailto:hello@tallentor.com" class="contact-link">
-                            <img src="{{url('images/contact-us/email (2).png')}}" alt="">
+                            <img src="{{url('images/contact-us/email (2).png')}}" >
                             <div class="text">hello@tallentor.com</div>
                         </a>
                     </div>
-                    <img src="{{url('images/landing_page/contact_us/contact_background.png')}}" alt="" class="background-img">
+                    <img src="{{url('images/landing_page/contact_us/contact_background.png')}}"  class="background-img">
                 </div>
             </div>
         </div>
@@ -128,7 +128,7 @@
                                     <i class="bi bi-three-dots-vertical"></i>
                                 </div>
                                 <div class="main-icon">
-                                    <img src="{{url('images/contact-us/Group 440.png')}}" alt="">
+                                    <img src="{{url('images/contact-us/Group 440.png')}}" >
                                 </div>
                                 <h5 class="title">Sales Inquires</h5>
                                 <p class="text">Product information and Corporate inquiries</p>
@@ -142,7 +142,7 @@
                                     <i class="bi bi-three-dots-vertical"></i>
                                 </div>
                                 <div class="main-icon">
-                                    <img src="{{url('images/contact-us/Group 457.png')}}" alt="">
+                                    <img src="{{url('images/contact-us/Group 457.png')}}" >
                                 </div>
                                 <h5 class="title">Billing</h5>
                                 <p class="text">Account information and bulk purchases</p>
@@ -156,7 +156,7 @@
                                     <i class="bi bi-three-dots-vertical"></i>
                                 </div>
                                 <div class="main-icon">
-                                    <img src="{{url('images/contact-us/Group 483.png')}}" alt="">
+                                    <img src="{{url('images/contact-us/Group 483.png')}}" >
                                 </div>
                                 <h5 class="title">Support</h5>
                                 <p class="text">Technical support and assistance with installations</p>
@@ -170,7 +170,7 @@
                                     <i class="bi bi-three-dots-vertical"></i>
                                 </div>
                                 <div class="main-icon">
-                                    <img src="{{url('images/contact-us/Group 508.png')}}" alt="">
+                                    <img src="{{url('images/contact-us/Group 508.png')}}" >
                                 </div>
                                 <h5 class="title">Partnership</h5>
                                 <p class="text">Become a partner in your region with Tallentor</p>
@@ -192,7 +192,7 @@
             <div class="modal-body">
                 <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
                 <div class="image-block">
-                    <img src="{{url('images/landing_page/contact_us/success.png')}}" alt="">
+                    <img src="{{url('images/landing_page/contact_us/success.png')}}" >
                 </div>
                 <div class="content-block">
                     <div class="title">Success !</div>
@@ -212,7 +212,7 @@
             <div class="modal-body">
                 <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
                 <div class="image-block">
-                    <img src="{{url('images/landing_page/contact_us/unsuccess.png')}}" alt="">
+                    <img src="{{url('images/landing_page/contact_us/unsuccess.png')}}" >
                 </div>
                 <div class="content-block">
                     <div class="title">Ooopsie !</div>

@@ -16,14 +16,14 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <a href="#" class="list-link active">
-                            <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/profile-picture.png')}}" >
                             <div class="text"><span class="name">Suranga Dinesh</span>
                             Hi, will this item be shipped today ?  Hi, will this item be shipped today ?</div>
                         </a>
                     </li>
                     <li class="list-group-item">
                         <a href="#" class="list-link">
-                            <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/profile-picture.png')}}" >
                             <div class="text"><span class="name">Suranga Dinesh</span>
                             Hi, will this item be shipped today ?  Hi, will this item be shipped today ?</div>
                         </a>
@@ -35,35 +35,35 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <a href="#" class="list-link">
-                            <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/profile-picture.png')}}" >
                             <div class="text"><span class="name">Suranga Dinesh</span>
                             Hi, will this item be shipped today ?  Hi, will this item be shipped today ?</div>
                         </a>
                     </li>
                     <li class="list-group-item">
                         <a href="#" class="list-link">
-                            <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/profile-picture.png')}}" >
                             <div class="text"><span class="name">Suranga Dinesh</span>
                             Hi, will this item be shipped today ?  Hi, will this item be shipped today ?</div>
                         </a>
                     </li>
                     <li class="list-group-item">
                         <a href="#" class="list-link">
-                            <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/profile-picture.png')}}" >
                             <div class="text"><span class="name">Suranga Dinesh</span>
                             Hi, will this item be shipped today ?  Hi, will this item be shipped today ?</div>
                         </a>
                     </li>
                     <li class="list-group-item">
                         <a href="#" class="list-link">
-                            <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/profile-picture.png')}}" >
                             <div class="text"><span class="name">Suranga Dinesh</span>
                             Hi, will this item be shipped today ?  Hi, will this item be shipped today ?</div>
                         </a>
                     </li>
                     <li class="list-group-item">
                         <a href="#" class="list-link">
-                            <img src="{{url('images/mobile/home/profile-picture.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/profile-picture.png')}}" >
                             <div class="text"><span class="name">Suranga Dinesh</span>
                             Hi, will this item be shipped today ?  Hi, will this item be shipped today ?</div>
                         </a>

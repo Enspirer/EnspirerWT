@@ -78,15 +78,15 @@
                                                 <div class="channel-block">
                                                     <div class="icon">
                                                     @if($all_ims_pro_client_message->type == 'WhatsApp')
-                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" alt="">
+                                                        <img src="{{url('images/social_media_icons/whatsapp.png')}}" >
                                                     @elseif($all_ims_pro_client_message->type == 'Messenger')
-                                                        <img src="{{url('images/social_media_icons/messenger.png')}}" alt="" class="chat-client">
+                                                        <img src="{{url('images/social_media_icons/messenger.png')}}"  class="chat-client">
                                                     @elseif($all_ims_pro_client_message->type == 'Telegram')
-                                                        <img src="{{url('images/social_media_icons/telegram.png')}}" alt="" class="chat-client">
+                                                        <img src="{{url('images/social_media_icons/telegram.png')}}"  class="chat-client">
                                                     @elseif($all_ims_pro_client_message->type == 'Viber')
-                                                        <img src="{{url('images/social_media_icons/viber.png')}}" alt="" class="chat-client">
+                                                        <img src="{{url('images/social_media_icons/viber.png')}}"  class="chat-client">
                                                     @elseif($all_ims_pro_client_message->type == 'Line')
-                                                        <img src="{{url('images/social_media_icons/line.png')}}" alt="" class="chat-client">
+                                                        <img src="{{url('images/social_media_icons/line.png')}}"  class="chat-client">
                                                     @endif
                                                     </div>
                                                     <div class="name">{{$all_ims_pro_client_message->type}}</div>

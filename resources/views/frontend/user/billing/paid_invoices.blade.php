@@ -37,9 +37,9 @@
                         <div class="row">
                             <div class="col-3">
                                 @if($project->settings != null)
-                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" alt="" width="100%">
+                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}"  width="100%">
                                 @else
-                                    <img src="{{ url('img/no-image.jpg') }}" alt="" width="100%">
+                                    <img src="{{ url('img/no-image.jpg') }}"  width="100%">
                                 @endif
                             </div>
                             <div class="col-9">
@@ -66,9 +66,9 @@
                             <div class="body">
                                 <div class="image-block">
                                 @if($project->settings != null)
-                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" alt="" width="100%">
+                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}"  width="100%">
                                 @else
-                                    <img src="https://fakeimg.pl/250x100/" alt="" width="100%">
+                                    <img src="https://fakeimg.pl/250x100/"  width="100%">
                                 @endif
                                 </div>
                                 <div class="property-block">
@@ -81,11 +81,11 @@
                                     <div class="inner-block">
                                         <div class="image-block">
                                             @if($project->selected_package == 'All In One Widget + IMS Lite')
-                                                <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/widgetLite-icon.png')}}" >
                                             @elseif($project->selected_package == 'All In One Widget + IMS Pro')
-                                                <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/widgetPlus-icon.png')}}" >
                                             @elseif($project->selected_package == 'Optimizer')
-                                                <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/optimizer-icon.png')}}" >
                                             @endif
                                         </div>
                                         <div class="content-block">
@@ -138,7 +138,7 @@
 
                     <div class="ims__control-panel">
                         <div class="row g-0">
-                            <img src="{{url('images/dashboard/billing/no-data.png')}}" alt="" class="no-data-img">
+                            <img src="{{url('images/dashboard/billing/no-data.png')}}"  class="no-data-img">
                         </div>
                     </div>
                 @else

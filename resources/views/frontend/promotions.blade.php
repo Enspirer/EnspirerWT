@@ -30,7 +30,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
 					<div class="feature-block">
 						<div class="image-block">
 							<!-- <div class="label">Latest News</div> -->
-							<img src="{{uploaded_asset($post->feature_image)}}" alt="" class="feature-img">
+							<img src="{{uploaded_asset($post->feature_image)}}"  class="feature-img">
 						</div>
 						<div class="content-block">
 							<!-- <h2 class="title-light">Introducing</h2> -->
@@ -65,7 +65,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
 										<li class="splide__slide">
 											<div class="news-card">
 												<div class="image-block">
-													<img src="{{uploaded_asset($all_post->feature_image)}}" alt="" class="feature-img">
+													<img src="{{uploaded_asset($all_post->feature_image)}}"  class="feature-img">
 												</div>
 												<div class="content-block">
 													<div class="title">{{$post->title}}</div>

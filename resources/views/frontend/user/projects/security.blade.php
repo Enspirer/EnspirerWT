@@ -49,9 +49,9 @@
                                         <div class="content-block">
                                             <div class="image-block">
                                                 @if($project->settings == null)
-                                                    <img src="{{url('img/no-image.jpg')}}" alt="">
+                                                    <img src="{{url('img/no-image.jpg')}}" >
                                                 @else
-                                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" alt="">
+                                                    <img src="{{uploaded_asset(json_decode($project->settings)->logo)}}" >
                                                 @endif
                                             </div>
                                             <div class="content">
@@ -115,7 +115,7 @@
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" class="privacy-btn" >Request</a>
                                     </div>
                                     <div class="image-block">
-                                        <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                        <img src="{{url('images/dashboard/main/privacy.png')}}" >
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                                     <tbody>
                                         <!-- <tr>
                                             <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/success.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/icons/success.png')}}" >
                                             </td>
                                             <td class="text-col">
                                                 <div class="text">example@gmail.com</div>
@@ -151,7 +151,7 @@
                                         </tr>
                                         <tr>
                                             <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/warning.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/icons/warning.png')}}" >
                                             </td>
                                             <td class="text-col">
                                                 <div class="text">example@gmail.com</div>
@@ -167,7 +167,7 @@
                                                 @if($key == 'https_encryption' || $key == 'plaintext_email')                                            
                                                     <tr>
                                                         <td class="icon-col">
-                                                            <img src="{{url('images/dashboard/main/icons/success.png')}}" alt="">
+                                                            <img src="{{url('images/dashboard/main/icons/success.png')}}" >
                                                         </td>
                                                         <td class="text-col">
                                                             @if($key == 'https_encryption')
@@ -201,7 +201,7 @@
                                     <tbody>
                                         <!-- <tr>
                                             <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/sheild-success.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/icons/sheild-success.png')}}" >
                                             </td>
                                             <td class="text-col">
                                                 <div class="text">example@gmail.com</div>
@@ -213,7 +213,7 @@
                                         </tr>
                                         <tr>
                                             <td class="icon-col">
-                                                <img src="{{url('images/dashboard/main/icons/sheild-warning.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/icons/sheild-warning.png')}}" >
                                             </td>
                                             <td class="text-col">
                                                 <div class="text">example@gmail.com</div>
@@ -231,9 +231,9 @@
                                                             <tr>
                                                                 <td class="icon-col">
                                                                     @if($back->blacklisted == 0)
-                                                                        <img src="{{url('images/dashboard/main/icons/sheild-success.png')}}" alt="">
+                                                                        <img src="{{url('images/dashboard/main/icons/sheild-success.png')}}" >
                                                                     @else
-                                                                        <img src="{{url('images/dashboard/main/icons/sheild-danger.png')}}" alt="">
+                                                                        <img src="{{url('images/dashboard/main/icons/sheild-danger.png')}}" >
                                                                     @endif
                                                                 </td>
                                                                 <td class="text-col">
@@ -491,7 +491,7 @@
                                     <li class="splide__slide">
                                         <div class="silde-wrapper">
                                             <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/privacy.png')}}" >
                                             </div>
                                             <div class="content-block">
                                                 <div class="no">01</div>
@@ -504,7 +504,7 @@
                                     <li class="splide__slide">
                                         <div class="silde-wrapper">
                                             <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/privacy.png')}}" >
                                             </div>
                                             <div class="content-block">
                                                 <div class="no">01</div>
@@ -517,7 +517,7 @@
                                     <li class="splide__slide">
                                         <div class="silde-wrapper">
                                             <div class="image-block">
-                                                <img src="{{url('images/dashboard/main/privacy.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/privacy.png')}}" >
                                             </div>
                                             <div class="content-block">
                                                 <div class="no">01</div>
@@ -631,7 +631,7 @@
             <div class="modal-body">
                 <i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
                 <div class="image-block">
-                    <img src="{{url('images/landing_page/contact_us/success.png')}}" alt="">
+                    <img src="{{url('images/landing_page/contact_us/success.png')}}" >
                 </div>
                 <div class="content-block">
                     <div class="title">Success !</div>

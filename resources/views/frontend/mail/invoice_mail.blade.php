@@ -184,7 +184,7 @@
         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
           <tr>
             <td align="center" valign="top" style="padding: 36px 24px;">
-              <a href="https://tallentor.com/" target="_blank" style="display: inline-block;">
+              <a href="https://tallentor.com/" rel="noopener noreferrer" target="_blank" style="display: inline-block;">
                 <img src="{{public_path('images/logo/tallentor-logo.png')}}" alt="Logo" border="0" width="48" style="display: block; width: 48px; max-width: 48px; min-width: 48px;">
               </a>
             </td>

@@ -7,7 +7,7 @@
         @auth()
         <div class="dropdown mob-profile-drop">
           <button class="profile-drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="{{auth()->user()->picture}}" alt="">
+            <img src="{{auth()->user()->picture}}" >
           </button>
           <ul class="dropdown-menu dropdown-menu-end profile-drop-menu">
             <li>

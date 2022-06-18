@@ -16,7 +16,7 @@
         <div class="top-nav">
             <div class="inner-wrapper">
                 <div class="navs">
-                    <img src="{{url('images/mobile/home/hamburger.png')}}" alt="" data-bs-toggle="modal" data-bs-target="#mobileNav">
+                    <img src="{{url('images/mobile/home/hamburger.png')}}"  data-bs-toggle="modal" data-bs-target="#mobileNav">
                 </div>
                 
                 @auth
@@ -24,7 +24,7 @@
                         <a class="nav-link" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="profile">
                                 <div class="profile">
-                                    <img src="{{auth()->user()->picture}}" alt="">
+                                    <img src="{{auth()->user()->picture}}" >
                                 </div>                                        
                             </div>
                         </a>
@@ -57,33 +57,33 @@
                     <div class="ring ring-4"></div>
                     <div class="ring ring-5"></div>
                 </div>
-                <img src="{{url('images/mobile/home/radar.png')}}" alt="" class="indicator">
+                <img src="{{url('images/mobile/home/radar.png')}}"  class="indicator">
                 <div class="particles">
                     <div class="particle particle-1">
                         <div class="particle-indicator indicator-1"></div>
                         <div class="particle-label">
-                            <img src="{{url('images/mobile/home/RO.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/RO.png')}}" >
                             <div class="country">Country</div>
                         </div>
                     </div>
                     <div class="particle particle-2">
                         <div class="particle-indicator indicator-2"></div>
                         <div class="particle-label">
-                            <img src="{{url('images/mobile/home/RO.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/RO.png')}}" >
                             <div class="country">Country</div>
                         </div>
                     </div>
                     <div class="particle particle-3">
                         <div class="particle-indicator indicator-3"></div>
                         <div class="particle-label">
-                            <img src="{{url('images/mobile/home/RO.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/RO.png')}}" >
                             <div class="country">Country</div>
                         </div>
                     </div>
                     <div class="particle particle-4">
                         <div class="particle-indicator indicator-4"></div>
                         <div class="particle-label">
-                            <img src="{{url('images/mobile/home/RO.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/RO.png')}}" >
                             <div class="country">Country</div>
                         </div>
                     </div>

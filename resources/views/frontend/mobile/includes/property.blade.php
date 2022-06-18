@@ -17,16 +17,16 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="property">
                                 @if(get_seo_result($project_id)->favicon->value == null)
-                                    <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                    <img src="{{url('images/mobile/home/property-image.png')}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                 @else
-                                    <img src="{{get_seo_result($project_id)->favicon->value}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                    <img src="{{get_seo_result($project_id)->favicon->value}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                 @endif
                                 <div class="content">
                                     <div class="title">{{\App\Models\Projects::where('id',$project_id)->first()->name}}</div>
                                     <div class="address">{{\App\Models\Projects::where('id',$project_id)->first()->url}}</div>
                                 </div>
                             </div>
-                            <img src="{{url('images/mobile/home/chevron-down.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/chevron-down.png')}}" >
                         </a>
                     @else
                         <a class="property-dropdown" href="#" role="button" id="propertyDrop"
@@ -36,7 +36,7 @@
                                     <div class="title">Select Your Project</div>
                                 </div>
                             </div>
-                            <img src="{{url('images/mobile/home/chevron-down.png')}}" alt="">
+                            <img src="{{url('images/mobile/home/chevron-down.png')}}" >
                         </a>                            
                     @endif
 
@@ -50,9 +50,9 @@
                                     <div class="property">
                                         @if(get_seo_result($project->id) != null)
                                             @if(get_seo_result($project->id)->favicon->value == null)
-                                                <img src="{{url('images/mobile/home/property-image.png')}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                                <img src="{{url('images/mobile/home/property-image.png')}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                             @else
-                                                <img src="{{get_seo_result($project->id)->favicon->value}}" alt="" class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
+                                                <img src="{{get_seo_result($project->id)->favicon->value}}"  class="property-image" onerror="this.src='{{url('globeicon.png')}}';">
                                             @endif
                                         @endif
                                         <div class="content">
@@ -71,7 +71,7 @@
         </div>
         <div class="filter">
             <a class="datepicker" href="#">
-                <img src="{{url('images/mobile/home/calender.png')}}" alt="">
+                <img src="{{url('images/mobile/home/calender.png')}}" >
                 <input type="text" name="date-filter" class="filter-date-input">
             </a>
         </div>

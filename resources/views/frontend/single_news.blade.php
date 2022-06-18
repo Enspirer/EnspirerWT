@@ -11,7 +11,7 @@
 <div class="section-singleNews">
     <div class="container">
         <div class="inner-wrapper">
-            <img src="{{uploaded_asset($post_details->feature_image)}}" alt="" class="feature-img">
+            <img src="{{uploaded_asset($post_details->feature_image)}}"  class="feature-img">
             <div class="content-block">
                 <!-- <h2 class="title-light">Introducing</h2> -->
                 <h2 class="title">{{$post_details->title}}</h2>

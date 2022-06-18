@@ -50,7 +50,7 @@
                                             @for ($i = 1; $i <= $bot_count; $i++)                                            
                                                 <div class="bot-item">
                                                     <div class="image-block">
-                                                        <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
+                                                        <img src="{{url('images/dashboard/main/bot-icon.png')}}" >
                                                     </div>
                                                     <div class="content">
                                                         <div class="title">{{App\Models\SeoBot::where('project_id',$project_id)->first()->bot_type}}</div>
@@ -82,7 +82,7 @@
 
                                         <div class="project-card">
                                             <div class="header">
-                                                <img src="{{url('images/dashboard/main/bot-icon.png')}}" alt="">
+                                                <img src="{{url('images/dashboard/main/bot-icon.png')}}" >
                                                 <div class="title">{{App\Models\SeoBot::where('project_id',$project_id)->first()->bot_type}}</div>
                                                 <div class="bot-no">01</div>
                                             </div>

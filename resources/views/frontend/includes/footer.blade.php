@@ -5,7 +5,7 @@
                     <div class="links">
                         <div class="header">
                             <a href="{{url('/')}}" rel="noopener noreferrer">
-                            <img src="{{url('images/logo/tallentor-digital.svg')}}" alt="">
+                            <img src="{{url('images/logo/tallentor-digital.svg')}}" >
                             </a>
                         </div>
                         <div class="body">
@@ -63,15 +63,15 @@
                         <div class="footer">
                             <div class="social-media">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item"><a href="https://www.facebook.com/tallentor/" class="nav-link" target="_blank"><i class="bi bi-facebook"></i></a>
+                                    <li class="nav-item"><a href="https://www.facebook.com/tallentor/" class="nav-link" rel="noopener noreferrer" target="_blank"><i class="bi bi-facebook"></i></a>
                                     </li>
-                                    <li class="nav-item"><a href="https://www.linkedin.com/company/tallentor/ " class="nav-link" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                    <li class="nav-item"><a href="https://www.linkedin.com/company/tallentor/ " class="nav-link" rel="noopener noreferrer" target="_blank"><i class="bi bi-linkedin"></i></a>
                                     </li>
-                                    <li class="nav-item"><a href="https://www.youtube.com/channel/UCwJgWOtpffBLBbYCgGtieVw" class="nav-link" target="_blank"><i class="bi bi-youtube"></i></a>
+                                    <li class="nav-item"><a href="https://www.youtube.com/channel/UCwJgWOtpffBLBbYCgGtieVw" class="nav-link" rel="noopener noreferrer" target="_blank"><i class="bi bi-youtube"></i></a>
                                     </li>
-                                    <li class="nav-item"><a href="https://www.instagram.com/tallentor/" class="nav-link" target="_blank"><i class="bi bi-instagram"></i></a>
+                                    <li class="nav-item"><a href="https://www.instagram.com/tallentor/" class="nav-link" rel="noopener noreferrer" target="_blank"><i class="bi bi-instagram"></i></a>
                                     </li>
-                                    <li class="nav-item"><a href="https://twitter.com/tallentor" class="nav-link" target="_blank"><i class="bi bi-twitter"></i></a>
+                                    <li class="nav-item"><a href="https://twitter.com/tallentor" class="nav-link" rel="noopener noreferrer" target="_blank"><i class="bi bi-twitter"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -81,8 +81,8 @@
                 <div class="col-3">
                     <div class="contact-info">
                         <div class="header">
-                            <a href="https://web.whatsapp.com/send?phone=94760939990" target="_blank">
-                                <img src="{{url('images/landing_page/home/phone-icon.png')}}" alt="">
+                            <a href="https://web.whatsapp.com/send?phone=94760939990" rel="noopener noreferrer" target="_blank">
+                                <img src="{{url('images/landing_page/home/phone-icon.png')}}" >
                                 <div class="title">Let's Talk</div>
                             </a>
                         </div>

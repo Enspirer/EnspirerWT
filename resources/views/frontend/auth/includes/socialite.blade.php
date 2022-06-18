@@ -5,20 +5,20 @@
 @if (config('services.facebook.active'))
     <a href="{{ route('frontend.auth.social.login', 'facebook') }}" class="social-signup-btn">
         <img src="{{url('images/fb.png')}}"
-             alt="">
+             >
     </a>
 @endif
 
 @if (config('services.google.active'))
     <a href="{{ route('frontend.auth.social.login', 'google') }}" class="social-signup-btn">
-        <img src="{{url('images/google.png')}}" alt="">
+        <img src="{{url('images/google.png')}}" >
     </a>
 @endif
 
 @if (config('services.github.active'))
     <a href="{{ route('frontend.auth.social.login', 'github') }}" class="social-signup-btn">
         <img src="{{url('images/github.png')}}"
-             alt="">
+             >
     </a>
 @endif
 
