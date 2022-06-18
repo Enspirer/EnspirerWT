@@ -61,6 +61,12 @@ class Handler extends ExceptionHandler
                 ->withFlashDanger(__('auth.general_error'));
         }
 
+        if ($exception instanceof TestingHttpException) {
+            return response()->view('frontend.not_found');
+        }
+
+
+
         return parent::render($request, $exception);
     }
 

@@ -27,6 +27,7 @@ use Session;
 use URL;
 use Redirect;
 use DB;
+use Stripe;
 class PaymentController extends Controller
 {
     private $_api_context;
@@ -579,8 +580,20 @@ class PaymentController extends Controller
             ]);
             return redirect()->route('frontend.user.view_custom_invoice',$id)->with('message', 'IT WORKS!');;
         }
+    }
 
+    function custom_payment_stripe(Request $request)
+    {
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        Stripe\Charge::create ([
+            "amount" => 100 * 100,
+            "currency" => "usd",
+            "source" => $request->stripeToken,
+            "description" => "Test payment from itsolutionstuff.com."
+        ]);
 
+        Session::flash('success', 'Payment successful!');
 
+        return back();
     }
 }
