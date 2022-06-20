@@ -4,7 +4,7 @@
             <div class="mobile-brand">
                 <img src="{{url('images/logo/tallentor-digital.svg')}}" >
             </div>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{url('/')}}">
                 <img src="{{url('images/logo/tallentor-digital.svg')}}" >
             </a>
             <ul class="navbar-nav">
