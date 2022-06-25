@@ -8,6 +8,7 @@
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 
     <section class="hero-section home">
         <div class="container">
@@ -16,7 +17,7 @@
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <div class="header">
-                            <div class="title">Empower your brand with the innovative Digital Marketing <br> ideas , strategies, solutions</div>
+                            <div class="title">Empower your brand with the innovative <br class="des-br"> Digital Marketing <br class="mob-br"> <span class="typer" data-words="ideas,strategies,solutions" data-colors="#fff" data-delay="100" data-deleteDelay="1000"></span></div>
                             <p>Digital Marketing in the UAE <br>At it’s Best</p>
                             </div>
                             <div class="slide-wrapper">
