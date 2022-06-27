@@ -18,7 +18,6 @@
                         <li class="splide__slide">
                             <div class="header">
                             <div class="title">Empower your brand with the innovative <br class="des-br"> Digital Marketing <br class="mob-br"> <span class="typer" data-words="ideas,strategies,solutions" data-colors="#fff" data-delay="100" data-deleteDelay="1000"></span></div>
-                            <p>Digital Marketing in the UAE <br>At it’s Best</p>
                             </div>
                             <div class="slide-wrapper">
                                 <div class="content-block">
