@@ -18,11 +18,11 @@
         <title>@yield('title', app_name())</title>
         <meta name="description" content="@yield('meta_description', 'Tallentor ')">
         <meta name="author" content="@yield('meta_author', 'Tallentor Development Team')">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{url('images/logo/fev/apple-touch-icon.png')}}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{url('images/logo/fev/favicon-32x32.png')}}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{url('images/logo/fev/favicon-16x16.png')}}">
-        <link rel="manifest" href="{{url('images/logo/fev/site.webmanifest')}}">
-        <link rel="mask-icon" href="{{url('images/logo/fev/safari-pinned-tab.svg')}}" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{url('images/fev/apple-touch-icon.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{url('images/fev/favicon-32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{url('images/fev/favicon-16x16.png')}}">
+        <link rel="manifest" href="{{url('images/fev/site.webmanifest')}}">
+        <link rel="mask-icon" href="{{url('images/fev/safari-pinned-tab.svg')}}" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         @yield('meta')

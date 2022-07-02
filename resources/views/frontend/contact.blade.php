@@ -19,7 +19,7 @@
                 </div>                
                 <div class="title">Tallentor International</div>
                 <div class="address">B2, 202, Jumeirah village circle, <br>Dubai.<span>UAE</span></div>
-                <a href="tel:+971583017648" class="phone">+971 58 301 7648</a>
+                <a href="tel:+971503743699" class="phone">+971 50 374 3699</a>
                 <a href="mailto:dubai@tallentor.com" class="email">dubai@tallentor.com</a>
             </div>
             <div class="branch-card">
