@@ -91,7 +91,7 @@
                                 <div class="image-block"><i class="bi bi-envelope-check"></i></div>
                                 <div class="content">
                                     <div class="title">Sales Inquiries</div>
-                                    <a href="mailto:hello@tallentor.com" class="email">sales@tallentor.com</a>
+                                    <a href="mailto:hello@tallentordigital.com" class="email">sales@tallentordigital.com</a>
                                 </div>
                             </div>
                             <div class="media">
@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="title">General Inquiries</div>
-                                    <a href="mailto:hello@tallentor.com" class="email">hello@tallentor.com</a>
+                                    <a href="mailto:hello@tallentordigital.com" class="email">hello@tallentordigital.com</a>
                                 </div>
                             </div>
                         </div>

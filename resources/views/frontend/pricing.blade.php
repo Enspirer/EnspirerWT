@@ -14,7 +14,7 @@ Whatsapp chat widget to improve user engagement with inquiry management system')
 
 <div class="pricing-section my-5">
     <div class="header">
-        <h2 class="title">Best Plans For Your Business</h2>
+        <h2 class="title">Choose the best WhatsApp widget for your business</h2>
         <div class="subtitle">Cost-Effective, Full Service, High Security</div>
     </div>
     <div class="content">

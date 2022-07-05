@@ -71,8 +71,8 @@
 }
 
 .hero-section .header .title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 600;
     color: white;
     margin-bottom: 1rem;
 }
@@ -799,12 +799,7 @@
     flex-wrap: wrap;
 }
 
-.marketplace-section
-    .inner-wrapper
-    .card-block
-    .wrapper
-    .card-section
-    .market-card {
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card {
     flex: 0 0 50%;
     box-shadow: 0 0 1px #00aeef;
     border: 2px solid #fff;
@@ -813,97 +808,43 @@
 }
 
 @media (hover: hover) {
-    .marketplace-section
-        .inner-wrapper
-        .card-block
-        .wrapper
-        .card-section
-        .market-card:hover {
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover {
         background-color: #00aeef;
         border: 2px solid #fff;
         border-radius: 8px;
         box-shadow: 2px 2px 8px #00aeef;
     }
 
-    .marketplace-section
-        .inner-wrapper
-        .card-block
-        .wrapper
-        .card-section
-        .market-card:nth-child(odd):hover {
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:nth-child(odd):hover {
         transform: scale(1.1) rotateZ(-10deg);
     }
 
-    .marketplace-section
-        .inner-wrapper
-        .card-block
-        .wrapper
-        .card-section
-        .market-card:nth-child(even):hover {
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:nth-child(even):hover {
         transform: scale(1.1) rotateZ(10deg);
     }
 
-    .marketplace-section
-        .inner-wrapper
-        .card-block
-        .wrapper
-        .card-section
-        .market-card:nth-child(odd):hover
-        .card-wrapper {
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:nth-child(odd):hover .card-wrapper {
         transform: rotateZ(10deg);
     }
 
-    .marketplace-section
-        .inner-wrapper
-        .card-block
-        .wrapper
-        .card-section
-        .market-card:nth-child(even):hover
-        .card-wrapper {
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:nth-child(even):hover .card-wrapper {
         transform: rotateZ(-10deg);
     }
 
-    .marketplace-section
-        .inner-wrapper
-        .card-block
-        .wrapper
-        .card-section
-        .market-card:hover
-        .card-wrapper
-        img {
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper img {
         filter: invert(1);
     }
 
-    .marketplace-section
-        .inner-wrapper
-        .card-block
-        .wrapper
-        .card-section
-        .market-card:hover
-        .card-wrapper
-        .title {
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper .title {
         color: white;
     }
 
-    .marketplace-section
-        .inner-wrapper
-        .card-block
-        .wrapper
-        .card-section
-        .market-card:hover
-        .card-wrapper
-        p {
+    .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card:hover .card-wrapper p {
         color: white;
     }
 }
 
-.marketplace-section
-    .inner-wrapper
-    .card-block
-    .wrapper
-    .card-section
-    .market-card
-    a {
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card a {
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -912,58 +853,31 @@
     height: 100%;
 }
 
-.marketplace-section
-    .inner-wrapper
-    .card-block
-    .wrapper
-    .card-section
-    .market-card
-    .card-wrapper {
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card .card-wrapper {
     text-align: center;
     text-decoration: none;
     padding: 1rem;
 }
 
-.marketplace-section
-    .inner-wrapper
-    .card-block
-    .wrapper
-    .card-section
-    .market-card
-    .card-wrapper
-    img {
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card .card-wrapper img {
     width: 35px;
 }
 
-.marketplace-section
-    .inner-wrapper
-    .card-block
-    .wrapper
-    .card-section
-    .market-card
-    .card-wrapper
-    .title {
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card .card-wrapper .title {
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0.5rem 0 0.75rem;
     color: #333;
 }
 
-.marketplace-section
-    .inner-wrapper
-    .card-block
-    .wrapper
-    .card-section
-    .market-card
-    .card-wrapper
-    p {
+.marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card .card-wrapper p {
     font-size: 0.9rem;
     font-weight: 300;
     color: #333;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     padding: 0;
 }
@@ -1009,12 +923,7 @@
     justify-content: space-between;
 }
 
-.marketplace-section
-    .inner-wrapper
-    .card-block
-    .card
-    .icon-block
-    .bi-check-circle-fill {
+.marketplace-section .inner-wrapper .card-block .card .icon-block .bi-check-circle-fill {
     color: #017ffa;
 }
 
@@ -1132,29 +1041,12 @@
     margin-bottom: 10px;
 }
 
-.shop-section
-    .slider
-    .splide
-    .splide__slide
-    a
-    .card
-    .content
-    .text
-    .list-block {
+.shop-section .slider .splide .splide__slide a .card .content .text .list-block {
     list-style: none;
     position: relative;
 }
 
-.shop-section
-    .slider
-    .splide
-    .splide__slide
-    a
-    .card
-    .content
-    .text
-    .list-block
-    .bi {
+.shop-section .slider .splide .splide__slide a .card .content .text .list-block .bi {
     color: #00aeef;
     position: relative;
     left: -20px;
@@ -1177,15 +1069,7 @@
     color: #f6a01c;
 }
 
-.shop-section
-    .slider
-    .splide
-    .splide__slide
-    a
-    .card
-    .content
-    .rating
-    .precentage {
+.shop-section .slider .splide .splide__slide a .card .content .rating .precentage {
     font-size: 12px;
     color: #f6a01c;
 }
@@ -1333,6 +1217,10 @@
     -webkit-box-orient: vertical;
 }
 
+.news-section .inner-wrapper .card .content-block .text p {
+    margin: 0;
+}
+
 .news-section .inner-wrapper .card .content-block .footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1366,36 +1254,13 @@
 }
 
 .news-section .inner-wrapper .card .content-block .footer .reactions .likes a,
-.news-section
-    .inner-wrapper
-    .card
-    .content-block
-    .footer
-    .reactions
-    .comments
-    a {
+.news-section .inner-wrapper .card .content-block .footer .reactions .comments a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.32);
 }
 
-.news-section
-    .inner-wrapper
-    .card
-    .content-block
-    .footer
-    .reactions
-    .likes
-    a
-    .bi,
-.news-section
-    .inner-wrapper
-    .card
-    .content-block
-    .footer
-    .reactions
-    .comments
-    a
-    .bi {
+.news-section .inner-wrapper .card .content-block .footer .reactions .likes a .bi,
+.news-section .inner-wrapper .card .content-block .footer .reactions .comments a .bi {
     margin-right: 15px;
 }
 
@@ -1454,11 +1319,7 @@
         transform: translate(0, -50%);
     }
 
-    .marketplace-section
-        .inner-wrapper
-        .card-block
-        .card
-        .bi-check-circle-fill {
+    .marketplace-section .inner-wrapper .card-block .card .bi-check-circle-fill {
         color: #017ffa;
     }
 
@@ -1510,6 +1371,7 @@
         align-items: center;
         gap: 2rem;
         margin: 0 0 40px;
+        padding: 0 0 5rem;
     }
 
     .marketplace-section .inner-wrapper .card-block .card {
@@ -1614,6 +1476,10 @@
     .hero-section .slide-wrapper .image-block .tile.tile-4 {
         right: 6%;
     }
+
+    .hero-section .header .title .des-br {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1648,9 +1514,6 @@
         height: 145px;
     }
 
-    .hero-section .header .title .des-br {
-        display: none;
-    }
     .hero-section .header .title .mob-br {
         display: block;
     }
@@ -1720,11 +1583,9 @@
 }
 
 .hero-section.home {
-    background: linear-gradient(
-            to bottom,
+    background: linear-gradient(to bottom,
             rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.5)
-        ),
+            rgba(0, 0, 0, 0.5)),
         url(../images/landing_page/home/hero_slides/hero.jpg);
     background-position: center;
     background-size: cover;
@@ -1804,6 +1665,10 @@
 @media screen and (max-width: 507px) {
     .hero-section .header .title {
         height: 192px;
+    }
+
+    .hero-section .header .title {
+        font-size: 1.25rem;
     }
 }
 

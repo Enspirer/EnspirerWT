@@ -322,21 +322,13 @@
 }
 
 .section-categories .card .inner-wrapper .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
     height: 100%;
     position: relative;
+    justify-content: flex-start;
+    gap: 2rem;
 }
 
 .section-categories .card .inner-wrapper .content .icon-block {
@@ -367,6 +359,7 @@
 .section-categories .card .inner-wrapper .content .resources {
     font-size: 12px;
     font-weight: 300;
+    display: none;
 }
 
 .section-categories .card .inner-wrapper .content .resources span {

@@ -38,7 +38,7 @@
                 </div>                
                 <div class="title">Tallentor International</div>
                 <div class="address">35 Melbourne Avenue <br>London W13 9BX,<span>UK</span></div>
-                <a href="tel:+447741025138" class="phone">+44 774 102 5138</a>
+                <!-- <a href="tel:+447741025138" class="phone">+44 774 102 5138</a> -->
                 <a href="mailto:uk@tallentor.com" class="email">uk@tallentor.com</a>
             </div>
         </div>
@@ -103,9 +103,9 @@
                         </a>
                     </div>
                     <div class="social email">
-                        <a href="mailto:hello@tallentor.com" class="contact-link">
+                        <a href="mailto:hello@tallentordigital.com" class="contact-link">
                             <img src="{{url('images/contact-us/email (2).png')}}" >
-                            <div class="text">hello@tallentor.com</div>
+                            <div class="text">hello@tallentordigital.com</div>
                         </a>
                     </div>
                     <img src="{{url('images/landing_page/contact_us/contact_background.png')}}"  class="background-img">
@@ -132,7 +132,7 @@
                                 </div>
                                 <h5 class="title">Sales Inquires</h5>
                                 <p class="text">Product information and Corporate inquiries</p>
-                                <a href="mailto:sales@tallentor.com" class="contact">sales@tallentor.com</a>
+                                <a href="mailto:sales@tallentordigital.com" class="contact">sales@tallentordigital.com</a>
                             </div>
                         </li>
                         <li class="splide__slide">
@@ -146,7 +146,7 @@
                                 </div>
                                 <h5 class="title">Billing</h5>
                                 <p class="text">Account information and bulk purchases</p>
-                                <a href="mailto:billing@tallentor.com" class="contact">billing@tallentor.com</a>
+                                <a href="mailto:billing@tallentordigital.com" class="contact">billing@tallentordigital.com</a>
                             </div>
                         </li>
                         <li class="splide__slide">
@@ -160,7 +160,7 @@
                                 </div>
                                 <h5 class="title">Support</h5>
                                 <p class="text">Technical support and assistance with installations</p>
-                                <a href="mailto:support@tallentor.com" class="contact">support@tallentor.com</a>
+                                <a href="mailto:support@tallentordigital.com" class="contact">support@tallentordigital.com</a>
                             </div>
                         </li>
                         <li class="splide__slide">
@@ -174,7 +174,7 @@
                                 </div>
                                 <h5 class="title">Partnership</h5>
                                 <p class="text">Become a partner in your region with Tallentor</p>
-                                <a href="mailto:partner@tallentor.com" class="contact">partner@tallentor.com</a>
+                                <a href="mailto:partner@tallentordigital.com" class="contact">partner@tallentordigital.com</a>
                             </div>
                         </li>
                     </ul>

@@ -106,78 +106,78 @@
         </div>
     </section>
 
-<section class="marketplace-section">
-    <div class="container">
-        <div class="inner-wrapper">
-            <div class="button-block">
-                <div class="content">
-                    <h1 class="title">The leading <br> Digital Marketing Agency <br> in the UAE!</h1>
+    <section class="marketplace-section">
+        <div class="container">
+            <div class="inner-wrapper">
+                <div class="button-block">
+                    <div class="content">
+                        <h1 class="title">Digital Marketing <br> in the UAE, <br> at it’s Best</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="card-block">
-                <div class="wrapper">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium ullam magnam optio, veritatis impedit officia sed, aliquam et est exercitationem eum recusandae suscipit ducimus incidunt itaque similique totam libero, commodi sit consequatur pariatur magni odit. Consectetur dicta enim, cupiditate officiis excepturi laudantium ipsa aliquid voluptatibus unde voluptatem minima iure?</p>
-                    <div class="card-section">
-                        <div class="market-card">
-                            <a href="#">
-                                <div class="card-wrapper">
-                                    <img src="{{url('images/landing_page/home/market-1.png')}}"  class="card-img">
-                                    <div class="title">Digital Marketing</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="market-card">
-                            <a href="#">
-                                <div class="card-wrapper">
-                                    <img src="{{url('images/landing_page/home/market-2.png')}}"  class="card-img">
-                                    <div class="title">Software Development</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="market-card">
-                            <a href="#">
-                                <div class="card-wrapper">
-                                    <img src="{{url('images/landing_page/home/market-3.png')}}"  class="card-img">
-                                    <div class="title">Mobile App Development</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="market-card">
-                            <a href="#">
-                                <div class="card-wrapper">
-                                    <img src="{{url('images/landing_page/home/market-4.png')}}"  class="card-img">
-                                    <div class="title">Web Application Development</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="market-card">
-                            <a href="#">
-                                <div class="card-wrapper">
-                                    <img src="{{url('images/landing_page/home/market-5.png')}}"  class="card-img">
-                                    <div class="title">Whatsapp Widget</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="market-card">
-                            <a href="#">
-                                <div class="card-wrapper">
-                                    <img src="{{url('images/landing_page/home/market-6.png')}}"  class="card-img">
-                                    <div class="title">Web Optimizer app</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus laborum, amet commodi sequi quasi?</p>
-                                </div>
-                            </a>
+                <div class="card-block">
+                    <div class="wrapper">
+                        <p>Building a new brand or enhancing the existing customer base of a business is extremely challenging in competitive industries. With  creatively crafted and wisely selected strategies any business can thrive in the digital space. <br><br> Our trained specialists will make sure they understand your business  goals precisely and  Advise you with the best digital plan, from developing your website or mobile app, Social media marketing, SEO services, and lead generation campaigns with the best possible growth of your business.</p>
+                        <div class="card-section">
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-1.png')}}"  class="card-img">
+                                        <div class="title">Digital Marketing</div>
+                                        <p>For any business to thrive in modern digital world, needs an exceptional digital strategy.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-2.png')}}"  class="card-img">
+                                        <div class="title">Software Development</div>
+                                        <p>Fully customized web based software to cater specific needs of your business</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-3.png')}}"  class="card-img">
+                                        <div class="title">Mobile App Development</div>
+                                        <p>Custom mobile apps and IoT solutions to interact customers with your services.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-4.png')}}"  class="card-img">
+                                        <div class="title">Web Application Development</div>
+                                        <p>From eCommerce solutions to comprehensive web portals to manage complex business needs</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-5.png')}}"  class="card-img">
+                                        <div class="title">Whatsapp Widget</div>
+                                        <p>Integrate whatsapp chat to your website with inquiry management system for effective communication</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="market-card">
+                                <a href="#">
+                                    <div class="card-wrapper">
+                                        <img src="{{url('images/landing_page/home/market-6.png')}}"  class="card-img">
+                                        <div class="title">Web Optimizer app</div>
+                                        <p>Monitor and enhance the performance of your website with powerful optimizer app</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <section class="feature-section">
