@@ -48,7 +48,10 @@
                     <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Team Tallentor</p>
                   </td>
                 </tr>
-                <hr>
+                <td style="padding:0 0 10px 0;color:#153643;" align="left">
+                  <hr>
+                  <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><b>Your Message</b></p>
+                </td> 
                 <tr>
                   <td style="padding:0;">
                     <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
