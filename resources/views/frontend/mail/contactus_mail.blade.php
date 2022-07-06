@@ -32,11 +32,11 @@
             <td style="padding:36px 30px 42px 30px;">
               <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                 <tr>
-                  <td style="padding:0 0 20px 0;color:#153643;" align="left">
-                    <h1 style="font-size:20px;margin:0 0 20px 0;font-family:Arial,sans-serif;">Tallentor Digital - Contact Us</h1>
+                  <td style="padding:0 0 10px 0;color:#153643;" align="left">
+                    <h1 style="font-size:20px;margin:0 0 10px 0;font-family:Arial,sans-serif;">Tallentor Digital - Contact Us</h1>
                   </td>
-                  <td style="padding:0 0 20px 0;color:#153643;" align="right">
-                    <img src="{{url('images/logo/fev/tallentor_digital.png')}}" style="max-width:100px; margin:0 0 20px 0;">                    
+                  <td style="padding:0 0 10px 0;color:#153643;" align="right">
+                    <img src="{{url('images/logo/fev/tallentor_digital.png')}}" style="max-width:100px; margin:0 0 10px 0;">                    
                   </td>
                 </tr>
                 <tr>
@@ -84,9 +84,9 @@
               <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;font-family:Arial,sans-serif;">
                 <tr>
                   <td style="padding:0;width:50%;" align="center">
-                    <p style="margin:0;font-size:20px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff; text-decoration:none!important;">
+                    <h6 style="margin:0;font-size:20px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff; text-decoration:none!important;">
                         www.tallentordigital.com
-                    </p>
+                    </h6>
                   </td>
                   <!-- <td style="padding:0;width:50%;" align="right">
                     <table role="presentation" style="border-collapse:collapse;border:0;border-spacing:0;">
