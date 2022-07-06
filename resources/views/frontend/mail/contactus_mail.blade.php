@@ -48,9 +48,9 @@
                     <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Team Tallentor</p>
                   </td>
                 </tr>
-                <tr style="border-top: 5px solid #101E40;">
+                <tr style="border-top: 4px solid #101E40;">
                   <td style="padding:0 0 10px 0;color:#153643;" align="left">
-                    <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><b>Your Message</b></p>
+                    <p style="padding: 0.5rem 0; color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><b>Your Message</b></p>
                   </td> 
                 </tr>
                 <tr>
