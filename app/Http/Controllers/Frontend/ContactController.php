@@ -61,7 +61,7 @@ class ContactController extends Controller
             'message' => $request->inquiry
         ];
 
-        \Mail::to([$request->email,'md@tallentor.com'])->send(new ContactUsMail($details));
+        \Mail::to([$request->email,'hello@tallentordigital.com'])->send(new ContactUsMail($details));
        
         // session()->flash('message','Thanks!');
 
