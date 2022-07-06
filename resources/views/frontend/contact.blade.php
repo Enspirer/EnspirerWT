@@ -72,7 +72,7 @@
                         <textarea class="form-control" name="inquiry" placeholder="Your Inquiry" required></textarea>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" name="help" placeholder="How can we help you ?" required>
+                        <input type="text" class="form-control" name="help" placeholder="How can we help you ?">
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" id="tick" class="form-check-input">

@@ -32,18 +32,26 @@
             <td style="padding:36px 30px 42px 30px;">
               <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                 <tr>
-                  <td style="padding:0 0 30px 0;color:#153643;" align="left">
-                    <h1 style="font-size:20px;margin:0 0 20px 0;font-family:Arial,sans-serif;">Tallentor - Contact Us</h1>
+                  <td style="padding:0 0 10px 0;color:#153643;" align="left">
+                    <h1 style="font-size:20px;margin:0 0 10px 0;font-family:Arial,sans-serif;">Tallentor Digital - Contact Us</h1>
                   </td>
-                  <td style="padding:0 0 30px 0;color:#153643;" align="right">
-                    <img src="{{url('images/logo/fev/apple-touch-icon.png')}}" style="max-width:60px; margin:0 0 20px 0;">                    
+                  <td style="padding:0 0 10px 0;color:#153643;" align="right">
+                    <img src="{{url('images/logo/fev/tallentor_digital.png')}}" style="max-width:100px; margin:0 0 10px 0;">                    
                   </td>
                 </tr>
                 <tr>
                   <td style="padding:0 0 30px 0;color:#153643;">
                     <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Dear {{ $details['name'] }},</p>
-                    <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">We appreciate you contacting us. One of our member will get back in touch with you soon! Have a great day!</p>
+                    <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Thank you for contacting Tallentor Digital.</p>
+                    <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">One of our team members will get in touch with you shortly.</p>
+                    <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Regards,</p>
+                    <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Team Tallentor</p>
                   </td>
+                </tr>
+                <tr style="border-top: 3px solid #101E40;">
+                  <td style="padding:0 0 10px 0;color:#153643;" align="left">
+                    <p style="padding: 0.6rem 0; color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><b>Your Message</b></p>
+                  </td> 
                 </tr>
                 <tr>
                   <td style="padding:0;">
@@ -53,7 +61,9 @@
                           <!-- <p style="margin:0 0 25px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><img src="https://assets.codepen.io/210284/left.gif"  width="260" style="height:auto;display:block;" /></p> -->
                           <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Name:</p>
                           <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Email Address:</p>
-                          <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Help:</p>
+                          @if($details['help'] != null)
+                            <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Help:</p>
+                          @endif
                           <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Inquiry:</p>
                           <!-- <p style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><a href="http://www.example.com" style="color:#ee4c50;text-decoration:underline;">Blandit ipsum volutpat sed</a></p> -->
                         </td>
@@ -61,7 +71,9 @@
                           <!-- <p style="margin:0 0 25px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><img src="https://assets.codepen.io/210284/right.gif"  width="260" style="height:auto;display:block;" /></p> -->
                           <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">{{ $details['name'] }}</p>
                           <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">{{ $details['email'] }}</p>
-                          <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">{{ $details['help'] }}</p>
+                          @if($details['help'] != null)
+                            <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">{{ $details['help'] }}</p>
+                          @endif
                           <p style="color: black; margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">{{ $details['message'] }}</p>
                           <!-- <p style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><a href="http://www.example.com" style="color:#ee4c50;text-decoration:underline;">In tempus felis blandit</a></p> -->
                         </td>
@@ -77,9 +89,7 @@
               <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;font-family:Arial,sans-serif;">
                 <tr>
                   <td style="padding:0;width:50%;" align="center">
-                    <p style="margin:0;font-size:20px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff;">
-                        Tallentor - Contact Us &reg;
-                    </p>
+                      <a href="www.tallentordigital.com" style="margin:0;font-size:20px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff; text-decoration:none!important;">www.tallentordigital.com</a>
                   </td>
                   <!-- <td style="padding:0;width:50%;" align="right">
                     <table role="presentation" style="border-collapse:collapse;border:0;border-spacing:0;">
