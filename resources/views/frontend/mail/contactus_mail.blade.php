@@ -84,9 +84,7 @@
               <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;font-family:Arial,sans-serif;">
                 <tr>
                   <td style="padding:0;width:50%;" align="center">
-                    <h6 style="margin:0;font-size:20px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff; text-decoration:none!important;">
-                        www.tallentordigital.com
-                    </h6>
+                      <a href="www.tallentordigital.com" style="margin:0;font-size:20px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff; text-decoration:none!important;">www.tallentordigital.com</a>
                   </td>
                   <!-- <td style="padding:0;width:50%;" align="right">
                     <table role="presentation" style="border-collapse:collapse;border:0;border-spacing:0;">
