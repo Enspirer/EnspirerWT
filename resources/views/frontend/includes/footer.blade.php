@@ -63,7 +63,7 @@
                         <div class="footer">
                             <div class="social-media">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item"><a href="https://www.facebook.com/tallentor/" class="nav-link" rel="noopener noreferrer" target="_blank"><i class="bi bi-facebook"></i></a>
+                                    <li class="nav-item"><a href="https://www.facebook.com/tallentordigital/" class="nav-link" rel="noopener noreferrer" target="_blank"><i class="bi bi-facebook"></i></a>
                                     </li>
                                     <li class="nav-item"><a href="https://www.linkedin.com/company/tallentor/ " class="nav-link" rel="noopener noreferrer" target="_blank"><i class="bi bi-linkedin"></i></a>
                                     </li>

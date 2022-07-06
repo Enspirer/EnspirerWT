@@ -15,7 +15,7 @@
             <div class="splide" id="heroSlider">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <li class="splide__slide">
+                        <li class="splide__slide" data-splide-interval="7000">
                             <div class="header">
                             <div class="title">Empower your brand with the innovative <br class="des-br"> Digital Marketing <br class="mob-br"> <span class="typer" data-words="ideas,strategies,solutions" data-colors="#fff" data-delay="100" data-deleteDelay="1000"></span></div>
                             </div>
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="splide__slide">
+                        <li class="splide__slide" data-splide-interval="3000">
                             <div class="slide-wrapper">
                                 <div class="content-block">
                                     <div class="inner-wrapper">
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="splide__slide">
+                        <li class="splide__slide" data-splide-interval="3000">
                             <div class="slide-wrapper">
                                 <div class="content-block">
                                     <div class="inner-wrapper">
@@ -77,7 +77,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="splide__slide">
+                        <li class="splide__slide" data-splide-interval="3000">
                             <div class="slide-wrapper">
                                 <div class="content-block">
                                     <div class="inner-wrapper">
@@ -110,16 +110,16 @@
         <div class="container">
             <div class="inner-wrapper">
                 <div class="button-block">
-                    <div class="content">
-                        <h1 class="title">Digital Marketing <br> in the UAE, <br> at it’s Best</h1>
-                    </div>
                 </div>
                 <div class="card-block">
                     <div class="wrapper">
-                        <p>Building a new brand or enhancing the existing customer base of a business is extremely challenging in competitive industries. With  creatively crafted and wisely selected strategies any business can thrive in the digital space. <br><br> Our trained specialists will make sure they understand your business  goals precisely and  Advise you with the best digital plan, from developing your website or mobile app, Social media marketing, SEO services, and lead generation campaigns with the best possible growth of your business.</p>
+                        <div class="text-block">
+                            <h1 class="title">THE CREATIVE <br> DIGITAL MARKETING AGENCY <br> IN THE UAE</h1>
+                            <p>Building a new brand or enhancing the existing customer base of a business is extremely challenging in competitive industries. With  creatively crafted and wisely selected strategies any business can thrive in the digital space. <br><br> Our trained specialists will make sure they understand your business  goals precisely and  Advise you with the best digital plan, from developing your website or mobile app, Social media marketing, SEO services, and lead generation campaigns with the best possible growth of your business.</p>
+                        </div>
                         <div class="card-section">
                             <div class="market-card">
-                                <a href="#">
+                                <a href="{{url('services/marketplace')}}">
                                     <div class="card-wrapper">
                                         <img src="{{url('images/landing_page/home/market-1.png')}}"  class="card-img">
                                         <div class="title">Digital Marketing</div>
@@ -128,7 +128,7 @@
                                 </a>
                             </div>
                             <div class="market-card">
-                                <a href="#">
+                                <a href="{{url('services/marketplace')}}">
                                     <div class="card-wrapper">
                                         <img src="{{url('images/landing_page/home/market-2.png')}}"  class="card-img">
                                         <div class="title">Software Development</div>
@@ -137,7 +137,7 @@
                                 </a>
                             </div>
                             <div class="market-card">
-                                <a href="#">
+                                <a href="{{url('services/marketplace')}}">
                                     <div class="card-wrapper">
                                         <img src="{{url('images/landing_page/home/market-3.png')}}"  class="card-img">
                                         <div class="title">Mobile App Development</div>
@@ -146,7 +146,7 @@
                                 </a>
                             </div>
                             <div class="market-card">
-                                <a href="#">
+                                <a href="{{url('services/marketplace')}}">
                                     <div class="card-wrapper">
                                         <img src="{{url('images/landing_page/home/market-4.png')}}"  class="card-img">
                                         <div class="title">Web Application Development</div>
@@ -155,7 +155,7 @@
                                 </a>
                             </div>
                             <div class="market-card">
-                                <a href="#">
+                                <a href="{{url('services/marketplace')}}">
                                     <div class="card-wrapper">
                                         <img src="{{url('images/landing_page/home/market-5.png')}}"  class="card-img">
                                         <div class="title">Whatsapp Widget</div>
@@ -164,7 +164,7 @@
                                 </a>
                             </div>
                             <div class="market-card">
-                                <a href="#">
+                                <a href="{{url('services/marketplace')}}">
                                     <div class="card-wrapper">
                                         <img src="{{url('images/landing_page/home/market-6.png')}}"  class="card-img">
                                         <div class="title">Web Optimizer app</div>
@@ -618,7 +618,7 @@
     
 const heroSlider = new Splide('#heroSlider', {
     type: 'fade',
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     rewind: true,
     classes: {

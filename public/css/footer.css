@@ -283,6 +283,16 @@
     font-weight: 300;
 }
 
+@media screen and (max-width: 1399px) {
+
+    .footer-section .contact-info .body .business,
+    .footer-section .contact-info .body .media {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+}
+
 @media screen and (max-width: 991px) {
 
     .footer-section .inner-wrapper {
