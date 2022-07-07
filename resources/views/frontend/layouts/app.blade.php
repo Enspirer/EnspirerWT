@@ -85,7 +85,7 @@
             @include('includes.partials.logged-in-as')
             <div class="">
             <div id="7W7750702505383"></div>
-            <script src="https://tallentor.com/whatsapp_widget/11/tallentorw.js"></script>
+            <script src="https://tallentordigital.com/whatsapp_widget/11/tallentorw.js"></script>
                 @yield('content')
             </div><!-- container -->
         </div><!-- #app -->
