@@ -793,7 +793,7 @@
 }
 
 .marketplace-section .inner-wrapper .card-block .wrapper .text-block .title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 700;
     background-color: #fff;
     position: absolute;
@@ -813,6 +813,8 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
 }
 
 .marketplace-section .inner-wrapper .card-block .wrapper .card-section .market-card {
