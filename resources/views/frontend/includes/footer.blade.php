@@ -87,21 +87,28 @@
                             </a>
                         </div>
                         <div class="body">
-                            <div class="business">
-                                <div class="image-block"><i class="bi bi-envelope-check"></i></div>
-                                <div class="content">
-                                    <div class="title">Sales Inquiries</div>
-                                    <a href="mailto:hello@tallentordigital.com" class="email">sales@tallentordigital.com</a>
+                            <div class="contact">
+                                <div class="header-block tel">
+                                    <i class="bi bi-whatsapp"></i>
+                                    <a href="tel:+971503743699">+971 50 374 3699</a>
                                 </div>
+                               
                             </div>
-                            <div class="media">
-                                <div class="image-block">
+                            <div class="contact">
+                                <div class="header-block">
+                                    <i class="bi bi-envelope-check"></i>
+                                    <div class="title">Sales Inquiries</div>
+                                </div>
+                               
+                                <a href="mailto:hello@tallentordigital.com">sales@tallentordigital.com</a>
+                            </div>
+                            <div class="contact">
+                                <div class="header-block">
                                     <i class="bi bi-send"></i>
-                                </div>
-                                <div class="content">
                                     <div class="title">General Inquiries</div>
-                                    <a href="mailto:hello@tallentordigital.com" class="email">hello@tallentordigital.com</a>
                                 </div>
+                                
+                                <a href="mailto:hello@tallentordigital.com">hello@tallentordigital.com</a>
                             </div>
                         </div>
                         <div class="footer" style="padding: 20px;">

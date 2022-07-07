@@ -805,6 +805,18 @@
 
 .marketplace-section .inner-wrapper .card-block .wrapper .text-block p {
     margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .text-block .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.marketplace-section .inner-wrapper .card-block .wrapper .text-block .buttons button {
+    padding: .75rem 1.5rem;
+    width: 188px;
 }
 
 .marketplace-section .inner-wrapper .card-block .wrapper .card-section {
@@ -1295,6 +1307,80 @@
     width: 215px;
 }
 
+/* Modals */
+
+.modal-inner-wrapper {
+    display: flex;
+    padding: 1rem;
+    position: relative;
+}
+
+.modal-inner-wrapper .image-block {
+    flex: 0 0 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-inner-wrapper .image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.modal-inner-wrapper .content-block {
+    flex: 0 0 50%;
+    position: relative;
+    padding: 0 3rem 1rem;
+}
+
+.modal-inner-wrapper .content-block .bi {
+    font-size: 1.25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.modal-inner-wrapper .content-block .title {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: #02044A;
+}
+
+.modal-inner-wrapper .content-block .subtitle {
+    font-size: .9rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.modal-inner-wrapper .content-block .form-label {
+    font-size: .9rem;
+    font-weight: 300;
+    margin-bottom: .35rem;
+}
+
+.modal-inner-wrapper .content-block .form-control,
+.modal-inner-wrapper .content-block .form-select {
+    border: 1px solid #EBE3E3;
+    border-radius: 8px;
+    font-weight: 300;
+}
+
+.modal-inner-wrapper .content-block .form-control:focus,
+.modal-inner-wrapper .content-block .form-select:focus,
+.modal-inner-wrapper .content-block .form-control:active,
+.modal-inner-wrapper .content-block .form-select:active {
+    box-shadow: none;
+    border: 1px solid #00AEEF;
+}
+
+.modal-inner-wrapper .content-block .form-check-label {
+    font-size: .85rem;
+    font-weight: 300;
+}
+
 @media screen and (max-width: 1600px) {
     .hero-section {
         padding-top: 50px;
@@ -1425,6 +1511,18 @@
     .marketplace-section .inner-wrapper .card-block .wrapper p {
         text-align: center;
     }
+
+    .marketplace-section .inner-wrapper .card-block .wrapper .text-block .buttons {
+        justify-content: center;
+    }
+
+    .modal-inner-wrapper .image-block {
+        display: none;
+    }
+
+    .modal-inner-wrapper .content-block {
+        flex: 0 0 100%;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -1509,6 +1607,14 @@
 
     .hero-section .header .title .des-br {
         display: none;
+    }
+
+    .marketplace-section .inner-wrapper .card-block .wrapper .text-block .buttons button {
+        margin: 0;
+    }
+
+    .modal-inner-wrapper .content-block {
+        padding: 0 1rem 1rem;
     }
 }
 
@@ -1599,6 +1705,11 @@
 
     .marketplace-section .inner-wrapper .button-block .content .title {
         font-size: 24px;
+    }
+
+    .marketplace-section .inner-wrapper .card-block .wrapper .text-block .buttons {
+        flex-direction: column;
+        align-items: center;
     }
 }
 

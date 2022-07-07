@@ -373,6 +373,31 @@
     margin: 10rem 0 5rem;
 }
 
+.branch-section .mega-contact {
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 1px 1px 8px rgba(12, 117, 255, 0.1);
+    max-width: 600px;
+    padding: 2rem;
+    margin: 5rem auto;
+}
+
+.branch-section .mega-contact .title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #777;
+}
+
+.branch-section .mega-contact a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #01033E;
+}
+
 .branch-section .header {
     text-align: center;
     font-size: 2rem;
@@ -512,6 +537,14 @@
 
     .form-section .inner-wrapper .images .large {
         width: 160px;
+    }
+
+    .branch-section .mega-contact .title {
+        font-size: 1rem;
+    }
+
+    .branch-section .mega-contact a {
+        font-size: 1.85rem;
     }
 
 }

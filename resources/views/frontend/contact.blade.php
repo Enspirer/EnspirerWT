@@ -11,6 +11,10 @@
 
 <section class="branch-section">
     <div class="container">
+        <div class="mega-contact">
+            <div class="title">Call us or WhatsApp</div>
+            <a href="tel:+971503743699">+971 50 374 3699</a>
+        </div>
         <div class="header">Our Offices</div>
         <div class="inner-wrapper">
             <div class="branch-card">
@@ -20,7 +24,7 @@
                 <div class="title">Tallentor International</div>
                 <div class="address">B2, 202, Jumeirah village circle, <br>Dubai.<span>UAE</span></div>
                 <a href="tel:+971503743699" class="phone">+971 50 374 3699</a>
-                <a href="mailto:dubai@tallentor.com" class="email">dubai@tallentor.com</a>
+                <a href="mailto:dubai@tallentordigital.com" class="email">dubai@tallentordigital.com</a>
             </div>
             <div class="branch-card">
                 <div class="image-block">
@@ -30,7 +34,7 @@
                 <div class="title">Tallentor International</div>
                 <div class="address">19 Koombahla Court, Rowville, <br>Victoria 3178,<span>Australia</span></div>
                 <a href="tel:+61435975999" class="phone">+61 43 597 5999</a>
-                <a href="mailto:info@tallentor.com" class="email">info@tallentor.com</a>
+                <a href="mailto:info@tallentordigital.com" class="email">info@tallentordigital.com</a>
             </div>
             <div class="branch-card">
                 <div class="image-block">
@@ -39,7 +43,7 @@
                 <div class="title">Tallentor International</div>
                 <div class="address">35 Melbourne Avenue <br>London W13 9BX,<span>UK</span></div>
                 <!-- <a href="tel:+447741025138" class="phone">+44 774 102 5138</a> -->
-                <a href="mailto:uk@tallentor.com" class="email">uk@tallentor.com</a>
+                <a href="mailto:uk@tallentordigital.com" class="email">uk@tallentordigital.com</a>
             </div>
         </div>
     </div>

@@ -116,6 +116,14 @@
                         <div class="text-block">
                             <h1 class="title">THE CREATIVE <br> DIGITAL MARKETING AGENCY <br> IN THE UAE</h1>
                             <p>Building a new brand or enhancing the existing customer base of a business is extremely challenging in competitive industries. With  creatively crafted and wisely selected strategies any business can thrive in the digital space. <br><br> Our trained specialists will make sure they understand your business  goals precisely and  Advise you with the best digital plan, from developing your website or mobile app, Social media marketing, SEO services, and lead generation campaigns with the best possible growth of your business.</p>
+                            <div class="buttons">
+                                <button class="cta-btn-border" data-bs-toggle="modal" data-bs-target="#consultationModal">
+                                    <span class="text">Free consultation</span>
+                                </button>
+                                <button class="cta-btn-fill" data-bs-toggle="modal" data-bs-target="#quoteFormModal">
+                                    <span class="text">Request Quote</span>
+                                </button>
+                            </div>
                         </div>
                         <div class="card-section">
                             <div class="market-card">
@@ -424,7 +432,6 @@
         </div>
     </section> -->
 
-
     <section class="shop-section">
         <div class="container">
             <div class="header">
@@ -592,6 +599,130 @@
     </section>
 
     @include('frontend.includes.footer')
+
+    <!-- Modals -->
+    
+    <div class="modal fade" id="quoteFormModal" tabindex="-1" aria-labelledby="quoteFormModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-inner-wrapper">
+                    <div class="image-block">
+                        <img src="{{url('images/landing_page/home/quote-form.png')}}">
+                    </div>
+                    <div class="content-block">
+                        <form action="">
+                            <i class="bi bi-x-lg" data-bs-dismiss="modal" aria-label="Close"></i>
+                            <div class="title">Drop us a Line</div>
+                            <div class="row g-2 mt-3">
+                                <div class="col-12">
+                                    <label class="form-label">Full Name: </label>
+                                    <input type="text" class="form-control" name="full_name">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Email: </label>
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">phone: </label>
+                                    <input type="tel" class="form-control" name="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Country: </label>
+                                    <select class="form-select" name="country">
+                                        <option selected disabled>Choose...</option>
+                                        <option>Sri Lanka</option>
+                                        <option>UAE</option>
+                                        <option>UK</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Company: </label>
+                                    <input type="text" class="form-control" name="company">
+                                </div>
+                                <div class="col-12 my-4">
+                                    <div class="g-recaptcha" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR" ></div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="">
+                                        <label class="form-check-label">
+                                            Acceptance * <br> I would like to receive information & updates from Trace Solutions in relation to my enquiry.  I understand that Trace will never share my information.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="cta-btn-fill mx-auto">
+                                        <span class="text">Submit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-inner-wrapper">
+                    <div class="image-block">
+                        <img src="{{url('images/landing_page/home/consultation-form.png')}}">
+                    </div>
+                    <div class="content-block">
+                        <form action="">
+                            <i class="bi bi-x-lg" data-bs-dismiss="modal" aria-label="Close"></i>
+                            <div class="title">Drop us a Line</div>
+                            <div class="subtitle">Book your consultation with a Tallentor Expert</div>
+                            <div class="row g-2 mt-3">
+                                <div class="col-12">
+                                    <label class="form-label">Full Name: </label>
+                                    <input type="text" class="form-control" name="full_name">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Email: </label>
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">phone: </label>
+                                    <input type="tel" class="form-control" name="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Company: </label>
+                                    <input type="text" class="form-control" name="company">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Date: </label>
+                                    <input type="date" class="form-control" name="date">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Time: </label>
+                                    <input type="time" class="form-control" name="time">
+                                </div>
+                                <div class="col-12 my-4">
+                                    <div class="g-recaptcha" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR" ></div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="">
+                                        <label class="form-check-label">
+                                            Acceptance * <br> I would like to receive information & updates from Trace Solutions in relation to my enquiry.  I understand that Trace will never share my information.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="cta-btn-fill mx-auto">
+                                        <span class="text">Submit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 @endsection

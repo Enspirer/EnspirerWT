@@ -162,54 +162,48 @@
 .footer-section .contact-info .body {
     border: 1px solid #1B3D6B;
     height: 375px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
-.footer-section .contact-info .body .business,
-.footer-section .contact-info .body .media {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.footer-section .contact-info .body .contact:not(:nth-last-child(1)) {
+    margin-bottom: 1.5rem;
+}
+
+.footer-section .contact-info .body .contact .header-block {
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    flex-direction: row;
     align-items: center;
-    gap: 30px;
+    gap: 2rem;
+    padding: 0 0 0 3rem;
 }
 
-.footer-section .contact-info .body .business .image-block .bi,
-.footer-section .contact-info .body .media .image-block .bi {
+.footer-section .contact-info .body .contact .header-block.tel a {
+    font-size: 1.15rem;
+    font-weight: 300;
     color: #fff;
-    font-size: 45px;
+    text-decoration: none;
+    padding: 0;
 }
 
-.footer-section .contact-info .body .business .content .title,
-.footer-section .contact-info .body .media .content .title {
-    font-size: 13px;
+.footer-section .contact-info .body .contact .header-block .bi {
+    font-size: 40px;
+    color: #fff;
+    float: left;
+}
+
+.footer-section .contact-info .body .contact .header-block .title {
+    font-size: .9rem;
+    color: #fff;
+}
+
+.footer-section .contact-info .body .contact a {
+    font-size: 1rem;
     font-weight: 400;
     color: #fff;
-}
-
-.footer-section .contact-info .body .business .content .email,
-.footer-section .contact-info .body .media .content .email {
     text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-}
-
-.footer-section .contact-info .body .business {
-    margin-bottom: 40px;
+    padding: 0 0 0 3rem;
 }
 
 .footer-section .contact-info .footer {
@@ -293,6 +287,18 @@
     }
 }
 
+@media screen and (max-width: 1199px) {
+    .footer-section .contact-info .body .contact .header-block {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+
+    .footer-section .contact-info .body .contact a {
+        padding: 0 0 0 0.75rem;
+    }
+}
+
 @media screen and (max-width: 991px) {
 
     .footer-section .inner-wrapper {
@@ -304,6 +310,12 @@
 
     .footer-section .inner-wrapper>div {
         width: 100%;
+    }
+
+    .footer-section .contact-info .body .contact a {
+        text-align: center;
+        padding: 0;
+        display: block;
     }
 }
 
