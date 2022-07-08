@@ -33,6 +33,6 @@ class CustomUserMail extends Mailable
     public function build()
     {
         
-        return $this->subject('Tallentor - Login Details')->view('frontend.mail.custom_user_mail');
+        return $this->subject('Tallentor Digital - Login Details')->view('frontend.mail.custom_user_mail');
     }
 }

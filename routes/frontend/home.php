@@ -47,6 +47,9 @@ use App\Http\Controllers\Frontend\PaymentController;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact_us/store', [ContactController::class, 'store'])->name('contact_us.store');
+Route::post('consultation/store', [ContactController::class, 'consultation_store'])->name('consultation.store');
+Route::post('request_quote/store', [ContactController::class, 'request_quote_store'])->name('request_quote.store');
+
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 Route::get('mobile_view',[MobileViewController::class,'mobile_view_armap'])->name('mobile_view_armap');
 Route::post('mobile_view/setting_update',[MobileViewController::class,'setting_update'])->name('mobile_view.setting_update');

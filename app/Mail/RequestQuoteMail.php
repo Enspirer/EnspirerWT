@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class InvoiceMail extends Mailable
+class RequestQuoteMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -17,12 +17,12 @@ class InvoiceMail extends Mailable
      * @return void
      */
 
-    public $invoice_details;
+    public $details;
 
-    public function __construct($invoice_details)
+    public function __construct($details)
     {
         // $this->id = $id;
-        $this->invoice_details = $invoice_details;
+        $this->details = $details;
     }
 
     /**
@@ -31,7 +31,8 @@ class InvoiceMail extends Mailable
      * @return $this
      */
     public function build()
-    {        
-        return $this->subject('Tallentor Digital - Invoice')->view('frontend.mail.invoice_mail');
+    {
+        
+        return $this->subject('Tallentor Digital - Request Quote')->view('frontend.mail.request_quote_mail');
     }
 }

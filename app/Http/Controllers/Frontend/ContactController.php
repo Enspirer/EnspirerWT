@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use App\Models\ContactUs;
 use Mail;
 use \App\Mail\ContactUsMail;
+use \App\Mail\ConsultationMail;
+use \App\Mail\RequestQuoteMail;
 
 /**
  * Class ContactController.
@@ -71,5 +73,62 @@ class ContactController extends Controller
 
     }
 
+    public function consultation_store(Request $request)
+    {        
+        // dd($request); 
+
+        if($request->get('g-recaptcha-response') == null){
+            return back()->withInput()->with([
+                'consultation_error' => 'Error!.....Please fill reCAPTCHA!'
+            ]);
+        }  
+   
+        $details = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'company' => $request->company,
+            'date' => $request->date,
+            'time' => $request->time
+        ];
+
+        \Mail::to([$request->email,'hello@tallentordigital.com'])->send(new ConsultationMail($details));
+       
+        return back()->with([
+            'index_success' => 'index_success'
+        ]);   
+
+    }
+
+
+
+    public function request_quote_store(Request $request)
+    {        
+        // dd($request); 
+
+        if($request->get('g-recaptcha-response') == null){
+            return back()->withInput()->with([
+                'request_quote_error' => 'Error!.....Please fill reCAPTCHA!'
+            ]);
+        }  
+   
+        $details = [
+            'quote_name' => $request->quote_name,
+            'quote_email' => $request->quote_email,
+            'quote_phone' => $request->quote_phone,
+            'country' => $request->country,
+            'quote_company' => $request->quote_company,
+            'brief_project' => $request->brief_project
+        ];
+
+        \Mail::to([$request->quote_email,'hello@tallentordigital.com'])->send(new RequestQuoteMail($details));
+       
+        return back()->with([
+            'index_success' => 'index_success'
+        ]);   
+
+    }
+
+   
 
 }

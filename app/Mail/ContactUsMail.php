@@ -33,6 +33,6 @@ class ContactUsMail extends Mailable
     public function build()
     {
         
-        return $this->subject('Tallentor - Contact Us')->view('frontend.mail.contactus_mail');
+        return $this->subject('Tallentor Digital - Contact Us')->view('frontend.mail.contactus_mail');
     }
 }
