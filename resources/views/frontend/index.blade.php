@@ -673,7 +673,7 @@
                     <div class="content-block">
                         <form action="">
                             <i class="bi bi-x-lg" data-bs-dismiss="modal" aria-label="Close"></i>
-                            <div class="title">Drop us a Line</div>
+                            <div class="title">Free Consultation</div>
                             <div class="subtitle">Book your consultation with a Tallentor Expert</div>
                             <div class="row g-2 mt-3">
                                 <div class="col-12">

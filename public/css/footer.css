@@ -176,12 +176,13 @@
     flex-direction: row;
     align-items: center;
     gap: 2rem;
-    padding: 0 0 0 3rem;
+    width: fit-content;
+    margin: auto;
 }
 
 .footer-section .contact-info .body .contact .header-block.tel a {
-    font-size: 1.15rem;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 400;
     color: #fff;
     text-decoration: none;
     padding: 0;
@@ -196,6 +197,7 @@
 .footer-section .contact-info .body .contact .header-block .title {
     font-size: .9rem;
     color: #fff;
+    min-width: 135px;
 }
 
 .footer-section .contact-info .body .contact a {
@@ -203,7 +205,9 @@
     font-weight: 400;
     color: #fff;
     text-decoration: none;
-    padding: 0 0 0 3rem;
+    display: block;
+    width: fit-content;
+    margin: auto;
 }
 
 .footer-section .contact-info .footer {
@@ -294,8 +298,8 @@
         padding: 0;
     }
 
-    .footer-section .contact-info .body .contact a {
-        padding: 0 0 0 0.75rem;
+    .footer-section .contact-info .body .contact .header-block .title {
+        min-width: unset;
     }
 }
 
