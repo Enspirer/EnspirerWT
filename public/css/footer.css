@@ -78,26 +78,24 @@
     align-items: center;
 }
 
-.footer-section .links .footer .social-media .navbar-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 35px;
+.social-media {
+    padding: .5rem 1rem;
 }
 
-.footer-section .links .footer .social-media .navbar-nav .nav-item .nav-link {
+.social-media .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-media .navbar-nav .nav-item .nav-link {
     color: #fff;
-    font-size: 20px;
+}
+
+.social-media .navbar-nav .nav-item .nav-link .bi {
+    font-size: 1.25rem;
 }
 
 .footer-section .contact-info .header {
@@ -167,48 +165,34 @@
     justify-content: center;
 }
 
+.footer-section .contact-info .body .contact {
+    width: 270px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
 .footer-section .contact-info .body .contact:not(:nth-last-child(1)) {
     margin-bottom: 1.5rem;
 }
 
-.footer-section .contact-info .body .contact .header-block {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-    width: fit-content;
-    margin: auto;
-}
-
-.footer-section .contact-info .body .contact .header-block.tel a {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #fff;
-    text-decoration: none;
-    padding: 0;
-}
-
-.footer-section .contact-info .body .contact .header-block .bi {
+.footer-section .contact-info .body .contact .bi {
     font-size: 40px;
     color: #fff;
-    float: left;
 }
 
-.footer-section .contact-info .body .contact .header-block .title {
+.footer-section .contact-info .body .contact .block .title {
     font-size: .9rem;
     color: #fff;
-    min-width: 135px;
 }
 
-.footer-section .contact-info .body .contact a {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #fff;
+.footer-section .contact-info .body .contact .block a {
     text-decoration: none;
-    display: block;
-    width: fit-content;
-    margin: auto;
+    color: #fff;
 }
+
 
 .footer-section .contact-info .footer {
     height: 80px;
@@ -264,7 +248,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 1rem;
 }
 
 .footer-section .copyright-block .terms {
