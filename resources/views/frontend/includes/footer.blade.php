@@ -12,51 +12,51 @@
                             <div class="company">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">Products</li>
-                                    <li class="nav-item"><a href="https://tallentor.com/products/widget-lite" class="nav-link">WhatsApp widget</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/products/widget-pro" class="nav-link">All-in-One chat</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/products/optimizer" class="nav-link">Optimizer</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/products/optimizer" class="nav-link">Analytics Tool</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/products/optimizer" class="nav-link">SEO Tool</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/eshop" class="nav-link">eCommerce Solution</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/eshop" class="nav-link">LMS Solution</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/eshop" class="nav-link">CRM Solutions</a></li>
+                                    <li class="nav-item"><a href="{{url('products/widget-lite')}}" class="nav-link">WhatsApp widget</a></li>
+                                    <li class="nav-item"><a href="{{url('products/widget-pro')}}" class="nav-link">All-in-One chat</a></li>
+                                    <li class="nav-item"><a href="{{url('products/optimizer')}}" class="nav-link">Optimizer</a></li>
+                                    <li class="nav-item"><a href="{{url('products/optimizer')}}" class="nav-link">Analytics Tool</a></li>
+                                    <li class="nav-item"><a href="{{url('products/optimizer')}}" class="nav-link">SEO Tool</a></li>
+                                    <li class="nav-item"><a href="{{url('eshop')}}" class="nav-link">eCommerce Solution</a></li>
+                                    <li class="nav-item"><a href="{{url('eshop')}}" class="nav-link">LMS Solution</a></li>
+                                    <li class="nav-item"><a href="{{url('eshop')}}" class="nav-link">CRM Solutions</a></li>
                                 </ul>
                             </div>
                             <div class="company">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">Services</li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/marketplace" class="nav-link">Digital Marketing</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/marketplace" class="nav-link">Mobile App Dev</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/marketplace" class="nav-link">Software Development</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/marketplace" class="nav-link">SEO</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/marketplace" class="nav-link">Web Designing</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/marketplace" class="nav-link">Graphic Designing</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/marketplace" class="nav-link">SEM</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/marketplace" class="nav-link">Social Media Marketing</a></li>
+                                    <li class="nav-item"><a href="{{url('services/marketplace')}}" class="nav-link">Digital Marketing</a></li>
+                                    <li class="nav-item"><a href="{{url('services/marketplace')}}" class="nav-link">Mobile App Dev</a></li>
+                                    <li class="nav-item"><a href="{{url('services/marketplace')}}" class="nav-link">Software Development</a></li>
+                                    <li class="nav-item"><a href="{{url('services/marketplace')}}" class="nav-link">SEO</a></li>
+                                    <li class="nav-item"><a href="{{url('services/marketplace')}}" class="nav-link">Web Designing</a></li>
+                                    <li class="nav-item"><a href="{{url('services/marketplace')}}" class="nav-link">Graphic Designing</a></li>
+                                    <li class="nav-item"><a href="{{url('services/marketplace')}}" class="nav-link">SEM</a></li>
+                                    <li class="nav-item"><a href="{{url('services/marketplace')}}" class="nav-link">Social Media Marketing</a></li>
                                 </ul>
                             </div>
                             <div class="resources">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">Quick Links</li>
-                                    <li class="nav-item"><a href="https://tallentor.com/sitemap/sitemap.xml" class="nav-link">Sitemap</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/sitemap" class="nav-link">Navigation Map</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/expert-center" class="nav-link">Expert Centre</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/pricing" class="nav-link">Pricing</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/contact" class="nav-link">Help Centre</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/media/home-blog" class="nav-link">Blog</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/eshop" class="nav-link">Eshop</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/media/latest-news" class="nav-link">Latest news</a></li>
+                                    <li class="nav-item"><a href="{{url('sitemap/sitemap.xml')}}" class="nav-link">Sitemap</a></li>
+                                    <li class="nav-item"><a href="{{url('sitemap')}}" class="nav-link">Navigation Map</a></li>
+                                    <li class="nav-item"><a href="{{url('services/expert-center')}}" class="nav-link">Expert Centre</a></li>
+                                    <li class="nav-item"><a href="{{url('pricing')}}" class="nav-link">Pricing</a></li>
+                                    <li class="nav-item"><a href="{{url('contact')}}" class="nav-link">Help Centre</a></li>
+                                    <li class="nav-item"><a href="{{url('media/home-blog')}}" class="nav-link">Blog</a></li>
+                                    <li class="nav-item"><a href="{{url('eshop')}}" class="nav-link">Eshop</a></li>
+                                    <li class="nav-item"><a href="{{url('media/latest-news')}}" class="nav-link">Latest news</a></li>
                                 </ul>
                             </div>
                             <div class="quick-links">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">Company</li>
                                     <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/contact" class="nav-link">Partners</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/portfolio" class="nav-link">Portfolio</a></li>
-                                    <li class="nav-item"><a href="https://tallentor.com/services/marketplace" class="nav-link">Marketplace</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Terms of use</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Privacy Policy</a></li>
+                                    <li class="nav-item"><a href="{{url('contact')}}" class="nav-link">Partners</a></li>
+                                    <li class="nav-item"><a href="{{url('services/portfolio')}}" class="nav-link">Portfolio</a></li>
+                                    <li class="nav-item"><a href="{{url('services/marketplace')}}" class="nav-link">Marketplace</a></li>
+                                    <li class="nav-item"><a href="{{url('terms-condition')}}" class="nav-link">Terms of use</a></li>
+                                    <li class="nav-item"><a href="{{url('privacy-policy')}}" class="nav-link">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>
