@@ -45,6 +45,12 @@ class ContactController extends Controller
         if($request->get('g-recaptcha-response') == null){
             return back()->with('error', 'Error!.....Please fill reCAPTCHA!');
         }  
+
+        if($request->faxonly) {
+            return back()->with([
+                'success' => 'success'
+            ]);
+        }
    
         $contactus = new ContactUs;
 
