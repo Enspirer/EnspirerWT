@@ -78,9 +78,6 @@
                     <div class="mb-3">
                         <input type="text" class="form-control" name="help" placeholder="How can we help you ?">
                     </div>
-                    <div class="mb-3" style="display: none;">
-                        <input type="checkbox" name="faxonly" id="faxonly">
-                    </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" id="tick" class="form-check-input">
                         <label class="form-check-label" for="tick">I would like to receive information and updates from Tallentor in relation to my enquiry, <br> I understand Tallentor will never share my information</label>
